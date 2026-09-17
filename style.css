@@ -113,40 +113,33 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   top: env(safe-area-inset-top, 0px);
   z-index: 10;
 }
-/* NOTA IMPORTANTE (2026-09-17, bug reale segnalato dall'utente, verificato
-   con fonti tecniche — issue ufficiali di NVDA su github.com/nvaccess/nvda):
-   `display: flex`/`inline-flex` e' documentato causare problemi reali con
-   NVDA in modalita' esplorazione — righe di testo che si uniscono in modo
-   scorretto muovendosi con le frecce, a volte contenuto saltato del tutto.
-   Tolto OVUNQUE in questo file, sostituito con la tecnica "vecchia ma
-   sicura" (`display: inline-block` sugli elementi, mai sul contenitore) —
-   stesso risultato visivo (righe di link/pulsanti che vanno a capo da
-   sole), ma senza il rischio per gli screen reader. */
 .header-inner {
   width: 100%;
   max-width: 780px;
   margin-inline: auto;
   padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 .brand {
-  display: inline-block;
   font-family: "Fredoka", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
   color: var(--ink);
   text-decoration: none;
-  margin-bottom: 8px;
 }
 .brand:hover { color: var(--coral); }
 .nav-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
   margin: 0;
   padding: 0;
   max-width: none;
-}
-.nav-list li {
-  display: inline-block;
-  margin: 0 4px 4px 0;
 }
 .nav-list a {
   display: inline-block;
@@ -183,12 +176,16 @@ main { padding-block: 40px 64px; }
 }
 
 .cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
   margin-block: 28px;
 }
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 12px 22px;
-  margin: 0 10px 10px 0;
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
@@ -241,3 +238,6 @@ main { padding-block: 40px 64px; }
 .site-footer a { color: var(--ink-soft); }
 .site-footer a:hover { color: var(--coral); }
 
+@media (max-width: 480px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+}
