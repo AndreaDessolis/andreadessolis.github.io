@@ -1,0 +1,59 @@
+<title>Andrea Dessolis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+
+<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Andrea Dessolis</a>
+    <nav aria-label="Menu principale">
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="chi-sono.html">Chi sono</a></li>
+        <li><a href="gramaccess.html">Gram Access</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="700" cy="28" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <h1>Ciao, sono Andrea</h1>
+    <p class="lede">Musica, tecnologia e la voglia di rendere le cose un po' più semplici da usare, per tutti.</p>
+
+    <p>Questo è il mio piccolo spazio online. Se vuoi sapere qualcosa in più su di me trovi la mia storia nella pagina "Chi sono", oppure — se sei capitato qui per il programma che sto costruendo — puoi andare dritto alla pagina di Gram Access, il client Telegram accessibile a cui sto dedicando gran parte del mio tempo libero.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="gramaccess.html">Scopri Gram Access</a>
+      <a class="btn btn-secondary" href="chi-sono.html">Chi sono</a>
+    </div>
+
+    <div class="panel">
+      <h2>Cosa trovi qui</h2>
+      <ul>
+        <li><strong>Chi sono</strong> — la mia storia, tra chitarra, tecnologia e accessibilità.</li>
+        <li><strong>Gram Access</strong> — il client Telegram che sto sviluppando, pensato fin dall'inizio per chi usa uno screen reader.</li>
+        <li><strong>Contatti</strong> — un modo semplice per scrivermi.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="contatti.html">scrivimi</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>

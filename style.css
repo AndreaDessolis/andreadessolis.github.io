@@ -1,0 +1,243 @@
+/* ===== Andrea Dessolis — sito personale ===== */
+/* Palette "alba": caldo, solare, con un accento fresco color acqua che
+   riprende l'idea del cielo che schiarisce sopra l'orizzonte. */
+:root {
+  --bg: #FFF8EC;
+  --bg-alt: #FFEFD1;
+  --bg-card: #FFFFFF;
+  --ink: #2B241B;
+  --ink-soft: #6B5D48;
+  --sun: #F5A428;
+  --sun-deep: #D97E12;
+  --coral: #FF6A4D;
+  --teal: #0E8C82;
+  --border: #F0DDB0;
+  --focus: #0E8C82;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1B1610;
+    --bg-alt: #241D14;
+    --bg-card: #2A2118;
+    --ink: #FFF3DE;
+    --ink-soft: #D8C7A8;
+    --sun: #FFC24D;
+    --sun-deep: #FFB020;
+    --coral: #FF8A68;
+    --teal: #4FD8CB;
+    --border: #3A2E1C;
+    --focus: #4FD8CB;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1B1610;
+  --bg-alt: #241D14;
+  --bg-card: #2A2118;
+  --ink: #FFF3DE;
+  --ink-soft: #D8C7A8;
+  --sun: #FFC24D;
+  --sun-deep: #FFB020;
+  --coral: #FF8A68;
+  --teal: #4FD8CB;
+  --border: #3A2E1C;
+  --focus: #4FD8CB;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Karla", "Segoe UI", system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  padding-inline: 0;
+}
+
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+
+h1, h2, h3 {
+  font-family: "Fredoka", "Segoe UI", system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.15;
+  text-wrap: balance;
+  margin: 0 0 .5em 0;
+  color: var(--ink);
+}
+h1 { font-size: clamp(2rem, 5vw, 2.75rem); }
+h2 { font-size: clamp(1.35rem, 3vw, 1.75rem); }
+h3 { font-size: 1.15rem; }
+
+p { margin: 0 0 1.1em 0; max-width: 62ch; }
+ul, ol { max-width: 62ch; padding-left: 1.3em; }
+li { margin-bottom: .5em; }
+
+a { color: var(--teal); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--coral); }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--ink);
+  color: var(--bg);
+  padding: .75em 1.2em;
+  z-index: 100;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 780px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* --- Intestazione / menu --- */
+.site-header {
+  background: var(--bg-alt);
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+}
+.header-inner {
+  width: 100%;
+  max-width: 780px;
+  margin-inline: auto;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand:hover { color: var(--coral); }
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+.nav-list a {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-list a:hover { color: var(--ink); background: var(--bg-card); }
+.nav-list a[aria-current="page"] {
+  color: var(--ink);
+  background: var(--sun);
+  font-weight: 700;
+}
+
+/* --- Motivo decorativo "alba" --- */
+.horizon {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: -2px;
+}
+.horizon .l1 { stroke: var(--sun); }
+.horizon .l2 { stroke: var(--coral); }
+.horizon .l3 { stroke: var(--teal); }
+.horizon .sun { fill: var(--sun); }
+
+/* --- Contenuto --- */
+main { padding-block: 40px 64px; }
+.lede {
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-block: 28px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+.btn-primary { background: var(--coral); color: #fff; }
+.btn-primary:hover { background: var(--sun-deep); color: #fff; }
+.btn-secondary { background: transparent; color: var(--ink); border-color: var(--border); }
+.btn-secondary:hover { border-color: var(--coral); color: var(--coral); }
+
+.panel {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  margin-block: 24px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+  max-width: none;
+}
+.feature-list li {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-left: 6px solid var(--sun);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 0;
+}
+
+.note {
+  border-left: 6px solid var(--teal);
+  background: var(--bg-alt);
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: var(--ink-soft);
+}
+
+/* --- Piè di pagina --- */
+.site-footer {
+  border-top: 2px solid var(--border);
+  padding-block: 28px;
+  color: var(--ink-soft);
+  font-size: .95rem;
+}
+.site-footer a { color: var(--ink-soft); }
+.site-footer a:hover { color: var(--coral); }
+
+@media (max-width: 480px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+}
