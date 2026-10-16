@@ -1,0 +1,16 @@
+{
+  "nota": "I download delle versioni tolte da GitHub, sommati qui prima di toglierle (li scrive pubblica.py). 'storico' = prima di questo registro.",
+  "gram-access": {
+    "storico": 56,
+    "storico_nota": "Setup scaricati nelle 10 versioni 1.7.8 - 2.0.4, tolte il 16 ottobre 2026",
+    "versioni_tolte": {}
+  },
+  "hdx-vm": {
+    "storico": 0,
+    "versioni_tolte": {}
+  },
+  "hdx-recorder": {
+    "storico": 0,
+    "versioni_tolte": {}
+  }
+}

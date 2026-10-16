@@ -2,8 +2,12 @@
 
 Per aggiungere un programma: una voce in PROGRAMMI (nell'ordine in cui
 compare), il suo logo in immagini\\ e, se ha guida e novita', i percorsi.
-Versione e data le aggiorna lo script "pubblica" di ogni programma.
+Versione e data di ogni programma stanno in versioni.json: le scrive lo
+script pubblica.py quando si pubblica una versione nuova.
 """
+
+import json as _json
+import os as _os
 
 PAYPAL = 'https://paypal.me/AndreaDessolis'
 EMAIL = 'dessolisandrea@gmail.com'
@@ -20,8 +24,6 @@ PROGRAMMI = [
             'en': 'Gram Access logo: a white speech bubble with the letter G in Braille and three sound waves, on a teal circle',
         },
         'stato': 'disponibile',
-        'versione': '2.1.2',
-        'data': '2026-10-16',
         'repository': 'Gram-Access',
         'setup': 'GramAccess-Setup.exe',
         'guida': r'D:\Software Portable\Sviluppo Software\Gram Access\Release\GramAccess\Guida.html',
@@ -90,8 +92,6 @@ PROGRAMMI = [
             'en': 'HDX VM logo: three mixer faders, turquoise, lilac and magenta, above the letters VM, on a midnight blue and purple square',
         },
         'stato': 'disponibile',
-        'versione': '1.0.0',
-        'data': '2026-10-16',
         'repository': 'HDX-VM',
         'setup': 'HDX-VM-Setup.exe',
         'guida': r'D:\Software Portable\Sviluppo Software\HDX VM\documenti\Guida.html',
@@ -269,3 +269,8 @@ T = {
         'mesi': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     },
 }
+
+# Versione e data dell'ultima pubblicazione di ogni programma (le scrive pubblica.py).
+_VERSIONI = _json.load(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'versioni.json'), encoding='utf-8'))
+for _p in PROGRAMMI:
+    _p.update(_VERSIONI.get(_p['id'], {}))
