@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About me — Andrea Dessolis</title>
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/chi-sono.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/chi-sono.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Andrea Dessolis</a>
+    <nav aria-label="Main menu">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programmi.html">Programs</a></li>
+        <li><a href="chi-sono.html" aria-current="page">About me</a></li>
+        <li><a href="contatti.html">Contact</a></li>
+        <li class="lang"><a href="../chi-sono.html" lang="it" hreflang="it">Italiano</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="120" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <h1>About me</h1>
+    <p class="lede">My name is Andrea Dessolis, and if I had to sum myself up in a few words I would say: music, technology, and the wish to understand how the two can help each other.</p>
+    <p>I have been playing the guitar for years, and it is one of the things that relaxes and amuses me most. But the real turning point of my life came when, already an adult, I lost my sight. From that moment technology was no longer just a hobby: it became an essential tool, almost vital, to keep enjoying the things I love and to discover new ones.</p>
+    <p>That is where my passion for everything about accessibility comes from: software, methods, small touches that can make a big difference for people who, like me, rely on a screen reader every day. I like to think that every program, every website, every tool can be made easier to use for everyone: you just have to really want it.</p>
+    <p>This is the idea behind <a href="programmi.html">my programs</a>: first Gram Access for Telegram, then HDX VM for Voicemeeter, and soon HDX Recorder for recording.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="programmi.html">Programs</a>
+      <a class="btn btn-secondary" href="contatti.html">Contact</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="contatti.html">write to me</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HDX VM — Andrea Dessolis</title>
+<meta name="description" content="Voicemeeter, the Windows audio mixer, controlled in a fully accessible way with your screen reader.">
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/hdx-vm.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/hdx-vm.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Andrea Dessolis</a>
+    <nav aria-label="Main menu">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programmi.html" aria-current="page">Programs</a></li>
+        <li><a href="chi-sono.html">About me</a></li>
+        <li><a href="contatti.html">Contact</a></li>
+        <li class="lang"><a href="../hdx-vm.html" lang="it" hreflang="it">Italiano</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="680" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <div class="program-head">
+      <img class="program-logo" src="../immagini/hdx-vm.png" width="96" height="96" alt="HDX VM logo: three mixer faders, turquoise, lilac and magenta, above the letters VM, on a midnight blue and purple square">
+      <h1>HDX VM</h1>
+    </div>
+    <p class="lede">Voicemeeter, the Windows audio mixer, controlled in a fully accessible way with your screen reader.</p>
+
+    <p>Voicemeeter is a very powerful audio mixer, but its window cannot be used with a screen reader. HDX VM controls it for you: you decide where audio comes from, where it goes and how loud, and you switch from one setup to another with a key, even while you are in another program.</p>
+
+    <p>For example: letting the people calling you on WhatsApp, Zoom or Telegram hear your microphone and your speech synthesizer, while you hear everything in your headphones.</p>
+
+    <div class="download">
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/AndreaDessolis/HDX-VM/releases/latest/download/HDX-VM-Setup.exe">Download HDX VM</a>
+      </div>
+      <p class="version">Version 1.0.0, October 16, 2026. Free, for Windows 10 and 11. The link always gets the latest version.</p>
+    </div>
+
+    <h2>What you need</h2>
+    <ul>
+      <li>Windows 10 or 11, 64-bit.</li>
+      <li>Voicemeeter (Standard, Banana or Potato), installed separately from the VB-Audio website: HDX VM finds it by itself.</li>
+    </ul>
+
+    <h2>What it does</h2>
+    <ul class="feature-list">
+      <li>Sources and destinations in two lists: where each sound goes is turned on and off with a key.</li>
+      <li>Programs sent to virtual sources, each with its own volume.</li>
+      <li>The mixer of each channel: volume, voice cleanup, limiter, equalizer, effects and voice changer.</li>
+      <li>The level of each channel on demand, and a warning when the sound distorts.</li>
+      <li>Switches with shortcuts that work everywhere in Windows, with volume fades too.</li>
+      <li>Configurations to save and recall with a key.</li>
+      <li>Voicemeeter audio settings: sample rate, buffers and connections.</li>
+      <li>Announcements by voice or with sounds, as you choose, and the window in the notification area.</li>
+      <li>Automatic updates, in Italian, English and Spanish.</li>
+    </ul>
+
+    <h2>Guide and what&#x27;s new</h2>
+    <ul>
+      <li><a href="../guide/hdx-vm.html">The HDX VM guide, to read online (in Italian)</a></li>
+      <li><a href="novita/hdx-vm.html">What&#x27;s new in every version</a></li>
+      <li><a href="https://github.com/AndreaDessolis/HDX-VM/releases">All versions on GitHub</a></li>
+    </ul>
+
+    <h2>Support the project</h2>
+    <p>My programs are free and I develop them on my own, in my spare time. If you find them useful, you can help me with a donation.</p>
+    <div class="cta-row">
+      <a class="btn btn-secondary" href="https://paypal.me/AndreaDessolis">Support via PayPal</a>
+    </div>
+
+    <p>Questions or suggestions? <a href="contatti.html">Write to me</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="contatti.html">write to me</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>

@@ -241,3 +241,80 @@ main { padding-block: 40px 64px; }
 @media (max-width: 480px) {
   .header-inner { flex-direction: column; align-items: flex-start; }
 }
+
+/* ===== Aggiunte per piu' programmi (ottobre 2026) ===== */
+
+/* Il margine ai lati anche con le barre di sistema dei telefoni. */
+.wrap, .header-inner {
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+
+/* Il cambio di lingua, in fondo al menu. */
+.nav-list .lang a { border: 2px solid var(--border); }
+
+/* Le schede dei programmi (Home e Programmi). */
+.program-grid {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  max-width: none;
+}
+.program-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.program-card h3 { margin: 0; font-size: 1.35rem; }
+.program-card h3 a { color: var(--ink); text-decoration: none; }
+.program-card h3 a:hover { color: var(--coral); }
+.program-card p { margin: 0; }
+.program-card .card-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 6px; }
+.program-logo { width: 72px; height: 72px; border-radius: 16px; display: block; }
+.status {
+  display: inline-block;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  letter-spacing: .02em;
+}
+.btn-small { padding: 8px 16px; font-size: .95rem; }
+
+/* L'intestazione di una pagina programma: logo accanto al titolo. */
+.program-head { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-bottom: .5em; }
+.program-head h1 { margin: 0; }
+.program-head .program-logo { width: 96px; height: 96px; border-radius: 22px; }
+
+/* Il riquadro del download, con versione, data e requisiti. */
+.download {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 26px;
+  margin-block: 28px;
+}
+.download .cta-row { margin-block: 0 14px; }
+.download p { margin: 0; color: var(--ink-soft); }
+.download .version { font-variant-numeric: tabular-nums; }
+
+/* Le novita' di ogni versione. */
+.release { border-top: 2px solid var(--border); padding-top: 18px; margin-top: 28px; }
+.release h2 { font-size: 1.4rem; }
+.release h3 { margin-top: 1.2em; color: var(--ink-soft); font-size: 1rem; letter-spacing: .06em; text-transform: uppercase; }
+
+/* La barra in cima alle guide (copiate dai programmi, col loro stile). */
+.guide-bar {
+  background: var(--bg-alt);
+  border-bottom: 2px solid var(--border);
+  padding-block: 10px;
+  font-family: "Karla", "Segoe UI", system-ui, sans-serif;
+}

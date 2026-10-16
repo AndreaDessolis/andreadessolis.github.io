@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Programmi — Andrea Dessolis</title>
+<meta name="description" content="Tutti gratuiti, per Windows, e pensati fin dal primo giorno per chi usa uno screen reader.">
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/programmi.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/programmi.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Andrea Dessolis</a>
+    <nav aria-label="Menu principale">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programmi.html" aria-current="page">Programmi</a></li>
+        <li><a href="chi-sono.html">Chi sono</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li class="lang"><a href="en/programmi.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="400" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <h1>Programmi</h1>
+    <p class="lede">Tutti gratuiti, per Windows, e pensati fin dal primo giorno per chi usa uno screen reader.</p>
+    <p>Ogni programma ha la sua pagina con il download, la guida da leggere online e le novità di ogni versione. Si aggiornano da soli quando esce una versione nuova.</p>
+    <ul class="program-grid">
+      <li class="program-card">
+        <img class="program-logo" src="immagini/gram-access.png" width="72" height="72" alt="">
+        <h2><a href="gramaccess.html">Gram Access</a></h2>
+        <span class="status">Versione 2.1.2 del 16 ottobre 2026</span>
+        <p>Telegram accessibile: chat, gruppi, canali, chiamate e messaggi vocali.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-small" href="https://github.com/AndreaDessolis/Gram-Access/releases/latest/download/GramAccess-Setup.exe">Scarica Gram Access</a><a class="btn btn-secondary btn-small" href="gramaccess.html">Scopri Gram Access</a>
+        </div>
+      </li>
+      <li class="program-card">
+        <img class="program-logo" src="immagini/hdx-vm.png" width="72" height="72" alt="">
+        <h2><a href="hdx-vm.html">HDX VM</a></h2>
+        <span class="status">Versione 1.0.0 del 16 ottobre 2026</span>
+        <p>Voicemeeter accessibile: dove va l&#x27;audio, i volumi e il mixer di ogni canale.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-small" href="https://github.com/AndreaDessolis/HDX-VM/releases/latest/download/HDX-VM-Setup.exe">Scarica HDX VM</a><a class="btn btn-secondary btn-small" href="hdx-vm.html">Scopri HDX VM</a>
+        </div>
+      </li>
+      <li class="program-card">
+        <img class="program-logo" src="immagini/hdx-recorder.png" width="72" height="72" alt="">
+        <h2><a href="hdx-recorder.html">HDX Recorder</a></h2>
+        <span class="status">In arrivo</span>
+        <p>Registrare audio e video con lo screen reader: microfoni, computer, radio, schermo e webcam.</p>
+        <div class="card-actions">
+          <a class="btn btn-secondary btn-small" href="hdx-recorder.html">Scopri HDX Recorder</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="contatti.html">scrivimi</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>

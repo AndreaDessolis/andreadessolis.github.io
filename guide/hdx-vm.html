@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Guida di HDX VM</title>
+<style>
+body { font-family: Segoe UI, Arial, sans-serif; font-size: 1.1em; line-height: 1.55; max-width: 52em; margin: 1em auto; padding: 0 1em; }
+kbd { font-family: inherit; font-weight: bold; }
+h2 { margin-top: 2em; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../hdx-vm.html">Torna a HDX VM su andreadessolis.com</a> · <a style="color:#0E6B63" href="../en/hdx-vm.html" lang="en" hreflang="en">Back to HDX VM (English)</a></div>
+
+<h1>Guida di HDX VM</h1>
+<p>Questa guida spiega come usare HDX VM, capitolo per capitolo. Con lo screen reader si passa da un titolo all'altro con il tasto <kbd>H</kbd> (NVDA e JAWS), o da un capitolo all'altro con il tasto <kbd>2</kbd>. Dal programma la si apre con <kbd>F1</kbd>, da qualunque finestra.</p>
+
+<h2>Indice</h2>
+<ol>
+<li><a href="#cominciare">Cos'è HDX VM e come si comincia</a></li>
+<li><a href="#voicemeeter">Il collegamento con Voicemeeter</a></li>
+<li><a href="#fonti">Fonti e destinazioni: le idee di base</a></li>
+<li><a href="#elenchi">Usare gli elenchi: collegamenti, volume, muto, nomi, dispositivi</a></li>
+<li><a href="#programmi">I programmi nelle fonti virtuali</a></li>
+<li><a href="#interruttori">Gli interruttori rapidi</a></li>
+<li><a href="#configurazioni">Le configurazioni</a></li>
+<li><a href="#impostazioni">Le impostazioni e l'area di notifica</a></li>
+<li><a href="#scorciatoie">Tutte le scorciatoie</a></li>
+<li><a href="#problemi">Problemi e domande</a></li>
+</ol>
+
+<h2 id="cominciare">1. Cos'è HDX VM e come si comincia</h2>
+
+<h3>Che cos'è</h3>
+<p>Voicemeeter è un mixer audio per Windows molto potente, ma la sua finestra non si può usare con lo screen reader. HDX VM è un programma tutto accessibile che comanda Voicemeeter al posto suo: decidi da dove arriva l'audio, dove va, a che volume, e passi da una situazione all'altra con un tasto, anche mentre sei dentro un altro programma.</p>
+<p>Un esempio tipico: sei in chiamata con WhatsApp, Zoom o Telegram. Chi ti ascolta sente il tuo microfono; con una scorciatoia gli fai sentire anche la voce dello screen reader, e con la stessa scorciatoia la togli.</p>
+
+<h3>Cosa serve</h3>
+<ul>
+<li>Windows 10 o Windows 11.</li>
+<li><strong>Voicemeeter installato</strong>: la versione Standard, Banana o Potato (si scarica da <a href="https://voicemeeter.com">voicemeeter.com</a>; il pacchetto di Potato installa anche le altre due). HDX VM non sostituisce Voicemeeter: lo comanda.</li>
+<li>Uno screen reader: HDX VM parla con NVDA e con JAWS anche quando non è in primo piano.</li>
+</ul>
+<p>Voicemeeter ha la sua licenza: è gratuito per l'uso personale (con la possibilità di fare una donazione all'autore), mentre per l'uso professionale si paga la licenza a VB-Audio.</p>
+
+<h3>Un programma portatile</h3>
+<p>HDX VM non si installa: si mette la sua cartella dove si vuole e si avvia <strong>HDX VM.exe</strong>. Quello che il programma scrive resta dentro la sua cartella:</p>
+<ul>
+<li><strong>Dati</strong>: le impostazioni (un solo file, impostazioni.json), le configurazioni (sottocartella Configurazioni) e le copie fatte prima di azzerare Voicemeeter (sottocartella Copie di Voicemeeter).</li>
+<li><strong>Librerie</strong> e <strong>Documenti</strong>: i file che servono al programma, le licenze e questa guida.</li>
+</ul>
+<p>Per spostare il programma su un altro computer basta copiare la cartella intera. Al primo avvio Windows può mostrare "Windows ha protetto il PC", perché il programma non è firmato digitalmente: si sceglie "Ulteriori informazioni" e poi "Esegui comunque".</p>
+
+<h3>La finestra principale</h3>
+<p>Con <kbd>Tab</kbd> si passa, in ordine, da:</p>
+<ol>
+<li><strong>Stato di Voicemeeter</strong>: un campo di sola lettura che dice la versione aperta, quanti ingressi e uscite ha e la configurazione attiva. Per esempio: "Voicemeeter Potato 3.1.2.8, collegato: 8 ingressi e 8 uscite, configurazione: Chiamata".</li>
+<li><strong>Fonti</strong>: l'elenco degli ingressi di Voicemeeter (capitolo 3).</li>
+<li><strong>Destinazioni</strong>: l'elenco delle uscite di Voicemeeter.</li>
+<li>Il pulsante <strong>Invia a...</strong> (che diventa <strong>Cosa arriva qui...</strong> se l'ultimo elenco usato è quello delle Destinazioni), il pulsante <strong>Proprietà...</strong> e il pulsante <strong>Apri Voicemeeter</strong> (o <strong>Mostra la finestra di Voicemeeter</strong>, se è già aperto).</li>
+</ol>
+<p>Nella barra dei menu ci sono: File, Voicemeeter, Canale, Interruttori, Configurazioni, Strumenti e Aiuto. La lingua del programma segue quella di Windows (italiano, inglese o spagnolo) e si cambia in Impostazioni.</p>
+
+<h3>Uscire</h3>
+<p>Con <kbd>Ctrl+Q</kbd> (File, Esci) HDX VM si chiude davvero. Con la X o con <kbd>Alt+F4</kbd>, invece, di base il programma resta acceso nell'area di notifica, vicino all'orologio, così gli interruttori continuano a funzionare (capitolo 8). Chiudendo HDX VM, Voicemeeter resta aperto com'è.</p>
+
+<h2 id="voicemeeter">2. Il collegamento con Voicemeeter</h2>
+<p>All'avvio HDX VM cerca Voicemeeter da solo e ne riconosce la versione. Se Voicemeeter è chiuso lo apre lui (si può spegnere in Impostazioni, categoria Voicemeeter, dove si sceglie anche quale versione aprire: di base l'ultima usata). Mentre lavori, HDX VM ti avvisa se Voicemeeter si collega, si chiude o se viene aperta un'altra versione.</p>
+<p>Se Voicemeeter non è installato, o la sua libreria di collegamento non funziona, una finestra lo spiega: va installato o reinstallato da voicemeeter.com, poi si riavvia il computer.</p>
+
+<h3>Il menu Voicemeeter</h3>
+<ul>
+<li><strong>Annuncia lo stato</strong> (<kbd>Ctrl+T</kbd>): dice lo stato, come il primo campo della finestra.</li>
+<li><strong>Apri Voicemeeter</strong>: le versioni installate, da aprire. Due versioni insieme non funzionano: se ne è già aperta una, il programma lo spiega.</li>
+<li><strong>Mostra la finestra di Voicemeeter</strong> e <strong>Riavvia il motore audio</strong> (utile se l'audio si blocca).</li>
+<li><strong>Salva una copia della configurazione...</strong> e <strong>Carica una configurazione...</strong>: salvano e caricano un file di Voicemeeter dove vuoi tu. Per l'uso di tutti i giorni sono più comode le configurazioni con il nome (capitolo 7).</li>
+<li><strong>Azzera la configurazione...</strong>: rimette Voicemeeter come appena installato. Prima chiede conferma e salva una copia nella cartella Dati, Copie di Voicemeeter: se l'azzeramento non va bene, quella copia si ricarica con "Carica una configurazione...".</li>
+</ul>
+
+<h2 id="fonti">3. Fonti e destinazioni: le idee di base</h2>
+<p>HDX VM chiama le cose con il loro scopo:</p>
+<ul>
+<li>una <strong>fonte</strong> è un ingresso di Voicemeeter, cioè da dove arriva l'audio;</li>
+<li>una <strong>destinazione</strong> è un'uscita di Voicemeeter, cioè dove l'audio arriva.</li>
+</ul>
+<p>Sia le fonti sia le destinazioni sono di due tipi:</p>
+<table>
+<tr><th></th><th>Fisiche (dispositivi veri)</th><th>Virtuali (finte, per i programmi)</th></tr>
+<tr><td>Fonti</td><td>Ci si sceglie un dispositivo vero: un microfono, una scheda audio.</td><td>In Windows sono <strong>altoparlanti finti</strong>: un programma che manda lì il suo audio entra in quella fonte. Per esempio la voce dello screen reader, la musica, il browser.</td></tr>
+<tr><td>Destinazioni</td><td>Si chiamano A1, A2... Ci si sceglie un dispositivo vero per ascoltare: le cuffie, gli altoparlanti.</td><td>Si chiamano B1, B2, B3. In Windows sono <strong>microfoni finti</strong>: un programma che li sceglie come microfono riceve quello che arriva lì.</td></tr>
+</table>
+<p>Quante sono dipende dalla versione di Voicemeeter: Standard ha 3 fonti e 2 destinazioni, Banana 5 e 5, Potato 8 e 8.</p>
+<p>Il caso della chiamata, in pratica: in WhatsApp (o Zoom, Telegram...) si sceglie come microfono "Voicemeeter Out B1"; in HDX VM si manda a B1 il microfono, e la sintesi vocale solo quando si vuole farla sentire.</p>
+
+<h3>Le righe degli elenchi</h3>
+<p>Ogni riga comincia con il nome, così ci si arriva con la sua prima lettera. Poi dice il tipo e il resto:</p>
+<ul>
+<li>una fonte: "Microfono (KT USB Audio), fisico, va a Cuffie e B1, 0 dB", oppure "Sintesi Vocali, virtuale, usato da NVDA, va a Cuffie, 0 dB";</li>
+<li>una destinazione: "Cuffie (KT USB Audio), A1, 0 dB", oppure "Chi mi ascolta, B1 virtuale, 0 dB, nei programmi: Voicemeeter Out B1".</li>
+</ul>
+<p>Le righe si aggiornano da sole: se qualcosa cambia dentro Voicemeeter, o lo cambia un altro programma, lo vedi subito.</p>
+
+<h3>I nomi</h3>
+<p>Finché non dai un nome tu, HDX VM usa: per un canale fisico il nome del suo dispositivo; per un canale virtuale il nome che ha in Windows (anche quello che gli hai dato tu nelle impostazioni audio di Windows, per esempio "Sintesi Vocali"); se non c'è niente, un nome come "Ingresso 1" o "Uscita A1". Il nome che dai con <kbd>F2</kbd> viene scritto dentro Voicemeeter, quindi finisce anche nelle configurazioni.</p>
+
+<h2 id="elenchi">4. Usare gli elenchi: collegamenti, volume, muto, nomi, dispositivi</h2>
+
+<h3>I tasti sulle righe</h3>
+<table>
+<tr><th>Tasto</th><th>Cosa fa</th></tr>
+<tr><td><kbd>Invio</kbd></td><td>Su una fonte apre "Invia a...": le caselle con tutte le destinazioni. Su una destinazione apre "Cosa arriva qui...": le caselle con tutte le fonti. Ogni spunta (con <kbd>Spazio</kbd>) ha effetto subito; si chiude con <kbd>Invio</kbd> o <kbd>Esc</kbd>.</td></tr>
+<tr><td><kbd>1</kbd> ... <kbd>8</kbd></td><td>Accende o spegne al volo il collegamento con il canale numero N dell'altro elenco (vale anche il tastierino numerico). Il numero è la posizione: NVDA la dice, per esempio "6 di 8". Con Potato sulle fonti: 1 = A1, ... 5 = A5, 6 = B1, 7 = B2, 8 = B3.</td></tr>
+<tr><td><kbd>Spazio</kbd></td><td>Muto sì o no.</td></tr>
+<tr><td><kbd>+</kbd> e <kbd>-</kbd></td><td>Alza o abbassa il volume di 1 dB; con <kbd>Maiusc</kbd> di 6 dB. Il volume va da -60 a +12 dB.</td></tr>
+<tr><td><kbd>F2</kbd></td><td>Rinomina. Lasciando il nome vuoto si torna al nome automatico.</td></tr>
+<tr><td><kbd>Alt+Invio</kbd></td><td>Le Proprietà.</td></tr>
+<tr><td><kbd>Ctrl+M</kbd></td><td>Il mixer del canale: volume, bilanciamento, muto, solo, mono, pulizia della voce, limitatore, equalizzatore, effetti e voce.</td></tr>
+<tr><td><kbd>Ctrl+L</kbd></td><td>Il livello del canale: quanto è forte il suono in questo momento (vedi sotto).</td></tr>
+<tr><td>Tasto <kbd>Applicazioni</kbd> o <kbd>Maiusc+F10</kbd></td><td>Il menu contestuale della riga: gli stessi comandi del menu Canale, solo per quella riga.</td></tr>
+</table>
+<p>Gli stessi comandi sono nel menu <strong>Canale</strong>, con la scorciatoia scritta accanto; il sottomenu "Accendi o spegni l'invio a" (o "l'arrivo da") ha una voce per ogni canale dell'altro elenco, con la spunta e il numero.</p>
+
+<h3>Le Proprietà</h3>
+<ul>
+<li>Su un canale <strong>fisico</strong>: la casella <strong>Dispositivo</strong>, con i nomi semplici dei dispositivi (HDX VM sceglie da solo il collegamento migliore tra quelli che Voicemeeter offre; ASIO compare solo per la prima uscita, A1, perché Voicemeeter lo accetta solo lì). I dispositivi di Voicemeeter stesso non compaiono, perché creerebbero un giro chiuso. Il dispositivo cambia quando premi OK.</li>
+<li>Su un canale <strong>virtuale</strong>: come si chiama in Windows e nei programmi, con una frase che spiega come usarlo; sulle fonti virtuali anche i programmi che ci suonano adesso.</li>
+</ul>
+<p>Le Proprietà servono solo per il dispositivo e le informazioni: volume, muto e tutte le regolazioni stanno nel mixer.</p>
+<p>Il collegamento con un dispositivo (il "driver") lo sceglie HDX VM, il migliore che c'è: prima WDM, poi KS, poi MME, che ha più ritardo. L'ASIO compare scritto accanto al nome, e solo su A1. Nelle Proprietà di un canale fisico, sotto il dispositivo, <strong>Collegamento adesso</strong> dice quale sta usando.</p>
+
+<h3>Il livello del canale (<kbd>Ctrl+L</kbd>)</h3>
+<p>Sulla riga di una fonte o di una destinazione, <kbd>Ctrl+L</kbd> (o "Livello" nel menu contestuale e nel menu Canale) ascolta quel canale per un secondo e poi ti dice solo il punto più forte raggiunto, per esempio "-18 dB" (il canale è quello della riga su cui sei). Serve a capire se il suono arriva davvero:</p>
+<ul>
+<li>per una <strong>fonte</strong> è il suono che arriva, prima del volume di HDX VM: così vedi se il microfono o il programma arriva anche quando il volume è basso o c'è il muto (in quel caso lo dice: "muto");</li>
+<li>per una <strong>destinazione</strong> è il suono che esce;</li>
+<li>"<strong>silenzio</strong>" vuol dire che non arriva niente (sotto -60 dB);</li>
+<li>"<strong>solo a sinistra</strong>" o "<strong>solo a destra</strong>": su un ingresso fisico il suono arriva da un lato solo, come succede con molti microfoni (allora può servire il Mono nel mixer);</li>
+<li>"<strong>al massimo, distorce</strong>": il suono arriva a 0 dB, il massimo. Abbassalo, per esempio dal volume del microfono in Windows.</li>
+</ul>
+<p>Per parlare, di solito un buon livello del microfono è fra -20 e -6 dB. Lo stesso controllo si può fare da qualunque programma con un interruttore "Dimmi il livello di un canale": lì, visto che non sei sulla riga, HDX VM dice anche il nome ("Microfono: -18 dB").</p>
+<p>In più HDX VM tiene d'occhio da solo tutti gli ingressi fisici e tutte le destinazioni: se uno arriva al massimo e distorce, ti avvisa ("Troppo forte: Microfono"), al più una volta ogni 10 secondi per lo stesso canale. L'avviso si regola o si spegne in Impostazioni, Annunci, alla voce "Suono troppo forte". Gli ingressi virtuali non si controllano: la musica arriva spesso al massimo senza distorcere, conta solo dove esce.</p>
+
+<h3>Il mixer del canale (<kbd>Ctrl+M</kbd>)</h3>
+<p>Sulla riga di una fonte o di una destinazione, <kbd>Ctrl+M</kbd> (o "Mixer..." nel menu contestuale e nel menu Canale) apre il mixer <strong>di quel canale soltanto</strong>: il titolo dice quale. Per regolare un altro canale si chiude il mixer, si sceglie l'altra riga e lo si riapre, così non si rischia di regolare il canale sbagliato.</p>
+<ul>
+<li>Si parte dall'elenco delle <strong>Sezioni</strong>; con <kbd>Tab</kbd> si arriva subito ai comandi della sezione scelta, poi ai pulsanti "Annulla le modifiche" e "Chiudi".</li>
+<li>In tutte le caselle con i valori <strong>Freccia su aumenta e Freccia giù diminuisce</strong>, e ogni scelta ha effetto subito. Le caselle da spuntare si cambiano con <kbd>Spazio</kbd>; le frecce su una casella da spuntare o su un pulsante non spostano il focus (in tutte le finestre di HDX VM ci si sposta solo col <kbd>Tab</kbd>).</li>
+<li><strong>Annulla le modifiche</strong> rimette tutto com'era quando hai aperto il mixer; <kbd>Esc</kbd> o <strong>Chiudi</strong> chiude tenendo le modifiche.</li>
+<li>Se intanto qualcosa cambia altrove (in Voicemeeter, con un interruttore), i valori del mixer si aggiornano da soli.</li>
+</ul>
+<p>La sezione <strong>Volume</strong>:</p>
+<ul>
+<li>per una fonte: <strong>Volume</strong> (da +12 a -60 dB), <strong>Bilanciamento</strong> (dalla destra al 100% in alto, al centro, fino alla sinistra al 100% in basso, a passi del 10%), <strong>Muto</strong>, <strong>Solo</strong> (si sentono solo i canali con Solo acceso) e, solo sugli ingressi fisici, <strong>Mono</strong>;</li>
+<li>per una destinazione: <strong>Volume</strong>, <strong>Muto</strong> e <strong>Mono</strong> (stereo normale, mono, stereo invertito).</li>
+</ul>
+<p>Le altre sezioni compaiono solo dove servono e solo se la tua versione di Voicemeeter le ha:</p>
+<ul>
+<li><strong>Programmi</strong> (fonti virtuali, tutte le versioni): l'elenco dei <strong>Programmi che suonano qui</strong>, da scorrere con le frecce, e col <kbd>Tab</kbd> il <strong>Volume del programma</strong> (da 100% a 0%) e il <strong>Muto del programma</strong>. Così, per esempio, dentro "Lettori Multimediali" abbassi VLC senza toccare gli altri programmi. È il volume del programma di Windows, lo stesso del Mixer volume di Windows. L'elenco è quello del momento in cui apri il mixer: un programma che comincia a suonare dopo compare la volta successiva.</li>
+<li><strong>Volume per destinazione</strong> (fonti, solo Potato): una casella per ogni destinazione ("Verso A1", "Verso B1"...), da +12 a -60 dB, che si somma al volume della fonte. Per esempio: il microfono a -10 dB verso le tue cuffie e a 0 dB verso B1, così tu ti senti più piano e chi ti chiama ti sente normale. I numeri tra parentesi sono gli stessi dei tasti da 1 a 8 dell'elenco.</li>
+<li><strong>Pulizia della voce</strong> (solo fonti fisiche, cioè microfoni e ingressi veri): con Voicemeeter Banana <strong>Gate</strong> (taglia i rumori di fondo nelle pause) e <strong>Compressore</strong> (rende la voce più uniforme, abbassando i picchi); con Potato anche <strong>Riduzione del rumore</strong>; con Voicemeeter normale una sola manopola, <strong>Udibilità</strong>. Ognuna va da 0 ("spento") a 10, a mezzi passi: più è alta, più agisce.</li>
+<li><strong>Compressore avanzato</strong> e <strong>Gate avanzato</strong> (solo Potato, solo fonti fisiche): i dettagli per chi vuole regolarli a mano, come guadagno in ingresso e in uscita, rapporto, soglia, attacco, rilascio, ginocchio e recupero automatico del volume per il compressore; soglia, riduzione nelle pause, filtro del rilevamento, attacco, mantenimento e rilascio per il gate. Per l'uso di tutti i giorni di solito bastano le manopole della Pulizia della voce.</li>
+<li><strong>Limitatore</strong> (Banana e Potato, tutte le fonti): il suono di quella fonte non supera mai il <strong>Limite</strong> scelto (da +12 a -40 dB). +12 dB, il valore di partenza, vuol dire nessun limite.</li>
+<li><strong>Equalizzatore</strong>: sulle fonti virtuali (tutte le versioni) tre caselle, <strong>Acuti</strong>, <strong>Medi</strong> e <strong>Bassi</strong>, da +12 a -12 dB a mezzi passi. Sugli ingressi fisici di Potato e sulle destinazioni di Banana e Potato c'è invece l'equalizzatore a 6 bande di Voicemeeter: nella sezione Equalizzatore, col <kbd>Tab</kbd>, trovi la casella <strong>Equalizzatore acceso</strong>, poi l'elenco delle <strong>Bande</strong> (da Banda 1 a Banda 6, si scorre con le frecce) e, con un altro <kbd>Tab</kbd>, i comandi della banda scelta: <strong>Banda attiva</strong>, <strong>Tipo</strong> (campana, notch, passa banda, passa basso, passa alto, shelf dei bassi, shelf degli acuti), <strong>Frequenza</strong> (da 20 Hz a 20 kHz, a terzi d'ottava), <strong>Guadagno</strong> e <strong>Q</strong> (più è alto, più la banda è stretta). Di partenza le bande sono a 50 Hz, 200 Hz, 800 Hz, 2 kHz, 8 kHz e 12 kHz, tutte a campana e a 0 dB. Ricordati di spuntare "Equalizzatore acceso", altrimenti le bande non si sentono. Le regolazioni valgono uguali per il canale sinistro e il destro.</li>
+<li><strong>Effetti</strong> (solo Potato). Su una fonte, col <kbd>Tab</kbd>, trovi l'elenco degli <strong>Effetti</strong>: Riverbero, Eco, Effetto esterno 1 ed Effetto esterno 2. Si scorre con le frecce, e con un altro <kbd>Tab</kbd> trovi i comandi dell'effetto scelto: <strong>Quanto mandare all'effetto</strong> (da 0, spento, a 10) e <strong>Dopo il volume</strong> (se spuntata, l'effetto segue il volume della fonte). Riverbero ed Eco hanno anche <strong>Effetto attivo</strong>: è un interruttore unico per tutto Voicemeeter, quindi spegnerlo lo spegne per tutte le fonti. Su una destinazione la sezione Effetti dice quanto di ogni effetto <strong>torna in quell'uscita</strong> (da 0 a 10). Per sentire, per esempio, il riverbero servono tre cose: Effetto attivo spuntato, un po' di "Quanto mandare" sulla fonte e un po' di "Riverbero che torna qui" sulla destinazione dove ascolti. Gli effetti esterni 1 e 2 servono solo se hai collegato a Voicemeeter un programma di effetti esterno.</li>
+<li><strong>Voce</strong> (solo Potato, solo fonti fisiche): <strong>Cambio di voce acceso</strong>, <strong>Intonazione</strong> (da +12 a -12 semitoni: più alta o più bassa), <strong>Formanti basse, medie e alte</strong> (cambiano il "colore" della voce, per esempio da maschile a femminile, senza cambiarne l'intonazione) e <strong>Miscela</strong> tra la voce originale e quella cambiata (da +100% a -100%).</li>
+<li><strong>Uscita</strong> (tutte le destinazioni): <strong>Modo dell'uscita</strong> sceglie uno dei modi di Voicemeeter (normale, mix down A e B, ripetizione, composito, TV mix, up mix 2.1, 4.1 e 6.1, solo il canale centrale, solo il subwoofer, solo i canali posteriori; con Voicemeeter normale solo i primi). Servono per le uscite a più canali, come un impianto 5.1 o 7.1: per cuffie e casse normali lascia "normale". <strong>Ritardo dell'uscita</strong> (solo sulle uscite fisiche, da 0 a 500 millisecondi, a passi di 5) ritarda il suono di quell'uscita, per esempio per metterlo a tempo con un video o con altre casse. Attenzione: Voicemeeter applica il ritardo ma non dice a HDX VM quanto vale. Per questo la casella mostra il valore che hai scelto da HDX VM finché il programma resta aperto. Dopo aver riaperto HDX VM, azzerato Voicemeeter o caricato una configurazione, mostra 0 anche se un ritardo c'è ancora: se ti serve, sceglilo di nuovo.</li>
+</ul>
+
+<h2 id="programmi">5. I programmi nelle fonti virtuali</h2>
+<p>Sulle righe delle fonti virtuali HDX VM dice quali programmi ci stanno suonando, per esempio "usato da NVDA e i suoni di Windows". Compare anche un programma che in quel momento tace, se ha l'audio aperto su quella fonte (per esempio NVDA tra una frase e l'altra). L'elenco si aggiorna da solo ogni secondo e mezzo.</p>
+
+<h3>Mandare un programma in una fonte</h3>
+<p>Sulla riga di una fonte virtuale, dal menu contestuale o dal menu Canale, scegli <strong>Manda un programma qui...</strong>. Si apre l'elenco dei programmi che usano l'audio, ognuno con la sua situazione ("VLC: uscita normale, ora su Cuffie", "VLC: già qui", "VLC: mandato in Sintesi Vocali"). I pulsanti:</p>
+<ul>
+<li><strong>Manda qui</strong> (anche con <kbd>Invio</kbd>): il programma va in questa fonte;</li>
+<li><strong>Rimetti all'uscita normale</strong>: torna dove lo manda Windows di solito;</li>
+<li><strong>Chiudi</strong>.</li>
+</ul>
+<p>Da sapere:</p>
+<ul>
+<li>Lo spostamento vale <strong>dalla prossima volta che il programma fa partire il suono</strong>: quello già in corso resta dov'era. Con un lettore basta fermare e far ripartire la riproduzione.</li>
+<li>Windows <strong>si ricorda</strong> la scelta per quel programma anche dopo che lo chiudi.</li>
+<li>Si possono scegliere solo i programmi aperti in quel momento.</li>
+<li>Per uno screen reader (NVDA, JAWS, Assistente vocale) HDX VM chiede conferma; se la fonte è muta o non arriva alle cuffie o agli altoparlanti, avverte che resteresti senza voce.</li>
+<li>È la stessa scelta che Windows offre in Impostazioni, Sistema, Audio, "Volume e dispositivi delle app": la si può vedere e cambiare anche da lì.</li>
+</ul>
+
+<h2 id="interruttori">6. Gli interruttori rapidi</h2>
+<p>Un interruttore è un'azione su Voicemeeter con una scorciatoia che funziona <strong>in tutto Windows</strong>, anche mentre sei dentro un altro programma e anche con HDX VM nascosto nell'area di notifica. Le azioni sono:</p>
+<ul>
+<li><strong>Accendi o spegni un collegamento</strong> (una fonte verso una destinazione): "Sintesi Vocali a Chi mi ascolta: sì", e ripremendo "no";</li>
+<li><strong>Muto sì o no</strong> di una fonte o di una destinazione;</li>
+<li><strong>Alza o abbassa il volume</strong> di una fonte o di una destinazione, del passo che scegli (da 1 a 12 dB);</li>
+<li><strong>Porta il volume a un valore</strong>: porta subito una fonte o una destinazione al volume che scegli (da +12 a -60 dB), per esempio la sintesi vocale sempre a -10 dB;</li>
+<li><strong>Alterna tra due volumi</strong>: scegli il canale, il <strong>Volume normale</strong> e il <strong>Volume abbassato</strong>. Il tasto va verso quello dei due più lontano dal volume di adesso, e la volta dopo torna all'altro. Se lo ripremi mentre il volume si sta ancora muovendo, torna indietro. Per esempio "Lettori Multimediali" fra 0 e -20 dB: premi quando cominci a parlare e la musica scende, ripremi e risale;</li>
+<li>Le tre azioni di volume (alza o abbassa, porta a un valore, alterna) hanno anche la <strong>Durata</strong>: subito, oppure da mezzo secondo a 10 secondi. Con una durata il volume ci arriva piano piano, in dissolvenza, invece che di colpo;</li>
+<li><strong>Solo sì o no</strong> di una fonte;</li>
+<li><strong>Mono sì o no</strong> di una fonte fisica o di una destinazione (sulle destinazioni passa tra normale e mono);</li>
+<li><strong>Equalizzatore acceso o spento</strong> di una fonte fisica (Potato) o di una destinazione (Banana e Potato);</li>
+<li><strong>Pulizia della voce: accendi o spegni</strong>: scegli la <strong>Manopola</strong> (riduzione del rumore, gate, compressore, oppure udibilità con Voicemeeter normale), la fonte fisica e il <strong>Livello quando è accesa</strong> (da 0,5 a 10). Il tasto la porta a quel livello se è spenta, e la spegne se è accesa;</li>
+<li><strong>Effetto</strong>: scegli <strong>Riverbero</strong> o <strong>Eco</strong>, che si accendono e si spengono per tutto Voicemeeter, oppure <strong>Cambio di voce</strong> di una fonte fisica (solo Potato);</li>
+<li><strong>Dimmi il livello di un canale</strong>: come <kbd>Ctrl+L</kbd> sulla sua riga, ma da qualunque programma;</li>
+<li><strong>Dimmi com'è un canale</strong>: non cambia niente, ti legge la riga di quel canale come la senti nell'elenco (dove va, il volume, se è muto...), anche mentre sei in un altro programma;</li>
+<li><strong>Riavvia il motore audio</strong> di Voicemeeter, utile se l'audio si blocca o gracchia;</li>
+<li><strong>Richiama una configurazione</strong> (capitolo 7).</li>
+</ul>
+<p>Se un interruttore chiede qualcosa che quel canale o la tua versione di Voicemeeter non hanno (per esempio la riduzione del rumore con Banana), HDX VM te lo dice e non cambia niente. Come HDX VM ti avvisa per solo, mono, equalizzatore, pulizia ed effetti lo scegli in Impostazioni, Annunci, alla voce "Regolazioni dagli interruttori".</p>
+
+<h3>Creare un interruttore</h3>
+<p>Menu <strong>Interruttori</strong>, <strong>Nuovo interruttore...</strong>. La finestra parte già compilata con la riga su cui eri nell'ultimo elenco: su una fonte propone il suo collegamento a B1, su una destinazione il suo muto. I campi:</p>
+<ol>
+<li><strong>Azione</strong>;</li>
+<li>la <strong>Fonte</strong> (o "Fonte o destinazione"), la <strong>Destinazione</strong> per il collegamento, <strong>Di quanto</strong> per il volume, la <strong>Configurazione</strong> per il richiamo: compaiono solo quelli che servono;</li>
+<li>la <strong>Scorciatoia</strong>: premi "Scegli la scorciatoia..." e poi la combinazione. Servono almeno due tasti speciali, di cui uno tra <kbd>Ctrl</kbd>, <kbd>Alt</kbd> e <kbd>Windows</kbd> (per esempio <kbd>Ctrl+Alt+S</kbd>), così non si tolgono tasti comuni agli altri programmi. Se la combinazione è già di un altro tuo interruttore, HDX VM chiede se spostarla; se è di un altro programma, lo dice. Se premendola non succede niente, è presa da un altro programma: provane un'altra. C'è anche "Togli la scorciatoia" (l'interruttore resta usabile dal menu);</li>
+<li>il <strong>Nome</strong>: si propone da solo ("Sintesi Vocali a Voicemeeter Out B1"); se lo scrivi tu, resta il tuo. È quello che senti quando usi l'interruttore.</li>
+</ol>
+
+<h3>Usare e gestire gli interruttori</h3>
+<ul>
+<li>Il menu <strong>Interruttori</strong> elenca tutti gli interruttori con la loro scorciatoia: si possono usare anche da lì.</li>
+<li><strong>Gestisci gli interruttori...</strong> apre l'elenco con Aggiungi, Modifica, Rimuovi e Chiudi (<kbd>Invio</kbd> modifica, <kbd>Canc</kbd> rimuove). Mentre questa finestra è aperta le scorciatoie non scattano.</li>
+<li>All'avvio, se un altro programma ha preso la scorciatoia di un interruttore, HDX VM lo dice, e la riga dell'interruttore lo segna.</li>
+<li>Gli annunci degli interruttori seguono le scelte di Impostazioni, Annunci: se metti "Collegamenti" su "solo suono", in chiamata senti solo il suono, senza la voce che si sovrappone a chi parla.</li>
+</ul>
+
+<h2 id="configurazioni">7. Le configurazioni</h2>
+<p>Una configurazione è una fotografia di tutto Voicemeeter con un nome tuo, per esempio "Chiamata", "Podcast" o "Musica": collegamenti, volumi, muti, nomi, dispositivi ed effetti. Richiamandola, Voicemeeter torna esattamente com'era quando l'hai salvata, anche dopo un azzeramento. Le configurazioni sono i file di Voicemeeter stesso, nella cartella Dati, Configurazioni.</p>
+
+<h3>Il menu Configurazioni</h3>
+<ul>
+<li>In cima <strong>le tue configurazioni</strong>: ne scegli una e Voicemeeter la carica. Quella attiva ha la spunta.</li>
+<li><strong>Salva come nuova configurazione...</strong>: chiede il nome e salva la situazione di adesso.</li>
+<li><strong>Aggiorna "nome" con la situazione attuale...</strong>: c'è solo se una configurazione è attiva; chiede conferma prima di sostituirla.</li>
+<li><strong>Gestisci le configurazioni...</strong>: l'elenco con Richiama (<kbd>Invio</kbd>), Nuova, Aggiorna, Rinomina (<kbd>F2</kbd>), Elimina (<kbd>Canc</kbd>) e Chiudi. Una configurazione eliminata va nel Cestino, quindi si può ancora recuperare.</li>
+</ul>
+
+<h3>La configurazione attiva</h3>
+<p>Lo stato della finestra principale dice la configurazione attiva, cioè l'ultima richiamata o salvata. Se poi cambi qualcosa a mano diventa "modificata" (anche nel menu e nella finestra Gestisci); se rimetti tutto come prima, la parola sparisce. Dopo un azzeramento o dopo "Carica una configurazione..." da un file qualsiasi, nessuna configurazione risulta più attiva.</p>
+<p>Da sapere: un dispositivo che nella configurazione c'è, ma in quel momento è scollegato, non si può scegliere; il resto torna comunque. I nomi dei dispositivi in Windows e le impostazioni di HDX VM (interruttori, annunci, lingua) non fanno parte delle configurazioni di Voicemeeter.</p>
+
+<h2 id="impostazioni">8. Le impostazioni e l'area di notifica</h2>
+<p>Menu Strumenti, <strong>Impostazioni...</strong> (<kbd>Ctrl+Virgola</kbd>). A sinistra le categorie, con <kbd>Tab</kbd> le scelte. Ogni scelta vale e si salva subito; la lingua si applica alla chiusura della finestra.</p>
+
+<h3>Generale</h3>
+<ul>
+<li><strong>Lingua</strong>: come Windows, italiano, English, español.</li>
+<li><strong>Avvia HDX VM all'avvio di Windows, nell'area di notifica</strong>: spenta all'inizio. Partito con Windows, il programma resta nascosto e non ruba il primo piano.</li>
+<li><strong>Chiudendo la finestra, HDX VM resta nell'area di notifica</strong>: accesa all'inizio.</li>
+<li><strong>Icona sul desktop</strong>: crea o toglie subito il collegamento a HDX VM sul desktop, con il suo logo. La casella dice sempre com'è davvero il desktop.</li>
+<li><strong>Controlla se ci sono aggiornamenti all'avvio</strong>: di base acceso (vedi "Gli aggiornamenti", in fondo alla guida).</li>
+<li><strong>Scorciatoia per mostrare HDX VM</strong>: da qualsiasi programma riporta davanti la finestra di HDX VM, anche quando è nell'area di notifica. Di partenza è <kbd>Ctrl+Alt+Maiusc+V</kbd>. Con <strong>Scegli la scorciatoia...</strong> la cambi: premi la nuova combinazione, oppure <kbd>Esc</kbd> per lasciare quella di prima. Con <strong>Togli la scorciatoia</strong> la togli. Non può essere la stessa di un interruttore. Mentre le Impostazioni sono aperte, questa scorciatoia e quelle degli interruttori sono sospese e tornano a funzionare quando chiudi la finestra.</li>
+</ul>
+
+<h3>Voicemeeter</h3>
+<ul>
+<li><strong>Apri Voicemeeter all'avvio di HDX VM, se è chiuso</strong>.</li>
+<li><strong>Versione di Voicemeeter da aprire</strong>: l'ultima usata, oppure Standard, Banana o Potato.</li>
+</ul>
+
+<h3>Audio di Voicemeeter</h3>
+<p>Queste non sono impostazioni di HDX VM ma di <strong>Voicemeeter stesso</strong>: cambiano subito dentro Voicemeeter e restano lì anche se chiudi HDX VM. Si usano quando l'audio gracchia, salta o ha troppo ritardo. Se Voicemeeter è chiuso, la categoria lo dice e non mostra niente. Cambiando la frequenza o un buffer Voicemeeter può fermare l'audio per un attimo.</p>
+<ul>
+<li><strong>Frequenza di campionamento</strong>: 44,1, 48, 88,2, 96, 176,4 o 192 kHz. Di solito 48 kHz va bene.</li>
+<li><strong>Buffer WDM, KS, MME e ASIO</strong>: uno per ogni tipo di collegamento dei dispositivi, da 128 a 2048 campioni, con accanto i millisecondi. Più piccolo vuol dire meno ritardo ma più rischio che l'audio gracchi; più grande è più sicuro ma con più ritardo. Ogni etichetta dice quali tuoi canali usano quel collegamento ("Buffer WDM, usato da: Microfono, A1"), oppure "non usato adesso": così sai quale cambiare. Quasi sempre è il WDM. Per l'ASIO c'è anche "quello del driver".</li>
+<li><strong>Frequenza per l'ASIO</strong>: quella del driver ASIO, o quella scelta sopra. Conta solo con una scheda ASIO su A1.</li>
+<li><strong>Ingresso WDM esclusivo</strong> e <strong>Modo WDM swift</strong>: regolazioni avanzate per ridurre il ritardo dei dispositivi WDM.</li>
+</ul>
+
+<h3>Annunci</h3>
+<p>L'elenco degli annunci, diviso in gruppi (Voicemeeter, Fonti e destinazioni, HDX VM). Su un annuncio <kbd>Spazio</kbd> cambia il modo: voce, voce e suono, solo suono, spento; su un gruppo vale per tutti i suoi annunci. <kbd>Invio</kbd>, o il pulsante "Ascolta il suono", fa sentire il suono (se l'annuncio ne ha due, come acceso e spento, li senti uno dopo l'altro). All'inizio tutto è a voce, tranne l'apertura e la chiusura di HDX VM, che hanno solo il suono.</p>
+<ul>
+<li><strong>Dispositivo per i suoni</strong>: il predefinito di Windows o uno a scelta. Attenzione: se il predefinito di Windows è un ingresso virtuale di Voicemeeter che va a B1, durante una chiamata chi ti ascolta sente anche i suoni di HDX VM. In quel caso scegli qui le cuffie.</li>
+<li><strong>Volume dei suoni</strong>: da 100% a 10%.</li>
+</ul>
+
+<h3>L'area di notifica</h3>
+<p>Con la X o <kbd>Alt+F4</kbd> la finestra sparisce e senti "HDX VM è nell'area di notifica". L'icona, il logo di HDX VM, è a colori quando Voicemeeter è collegato e grigia quando è chiuso. Sull'icona vicino all'orologio <kbd>Invio</kbd> (o un clic) riapre la finestra; il menu contestuale dell'icona ha Mostra HDX VM, Impostazioni ed Esci. Aprendo di nuovo HDX VM mentre è nascosto, riappare la finestra di prima.</p>
+
+<h2 id="scorciatoie">9. Tutte le scorciatoie</h2>
+<h3>In tutta la finestra</h3>
+<table>
+<tr><th>Tasti</th><th>Comando</th></tr>
+<tr><td><kbd>F1</kbd></td><td>Questa guida (da qualunque finestra)</td></tr>
+<tr><td><kbd>Ctrl+T</kbd></td><td>Annuncia lo stato di Voicemeeter</td></tr>
+<tr><td><kbd>Ctrl+Virgola</kbd></td><td>Impostazioni</td></tr>
+<tr><td><kbd>Ctrl+Q</kbd></td><td>Esci</td></tr>
+<tr><td><kbd>Alt+F4</kbd></td><td>Chiude la finestra (di base HDX VM resta nell'area di notifica)</td></tr>
+</table>
+<h3>Sulle righe di Fonti e Destinazioni</h3>
+<table>
+<tr><th>Tasti</th><th>Comando</th></tr>
+<tr><td><kbd>Invio</kbd></td><td>Invia a... (fonte) / Cosa arriva qui... (destinazione)</td></tr>
+<tr><td><kbd>1</kbd> ... <kbd>8</kbd></td><td>Accende o spegne il collegamento con il canale N dell'altro elenco</td></tr>
+<tr><td><kbd>Spazio</kbd></td><td>Muto sì o no</td></tr>
+<tr><td><kbd>+</kbd> / <kbd>-</kbd></td><td>Volume più o meno 1 dB</td></tr>
+<tr><td><kbd>Maiusc</kbd> con <kbd>+</kbd> / <kbd>-</kbd></td><td>Volume più o meno 6 dB</td></tr>
+<tr><td><kbd>F2</kbd></td><td>Rinomina</td></tr>
+<tr><td><kbd>Alt+Invio</kbd></td><td>Proprietà</td></tr>
+<tr><td><kbd>Ctrl+M</kbd></td><td>Il mixer del canale</td></tr>
+<tr><td><kbd>Ctrl+L</kbd></td><td>Il livello del canale</td></tr>
+<tr><td><kbd>Applicazioni</kbd> o <kbd>Maiusc+F10</kbd></td><td>Menu contestuale della riga</td></tr>
+</table>
+<h3>In tutto Windows</h3>
+<table>
+<tr><th>Tasti</th><th>Comando</th></tr>
+<tr><td><kbd>Ctrl+Alt+Maiusc+V</kbd></td><td>Riporta davanti HDX VM, anche dall'area di notifica (si cambia in Impostazioni, Generale)</td></tr>
+</table>
+<p>E le scorciatoie dei tuoi interruttori, scelte da te (capitolo 6).</p>
+
+<h2 id="problemi">10. Problemi e domande</h2>
+<ul>
+<li><strong>Voicemeeter non si apre, o HDX VM dice che non è installato</strong>: installa o reinstalla Voicemeeter da voicemeeter.com e riavvia il computer.</li>
+<li><strong>Una fonte fisica dice "nessun dispositivo"</strong>: scegli il dispositivo nelle sue Proprietà (<kbd>Alt+Invio</kbd>). Succede, per esempio, dopo un azzeramento.</li>
+<li><strong>Chi mi ascolta in chiamata sente se stesso, o sente i suoni di HDX VM</strong>: controlla in HDX VM cosa arriva a B1 (sulla riga di B1, <kbd>Invio</kbd>). La voce di chi chiama non deve tornare a B1; i suoni di HDX VM vanno mandati alle cuffie (Impostazioni, Annunci, Dispositivo per i suoni).</li>
+<li><strong>Ho mandato un programma in una fonte ma suona ancora dove prima</strong>: fermalo e fai ripartire il suono, oppure chiudilo e riaprilo.</li>
+<li><strong>La scorciatoia di un interruttore non funziona</strong>: forse è presa da un altro programma; HDX VM lo dice all'avvio e lo segna nella finestra Gestisci gli interruttori. Scegline un'altra.</li>
+<li><strong>Dopo aver richiamato una configurazione manca un dispositivo</strong>: probabilmente era scollegato; collegalo e richiama di nuovo la configurazione.</li>
+</ul>
+<p>Per segnalare un problema, dare un suggerimento o un complimento: menu Aiuto, <strong>Contattami...</strong>. Si sceglie il tipo di messaggio e si scrive un breve testo: si apre un'email già pronta nel programma di posta. Se HDX VM ti è utile, nel menu Aiuto c'è anche <strong>Dona con PayPal</strong>.</p>
+
+<h3>Gli aggiornamenti</h3>
+<p>All'avvio HDX VM controlla da solo se c'è una versione nuova (si spegne in Impostazioni, Generale, "Controlla se ci sono aggiornamenti all'avvio"); a mano si fa con Aiuto, <strong>Controlla gli aggiornamenti...</strong>. Se c'è, una finestra dice quale versione è e ne elenca le novità, con tre pulsanti: <strong>Sostieni l'autore con PayPal</strong>, <strong>Aggiorna adesso</strong> e <strong>Più tardi</strong> (te lo ripropone al prossimo avvio). Aggiornando, HDX VM scarica la versione nuova (dice a che punto è), controlla che sia proprio quella firmata dall'autore, si chiude e si riapre da solo già aggiornato. Le tue impostazioni, gli interruttori e le configurazioni restano come sono. Se qualcosa va storto, HDX VM rimette la versione di prima. Mentre è aperta una finestra di HDX VM (il mixer, le Impostazioni...) l'aggiornamento aspetta che la chiudi.</p>
+<p>Aiuto, <strong>Ultime modifiche...</strong> mostra le novità di ogni versione, anche senza internet.</p>
+<p>Aiuto, <strong>Benvenuto...</strong> riapre la finestra di benvenuto, quella che compare all'avvio con le basi del programma. Si legge con le frecce; sotto c'è la casella <strong>Mostra questa finestra all'avvio</strong> (togliendo la spunta non compare più da sola), poi <strong>Sostieni l'autore con PayPal</strong> e <strong>Chiudi</strong>.</p>
+
+<h3>La licenza</h3>
+<p>HDX VM è gratuito, per uso personale e per lavoro, e si scarica solo dal sito ufficiale. La licenza completa è nella cartella Documenti, in italiano (Licenza.txt), inglese (License.txt) e spagnolo (Licencia.txt); in breve: non si vende e non si ridistribuisce da altri siti, viene dato senza garanzia, e non raccoglie nessuna informazione su di te. Si collega a internet solo per gli aggiornamenti e con Contattami. Voicemeeter è un programma di VB-Audio, da installare a parte, con la sua licenza; le licenze degli altri componenti sono in Licenze.html.</p>
+
+</body>
+</html>

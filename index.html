@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Andrea Dessolis</title>
+<meta name="description" content="Tutti gratuiti, per Windows, e pensati fin dal primo giorno per chi usa uno screen reader.">
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/index.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="style.css">
@@ -18,9 +21,10 @@
     <nav aria-label="Menu principale">
       <ul class="nav-list">
         <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="programmi.html">Programmi</a></li>
         <li><a href="chi-sono.html">Chi sono</a></li>
-        <li><a href="gramaccess.html">Gram Access</a></li>
         <li><a href="contatti.html">Contatti</a></li>
+        <li class="lang"><a href="en/index.html" lang="en" hreflang="en">English</a></li>
       </ul>
     </nav>
   </div>
@@ -30,34 +34,50 @@
   <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
   <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
   <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
-  <circle class="sun" cx="700" cy="28" r="20" opacity="0.85"/>
+  <circle class="sun" cx="700" cy="30" r="20" opacity="0.85"/>
 </svg>
 
 <main id="contenuto">
   <div class="wrap">
     <h1>Ciao, sono Andrea</h1>
-    <p class="lede">Musica, tecnologia e la voglia di rendere le cose un po' più semplici da usare, per tutti.</p>
+    <p class="lede">Musica, tecnologia e la voglia di rendere le cose un po&#x27; più semplici da usare, per tutti.</p>
+    <p>Questo è il mio piccolo spazio online. Qui trovi i programmi che costruisco, tutti gratuiti e pensati fin dall&#x27;inizio per chi usa uno screen reader, e se vuoi la mia storia nella pagina &quot;Chi sono&quot;.</p>
 
-    <p>Questo è il mio piccolo spazio online. Se vuoi sapere qualcosa in più su di me trovi la mia storia nella pagina "Chi sono", oppure — se sei capitato qui per il programma che sto costruendo — puoi andare dritto alla pagina di Gram Access, il client non ufficiale per Telegram, accessibile, a cui sto dedicando gran parte del mio tempo libero.</p>
+    <h2>I miei programmi</h2>
+    <ul class="program-grid">
+      <li class="program-card">
+        <img class="program-logo" src="immagini/gram-access.png" width="72" height="72" alt="">
+        <h3><a href="gramaccess.html">Gram Access</a></h3>
+        <span class="status">Versione 2.1.2 del 16 ottobre 2026</span>
+        <p>Telegram accessibile: chat, gruppi, canali, chiamate e messaggi vocali.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-small" href="https://github.com/AndreaDessolis/Gram-Access/releases/latest/download/GramAccess-Setup.exe">Scarica Gram Access</a><a class="btn btn-secondary btn-small" href="gramaccess.html">Scopri Gram Access</a>
+        </div>
+      </li>
+      <li class="program-card">
+        <img class="program-logo" src="immagini/hdx-vm.png" width="72" height="72" alt="">
+        <h3><a href="hdx-vm.html">HDX VM</a></h3>
+        <span class="status">Versione 1.0.0 del 16 ottobre 2026</span>
+        <p>Voicemeeter accessibile: dove va l&#x27;audio, i volumi e il mixer di ogni canale.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-small" href="https://github.com/AndreaDessolis/HDX-VM/releases/latest/download/HDX-VM-Setup.exe">Scarica HDX VM</a><a class="btn btn-secondary btn-small" href="hdx-vm.html">Scopri HDX VM</a>
+        </div>
+      </li>
+      <li class="program-card">
+        <img class="program-logo" src="immagini/hdx-recorder.png" width="72" height="72" alt="">
+        <h3><a href="hdx-recorder.html">HDX Recorder</a></h3>
+        <span class="status">In arrivo</span>
+        <p>Registrare audio e video con lo screen reader: microfoni, computer, radio, schermo e webcam.</p>
+        <div class="card-actions">
+          <a class="btn btn-secondary btn-small" href="hdx-recorder.html">Scopri HDX Recorder</a>
+        </div>
+      </li>
+    </ul>
 
+    <h2>Sostieni il progetto</h2>
+    <p>I miei programmi sono gratuiti e li porto avanti da solo, nel tempo libero. Se ti sono utili, puoi aiutarmi con una donazione.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="gramaccess.html">Scopri Gram Access</a>
-      <a class="btn btn-secondary" href="chi-sono.html">Chi sono</a>
-    </div>
-
-    <div class="cta-row">
-      <a class="btn btn-secondary" href="https://github.com/AndreaDessolis/andreadessolis.github.io/releases/latest/download/GramAccess-Setup.exe">Scarica Gram Access</a>
-      <a class="btn btn-secondary" href="https://t.me/+t7KuNQH-xQczMDVk">Community su Telegram</a>
       <a class="btn btn-secondary" href="https://paypal.me/AndreaDessolis">Sostieni con PayPal</a>
-    </div>
-
-    <div class="panel">
-      <h2>Cosa trovi qui</h2>
-      <ul>
-        <li><strong>Chi sono</strong> — la mia storia, tra chitarra, tecnologia e accessibilità.</li>
-        <li><strong>Gram Access</strong> — il client non ufficiale per Telegram che sto sviluppando, pensato fin dall'inizio per chi usa uno screen reader.</li>
-        <li><strong>Contatti</strong> — un modo semplice per scrivermi.</li>
-      </ul>
     </div>
   </div>
 </main>

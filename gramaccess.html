@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gram Access — Andrea Dessolis</title>
+<meta name="description" content="Un client non ufficiale per Telegram, per Windows, pensato e costruito fin dal primo giorno per chi usa uno screen reader.">
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/gramaccess.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/gramaccess.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="style.css">
@@ -18,9 +21,10 @@
     <nav aria-label="Menu principale">
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
+        <li><a href="programmi.html" aria-current="page">Programmi</a></li>
         <li><a href="chi-sono.html">Chi sono</a></li>
-        <li><a href="gramaccess.html" aria-current="page">Gram Access</a></li>
         <li><a href="contatti.html">Contatti</a></li>
+        <li class="lang"><a href="en/gramaccess.html" lang="en" hreflang="en">English</a></li>
       </ul>
     </nav>
   </div>
@@ -35,42 +39,65 @@
 
 <main id="contenuto">
   <div class="wrap">
-    <h1>Gram Access</h1>
-    <img src="gram-access-logo.png" width="128" height="128" style="display:block;margin:0 0 1rem" alt="Logo di Gram Access: un fumetto bianco con la lettera G in Braille e tre onde sonore, su un cerchio verde acqua">
+    <div class="program-head">
+      <img class="program-logo" src="immagini/gram-access.png" width="96" height="96" alt="Logo di Gram Access: un fumetto bianco con la lettera G in Braille e tre onde sonore, su un cerchio verde acqua">
+      <h1>Gram Access</h1>
+    </div>
     <p class="lede">Un client non ufficiale per Telegram, per Windows, pensato e costruito fin dal primo giorno per chi usa uno screen reader.</p>
 
-    <p>Gram Access è un client non ufficiale: usa l'API di Telegram e fa parte dell'ecosistema Telegram, ma non è sviluppato né approvato da Telegram.</p>
+    <p>Gram Access è un client non ufficiale: usa l&#x27;API di Telegram e fa parte dell&#x27;ecosistema Telegram, ma non è sviluppato né approvato da Telegram.</p>
 
-    <p>Non è una versione "adattata" di un altro programma: ogni funzione di Gram Access nasce già pensando a come deve suonare con NVDA o JAWS, non solo a come deve apparire sullo schermo. L'obiettivo è semplice — offrire un'esperienza Telegram completa, non ridotta, a chi non può o non vuole affidarsi alla vista. Lo porto avanti da solo, nel tempo libero: se ti va di seguirlo, confrontarti con altri utenti o dare una mano, trovi tutto qui sotto insieme al download.</p>
+    <p>Non è una versione &quot;adattata&quot; di un altro programma: ogni funzione nasce già pensando a come deve suonare con NVDA o JAWS, non solo a come deve apparire sullo schermo. L&#x27;obiettivo è offrire un&#x27;esperienza Telegram completa, non ridotta, a chi non può o non vuole affidarsi alla vista.</p>
 
-    <div class="cta-row">
-      <a class="btn btn-primary" href="https://github.com/AndreaDessolis/andreadessolis.github.io/releases/latest/download/GramAccess-Setup.exe">Scarica Gram Access</a>
-      <a class="btn btn-secondary" href="https://t.me/+t7KuNQH-xQczMDVk">Unisciti alla community su Telegram</a>
-      <a class="btn btn-secondary" href="https://paypal.me/AndreaDessolis">Sostieni il progetto con PayPal</a>
-    </div>
-    <div class="note">
-      <p style="margin:0">Il download è gratuito, per Windows, e il link porta sempre all'ultima versione disponibile. <a href="https://github.com/AndreaDessolis/andreadessolis.github.io/releases">Vedi le note di rilascio</a>.</p>
+    <div class="download">
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/AndreaDessolis/Gram-Access/releases/latest/download/GramAccess-Setup.exe">Scarica Gram Access</a>
+      </div>
+      <p class="version">Versione 2.1.2 del 16 ottobre 2026. Gratuito, per Windows 10 e 11. Il link porta sempre all&#x27;ultima versione.</p>
     </div>
 
-    <h2>Cosa include</h2>
-    <ul class="feature-list">
-      <li>Messaggi, chat, gruppi e canali gestiti in modo completo e accessibile, dalla lista chat fino alle impostazioni di amministrazione.</li>
-      <li>Gruppi e canali come in Telegram: il ruolo di chi scrive (proprietario, amministratore o etichetta), le etichette dei membri e i messaggi di benvenuto per chi entra, scritti con emoji e formattazione.</li>
-      <li>Una ricerca semplice da esplorare, divisa in persone, gruppi, canali e bot, con le ricerche recenti, la ricerca per numero di telefono e la ricerca dei messaggi in tutte le chat con filtri per tipo e periodo.</li>
-      <li>Nome, nome utente, link e numero di telefono di persone, gruppi e canali copiati con un solo comando.</li>
-      <li>Chiamate vocali e videochiamate, incluse le chiamate di gruppo.</li>
-      <li>Messaggi vocali con trascrizione automatica in testo e riproduzione in sequenza.</li>
-      <li>Formattazione del testo letta chiaramente durante la lettura dei messaggi (grassetto, corsivo, citazioni e altro).</li>
-      <li>Pannello emoji, adesivi e GIF pensato per essere esplorato con ricerca e frecce, non con una griglia visiva.</li>
-      <li>Checklist, sondaggi, traduzione dei messaggi e riassunti automatici dei testi più lunghi.</li>
-      <li>Intelligenza artificiale, novità della versione 2.0: quella di Telegram per correggere, cambiare stile e tradurre ciò che scrivi, e, con una tua chiave personale di Gemini, la descrizione di foto, video, adesivi e documenti, il riassunto di quello che ti sei perso in una chat e le risposte alle tue domande sui messaggi. Anche durante una chiamata: "cosa mi sta mostrando?".</li>
-      <li>Lettura del testo nelle immagini con il riconoscimento di Windows, senza internet.</li>
-      <li>Messaggi ricchi di Telegram, con titoli, elenchi e tabelle: letti per bene e, con Premium, anche scritti, persino con l'aiuto dell'IA.</li>
-      <li>Un aspetto curato anche per chi guarda lo schermo: tema chiaro e scuro, messaggi a fumetti, i colori di Telegram, temi e sfondi delle chat, emoji a colori, foto, video e adesivi dentro i messaggi, e il supporto agli ingranditori dello schermo, che seguono il punto in cui ti trovi. Per lo screen reader non cambia nulla.</li>
-      <li>Disponibile in italiano, inglese e spagnolo.</li>
+    <h2>Cosa serve</h2>
+    <ul>
+      <li>Windows 10 o 11.</li>
+      <li>Un account Telegram.</li>
     </ul>
 
-    <p><a href="contatti.html">Scrivimi</a> se hai domande, suggerimenti, o vuoi solo dirmi come va.</p>
+    <h2>Cosa fa</h2>
+    <ul class="feature-list">
+      <li>Messaggi, chat, gruppi e canali gestiti in modo completo e accessibile, dalla lista chat fino alle impostazioni di amministrazione.</li>
+      <li>Gruppi e canali come in Telegram: il ruolo di chi scrive, le etichette dei membri e i messaggi di benvenuto per chi entra.</li>
+      <li>Una ricerca divisa in persone, gruppi, canali e bot, con le ricerche recenti e la ricerca dei messaggi in tutte le chat.</li>
+      <li>Chiamate vocali e videochiamate, incluse quelle di gruppo e in conferenza, con la registrazione delle chiamate.</li>
+      <li>Messaggi vocali con trascrizione automatica in testo e riproduzione in sequenza.</li>
+      <li>Formattazione del testo letta chiaramente: grassetto, corsivo, citazioni e altro.</li>
+      <li>Emoji, adesivi e GIF da esplorare con ricerca e frecce, non con una griglia visiva.</li>
+      <li>Checklist, sondaggi, traduzione dei messaggi e riassunti dei testi più lunghi.</li>
+      <li>Intelligenza artificiale: quella di Telegram per correggere e tradurre ciò che scrivi e, con una tua chiave Gemini, la descrizione di foto, video e documenti e le risposte alle tue domande sui messaggi.</li>
+      <li>Lettura del testo nelle immagini con il riconoscimento di Windows, senza internet.</li>
+      <li>Un aspetto curato anche per chi guarda lo schermo, con il supporto agli ingranditori.</li>
+      <li>Aggiornamenti automatici, e in italiano, inglese e spagnolo.</li>
+    </ul>
+
+    <h2>Guida e novità</h2>
+    <ul>
+      <li><a href="guide/gram-access.html">La guida di Gram Access, da leggere online</a></li>
+      <li><a href="novita/gram-access.html">Le novità di ogni versione</a></li>
+      <li><a href="https://github.com/AndreaDessolis/Gram-Access/releases">Tutte le versioni su GitHub</a></li>
+    </ul>
+
+    <h2>Community</h2>
+    <p>Nella community di Gram Access su Telegram puoi fare domande, confrontarti con altri utenti e dare suggerimenti.</p>
+    <div class="cta-row">
+      <a class="btn btn-secondary" href="https://t.me/+t7KuNQH-xQczMDVk">Unisciti alla community su Telegram</a>
+    </div>
+
+    <h2>Sostieni il progetto</h2>
+    <p>I miei programmi sono gratuiti e li porto avanti da solo, nel tempo libero. Se ti sono utili, puoi aiutarmi con una donazione.</p>
+    <div class="cta-row">
+      <a class="btn btn-secondary" href="https://paypal.me/AndreaDessolis">Sostieni con PayPal</a>
+    </div>
+
+    <p>Hai domande o suggerimenti? <a href="contatti.html">Scrivimi</a>.</p>
   </div>
 </main>
 

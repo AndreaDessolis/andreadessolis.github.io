@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What&#x27;s new in Gram Access — Andrea Dessolis</title>
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/novita/gram-access.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/novita/gram-access.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">Andrea Dessolis</a>
+    <nav aria-label="Main menu">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../programmi.html" aria-current="page">Programs</a></li>
+        <li><a href="../chi-sono.html">About me</a></li>
+        <li><a href="../contatti.html">Contact</a></li>
+        <li class="lang"><a href="../../novita/gram-access.html" lang="it" hreflang="it">Italiano</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="680" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <h1>What&#x27;s new in Gram Access</h1>
+    <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
+    <p><a href="../gramaccess.html">Back to Gram Access</a></p>
+<section class="release">
+<h2>Version 2.1.2</h2>
+<p>Version 2.1.2 is a maintenance update: it optimizes Gram Access&#x27;s internal code. There is nothing new to learn, only internal work on the program.</p>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.1.1</h2>
+<p>Version 2.1.1 brings call recording: Telegram&#x27;s own recording, now complete as in the official client, and a new recording on your computer, with a separate track for each voice.</p>
+<h3>NEW</h3>
+<ol>
+<li>Recording on the computer with separate tracks. An extra Gram Access feature that Telegram doesn&#x27;t have: it works in every call (one-to-one, group video chats and conferences) and you don&#x27;t need to be an admin. During a call press the &quot;Record on Computer&quot; button or Alt+Shift+G; to stop it, &quot;Stop Recording&quot; or Alt+Shift+G again. It also stops by itself when the call ends. Each voice goes into its own file: yours (&quot;Me (microphone)&quot;), the audio of your shared screen (&quot;Me (my screen audio)&quot;), each participant&#x27;s and, in video chats and conferences, the shared screen audio of whoever is sharing; plus, if you want, an &quot;Everyone together&quot; file. All tracks start at the same moment: whoever joins later has silence until they arrive, so they line up in an editing program. While you are muted your track records silence. In the folder you also find &quot;Information.txt&quot;, with date, duration, files and at which minute each person was present or left. At the end the program tells you how many files it saved and offers to open the folder. In one-to-one calls the other person has a single track, because their voice and their screen audio already arrive together.</li>
+<li>Recording settings. In Settings, Calls category: the format (WAV, full quality, or MP3, small files), the &quot;Everyone together&quot; file, the reminder and the folder. At first the folder is Dati\Registrazioni, inside the Gram Access folder, which updates never touch. The other participants don&#x27;t see any notice of this recording: that&#x27;s why Gram Access reminds you to tell them when you start (the reminder can be turned off).</li>
+<li>Telegram recording notice. Gram Access now tells you when a video chat is being recorded by Telegram: as soon as you join, when someone starts or stops the recording, and Control+Shift+I repeats it. Before, it never said so, while people using official Telegram always see it.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Telegram recording as in the official client. In &quot;Video Chat Settings...&quot;, the &quot;Start recording...&quot; item lets you choose what to record (audio only, or also the video in landscape or portrait) and then the title, already filled in with the video chat name; stopping it asks for confirmation. The announcement arrives only after Telegram&#x27;s answer, and at the end it tells you the file is in Saved Messages. The item says &quot;Start&quot; or &quot;Stop&quot; according to the real state, even if another admin started the recording or you manage the video chat without joining it.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>For MP3, Gram Access uses the LAME library (LGPL license), included in the program; details are in the &quot;About the program&quot; window.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.1.0</h2>
+<p>Version 2.1.0 is dedicated to calls: a thorough check of all call engines, compared with Telegram Desktop, found and fixed the causes of the most serious problems with conferences and screen sharing, and brings the participant menu up to the level of Telegram.</p>
+<h3>NEW</h3>
+<ol>
+<li>Full participant menu. In group video chats and conferences, the Applications key on the selected person opens the same menu as Telegram: &quot;Mute for everyone&quot; and &quot;Allow to unmute&quot; if you manage the call, otherwise &quot;Mute for me&quot; and &quot;Unmute for me&quot;, which only apply to you; then the volume, &quot;Open profile&quot;, &quot;Send message&quot; and, in conferences you created, &quot;Remove from call&quot;. The items always act on the person you opened the menu on, even if the list changes in the meantime.</li>
+<li>Invited people in conferences. People you invited who haven&#x27;t joined yet appear in the list marked &quot;invited&quot;. From their menu you can cancel the invitation; if they decline or don&#x27;t answer, the program tells you and the row disappears.</li>
+<li>Webcam in conferences too. The video button is now available in conferences as well, as in Telegram.</li>
+<li>The other person&#x27;s state in one-to-one calls. You are told when the other person turns their microphone off or back on and when their battery is low, as in Telegram Desktop; Control+Shift+I repeats it.</li>
+<li>Muted by an admin. If an admin mutes you, your microphone really turns off (before, only the icon seen by others changed), webcam and screen sharing turn off and you hear &quot;Muted by admin&quot;. When you are allowed to speak again you hear &quot;You can now speak&quot;, but the microphone stays off until you unmute yourself, as in Telegram.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>Screen sharing in a conference. As soon as sharing started you could no longer hear the others, and they became audible again only when you stopped it. The cause: the screen connection also read the incoming audio, and Telegram discarded the same packets as &quot;already processed&quot; when they reached the main connection. Now the screen connection only sends, as in Telegram Desktop.</li>
+<li>People muted for the whole conference. If someone&#x27;s audio arrived before Gram Access knew whose it was, that person stayed silent for the whole call, especially after an automatic reconnection. Now Gram Access waits and asks Telegram whose audio it is, and after a reconnection it immediately finds who was already there.</li>
+<li>Participants disappearing from the list. A muted person could disappear from the list, as if they had left, while still in the call. Now the participant list is loaded in full.</li>
+<li>Microphone after an automatic reconnection. If you were muted and the group call or conference reconnected by itself, the microphone came back on while the button still said &quot;Unmute Microphone&quot;. Now you stay muted, and the button always tells the real state.</li>
+<li>Webcam in group video chats. When you turned on the webcam, Gram Access didn&#x27;t tell Telegram, so others might not receive your video. Now it does, like Telegram Desktop.</li>
+<li>Participant volume. The volume chosen for a person also applies to the audio of their shared screen, and &quot;Mute for me&quot; really mutes their audio for you.</li>
+<li>&quot;Speaking&quot;. Gram Access now also tells Telegram when the other participants speak, like Unigram, so the &quot;speaking&quot; indication in the list is more reliable.</li>
+<li>Call window. In conferences the &quot;Add Participant...&quot; and &quot;Video Chat Settings...&quot; buttons were on top of each other, and the participant list was partly covered by the buttons.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>These fixes come from the problems seen in real tests, but they still need to be tried in calls with several people: if something doesn&#x27;t work, please report it, with the time it happened.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.9</h2>
+<p>Version 2.0.9 fixes the Enter key on messages with comments or replies.</p>
+<h3>FIXES</h3>
+<ol>
+<li>Enter on messages with comments or replies. In 2.0.8 a message with comments or replies opened the Enter menu if it also contained a file, a link or buttons: a voice message, an audio or a video no longer started right away, and a document or a link no longer opened right away. Now comments and replies never take away Enter&#x27;s main action: voice messages, video messages, audio and video play, documents and links open, buttons show as always. The &quot;Comments&quot; item (or &quot;View N replies&quot;) appears in the Enter menu only when that menu already opens on its own, for example on a photo or on a post with several links. On a text-only post Enter still opens the comments, and in any case you always reach them with Control+Shift+J or from the message menu.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.8</h2>
+<p>Version 2.0.8 brings Telegram comments to Gram Access: reading and writing comments on channel posts, threads in groups and, for channel administrators, managing the discussion group.</p>
+<h3>NEW</h3>
+<ol>
+<li>Comments on channel posts. A channel can have a discussion group: every post also arrives there, and each post can be commented on. The post line now says &quot;12 comments&quot;, &quot;1 comment&quot; or &quot;Leave a comment&quot; if nobody has written yet, as in Telegram. To open them press Control+Shift+J on the post, or choose &quot;Comments&quot; (or &quot;Leave a comment&quot;) in the message menu. On a text-only post Enter is enough; if the post also has links, buttons or an attachment, the &quot;Comments&quot; item is in the Enter menu (&quot;Read full message...&quot; stays on Control+Enter). The list shows only that post and its comments: you start from the first unread comment, or from the last one, and going back up to the top you find the channel post. Esc takes you back to the channel, on the post you started from.</li>
+<li>Writing a comment. Inside the comments the writing field comments on that post: you can also reply to a single comment, react, send voice messages and attachments. As in Telegram you don&#x27;t need to join the discussion group, unless the group only lets members write. New comments arrive while you read, and the comment count on the post line updates by itself.</li>
+<li>Threads in groups. In discussion groups, on messages that received replies, the line says &quot;8 replies&quot; and the same item is called &quot;View 8 replies&quot;: it works like comments, with the same shortcut and the same Enter. Esc goes back to the whole group chat, on the message you started from.</li>
+<li>View discussion. In a channel with comments, the Group menu has the &quot;View discussion&quot; item, which opens the discussion group with all its messages.</li>
+<li>Discussion group for administrators. In the Administration menu, under Advanced Settings, a channel&#x27;s &quot;Discussion group...&quot; item tells you which group is linked, with the &quot;Unlink group&quot; button. If there isn&#x27;t one you find the list of your suitable groups, each with its &quot;@name&quot; or &quot;private group&quot;, and at the top &quot;Create a new group&quot;, which creates a group named like the channel plus &quot;Chat&quot; (the name can be changed) and links it. When you choose a group, Gram Access asks for confirmation with the same warnings as Telegram: who will be able to see the messages and, if needed, that the chat history will become visible to new members. A normal group is first turned into a supergroup. Inside a linked group the item is called &quot;Linked channel...&quot; and lets you unlink it. The outcome always arrives in a window, after Telegram&#x27;s answer.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>&quot;Typing&quot; in the right place. While you write inside a forum topic or inside comments, the others see &quot;typing&quot; right there, as in Telegram, and no longer in the general group chat.</li>
+<li>Number of replies. With a single reply the line now says &quot;1 reply&quot; instead of &quot;1 replies&quot;. In &quot;Customize Display&quot; the item is now called &quot;Number of replies and comments&quot;.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>&quot;Linked Discussion Group...&quot; never showed the list of groups to link, and inside a group it sent the wrong request to Telegram.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.7</h2>
+<p>Version 2.0.7 completes the Enter key on messages: it now always does something useful, whatever the message. Plus, a shortcut to translate and a fix for choosing members.</p>
+<h3>NEW</h3>
+<ol>
+<li>Enter is never silent. On a message without an action of its own, for example a plain text, Enter opens &quot;Read full message...&quot;, where you read the message calmly, line by line.</li>
+<li>One menu for everything. When a message contains several things to do, Enter gathers them in a single menu: first the message&#x27;s buttons (for example &quot;Go to offer&quot; in channel posts), then &quot;Read full message...&quot;, then an &quot;Open link&quot; for each link in the text, and finally the actions on the attachment. This happens with photos and GIFs, with an attachment that has a link in its caption, with a text that has several links and with a message that has buttons together with links or attachments. On a photo you find &quot;Describe image&quot;, &quot;Read text in image&quot;, &quot;Open with the Windows program&quot; and &quot;Save as...&quot;. A link written as a word shows the word and, in brackets, the address. A message with buttons only, like a bot&#x27;s menus, opens the buttons directly as before.</li>
+<li>Special content. As in Telegram, Enter on a poll opens the window to vote, or the results if you have already voted or it is closed; on a checklist it opens the checklist; on a location or a place it opens the map in the browser; on a contact it opens the chat with that person, or offers &quot;Send a message&quot; and &quot;Add to Contacts&quot; if they aren&#x27;t in your contacts yet; on a sticker it opens its pack, offering to add it.</li>
+<li>Service messages. Enter on &quot;pinned a message&quot; takes you to the pinned message; on a video chat that started, is scheduled or on an invitation, if it is still going on, it asks whether you want to join; on &quot;changed the photo&quot; it opens the photo menu (Describe image included); on a person who joined, was added or removed it opens their Info card.</li>
+<li>Control+Enter and Shift+Enter. On the message list, Control+Enter always opens &quot;Read full message...&quot;. Shift+Enter takes you to the origin of the message: for a reply the message it replies to, for a forwarded message its source (the original message, the channel post or the person&#x27;s card), for &quot;pinned a message&quot; the pinned message. On forwarded and pinned messages the same action is also in the message menu, &quot;Go to origin&quot;. Both combinations can be changed in Settings, Keyboard.</li>
+<li>Control+Alt+T translates the selected message, like &quot;Translate to English&quot; in the message menu. On a message without text, like a photo without a caption, Gram Access tells you there is nothing to translate.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>&quot;Read full message...&quot; with the translation. If the message has been translated, the window shows both the translation and the original text, in the same order as the message line chosen in &quot;Customize Display&quot;.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>When choosing members (&quot;New group&quot;, &quot;Add Members&quot;, &quot;Close friends...&quot; and bot requests), people already checked were removed from the selection every time you searched for another person, and in &quot;Close friends...&quot; the ones chosen before didn&#x27;t show as checked. Now they all stay.</li>
+<li>&quot;Read full message...&quot; only showed the automatic translation, never the one requested from the message menu.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.6</h2>
+<p>Version 2.0.6 fixes some problems found after 2.0.5, in the inline bot window and in reading long messages.</p>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Safer &quot;Inline bot&quot; window. The list of bots only shows the ones you have actually used, and the bot is taken when you leave its box with Tab: scrolling the list, no bot receives anything. The search starts only once you have typed what to look for. A bot you no longer use, or typed by mistake, is removed from the list with the &quot;Remove from recent&quot; button, right after the box, or with Shift+Delete; it comes back to the list only if you use it again.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>The &quot;Read full message&quot; window put the whole message on a single line, and a long message with several paragraphs couldn&#x27;t be read. Now it breaks lines like the message, and the cursor starts at the beginning.</li>
+<li>In the &quot;Inline bot&quot; window, scrolling the list of bots or typing a bot&#x27;s name sent the search to every bot met along the way, and as soon as a bot was chosen a search started even with no words: results from other bots or unpleasant &quot;trending&quot; content could appear.</li>
+<li>The name of an inline bot, typed in the message field or in the window, could be mixed up with another while Gram Access asked Telegram who it was: the search could end up at a different bot from the one typed.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.5</h2>
+<p>Version 2.0.5 is dedicated to bots: they become simple to use even for those who don&#x27;t know them, and as complete as in Telegram. Plus, long texts can be sent without splitting them by hand.</p>
+<h3>NEW</h3>
+<ol>
+<li>Starting a new bot. Opening a bot you have never used shows the &quot;What can this bot do?&quot; window, with the description in a field you can read calmly with the arrow keys and the &quot;Start the bot&quot; and &quot;Not now&quot; buttons. Until you start it, the Send button is called &quot;Start the bot&quot; and Enter in the empty field is enough; the same for a bot you had stopped.</li>
+<li>Telegram links inside Gram Access. t.me links, in messages and in bot buttons, no longer go to the browser: a link to a person, a bot, a group or a channel opens its chat; an invite shows where you are joining and asks for confirmation; a link to a message takes you to that message; a link that starts a bot with a code opens the bot with its description. The &quot;Add me to a group&quot; button of management bots lets you choose the group among the suitable ones and, if the bot wants to be an administrator, lists the permissions it asks for before you confirm.</li>
+<li>Telegram links from outside. With the &quot;Windows integration&quot; checkbox in General settings, tg:// links opened from a web page or another program also reach Gram Access, whether it is already open or not. For safety, a link coming from outside never starts a bot by itself.</li>
+<li>Bot buttons and keyboard. When reading a message you hear &quot;Buttons:&quot; with their names, or &quot;Bot keyboard&quot; when the bot has shown its keys in place of the normal keyboard. The bot keyboard opens from anywhere in the chat, even while you type, with Control+Shift+B, or from the Contact or Group menu. The reading item can be removed from &quot;Customize Display&quot;.</li>
+<li>Bot requests. The keys with which a bot asks for your phone number, to create a poll, to choose one or more people, a group or a channel now work, always with a clear confirmation before sending anything of yours; for groups and channels you are told whether the bot will be added and with which permissions. The location can&#x27;t be shared from a computer, not even with Telegram Desktop: Gram Access tells you so.</li>
+<li>Commands with &quot;/&quot;. Typing &quot;/&quot; at the start of the message, in a chat with a bot or in a group with bots, you hear a tone: Down Arrow opens the list of commands with their descriptions, filtered by the letters you type. Enter sends the command, Tab writes it in the field to complete it, Escape cancels. In a group with several bots, the command goes to the right bot.</li>
+<li>Inline bots. They are used inside any chat: type for example &quot;@lybot&quot; and the title of a song, press Down Arrow and choose the result to send, read for what it is (article, photo, GIF, video, audio...). If you forget the space after the name, Gram Access adds it by itself. Alternatively, Control+Shift+K or &quot;Inline bot...&quot; in the Attach menu opens a window with the recently used bots, a search that updates as you type and the list of results.</li>
+<li>&quot;Share&quot; and &quot;Log in&quot; buttons. A &quot;Share&quot; button prepares the bot&#x27;s search in the field, in the open chat or in a chat you choose among the suitable ones. A &quot;Log in&quot; button opens a website logging in with your Telegram account, after asking whether you want to log in or open the site without logging in, and whether the bot may write to you.</li>
+<li>Bots that answer live. When an artificial intelligence bot writes its answer while composing it, Gram Access tells you once; you can listen to the text written so far with Control+Shift+S. If the bot allows it, the Send button becomes &quot;Stop the bot&#x27;s reply&quot;.</li>
+<li>&quot;Only for you&quot; commands in groups. Some bot commands go privately to the bot and the other members don&#x27;t see them: Gram Access notices by itself and tells you. In the Group menu, &quot;Bot Commands...&quot; lists the commands of the group&#x27;s bots.</li>
+<li>Messages updated only for you. When a bot changes one of its messages only for you, you hear &quot;Updated for you&quot; and in the message menu you find &quot;Revert&quot;, which brings back the original message.</li>
+<li>The bot is waiting for a reply. When a bot asks a question and wants the answer linked to that message, Gram Access sets the reply by itself and tells you, without moving your cursor.</li>
+<li>Long texts. The message field no longer has the limit of about 4000 characters: you can paste even a very long text, and when sending, Gram Access splits it by itself into several messages, like official Telegram, cutting between paragraphs and keeping the formatting. After sending you hear how many messages it was sent as. With Premium, if Telegram allows it for the account, each message can be longer.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>More complete rich messages. Expandable quotes, documents (which can be opened and saved from the message&#x27;s content list) and the buttons inside the message, pressed from &quot;Message buttons&quot;, are now read too; a part this version can&#x27;t read is indicated instead of disappearing.</li>
+<li>A button disabled by the bot appears grayed out. The text accompanying a gift is read, and someone joining a group from a community is indicated as such.</li>
+<li>Guide. New &quot;First steps with bots&quot; section, in seven simple steps, and the description of all the new features.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>In a chat that was still empty, for example with a bot you had just started or when writing to someone for the first time, incoming messages didn&#x27;t appear in the list until you left and reopened the chat.</li>
+<li>The message field silently cut a pasted text beyond 4096 characters.</li>
+<li>In the Contact menu of a bot never started, &quot;Stop Bot&quot; appeared instead of &quot;Start Bot&quot;.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>Many of the new bot features only appear with the bots that use them: if you find one behaving strangely, let me know.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.4</h2>
+<p>Version 2.0.4 brings Telegram&#x27;s welcome messages to groups and channels and updates the Telegram engine used by Gram Access.</p>
+<h3>NEW</h3>
+<ol>
+<li>Welcome messages. As in Telegram, in a group or channel you can prepare messages that new members see when they join, only them: others don&#x27;t see them and the chat stays clean. If you are the owner, or an admin with the &quot;Manage welcome messages&quot; permission, in the Administration menu you find &quot;Welcome Messages...&quot;: the list of messages opens, in the order they will be sent, and the title says how many there are and the maximum allowed by Telegram. Enter on the last item asks what to add: a text, a file (photo, video or document, with caption) or a sticker or GIF. The text is written in the chat&#x27;s message field, which for the occasion is called &quot;Welcome message&quot;: you have emoji, formatting, custom emoji and the AI Editor, Enter adds it instead of sending it to the chat and Escape cancels. What you were writing in the chat is set aside and comes back to its place, and the other members don&#x27;t see you &quot;typing&quot;. Enter on a message edits it, with its formatting, or edits its caption; the Menu key also offers Delete and Delete All. The list updates by itself if another admin changes it.</li>
+<li>&quot;Manage welcome messages&quot; permission. When you appoint an admin you find it right after &quot;Change info&quot;, as in Telegram, and it also appears in &quot;My permissions&quot;.</li>
+<li>Messages only visible to you. When you join a group or channel with welcome messages, you receive them as messages only you can see: Gram Access marks them with &quot;Only visible to you&quot;, in the reading and in the bubble, and at the bottom of the message menu you find the explanation &quot;Only you see this message&quot;. The indication can be removed or moved from &quot;Customize Display&quot;.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Telegram engine updated. Gram Access now uses a more recent version of Telegram&#x27;s official library, the same one that brought welcome messages and that will allow the next new features.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>On the first start after the update Gram Access adjusts the data saved on the computer by itself: this is normal and happens only once. After updating, going back to a previous version of Gram Access is not recommended.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.3</h2>
+<p>Version 2.0.3 brings member roles and tags to groups, as in Telegram, and makes clear the messages about people who join, leave or are removed.</p>
+<h3>NEW</h3>
+<ol>
+<li>Role of the sender in groups. On other people&#x27;s messages you also hear the sender&#x27;s role: &quot;owner&quot;, &quot;admin&quot; or the title they were given, or the tag of a regular member. If you look at the screen, you see it to the right of the name, in the bubble. In the member list each line also says the person&#x27;s tag. If you don&#x27;t need it, you can remove it or move it from &quot;Customize Display&quot;, item &quot;Role in the group&quot;.</li>
+<li>Member tags. If you are the owner of a group, or an admin with the &quot;Manage tags&quot; permission, in a member&#x27;s menu you find &quot;Tag...&quot;: type a tag of up to 16 characters, without emoji, or leave the field empty to remove it. For an admin it changes their title. The &quot;Manage tags&quot; permission is given when you appoint an admin and it also appears in &quot;My permissions&quot;.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>&quot;Remove from group&quot; instead of &quot;Ban&quot;. As in Telegram, in a member&#x27;s menu the item is now called &quot;Remove from group&quot; (or &quot;Remove from channel&quot;), and the list of removed people is called &quot;Removed Users&quot;. The action is the same as before.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>Join and leave messages in groups. Someone who left the group on their own appeared as &quot;[Member removed]&quot;, as if an admin had removed them. Now, as in Telegram, you hear &quot;[Left the group]&quot;, &quot;[Removed by ...]&quot; with the name of whoever removed them, &quot;[Joined the group]&quot; or &quot;[Added by ...]&quot;, both in the messages and in the chat list preview.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>Tags exist only in groups, not in channels. If another admin changes roles or tags while you have the group open, you hear them updated the next time you open the group.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.2</h2>
+<p>Version 2.0.2 renews the search, aligning it with Telegram&#x27;s but in a way that is simpler to explore, and lets you copy with a single command the name, username, link or phone number of people, groups and channels.</p>
+<h3>NEW</h3>
+<ol>
+<li>Search in four lists. Control+F, type and press Enter: the results are divided into four separate lists, never mixed, People, Groups, Channels and Bots. Each one says how many results it contains (for example &quot;Groups: 7&quot;), with Tab you move from one to the next and empty ones don&#x27;t appear. When the search is done you hear a summary, for example &quot;Found: 12 people, 7 groups, 15 channels, 3 bots&quot;. In each list you first find the chats you already have, all of them, including the people you chat with even if they are not in your contacts (they were missing entirely before), then the public ones found on Telegram, with a note at the end of the line: &quot;not in your contacts&quot;, &quot;you are not a member&quot; or &quot;not started yet&quot;. The Menu key offers Open, Info, Call for people and Subscribe for groups and channels you are not a member of. The old &quot;Filter by&quot; button of the search is no longer needed and has been removed.</li>
+<li>Search by phone number. If you type a phone number with the country code in the search (for example +39 333 1234567), Telegram also looks for the person with that number and, if found, they appear at the top of People. This only happens if their privacy allows it.</li>
+<li>Recent searches. Every chat you open from the search results is remembered, as in Telegram. Control+F and Enter with an empty field shows them again, the most recent first, in the same four lists. From the Menu key you can remove a recent search or clear them all. The list applies only to this computer.</li>
+<li>Search Messages in All Chats, more complete. In the Telegram menu, &quot;Search Messages in All Chats...&quot; now also has the chat type (all, private chats, groups, channels) and an optional period with &quot;From day&quot; and &quot;To day&quot;, besides the content type. Your choices stay ready for the next search. It used to stop at the first 100 results: now at the bottom of the list there is &quot;Load more results...&quot;.</li>
+<li>Copying the information of people, groups and channels. In the Info window, the &quot;Copy...&quot; button (before Close), or the Menu key on the text, opens a menu with only the items that profile has, each with its value in brackets: Copy name, Copy username (@name), Copy link (https://t.me/name), Copy phone number, Copy bio or description, Copy all information. Without opening Info, the same short information can be copied from the &quot;Copy&quot; submenu of the Menu key in the chat list, in archived chats, in search results, in contacts and in the member list; for the open chat it is in the Information menu, right after Info. After copying you hear what went to the clipboard, for example &quot;Copied: @mariorossi&quot;.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Link of public groups and channels in Info. As in Telegram, the Info window of a public group or channel now also shows its link, for example https://t.me/channelname.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>After opening a group or channel you are not a member of in preview (or a chat where you can&#x27;t write) and closing it with Esc, Tab ended up on Attach, Emoji, the message field and the other controls of the closed chat, both in the search and in the chat list. Now Tab stays where it should.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>The public search results, that is the chats you don&#x27;t have yet, are a limited number decided by Telegram&#x27;s servers, in official Telegram too. The chats you already have, instead, all appear.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.1</h2>
+<p>Version 2.0.1 makes choosing reactions easier, adds the quick reaction, follows those who use a screen magnifier and completes the look of messages for those who look at the screen: documents, voice messages, link previews, profile photos, moving GIFs, albums and custom emoji. It also improves going back to unread messages.</p>
+<h3>NEW</h3>
+<ol>
+<li>New React window. &quot;React...&quot; in the message menu opens a window with the field &quot;Search (for example heart, laugh, fire)&quot;: type a word and you immediately find the matching reactions, in the program language. Below is the list of all the reactions Telegram offers you, divided into &quot;Most used&quot;, &quot;Recent&quot; and &quot;Others&quot;; at the top, if there is one, the reaction you already added. Enter or the &quot;React&quot; button adds the reaction; typing a letter while on the list takes you back to the search.</li>
+<li>Quick reaction. Control+Shift+H adds your quick reaction to the selected message, the same one set in your Telegram account; pressed again it removes it. In the message menu you find it as &quot;Quick reaction:&quot; followed by the emoji. To change it, choose a reaction in the React window and press &quot;Use as quick reaction&quot;.</li>
+<li>Screen magnifiers. Those who use a magnifier, for example Windows Magnifier, are now followed to the selected message while moving with the arrows, even to the single photo of an album: the magnified area follows the message instead of staying still. Screen readers read as before.</li>
+<li>Documents, music and voice messages as cards, for those who look at the screen. In the bubbles, documents have their thumbnail (or an icon with the file type, for example PDF), the name and the size; music the cover, the title, the artist and the duration; voice messages the play button, the sound wave and the duration.</li>
+<li>Link previews. Below a message with a link the preview box appears, as in Telegram: the site, the title, the description and, if there is one, the image.</li>
+<li>Profile photos. The chat list and the header of the open chat show the real profile photos, round; those without a photo keep the colored initials. The box in Settings, Appearance is now called &quot;Show images: profile photos and, in messages, photos, videos, GIFs and stickers&quot; and turns off all images together.</li>
+<li>Moving GIFs. The GIFs of the messages on screen now move, as in Telegram. They can be stopped with the new box &quot;Play GIFs automatically in messages&quot; in Settings, Appearance.</li>
+<li>Albums. Photos and videos sent together appear in a single grid, as in Telegram. Moving with the arrows, the selected photo has a border and the view brings it on screen; clicking a photo selects it. With a screen reader each photo is still a message of its own, as before.</li>
+<li>Custom emoji. Telegram Premium custom emoji inside the text are shown in their place, as big as the text; a custom emoji sent on its own is shown big. The screen reader reads the matching normal emoji, as before.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Go to unread messages, Control+L. It is now also in the Information menu. It takes you to the first message still unread, or to the last one if you have read everything, even when you went far back with the search, and moves the &quot;Unread messages&quot; marker there, like Telegram&#x27;s down arrow.</li>
+<li>The &quot;Unread messages&quot; marker behaves like Telegram&#x27;s bar. When you enter a chat it appears on the first unread message and stays while the chat is open: it doesn&#x27;t mean that message hasn&#x27;t been read, it shows where the new messages started. Now it also disappears when you send a message, or when a new one arrives while you are on the last one.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>Images, GIFs, albums and custom emoji are meant for those who look at the screen: with a screen reader everything reads as before. They can be turned off in Settings, Appearance.</li>
+<li>Animated stickers and animated custom emoji are shown still for now.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.0.0</h2>
+<p>Version 2.0 brings artificial intelligence to Gram Access: Telegram&#x27;s own AI, free for everyone (some features have higher daily limits with Premium), and, if you want, Google&#x27;s Gemini with your own personal key. All the features are in the new &quot;AI Features&quot; menu and, for the selected message, in the &quot;Artificial intelligence&quot; submenu of its menu.</p>
+<h3>NEW</h3>
+<ol>
+<li>&quot;AI Features&quot; menu. In the menu bar, with a chat open, you find &quot;What did I miss?&quot;, &quot;Ask the chat a question...&quot;, &quot;AI Editor...&quot; and &quot;Writing styles...&quot;. In every message menu the &quot;Artificial intelligence&quot; submenu gathers all the AI items suited to that message, including the existing &quot;Summarize with AI&quot;. While you wait for an AI answer you hear a soft repeated sound; it can be turned off in Settings, Accessibility.</li>
+<li>Telegram AI Editor. With Control+Shift+G, from the message field or a photo caption, Telegram&#x27;s AI works on the text you wrote (or on the selected part): Fix (with the list of corrections), Change style, Translate into another language, and the &quot;Add emoji&quot; box. You hear the result and choose whether to apply it, copy it or leave it.</li>
+<li>Writing styles. From the AI Features menu, &quot;Writing styles...&quot; lists Telegram&#x27;s styles and yours: you can hear examples, create new ones with your own instructions, edit them, share them with a link and install the ones you receive (also by opening a t.me/addstyle link directly). A style can be linked to Control+Alt+Shift+G, which applies it on the fly to the written text.</li>
+<li>Transcribing and translating voice and video messages. &quot;Transcribe to text&quot; now also works on round video messages; with &quot;Rate transcription&quot; you tell Telegram whether it was good. In the Artificial intelligence submenu, &quot;Transcribe and translate&quot; transcribes a voice or video message in another language and translates it into the program language, showing translation and original together.</li>
+<li>Reading text in images. Control+Shift+O, or &quot;Read text in image&quot;, reads the text written in a photo (a flyer, a receipt, a screenshot) with Windows text recognition: it works without internet and the photo never leaves the computer. It recognizes the languages installed in Windows.</li>
+<li>External artificial intelligence: Gemini. Settings has the new &quot;Artificial intelligence&quot; category: choose Gemini (Google), paste your personal key (saved encrypted, readable only by your Windows user on that computer), press &quot;Check key and download the models&quot; and choose the model. Answers arrive in the &quot;AI window&quot;, where you can also ask more questions about the same content. The first time, the program warns you that the content is sent to Google; in secret chats the external AI is never used.</li>
+<li>Describe with AI, Control+Shift+D. One key for everything, on the selected message: it describes photos, stickers and GIFs; it watches and listens to videos, even large ones; it reads and summarizes PDF and text documents, for example bills and letters, telling amounts and due dates; it summarizes the page of a link; it describes stories. In the Info window of a person or a group the &quot;Describe profile photo&quot; button describes the profile photo.</li>
+<li>Describing photos and videos before sending them. In the caption window, when you send a photo or a video, the &quot;Describe the photo&quot; or &quot;Describe the video&quot; button (also Control+Shift+D) tells you what can be seen and whether something is wrong: blurry or dark photo, private things visible, disturbed audio. &quot;Use as caption&quot; puts the suggested sentence in the caption.</li>
+<li>Describing stickers and GIFs before sending them. In the Emoji and stickers window the &quot;Describe&quot; button (also Control+Shift+D) describes the selected sticker, custom emoji or GIF, including GIF search results.</li>
+<li>What did I miss? With Control+Shift+P the AI summarizes the unread messages of the open chat: what was discussed, decisions, dates and what concerns you directly. If nothing is unread, it offers a summary of the latest messages. Messages are not marked as read.</li>
+<li>Ask the chat a question. With Control+Shift+Q you write a question, for example &quot;what time was Saturday&#x27;s appointment?&quot;: the AI searches the chat messages and answers, saying who wrote it and when. The &quot;Go to message&quot; button takes you to the message the answer comes from.</li>
+<li>What is it showing me? During a call or a video chat, Alt+Shift+D describes what the other person is showing you with the webcam or a shared screen, and Alt+Shift+O reads its text. In groups, if several people are showing something, you choose whom.</li>
+<li>Reading rich messages. Telegram&#x27;s new &quot;laid out&quot; messages, with titles, lists, tables, quotes and photos, used to appear only as &quot;Advanced formatting&quot;: now they can be read. In the list you hear the text; with Enter, or &quot;Read the full message&quot;, the whole reading opens with every part told for what it is (&quot;Title&quot;, &quot;Table&quot;, &quot;Quote&quot;...). &quot;Photos, videos and audio in the message...&quot; (also Control+Shift+D) lists the content inside to open, save or describe it. Inner links work in &quot;Open link&quot;; &quot;Copy&quot; copies the whole text and &quot;Translate&quot; translates it keeping the layout, with the original below.</li>
+<li>Writing rich messages (for now Telegram allows it only with Premium). Attach menu, &quot;Rich message...&quot;: you write with a few simple signs (# for titles, - for lists, &gt; for quotes, | for tables, **bold**...), the Guide button explains them all and Preview lets you hear how it will be read. &quot;Add photo, video or audio...&quot; inserts files in the message. &quot;AI functions...&quot; offers Create with AI (describe what you want and Telegram writes it already laid out), Fix, Change style, Translate to, Add emoji and Rewrite with your instructions. If you close by mistake, the text is kept aside and you find it again by reopening the window.</li>
+<li>Go to the original message. On a reply, Control+Shift+U (or &quot;Go to the original message&quot; in the message menu) takes you to the message being replied to, even in another chat; from there everything works, attachments included. Backspace takes you back to the reply, one step at a time. If the original is in a chat you can&#x27;t enter, you can still open or describe its attachment.</li>
+<li>My profile. Telegram menu, Profile, &quot;My profile...&quot; shows your profile. The Info of every person also shows the birthday with age, the personal channel and the groups in common, as in official Telegram.</li>
+<li>Photos, videos, GIFs and stickers visible in messages, for those who look at the screen. The bubbles now show the real images, as in Telegram: photos, the first frame of videos and GIFs with the play button and duration, large stickers without a bubble, round video messages. A blurred version appears first, then the sharp one. Only the images of the messages on screen are downloaded, in reduced size. It can be turned off in Settings, Appearance: &quot;Show photos, videos, GIFs and stickers in messages&quot;. With a screen reader everything reads as before.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Send later. The window to schedule a message now has drop-down lists: day (Today, Tomorrow and the dates up to one year), hour and minutes, already set to ten minutes from now, and a summary saying when it will be sent. Also: &quot;Repeat&quot; (every day, every week, every month..., with Premium), &quot;Send without sound&quot; and, in private chats, &quot;Send when online&quot;. The same window is used to schedule forwards, shares and video chats, and the scheduled messages list also tells the repetition.</li>
+<li>Control+Shift+S as in official Telegram. Pressed once it tells the open chat and who is typing or recording. Pressed twice in a row it tells the full status: in private chats the last seen (&quot;online&quot;, &quot;5 minutes ago&quot;, &quot;yesterday at 18:30&quot;, &quot;recently&quot;...), for bots how many monthly users they have, in groups how many members and how many online, in channels how many subscribers, and whether a video chat is in progress.</li>
+<li>Paste and send in the menus. &quot;Paste and send file or image&quot; (Control+Shift+V) is now also in the message menu and in the message field menu, next to Copy and Paste, enabled when there is a file or an image on the clipboard.</li>
+<li>Send as. In the Group menu the &quot;Send As...&quot; item is enabled only when you can really write with another identity, for example on behalf of a channel. The window says which identity is &quot;in use&quot; and which &quot;require Premium&quot;, and confirms with &quot;Now you write as...&quot;.</li>
+<li>Joining groups and channels with a link. &quot;Join via Link...&quot; (Telegram menu) opens the chat at once if you are already in it, explains clearly when a link has expired or is not valid, and opens the new group after joining. Help, &quot;Join the Telegram community&quot; now lets you enter the Gram Access group directly from the program, without opening the browser.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>Control+Backspace in text fields typed a small square instead of deleting the word. Now it deletes the word before the cursor in every field of the program, and Control+Delete deletes the one after; Control+Z brings them back.</li>
+<li>Help, &quot;Join the Telegram community&quot; said the link had expired: the program had a wrong link. Fixed.</li>
+<li>&quot;Describe with AI&quot; on some GIFs sent damaged, striped frames to Gemini: fixed.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>Telegram&#x27;s artificial intelligence has daily limits, higher with Telegram Premium. Gemini needs a personal Google key; the content you have described or summarized is sent to Google.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.9.9</h2>
+<p>Voice messages</p>
+<ul>
+<li>Every voice message now says &quot;Listened&quot; or &quot;Not listened&quot; (round video messages: &quot;Watched&quot; or &quot;Not watched&quot;): for received ones whether you have played them, for yours whether the other person listened (in groups, at least one person). It updates in real time and, while you listen, the row is not read again over the voice message. It can be turned off from &quot;Customize Display&quot;</li>
+<li>Control+Shift+W goes to the oldest received voice message not yet listened to in the chat and tells how many are left; once you listen to it, the next press goes to the following one. The item is also in the Information menu</li>
+<li>In the bubbles, for those who look at the screen, a dot next to the time of voice messages not yet listened to, as in Telegram</li>
+</ul>
+<p>Messages</p>
+<ul>
+<li>Control+Alt+Shift+Enter in the message field opens &quot;Send Later...&quot; to schedule the message</li>
+</ul>
+<p>Saved Messages</p>
+<ul>
+<li>Settings &gt; Chat and Messages: &quot;Saved Messages in the chat list&quot;, with &quot;Always at the top, even if empty&quot; (default, as before), &quot;At the top, only if it contains messages&quot; or &quot;As in Telegram: in its place among the chats&quot;</li>
+<li>&quot;Go to&quot; menu &gt; &quot;Saved Messages&quot; and Control+0, as in Telegram Desktop, to open it even when it is not in the list. In the &quot;Forward to&quot; window it is always the first destination</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.9.8</h2>
+<p>Telegram colors, for those who look at the screen (with a screen reader everything reads as before)</p>
+<ul>
+<li>Initials circles, sender names in groups and reply bars now use the color each person chose on Telegram, striped for special colors; if someone changes it, it updates at once</li>
+<li>Telegram menu &gt; Profile: &quot;Name Color...&quot; and &quot;Profile Color...&quot; (Premium), with the list of colors read by name, for example &quot;Blue&quot; or &quot;Blue and orange&quot;</li>
+<li>Chat Management menu, in private chats: &quot;Chat Theme...&quot;, Telegram&#x27;s themes seen by both of you. Bubbles take the theme colors, also when the other person chooses it</li>
+<li>Chat Management menu, in private chats: &quot;Chat Wallpaper...&quot;, with the wallpapers in your account or an image from the computer; with Premium it can also be applied for the other person</li>
+<li>Settings &gt; Appearance: &quot;App color&quot; (teal, blue, violet, green, orange, pink, red), &quot;Large emoji&quot; and &quot;Chat wallpaper...&quot; for all chats</li>
+<li>Emoji are now in color in messages, in the chat list and in reactions; messages made only of emoji, up to three, are shown large as in Telegram</li>
+<li>Chat wallpapers are shown behind the messages: colors, gradients and images</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.9.7</h2>
+<p>New look, for those who look at the screen (with a screen reader everything reads as before)</p>
+<ul>
+<li>Sharp text even on scaled screens (125%, 150%, 200%), the modern Windows font in every window, buttons and checkboxes in the Windows 10 and 11 style</li>
+<li>Main window centered, wider chat column, section titles highlighted</li>
+<li>Settings, new &quot;Appearance&quot; category: &quot;Same as Windows&quot;, &quot;Light&quot; or &quot;Dark&quot; theme, applied at once to every window, including menus and the title bar. With Windows High Contrast, Windows colors are always used</li>
+<li>Two-line chat list as in Telegram: colored circle with initials, name, time of the last message, preview and unread counter. You can go back to the simple list from &quot;Appearance&quot;</li>
+<li>New message view with bubbles, always shown in full: yours on the right, others&#x27; on the left, with time, read ticks, sender name in groups, replies, reactions, date and unread separators. The list used by the screen reader stays exactly the same as always. It can be turned off from &quot;Appearance&quot;</li>
+<li>At the top of the open chat: chat name and status (online, last seen, members and users online, &quot;typing&quot;)</li>
+<li>Logo in the center when no chat is open and on the login screen; icons on the &quot;Attach&quot;, &quot;Emoji&quot;, &quot;Record voice message&quot;/&quot;Send&quot; and &quot;Call&quot; buttons</li>
+<li>Gram Access&#x27;s own teal colors throughout the program</li>
+</ul>
+<p>New logo</p>
+<ul>
+<li>The paper plane, too similar to Telegram&#x27;s, is gone: now a speech bubble with the letter G in Braille and sound waves, on a teal circle</li>
+</ul>
+<p>Telegram&#x27;s rules for unofficial apps</p>
+<ul>
+<li>Gram Access now clearly states that it is an unofficial client using the Telegram API (Info window, login screen, Guide)</li>
+<li>Ads in channels and in chats with bots, as Telegram requires from every app: for the screen reader it is the last element of the Tab order, after &quot;Call&quot;. Enter opens it; with the Applications key: advertiser info, about these ads, &quot;Report Ad&quot; and &quot;Hide&quot;</li>
+<li>Telegram menu &gt; Account: &quot;Do Not Hide Ads (Premium)&quot;, as in the official app</li>
+</ul>
+<p>Fixes</p>
+<ul>
+<li>The &quot;Attach&quot; and &quot;Emoji&quot; buttons showed their text cut in half</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.9.6</h2>
+<p>Privacy as in the official Telegram</p>
+<ul>
+<li>Every item of Telegram &gt; Privacy now opens a window with the main choice (Everybody, My Contacts, Nobody) and the exceptions, as in the official app: &quot;Always allow...&quot; and &quot;Never allow...&quot;, with people and groups chosen from a list with search</li>
+<li>Fixed an important problem: when changing a setting, Gram Access deleted the exceptions set from another app (for example &quot;My contacts, except Mario&quot;), and when reopening the item it didn&#x27;t recognize the choice. Now exceptions are read and kept intact</li>
+<li>&quot;Who Can Add You to Groups&quot;: new &quot;Always allow Premium users&quot; checkbox</li>
+<li>&quot;Discoverable by Phone Number&quot; only offers Everybody or My Contacts: &quot;Nobody&quot; isn&#x27;t accepted by Telegram and used to be refused</li>
+<li>New items: &quot;Gifts&quot;, &quot;Messages&quot; (who can write to you first: everybody, or your contacts and Premium users) and &quot;Archive and mute new chats from non-contacts&quot;</li>
+</ul>
+<p>Telegram menu</p>
+<ul>
+<li>Confirmations (&quot;updated&quot;, &quot;set to...&quot;) arrive only when Telegram has really saved; if it refuses, a dialog window tells you why</li>
+<li>&quot;Auto-Disconnect After...&quot; and &quot;Delete Account After Inactivity&quot; show the current value checked; added the durations missing compared to the official app: 1 year for sessions, 18 and 24 months for the account</li>
+</ul>
+<p>Automatic chat translation</p>
+<ul>
+<li>When entering a chat with automatic translation, messages are translated much faster: several translations at once instead of one at a time, starting from the message you&#x27;re on</li>
+<li>Fixed: leaving a chat while a translation was in progress, in the next chat translations could end up on the wrong message</li>
+</ul>
+<p>Important fixes</p>
+<ul>
+<li>Some of Telegram&#x27;s replies were discarded by mistake by the program. Because of this: replies to very old messages only said &quot;In reply to a message&quot; instead of who and what; error notices for forwarding and sharing didn&#x27;t appear. Now they all arrive</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL. This version touches a part used by encrypted conference calls: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.9.5</h2>
+<p>New: &quot;Forward&quot; redone as in the official Telegram</p>
+<ul>
+<li>&quot;Forward&quot; (also with several selected messages) now opens the &quot;Forward message to&quot; window, with search and the list of chats you can write in, Saved Messages first</li>
+<li>Enter on a chat opens it with the forward ready above the message field: you can add a comment and press Enter to send, or Esc to cancel. When you come back to that chat later you&#x27;re reminded of the pending forward. To Saved Messages the forward is sent right away; for a group with topics you first choose the topic</li>
+<li>With Space you select several chats at once: the comment and the Send, &quot;Send without sound&quot; and &quot;Schedule...&quot; buttons appear, and you can uncheck &quot;Show sender name&quot; and, if there are any, &quot;Show caption&quot;</li>
+<li>If Telegram refuses to send to a chat, a window tells you which one and why</li>
+</ul>
+<p>New: more sharing, as in the official Telegram</p>
+<ul>
+<li>&quot;Share Contact...&quot;: sends a person&#x27;s card (name and number) to another chat. You find it in the Contact menu of a private chat, in the Contacts tab menu and in the menu of a group member, only when you know that person&#x27;s number</li>
+<li>&quot;Share My Phone Number...&quot;: in the Contact menu, when a person you added to your contacts can&#x27;t see your number yet. In that case the &quot;Add to Contacts&quot; window also has the &quot;Share my phone number&quot; checkbox, already checked as in Telegram</li>
+<li>Invite links: &quot;Share Invite Link...&quot; in the Group menu and &quot;Share...&quot; on the links of the invite link list. Sticker and emoji packs: &quot;Share pack&quot; button in the &quot;Emoji, stickers and GIFs&quot; window. The forward window opens, with an extra &quot;Copy link&quot; button; the comment goes below the link</li>
+<li>Videos: in the internal player, the &quot;Share from this point...&quot; button pauses and forwards the video so that whoever opens it starts from that point. For public channels there&#x27;s also &quot;Copy link&quot; with the time already in it</li>
+</ul>
+<p>Notices in dialog windows</p>
+<ul>
+<li>Outcomes that used to be only spoken by the screen reader, with the risk of missing them, now appear in a dialog window: screen sharing errors, forwarding problems, an invalid date in &quot;Send Later&quot;, an unavailable invite link</li>
+</ul>
+<p>Fixes</p>
+<ul>
+<li>Contact search: when editing a contact&#x27;s note, in English the note appeared twice in the row, and &quot;Blocked&quot; could repeat in every language</li>
+<li>&quot;Remove pack&quot; could act on the wrong pack if the list was updated while it was asking for confirmation</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL, including screen sharing: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.9.4</h2>
+<p>New: screen sharing in group video chats and conference calls</p>
+<ul>
+<li>You can now share your screen in group video chats and conference calls too: Alt+Shift+S or the new &quot;Share Screen&quot; button in the call window. Choose an entire screen or a single window, as in one-to-one calls; be careful, all participants see everything that appears, notifications included</li>
+<li>As in the official Telegram, in groups the webcam doesn&#x27;t turn off: you can have webcam and screen on at the same time. Pressing Alt+Shift+S again lets you change what you share or stop</li>
+<li>If you chose it in Settings, Calls category, computer audio is shared together with the screen (Windows 11 required), excluding Gram Access, so nobody hears their own voice coming back. While sharing, the computer audio checkbox and volume also appear in the call window</li>
+<li>If you minimize the window you&#x27;re sharing, sharing pauses and resumes by itself when you restore it; if you close the window, sharing stops and you&#x27;re told. If the call reconnects by itself because of a network problem, sharing starts again by itself</li>
+<li>You also see and hear the screen shared by other participants: you&#x27;re told who started or stopped sharing, the participant list shows it next to the name (&quot;sharing screen&quot;, or &quot;paused&quot;) and Ctrl+Shift+I repeats who is sharing, including you</li>
+</ul>
+<p>Chat list</p>
+<ul>
+<li>While staying on a chat, Saved Messages included, the screen reader should no longer reread the row from time to time when a message arrives in another chat, someone is typing or a counter changes: as in the official Telegram, a background update only touches the row of the chat concerned, without rebuilding the whole list. The Archived tab too</li>
+<li>Archived tab: when a chat was archived or unarchived, the selection could land on another chat; now it stays where you were</li>
+</ul>
+<p>Topics</p>
+<ul>
+<li>In groups with topics and in Saved Messages, leaving a topic with Esc and then the topic list, the program said &quot;Back to messages&quot; but got stuck and another Esc was needed; now you correctly go back to the chat list or to the chat&#x27;s messages</li>
+</ul>
+<p>Translations</p>
+<ul>
+<li>Some texts appeared in Italian even when using the program in English or Spanish (for example opening a conversation, the Attach menu, the read receipt setting, the windows for choosing a file): they are now translated</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL, including screen and audio sharing, new in groups: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.9.3</h2>
+<p>New: reply quoting part of the message</p>
+<ul>
+<li>New &quot;Reply with quote...&quot; item in the message menu, with the Ctrl+Alt+C shortcut: the message text opens, you select just the part you want with Shift and the arrow keys and press Enter; your reply will quote exactly that part, as in the official Telegram. Esc cancels. It can be changed in Settings, Keyboard category</li>
+<li>When reading messages, a reply with a quote can now be recognized: you hear for example &quot;In reply to Mario, quoting: ...&quot; followed by the quoted part</li>
+</ul>
+<p>Voice messages</p>
+<ul>
+<li>Changing the speed (button or Ctrl+D) is now instant: the voice message no longer stalls for a moment before starting again</li>
+<li>Fixed a problem where, after changing the speed, moving forward or back with the arrow keys or the slider could play the same voice message two or three times at once</li>
+<li>When moving with the arrow keys on the position bar, each press now starts from where you are, instead of going back to the beginning of the voice message</li>
+<li>Pressing Stop while a voice message is still downloading no longer makes it start by itself once the download finishes; and a voice message still being prepared no longer overlaps the one chosen afterwards</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL, including screen and audio sharing: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.9.2</h2>
+<p>New: go to the next unread mention</p>
+<ul>
+<li>New Ctrl+Shift+T shortcut (&quot;Go to Next Unread Mention&quot;, also in the Information menu): inside a chat it takes you to the oldest mention still to be read, which is then marked as read; pressing it again takes you to the next one, until you hear &quot;No unread mentions&quot;. It&#x27;s the equivalent of the &quot;@&quot; button in the official Telegram. Inside a topic of a group with topics it only jumps to that topic&#x27;s mentions. It can be changed in Settings, Keyboard category</li>
+<li>Why it&#x27;s needed: in Telegram a mention (even a simple reply to one of your messages) is only marked as read when you actually reach that message, not when you read the chat to the end. Jumping with End or Ctrl+L left a mention in between unread, and with the &quot;Unread&quot; filter the chat stayed in the list even without unread messages. With Ctrl+Shift+T you find and clear them in a moment</li>
+<li>When browsing messages with Page Up and Page Down, the skipped messages are now also marked as seen, not just the one you stop on</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL, including screen and audio sharing: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.9.1</h2>
+<p>Messages with replies</p>
+<ul>
+<li>Restored the full wording when reading messages with a reply: you now always hear who is being replied to and the text of the original message, for example &quot;In reply to Mario: see you tomorrow&quot;, even when the original message is far back in the chat. If the message isn&#x27;t loaded yet, Gram Access retrieves it from Telegram and the row completes itself after a moment</li>
+<li>When the reply is to one of your messages you hear &quot;In reply to your message:&quot; followed by the text</li>
+<li>If the person replying quoted only part of the message, you hear exactly that part</li>
+<li>For replies to messages from another chat you also hear who wrote the original message</li>
+<li>If the original message was deleted, you hear it (&quot;In reply to a deleted message&quot;)</li>
+<li>&quot;You&quot; in message previews is now translated into English and Spanish too</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL, including screen and audio sharing: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.9.0</h2>
+<p>Unread mentions</p>
+<ul>
+<li>Fixed a long-standing problem: some unread mentions never disappeared from the chat list, even after reading all the messages. It happened with voice messages and video messages: for Telegram even a simple reply to one of your messages counts as a mention, and if the reply was a voice message the mention is only considered read when the voice message is listened to, which Gram Access never told Telegram. Now, when you listen to a voice message or an audio file, watch a video or a video message, or open a file, Gram Access reports it like the official client: the mention disappears, and whoever sent you the voice message sees it as listened</li>
+<li>Fixed: the &quot;Unread Mentions&quot;, &quot;Unread Reactions&quot; and &quot;Polls with Unread Votes&quot; lists in the Information menu were always empty, because the program marked everything as read before even searching for it. It now shows the list first and marks it as read afterwards; the list stays as it was opened while you browse it. Inside a topic of a group with topics, only that topic&#x27;s items are marked as read</li>
+<li>If the mention counter was stuck even without real mentions, opening &quot;Unread Mentions&quot; now clears it</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL, including screen and audio sharing: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.8.9</h2>
+<p>Important fix: duplicate chats with the &quot;Unread&quot; filter</p>
+<ul>
+<li>Fixed a serious problem: with the &quot;Unread&quot; filter on, after reading a chat and opening another one, the first chat appeared twice in the list, once with the old unread count, as if it had never been opened, and the problem got worse with every chat. The list now always knows which chat is on each row, and when a chat enters or leaves the filter the list is really redrawn</li>
+<li>The &quot;Unread&quot; filter now works like the official client: the chat you open stays in the list while you read it and leaves it when you leave the chat (with Esc, by opening another chat or by changing filter); chats with unread mentions are included too</li>
+<li>If the selected chat disappears from the list (read with the filter on, archived, left), the selection moves to the next chat instead of being lost</li>
+</ul>
+<p>New: polls with unread votes</p>
+<ul>
+<li>When someone votes in one of your polls, the chat list shows it (&quot;1 poll with unread votes&quot;), in real time. The Information menu has the new &quot;Polls with Unread Votes&quot; item listing only the polls with new votes. Votes are marked as read when the cursor reaches the poll, or by opening that item. The indication can be turned off in &quot;Customize Display&quot;</li>
+</ul>
+<p>Other counter fixes</p>
+<ul>
+<li>When opening an archived chat with unread messages, the focus didn&#x27;t start from the first unread one, and Ctrl+L never found them</li>
+<li>When switching to a folder, the announced number of unread chats could be out of date</li>
+<li>Groups with topics: if a topic was read on another device, reopening it in Gram Access could put the focus on messages already read</li>
+<li>While viewing a folder, a new message no longer redraws the whole folder (the screen reader could re-read the selected row)</li>
+<li>&quot;Mark as read&quot; and &quot;Mark as unread&quot; are now shown immediately inside folders too</li>
+<li>&quot;1 unread mention&quot;, &quot;1 unread reaction&quot; are now in the singular; for topics &quot;polls with unread votes&quot; replaces the inaccurate &quot;unread poll votes&quot;</li>
+<li>The &quot;New reaction&quot; notice (with the program minimized) and the online users announcement were in Italian even with the program in English or Spanish</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL, including screen and audio sharing introduced in 1.8.8: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.8.8</h2>
+<p>Screen sharing (new)</p>
+<ul>
+<li>During a call between two people, Alt+Shift+S (or the &quot;Share Screen&quot; button) lets you show the other person a whole screen or a single open window, for example to get help from a sighted person. Like the official client, the screen takes the place of the webcam; pressing Alt+Shift+S again lets you change what you share or stop. Warning: the other person sees everything that appears, notifications included</li>
+<li>Together with the screen, the computer audio is shared too: music, videos and the screen reader&#x27;s speech, except Gram Access itself (so the other person doesn&#x27;t hear their own voice coming back). It only works on Windows 11; on Windows 10 the screen is shared anyway, without audio, and the program says so. If you mute the microphone, the computer audio is muted too; headphones give the best result</li>
+<li>When the other person starts or stops sharing their screen you hear it announced, and Ctrl+Shift+I also tells what you are sharing or whether they are sharing</li>
+<li>If the window you are sharing is closed, sharing stops by itself and you hear it; if it is minimized you hear that sharing is paused</li>
+<li>For now screen sharing works in calls between two people, not yet in group calls</li>
+</ul>
+<p>New &quot;Calls&quot; category in Settings</p>
+<ul>
+<li>Right after &quot;Devices&quot;: you can turn the microphone filters on or off (echo cancellation, noise suppression, advanced noise suppression in group calls, automatic volume), which until now were always on with no choice. Turning off noise suppression can help the screen reader&#x27;s speech or music come through better. Filters apply from the next call; advanced noise suppression can also be changed during a group call</li>
+<li>Three volumes, up to 200% and with a limiter that prevents distortion: microphone volume (only with automatic volume off), call listening volume and shared computer audio volume. Volumes apply immediately, even during a call</li>
+<li>The listening volume, and while sharing the screen also the computer audio checkbox and its volume, are also in the call window, after the buttons: they are the same values as in Settings</li>
+</ul>
+<p>Call shortcuts (changed)</p>
+<ul>
+<li>Ctrl+Alt+A starts a call, answers an incoming one or joins a group video chat; Ctrl+Alt+V starts a video call; Ctrl+Alt+D declines, ends the call or leaves the video chat. During a call: Alt+Shift+V turns the webcam on or off, Alt+Shift+S shares the screen. Ctrl+Shift+I is unchanged. If you hadn&#x27;t customized them you&#x27;ll find them already changed; customized ones stay as they are</li>
+<li>From the keyboard, the call shortcut no longer ends a call in progress by mistake: it tells you who you&#x27;re already in a call with and how to end it</li>
+<li>As a group administrator, Ctrl+Alt+D asks whether to just leave (already selected) or end the call for everyone, like the official client. Before, it ended it for everyone right away</li>
+</ul>
+<p>Pinned messages</p>
+<ul>
+<li>The pinned messages bar above the message list now shows all the chat&#x27;s pinned messages, not just the latest: &quot;Pinned message 2 of 3: ...&quot;. Up and Down arrows move between them, Home and End go to the most recent and the oldest; Enter takes you to the message and the bar moves to the previous pinned one, like the official client</li>
+</ul>
+<p>Fixes</p>
+<ul>
+<li>Group calls always used the Windows default microphone and speaker, ignoring the ones chosen in Settings. They now respect them, as calls between two people already did</li>
+<li>When ending a call from its window, the main window came back to the front but with no active control, and Tab went nowhere. You now go back to where you were, or to the message list</li>
+<li>Choice windows opened during a call (for example what to share) no longer stay hidden behind the call window</li>
+<li>With the program in English or Spanish, changing a shortcut made some voice recording buttons go back to Italian</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL. Screen sharing has been tested live; computer audio and the filters and volumes of the new &quot;Calls&quot; category are new and have not been really tested yet: for any strange behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.8.7</h2>
+<p>Security</p>
+<ul>
+<li>When opening an attachment that could be a program (.exe, .bat, .cmd, .vbs, .js, .lnk, .msi, .iso disk images, Office documents with macros and similar), even just by pressing Enter on the message, a confirmation question now appears with &quot;No&quot; already selected, like the official client. Before, the file started right away, without even the Windows warning</li>
+<li>Internal browser: any website opened in the internal browser can no longer give commands to the program, and Telegram mini apps can only open normal web addresses, never files or programs on the computer</li>
+<li>Fixed: in mini apps, Telegram links (t.me) never opened</li>
+<li>Video streaming: the local address used to watch a video while it downloads now contains a random code, so no other program on the computer can use it</li>
+<li>The detailed diagnostic log no longer saves notification text, conference security codes or call connection data</li>
+<li>The Dati folder (Telegram session, settings) is now always automatically excluded from installation and updates, and can never be overwritten</li>
+</ul>
+<p>Conference calls</p>
+<ul>
+<li>Fixed a long-standing problem: if you were in a 1-to-1 call and the other person added someone, Gram Access ended the call instead of joining the conference. You now join automatically, like the official client, and hear &quot;... added more people: the call has become a conference&quot;. For this to work, both people need this version</li>
+<li>Fixed: when you added someone to a 1-to-1 call, the call window could disappear and &quot;Call ended&quot; could be heard while you were already talking in the conference</li>
+</ul>
+<p>Calls and video</p>
+<ul>
+<li>Closing the program during a call now notifies Telegram: the other person immediately sees the call as ended, and you really leave a group video chat instead of staying &quot;present&quot; for the others. Also removed a possible error on exit</li>
+<li>Fixed: when the other person turned off their webcam, Ctrl+Shift+I kept saying their video was on and their last image stayed frozen on screen. Same for the preview of your own webcam after turning it off</li>
+<li>Fixed: images from a previous video call could reappear at the start of the next one</li>
+<li>Fixed: in a group video chat with two or more webcams on, the program could close suddenly</li>
+<li>Group video chats: in the participant list, the selection no longer jumps to another person when someone leaves (before, volume, mute or remove could affect the wrong person), and the screen reader no longer re-reads the selected item every time someone starts or stops speaking</li>
+<li>More robust video: if the graphics card can&#x27;t be used, Windows drawing is used instead of showing nothing, some video formats that were discarded before are now shown, and several cases of sudden closing during a video call were removed</li>
+</ul>
+<p>Voice messages</p>
+<ul>
+<li>Fixed: if the microphone couldn&#x27;t be opened (unplugged, busy or blocked by Windows privacy), pressing Ctrl+R a second time closed the program suddenly, and the recording window stayed open</li>
+<li>Fixed: closing the program while recording a voice message made it end with an error</li>
+<li>While recording, the &quot;Record voice message&quot; button becomes &quot;Send voice message&quot; and really sends it (before, it stayed &quot;Record voice message&quot; and did nothing)</li>
+<li>A voice message always goes to the chat where you started recording it, even if you open another one in the meantime (for example by clicking a notification): in that case you hear which chat it&#x27;s being sent to</li>
+</ul>
+<p>Video streaming</p>
+<ul>
+<li>More reliable: the player now only receives parts of the video that have really been downloaded. Before, moving back and forth in the video could deliver invalid data</li>
+</ul>
+<p>Accessibility</p>
+<ul>
+<li>Spoken announcements can now also be heard in the program&#x27;s other windows (Settings, emoji and stickers, players, search in chat and others) when they are in the foreground</li>
+</ul>
+<p>Updates and reliability</p>
+<ul>
+<li>Safer automatic update: the package is fully extracted and checked before replacing the files, and downloaded files are verified (complete and without server errors)</li>
+<li>A full disk or a power cut can no longer damage the settings file</li>
+<li>Updates coming from Telegram are no longer lost at very busy moments (for example on first start with a great many chats)</li>
+<li>Messages removed only from Telegram&#x27;s temporary memory no longer disappear from the open chat as if they had been deleted</li>
+<li>The diagnostic log now also shows the date of each line</li>
+</ul>
+<p>IMPORTANT: all calling features (1-to-1, group video chats, conference calls) remain EXPERIMENTAL, especially everything related to video and conferences. Group video chats with several people and the new automatic joining of a conference haven&#x27;t yet had a real live test: for any unusual behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.8.6</h2>
+<ul>
+<li>Fixed: in the Saved Messages chat, the Contact menu still showed &quot;Audio call&quot;/&quot;Video call&quot; entries — calling yourself doesn&#x27;t make sense and was already prevented by the &quot;Call&quot; button in the toolbar, but not by this menu. Those entries no longer appear in either place</li>
+</ul>
+<p>IMPORTANT: all calling features (1-to-1, group video chats, conference calls) remain EXPERIMENTAL, especially everything related to video. Group video chats in particular are new since version 1.8.5 and haven&#x27;t yet had a real test with several people together: for any unusual behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.8.5</h2>
+<ul>
+<li>New shortcut Alt+Shift+V: turns your webcam on/off during an already-ongoing 1-to-1 call (previously reachable only with Tab)</li>
+<li>Ctrl+Shift+I (announces who&#x27;s calling/who you&#x27;re on a call with) now also says whether the call is audio or video, and whether video is on on your side, the other side, or both</li>
+<li>New toggle in Settings &gt; Accessibility: &quot;Announce when video turns on or off during a call&quot; (yours or the other person&#x27;s), on by default</li>
+<li>Fixed: in Settings &gt; Devices, the microphone/speaker names for calls all started with &quot;OpenAL Soft on&quot; (the audio library&#x27;s technical name) — this made it impossible to jump to a list entry by typing its real first letter. Removed only from what&#x27;s displayed; the chosen device still works exactly as before</li>
+<li>Fixed: after testing the microphone (Settings &gt; Devices), focus no longer returned to the button you started from, forcing you to Tab through everything again</li>
+<li>1-to-1 video calls, several real bugs fixed after an in-depth live test:</li>
+</ul>
+<p>- the video window had a small fixed size — it&#x27;s now resizable, maximizable, and starts out bigger</p>
+<p>- video received from a phone held upright arrived sideways and distorted — fixed both the rotation and the proportions (black bars when needed, never a squished or stretched image again)</p>
+<p>- the &quot;Turn on video&quot; button could show the wrong label compared to the webcam&#x27;s real state</p>
+<p>- during a call, Alt+Tab always landed back on the call controls instead of the main window</p>
+<p>- no spoken announcement (including the ones above) could be heard during a call, because it was sent to the wrong window — every announcement now reaches the right window, whichever one actually has focus at that moment</p>
+<p>- starting directly with a &quot;Video call&quot; (rather than an audio call with video turned on later), the video could get stuck on a frozen frame, or the other person&#x27;s video might not arrive at all until they turned their webcam off and back on</p>
+<ul>
+<li>New: video now also in group video chats — a grid with several participants at once (it adapts automatically to how many people there are, like the official client), a new &quot;Turn on video&quot; button in the call window, and Alt+Shift+V works here too. The participant list now also shows who has video on</li>
+<li>The &quot;Turn on video&quot; button (both 1-to-1 and group calls) now appears right after &quot;Mute microphone&quot; in Tab order, instead of at the end after &quot;Add participant&quot;</li>
+</ul>
+<p>IMPORTANT: all calling features (1-to-1, group video chats, conference calls) remain EXPERIMENTAL, especially everything related to video: its implementation is complex given the many variables Telegram itself manages internally, and further undiscovered bugs can&#x27;t be ruled out. Group video chats in particular are new in this version and haven&#x27;t yet had a real test with several people together: for any unusual behavior, don&#x27;t hesitate to contact me.</p>
+</section>
+<section class="release">
+<h2>Version 1.8.4</h2>
+<ul>
+<li>Fixed: &quot;recent&quot; emoji and stickers (including custom ones) are now saved in the single settings file, like all other preferences — they used to stay in two separate files that were never moved to the new format</li>
+<li>The Dati folder now also cleans up old leftover files from previous versions (recent emoji, updater log) — no visible effect on how the program works, just a tidier folder</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.8.3</h2>
+<ul>
+<li>Fixed: it&#x27;s no longer possible to start a call inside Saved Messages (calling yourself) — the option no longer appears, matching the official client</li>
+<li>Fixed: a call rejected by the server could show the same error window twice, one after the other to close — now only one ever appears</li>
+<li>A contact&#x27;s &quot;Blocked&quot; status is now immediately visible in the Address Book (updated in real time) and in the contact&#x27;s Info window, without opening the context menu</li>
+<li>New &quot;Blocked Users...&quot; window (Telegram &gt; Privacy): full list of who you&#x27;ve blocked, with &quot;Unblock&quot; from the context menu</li>
+<li>Translated the error message for trying to send a message made up of only spaces</li>
+<li>Fixed: in windows with a list (Who Viewed, Who Reacted, Unread Mentions/Reactions, Blocked Users, Members, Active Sessions, Invite Links and similar ones), Tab moved focus to other controls in the main window instead of staying inside the list</li>
+<li>Fixed: in the same windows, when the result is empty, a dialog now appears (&quot;No results&quot;) instead of a single spoken announcement, often too quick to be heard with speech synthesis</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.8.2</h2>
+<ul>
+<li>Added &quot;Join the Telegram community&quot; and &quot;Visit the website&quot; items to the Help menu</li>
+<li>Fixed: when reactions aren&#x27;t allowed in a chat, it used to be only announced aloud (easy to miss) — now a dialog appears that stays visible until you close it</li>
+<li>Fixed: editing an already-sent message or caption, pasting a long replacement text could end up truncated, and the text couldn&#x27;t be read line by line with the arrow keys like when writing a new message — the edit field now behaves like the compose field, with no length limits</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.8.1</h2>
+<ul>
+<li>New &quot;Always remember the last playback speed chosen for voice messages&quot; option (Chat and Messages Settings, on by default): when enabled, the speed set for voice messages stays the same even after closing and reopening the program</li>
+<li>Automatic sequential voice message playback now has 3 modes instead of two (Chat and Messages Settings, and Ctrl+Shift+R which now cycles through the three): off, on but stops if another type of message is in between (previous behavior), or on and skips other messages to continue with the next voice message</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.8.0</h2>
+<ul>
+<li>Fixed: a new incoming message while still reading through history with the arrow keys always moved the focus to the newest one, skipping over older unread messages that were then left marked as unread even after actually being read — the focus now only jumps if you were already at the bottom of the list (or for a direct mention, which still always interrupts)</li>
+<li>New &quot;Announce formatting&quot; switch (bold, italic, etc. read aloud): off by default, since in channels with heavy formatting every message kept getting interrupted — can be turned on either from Accessibility Settings or on the fly from a message menu item, for when you actually need to check a specific message&#x27;s formatting</li>
+<li>New &quot;Voice messages&quot; filter in the Shared Media submenu (Info), right after &quot;Audio&quot;</li>
+<li>Fixed the reading order of 4 message lists (Shared Media, search within the chat, search across all chats, scheduled messages): it used to read date/time first followed by sender and content, now sender and content come first and the date/time last</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.9</h2>
+<ul>
+<li>Fixed: the first audio/video playback after starting the program could take a few seconds (playback engine only started on first use) — it now starts in the background as soon as the program opens, without delaying startup, so it&#x27;s already ready when you press play</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.8</h2>
+<ul>
+<li>Fixed: editing a group/channel description or your own personal bio now lets you actually go to a new line (255 characters, same as official Telegram) — this wasn&#x27;t a Telegram limit, the field just didn&#x27;t allow it yet</li>
+<li>Fixed: in those same two windows, Tab now correctly moves focus to the OK button instead of staying stuck in the text field</li>
+<li>Widened the edit window when it contains a multi-line field, so more text fits per line</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.7</h2>
+<ul>
+<li>New &quot;Telegram Premium...&quot; item in the Account menu: shows the current subscription status (active or not, and when it renews, using the same text written by Telegram) followed by a description of all 29 features included with Premium — informational only, activation/purchase remain only possible through official Telegram channels</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.6</h2>
+<ul>
+<li>Banning a group member (from the &quot;Administer [name]&quot; submenu in the message menu, or from the Members list) now offers the choice &quot;Ban from the group only&quot; or &quot;Ban and also delete all their messages&quot;, with a dedicated window instead of just a plain confirmation</li>
+<li>Fixed: deleting messages at ban time no longer relies solely on the ban command itself (which, verified live, doesn&#x27;t always actually delete messages despite what&#x27;s documented — happens for example with bots), but now uses a second, explicit and reliable step, verified to work</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.5</h2>
+<ul>
+<li>New &quot;Emoji, stickers and GIFs&quot; window (button on the compose row, next to Attach, and Ctrl+Shift+E shortcut): search and categories/packs for emoji, custom emoji (Premium), stickers and GIFs, with &quot;Add pack from link&quot; and &quot;Remove pack&quot;, and Recents always available just like the official client (synced to the account for stickers and GIFs, remembered locally for emoji)</li>
+<li>In the Emoji, Stickers and Custom emoji sections the window now shows two side-by-side lists (categories/packs and content): moving with the arrow keys in the first one loads the content into the second one right away, no need to press Enter to &quot;open&quot; each one</li>
+<li>A note about GIFs: neither Telegram nor the search services it uses provide any text description of what a GIF actually shows, whether received or about to be sent — this is a real limitation of the platform itself (the same for every client, not just Gram Access), so it can only show a generic label or the file name when available, never a real description</li>
+<li>Received messages now show text formatting (bold, italic, underline, strikethrough, spoiler, code, code block, quote) as readable bracketed notes — previously they were read as plain text with no indication at all</li>
+<li>New &quot;Summarize with AI&quot; item in the message menu, to get a long text summarized</li>
+<li>Alt+Enter instantly sends the current message without notifying the recipient, in a single gesture</li>
+<li>New &quot;Code block&quot; and &quot;Quote&quot; formatting options in the message field&#x27;s formatting menu</li>
+<li>New Checklist feature: created from Attach, its tasks are checked off from the message menu, and the message list now shows the real count (e.g. &quot;3/5 tasks completed&quot;)</li>
+<li>New &quot;Administer [name]&quot; submenu in the message menu: restrict/promote/ban the sender or delete their messages without first having to find them in the Members list — the same action in the Members list has been renamed &quot;Ban from group&quot; (previously &quot;Remove from group&quot;), to be clearer about what it actually does</li>
+<li>Choice windows (deleting a message or a chat, pinning a message) now have buttons that spell out the meaning of each choice directly, instead of having to remember a question read earlier while moving between generic &quot;Yes&quot;/&quot;No&quot; buttons</li>
+<li>Fixed 4 cases where an action blocked by a restriction or a permission failed without explaining why: recording a voice message when it&#x27;s not allowed, writing in a chat or topic that doesn&#x27;t allow it, replying when you can&#x27;t write, a failed message send or a declined call</li>
+<li>Fixed: the &quot;Who has seen this&quot; error now explains the most likely cause (message too old, or group too large) instead of showing only an incomprehensible technical code</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.4</h2>
+<ul>
+<li>New &quot;Test microphone&quot; button (Settings &gt; Devices, for both voice messages and calls): records a couple of seconds and announces the result (no signal/weak/good) — designed to be accessible from the start, instead of a visual meter like official Telegram&#x27;s, which is useless with a screen reader</li>
+<li>Fixed a real bug in all 5 audio device selection menus (voice message microphone/speaker, call microphone/speaker, notification sound speaker): plugging or unplugging a device while Settings was still open could silently save a different device than the one actually selected. A device that&#x27;s selected but momentarily disconnected now still shows up in the list instead of disappearing behind a misleading &quot;System default&quot;</li>
+<li>Fixed: music, audio files and videos now actually play through the device chosen as &quot;Speaker for listening to voice messages&quot; (previously they always played on Windows&#x27; default device, regardless of what was chosen)</li>
+<li>Fixed a rare overlapping double ring when a call ended and another arrived almost at the same instant, with a specific audio device chosen for sounds</li>
+<li>Fixed: the &quot;Test&quot; button in the Sounds list now always plays the sound even if the event is turned off</li>
+<li>Changing the microphone/speaker for calls is now also attempted on an already ongoing call, not just the next one</li>
+<li>Deleting a message (single or multi-selected) now offers the choice &quot;also delete for others&quot; or &quot;delete only for you&quot; when available — previously it was always deleted for everyone without ever asking, just like official Telegram does</li>
+<li>Clearing a chat&#x27;s history or deleting a private chat now offers the same choice when available — previously it was always deleted locally only</li>
+<li>New &quot;Administration&quot; menu (visible only to a real administrator of a group/channel): brings together in one place, organized like official Telegram, everything that used to be scattered across 5 different submenus inside &quot;Group&quot; — each item now only appears if you actually have the specific corresponding right, not just &quot;are you an admin yes/no&quot;</li>
+<li>New &quot;My permissions in this chat&quot; item (Group menu, visible to anyone): clearly shows what you can and cannot do in the open chat — a feature of Gram Access&#x27;s own, official Telegram doesn&#x27;t offer anything like it to anyone</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.3</h2>
+<ul>
+<li>Fixed: in the message list, a sent audio file now shows its title/artist (if present in the file&#x27;s own data) or at least its file name, instead of the generic &quot;Audio&quot; with no detail at all — the same fix already made in the past for documents</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.2</h2>
+<ul>
+<li>New feature: Gram Access now uses Windows&#x27; real, interactive notifications (the ones from the Notification Center), just like official Telegram — they stay visible even after disappearing from the screen, and you can reply, mark as read, or open the right chat directly from the popup itself, without having to open the program first</li>
+<li>New advanced setting in Settings &gt; General, off by default: &quot;Reliable notification opening&quot; — for anyone who wants &quot;Open chat&quot; to always work 100% of the time (it registers a small extra component with Windows), and in the future will also be able to reopen Gram Access from a notification click even after fully closing the program. Anyone who doesn&#x27;t turn it on keeps today&#x27;s notifications, which already work in almost every case</li>
+<li>New button in Settings &gt; General, &quot;Remove Windows integrations...&quot;: removes, in one go, everything the program has left outside its own folder (Start menu shortcut, desktop icon, auto-start, &quot;tg://&quot; link handling, the optional notification component) — use it before deleting the program&#x27;s folder, to leave no trace behind</li>
+<li>New advanced setting in Settings &gt; General, off by default: &quot;Detailed diagnostic log&quot; — turns on more in-depth logging for calls and notifications, useful only when tracking down a specific problem; a new &quot;Open Log folder&quot; item in the Help menu takes you straight to where Gram Access already notes down the main events on its own (this part always stays on, kept lightweight) and, if enabled, the more technical details too</li>
+<li>Attaching a file (document, photo, video, or several files together) now always asks whether you want to add a caption, already pre-filled with whatever you&#x27;d typed in the message field — a single message with the attachment and the text together, exactly like official Telegram, instead of two separate messages as before</li>
+<li>Pasting several files at once with Ctrl+Shift+V, or picking several files from the &quot;Attach&quot; &gt; &quot;Album&quot; menu, now also groups documents together up to 10 at a time into a single message (previously they were always sent one at a time) — the same behavior photos and videos already had</li>
+<li>Fixed a real bug: Help menu → &quot;What&#x27;s new&quot; opened the window but showed no text at all — a hidden limit in Windows&#x27; text field couldn&#x27;t hold a changelog that had grown quite long; fixed, and the same fix was applied as a precaution to the &quot;Update available&quot; and &quot;Read as text&quot; windows too</li>
+<li>The main window now opens much larger and truly adapts when resized (it used to stay small and fixed); the font used across every button and field has also been updated to Windows&#x27; modern one, easier to read</li>
+<li>Calls (still an experimental feature) now explain the real reason when they fail, whenever possible — for example, if you can&#x27;t call someone because of their privacy settings, that&#x27;s now stated clearly instead of the generic &quot;call error&quot;, just like official Telegram does</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.1</h2>
+<ul>
+<li>New feature: &quot;Go to the playing message&quot; (Ctrl+Shift+M) — while listening to a voice message or a media file, you can freely type a message, scroll through other messages, or switch to another chat: playback keeps going in the background, exactly like official Telegram clients. This new shortcut takes you straight back to the message being played from anywhere in the program — even if you&#x27;ve switched chats in the meantime — and focus lands directly on the &quot;Pause&quot; button, ready to stop it right away with Enter or Space if needed</li>
+<li>Related behavior change: while moving between messages, switching to another chat, or typing, Esc is now always just &quot;go back to the chat list&quot; (or the topic list), it no longer stops an ongoing playback like it used to — consistent with official Telegram, where the player keeps running in the background until you stop it on purpose. If focus is actually inside the player itself (the voice panel or the media window), Esc still works as before: it stops playback and closes the player</li>
+<li>New notification sound: a message arriving in the chat you already have open and in view now plays a dedicated sound (&quot;Message in the open chat&quot;) — previously it stayed completely silent unless it was a mention; customizable/can be turned off like every other sound in Settings &gt; Sounds</li>
+<li>Fixed an important real bug with sounds: while the program was minimized, or in a private chat/group/channel&#x27;s custom notifications, the &quot;default&quot; sound was still tied to Telegram&#x27;s generic tone instead of Gram Access&#x27;s new sounds, even for accounts that never customized anything — now only a sound genuinely and deliberately chosen on the account is respected, otherwise Gram Access&#x27;s own default is always used</li>
+<li>Replaced the default &quot;Group&quot; sound: the previous one was too similar to the private-chat one, now it&#x27;s easier to tell by ear where a message is coming from</li>
+<li>New &quot;Audio&quot; filter in the &quot;Shared Media&quot; submenu (Chat info), right after &quot;Photos and Videos&quot; — previously you could only filter by photos/videos, files and links, shared music/audio files were missing</li>
+<li>Fixed a real bug: in the &quot;Change sound...&quot; window opened from a chat&#x27;s custom notifications, the &quot;Test&quot; button took several Tabs to reach — it&#x27;s now right after the sound list, as already fixed in the other similar windows</li>
+<li>Improvement: that same &quot;Change sound...&quot; button now shows the sound currently set for that chat directly in its own text, without having to open it to find out</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.7.0</h2>
+<ul>
+<li>New feature: Gram Access now has its own genuine default sounds for all 10 events (calls, messages, connection, mentions), created specifically for the program by our friend Manolo, replacing the generated tones/Windows system sounds — still fully customizable as before from Settings &gt; Sounds. The call ring is now heard in full, no longer cut off every 2 seconds</li>
+<li>New feature: a &quot;Notification volume&quot; slider in Settings &gt; Sounds to adjust the volume of all notification sounds and the ring</li>
+<li>Fixed a real bug: in the &quot;Choose sound&quot; window, pressing &quot;Test&quot; on the &quot;Default&quot; row played the sound already set instead of the one currently selected</li>
+<li>Fixed: in the Sounds settings category and in the &quot;Choose sound&quot; window, the &quot;Test&quot; button is now right after the sound list (previously it took several Tabs to reach)</li>
+<li>Fixed a real bug: after confirming a sound with OK in the &quot;Choose sound&quot; window, focus didn&#x27;t return to the Settings window</li>
+<li>Improvement: Enter now directly confirms many more windows even while typing in a text field, without having to move focus to the OK button — for example editing a message&#x27;s text, the Proxy window, the search box in &quot;Choose members&quot;/&quot;Choose chat&quot;, and all 3 steps of the login screen (phone number, code, password)</li>
+<li>Fixed a real bug: text (even a mention) typed in the message field before starting a voice recording with Ctrl+R was lost — it&#x27;s now used as the voice message&#x27;s caption, matching official Telegram clients</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.9</h2>
+<ul>
+<li>New feature: from a message&#x27;s menu in a group or channel, &quot;Sender info&quot; opens the profile of whoever wrote it (name, username, bio, phone number if shared) — handy to find out who someone not in your contacts is. The same &quot;Info&quot; item is also available in a group&#x27;s member list menu</li>
+<li>New feature: &quot;Block User&quot; in a message&#x27;s menu and in the member list menu, with a confirmation prompt</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.8</h2>
+<ul>
+<li>New feature: Telegram folders now work like the official clients. Instead of a separate window with a frozen &quot;snapshot&quot;, a folder is a live view of the chat list that updates in real time (new messages, read/unread, reordering). Switch between &quot;All chats&quot; and folders with Ctrl+Shift+Down and Ctrl+Shift+Up (the folder name and its unread count are announced), or from the &quot;Go to&quot; → &quot;Folder&quot; menu, or with &quot;Open&quot; in the &quot;Folders&quot; window. The quick filters (Alt+1…5) still work inside a folder</li>
+<li>Fixed a real bug: opening &quot;Edit&quot; on a folder showed the already-included chats, groups and channels as unchecked, so you had to reselect them every time — the list now starts with the correct checkmarks</li>
+<li>Fixed a real bug: a folder created or edited while the program is running now fills in immediately, with no need to restart</li>
+<li>New option in Settings &gt; Chat and Messages (off by default): on startup, resume from the last folder you were viewing instead of always &quot;All chats&quot;</li>
+<li>Improvement for screen reader users: the quick chat-list filter shortcuts (Alt+1…5) now announce only the state of the filter you just toggled (&quot;Private: on&quot; / &quot;Private: off&quot;), no longer the full list of all filters followed by a re-read of the whole selected row. New Alt+6 shortcut that announces which filters are currently active</li>
+<li>New feature, on by default (can be turned off in Settings &gt; Accessibility): the window title bar shows where you are in the program — &quot;Chat list&quot;, the open chat&#x27;s name, the current folder — so the screen reader reads it out right away on Alt+Tab or when you return to the program</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.7</h2>
+<ul>
+<li>New feature: full proxy support (SOCKS5, HTTP, MTProto), matching official Telegram — a new &quot;Proxy&quot; category in Settings to add/edit/delete/enable/disable a proxy, paste a proxy link from a message, and test the connection before using it</li>
+<li>Fixed another real bug related to the screen reader repeating an announcement while idle: incoming updates for every new message in any chat (even one not selected) could needlessly rebuild the whole chat list even when the selected chat&#x27;s position hadn&#x27;t actually changed — this happened especially often while sitting on &quot;Saved Messages&quot;</li>
+<li>New feature: you can now create secret chats (menu &quot;New&quot; → &quot;Secret Chat...&quot;), matching official Telegram clients — end-to-end encryption, tied to the single device, no copy kept on the servers</li>
+<li>Fixed an important real bug: archived but not muted chats stopped producing any notification (neither sound nor background alert) for new messages while the program was minimized</li>
+<li>Fixed a real bug: the &quot;Notification exceptions&quot; list (Telegram menu → Notifications → Exceptions) showed &quot;Unknown chat&quot; for archived chats instead of their real name</li>
+<li>Improvement: the &quot;Notification exceptions&quot; list is now interactive — pressing Enter on a chat opens its custom notifications directly, instead of having to search for it by hand in the chat list</li>
+<li>New feature: while the program is minimized, notifications now also alert for an incoming new secret chat and for messages whose preview isn&#x27;t available yet (previously these stayed completely silent)</li>
+<li>New feature: an incoming notification&#x27;s sound can now be the real one chosen for that chat/category on the Telegram account (synced across devices), not just one of the 3 generic sounds — downloaded automatically in the background the first time and kept ready afterwards, with automatic recovery if the file were to disappear</li>
+<li>Fixed a real bug: &quot;Automatic cache cleanup&quot;/&quot;Free up space&quot; cleaned up any downloaded file type instead of just the photos/videos/voice messages/documents promised by their own description</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.6</h2>
+<ul>
+<li>New feature: multiple message selection. Pressing Control+Alt+S (or from the message menu) enters a dedicated mode: use Space to check the messages you want one by one while browsing with the arrow keys, then use the context menu to delete or forward all of them together. Esc exits the mode at any time. Until deliberately turned on, Space and Delete behave exactly as before (no risk of accidental selection or deletion)</li>
+<li>New feature: the Delete key now immediately deletes the selected message in the list, just like the &quot;Delete&quot; button in the context menu (with the same confirmation prompt)</li>
+<li>New feature: an always-visible bar at the top of the message list shows the most recent pinned message in the open chat, with a short dedicated announcement when it appears (can be turned off individually in Settings &gt; Accessibility) — pressing Enter jumps straight to that message in the history</li>
+<li>Fixed a real bug: pinning a message in a group or supergroup never asked whether to notify all members (it was always pinned silently) — it now behaves like official Telegram clients, offering the choice</li>
+<li>Improvement: the &quot;a message was pinned&quot; system message now also shows a short excerpt of what was pinned, when available, instead of just the generic label</li>
+<li>Fixed an important real bug: changing a voice message&#x27;s playback speed while it was already playing could cause two overlapping voice messages to be heard, and/or the focus to unexpectedly jump back to the message list</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.5</h2>
+<ul>
+<li>New feature: automatic volume normalization for voice messages. Voice messages often arrive with very different volumes depending on how/with what they were recorded (phone, PC, other) — now, before playing each voice message, its average volume is analyzed and automatically raised (never lowered) to a comfortable level, without ever introducing distortion. Adjustable in Settings &gt; Chat and Messages with 4 levels: Off, Light, Standard (recommended, on by default), Strong</li>
+<li>New feature: &quot;Copy attachment&quot;, &quot;Open attachment&quot;, &quot;Save attachment&quot; and &quot;Open attachment folder&quot; now also work on voice messages (previously they did nothing), just like for photos/videos/documents — behavior aligned with official Telegram, which allows saving a voice message as the original audio file</li>
+<li>Improvement: &quot;Save as&quot; on a voice message now suggests a readable filename based on the message&#x27;s date (for example &quot;Voice message - 08-09-2026 19.40.oga&quot;) instead of the technical name the file had on disk</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.4</h2>
+<ul>
+<li>New feature: searching inside a chat is now much more complete. It has a dedicated shortcut (Control+Shift+F, customizable), proposes in a single window both the text to search for and (in groups) a specific sender and the content type (all messages, only photos and videos, only files, only links, only voice messages), and pressing Enter from any field starts the search right away. If there are more than 100 results, you can now load the next batch instead of being stuck with just the first 100</li>
+<li>Fixed a real bug: searching inside a Forum topic ignored the open topic and searched the whole group instead, mixing results from different topics</li>
+<li>Fixed a real bug: the &quot;Windows integration&quot; checkbox in Settings stayed visible no matter which category was selected, instead of only appearing in the General category where it actually belongs</li>
+<li>Fixed a real bug: in two Settings categories (Devices, Chat and Messages) some labels stopped the Tab key before reaching the actual control, instead of letting it move straight from one field to the next</li>
+<li>Fixed a real bug important for screen reader users: standing still without touching anything, every so often the speech synthesizer would repeat the selected chat&#x27;s name several times in a row, with no action from the user — caused by background updates (a contact&#x27;s online status, unread message count, notifications, mentions, reactions, others reading your messages) that needlessly rebuilt the whole list even when they had nothing to do with the selected chat</li>
+<li>Fixed a real bug: &quot;Mark as read&quot;/&quot;Mark as unread&quot; caused the entire chat row to repeat twice right after the announcement, instead of just hearing the confirmation</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.3</h2>
+<ul>
+<li>Performance improvement for the internal audio/video player: the engine (libVLC) now uses a cache file for its own components, instead of having to analyze all of them from scratch every time the first audio or video file of a session is opened. Measured result: roughly half the waiting time on the very first playback after starting the program (from about 8 seconds down to about 3-4, even right after restarting the PC). No other change to how the player works</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.2</h2>
+<ul>
+<li>New feature: mentioning someone in a group or supergroup is now much easier. Typing &quot;@&quot; in the message field (with or without letters of the name after it) and pressing the DOWN arrow brings up a list of matching members: use the arrow keys to browse it, Enter to choose (inserting the mention in the right place), Esc to cancel without touching what you&#x27;ve written. A brief, discreet sound plays the instant you type just the &quot;@&quot; symbol, letting you know the list is available. This is especially useful for correctly mentioning someone who does NOT have a public username: typing their name by hand in that case didn&#x27;t create a working mention at all (no notification, no link), while picking them from the list always works, just like in official clients</li>
+<li>Fixed a real bug: removing a member from a group didn&#x27;t update the window right away — the removed member kept showing in the list until the window was closed and reopened</li>
+<li>Fixed the same kind of bug for promoting/demoting an administrator and for restricting a single member&#x27;s permissions: the role label shown in the list now updates immediately, without needing to close and reopen the window</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.1</h2>
+<ul>
+<li>Fixed a real bug important for group admins: opening &quot;Advanced settings&quot;, 4 of the 8 proposed options (sign messages, automatic translation, sponsored messages, join-to-send-messages) don&#x27;t apply to a regular group at all (they&#x27;re channel-only features, or require a linked discussion chat) — they were still proposed and sent on every confirmation, and the server always rejected them, showing an error even when only some other, perfectly valid setting was being changed. They now appear only when they actually apply</li>
+<li>Fixed another, more serious real bug: none of a group&#x27;s restrictions (who can send messages, attach documents/photos/videos, send polls) accounted for being an administrator or owner — an owner who disabled a permission for regular members would end up just as blocked, which never happens in official Telegram: administrators are never limited by permissions meant for regular members</li>
+<li>Fixed a real bug: in some windows with a single-line text field (for example a group&#x27;s description, or its name), it wasn&#x27;t possible to type past the field&#x27;s visible width — it looked like a character limit, but it wasn&#x27;t: the field simply lacked text scrolling. You can now type freely, up to Telegram&#x27;s actual limit for that field</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.6.0</h2>
+<ul>
+<li>Test-only version, no functional change from 1.5.9: exists solely to verify the new update program live while it updates itself</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.5.9</h2>
+<ul>
+<li>Fixed a real bug in the new update program (GramAccessUpdater.exe, introduced in 1.5.7), found through real testing: it didn&#x27;t account for the update package now containing a copy of itself, which a program can never overwrite while running — it now renames itself aside before replacing itself, the same technique used by any self-updating program. Also removed an unnecessary dependency (libwinpthread-1.dll) that was getting locked the same way in that same case</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.5.8</h2>
+<ul>
+<li>Test-only version, no functional change from 1.5.7: exists solely to verify the new update program (GramAccessUpdater.exe) live</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.5.7</h2>
+<ul>
+<li>Rebuilt from scratch the mechanism that replaces files during an update: instead of the old script that guessed when it was safe to copy (the cause behind tonight&#x27;s 1.5.2-1.5.6 versions), a dedicated program (GramAccessUpdater.exe) now waits for the previous program&#x27;s real end using a genuine operating-system notification instead of a guessed wait, and copies each file by reading Windows&#x27; real outcome for it, retrying only what actually needs it</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.5.6</h2>
+<ul>
+<li>Really fixed the infinite update-loop bug (thanks to the diagnostic log introduced in 1.5.4, which revealed the real cause): the check added in 1.5.3 only compared the copied file&#x27;s size, but between two very similar versions the size can coincide by pure chance even when the copy genuinely failed — giving a false &quot;all good&quot;. It now also checks the real outcome reported by the system during the copy, not just the size</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.5.5</h2>
+<ul>
+<li>Test-only version, no functional change from 1.5.4: exists solely to verify the update mechanism and its new diagnostic log live</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.5.4</h2>
+<ul>
+<li>Added a log (Dati\debug_aggiornamento.log) that tracks every file-replacement attempt during an update: how many attempts were needed, the real outcome of the file copy, and the sizes compared — useful for diagnosing with certainty an update that still fails to complete, instead of having to guess</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.5.3</h2>
+<ul>
+<li>Fixed another real bug in the update mechanism (same family as the August 24th bug, never fully closed): in rare cases, right after pressing &quot;Update now&quot; and finishing the download, the program file wasn&#x27;t actually replaced — Windows can take a brief extra moment to release the file after the program closes, and if the replacement started in that leftover window it failed silently, leaving the old version in place even though everything looked like it had gone fine. The replacement step now genuinely verifies the file was copied (comparing its size against the original) and retries up to 10 times before giving up, instead of blindly trusting it worked</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.5.2</h2>
+<ul>
+<li>Fixed a real and serious bug: in the &quot;Update available&quot; window, pressing Enter right after it opened (focus starts on the changelog text) did nothing — you had to press Tab first to reach the &quot;Update now&quot; button. Anyone who pressed Enter by reflex got stuck: the update never actually started, and the same window kept reappearing identically at every next launch, looking like an endless loop. Enter now works immediately, from anywhere in the window</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.5.1</h2>
+<ul>
+<li>Opening a chat with many unread messages now gets you there almost immediately instead of waiting for all the unread messages to load: a window centered on your reading point opens right away (a few already-read messages plus the first unread ones), and the rest loads on its own as you scroll, both backward and forward — exactly like official Telegram. The same now applies to Forum group Topics and to Saved Messages topics</li>
+<li>Fixed a real issue in conference calls: in some cases, when the connection needed a network renegotiation, the app wasn&#x27;t actually reconnecting, leaving the call silent for everyone while still showing as &quot;active&quot;. It now reconnects for real</li>
+<li>The program now has its own real icon (it used to show Windows&#x27; generic one): visible everywhere — taskbar, Alt+Tab, window title bars, the icon near the clock</li>
+<li>Added, in the &quot;About the program&quot; window (Help menu), license information for the calling engine (tgcalls, LGPL version 3 license), as required by that license; the full license text is included in the program&#x27;s &quot;Licenze&quot; folder. Also added copyright information to the program file&#x27;s properties (visible with JAWS/NVDA&#x27;s &quot;check file version&quot; or the Details tab in File Explorer)</li>
+</ul>
+<p>IMPORTANT: group calls and conference calls remain EXPERIMENTAL features. Please don&#x27;t hesitate to get in touch about any unusual behavior.</p>
+</section>
+<section class="release">
+<h2>Version 1.5.0</h2>
+<ul>
+<li>Fixed a real bug reported by some users: after reading a topic&#x27;s messages in a Forum group and leaving both the topic and the chat, opening a channel WITHOUT topics right afterward and scrolling through its messages could repeatedly show a dialog box with an error related to &quot;topics&quot;, with no apparent connection to what you were doing. The issue persisted until the program was closed and restarted</li>
+<li>Added extra protection for the same kind of situation: an internal error related to Forum topics is no longer shown as a dialog box, since it&#x27;s never useful or actionable information for you</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.4.9</h2>
+<ul>
+<li>Greatly expanded the Forum Topics chapter, checked point by point against Telegram&#x27;s official behavior: opening a group with active topics now takes you straight to their list (as in official clients) instead of the mixed message view; every topic now shows its own unread messages, mentions, reactions, and unread poll votes in real time, not just the whole chat&#x27;s total; the &quot;General&quot; topic can now be hidden/shown from the Group menu; each topic can be individually muted, has an entry to copy its link, and a draft message written inside it is now saved separately from other topics; the group&#x27;s event log now shows precise topic events (created, renamed, closed/reopened, hidden/shown, deleted, pinned changed) instead of a generic &quot;other event&quot;</li>
+<li>The same automatic entry, Esc-to-go-back, and &quot;View as messages&quot; behaviors (now a real toggle that remembers your choice) have been extended to Saved Messages Topics too, matching Forum behavior wherever Telegram treats them the same way</li>
+<li>New dedicated &quot;Topics&quot; menu that automatically appears/disappears and changes content based on the type of chat open, replacing entries that used to be scattered between the Group menu and the Info menu; in the chat list, a group with active topics now shows &quot;(Forum)&quot; instead of &quot;Supergroup&quot;</li>
+<li>Grouped the three entries Story, Text-only story, and Close friends (previously listed separately) into a new &quot;Stories&quot; submenu inside the New menu</li>
+<li>Fixed a real bug: opening a topic with unread messages, the reading position didn&#x27;t land on the first unread message like in any other chat, but always on the last (most recent) one</li>
+<li>Fixed a real bug: the first time &quot;Close friends&quot; was used in a session, the contact search in the selection window showed no results</li>
+<li>Fixed a real bug: in the chat list, &quot;Saved Messages&quot; always showed an &quot;Unread&quot; label even after reading every message inside it</li>
+<li>Fixed a few real bugs, all found during a general review, that in rare cases could cause messages from one topic to mix with another (or with the rest of the chat) when switching between them very quickly, or when scrolling all the way to the top of a topic&#x27;s messages</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.4.8</h2>
+<ul>
+<li>New: full support for Telegram Stories. New &quot;Stories&quot; tab (Control+6, also from the &quot;Go to&quot; menu) listing which of your contacts currently have active stories, how many, and whether any are unseen. Opening a story (Enter on the row): photos are shown in an internal photo viewer (never a separate external app), videos play in the program&#x27;s own media player; Left/Right manually move through that person&#x27;s stories and, once you reach the end, on to the next/previous person — always your choice, never automatic. From the open story&#x27;s menu you can react with an emoji, reply (opens a chat with that person, where you type like a normal message), see who viewed or reshared it (&quot;Who viewed...&quot;), and — on your own stories — edit the caption/content or delete it. To post your own story: from the Telegram &gt; New menu, &quot;Story...&quot; (a photo or video from your PC, with an optional caption) or &quot;Text-only story...&quot; (type text, pick one of 8 background colors, always readable by a screen reader too); either way you choose who can see it (Everyone, Contacts only, Close friends, Selected people — also manageable separately with the new &quot;Close friends...&quot; entry) and for how long (24 hours for everyone, also 6/12/48 hours with Telegram Premium). A story shared into a regular chat can now be opened directly (Enter on the message, or from the context menu). Since this is a new and fairly broad area, please don&#x27;t hesitate to get in touch about any unusual behavior</li>
+<li>New engine for the internal media player (audio and video): the previous engine (Windows&#x27; Media Foundation) has been replaced with VLC, built directly into the program. This change is meant to fix, at the root, a real issue some users reported: certain videos would play correctly on some PCs and not on others, due to missing Windows components/codecs (particularly on &quot;N&quot;/&quot;KN&quot; editions, or with the HEVC format). With the new engine this limitation is gone, regardless of the video&#x27;s format or the PC used. All existing player features remain unchanged: pause/resume, stop, skip backward/forward, volume, playback speed, streaming playback (near-instant video start), automatic advance to the next file in the same chat, progress bar while downloading</li>
+<li>New: a visual progress bar (plus a spoken percentage) now also appears while downloading a program update, previously missing — useful now that the program is heavier</li>
+<li>Added, in the &quot;About the program&quot; window (Help menu), license information for the new video engine (VLC, LGPL version 2.1 license), as required by that license; the full license text is included in the program&#x27;s &quot;Licenze&quot; folder</li>
+<li>Note: due to the new video engine, the program&#x27;s size has increased compared to previous versions</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.4.7</h2>
+<ul>
+<li>New: video streaming playback, starting almost immediately instead of waiting for the full download — applies to regular videos (including those sent as files). EXPERIMENTAL FEATURE: whether a video starts right away depends on how that specific file was originally created, and can&#x27;t be predicted in advance; if streaming hasn&#x27;t started within 15 seconds, the app automatically falls back to the usual full download (with its progress bar), instead of leaving you in silence not knowing if it&#x27;s stuck or just slow. Can be turned on/off in Settings &gt; Media player (&quot;Play videos in streaming&quot;). Since this is a new, experimental feature, please don&#x27;t hesitate to get in touch about any issue or unusual behavior</li>
+<li>Fixed a real bug: replying to a message, the reply line could show only &quot;In reply to a message&quot; without saying who or which message — it now shows the sender and a content preview when available</li>
+<li>Fixed a real bug: a voice message recorded in reply to a message was sent as a regular message, losing the reply link</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.4.6</h2>
+<ul>
+<li>New built-in media player for audio, round video messages, and regular video (including those sent as files/documents): opens directly in its own window instead of Windows&#x27; default app, with Pause/Resume, Stop, playback speed, and a position bar. Can be turned on/off in Settings &gt; Media player (&quot;Use the internal player for audio and video&quot;), so you can still use Windows&#x27; default apps if you prefer</li>
+<li>The player window can now be resized and maximized like any other Windows window</li>
+<li>New keyboard shortcuts in the player: Space for pause/resume, Left/Right to skip backward/forward, Up/Down to adjust volume (there was previously no volume control anywhere in the program)</li>
+<li>New visual progress bar while a file downloads inside the player, together with periodic spoken announcements for screen reader users; sending a file (photo, video, audio, document, voice message) now also shows an upload percentage right in the message while it&#x27;s in progress</li>
+<li>Three new settings in the &quot;Media player&quot; category: automatically play the next audio/video in the chat (as already happened for voice messages), a configurable interval for the Left/Right arrows (5, 10, 15 or 30 seconds), and the option to turn off video display for a lighter audio-only experience</li>
+<li>Fixed a real bug in automatic voice message playback: occasionally, when automatically moving to the next voice message, two of them could be heard overlapping</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.4.5</h2>
+<ul>
+<li>Fixed a real issue with NVDA (didn&#x27;t happen with JAWS): switching between categories in the Settings window could still announce the last item of the category you&#x27;d just left instead of the new one, even though the actual focus move was already correct</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.4.4</h2>
+<ul>
+<li>Reorganized the Dati folder: the real Telegram account data is now kept in its own subfolder (Dati\Telegram), settings have been unified into a single, safer file (protected against sudden interruptions, with automatic cleanup of leftover old files after updating), and the temporary working folders (voice recordings, pasted images, internal browser) are now grouped under Dati\Temp — a clearer, safer folder to look through</li>
+<li>New automatic cache cleanup for downloaded files (photos, videos, voice messages): a toggle in Settings &gt; General (&quot;Automatic cache cleanup&quot;), letting you choose how many days before deleting unused files and a maximum cache size — this only affects files that can always be re-downloaded from Telegram, never your messages or account</li>
+<li>Fixed a real bug: a voice message that failed to send and was later sent successfully via &quot;Retry sending&quot; would leave a useless file behind forever in the recordings folder — it&#x27;s now cleaned up correctly like any other successful send</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.4.3</h2>
+<ul>
+<li>New entry in the menu of an audio or voice message, &quot;Save as notification sound&quot;: adds it right away to your saved sounds on Telegram, no need to download it first — works on any audio/voice message, in any chat</li>
+<li>Reordered the entire message menu by importance: the most frequent actions (Reply, Forward, React, See who reacted, See who viewed) are now closer to the top, rare or irreversible ones (Delete) further down</li>
+<li>Fixed several real-time synchronization issues, found with a general review compared against official clients&#x27; behavior: a mention or reaction you&#x27;d just read could stay marked as &quot;unread&quot; in the chat list; a contact&#x27;s Note could fail to show up in a search or stay stale for the whole session; &quot;typing...&quot; in a group only showed the last person instead of everyone actually active at that moment; the Forum Topics, Members, Administrators, Join Requests, Shared Media, and Who Reacted windows now update themselves while left open, instead of staying frozen at the moment they were opened</li>
+<li>Fixed a real bug: after clearing the message field (including right after sending it), the button could stay on &quot;Send&quot; instead of returning to &quot;Record voice message&quot;</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.4.2</h2>
+<ul>
+<li>Fixed two real issues in conference calls: adding a contact to an ongoing 1-to-1 call now follows the same sequence as the official Telegram client (previously it could inconsistently drop the original contact, or prevent the newly added one from being heard); also reduced a risk of the program suddenly closing during a conference, caused by unsafe memory handling in the audio engine</li>
+<li>Added three new keyboard shortcuts: Ctrl+Shift+L marks the selected chat in the list as read/unread (also shown in the context menu); Ctrl+Alt+R replies to the sender of the selected message inside a group or channel; Alt+Shift+R replies privately to the same message, opening a private chat with whoever wrote it</li>
+<li>Fixed a real bug: opening a very active channel and closing it almost immediately to open another chat could make messages from the abandoned channel appear mixed into the one just opened while scrolling back through history — fixed by discarding late responses for a chat that&#x27;s no longer open</li>
+</ul>
+<p>IMPORTANT: all call features (1-to-1 calls, group video chats, and conference calls) — including their settings and every fix made in this and previous versions — remain EXPERIMENTAL. Their implementation is particularly complex due to the many variables Telegram itself manages internally, and it&#x27;s not possible to rule out that other bugs still exist, not yet discovered. If you notice unusual behavior during a call, feel free to report it: it&#x27;s part of the ongoing testing.</p>
+</section>
+<section class="release">
+<h2>Version 1.4.1</h2>
+<ul>
+<li>Added custom notifications for a single chat: in the Management menu (or with Ctrl+Shift+N) &quot;Custom Notifications...&quot; opens a window with message preview, notifications for pinned messages and mentions, alongside the already-existing muting</li>
+<li>In the same window, also the notification sound for that chat: a sound already on your Telegram account (also syncs with your phone and other devices), or a system sound or a file of your choice on your PC (stays only here in Gram Access, Telegram can&#x27;t represent it as its own)</li>
+<li>Fixed a real issue: after pressing &quot;Sounds from my Telegram account...&quot; (both in the new notifications window and in the already-existing one for event sounds) focus stayed stuck on the button that had just been disabled, requiring Alt+Tab to regain control — it now returns to the list on its own</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.4.0</h2>
+<ul>
+<li>Fixed a real bug reported by the user right after 1.3.9: adding the new &quot;Online status&quot; field to the customizable chat list had the side effect of resetting the ENTIRE order and choices already made in &quot;Customize chat list&quot; back to factory defaults, instead of simply adding the new field at the end — this happened every time the number of available fields changed compared to when you last saved. A new field is now added at the end without touching the order/activations you had already set</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.3.9</h2>
+<ul>
+<li>Added support for Forum Topics in groups (Telegram &quot;Topics&quot;): you can now open a topic from the list (Enter, or &quot;Open&quot; in the context menu) to read its messages and write directly into it — text, photos/videos/documents, albums, and voice notes; messages arriving in a different topic (or in the general chat) no longer mix into the one you&#x27;re viewing</li>
+<li>Added the online/last-seen status of private contacts directly in the chat list (new field, toggle it on in &quot;Customize chat list&quot;): no more need to open the chat and check it with Ctrl+Shift+S</li>
+<li>Improved the reliability of the &quot;is typing.../is recording...&quot; indicator in the chat list: it now stays visible a bit longer, useful while scrolling with the arrow keys, but disappears immediately as soon as the message actually arrives, even when Telegram doesn&#x27;t send an explicit &quot;stopped typing&quot; signal; also added the two labels that were missing (&quot;is playing a game&quot;, &quot;is watching GIFs&quot;)</li>
+<li>Added &quot;Reply privately&quot; to a message&#x27;s context menu in a group or channel: opens a private chat with whoever wrote it, with the reply already attached to that message</li>
+<li>Changed the wording &quot;Not read yet&quot; to just &quot;Not read&quot;, more direct</li>
+<li>A generic server error (sign-in, or any other request) now also shows in a dialog box in addition to the spoken announcement, so it isn&#x27;t lost if the screen reader gets interrupted</li>
+<li>Replaced the generated sounds for &quot;Message sent&quot; and &quot;Send failed&quot; with two real, less intrusive sounds</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.3.8</h2>
+<ul>
+<li>Gram Access is now available in three languages: Italian, English, and Spanish. Change it from Settings &gt; General &gt; &quot;Program language&quot; (requires a restart to take effect)</li>
+<li>The entire program has been translated: every menu, window, setting, and every phrase spoken by the screen reader — including the whole sign-in flow (phone number/code/password), Telegram Folders, the voice recording window, and every feature of the message window</li>
+<li>One deliberate exception: error messages that come directly from Telegram&#x27;s own servers always stay in English, whatever language you choose — that&#x27;s a limit of Telegram itself, not of the program</li>
+<li>The program&#x27;s Guide (Guida.html) remains Italian-only: if you open it in another language, you can use your browser&#x27;s own automatic translation feature</li>
+<li>Starting with this version, this changelog can also contain all three languages together in the same entry, as you&#x27;re reading now</li>
+<li>If you find a phrase left in Italian by mistake, an unclear translation, or any other language-related issue, feel free to write in through &quot;Contact Me...&quot; in the Help menu</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 1.3.7</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.3.6</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.3.5</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.3.4</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.3.3</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.3.2</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.3.1</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.3.0</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.9</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.8</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.7</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.6</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.5</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.4</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.3</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.2</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.1</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.2.0</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.10</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.9</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.8</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.7</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.6</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.5</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.4</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.3</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.2</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.1</h2>
+
+</section>
+<section class="release">
+<h2>Version 1.1.0</h2>
+
+</section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="../contatti.html">write to me</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>
