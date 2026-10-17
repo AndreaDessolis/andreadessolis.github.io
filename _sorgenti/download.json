@@ -3,7 +3,9 @@
   "gram-access": {
     "storico": 56,
     "storico_nota": "Setup scaricati nelle 10 versioni 1.7.8 - 2.0.4, tolte il 16 ottobre 2026",
-    "versioni_tolte": {}
+    "versioni_tolte": {
+      "v2.1.2": 1
+    }
   },
   "hdx-vm": {
     "storico": 0,
