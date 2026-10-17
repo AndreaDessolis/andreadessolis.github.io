@@ -26,6 +26,9 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><a href="#programmi">I programmi nelle fonti virtuali</a></li>
 <li><a href="#interruttori">Gli interruttori rapidi</a></li>
 <li><a href="#configurazioni">Le configurazioni</a></li>
+<li><a href="#registratore">Il registratore</a></li>
+<li><a href="#rete">L'audio in rete (VBAN)</a></li>
+<li><a href="#midi">Il controller MIDI</a></li>
 <li><a href="#impostazioni">Le impostazioni e l'area di notifica</a></li>
 <li><a href="#scorciatoie">Tutte le scorciatoie</a></li>
 <li><a href="#problemi">Problemi e domande</a></li>
@@ -59,12 +62,12 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>Stato di Voicemeeter</strong>: un campo di sola lettura che dice la versione aperta, quanti ingressi e uscite ha e la configurazione attiva. Per esempio: "Voicemeeter Potato 3.1.2.8, collegato: 8 ingressi e 8 uscite, configurazione: Chiamata".</li>
 <li><strong>Fonti</strong>: l'elenco degli ingressi di Voicemeeter (capitolo 3).</li>
 <li><strong>Destinazioni</strong>: l'elenco delle uscite di Voicemeeter.</li>
-<li>Il pulsante <strong>Invia a...</strong> (che diventa <strong>Cosa arriva qui...</strong> se l'ultimo elenco usato è quello delle Destinazioni), il pulsante <strong>Proprietà...</strong> e il pulsante <strong>Apri Voicemeeter</strong> (o <strong>Mostra la finestra di Voicemeeter</strong>, se è già aperto).</li>
 </ol>
+<p>Non ci sono pulsanti: Invia a, Cosa arriva qui e Proprietà si trovano sulla riga (con <kbd>Invio</kbd>, <kbd>Alt+Invio</kbd> o il menu contestuale) e nel menu Canale; aprire Voicemeeter o mostrarne la finestra si fa dal menu Voicemeeter.</p>
 <p>Nella barra dei menu ci sono: File, Voicemeeter, Canale, Interruttori, Configurazioni, Strumenti e Aiuto. La lingua del programma segue quella di Windows (italiano, inglese o spagnolo) e si cambia in Impostazioni.</p>
 
 <h3>Uscire</h3>
-<p>Con <kbd>Ctrl+Q</kbd> (File, Esci) HDX VM si chiude davvero. Con la X o con <kbd>Alt+F4</kbd>, invece, di base il programma resta acceso nell'area di notifica, vicino all'orologio, così gli interruttori continuano a funzionare (capitolo 8). Chiudendo HDX VM, Voicemeeter resta aperto com'è.</p>
+<p>Con <kbd>Ctrl+Q</kbd> (File, Esci) HDX VM si chiude davvero. Con la X o con <kbd>Alt+F4</kbd>, invece, di base il programma resta acceso nell'area di notifica, vicino all'orologio, così gli interruttori continuano a funzionare (capitolo 11). Chiudendo HDX VM, Voicemeeter resta aperto com'è.</p>
 
 <h2 id="voicemeeter">2. Il collegamento con Voicemeeter</h2>
 <p>All'avvio HDX VM cerca Voicemeeter da solo e ne riconosce la versione. Se Voicemeeter è chiuso lo apre lui (si può spegnere in Impostazioni, categoria Voicemeeter, dove si sceglie anche quale versione aprire: di base l'ultima usata). Mentre lavori, HDX VM ti avvisa se Voicemeeter si collega, si chiude o se viene aperta un'altra versione.</p>
@@ -129,6 +132,8 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 </ul>
 <p>Le Proprietà servono solo per il dispositivo e le informazioni: volume, muto e tutte le regolazioni stanno nel mixer.</p>
 <p>Il collegamento con un dispositivo (il "driver") lo sceglie HDX VM, il migliore che c'è: prima WDM, poi KS, poi MME, che ha più ritardo. L'ASIO compare scritto accanto al nome, e solo su A1. Nelle Proprietà di un canale fisico, sotto il dispositivo, <strong>Collegamento adesso</strong> dice quale sta usando.</p>
+<h3>Una scheda ASIO su A1</h3>
+<p>Con una scheda audio ASIO (per esempio un mixer USB) su A1, i suoi <strong>ingressi</strong> non si scelgono come dispositivo delle fonti: Voicemeeter li "smista" alle fonti fisiche. Quando A1 è ASIO, nelle Proprietà di ogni fonte fisica compaiono <strong>Ingresso ASIO a sinistra</strong> e <strong>Ingresso ASIO a destra</strong>: i numeri dei canali della scheda che arrivano a quella fonte (per esempio 1 e 2 per il primo microfono, 3 e 4 per il secondo). Nelle Proprietà di A2, A3, A4 e A5 compare invece <strong>Canali ASIO, dal numero</strong>: quell'uscita suona anche sui canali della scheda a partire da quello scelto. I cambi valgono quando premi OK. Se A1 non è ASIO queste caselle non compaiono, perché Voicemeeter non le userebbe.</p>
 
 <h3>Il livello del canale (<kbd>Ctrl+L</kbd>)</h3>
 <p>Sulla riga di una fonte o di una destinazione, <kbd>Ctrl+L</kbd> (o "Livello" nel menu contestuale e nel menu Canale) ascolta quel canale per un secondo e poi ti dice solo il punto più forte raggiunto, per esempio "-18 dB" (il canale è quello della riga su cui sei). Serve a capire se il suono arriva davvero:</p>
@@ -149,6 +154,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li>In tutte le caselle con i valori <strong>Freccia su aumenta e Freccia giù diminuisce</strong>, e ogni scelta ha effetto subito. Le caselle da spuntare si cambiano con <kbd>Spazio</kbd>; le frecce su una casella da spuntare o su un pulsante non spostano il focus (in tutte le finestre di HDX VM ci si sposta solo col <kbd>Tab</kbd>).</li>
 <li><strong>Annulla le modifiche</strong> rimette tutto com'era quando hai aperto il mixer; <kbd>Esc</kbd> o <strong>Chiudi</strong> chiude tenendo le modifiche.</li>
 <li>Se intanto qualcosa cambia altrove (in Voicemeeter, con un interruttore), i valori del mixer si aggiornano da soli.</li>
+<li><strong>Il livello mentre regoli</strong>: in qualsiasi punto del mixer, <kbd>Ctrl+L</kbd> ti dice il livello del canale senza spostare il focus. Su una fonte è il suono che <strong>esce</strong>, dopo tutte le regolazioni (volume, compressore, equalizzatore... e muto): così senti subito cosa cambia. <kbd>Ctrl+Maiusc+L</kbd> ti dice invece quello che <strong>entra</strong>, come <kbd>Ctrl+L</kbd> sulla riga: confrontandoli capisci se il microfono arriva già troppo forte da solo o se sei tu ad alzarlo troppo. Su una destinazione c'è un livello solo, quello che esce, e i due tasti dicono la stessa cosa.</li>
 </ul>
 <p>La sezione <strong>Volume</strong>:</p>
 <ul>
@@ -188,7 +194,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 </ul>
 
 <h2 id="interruttori">6. Gli interruttori rapidi</h2>
-<p>Un interruttore è un'azione su Voicemeeter con una scorciatoia che funziona <strong>in tutto Windows</strong>, anche mentre sei dentro un altro programma e anche con HDX VM nascosto nell'area di notifica. Le azioni sono:</p>
+<p>Un interruttore è un'azione su Voicemeeter con una scorciatoia che funziona <strong>in tutto Windows</strong>, anche mentre sei dentro un altro programma e anche con HDX VM nascosto nell'area di notifica. Al posto della scorciatoia, o insieme, può avere un pulsante di un controller MIDI (capitolo 10). Le azioni sono:</p>
 <ul>
 <li><strong>Accendi o spegni un collegamento</strong> (una fonte verso una destinazione): "Sintesi Vocali a Chi mi ascolta: sì", e ripremendo "no";</li>
 <li><strong>Muto sì o no</strong> di una fonte o di una destinazione;</li>
@@ -204,7 +210,10 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>Dimmi il livello di un canale</strong>: come <kbd>Ctrl+L</kbd> sulla sua riga, ma da qualunque programma;</li>
 <li><strong>Dimmi com'è un canale</strong>: non cambia niente, ti legge la riga di quel canale come la senti nell'elenco (dove va, il volume, se è muto...), anche mentre sei in un altro programma;</li>
 <li><strong>Riavvia il motore audio</strong> di Voicemeeter, utile se l'audio si blocca o gracchia;</li>
-<li><strong>Richiama una configurazione</strong> (capitolo 7).</li>
+<li><strong>Richiama una configurazione</strong> (capitolo 7);</li>
+<li><strong>Avvia o ferma la registrazione</strong> e <strong>Metti in pausa o riprendi la registrazione</strong> (capitolo 8);</li>
+<li><strong>Accendi o spegni VBAN</strong>, l'audio in rete (capitolo 9);</li>
+<li><strong>Volume con un cursore del controller</strong>: il volume di una fonte o di una destinazione segue un cursore o una manopola di un controller MIDI. Questa azione non ha scorciatoia da tastiera (capitolo 10).</li>
 </ul>
 <p>Se un interruttore chiede qualcosa che quel canale o la tua versione di Voicemeeter non hanno (per esempio la riduzione del rumore con Banana), HDX VM te lo dice e non cambia niente. Come HDX VM ti avvisa per solo, mono, equalizzatore, pulizia ed effetti lo scegli in Impostazioni, Annunci, alla voce "Regolazioni dagli interruttori".</p>
 
@@ -240,7 +249,87 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Lo stato della finestra principale dice la configurazione attiva, cioè l'ultima richiamata o salvata. Se poi cambi qualcosa a mano diventa "modificata" (anche nel menu e nella finestra Gestisci); se rimetti tutto come prima, la parola sparisce. Dopo un azzeramento o dopo "Carica una configurazione..." da un file qualsiasi, nessuna configurazione risulta più attiva.</p>
 <p>Da sapere: un dispositivo che nella configurazione c'è, ma in quel momento è scollegato, non si può scegliere; il resto torna comunque. I nomi dei dispositivi in Windows e le impostazioni di HDX VM (interruttori, annunci, lingua) non fanno parte delle configurazioni di Voicemeeter.</p>
 
-<h2 id="impostazioni">8. Le impostazioni e l'area di notifica</h2>
+<h2 id="registratore">8. Il registratore</h2>
+<p>Voicemeeter Banana e Potato hanno un registratore dentro: registra direttamente le sue uscite o i suoi ingressi, senza scegliere dispositivi in Windows. Per esempio B1 è esattamente quello che sentono gli altri in chiamata, A1 quello che senti tu. Con Voicemeeter Standard il menu lo dice e i comandi non ci sono.</p>
+<h3>Il menu Registratore</h3>
+<ul>
+<li><strong>Avvia la registrazione</strong> / <strong>Ferma la registrazione</strong> (<kbd>Ctrl+R</kbd>). Quando si ferma, HDX VM dice anche quanto è durata.</li>
+<li><strong>Pausa</strong> / <strong>Riprendi</strong> (<kbd>Ctrl+Maiusc+R</kbd>), solo mentre registri.</li>
+<li><strong>Durata della registrazione</strong> (<kbd>Ctrl+D</kbd>): ti dice solo il tempo, per esempio "3 minuti 12 secondi", senza le pause. La conta HDX VM, perché Voicemeeter non la dice.</li>
+<li><strong>Apri la cartella delle registrazioni</strong>: apre la cartella con l'ultima registrazione già scelta.</li>
+<li><strong>Impostazioni del registratore...</strong>: cosa registrare e in che formato (vedi sotto). Mentre registri non si apre: prima ferma la registrazione.</li>
+</ul>
+<h3>Le impostazioni del registratore</h3>
+<p>Ogni scelta vale subito; Esc o Chiudi chiude.</p>
+<ul>
+<li><strong>Cosa registrare</strong>: gli ingressi (le fonti) oppure un'uscita (una destinazione). Con gli ingressi compare l'elenco <strong>Fonti da registrare</strong>, con le caselle da spuntare (<kbd>Spazio</kbd>): se ne possono scegliere quante vuoi. Con le uscite compare <strong>Destinazione da registrare</strong>: se ne registra <strong>una sola</strong> alla volta, perché Voicemeeter non ne permette di più. Per registrare una chiamata con la tua voce e quella degli altri, di solito si sceglie l'uscita dove arriva tutto.</li>
+<li><strong>Formato</strong>: WAV, BWF (un WAV con qualche informazione in più: il file è sempre .wav), AIFF o MP3.</li>
+<li><strong>Bit</strong> (16, 24 o 32) per WAV, BWF e AIFF; <strong>Qualità dell'MP3</strong> (da 96 a 320 kbps) per l'MP3.</li>
+<li><strong>Canali</strong>: da 1 (mono) a 8.</li>
+<li><strong>Cartella delle registrazioni</strong>: solo da leggere, perché si cambia in Voicemeeter.</li>
+</ul>
+<p>La cartella e il nome dei file li decide Voicemeeter: di base la cartella è Documenti, Voicemeeter, e il nome è la data e l'ora ("Record 2026-10-17 at 08h50m32s.wav").</p>
+<h3>Riprodurre un file</h3>
+<p>Menu Registratore, <strong>Riproduci un file...</strong>: il lettore di Voicemeeter suona un file (WAV, MP3, AIFF) direttamente sulle uscite che scegli. Per esempio solo A1 per ascoltarlo tu, oppure B1 per farlo sentire a chi è in chiamata. Ogni scelta vale subito:</p>
+<ul>
+<li><strong>File caricato</strong> e <strong>Scegli un file...</strong>;</li>
+<li><strong>Avvia appena scelto il file</strong>: se è spuntata, il file parte da solo appena lo scegli. Toglila se vuoi prima controllare dove si sente;</li>
+<li><strong>Dove si sente</strong>: l'elenco delle destinazioni, con le caselle da spuntare (<kbd>Spazio</kbd>), anche più d'una;</li>
+<li><strong>Volume della riproduzione</strong> e <strong>Ripeti continuamente</strong>;</li>
+<li><strong>Riproduci / Ferma</strong> (<kbd>Ctrl+P</kbd> da qualunque punto della finestra) e <strong>Dall'inizio</strong> (<kbd>Ctrl+Maiusc+P</kbd>).</li>
+</ul>
+<p>Chiudendo la finestra il file continua a suonare: lo fermi con <strong>Ferma la riproduzione</strong> nel menu Registratore. Mentre registri non si può riprodurre (nel registratore di Voicemeeter "stop" ferma tutte e due). Come HDX VM ti avvisa lo scegli in Impostazioni, Annunci, alla voce "Riproduzione di un file avviata e ferma".</p>
+<p>HDX VM si accorge anche delle registrazioni avviate da Voicemeeter stesso o da un interruttore, e le annuncia allo stesso modo. Come ti avvisa lo scegli in Impostazioni, Annunci, alle voci "Registrazione avviata e fermata" e "Registrazione in pausa e ripresa" (di base voce e suono). Per registrare da qualunque programma ci sono gli interruttori "Avvia o ferma la registrazione" e "Metti in pausa o riprendi la registrazione".</p>
+
+<h2 id="rete">9. L'audio in rete (VBAN)</h2>
+<p>VBAN è il modo con cui Voicemeeter manda e riceve audio attraverso la rete di casa (Wi-Fi o cavo), senza cavi audio. Per esempio: l'audio del portatile arriva al computer principale come una fonte in più, oppure quello che esce da una tua destinazione arriva a un computer in un'altra stanza. Dall'altra parte serve qualcosa che parli VBAN, per esempio un altro Voicemeeter.</p>
+<h3>Il menu Rete</h3>
+<ul>
+<li><strong>VBAN acceso</strong>: accende o spegne VBAN per tutto Voicemeeter (la voce ha la spunta quando è acceso). HDX VM chiede conferma, perché Voicemeeter fa ripartire il motore audio e l'audio si interrompe per un attimo.</li>
+<li><strong>Audio in arrivo...</strong>: gli 8 flussi che puoi ricevere.</li>
+<li><strong>Audio in uscita...</strong>: gli 8 flussi che puoi mandare.</li>
+</ul>
+<h3>I flussi</h3>
+<p>Ogni riga è un flusso, con la casella da spuntare: <kbd>Spazio</kbd> lo accende o lo spegne, <kbd>Invio</kbd> (o "Modifica...") lo apre. La riga dice il nome, poi da dove arriva e in quale fonte entra ("Portatile, da 192.168.1.20, entra in Lettori Multimediali"), oppure cosa manda e a chi ("Studio, manda A1 a 192.168.1.30, 48000 Hz, stereo"). Un flusso acceso funziona solo se anche VBAN è acceso: se non lo è, HDX VM te lo dice.</p>
+<p>Nella finestra del flusso:</p>
+<ul>
+<li><strong>Nome del flusso</strong> (al massimo 16 caratteri): deve essere <strong>uguale</strong> a quello che usa l'altro computer;</li>
+<li><strong>Indirizzo</strong> del computer che lo manda (in arrivo) o a cui mandarlo (in uscita), per esempio 192.168.1.20;</li>
+<li><strong>Porta</strong>: di solito 6980, la stessa dall'altra parte;</li>
+<li><strong>Entra in</strong>: la fonte in cui arriva l'audio (in arrivo), oppure <strong>Manda</strong>: la destinazione da mandare (in uscita);</li>
+<li>solo in uscita: <strong>Frequenza</strong>, <strong>Canali</strong> e <strong>Bit</strong> (16 o 24);</li>
+<li><strong>Qualità</strong>: quanto margine tenere. "Ottimale" ha meno ritardo ma vuole una rete perfetta; più si va verso "molto lenta", più è stabile anche su una rete irregolare (per esempio il Wi-Fi), con più ritardo.</li>
+</ul>
+<p>I cambi valgono con OK. Cambiare la porta o la qualità con VBAN acceso fa ripartire il motore audio: HDX VM chiede conferma. Come ti avvisa lo scegli in Impostazioni, Annunci, alla voce "Audio in rete (VBAN) acceso e spento"; per accendere e spegnere VBAN con un tasto c'è l'interruttore "Accendi o spegni VBAN".</p>
+
+<h2 id="midi">10. Il controller MIDI</h2>
+<p>Un controller MIDI è un apparecchio con pulsanti, cursori e manopole fisici, collegato in USB (per esempio un piccolo mixer da tavolo, una tastiera musicale o una pedaliera). HDX VM lo ascolta direttamente, senza passare da Voicemeeter: i suoi pulsanti diventano interruttori, da toccare, sempre allo stesso posto. Non serve installare niente: quasi tutti i controller funzionano appena collegati.</p>
+<h3>Scegliere il controller</h3>
+<p>Collega il controller, poi Impostazioni, categoria <strong>Controller MIDI</strong>:</p>
+<ul>
+<li><strong>Controller da ascoltare</strong>: scegli il tuo (o "nessuno"). HDX VM lo apre entro un paio di secondi e lo dice ("Controller collegato"); se lo scolleghi e lo ricolleghi, se ne accorge da solo. Un controller scelto ma scollegato resta in elenco, con la nota "non collegato adesso".</li>
+<li><strong>Luci dei pulsanti</strong>: dove mandare le luci (vedi sotto). Di base "automatiche": l'uscita MIDI che ha lo stesso nome del controller, come succede quasi sempre. "Nessuna" le spegne; oppure si sceglie un'uscita a mano.</li>
+<li><strong>Dimmi cosa premo sul controller</strong>: per conoscere il controller. Ogni pulsante che non fa ancora niente dice il suo nome, per esempio "nota 36"; un cursore o una manopola, quando ti fermi, dice anche il valore ("controllo 7, valore 64"). Si può provare anche con le Impostazioni aperte.</li>
+</ul>
+<h3>Un pulsante del controller su un interruttore</h3>
+<p>Nella finestra dell'interruttore (menu Interruttori, Nuovo interruttore, oppure Gestisci e Modifica), sotto la scorciatoia c'è <strong>Comando dal controller MIDI</strong>:</p>
+<ul>
+<li><strong>Impara dal controller...</strong>: si apre una piccola finestra "Premi il pulsante sul controller"; lo premi e HDX VM lo ricorda ("Imparato: nota 36"). Esc o Annulla per lasciar perdere.</li>
+<li><strong>Togli il comando del controller</strong>.</li>
+</ul>
+<p>Un interruttore può avere la scorciatoia, il pulsante del controller o tutti e due. Se il pulsante era già di un altro interruttore, HDX VM chiede se spostarlo. Nell'elenco di Gestisci gli interruttori la riga lo dice ("Muto microfono: Ctrl+Alt+M, controller nota 36"). Il controller funziona anche con HDX VM nell'area di notifica; mentre modifichi gli interruttori o sono aperte le Impostazioni, i pulsanti non fanno niente.</p>
+<h3>Un cursore o una manopola sul volume</h3>
+<p>Crea un interruttore con l'azione <strong>Volume con un cursore del controller</strong>, scegli la fonte o la destinazione e il <strong>Tipo di comando</strong>:</p>
+<ul>
+<li><strong>cursore</strong> (o una manopola con inizio e fine): il volume segue la sua posizione. Tutto in basso è -60 dB, tutto in alto +12 dB, 0 dB è a circa quattro quinti della corsa;</li>
+<li><strong>manopola infinita</strong> (gira senza fine): ogni scatto alza o abbassa di 1 dB (girando veloce, fino a 4 dB per volta).</li>
+</ul>
+<p>Poi <strong>Impara dal controller...</strong> e muovi il cursore o la manopola. Questo interruttore non ha scorciatoia da tastiera: si usa solo dal controller (dal menu Interruttori ti dice il volume di adesso). Mentre muovi, HDX VM non parla a ogni scatto: dice il volume quando ti fermi ("Microfono: -12 dB").</p>
+<h3>Le luci dei pulsanti</h3>
+<p>Se il controller ha le luci sui pulsanti, HDX VM le accende quando quello che il pulsante comanda è attivo, e le spegne quando non lo è: il muto, un collegamento, solo, mono, l'equalizzatore, la pulizia, gli effetti, la registrazione e la pausa, VBAN, la configurazione attiva. Così lo stato si vede anche dal controller, e resta giusto anche se lo cambi da HDX VM o da Voicemeeter. Le luci si spengono mentre modifichi gli interruttori e quando chiudi HDX VM. Non tutti i controller lasciano comandare le luci da fuori: se le tue non si accendono, il controller non lo permette o vuole un'altra uscita.</p>
+<p>Vanno bene i pulsanti che mandano una nota, un "controllo" o un cambio di programma (come molte pedaliere). Come HDX VM ti avvisa quando colleghi o scolleghi il controller lo scegli in Impostazioni, Annunci, alla voce "Controller MIDI collegato e scollegato".</p>
+
+<h2 id="impostazioni">11. Le impostazioni e l'area di notifica</h2>
 <p>Menu Strumenti, <strong>Impostazioni...</strong> (<kbd>Ctrl+Virgola</kbd>). A sinistra le categorie, con <kbd>Tab</kbd> le scelte. Ogni scelta vale e si salva subito; la lingua si applica alla chiusura della finestra.</p>
 
 <h3>Generale</h3>
@@ -269,16 +358,19 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 </ul>
 
 <h3>Annunci</h3>
-<p>L'elenco degli annunci, diviso in gruppi (Voicemeeter, Fonti e destinazioni, HDX VM). Su un annuncio <kbd>Spazio</kbd> cambia il modo: voce, voce e suono, solo suono, spento; su un gruppo vale per tutti i suoi annunci. <kbd>Invio</kbd>, o il pulsante "Ascolta il suono", fa sentire il suono (se l'annuncio ne ha due, come acceso e spento, li senti uno dopo l'altro). All'inizio tutto è a voce, tranne l'apertura e la chiusura di HDX VM, che hanno solo il suono.</p>
+<p>L'elenco degli annunci, diviso in gruppi (Voicemeeter, Fonti e destinazioni, HDX VM). Su un annuncio <kbd>Spazio</kbd> cambia il modo: voce, voce e suono, solo suono, spento; su un gruppo vale per tutti i suoi annunci. <kbd>Invio</kbd>, o il pulsante "Ascolta il suono", fa sentire il suono (se l'annuncio ne ha due, come acceso e spento, li senti uno dopo l'altro). All'inizio quasi tutto è a voce: l'apertura e la chiusura di HDX VM hanno solo il suono; la registrazione, la pausa, la riproduzione di un file e la versione nuova del programma hanno voce e suono.</p>
 <ul>
 <li><strong>Dispositivo per i suoni</strong>: il predefinito di Windows o uno a scelta. Attenzione: se il predefinito di Windows è un ingresso virtuale di Voicemeeter che va a B1, durante una chiamata chi ti ascolta sente anche i suoni di HDX VM. In quel caso scegli qui le cuffie.</li>
 <li><strong>Volume dei suoni</strong>: da 100% a 10%.</li>
 </ul>
 
+<h3>Controller MIDI</h3>
+<p>Il controller da ascoltare, dove mandare le luci dei pulsanti e "Dimmi cosa premo sul controller": tutto spiegato nel capitolo 10. Il campo "Come si usa", in fondo, riassume i passi.</p>
+
 <h3>L'area di notifica</h3>
 <p>Con la X o <kbd>Alt+F4</kbd> la finestra sparisce e senti "HDX VM è nell'area di notifica". L'icona, il logo di HDX VM, è a colori quando Voicemeeter è collegato e grigia quando è chiuso. Sull'icona vicino all'orologio <kbd>Invio</kbd> (o un clic) riapre la finestra; il menu contestuale dell'icona ha Mostra HDX VM, Impostazioni ed Esci. Aprendo di nuovo HDX VM mentre è nascosto, riappare la finestra di prima.</p>
 
-<h2 id="scorciatoie">9. Tutte le scorciatoie</h2>
+<h2 id="scorciatoie">12. Tutte le scorciatoie</h2>
 <h3>In tutta la finestra</h3>
 <table>
 <tr><th>Tasti</th><th>Comando</th></tr>
@@ -286,6 +378,9 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Ctrl+T</kbd></td><td>Annuncia lo stato di Voicemeeter</td></tr>
 <tr><td><kbd>Ctrl+Virgola</kbd></td><td>Impostazioni</td></tr>
 <tr><td><kbd>Ctrl+Q</kbd></td><td>Esci</td></tr>
+<tr><td><kbd>Ctrl+R</kbd></td><td>Avvia o ferma la registrazione</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+R</kbd></td><td>Pausa o riprendi la registrazione</td></tr>
+<tr><td><kbd>Ctrl+D</kbd></td><td>Durata della registrazione</td></tr>
 <tr><td><kbd>Alt+F4</kbd></td><td>Chiude la finestra (di base HDX VM resta nell'area di notifica)</td></tr>
 </table>
 <h3>Sulle righe di Fonti e Destinazioni</h3>
@@ -302,6 +397,18 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Ctrl+L</kbd></td><td>Il livello del canale</td></tr>
 <tr><td><kbd>Applicazioni</kbd> o <kbd>Maiusc+F10</kbd></td><td>Menu contestuale della riga</td></tr>
 </table>
+<h3>Nel mixer</h3>
+<table>
+<tr><th>Tasti</th><th>Comando</th></tr>
+<tr><td><kbd>Ctrl+L</kbd></td><td>Il livello che esce dal canale</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+L</kbd></td><td>Il livello che entra nella fonte, prima delle regolazioni</td></tr>
+</table>
+<h3>Nella finestra Riproduci un file</h3>
+<table>
+<tr><th>Tasti</th><th>Comando</th></tr>
+<tr><td><kbd>Ctrl+P</kbd></td><td>Riproduci o ferma</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+P</kbd></td><td>Dall'inizio</td></tr>
+</table>
 <h3>In tutto Windows</h3>
 <table>
 <tr><th>Tasti</th><th>Comando</th></tr>
@@ -309,7 +416,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 </table>
 <p>E le scorciatoie dei tuoi interruttori, scelte da te (capitolo 6).</p>
 
-<h2 id="problemi">10. Problemi e domande</h2>
+<h2 id="problemi">13. Problemi e domande</h2>
 <ul>
 <li><strong>Voicemeeter non si apre, o HDX VM dice che non è installato</strong>: installa o reinstalla Voicemeeter da voicemeeter.com e riavvia il computer.</li>
 <li><strong>Una fonte fisica dice "nessun dispositivo"</strong>: scegli il dispositivo nelle sue Proprietà (<kbd>Alt+Invio</kbd>). Succede, per esempio, dopo un azzeramento.</li>
