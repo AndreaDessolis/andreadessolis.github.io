@@ -42,6 +42,42 @@
     <p class="lede">Le versioni dalla più recente. Le stesse novità si leggono nel programma, in Aiuto.</p>
     <p><a href="../gramaccess.html">Torna a Gram Access</a></p>
 <section class="release">
+<h2>Versione 2.1.5</h2>
+<p>La versione 2.1.5 rafforza la protezione dei tuoi dati con due nuove opzioni, richieste dagli utenti, e rende più sicuro che non ti sfugga l&#x27;esito delle azioni importanti.</p>
+<h3>NOVITÀ</h3>
+<ol>
+<li>Codice di blocco e protezione dei dati. La voce del menu Telegram, sottomenu Privacy, ora si chiama &quot;Codice di blocco e protezione dei dati...&quot; e raccoglie tutte le protezioni. Senza codice ti propone &quot;Crea codice di blocco...&quot; e &quot;Lega i dati a questo computer&quot;; con il codice, dopo averlo scritto, trovi &quot;Cambia codice&quot;, &quot;Blocco automatico se assente da&quot;, &quot;Esci dall&#x27;account dopo troppi tentativi sbagliati&quot;, &quot;Lega i dati a questo computer&quot; e &quot;Disattiva codice&quot;. Ogni voce dice il suo stato attuale.</li>
+<li>Lega i dati a questo computer. Windows custodisce un segreto che esiste solo nel tuo utente su questo computer, e senza quel segreto i dati di Telegram di Gram Access (l&#x27;accesso al tuo account e le chat) non si aprono. Se qualcuno copia la cartella di Gram Access su un altro computer, i dati non si aprono, nemmeno conoscendo il tuo codice di blocco, e provare codici a caso non serve a niente. Funziona da sola, e allora Gram Access si apre senza chiederti niente ma solo qui, oppure insieme al codice di blocco: in questo caso servono sia il tuo codice sia il tuo computer, ed è la protezione più forte. Prima di attivarla una finestra di sola lettura spiega tutto con calma: cosa protegge, cosa non protegge e cosa comporta. Da sapere: dovrai rifare l&#x27;accesso con il numero di telefono, perdendo chat segrete e file scaricati, se apri la cartella su un altro computer (anche da una chiavetta), se cambi computer, se reinstalli Windows o passi a un altro utente, o se un amministratore azzera la password del tuo utente di Windows; il normale cambio della password va bene. Per cambiare computer senza perdere niente basta disattivarla prima di spostare la cartella e riattivarla sul computer nuovo. Se la cartella viene aperta su un altro computer, Gram Access lo dice chiaramente e ti lascia scegliere se rifare l&#x27;accesso o chiudersi senza toccare niente.</li>
+<li>Esci dall&#x27;account dopo troppi tentativi sbagliati. Con il codice di blocco attivo puoi scegliere che, dopo 5, 10, 15 o 20 tentativi sbagliati di fila, Gram Access esca dal tuo account. Con Gram Access aperto e bloccato chiude la sessione anche sui server di Telegram; all&#x27;avvio i dati sono ancora chiusi e Gram Access può solo cancellarli da questo computer, e la sessione resta nell&#x27;elenco dei dispositivi finché non la chiudi dal telefono. Negli ultimi tre tentativi Gram Access ti avvisa, il codice giusto azzera il conteggio, e chiudere e riaprire il programma non lo azzera. Prima di attivarla una finestra ti spiega tutto. È spenta all&#x27;inizio: protegge da chi prova a indovinare il codice su questo computer, e se a sbagliare sei tu dovrai rifare l&#x27;accesso.</li>
+</ol>
+<h3>MIGLIORAMENTI</h3>
+<ol>
+<li>Esiti delle azioni in una finestra. Molte conferme arrivavano solo dallo screen reader e si perdevano facilmente se la sintesi le interrompeva. Ora compaiono in una finestra: la verifica in due passaggi (password impostata, cambiata o rimossa, email di recupero confermata), le sessioni attive (sessione terminata o confermata, tutte le altre sessioni terminate), le modifiche al profilo e alle impostazioni del menu Telegram, la gestione di gruppi e canali (nome, descrizione, permessi, reazioni, impostazioni avanzate, amministratori, restrizioni e altro), i proxy, gli amici stretti, le segnalazioni e le richieste di adesione. In più la conferma arriva solo dopo la risposta vera di Telegram: prima alcune azioni sui gruppi dicevano &quot;aggiornato&quot; subito, anche se poi Telegram le rifiutava.</li>
+<li>Menu Vai a, sottomenu Cartella. Spesso il sottomenu era vuoto e, uscendo con freccia sinistra, si tornava sulla prima voce di &quot;Vai a&quot;. Ora contiene sempre &quot;Tutte le chat&quot; e le tue cartelle, e compare solo se hai almeno una cartella.</li>
+</ol>
+<h3>DA SAPERE</h3>
+<ul>
+<li>Nessuna di queste protezioni cifra i file già scaricati (foto, vocali, documenti) né le registrazioni delle chiamate: chi vuole proteggere anche questi può tenere Gram Access su un disco o una chiavetta cifrati. Tutto è spiegato nella Guida, sezione &quot;Il codice di blocco e la protezione dei dati&quot;.</li>
+<li>Tutte le funzioni di chiamata (1-a-1, videochiamate di gruppo, chiamate in conferenza) restano funzioni SPERIMENTALI: per qualsiasi comportamento anomalo non esitate a contattarmi.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Versione 2.1.4</h2>
+<p>La versione 2.1.4 porta il codice di blocco locale, lo stesso di Telegram ufficiale per computer: protegge il tuo account se qualcuno copia la cartella di Gram Access.</p>
+<h3>NOVITÀ</h3>
+<ol>
+<li>Codice di blocco locale. Gram Access è portable e tutto quello che serve per entrare nel tuo account sta nella sua cartella Dati: senza protezione, chi la copia su un altro computer può usare il tuo account. Ora puoi impostare un codice dal menu Telegram, sottomenu Privacy, voce &quot;Codice di blocco locale...&quot;. Gram Access lo chiede a ogni avvio e lo usa per cifrare l&#x27;accesso al tuo account e le chat salvate sul computer: senza il codice nessuno può entrare nel tuo account né leggere le chat. Il codice non viene mai salvato. Dalla stessa voce puoi cambiarlo o disattivarlo. Dopo tre tentativi sbagliati bisogna aspettare qualche secondo prima di riprovare. È facoltativo: chi non lo imposta usa Gram Access come prima.</li>
+<li>Blocca Gram Access. Con il codice attivo puoi bloccare Gram Access mentre è aperto, dalla voce &quot;Blocca Gram Access&quot; del menu Telegram, oppure con una scorciatoia che assegni tu in Impostazioni, Tastiera, e che funziona in qualsiasi finestra del programma. Tutte le finestre spariscono e resta solo il campo del codice; allo sblocco ogni finestra torna com&#x27;era. Da bloccato i messaggi continuano ad arrivare, ma le notifiche dicono solo &quot;Hai un nuovo messaggio&quot; e lo screen reader non annuncia niente delle chat. Le chiamate funzionano come sempre: puoi rispondere anche da bloccato.</li>
+<li>Blocco automatico. Nella gestione del codice scegli dopo quanto tempo senza usare il computer Gram Access si blocca da solo: 1 minuto, 5 minuti, 1 ora, 5 ore, oppure un tempo tuo in ore e minuti. All&#x27;inizio è 1 ora, come in Telegram ufficiale.</li>
+<li>Se dimentichi il codice. Non si può recuperare, ed è questo che lo rende sicuro, ma puoi sempre rientrare nel tuo account con il pulsante &quot;Ho dimenticato il codice...&quot;: Gram Access cancella i dati di Telegram sul computer e rifai l&#x27;accesso con il numero di telefono. Le chat normali tornano tutte, le chat segrete e i file scaricati vanno persi, le impostazioni di Gram Access restano.</li>
+</ol>
+<h3>DA SAPERE</h3>
+<ul>
+<li>Il codice protegge l&#x27;accesso all&#x27;account e le chat. Restano leggibili i file già scaricati (foto, vocali, documenti), le registrazioni delle chiamate e le impostazioni di Gram Access: chi vuole proteggere anche questi può tenere Gram Access su un disco o una chiavetta cifrati. Tutto è spiegato nella Guida, sezione &quot;Il codice di blocco locale&quot;.</li>
+<li>Tutte le funzioni di chiamata (1-a-1, videochiamate di gruppo, chiamate in conferenza) restano funzioni SPERIMENTALI: per qualsiasi comportamento anomalo non esitate a contattarmi.</li>
+</ul>
+</section>
+<section class="release">
 <h2>Versione 2.1.3</h2>
 <p>La versione 2.1.3 rende più sicuri gli aggiornamenti automatici di Gram Access. Le protezioni valgono dal prossimo aggiornamento in poi, cioè quando da questa versione passerai alla successiva.</p>
 <h3>MIGLIORAMENTI</h3>

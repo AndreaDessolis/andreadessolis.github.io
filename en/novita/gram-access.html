@@ -42,6 +42,42 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.1.5</h2>
+<p>Version 2.1.5 strengthens the protection of your data with two new options requested by users, and makes sure you do not miss the outcome of important actions.</p>
+<h3>NEW</h3>
+<ol>
+<li>Local passcode and data protection. The item in the Telegram menu, Privacy submenu, is now called &quot;Local Passcode and Data Protection...&quot; and gathers all the protections. Without a passcode it offers &quot;Create local passcode...&quot; and &quot;Bind data to this computer&quot;; with the passcode, after typing it, you find &quot;Change passcode&quot;, &quot;Auto-lock if away for&quot;, &quot;Log out after too many wrong attempts&quot;, &quot;Bind data to this computer&quot; and &quot;Turn off passcode&quot;. Each item says its current state.</li>
+<li>Bind data to this computer. Windows keeps a secret that exists only in your user on this computer, and without that secret the Gram Access Telegram data (your account login and your chats) cannot be opened. If someone copies the Gram Access folder to another computer, the data does not open, not even with your local passcode, and trying random passcodes is useless. It works on its own, in which case Gram Access opens without asking anything but only here, or together with the local passcode: then both your passcode and your computer are needed, which is the strongest protection. Before turning it on, a read-only window explains everything calmly: what it protects against, what it does not, and what it means. Good to know: you will have to log in again with your phone number, losing secret chats and downloaded files, if you open the folder on another computer (even from a USB stick), change computer, reinstall Windows or switch to another user, or if an administrator resets your Windows user&#x27;s password; a normal password change is fine. To change computer without losing anything, just turn it off before moving the folder and turn it on again on the new computer. If the folder is opened on another computer, Gram Access says so clearly and lets you choose whether to log in again or close without touching anything.</li>
+<li>Log out after too many wrong attempts. With the local passcode on, you can choose that after 5, 10, 15 or 20 wrong attempts in a row Gram Access logs out of your account. With Gram Access open and locked, it ends the session on Telegram&#x27;s servers too; at start the data is still locked and Gram Access can only delete it from this computer, and the session stays in the device list until you end it from your phone. In the last three attempts Gram Access warns you, the right passcode resets the count, and closing and reopening the program does not reset it. Before turning it on, a window explains everything. It is off at first: it protects against someone trying to guess the passcode on this computer, and if you are the one making mistakes you will have to log in again.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Outcomes of actions in a window. Many confirmations came only from the screen reader and were easily lost if speech interrupted them. Now they appear in a window: two-step verification (password set, changed or removed, recovery email confirmed), active sessions (session terminated or confirmed, all other sessions terminated), profile and settings changes in the Telegram menu, group and channel management (name, description, permissions, reactions, advanced settings, administrators, restrictions and more), proxies, close friends, reports and join requests. In addition, the confirmation arrives only after Telegram&#x27;s real answer: before, some group actions said &quot;updated&quot; right away, even when Telegram then refused them.</li>
+<li>Go to menu, Folder submenu. The submenu was often empty and, leaving it with the left arrow, you went back to the first item of &quot;Go to&quot;. Now it always contains &quot;All chats&quot; and your folders, and it appears only if you have at least one folder.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>None of these protections encrypts files already downloaded (photos, voice messages, documents) or call recordings: if you want to protect those too, keep Gram Access on an encrypted disk or USB stick. Everything is explained in the Guide (in Italian), section &quot;Il codice di blocco e la protezione dei dati&quot;.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
+<h2>Version 2.1.4</h2>
+<p>Version 2.1.4 brings the local passcode, the same as in the official Telegram for computers: it protects your account if someone copies the Gram Access folder.</p>
+<h3>NEW</h3>
+<ol>
+<li>Local passcode. Gram Access is portable and everything needed to get into your account is in its Dati folder: without protection, anyone who copies it to another computer can use your account. Now you can set a passcode from the Telegram menu, Privacy submenu, &quot;Local Passcode...&quot;. Gram Access asks for it at every start and uses it to encrypt your account login and the chats stored on the computer: without the passcode nobody can get into your account or read your chats. The passcode is never saved. From the same item you can change it or turn it off. After three wrong attempts you have to wait a few seconds before trying again. It is optional: if you do not set it, Gram Access works as before.</li>
+<li>Lock Gram Access. With the passcode on, you can lock Gram Access while it is open, from &quot;Lock Gram Access&quot; in the Telegram menu, or with a shortcut that you assign in Settings, Keyboard, and that works in any window of the program. All windows disappear and only the passcode field remains; when you unlock, every window comes back as it was. While locked, messages keep arriving, but notifications only say &quot;You have a new message&quot; and the screen reader announces nothing from your chats. Calls work as usual: you can answer even while locked.</li>
+<li>Auto-lock. In the passcode settings you choose after how long without using the computer Gram Access locks itself: 1 minute, 5 minutes, 1 hour, 5 hours, or your own time in hours and minutes. It starts at 1 hour, as in the official Telegram.</li>
+<li>If you forget the passcode. It cannot be recovered, which is what makes it safe, but you can always get back into your account with the &quot;I forgot the passcode...&quot; button: Gram Access deletes the Telegram data on the computer and you log in again with your phone number. All normal chats come back, secret chats and downloaded files are lost, Gram Access settings are kept.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>The passcode protects your account login and your chats. Files already downloaded (photos, voice messages, documents), call recordings and Gram Access settings remain readable: if you want to protect those too, keep Gram Access on an encrypted disk or USB stick. Everything is explained in the Guide (in Italian), section &quot;Il codice di blocco locale&quot;.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
 <h2>Version 2.1.3</h2>
 <p>Version 2.1.3 makes Gram Access&#x27;s automatic updates safer. The protections apply from the next update onward, that is, when you move from this version to the following one.</p>
 <h3>IMPROVEMENTS</h3>
