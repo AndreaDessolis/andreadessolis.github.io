@@ -21,6 +21,8 @@
   },
   "pcloud-access": {
     "storico": 0,
-    "versioni_tolte": {}
+    "versioni_tolte": {
+      "v1.0.0": 16
+    }
   }
 }

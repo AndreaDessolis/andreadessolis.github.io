@@ -178,8 +178,8 @@ PROGRAMMI = [
             ],
         },
         'requisiti': {
-            'it': ['Windows 10 o 11 a 64 bit.', 'Un account pCloud (lo puoi creare anche dal programma).'],
-            'en': ['Windows 10 or 11, 64-bit.', 'A pCloud account (you can also create one from the program).'],
+            'it': ['Windows 10 o 11 a 64 bit.', 'Un account pCloud (dal programma si apre la pagina di pCloud per crearlo).'],
+            'en': ['Windows 10 or 11, 64-bit.', 'A pCloud account (the program opens the pCloud page to create one).'],
         },
         'funzioni': {
             'it': [
