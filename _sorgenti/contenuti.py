@@ -146,6 +146,69 @@ PROGRAMMI = [
         },
     },
     {
+        'id': 'pcloud-access',
+        'pagina': 'pcloud-access.html',
+        'nome': 'PCloud Access',
+        'logo': 'pcloud-access.png',
+        'alt': {
+            'it': 'Logo di PCloud Access: una nuvola azzurra con una freccia bianca verso l\'alto',
+            'en': 'PCloud Access logo: a light blue cloud with a white upward arrow',
+        },
+        'stato': 'disponibile',
+        'repository': 'PCloud-Access',
+        'setup': 'PCloud-Access-Setup.exe',
+        'guida': r'D:\Software Portable\Sviluppo Software\PCloud Access\documenti\Guida.html',
+        'novita': ('hdx-json', r'D:\Software Portable\Sviluppo Software\PCloud Access\rilascio\changelog.json'),
+        'frase': {
+            'it': 'Il tuo spazio pCloud come una cartella di Windows, in modo completamente accessibile con lo screen reader.',
+            'en': 'Your pCloud space like a Windows folder, fully accessible with your screen reader.',
+        },
+        'breve': {
+            'it': 'pCloud accessibile: file, cartelle, trasferimenti, link e condivisioni.',
+            'en': 'Accessible pCloud: files, folders, transfers, links and sharing.',
+        },
+        'introduzione': {
+            'it': [
+                'pCloud conserva i tuoi file su internet, ma i suoi programmi non sono comodi da usare con NVDA o JAWS. PCloud Access ti fa usare il tuo spazio pCloud come un elenco di file e cartelle di Esplora risorse, con i tasti di Windows che conosci già: carichi e scarichi sapendo sempre a che punto sei, apri i file, condividi link e cartelle.',
+                'PCloud Access è un programma indipendente: usa l\'interfaccia pubblica di pCloud, ma non è un prodotto di pCloud AG né è sponsorizzato da pCloud. La tua password va solo a pCloud e non viene mai salvata.',
+            ],
+            'en': [
+                'pCloud keeps your files on the internet, but its programs are not comfortable to use with NVDA or JAWS. PCloud Access lets you use your pCloud space as a list of files and folders like File Explorer, with the Windows keys you already know: you upload and download always knowing how far along you are, open files, share links and folders.',
+                'PCloud Access is an independent program: it uses pCloud\'s public interface, but it is not a pCloud AG product and is not endorsed by pCloud. Your password goes only to pCloud and is never saved.',
+            ],
+        },
+        'requisiti': {
+            'it': ['Windows 10 o 11 a 64 bit.', 'Un account pCloud (lo puoi creare anche dal programma).'],
+            'en': ['Windows 10 or 11, 64-bit.', 'A pCloud account (you can also create one from the program).'],
+        },
+        'funzioni': {
+            'it': [
+                'L\'elenco dei file come in Esplora risorse: copia, taglia e incolla anche con Esplora risorse, rinomina, cestino, versioni precedenti e Annulla.',
+                'Caricamenti e scaricamenti con una finestra dedicata che dice percentuale, velocità e tempo che manca; lo stato a voce anche mentre sei in un altro programma.',
+                'Audio e video si ascoltano subito senza scaricarli; gli altri file si aprono con il loro programma e, se li salvi, tornano su pCloud da soli.',
+                'Schede, Indietro e Avanti, Preferiti e Recenti, raggiungibili con un tasto.',
+                'Link pubblici, link per farti mandare file, cartelle condivise e inviti, pCloud Transfer.',
+                'Zip, raccolte musicali, ricerca in tutto il tuo pCloud e scaricamento da internet direttamente in pCloud.',
+                'L\'elenco si aggiorna da solo quando qualcosa cambia da un altro dispositivo.',
+                'Il tuo account: verifica per email, dispositivi collegati, password, email, inviti agli amici.',
+                'Annunci a voce o con suoni, a scelta, e la finestra nell\'area di notifica.',
+                'Aggiornamenti automatici, e in italiano, inglese e spagnolo.',
+            ],
+            'en': [
+                'The file list like in File Explorer: copy, cut and paste also with File Explorer, rename, trash, previous versions and Undo.',
+                'Uploads and downloads with their own window that tells you percentage, speed and time left; spoken status even while you are in another program.',
+                'Audio and video play right away without downloading; other files open with their program and, if you save them, go back to pCloud by themselves.',
+                'Tabs, Back and Forward, Favorites and Recent items, one key away.',
+                'Public links, links to receive files, shared folders and invitations, pCloud Transfer.',
+                'Zip, music collections, search across your whole pCloud and downloading from the internet straight into pCloud.',
+                'The list updates by itself when something changes from another device.',
+                'Your account: email verification, connected devices, password, email, inviting friends.',
+                'Announcements by voice or with sounds, as you choose, and the window in the notification area.',
+                'Automatic updates, in Italian, English and Spanish.',
+            ],
+        },
+    },
+    {
         'id': 'hdx-recorder',
         'pagina': 'hdx-recorder.html',
         'nome': 'HDX Recorder',
@@ -221,7 +284,7 @@ T = {
         'chi_sono_testo': [
             'Suono la chitarra da anni, ed è una delle cose che mi rilassa e mi diverte di più. Ma la vera svolta della mia vita è arrivata quando, già adulto, ho perso la vista. Da quel momento la tecnologia non è più stata solo un hobby: è diventata uno strumento fondamentale, quasi vitale, per continuare a vivere le cose che amo e per scoprirne di nuove.',
             'Da lì è nata la mia passione per tutto ciò che riguarda l\'accessibilità: software, metodi, piccoli accorgimenti che possono fare una grande differenza per chi, come me, si affida ogni giorno a uno screen reader. Mi piace pensare che ogni programma, ogni sito, ogni strumento possa essere reso più semplice da usare per tutti: basta volerlo fare davvero.',
-            'È da questa idea che sono nati i <a href="programmi.html">miei programmi</a>: prima Gram Access per Telegram, poi HDX VM per Voicemeeter, e presto HDX Recorder per registrare.',
+            'È da questa idea che sono nati i <a href="programmi.html">miei programmi</a>: prima Gram Access per Telegram, poi HDX VM per Voicemeeter e PCloud Access per pCloud, e presto HDX Recorder per registrare.',
         ],
         'contatti_lede': 'Che sia per uno dei miei programmi, per l\'accessibilità o solo per due chiacchiere: scrivimi pure.',
         'email_titolo': 'Email', 'email_testo': 'Il modo più semplice per raggiungermi è via email:',
@@ -260,7 +323,7 @@ T = {
         'chi_sono_testo': [
             'I have been playing the guitar for years, and it is one of the things that relaxes and amuses me most. But the real turning point of my life came when, already an adult, I lost my sight. From that moment technology was no longer just a hobby: it became an essential tool, almost vital, to keep enjoying the things I love and to discover new ones.',
             'That is where my passion for everything about accessibility comes from: software, methods, small touches that can make a big difference for people who, like me, rely on a screen reader every day. I like to think that every program, every website, every tool can be made easier to use for everyone: you just have to really want it.',
-            'This is the idea behind <a href="programmi.html">my programs</a>: first Gram Access for Telegram, then HDX VM for Voicemeeter, and soon HDX Recorder for recording.',
+            'This is the idea behind <a href="programmi.html">my programs</a>: first Gram Access for Telegram, then HDX VM for Voicemeeter and PCloud Access for pCloud, and soon HDX Recorder for recording.',
         ],
         'contatti_lede': 'Whether it is about one of my programs, accessibility or just a chat: feel free to write to me.',
         'email_titolo': 'Email', 'email_testo': 'The easiest way to reach me is by email:',

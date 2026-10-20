@@ -22,4 +22,7 @@ if __name__ == '__main__':
     carica('HDX VM').logo().resize((256, 256), Image.LANCZOS).save(os.path.join(QUI, 'immagini', 'hdx-vm.png'))
     carica('HDX Recorder').logo('registrazione').resize((256, 256), Image.LANCZOS).save(
         os.path.join(QUI, 'immagini', 'hdx-recorder.png'))
+    # PCloud Access: il suo script disegna l'icona con disegna() (non logo()).
+    carica('PCloud Access').disegna().resize((256, 256), Image.LANCZOS).save(
+        os.path.join(QUI, 'immagini', 'pcloud-access.png'))
     print('Fatto')

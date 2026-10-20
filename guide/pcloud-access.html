@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Guida di PCloud Access</title>
+<style>
+body { font-family: Segoe UI, Arial, sans-serif; font-size: 1.1em; line-height: 1.55; max-width: 52em; margin: 1em auto; padding: 0 1em; }
+kbd { font-family: inherit; font-weight: bold; }
+h2 { margin-top: 2em; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../pcloud-access.html">Torna a PCloud Access su andreadessolis.com</a> · <a style="color:#0E6B63" href="../en/pcloud-access.html" lang="en" hreflang="en">Back to PCloud Access (English)</a></div>
+
+<h1>Guida di PCloud Access</h1>
+<p>Questa guida spiega come usare PCloud Access, capitolo per capitolo. Con lo screen reader si passa da un titolo all'altro con il tasto <kbd>H</kbd> (NVDA e JAWS), o da un capitolo all'altro con il tasto <kbd>2</kbd>. Dal programma la si apre con <kbd>F1</kbd>, da qualunque finestra.</p>
+
+<h2>Indice</h2>
+<ol>
+<li><a href="#cominciare">Cos'è PCloud Access e come si comincia</a></li>
+<li><a href="#accesso">L'accesso al tuo account pCloud</a></li>
+<li><a href="#elenco">L'elenco dei file e delle cartelle</a></li>
+<li><a href="#file">Lavorare con file e cartelle</a></li>
+<li><a href="#aprire">Aprire, ascoltare e leggere i file</a></li>
+<li><a href="#trasferimenti">Caricare e scaricare</a></li>
+<li><a href="#zip">Gli zip e gli archivi</a></li>
+<li><a href="#internet">Da internet direttamente in pCloud</a></li>
+<li><a href="#cercare">Cercare, il cestino, le versioni e la cronologia</a></li>
+<li><a href="#link">I link</a></li>
+<li><a href="#altri">I link di altre persone</a></li>
+<li><a href="#condivisioni">Le cartelle condivise</a></li>
+<li><a href="#transfer">pCloud Transfer</a></li>
+<li><a href="#raccolte">Le raccolte</a></li>
+<li><a href="#account">Il tuo account</a></li>
+<li><a href="#tempo">In tempo reale</a></li>
+<li><a href="#impostazioni">Le impostazioni e l'area di notifica</a></li>
+<li><a href="#aiuto">Il menu Aiuto e gli aggiornamenti</a></li>
+<li><a href="#scorciatoie">Tutte le scorciatoie</a></li>
+<li><a href="#problemi">Problemi e domande</a></li>
+</ol>
+
+<h2 id="cominciare">1. Cos'è PCloud Access e come si comincia</h2>
+
+<h3>Che cos'è</h3>
+<p>pCloud è un servizio che conserva i tuoi file su internet: li ritrovi da qualunque computer o telefono, li condividi con chi vuoi e non li perdi se si rompe il computer. PCloud Access è un programma tutto accessibile per usare pCloud con NVDA o JAWS: il tuo spazio pCloud diventa un elenco di file e cartelle come quello di Esplora risorse, con i tasti di Windows che conosci già.</p>
+<p>PCloud Access non è un programma di pCloud: è un programma indipendente che usa l'interfaccia pubblica di pCloud. Per usarlo serve un account pCloud (lo si può anche creare dal programma).</p>
+
+<h3>Cosa serve</h3>
+<ul>
+<li>Windows 10 o 11.</li>
+<li>Un account pCloud.</li>
+<li>Uno screen reader: NVDA o JAWS. Il programma funziona anche senza, ma è pensato per loro.</li>
+</ul>
+
+<h3>Un programma portatile</h3>
+<p>PCloud Access non si installa nel sistema: il setup copia la sua cartella dove scegli (di solito la tua cartella utente, in "PCloud Access") e niente altro. Nella cartella ci sono:</p>
+<ul>
+<li><strong>PCloud Access.exe</strong>, il programma;</li>
+<li><strong>Documenti</strong>: questa guida, le novità, la licenza;</li>
+<li><strong>Librerie</strong>: i file che servono al programma;</li>
+<li><strong>Dati</strong>: le tue impostazioni e l'accesso ricordato. La password non c'è mai: il programma conserva solo il "gettone" di accesso che gli dà pCloud, cifrato da Windows per il tuo utente.</li>
+</ul>
+<p>Per togliere il programma basta cancellare la sua cartella. Per spostarlo, sposta la cartella.</p>
+
+<h3>La finestra principale</h3>
+<p>La finestra principale è l'elenco dei file e delle cartelle del tuo pCloud. Sopra l'elenco c'è il campo del percorso, che dice in che cartella sei. In alto c'è la barra dei menu (<kbd>Alt</kbd>): File, Modifica, Vista, Vai, Schede, Condividi, Trasferimenti, Strumenti, Aiuto. Ogni voce dei menu dice anche la sua scorciatoia.</p>
+<p>La prima volta si apre la finestra di benvenuto, con le basi in breve; la ritrovi in Aiuto, Benvenuto.</p>
+
+<h3>Uscire</h3>
+<p>File, Esci (<kbd>Ctrl+Q</kbd>). Se ci sono trasferimenti in corso il programma chiede prima se uscire davvero, perché verrebbero interrotti. La <kbd>X</kbd> della finestra e <kbd>Alt+F4</kbd> fanno lo stesso, a meno che nelle Impostazioni tu abbia scelto che riducano la finestra.</p>
+
+<h2 id="accesso">2. L'accesso al tuo account pCloud</h2>
+
+<h3>Entrare</h3>
+<p>Al primo avvio si apre la finestra di accesso: scrivi l'email e la password del tuo account pCloud e premi Invio. Il programma trova da solo dove sta il tuo account (pCloud ne ha due regioni, Europa e Stati Uniti). La password va solo a pCloud e non viene salvata: le volte successive il programma entra da solo, finché non esci dall'account.</p>
+
+<h3>Il codice di verifica</h3>
+<p>Se il tuo account chiede un codice di verifica, compare il campo del codice:</p>
+<ul>
+<li>con la verifica per email, pCloud ti manda il codice per email; se non arriva, premi "Invia di nuovo il codice";</li>
+<li>con la verifica in due passaggi (app, SMS), scrivi il codice che ti dà l'app o il telefono.</li>
+</ul>
+<p>Scrivi il codice e premi di nuovo Invio.</p>
+
+<h3>Password dimenticata</h3>
+<p>Nella finestra di accesso, "Password dimenticata...":</p>
+<ol>
+<li>scrivi l'email e premi "Invia l'email con il link": pCloud ti manda un'email con un link;</li>
+<li>copia il link dall'email e incollalo nel campo "Link ricevuto per email" (se il campo è vuoto, il programma lo prende dagli appunti);</li>
+<li>scrivi due volte la nuova password e premi "Cambia password". Il programma entra subito con la password nuova.</li>
+</ol>
+
+<h3>Creare un account</h3>
+<p>Nella finestra di accesso, "Crea un account...": email, password scritta due volte, dove pCloud conserva i tuoi file (Europa o Stati Uniti). Con i due pulsanti leggi le condizioni del servizio e l'informativa sulla privacy di pCloud; poi spunta la casella "Accetto" e premi "Crea l'account". Il programma entra subito nell'account nuovo; pCloud ti manda un'email per verificare l'indirizzo.</p>
+
+<h3>Uscire dall'account</h3>
+<p>File, Esci dall'account pCloud: il programma dimentica l'accesso e ti richiede email e password. Serve, per esempio, per entrare con un altro account.</p>
+
+<h2 id="elenco">3. L'elenco dei file e delle cartelle</h2>
+
+<h3>Muoversi</h3>
+<ul>
+<li>Le frecce scorrono le righe; una lettera porta al primo nome che comincia così.</li>
+<li><kbd>Invio</kbd> apre la cartella (o il file: vedi il capitolo 5).</li>
+<li><kbd>Backspace</kbd> o <kbd>Alt+Freccia su</kbd>: la cartella superiore.</li>
+<li><kbd>Alt+Inizio</kbd>: la cartella principale del tuo pCloud.</li>
+<li><kbd>Alt+Freccia sinistra</kbd> (Vai, Indietro): torna alla cartella in cui eri prima, sulla riga che avevi scelto; <kbd>Alt+Freccia destra</kbd> (Vai, Avanti) ti riporta avanti. Funzionano come in Esplora risorse: se dopo Indietro apri un'altra cartella, la strada in avanti si perde.</li>
+<li><kbd>F5</kbd>: rilegge la cartella. Di solito non serve: l'elenco si aggiorna da solo quando qualcosa cambia (capitolo 16).</li>
+</ul>
+
+<h3>Scegliere più righe</h3>
+<p>Come in Esplora risorse: <kbd>Maiusc</kbd> con le frecce sceglie le righe di seguito; <kbd>Ctrl</kbd> con le frecce si sposta senza scegliere e <kbd>Ctrl+Spazio</kbd> aggiunge o toglie la riga; <kbd>Ctrl+A</kbd> sceglie tutto. Quasi tutti i comandi lavorano su tutte le righe scelte.</p>
+
+<h3>Le schede</h3>
+<p>Come in Esplora risorse, puoi tenere aperte più cartelle nella stessa finestra, ognuna nella sua scheda: per esempio per copiare da una cartella e incollare in un'altra, passando dall'una all'altra con un tasto. Gli appunti sono gli stessi per tutte le schede. Nel menu Schede:</p>
+<ul>
+<li><strong>Nuova scheda</strong> (<kbd>Ctrl+T</kbd>): una scheda nuova sulla cartella in cui sei.</li>
+<li><strong>Apri in una nuova scheda</strong> (<kbd>Ctrl+Invio</kbd> su una cartella, anche nel menu contestuale).</li>
+<li><strong>Chiudi scheda</strong> (<kbd>Ctrl+W</kbd>): l'ultima scheda rimasta non si chiude.</li>
+<li><strong>Scheda successiva</strong> (<kbd>Ctrl+Tab</kbd>) e <strong>Scheda precedente</strong> (<kbd>Ctrl+Maiusc+Tab</kbd>), in giro.</li>
+<li>In fondo al menu l'elenco delle schede aperte, con la spunta su quella attiva; le prime nove si raggiungono con <kbd>Ctrl+1</kbd> fino a <kbd>Ctrl+9</kbd>.</li>
+</ul>
+<p>Passando a una scheda senti "Scheda 2 di 3: Musica" e ti ritrovi sulla riga che avevi lasciato; ogni scheda ha il suo Indietro e Avanti. Con più schede il titolo della finestra dice anche la scheda. Si possono aprire fino a 20 schede. Nelle Impostazioni, File e cartelle, puoi scegliere di riaprire all'avvio le schede che avevi alla chiusura.</p>
+
+<h3>Preferiti e Recenti: i tre piani</h3>
+<p>Immagina tre piani: in mezzo c'è il tuo pCloud, sotto i <strong>Preferiti</strong>, sopra i <strong>Recenti</strong>. Da qualunque cartella <kbd>Ctrl+Maiusc+Freccia giù</kbd> scende di un piano e <kbd>Ctrl+Maiusc+Freccia su</kbd> sale di un piano:</p>
+<ul>
+<li>dal tuo pCloud, <kbd>Ctrl+Maiusc+Freccia giù</kbd> porta ai Preferiti e <kbd>Ctrl+Maiusc+Freccia su</kbd> ai Recenti;</li>
+<li>dai Preferiti, <kbd>Ctrl+Maiusc+Freccia su</kbd> ti riporta alla cartella in cui eri, sulla riga che avevi lasciato;</li>
+<li>dai Recenti, lo stesso fa <kbd>Ctrl+Maiusc+Freccia giù</kbd>.</li>
+</ul>
+<p>Per tornare alla cartella di prima vanno bene anche <kbd>Backspace</kbd> e <kbd>Alt+Freccia sinistra</kbd>. Le due voci ci sono anche nel menu Vai. Il campo del percorso e il titolo della finestra dicono dove sei: "PCloud Access - Preferiti" o "PCloud Access - Recenti".</p>
+
+<h4>I Preferiti</h4>
+<p>Sono i file e le cartelle che usi più spesso, scelti da te. <strong>Aggiungi ai preferiti</strong> (<kbd>Ctrl+B</kbd>, anche nel menu Vai e nel contestuale) aggiunge le righe scelte o, senza righe scelte, la cartella in cui sei. Dentro i Preferiti:</p>
+<ul>
+<li>ogni riga dice anche dove sta, per esempio "Rock, in Musica";</li>
+<li><kbd>Invio</kbd> su una cartella la apre (e sei nella cartella vera: <kbd>Backspace</kbd> sale alla sua cartella superiore, <kbd>Alt+Freccia sinistra</kbd> ti riporta ai Preferiti); su un file lo apre o lo fa ascoltare;</li>
+<li><kbd>Ctrl+Invio</kbd> apre la cartella in una nuova scheda; <strong>Vai alla posizione</strong> (nel contestuale) apre la cartella che contiene il preferito, con lui scelto;</li>
+<li><kbd>Canc</kbd> toglie solo dai Preferiti: il file vero resta nel tuo pCloud;</li>
+<li><kbd>Alt+Freccia su</kbd> e <kbd>Alt+Freccia giù</kbd> cambiano l'ordine, che resta quello che scegli tu;</li>
+<li>Copia, Scarica, Copia link, Copia percorso, Copia nome e le Proprietà funzionano come al solito. I comandi che lavorano sulla cartella aperta (Incolla, Carica, Nuova cartella, Rinomina...) no: per quelli esci dai Preferiti.</li>
+</ul>
+<p>I preferiti seguono i file: se ne sposti o rinomini uno, il preferito mostra il nome e la posizione nuovi. Se lo elimini, la riga dice "non più disponibile" e la togli con <kbd>Canc</kbd>.</p>
+
+<h4>I Recenti</h4>
+<p>Sono le cartelle in cui sei entrato e i file che hai aperto, ascoltato o letto, dal più recente. Funzionano come i Preferiti, con due differenze: l'ordine è il tempo (non si cambia), e dal contestuale puoi <strong>Aggiungere ai preferiti</strong> un recente. In Impostazioni, File e cartelle, scegli cosa mostrano (cartelle e file, solo cartelle, solo file, o niente), quanti ricordarne e puoi svuotarli.</p>
+
+<h3>Il menu Vista</h3>
+<p>Ha tre sottomenu, come il menu di Esplora risorse:</p>
+<ul>
+<li><strong>Visualizza</strong>: <strong>Solo nome</strong> o <strong>Dettagli</strong> (con Solo nome ogni riga dice solo il nome, e se è una cartella; con Dettagli anche le colonne scelte), e <strong>Colonne dei dettagli</strong>: Tipo, Dimensione, Data di modifica, Data di creazione, ognuna da accendere o spegnere.</li>
+<li><strong>Ordina per</strong>: nome, tipo, dimensione, data di modifica o di creazione, crescente o decrescente. Le cartelle stanno sempre prima dei file.</li>
+<li><strong>Raggruppa per</strong>: nessuno, tipo o data di modifica (oggi, ieri, questa settimana...). Lo screen reader dice il nome del gruppo entrando in un gruppo nuovo.</li>
+</ul>
+<p>Le scelte restano anche alla prossima apertura.</p>
+
+<h3>Le Proprietà</h3>
+<p><kbd>Alt+Invio</kbd> (o File, Proprietà) apre una finestra da leggere riga per riga con le frecce:</p>
+<ul>
+<li>di un file: nome, tipo, dimensione (anche in byte), percorso, date, se è condiviso e, per foto, audio e video, quello che pCloud ne sa (risoluzione, durata, artista, album...);</li>
+<li>di una cartella: anche quanti file e cartelle contiene, sottocartelle comprese, e quanto pesa in tutto;</li>
+<li>di più righe scelte: quante sono e quanto pesano insieme;</li>
+<li>della cartella principale (<kbd>Alt+Invio</kbd> senza righe scelte, nella cartella principale): anche il tuo account, il piano (Premium o gratuito, con la scadenza), lo spazio totale, usato e libero, se la tua email è verificata, quando è stato creato l'account, la lingua delle email di pCloud e l'indirizzo internet con cui pCloud vede il tuo computer.</li>
+</ul>
+
+<h3>Il menu contestuale</h3>
+<p>Il tasto <kbd>Applicazioni</kbd> (o <kbd>Maiusc+F10</kbd>) apre il menu della riga, come in Esplora risorse:</p>
+<ul>
+<li>con righe scelte: in cima le azioni sulle righe, poi Incolla, i sottomenu Visualizza, Ordina per e Raggruppa per, in fondo Aggiorna e Proprietà;</li>
+<li>senza righe scelte (per esempio dopo <kbd>Ctrl+Spazio</kbd>): in cima Visualizza, Ordina per e Raggruppa per, poi Incolla e Nuovo, in fondo Aggiorna e Proprietà della cartella aperta.</li>
+</ul>
+
+<h3>I file di sistema di Windows e del Mac</h3>
+<p>Se usi anche il disco virtuale di pCloud, Windows ci scrive dei file suoi (come <strong>desktop.ini</strong> o la cartella <strong>System Volume Information</strong>), che finiscono anche online; lo stesso fa il Mac con <strong>.DS_Store</strong>. PCloud Access li nasconde, come Esplora risorse: non compaiono nell'elenco, nella ricerca e nei conteggi, ma restano su pCloud (e scaricando o copiando una cartella intera ci sono). Per vederli, togli la spunta in Impostazioni, File e cartelle, "Nascondi i file di sistema di Windows e del Mac".</p>
+
+<h2 id="file">4. Lavorare con file e cartelle</h2>
+
+<h3>Copiare, tagliare, incollare</h3>
+<p>Funzionano come in Windows, anche tra PCloud Access ed Esplora risorse:</p>
+<ul>
+<li><kbd>Ctrl+C</kbd> o <kbd>Ctrl+X</kbd> sulle righe di PCloud Access, poi <kbd>Ctrl+V</kbd> in un'altra cartella di pCloud: copia o sposta dentro pCloud, senza passare dal tuo computer. Copiare una cartella intera si fa in un'operazione sola.</li>
+<li><kbd>Ctrl+C</kbd> in PCloud Access, poi <kbd>Ctrl+V</kbd> in Esplora risorse: i file arrivano sul computer. Con <kbd>Ctrl+X</kbd>, dopo che sono arrivati, vengono tolti da pCloud.</li>
+<li><kbd>Ctrl+C</kbd> in Esplora risorse, poi <kbd>Ctrl+V</kbd> in PCloud Access: i file vengono caricati nella cartella aperta. Con <kbd>Ctrl+X</kbd>, dopo che sono arrivati interi su pCloud, vengono cancellati dal computer.</li>
+</ul>
+<p>Incollando nella stessa cartella, come in Windows nasce una copia con " - Copia" nel nome.</p>
+
+<h3>Copia percorso e Copia nome</h3>
+<p>Nel menu Modifica (e nel contestuale delle righe scelte): <strong>Copia percorso</strong> (<kbd>Ctrl+Maiusc+C</kbd>, come in Esplora risorse) mette negli appunti il percorso come lo scrive pCloud, per esempio "/Musica/Rock/brano.mp3"; <strong>Copia nome</strong> solo il nome. Con più righe scelte, uno per riga; senza righe scelte, quello della cartella aperta. Servono, per esempio, per scrivere a qualcuno dove si trova un file.</p>
+
+<h3>Annullare l'ultima operazione</h3>
+<p>Modifica, Annulla (<kbd>Ctrl+Z</kbd>), come in Esplora risorse: disfa le operazioni una alla volta, dalla più recente (il programma ne ricorda fino a 200). Se un comando ha lavorato su più righe insieme, un solo <kbd>Ctrl+Z</kbd> le annulla tutte. Si annullano:</p>
+<ul>
+<li>una <strong>rinomina</strong>: torna il nome di prima;</li>
+<li>uno <strong>spostamento dentro pCloud</strong> (<kbd>Ctrl+X</kbd> e <kbd>Ctrl+V</kbd>): tornano nella cartella di prima. Se nel frattempo lì c'è un altro elemento con lo stesso nome, il programma non lo sostituisce e te lo dice;</li>
+<li>un'<strong>eliminazione nel cestino</strong> (<kbd>Canc</kbd>): si ripristinano dal cestino;</li>
+<li>una <strong>cartella nuova</strong>: si toglie, se è ancora vuota.</li>
+</ul>
+<p>Non si annullano, come in Esplora risorse: l'eliminazione definitiva, le copie, i caricamenti e gli scaricamenti, l'unione di due cartelle e la sostituzione di un file con lo stesso nome.</p>
+
+<h3>Nomi uguali</h3>
+<p>Se nella cartella di arrivo c'è già un file con lo stesso nome, il programma chiede cosa fare, come Windows: Sostituisci, Ignora, Mantieni entrambi (il nuovo prende un nome diverso) o Annulla; con più file anche Sostituisci tutto e Ignora tutto. Per una cartella con lo stesso nome chiede se unirle. pCloud distingue le maiuscole dalle minuscole: "Foto" e "foto" sono due nomi diversi.</p>
+
+<h3>Rinominare</h3>
+<p><kbd>F2</kbd>: il nome diventa un campo da scrivere (per i file l'estensione resta fuori dalla selezione). <kbd>Invio</kbd> conferma, <kbd>Esc</kbd> annulla.</p>
+
+<h3>Nuova cartella</h3>
+<p><kbd>Ctrl+Maiusc+N</kbd> (Modifica, Nuova cartella): la cartella nasce con il nome già pronto da scrivere.</p>
+
+<h3>Eliminare</h3>
+<ul>
+<li><kbd>Canc</kbd>: nel cestino di pCloud, da cui si possono ripristinare. Il programma chiede prima conferma (si può togliere nelle Impostazioni).</li>
+<li><kbd>Maiusc+Canc</kbd> (Modifica, Elimina definitivamente): elimina per sempre, dopo una conferma. Non si può recuperare.</li>
+</ul>
+
+<h3>Verificare con un file del computer</h3>
+<p>File, Verifica con un file del PC: scegli un file del computer e il programma dice se è identico a quello di pCloud, confrontando le impronte digitali dei due file. Serve per essere sicuri che una copia sia perfetta.</p>
+
+<h2 id="aprire">5. Aprire, ascoltare e leggere i file</h2>
+
+<h3>Invio su un file</h3>
+<p>Come nel disco di pCloud:</p>
+<ul>
+<li><strong>Audio e video</strong> (anche più file scelti insieme) si ascoltano e si guardano subito, senza scaricarli, con il lettore che Windows usa sempre (per esempio VLC). Il programma gli passa una scaletta con i file nell'ordine scelto. La qualità si sceglie nelle Impostazioni, Ascolto e video.</li>
+<li><strong>Gli altri file</strong> (documenti, fogli, PDF, immagini...) si scaricano in una copia nella cartella del programma e si aprono con il loro programma di Windows (al massimo dieci insieme). Se il tipo di file non ha un programma, Windows chiede con quale aprirlo.</li>
+</ul>
+
+<h3>Modificare un file e salvarlo</h3>
+<p>Se modifichi un file aperto così e lo salvi, il programma se ne accorge e lo rimanda su pCloud da solo, al posto di quello di prima ("Salvato su pCloud"). La versione di prima resta tra le Versioni precedenti (capitolo 9). Se il ritorno su pCloud non riesce, il programma lo dice e ci riprova al prossimo salvataggio.</p>
+<p>Le copie si cancellano quando chiudi il programma, tranne quelle con modifiche non ancora arrivate su pCloud, che restano per non perderle.</p>
+
+<h3>Leggere un file di testo</h3>
+<p>Vai, Leggi come testo (anche nel menu contestuale dei file di testo): un file di testo, sottotitoli, pagina web, codice o simili (fino a 5 MB) si legge in una finestra del programma, senza aprire altri programmi. pCloud lo converte da solo nella codifica giusta, anche se è scritto con caratteri di altre lingue. Si può dare una scorciatoia a questo comando nelle Impostazioni, Tastiera.</p>
+
+<h2 id="trasferimenti">6. Caricare e scaricare</h2>
+
+<h3>Caricare</h3>
+<ul>
+<li><kbd>Ctrl+U</kbd> (File, Carica file): scegli uno o più file del computer; vanno nella cartella aperta.</li>
+<li><kbd>Ctrl+Maiusc+U</kbd> (File, Carica cartella): una o più cartelle, con tutto quello che contengono.</li>
+<li>Oppure <kbd>Ctrl+C</kbd> o <kbd>Ctrl+X</kbd> in Esplora risorse e <kbd>Ctrl+V</kbd> in PCloud Access.</li>
+</ul>
+<p>Un file è su pCloud solo quando è arrivato tutto: un caricamento interrotto o annullato non lascia pezzi.</p>
+
+<h3>Scaricare</h3>
+<p><kbd>Ctrl+D</kbd> (File, Scarica): il programma chiede sempre la cartella del computer dove mettere le righe scelte (file e cartelle intere). Un file prende il suo nome vero solo quando è arrivato intero.</p>
+
+<h3>La finestra Trasferimenti</h3>
+<p><kbd>Ctrl+Maiusc+T</kbd> (Trasferimenti, Mostra trasferimenti): l'elenco di quello che è in corso, in attesa e concluso, aggiornato da solo. Si può lasciare aperta e continuare a lavorare nella finestra principale.</p>
+<ul>
+<li><strong>L'elenco</strong> dice per prima cosa la percentuale o lo stato, e poi il nome: "45%, Concerto.zip", "In attesa: foto.jpg", "Caricato: documento.pdf". Così i numeri arrivano subito anche con i nomi lunghi.</li>
+<li><kbd>Tab</kbd>, la casella <strong>Velocità</strong> (<kbd>Alt+V</kbd>): la velocità e il tempo che manca della riga scelta, per esempio "5 MB/s, mancano 36 s".</li>
+<li><kbd>Tab</kbd>, la casella <strong>Trasferito</strong> (<kbd>Alt+T</kbd>): quanto è arrivato, per esempio "120 MB di 300 MB", e per una cartella anche "file 3 di 10".</li>
+</ul>
+<p>Per una riga ferma (in attesa, finita, annullata) le due caselle dicono solo il suo stato. Pulsanti:</p>
+<ul>
+<li><strong>Annulla</strong> (o <kbd>Canc</kbd>): il trasferimento scelto;</li>
+<li><strong>Annulla tutti</strong>;</li>
+<li><strong>Rimuovi i conclusi</strong>: toglie dall'elenco quelli finiti;</li>
+<li><strong>Chiudi</strong>.</li>
+</ul>
+
+<h3>Lo stato da qualunque programma</h3>
+<p><kbd>Ctrl+Maiusc+Alt+T</kbd> dice com'è il trasferimento in corso anche mentre sei in un altro programma, con i numeri per primi: "Caricamento 45%, 5 MB/s, mancano 36 s, 120 MB di 300 MB. Concerto.zip. Altri 2 in attesa". Nelle Impostazioni, Annunci, scegli anche se sentire l'avanzamento ogni tanto (ogni 50, 25 o 10 per cento) e dove dire il nome del file: alla fine, all'inizio o per niente.</p>
+
+<h3>Pausa</h3>
+<p>Trasferimenti, Metti in pausa: caricamenti e scaricamenti si fermano; Riprendi li fa ripartire, saltando i file già arrivati. Nelle Impostazioni, Tastiera, si può accendere una scorciatoia valida in tutto Windows per la pausa (proposta: <kbd>Ctrl+Maiusc+Alt+S</kbd>).</p>
+
+<h3>La velocità</h3>
+<p>Nelle Impostazioni, File e cartelle, si può limitare la velocità degli scaricamenti, per non occupare tutta la connessione.</p>
+
+<h2 id="zip">7. Gli zip e gli archivi</h2>
+<ul>
+<li><strong>File, Scarica come file zip</strong>: le righe scelte in un solo file zip sul computer. Lo zip lo prepara pCloud mentre arriva: lo scaricamento parte subito.</li>
+<li><strong>File, Comprimi in un file zip</strong>: lo zip si crea direttamente in pCloud, nella cartella aperta, senza passare dal computer. Puoi cambiarne il nome.</li>
+<li><strong>File, Estrai qui</strong>, su un archivio (zip, rar, 7z e altri): pCloud lo estrae in una cartella nuova con il nome dell'archivio. Se l'archivio ha una password, il programma la chiede.</li>
+</ul>
+<p>Questi comandi non hanno una scorciatoia di partenza: puoi darla tu nelle Impostazioni, Tastiera.</p>
+
+<h2 id="internet">8. Da internet direttamente in pCloud</h2>
+<p>File, Scarica da internet in pCloud (<kbd>Ctrl+Maiusc+D</kbd>): incolla uno o più indirizzi di file su internet, uno per riga (se negli appunti ci sono già, il campo è pronto). pCloud li scarica da sé nella cartella aperta, senza passare dal tuo computer e senza consumare la tua connessione. L'avanzamento si segue nella finestra Trasferimenti. Anche annullando, pCloud finisce quello che ha cominciato.</p>
+
+<h2 id="cercare">9. Cercare, il cestino, le versioni e la cronologia</h2>
+
+<h3>Cercare</h3>
+<p><kbd>Ctrl+F</kbd> (Vai, Cerca): scrivi una parte del nome e premi Invio. Il programma cerca in tutto il tuo pCloud e mostra al massimo 500 risultati, con la cartella in cui stanno. Invio su un risultato (o "Vai alla posizione") apre la sua cartella con il risultato già scelto.</p>
+
+<h3>Il cestino</h3>
+<p>Vai, Cestino: quello che hai eliminato. Pulsanti:</p>
+<ul>
+<li><strong>Ripristina</strong> (o Invio): torna dov'era, e il programma dice dove;</li>
+<li><strong>Ripristina nella cartella aperta</strong>: lo rimette nella cartella che hai aperta (utile se la cartella di prima non c'è più);</li>
+<li><strong>Ripristina tutto</strong>;</li>
+<li><strong>Elimina definitivamente</strong> (o <kbd>Canc</kbd>) e <strong>Svuota cestino</strong>, dopo una conferma: non si torna indietro.</li>
+</ul>
+
+<h3>Le versioni precedenti</h3>
+<p>Vai, Versioni precedenti, su un file: pCloud conserva le versioni di prima dei file cambiati. Scegline una e premi "Ripristina questa versione": il file torna com'era allora (e la versione di adesso diventa a sua volta una versione precedente).</p>
+
+<h3>La cronologia del file</h3>
+<p>Vai, Cronologia del file: cosa è successo a un file e quando (creato, modificato, spostato, rinominato...).</p>
+
+<h2 id="link">10. I link</h2>
+
+<h3>Copia link</h3>
+<p><kbd>Ctrl+L</kbd> (Condividi, Copia link) sulle righe scelte: il link pubblico va negli appunti, da incollare in un'email o in un messaggio. Chi lo riceve può vedere e scaricare quei file, senza account pCloud. Se il file ha già un link, il programma usa quello. Il link è quello corto (pc.cd). Con più righe scelte nasce un link solo per tutte.</p>
+
+<h3>Condividi link</h3>
+<p>Condividi, Condividi link: le opzioni del link prima di crearlo o di cambiarlo:</p>
+<ul>
+<li><strong>Scadenza</strong>: da quando il link non funziona più;</li>
+<li><strong>Numero massimo di scaricamenti</strong>;</li>
+<li><strong>Traffico massimo del link</strong>: quanti dati può far scaricare in tutto;</li>
+<li><strong>Password</strong> del link;</li>
+<li><strong>Link corto</strong> (pc.cd).</li>
+</ul>
+<p>"Crea e copia" (o "Salva e copia" per un link che c'è già) copia anche il link negli appunti; "Elimina link" lo toglie.</p>
+
+<h3>I miei link</h3>
+<p>Condividi, I miei link: tutti i tuoi link pubblici, con quante volte sono stati scaricati, il traffico, la scadenza e "limite raggiunto" per quelli che non funzionano più. Pulsanti: Copia link (o Invio), Modifica, Elimina link (o <kbd>Canc</kbd>).</p>
+
+<h3>Farsi mandare file: Richiedi file</h3>
+<p>Condividi, Richiedi file, su una cartella (o nella cartella aperta): crea un link di caricamento. Chi lo riceve può mandarti file in quella cartella, anche senza account pCloud, ma non vede cosa c'è dentro. Scrivi il messaggio per chi carica (è l'unica cosa che vedrà), e se vuoi una scadenza e un limite di file o di spazio. "Crea e copia" mette il link negli appunti.</p>
+<p>Condividi, I miei link di caricamento: i tuoi link di caricamento, con quanti file e quanti dati sono arrivati, "limite raggiunto" per quelli pieni, e l'indirizzo email del link (anche scrivendo a quell'indirizzo si possono mandare file). Il messaggio non si può cambiare dopo: pCloud non lo permette, per un messaggio diverso crea un link nuovo.</p>
+
+<h2 id="altri">11. I link di altre persone</h2>
+
+<h3>Aprire un link pCloud</h3>
+<p>File, Apri link pCloud (<kbd>Ctrl+O</kbd>): incolla un link pCloud che ti hanno mandato (se è già negli appunti, il campo è pronto) e premi Invio. L'elenco mostra cosa contiene, sottocartelle comprese; la prima riga è tutto il link. Se il link ha una password, il programma la chiede. Pulsanti:</p>
+<ul>
+<li><strong>Apri</strong> (o Invio sull'elenco): audio e video si ascoltano senza scaricarli, gli altri file si aprono con il loro programma (solo da leggere: le modifiche non vanno da nessuna parte);</li>
+<li><strong>Leggi come testo</strong>;</li>
+<li><strong>Scarica</strong>: sul computer;</li>
+<li><strong>Scarica come zip</strong>;</li>
+<li><strong>Copia nel mio pCloud</strong>: nella cartella aperta, senza passare dal computer;</li>
+<li><strong>Salva come zip nel mio pCloud</strong>.</li>
+</ul>
+
+<h3>Mandare file nel link di caricamento di un altro</h3>
+<p>Condividi, Manda file a un link di caricamento: quando qualcuno ti dà il suo link per ricevere file. Incolla il link e premi Invio: leggi il messaggio di chi riceve, a chi arrivano i file, l'indirizzo email del link, la scadenza e i limiti. Poi:</p>
+<ul>
+<li><strong>Manda file dal PC</strong>: scegli i file; partono nella finestra Trasferimenti;</li>
+<li><strong>Manda i file scelti nel mio pCloud</strong> (il pulsante dice quanti sono): se prima di aprire la finestra hai scelto dei file nell'elenco, li manda direttamente da pCloud, senza passare dal computer. Se non ne hai scelti, il pulsante si chiama "Manda file dal mio pCloud" e spiega come fare.</li>
+</ul>
+
+<h2 id="condivisioni">12. Le cartelle condivise</h2>
+
+<h3>Condividere una cartella</h3>
+<p>Condividi, Condividi cartella, su una tua cartella: scrivi l'email della persona, scegli i permessi (solo vedere; aggiungere; aggiungere e modificare; tutto), il nome della condivisione e un messaggio. La persona riceve un invito; quando lo accetta, la cartella compare anche nel suo pCloud.</p>
+
+<h3>Gestire le condivisioni</h3>
+<p>Condividi, Gestisci condivisioni: in un solo elenco gli inviti ricevuti, le cartelle condivise con te, le tue cartelle condivise e i tuoi inviti in attesa. I pulsanti valgono per la riga scelta:</p>
+<ul>
+<li><strong>Accetta</strong>, su un invito ricevuto: scegli il nome che avrà la cartella da te, dove metterla (nella cartella predefinita di pCloud o in quella aperta adesso) e se accettare da ora in poi da solo gli inviti di quella persona;</li>
+<li><strong>Rifiuta</strong>: solo questo invito, oppure "Rifiuta e blocca", che rifiuta da solo anche i prossimi inviti di quella persona;</li>
+<li><strong>Cambia permessi</strong>, su una tua condivisione;</li>
+<li><strong>Rimuovi</strong> (o <kbd>Canc</kbd>): ritira un tuo invito, smette di condividere una tua cartella o esce da una cartella condivisa con te.</li>
+</ul>
+
+<h3>Un invito arrivato per email</h3>
+<p>Condividi, Apri un invito arrivato per email: incolla il link dell'email d'invito e premi "Leggi l'invito": vedi la cartella, chi la condivide, i permessi, il messaggio e la scadenza; poi Accetta o Rifiuta.</p>
+
+<h2 id="transfer">13. pCloud Transfer</h2>
+<p>Condividi, Invia con pCloud Transfer: manda file del computer per email a fino a 20 persone, senza usare lo spazio del tuo account: ricevono un link per scaricarli. Scegli i file, scrivi gli indirizzi e un breve messaggio, e premi Invia. L'invio si segue nella finestra Trasferimenti.</p>
+
+<h2 id="raccolte">14. Le raccolte</h2>
+<p>Le raccolte sono le playlist di pCloud: elenchi di file audio da ascoltare in ordine, senza spostarli dalle loro cartelle.</p>
+<ul>
+<li><strong>File, Aggiungi a una raccolta</strong>: i file audio scelti in una raccolta che c'è già o in una nuova.</li>
+<li><strong>Vai, Raccolte</strong>: le tue raccolte. Apri (o Invio) mostra i brani; Copia il link crea un link pubblico che segue la raccolta anche quando cambia; Nuova raccolta, Rinomina (<kbd>F2</kbd>), Elimina (<kbd>Canc</kbd>: i brani restano nel tuo pCloud).</li>
+<li><strong>Dentro una raccolta</strong>: Ascolta tutto; Invio su un brano ascolta da lì in poi; <kbd>Alt+Freccia su</kbd> e <kbd>Alt+Freccia giù</kbd> spostano il brano; <kbd>Canc</kbd> lo toglie dalla raccolta. Le raccolte create da pCloud si possono solo ascoltare.</li>
+</ul>
+
+<h2 id="account">15. Il tuo account</h2>
+<p>Nel menu Strumenti:</p>
+<ul>
+<li><strong>Dispositivi collegati</strong>: i computer, i telefoni e i programmi entrati nel tuo account; <kbd>Canc</kbd> o "Scollega" ne fa uscire uno.</li>
+<li><strong>Cambia password</strong>: password attuale e nuova password scritta due volte.</li>
+<li><strong>Cambia email</strong>: in tre passi, spiegati nella finestra. pCloud manda un link all'indirizzo di adesso, poi uno al nuovo indirizzo; incolli i link nei loro campi e confermi con la password. Il programma ricorda da solo la nuova email.</li>
+<li><strong>Verifica email</strong>: dice se la tua email è verificata; se non lo è, fai mandare l'email di verifica e incolli il link. Alcune cose (creare link, condividere cartelle) pCloud le permette solo con l'email verificata: in quel caso il programma lo dice e propone di mandare l'email.</li>
+<li><strong>Lingua delle email di pCloud</strong>.</li>
+<li><strong>Newsletter di pCloud</strong>: iscriversi, cancellarsi, confermare con il link dell'email.</li>
+<li><strong>Invita amici</strong>: il tuo link d'invito (pCloud regala spazio a chi invita) e chi si è registrato con il tuo link.</li>
+<li><strong>Elimina il mio account</strong>: elimina per sempre l'account e tutti i suoi file. Per sicurezza servono una prima conferma, il link che pCloud manda alla tua email, la password, la parola ELIMINA scritta a mano e un'ultima conferma. <kbd>Invio</kbd> da solo non elimina mai niente. Non si può annullare.</li>
+</ul>
+
+<h2 id="tempo">16. In tempo reale</h2>
+<p>PCloud Access resta in ascolto di pCloud: quando un file o una cartella cambia da un'altra parte (dal telefono, dal sito, da un altro computer, da chi ti manda file con un link di caricamento), l'elenco si aggiorna da solo, senza farti perdere la riga su cui sei. Il programma ti avvisa anche:</p>
+<ul>
+<li>quando arriva un invito a una cartella condivisa, o quando chi te l'aveva mandato lo ritira;</li>
+<li>quando qualcuno accetta o rifiuta una tua condivisione, o cambiano i permessi di una cartella condivisa con te;</li>
+<li>quando il collegamento con pCloud si perde e quando ritorna.</li>
+</ul>
+
+<h2 id="impostazioni">17. Le impostazioni e l'area di notifica</h2>
+<p>Strumenti, Impostazioni (<kbd>Ctrl+Virgola</kbd>). A sinistra l'elenco delle categorie (si sceglie con le frecce), a destra le scelte della categoria (si raggiungono con <kbd>Tab</kbd>). Le scelte valgono e si salvano subito.</p>
+
+<h3>Generale</h3>
+<ul>
+<li><strong>Lingua</strong> del programma: italiano, inglese, spagnolo, o quella di Windows. Vale dalla chiusura delle Impostazioni.</li>
+<li><strong>Avvia insieme a Windows</strong>, con la sotto-opzione <strong>Se lo avvia Windows, aprilo ridotto</strong>.</li>
+<li><strong>Avvia sempre ridotto</strong>.</li>
+<li><strong>Chiudendo la finestra, riducila invece di uscire</strong>: la <kbd>X</kbd> e <kbd>Alt+F4</kbd> riducono; si esce da File, Esci.</li>
+<li><strong>Riduci nell'area di notifica invece che nella barra delle applicazioni</strong>.</li>
+<li><strong>Icona sul desktop</strong>.</li>
+<li><strong>Controlla se ci sono aggiornamenti all'avvio</strong>.</li>
+<li><strong>Salva una copia di sicurezza delle impostazioni</strong> e <strong>Ripristina da una copia di sicurezza</strong>: tutte le scelte in un file, da conservare o da portare su un altro computer.</li>
+</ul>
+
+<h3>File e cartelle</h3>
+<ul>
+<li><strong>Chiedere conferma prima di spostare nel cestino</strong> (<kbd>Canc</kbd>).</li>
+<li><strong>Nascondi i file di sistema di Windows e del Mac</strong> (desktop.ini, System Volume Information e simili): accesa all'inizio. Vedi il capitolo 3.</li>
+<li><strong>Riapri all'avvio le schede che erano aperte alla chiusura</strong>: spenta all'inizio. Accesa, alla riapertura ritrovi le schede e quella su cui eri (con lo stesso account pCloud).</li>
+<li><strong>Nei Recenti mostra</strong>: cartelle e file (all'inizio), solo le cartelle, solo i file, oppure niente. Il programma ricorda sempre sia cartelle sia file, così cambiando scelta ritrovi tutto; con "niente" smette di ricordare e dimentica quello che c'era.</li>
+<li><strong>Quanti recenti ricordare</strong>: 10, 20 (all'inizio), 30 o 50; e il pulsante <strong>Svuota i recenti</strong>.</li>
+<li><strong>Velocità massima degli scaricamenti</strong>: da nessun limite a 100 KB al secondo. Vale dal prossimo scaricamento.</li>
+</ul>
+
+<h3>Ascolto e video</h3>
+<p>Valgono quando ascolti o guardi un file con Invio senza scaricarlo (i tuoi file, quelli dei link di altri, le raccolte). Scaricare dà sempre il file originale.</p>
+<ul>
+<li><strong>Qualità dell'audio</strong>: l'originale, oppure mp3 da 320 a 32 kbit/s (anche per FLAC e altri formati), utile con internet lento.</li>
+<li><strong>Qualità dei video</strong>: originale; adattiva, che cambia da sola seguendo la velocità di internet; al massimo 720, 480, 360 o 240 righe; oppure solo l'audio, in mp3. Per i link di altri pCloud non ha la qualità adattiva: si usa l'originale.</li>
+</ul>
+
+<h3>Annunci</h3>
+<p>Un albero con gli annunci del programma, divisi in gruppi (Trasferimenti, File e cartelle, Link e condivisioni, Programma). Per ogni annuncio, o per un gruppo intero, <kbd>Spazio</kbd> cambia come avvisarti: voce, voce e suono, solo suono, spento. <kbd>Invio</kbd> (o "Ascolta i suoni") fa sentire il suono. Sotto, l'<strong>Avanzamento dei trasferimenti</strong>: mai, o ogni 50, 25 o 10 per cento; e il <strong>Nome del file negli annunci dei trasferimenti</strong>: alla fine, dopo i numeri (come all'inizio); all'inizio, prima dei numeri; oppure non dirlo.</p>
+
+<h3>Suoni</h3>
+<p>Il <strong>dispositivo</strong> su cui suonano i suoni del programma (anche diverso da quello dello screen reader) e il loro <strong>volume</strong>, con un suono di prova a ogni scelta.</p>
+
+<h3>Tastiera</h3>
+<p>Tutti i comandi del programma, divisi come i menu, ognuno con la sua scorciatoia. Su un comando: <kbd>Invio</kbd> (o "Cambia scorciatoia") e poi la combinazione nuova; <kbd>Canc</kbd> (o "Rimuovi scorciatoia") la toglie; "Ripristina predefinita" e "Ripristina tutte" tornano a quelle di partenza. Se la combinazione è già usata, il programma lo dice e propone di spostarla.</p>
+<p>Il ramo <strong>Scorciatoie globali</strong> contiene quelle che valgono in tutto Windows, anche quando sei in un altro programma (con <kbd>Ctrl+Maiusc+Alt</kbd>): lo stato dei trasferimenti, mostrare PCloud Access, la pausa dei trasferimenti. <kbd>Spazio</kbd> le accende e le spegne.</p>
+
+<h3>L'area di notifica</h3>
+<p>File, Nascondi nell'area di notifica (<kbd>Ctrl+H</kbd>): la finestra sparisce e resta l'icona vicino all'orologio; i trasferimenti continuano e il suggerimento dell'icona dice come vanno. Per tornare: <kbd>Ctrl+Maiusc+Alt+P</kbd> da qualunque programma, oppure Invio o doppio clic sull'icona. Il tasto <kbd>Applicazioni</kbd> sull'icona apre il suo menu.</p>
+
+<h2 id="aiuto">18. Il menu Aiuto e gli aggiornamenti</h2>
+<ul>
+<li><strong>Guida</strong> (<kbd>F1</kbd>): questa guida.</li>
+<li><strong>Benvenuto</strong>: la finestra con le basi, che si apre all'avvio finché la sua casella "Mostra questa finestra all'avvio" è spuntata.</li>
+<li><strong>Controlla gli aggiornamenti</strong>.</li>
+<li><strong>Ultime modifiche</strong>: le novità di ogni versione, anche senza internet. Le stesse sono nel file Novità, nella cartella Documenti.</li>
+<li><strong>Contattami</strong>: per scrivere all'autore. Scegli il tipo di messaggio (segnalazione di un problema, suggerimento, complimento, altro) e scrivi un breve testo: si apre un'email già pronta nel tuo programma di posta, da mandare tu.</li>
+<li><strong>Scrivi all'assistenza di pCloud</strong>: un messaggio a pCloud stesso, per i problemi del tuo account o del servizio.</li>
+<li><strong>Dona con PayPal</strong>: se vuoi sostenere l'autore.</li>
+<li><strong>Informazioni su PCloud Access</strong>: la versione.</li>
+</ul>
+
+<h3>Gli aggiornamenti</h3>
+<p>Se nelle Impostazioni è acceso il controllo all'avvio, due secondi dopo l'apertura il programma guarda se c'è una versione nuova; se c'è, mostra le novità e chiede se aggiornare ("Aggiorna adesso" o "Più tardi"). Scaricato l'aggiornamento, il programma si chiude, si aggiorna e si riapre da solo. La cartella Dati non viene mai toccata: impostazioni e accesso restano.</p>
+<p>Il programma non si aggiorna mai mentre è occupato: con una finestra aperta, con trasferimenti in corso o con file aperti le cui modifiche devono ancora tornare su pCloud. In quel caso aspetta e lo propone appena ha finito.</p>
+<p>Per sicurezza ogni aggiornamento porta la firma digitale dell'autore, e il pacchetto scaricato viene controllato prima di installarlo: se qualcosa non torna, non si installa niente. Se l'installazione non riesce, i file di prima tornano al loro posto e il programma lo dice.</p>
+
+<h2 id="scorciatoie">19. Tutte le scorciatoie</h2>
+<p>Queste sono le scorciatoie di partenza: si possono cambiare nelle Impostazioni, Tastiera, dove si possono anche dare ai comandi che non ne hanno.</p>
+
+<h3>Nella finestra principale</h3>
+<table>
+<tr><th>Tasti</th><th>Cosa fa</th></tr>
+<tr><td><kbd>Invio</kbd></td><td>Apre la cartella o il file</td></tr>
+<tr><td><kbd>Backspace</kbd>, <kbd>Alt+Freccia su</kbd></td><td>Cartella superiore</td></tr>
+<tr><td><kbd>Alt+Inizio</kbd></td><td>Cartella principale</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+Freccia giù</kbd></td><td>Preferiti (dai Recenti: torna al tuo pCloud)</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+Freccia su</kbd></td><td>Recenti (dai Preferiti: torna al tuo pCloud)</td></tr>
+<tr><td><kbd>Ctrl+B</kbd></td><td>Aggiungi ai preferiti</td></tr>
+<tr><td><kbd>Alt+Freccia sinistra</kbd>, <kbd>Alt+Freccia destra</kbd></td><td>Indietro, Avanti</td></tr>
+<tr><td><kbd>F5</kbd></td><td>Aggiorna l'elenco</td></tr>
+<tr><td><kbd>Alt+Invio</kbd></td><td>Proprietà</td></tr>
+<tr><td><kbd>Ctrl+A</kbd></td><td>Seleziona tutto</td></tr>
+<tr><td><kbd>Ctrl+C</kbd>, <kbd>Ctrl+X</kbd>, <kbd>Ctrl+V</kbd></td><td>Copia, taglia, incolla (anche con Esplora risorse)</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+C</kbd></td><td>Copia percorso</td></tr>
+<tr><td><kbd>Ctrl+Z</kbd></td><td>Annulla l'ultima operazione</td></tr>
+<tr><td><kbd>Canc</kbd></td><td>Nel cestino</td></tr>
+<tr><td><kbd>Maiusc+Canc</kbd></td><td>Elimina definitivamente</td></tr>
+<tr><td><kbd>F2</kbd></td><td>Rinomina</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+N</kbd></td><td>Nuova cartella</td></tr>
+<tr><td><kbd>Ctrl+U</kbd></td><td>Carica file</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+U</kbd></td><td>Carica cartella</td></tr>
+<tr><td><kbd>Ctrl+D</kbd></td><td>Scarica</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+D</kbd></td><td>Scarica da internet in pCloud</td></tr>
+<tr><td><kbd>Ctrl+O</kbd></td><td>Apri link pCloud</td></tr>
+<tr><td><kbd>Ctrl+L</kbd></td><td>Copia link</td></tr>
+<tr><td><kbd>Ctrl+F</kbd></td><td>Cerca</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+T</kbd></td><td>Mostra trasferimenti</td></tr>
+<tr><td><kbd>Ctrl+T</kbd></td><td>Nuova scheda</td></tr>
+<tr><td><kbd>Ctrl+Invio</kbd></td><td>Apri la cartella in una nuova scheda</td></tr>
+<tr><td><kbd>Ctrl+W</kbd></td><td>Chiudi la scheda</td></tr>
+<tr><td><kbd>Ctrl+Tab</kbd>, <kbd>Ctrl+Maiusc+Tab</kbd></td><td>Scheda successiva, precedente</td></tr>
+<tr><td><kbd>Ctrl+1</kbd> ... <kbd>Ctrl+9</kbd></td><td>Vai alla scheda con quel numero</td></tr>
+<tr><td><kbd>Ctrl+Virgola</kbd></td><td>Impostazioni</td></tr>
+<tr><td><kbd>Ctrl+H</kbd></td><td>Nascondi nell'area di notifica</td></tr>
+<tr><td><kbd>Ctrl+Q</kbd></td><td>Esci</td></tr>
+<tr><td><kbd>F1</kbd></td><td>Questa guida</td></tr>
+<tr><td><kbd>Applicazioni</kbd>, <kbd>Maiusc+F10</kbd></td><td>Menu contestuale</td></tr>
+</table>
+
+<h3>In tutto Windows</h3>
+<table>
+<tr><th>Tasti</th><th>Cosa fa</th></tr>
+<tr><td><kbd>Ctrl+Maiusc+Alt+T</kbd></td><td>Stato dei trasferimenti</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+Alt+P</kbd></td><td>Mostra PCloud Access</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+Alt+S</kbd></td><td>Pausa o ripresa dei trasferimenti (spenta all'inizio: si accende nelle Impostazioni, Tastiera)</td></tr>
+</table>
+
+<h3>Nelle altre finestre</h3>
+<table>
+<tr><th>Dove</th><th>Tasti</th><th>Cosa fa</th></tr>
+<tr><td>Trasferimenti</td><td><kbd>Canc</kbd></td><td>Annulla il trasferimento scelto</td></tr>
+<tr><td>Trasferimenti</td><td><kbd>Alt+V</kbd>, <kbd>Alt+T</kbd></td><td>Le caselle Velocità e Trasferito</td></tr>
+<tr><td>Elenchi (link, cestino, condivisioni, dispositivi, raccolte)</td><td><kbd>Canc</kbd></td><td>Elimina, rimuove o scollega la riga scelta</td></tr>
+<tr><td>Raccolte</td><td><kbd>F2</kbd></td><td>Rinomina la raccolta</td></tr>
+<tr><td>Preferiti e Recenti</td><td><kbd>Canc</kbd></td><td>Toglie dall'elenco (il file vero resta)</td></tr>
+<tr><td>Preferiti</td><td><kbd>Alt+Freccia su</kbd>, <kbd>Alt+Freccia giù</kbd></td><td>Cambia l'ordine</td></tr>
+<tr><td>Dentro una raccolta</td><td><kbd>Alt+Freccia su</kbd>, <kbd>Alt+Freccia giù</kbd></td><td>Sposta il brano</td></tr>
+<tr><td>Campi su più righe</td><td><kbd>Ctrl+Invio</kbd></td><td>Va a capo (Invio da solo conferma la finestra)</td></tr>
+<tr><td>Ogni finestra</td><td><kbd>Esc</kbd></td><td>Chiude o annulla</td></tr>
+</table>
+
+<h2 id="problemi">20. Problemi e domande</h2>
+
+<h3>Il programma dice che il collegamento con pCloud si è perso</h3>
+<p>Di solito è internet che non va. Il programma riprova da solo e avvisa quando il collegamento ritorna; i trasferimenti interrotti si possono rifare.</p>
+
+<h3>Il programma chiede di nuovo l'accesso</h3>
+<p>Succede se l'accesso è scaduto (dopo molto tempo senza usare il programma) o se lo hai tolto dal sito di pCloud o da Dispositivi collegati. Basta rientrare con email e password.</p>
+
+<h3>"pCloud chiede di verificare prima il tuo indirizzo email"</h3>
+<p>Alcune cose pCloud le permette solo con l'email verificata. Rispondi Sì alla domanda del programma: pCloud ti manda un'email; apri il link che contiene (o incollalo in Strumenti, Verifica email) e riprova.</p>
+
+<h3>Un file aperto con Invio non torna su pCloud</h3>
+<p>Il programma lo rimanda solo quando il file viene salvato. Se il ritorno non riesce, compare un messaggio con il motivo e la cartella in cui sta la copia: il programma riprova al prossimo salvataggio, e la copia non viene cancellata finché le modifiche non arrivano su pCloud.</p>
+
+<h3>Ascoltando un file non succede niente</h3>
+<p>Serve un lettore che sappia aprire le scalette (per esempio VLC, o il Lettore multimediale di Windows). Con la qualità video "adattiva", se il lettore non la apre, scegli un'altra qualità nelle Impostazioni, Ascolto e video.</p>
+
+<h3>Le mie impostazioni</h3>
+<p>Sono nella cartella Dati, dentro la cartella del programma. Con Impostazioni, Generale, "Salva una copia di sicurezza", le puoi conservare in un file e ripristinarle quando vuoi.</p>
+
+<h3>La licenza e la privacy</h3>
+<p>PCloud Access è gratuito. La licenza completa è nella cartella Documenti (Licenza.txt), e il setup la mostra prima di installare; le licenze dei componenti di altri autori sono in Licenze.html. In breve: il programma non manda niente all'autore; email e password vanno solo a pCloud e la password non viene salvata; i tuoi file passano solo tra il tuo computer e pCloud.</p>
+
+<h3>Altre domande</h3>
+<p>Scrivi all'autore con Aiuto, Contattami. Per problemi del tuo account o del servizio pCloud, usa Aiuto, Scrivi all'assistenza di pCloud.</p>
+
+</body>
+</html>
