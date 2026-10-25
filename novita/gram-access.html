@@ -42,6 +42,32 @@
     <p class="lede">Le versioni dalla più recente. Le stesse novità si leggono nel programma, in Aiuto.</p>
     <p><a href="../gramaccess.html">Torna a Gram Access</a></p>
 <section class="release">
+<h2>Versione 2.1.7</h2>
+<p>La versione 2.1.7 corregge una chiusura improvvisa del programma e aggiorna il motore di Telegram all&#x27;ultima versione ufficiale.</p>
+<h3>CORREZIONI</h3>
+<ol>
+<li>Chiusura improvvisa dopo l&#x27;invio di un messaggio. A volte, premendo Invio, il messaggio partiva e subito dopo Gram Access si chiudeva da solo. Il problema nasceva dai suoni del programma: quando due suoni partivano molto vicini, per esempio un messaggio lungo diviso in più parti, Windows poteva leggere un suono già cancellato dalla memoria. Ora i suoni passano tutti da un unico punto e restano in memoria finché Windows li sta usando. I suoni restano quelli di sempre.</li>
+</ol>
+<h3>MIGLIORAMENTI</h3>
+<ol>
+<li>Motore di Telegram aggiornato. La libreria ufficiale di Telegram che Gram Access usa per parlare con i server (TDLib) passa alla versione 1.8.69. Al primo avvio dopo l&#x27;aggiornamento Gram Access aggiorna da solo i suoi dati e può metterci qualche secondo in più del solito: non serve rifare l&#x27;accesso.</li>
+<li>Nuovi tipi di messaggio letti per bene. Invece di un generico &quot;[Allegato]&quot; ora si leggono:</li>
+</ol>
+<ul>
+<li>i trasferimenti di TON, con l&#x27;importo ricevuto o inviato e il commento, se c&#x27;è;</li>
+<li>le richieste TON Connect, con il nome dell&#x27;app e lo stato della richiesta (in attesa di risposta, scaduta, accettata o rifiutata);</li>
+<li>l&#x27;avviso che qualcuno può scriverti senza pagare grazie a un tuo link.</li>
+</ul>
+<ol>
+<li>Indirizzi TON nei messaggi ricchi. Gli indirizzi TON dentro i messaggi ricchi ora si leggono come testo normale.</li>
+</ol>
+<h3>DA SAPERE</h3>
+<ul>
+<li>Telegram ha introdotto un nuovo tipo di proxy, il proxy web, che per funzionare ha bisogno di una pagina web nascosta che porta la connessione. Gram Access non lo supporta ancora: nell&#x27;elenco dei proxy compare come &quot;Web, non ancora supportato&quot; e si può soltanto eliminare. Usarlo lascerebbe Gram Access senza connessione, per questo una finestra lo spiega se provi ad attivarlo, modificarlo o incollarne il link. I proxy SOCKS5, HTTP e MTProto funzionano come prima.</li>
+<li>Tutte le funzioni di chiamata (1-a-1, videochiamate di gruppo, chiamate in conferenza) restano funzioni SPERIMENTALI: per qualsiasi comportamento anomalo non esitate a contattarmi.</li>
+</ul>
+</section>
+<section class="release">
 <h2>Versione 2.1.6</h2>
 <p>La versione 2.1.6 corregge un fastidio durante le chiamate.</p>
 <h3>CORREZIONI</h3>

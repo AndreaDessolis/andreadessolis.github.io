@@ -42,6 +42,32 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.1.7</h2>
+<p>Version 2.1.7 fixes a sudden closing of the program and updates the Telegram engine to the latest official version.</p>
+<h3>FIXES</h3>
+<ol>
+<li>Sudden closing after sending a message. Sometimes, when pressing Enter, the message was sent and right after Gram Access closed by itself. The problem came from the program&#x27;s sounds: when two sounds started very close together, for example a long message split into several parts, Windows could read a sound already deleted from memory. Now all sounds go through a single point and stay in memory as long as Windows is using them. The sounds are the same as always.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Telegram engine updated. The official Telegram library that Gram Access uses to talk to the servers (TDLib) moves to version 1.8.69. At the first start after the update Gram Access updates its data by itself and may take a few seconds longer than usual: there is no need to log in again.</li>
+<li>New message types read properly. Instead of a generic &quot;[Attachment]&quot; you now hear:</li>
+</ol>
+<ul>
+<li>TON transfers, with the amount received or sent and the comment, if any;</li>
+<li>TON Connect requests, with the app name and the state of the request (awaiting response, expired, accepted or rejected);</li>
+<li>the notice that someone can message you without paying thanks to one of your links.</li>
+</ul>
+<ol>
+<li>TON addresses in rich messages. TON addresses inside rich messages are now read as normal text.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>Telegram introduced a new kind of proxy, the web proxy, which needs a hidden web page carrying the connection in order to work. Gram Access does not support it yet: in the proxy list it appears as &quot;Web, not supported yet&quot; and it can only be deleted. Using it would leave Gram Access without a connection, so a window explains this if you try to enable it, edit it or paste its link. SOCKS5, HTTP and MTProto proxies work as before.</li>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
 <h2>Version 2.1.6</h2>
 <p>Version 2.1.6 fixes an annoyance during calls.</p>
 <h3>FIXES</h3>
