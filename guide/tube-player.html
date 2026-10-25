@@ -67,7 +67,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>La finestra principale, dall'alto in basso (con <kbd>Tab</kbd>):</p>
 <ol>
 <li><strong>Cerca su YouTube</strong>: la casella dove scrivi cosa cercare;</li>
-<li><strong>Cerca tra</strong>: una casella a elenco per scegliere se cercare video, canali, playlist o tutto;</li>
+<li><strong>Cerca tra</strong>: una casella a elenco per scegliere se cercare video, canali, playlist o tutto; poi <strong>Ordina per</strong> e <strong>Pubblicati</strong> (vedi <a href="#cercare">Cercare su YouTube</a>);</li>
 <li><strong>l'elenco</strong>: i risultati della ricerca, oppure quello che c'è nel canale, nella playlist o nella raccolta in cui sei. Il suo nome dice dove sei, per esempio "Video per: musica rilassante" o "Raccolta: Documentari";</li>
 <li><strong>i pulsanti</strong> sotto l'elenco, solo quando servono: "Torna a..." (che dice dove ti riporta) e i comandi delle raccolte.</li>
 </ol>
@@ -87,14 +87,22 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <h3>Cerca tra</h3>
 <p>Dopo la casella di ricerca, la casella <strong>Cerca tra</strong> sceglie cosa cercare: Video, Canali, Playlist oppure Tutto. Con le frecce cambi la scelta: la ricerca riparte da sola appena ti fermi, e lo stato attivo resta nella casella (le frecce non lo spostano mai); il numero dei risultati te lo dice la voce. Con <kbd>Invio</kbd> invece la ricerca parte subito e vai all'elenco. La scelta resta per le ricerche dopo.</p>
 
+<h3>Ordina per e Pubblicati</h3>
+<p>Dopo "Cerca tra" ci sono altre due caselle a elenco, che funzionano allo stesso modo (con le frecce la ricerca riparte da sola, con Invio parte subito):</p>
+<ul>
+<li><strong>Ordina per</strong>: Pertinenza (l'ordine normale di YouTube) oppure Visualizzazioni (dal video più visto).</li>
+<li><strong>Pubblicati</strong>: in qualsiasi momento, nell'ultima ora, oggi, questa settimana, questo mese, quest'anno. Per trovare i video più recenti su un argomento. Vale per i video: cercando tra canali o playlist la casella è spenta e il Tab la salta.</li>
+</ul>
+<p>YouTube non permette più di ordinare i risultati di una ricerca per data: per avere i video più nuovi si usa "Pubblicati". Dentro un canale, invece, i video sono già dal più recente.</p>
+
 <h3>Le righe dei risultati</h3>
 <ul>
-<li>Un video: titolo, canale (con "verificato" se YouTube lo segna così), durata, visualizzazioni. Per esempio: "Never Gonna Give You Up, Rick Astley (verificato), 3:34, 1.830.390.819 visualizzazioni".</li>
+<li>Un video: titolo, canale (con "verificato" se YouTube lo segna così), durata, visualizzazioni e quando è stato pubblicato. Per esempio: "Never Gonna Give You Up, Rick Astley (verificato), 3:34, 1.830.390.819 visualizzazioni, 16 anni fa". Il "quando" è quello approssimato che dice YouTube; quando il programma ha già preparato il video, al suo posto compare la data esatta ("pubblicato il 20 ottobre 2026").</li>
 <li>Una diretta: titolo, canale, "in diretta" e quante persone la stanno guardando.</li>
 <li>Un canale: nome, "canale" o "canale verificato", iscritti.</li>
 <li>Una playlist: titolo e di chi è.</li>
 </ul>
-<p>La data di pubblicazione non c'è nell'elenco (la ricerca veloce di YouTube non la dà): la trovi nella <a href="#scheda">scheda del video</a>.</p>
+<p>La data esatta di ogni video c'è sempre anche nella <a href="#scheda">scheda del video</a>.</p>
 
 <h3>L'elenco che si allunga da solo</h3>
 <p>Il programma chiede a YouTube 20 risultati alla volta (il numero si sceglie nelle Impostazioni, categoria Ricerca). Quando arrivi vicino al fondo, i risultati seguenti si chiedono da soli e si aggiungono in coda, con un suono leggero: puoi continuare a scendere. In fondo davvero, senza altri risultati, senti "Fine dei risultati".</p>
@@ -106,7 +114,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Canali e playlist funzionano come le cartelle di Esplora risorse:</p>
 <ul>
 <li><kbd>Invio</kbd> su un canale o una playlist ci entra: l'elenco mostra quello che contiene, e la voce dice dove sei, per esempio "Rick Astley, video del canale" o "Playlist: Greatest Hits".</li>
-<li><kbd>Backspace</kbd> torna all'elenco di prima, sulla riga su cui eri. Lo stesso fa il pulsante <strong>Torna a...</strong> sotto l'elenco, che dice dove ti riporta.</li>
+<li><kbd>Backspace</kbd> torna all'elenco di prima, sulla riga su cui eri. Lo stesso fanno il pulsante <strong>Torna a...</strong> sotto l'elenco, che dice dove ti riporta, e <kbd>Esc</kbd> quando non c'è un video in riproduzione (se un video suona, il primo Esc lo ferma e il secondo torna indietro).</li>
 <li><kbd>Ctrl+Maiusc+C</kbd> (menu Vai, Vai al canale) apre il canale del video scelto.</li>
 </ul>
 <p>Dentro un canale scegli la sezione:</p>
@@ -179,7 +187,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>Capitoli</strong>, se il video li ha: <kbd>Invio</kbd> su un capitolo fa partire il video da lì (se il video sta già suonando, ci si sposta);</li>
 <li>i pulsanti <strong>Riproduci</strong> e <strong>Copia link</strong>.</li>
 </ul>
-<p>La scheda c'è solo per i video, non per canali e playlist.</p>
+<p>La scheda c'è solo per i video, non per canali e playlist. Se il video non è ancora preparato, la scheda arriva dopo qualche secondo (senti "Caricamento della scheda"): <kbd>Esc</kbd> in quel momento ne annulla l'apertura. Quando è aperta, <kbd>Esc</kbd> la chiude.</p>
 
 <h2 id="link">7. I link</h2>
 <ul>
@@ -247,6 +255,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <h3>Generale</h3>
 <ul>
 <li><strong>Lingua</strong>: come Windows, italiano, inglese o spagnolo.</li>
+<li><strong>Lingua dei contenuti di YouTube</strong>: in che lingua chiedere a YouTube titoli e descrizioni dei video, e i risultati delle ricerche. Di partenza è "Come il programma"; si può scegliere anche italiano, inglese, spagnolo, francese, tedesco o portoghese. Molti canali hanno i titoli tradotti in altre lingue: con questa scelta li ricevi nella lingua che vuoi (anche nei nomi dei file scaricati). Cambia anche l'ordine dei risultati, che diventa quello che YouTube dà a chi parla quella lingua. Vale alla chiusura delle Impostazioni.</li>
 <li><strong>Icona sul desktop</strong>: spuntandola compare subito l'icona di Tube Player sul desktop; togliendo la spunta l'icona va via.</li>
 <li><strong>Controlla gli aggiornamenti del programma all'avvio</strong>: vedi <a href="#aiuto">il menu Aiuto e gli aggiornamenti</a>.</li>
 <li><strong>Aggiorna da solo il motore di YouTube</strong> (una volta al giorno) e il pulsante <strong>Controlla ora gli aggiornamenti del motore</strong>: vedi <a href="#motore">il motore di YouTube</a>.</li>
@@ -349,7 +358,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Ctrl+R</kbd></td><td>Mostra il lettore</td></tr>
 <tr><td><kbd>Ctrl+Pagina giù</kbd> / <kbd>Ctrl+Pagina su</kbd></td><td>Video successivo / precedente</td></tr>
 <tr><td><kbd>Ctrl+P</kbd> (nell'elenco anche <kbd>Spazio</kbd>)</td><td>Pausa o riprendi</td></tr>
-<tr><td><kbd>Esc</kbd></td><td>Ferma il video</td></tr>
+<tr><td><kbd>Esc</kbd></td><td>Ferma il video; senza video in riproduzione, dentro un canale, una playlist o una raccolta torna all'elenco di prima</td></tr>
 <tr><td><kbd>Alt+Freccia destra</kbd> / <kbd>sinistra</kbd></td><td>Avanti / indietro di 5 secondi</td></tr>
 <tr><td><kbd>Alt+Maiusc+Freccia destra</kbd> / <kbd>sinistra</kbd></td><td>Avanti / indietro di un minuto</td></tr>
 <tr><td><kbd>Alt+Inizio</kbd></td><td>Torna all'inizio del video</td></tr>
@@ -370,6 +379,9 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 
 <h3>Il primo video ci mette qualche secondo a partire</h3>
 <p>È normale: per ogni video il programma deve chiedere a YouTube il suo indirizzo vero, e ci vogliono circa 3 secondi. I primi dieci risultati e quelli su cui ti fermi si preparano in anticipo, quindi aspettando un attimo dopo la ricerca di solito partono subito. Un video che hai già aperto, se lo riapri entro un'ora, parte subito.</p>
+
+<h3>Alcuni titoli arrivano in un'altra lingua</h3>
+<p>Molti canali hanno i titoli tradotti in più lingue, e YouTube dà quelli della lingua che gli chiede il programma. Tube Player chiede la lingua scelta in Impostazioni, Generale, "Lingua dei contenuti di YouTube" (di partenza quella del programma). Se un titolo arriva lo stesso in un'altra lingua, è il titolo originale scelto da chi ha pubblicato il video.</p>
 
 <h3>"Il motore di YouTube non è pronto"</h3>
 <p>Al primo avvio i programmi del motore non si sono potuti scaricare: controlla la connessione a internet e riapri Tube Player.</p>
