@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Guida di Tube Player</title>
+<style>
+body { font-family: Segoe UI, Arial, sans-serif; font-size: 1.1em; line-height: 1.55; max-width: 52em; margin: 1em auto; padding: 0 1em; }
+kbd { font-family: inherit; font-weight: bold; }
+h2 { margin-top: 2em; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../tube-player.html">Torna a Tube Player su andreadessolis.com</a> · <a style="color:#0E6B63" href="../en/tube-player.html" lang="en" hreflang="en">Back to Tube Player (English)</a></div>
+
+<h1>Guida di Tube Player</h1>
+<p>Questa guida spiega come usare Tube Player, capitolo per capitolo. Con lo screen reader si passa da un titolo all'altro con il tasto <kbd>H</kbd> (NVDA e JAWS), o da un capitolo all'altro con il tasto <kbd>2</kbd>. Dal programma la si apre con <kbd>F1</kbd>, da qualunque finestra.</p>
+
+<h2>Indice</h2>
+<ol>
+<li><a href="#cominciare">Cos'è Tube Player e come si comincia</a></li>
+<li><a href="#cercare">Cercare su YouTube</a></li>
+<li><a href="#canali">Canali e playlist</a></li>
+<li><a href="#lettore">Ascoltare e guardare: il lettore</a></li>
+<li><a href="#continua">La riproduzione continua</a></li>
+<li><a href="#scheda">La scheda del video</a></li>
+<li><a href="#link">I link</a></li>
+<li><a href="#scaricare">Scaricare video e audio</a></li>
+<li><a href="#raccolte">Le raccolte</a></li>
+<li><a href="#impostazioni">Le impostazioni</a></li>
+<li><a href="#motore">Il motore di YouTube</a></li>
+<li><a href="#aiuto">Il menu Aiuto e gli aggiornamenti</a></li>
+<li><a href="#scorciatoie">Tutte le scorciatoie</a></li>
+<li><a href="#problemi">Problemi e domande</a></li>
+</ol>
+
+<h2 id="cominciare">1. Cos'è Tube Player e come si comincia</h2>
+
+<h3>Che cos'è</h3>
+<p>Tube Player è un programma tutto accessibile per usare YouTube con NVDA o JAWS: cerchi video, canali e playlist, li ascolti o li guardi con un lettore fatto di pulsanti veri, li scarichi in tanti formati e ti tieni le cose che ti piacciono in raccolte fatte da te. Niente pagine web da esplorare: un elenco di risultati e i tasti di Windows che conosci già.</p>
+<p>Tube Player non è un programma di YouTube né di Google: è un programma indipendente che legge le pagine pubbliche di YouTube. Non serve un account.</p>
+
+<h3>Cosa serve</h3>
+<ul>
+<li>Windows 10 o 11 a 64 bit.</li>
+<li>Una connessione a internet.</li>
+<li>Uno screen reader: NVDA o JAWS. Il programma funziona anche senza, ma è pensato per loro.</li>
+</ul>
+
+<h3>Un programma portatile</h3>
+<p>Tube Player non si installa nel sistema: il setup copia la sua cartella dove scegli (di solito la tua cartella utente, in "Tube Player") e niente altro. Nella cartella ci sono:</p>
+<ul>
+<li><strong>Tube Player.exe</strong>, il programma;</li>
+<li><strong>Documenti</strong>: questa guida, le novità, la licenza;</li>
+<li><strong>Librerie</strong>: i file che servono al programma;</li>
+<li><strong>Dati</strong>: le tue impostazioni e le tue raccolte;</li>
+<li><strong>Motore</strong>: i programmi che servono per leggere YouTube e riprodurre i video (vedi il capitolo <a href="#motore">Il motore di YouTube</a>);</li>
+<li><strong>Scaricati</strong>: i file che scarichi, se non scegli un'altra cartella.</li>
+</ul>
+<p>Per togliere il programma basta cancellare la sua cartella. Per spostarlo, sposta la cartella.</p>
+
+<h3>Il primo avvio</h3>
+<p>La prima volta Tube Player scarica da solo dai loro siti ufficiali i programmi del motore: yt-dlp, Deno e mpv. Ci vuole qualche decina di secondi, a seconda della connessione; il programma dice a voce cosa sta scaricando e quando è pronto. Intanto la finestra si può già usare. Si apre anche la finestra di benvenuto, con le basi in breve; la ritrovi in Aiuto, Benvenuto.</p>
+
+<h3>La finestra principale</h3>
+<p>La finestra principale, dall'alto in basso (con <kbd>Tab</kbd>):</p>
+<ol>
+<li><strong>Cerca su YouTube</strong>: la casella dove scrivi cosa cercare;</li>
+<li><strong>Cerca tra</strong>: una casella a elenco per scegliere se cercare video, canali, playlist o tutto;</li>
+<li><strong>l'elenco</strong>: i risultati della ricerca, oppure quello che c'è nel canale, nella playlist o nella raccolta in cui sei. Il suo nome dice dove sei, per esempio "Video per: musica rilassante" o "Raccolta: Documentari";</li>
+<li><strong>i pulsanti</strong> sotto l'elenco, solo quando servono: "Torna a..." (che dice dove ti riporta) e i comandi delle raccolte.</li>
+</ol>
+<p>In alto c'è la barra dei menu (<kbd>Alt</kbd>): File, Vai, Raccolte, Riproduzione, Aiuto. Ogni voce dei menu dice anche la sua scorciatoia, e i menu mostrano solo le voci che si possono usare in quel momento. Il tasto <kbd>Applicazioni</kbd> (o <kbd>Maiusc+F10</kbd>) su una riga dell'elenco apre il menu con tutti i comandi di quella riga.</p>
+
+<h3>Uscire</h3>
+<p>File, Esci, oppure <kbd>Ctrl+Q</kbd> o <kbd>Alt+F4</kbd>. Se ci sono download in corso o in coda, Tube Player chiede prima se uscire lo stesso: uscendo, i download si interrompono.</p>
+
+<h2 id="cercare">2. Cercare su YouTube</h2>
+<ol>
+<li>Scrivi cosa cercare nella casella <strong>Cerca su YouTube</strong> e premi <kbd>Invio</kbd>.</li>
+<li>Arrivano i risultati e lo stato attivo va da solo sul primo: lo screen reader lo legge, con "1 di 20".</li>
+<li>Muoviti con le frecce. Ogni riga dice prima il titolo, poi quello che serve a sceglierlo.</li>
+</ol>
+<p>Da qualunque punto, <kbd>Ctrl+F</kbd> riporta alla casella di ricerca, con il testo di prima già selezionato: scrivendo lo sostituisci.</p>
+
+<h3>Cerca tra</h3>
+<p>Dopo la casella di ricerca, la casella <strong>Cerca tra</strong> sceglie cosa cercare: Video, Canali, Playlist oppure Tutto. Con le frecce cambi la scelta: la ricerca riparte da sola appena ti fermi, e lo stato attivo resta nella casella (le frecce non lo spostano mai); il numero dei risultati te lo dice la voce. Con <kbd>Invio</kbd> invece la ricerca parte subito e vai all'elenco. La scelta resta per le ricerche dopo.</p>
+
+<h3>Le righe dei risultati</h3>
+<ul>
+<li>Un video: titolo, canale (con "verificato" se YouTube lo segna così), durata, visualizzazioni. Per esempio: "Never Gonna Give You Up, Rick Astley (verificato), 3:34, 1.830.390.819 visualizzazioni".</li>
+<li>Una diretta: titolo, canale, "in diretta" e quante persone la stanno guardando.</li>
+<li>Un canale: nome, "canale" o "canale verificato", iscritti.</li>
+<li>Una playlist: titolo e di chi è.</li>
+</ul>
+<p>La data di pubblicazione non c'è nell'elenco (la ricerca veloce di YouTube non la dà): la trovi nella <a href="#scheda">scheda del video</a>.</p>
+
+<h3>L'elenco che si allunga da solo</h3>
+<p>Il programma chiede a YouTube 20 risultati alla volta (il numero si sceglie nelle Impostazioni, categoria Ricerca). Quando arrivi vicino al fondo, i risultati seguenti si chiedono da soli e si aggiungono in coda, con un suono leggero: puoi continuare a scendere. In fondo davvero, senza altri risultati, senti "Fine dei risultati".</p>
+
+<h3>Video pronti prima</h3>
+<p>Per far partire un video, il programma deve prima chiedere a YouTube il suo indirizzo vero: ci vogliono circa 3 secondi. Per non farti aspettare, Tube Player li prepara in anticipo: i primi dieci risultati appena arrivano, e il video su cui ti fermi con i due che lo seguono. Così di solito, quando premi <kbd>Invio</kbd>, il video parte subito. Se premi Invio su un video non ancora pronto, senti il suono del caricamento finché non parte.</p>
+
+<h2 id="canali">3. Canali e playlist</h2>
+<p>Canali e playlist funzionano come le cartelle di Esplora risorse:</p>
+<ul>
+<li><kbd>Invio</kbd> su un canale o una playlist ci entra: l'elenco mostra quello che contiene, e la voce dice dove sei, per esempio "Rick Astley, video del canale" o "Playlist: Greatest Hits".</li>
+<li><kbd>Backspace</kbd> torna all'elenco di prima, sulla riga su cui eri. Lo stesso fa il pulsante <strong>Torna a...</strong> sotto l'elenco, che dice dove ti riporta.</li>
+<li><kbd>Ctrl+Maiusc+C</kbd> (menu Vai, Vai al canale) apre il canale del video scelto.</li>
+</ul>
+<p>Dentro un canale scegli la sezione:</p>
+<ul>
+<li><kbd>Ctrl+1</kbd>: i video del canale (si parte da qui);</li>
+<li><kbd>Ctrl+2</kbd>: le sue playlist;</li>
+<li><kbd>Ctrl+3</kbd>: le sue dirette.</li>
+</ul>
+<p>Se una sezione è vuota, lo dice la voce (per esempio "Questo canale non ha dirette").</p>
+
+<h2 id="lettore">4. Ascoltare e guardare: il lettore</h2>
+<p><kbd>Invio</kbd> su un video lo fa partire e apre il <strong>lettore</strong>, una finestra a tutto schermo con tutti i comandi raggiungibili con <kbd>Tab</kbd>. Mentre il video si carica senti un suono delicato che si ripete; quando parte, senti il titolo.</p>
+<p>Le immagini all'inizio sono spente: si sente solo l'audio, e si consuma meno internet. Le accendi e le spegni quando vuoi, anche a video avviato, con <kbd>Ctrl+Maiusc+V</kbd> o con la casella "Mostra le immagini" del lettore; compaiono dentro il lettore.</p>
+
+<h3>I comandi del lettore</h3>
+<p>Nell'ordine del <kbd>Tab</kbd>:</p>
+<ul>
+<li><strong>In riproduzione</strong>: un testo da leggere riga per riga, con titolo, canale e stato (in riproduzione, in pausa, caricamento...); nella riproduzione continua dice anche "Video 3 di 20".</li>
+<li><strong>Posizione</strong>: la barra del tempo, che dice per esempio "2:15 di 10:30". <kbd>Freccia destra</kbd> o <kbd>su</kbd>: 5 secondi avanti; <kbd>Freccia sinistra</kbd> o <kbd>giù</kbd>: 5 secondi indietro; <kbd>Pagina su</kbd> e <kbd>Pagina giù</kbd>: un minuto avanti e indietro; <kbd>Inizio</kbd>: dall'inizio; <kbd>Fine</kbd>: poco prima della fine.</li>
+<li><strong>Precedente</strong> e <strong>Successivo</strong>: solo nella <a href="#continua">riproduzione continua</a>.</li>
+<li><strong>Indietro 5 secondi</strong>, <strong>Pausa</strong> (o <strong>Riprendi</strong>), <strong>Avanti 5 secondi</strong>, <strong>Ferma</strong>.</li>
+<li><strong>Volume</strong>: una barra da 0 a 100, a passi di 5 con le frecce.</li>
+<li><strong>Velocità</strong>: una casella a elenco, da più lenta a più veloce; "normale" è la velocità di partenza.</li>
+<li><strong>Mostra le immagini</strong>: la casella che accende e spegne le immagini.</li>
+<li><strong>Scheda del video</strong>: la <a href="#scheda">scheda</a> del video che stai ascoltando.</li>
+<li><strong>Torna all'elenco</strong>: chiude il lettore e torna ai risultati; il video continua.</li>
+</ul>
+
+<h3>Esc nel lettore</h3>
+<p>Nel lettore <kbd>Esc</kbd> fa quello che scegli nelle Impostazioni (categoria Riproduzione, "Esc nel lettore"):</p>
+<ul>
+<li><strong>Ferma il video e torna all'elenco</strong> (come all'inizio): utile quando il volume del video copre la sintesi;</li>
+<li><strong>Chiude il lettore, il video continua</strong>: per continuare ad ascoltare mentre cerchi altro.</li>
+</ul>
+<p><kbd>Ctrl+R</kbd> (menu Riproduzione, Mostra il lettore) riporta davanti il lettore.</p>
+
+<h3>I tasti che valgono ovunque</h3>
+<p>Questi tasti funzionano sia nella finestra principale sia nel lettore, anche con il lettore chiuso:</p>
+<table>
+<tr><th>Tasto</th><th>Cosa fa</th></tr>
+<tr><td><kbd>Ctrl+P</kbd></td><td>Pausa o riprendi (nell'elenco anche <kbd>Spazio</kbd>)</td></tr>
+<tr><td><kbd>Esc</kbd></td><td>Ferma il video (nel lettore: come scelto nelle Impostazioni)</td></tr>
+<tr><td><kbd>Alt+Freccia destra</kbd> / <kbd>Alt+Freccia sinistra</kbd></td><td>Avanti o indietro di 5 secondi</td></tr>
+<tr><td><kbd>Alt+Maiusc+Freccia destra</kbd> / <kbd>Alt+Maiusc+Freccia sinistra</kbd></td><td>Avanti o indietro di un minuto</td></tr>
+<tr><td><kbd>Alt+Inizio</kbd></td><td>Torna all'inizio del video</td></tr>
+<tr><td><kbd>Alt+Freccia su</kbd> / <kbd>Alt+Freccia giù</kbd></td><td>Alza o abbassa il volume</td></tr>
+<tr><td><kbd>Alt+Pagina su</kbd> / <kbd>Alt+Pagina giù</kbd></td><td>Più veloce o più lento</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+N</kbd></td><td>Velocità normale</td></tr>
+<tr><td><kbd>Ctrl+T</kbd></td><td>Dice il tempo trascorso e la durata</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+V</kbd></td><td>Mostra o nascondi le immagini</td></tr>
+<tr><td><kbd>Ctrl+R</kbd></td><td>Mostra il lettore</td></tr>
+</table>
+<p>Volume e velocità restano quelli scelti anche per i video dopo.</p>
+
+<h2 id="continua">5. La riproduzione continua</h2>
+<p><kbd>Ctrl+Invio</kbd> su un video (menu Riproduzione, Riproduci tutto da qui) fa partire quel video e poi, uno dopo l'altro, tutti i video che lo seguono nell'elenco: i risultati di una ricerca, i video di un canale, una playlist intera o una raccolta. Quando servono, i risultati seguenti si chiedono da soli.</p>
+<ul>
+<li><kbd>Ctrl+Pagina giù</kbd>: il video successivo; <kbd>Ctrl+Pagina su</kbd>: il precedente. Nel lettore ci sono anche i pulsanti Successivo e Precedente.</li>
+<li>Il video dopo si prepara mentre ascolti quello di adesso: il passaggio è veloce.</li>
+<li>Un video che non si può riprodurre si salta da solo, e la voce dice quale e perché.</li>
+<li>Alla fine senti "Fine della riproduzione continua".</li>
+<li><kbd>Invio</kbd> su un altro video, <kbd>Esc</kbd> (Ferma) o un link aperto con <kbd>Ctrl+L</kbd> fermano la riproduzione continua.</li>
+</ul>
+
+<h2 id="scheda">6. La scheda del video</h2>
+<p><kbd>Alt+Invio</kbd> su un video (menu File, Scheda del video; nel lettore il pulsante Scheda del video) apre la scheda, con:</p>
+<ul>
+<li><strong>Informazioni</strong>: titolo, canale, data di pubblicazione, durata, visualizzazioni, "mi piace" e numero dei capitoli;</li>
+<li><strong>Descrizione</strong>: la descrizione del video, da leggere riga per riga;</li>
+<li><strong>Capitoli</strong>, se il video li ha: <kbd>Invio</kbd> su un capitolo fa partire il video da lì (se il video sta già suonando, ci si sposta);</li>
+<li>i pulsanti <strong>Riproduci</strong> e <strong>Copia link</strong>.</li>
+</ul>
+<p>La scheda c'è solo per i video, non per canali e playlist.</p>
+
+<h2 id="link">7. I link</h2>
+<ul>
+<li><kbd>Ctrl+L</kbd> (menu File, Apri link YouTube): incolla un link di YouTube che ti hanno mandato e premi Invio. Se negli appunti c'è già un link di YouTube, il campo è già riempito.</li>
+<li><kbd>Ctrl+C</kbd> sull'elenco: copia il link del risultato scelto, da mandare a chi vuoi.</li>
+<li><kbd>Ctrl+B</kbd> sull'elenco: apre il risultato nel browser.</li>
+</ul>
+
+<h2 id="scaricare">8. Scaricare video e audio</h2>
+<p><kbd>Ctrl+D</kbd> (menu File, Scarica) su un video apre la finestra <strong>Scarica</strong>. Dal lettore, scarica il video che stai ascoltando. Su una playlist o un canale, la voce del menu diventa "Scarica tutto": si scaricano tutti i video (di un canale, quelli della sezione Video).</p>
+
+<h3>La finestra Scarica</h3>
+<ul>
+<li><strong>Cosa scaricare</strong>: Audio oppure Video.</li>
+<li><strong>Formato</strong> dell'audio: Originale (com'è su YouTube, senza conversione), MP3 (proposto la prima volta), M4A, Opus, OGG Vorbis, FLAC, WAV. Per MP3, M4A e OGG Vorbis anche la <strong>Qualità</strong>: da 320 a 128 kbps.</li>
+<li><strong>Formato</strong> del video: Originale (com'è su YouTube, in MKV), MP4 (si apre ovunque), MKV, WebM; la <strong>Qualità</strong>: la migliore, oppure un massimo da 2160p a 360p.</li>
+<li>Le caselle <strong>Copertina dentro il file</strong>, <strong>Titolo e autore dentro il file</strong>, <strong>Capitoli dentro il file</strong>, <strong>Sottotitoli</strong> (spuntandola compare la lingua dei sottotitoli), e per playlist e canali <strong>Numera i file</strong> (001, 002...).</li>
+<li><strong>Cartella</strong>: dove salvare, con <strong>Sfoglia</strong> per sceglierne un'altra.</li>
+<li><strong>Scarica</strong> mette il download in coda.</li>
+</ul>
+<p>Le scelte restano per la volta dopo. I download vanno uno alla volta: se ce n'è già uno in corso, il nuovo aspetta il suo turno. La voce dice quando un download parte, quando è finito e se non è riuscito.</p>
+
+<h3>FFmpeg, la prima volta</h3>
+<p>Per convertire l'audio (per esempio in MP3) e per unire immagini e audio serve FFmpeg, un altro programma del motore (circa 90 MB). Non si scarica al primo avvio, ma al primo download che ne ha bisogno: poi resta nella cartella Motore.</p>
+
+<h3>La finestra Download</h3>
+<p><kbd>Ctrl+J</kbd> (menu File, Elenco dei download) apre la finestra con tutti i download: per ognuno lo stato, la percentuale, la velocità e quanto manca. È una finestra a parte: puoi tornare alla finestra principale e continuare a cercare e ascoltare.</p>
+<ul>
+<li><kbd>Invio</kbd> su un download finito apre il file; <kbd>Canc</kbd> annulla il download scelto; <kbd>Esc</kbd> chiude la finestra.</li>
+<li>I pulsanti: <strong>Annulla download</strong>, <strong>Riprova</strong> (per quelli non riusciti o annullati), <strong>Apri file</strong>, <strong>Apri cartella</strong>, <strong>Togli i conclusi</strong>, <strong>Chiudi</strong>.</li>
+</ul>
+<p>Nelle Impostazioni, categoria Download, scegli se e ogni quanto sentire a voce l'avanzamento (mai, ogni 50%, ogni 25%, ogni 10%) e la cartella proposta per i download.</p>
+
+<h3>Cosa si può scaricare</h3>
+<p>I contenuti di YouTube appartengono ai loro autori: scarica solo quello che hai il diritto di scaricare (per esempio i tuoi video, contenuti con una licenza libera o con il permesso di chi li ha pubblicati) e rispetta le regole di YouTube e le leggi sul diritto d'autore.</p>
+
+<h2 id="raccolte">9. Le raccolte</h2>
+<p>Le raccolte sono elenchi fatti da te, ognuno con il nome che vuoi: "Musica per lavorare", "Documentari", "Ricette". In una raccolta metti video, canali e playlist; lo stesso elemento può stare in più raccolte. Le raccolte si salvano nella cartella Dati e si aprono subito, senza aspettare YouTube.</p>
+
+<h3>Salvare in una raccolta</h3>
+<ol>
+<li>Sul risultato che vuoi tenere premi <kbd>Ctrl+S</kbd> (menu Raccolte, Salva in raccolta). Funziona anche nel lettore, sul video che stai ascoltando.</li>
+<li>Nella finestra, la casella <strong>Raccolta</strong> propone l'ultima che hai usato: scegli con le frecce e premi <kbd>Invio</kbd> (pulsante <strong>Salva</strong>).</li>
+<li>Il pulsante <strong>Nuova raccolta</strong> ne crea una al volo, senza uscire.</li>
+</ol>
+<p>La prima volta, quando non hai ancora nessuna raccolta, il programma ti chiede subito il nome della prima. Se l'elemento è già in quella raccolta, senti "Già in" e il nome della raccolta.</p>
+
+<h3>Aprire e usare le raccolte</h3>
+<ul>
+<li><kbd>Ctrl+K</kbd> (menu Raccolte, Vai alle raccolte) mostra nell'elenco le tue raccolte, per esempio "Musica, 12 elementi". <kbd>Backspace</kbd> (o il pulsante Torna a) ti riporta dov'eri prima.</li>
+<li><kbd>Invio</kbd> su una raccolta la apre. Dentro, tutto funziona come in un elenco normale: <kbd>Invio</kbd> riproduce (o entra nel canale o nella playlist), <kbd>Ctrl+Invio</kbd> riproduce tutta la raccolta da lì, <kbd>Ctrl+D</kbd> scarica, <kbd>Alt+Invio</kbd> apre la scheda.</li>
+</ul>
+
+<h3>Gestire le raccolte</h3>
+<ul>
+<li><kbd>Ctrl+N</kbd> (menu Raccolte, Nuova raccolta): una raccolta nuova, vuota.</li>
+<li><kbd>F2</kbd>: nell'elenco delle raccolte rinomina quella scelta; dentro una raccolta rinomina quella in cui sei.</li>
+<li><kbd>Canc</kbd>: nell'elenco delle raccolte elimina la raccolta scelta; dentro una raccolta toglie l'elemento scelto. In tutti e due i casi il programma chiede prima conferma.</li>
+</ul>
+<p>Gli stessi comandi sono nei pulsanti sotto l'elenco (Nuova raccolta, Rinomina, Elimina raccolta, Togli dalla raccolta), nel menu Raccolte e nel menu della riga. Quando un elenco delle raccolte resta vuoto, la voce dice come riempirlo e come tornare indietro.</p>
+
+<h2 id="impostazioni">10. Le impostazioni</h2>
+<p>File, Impostazioni (<kbd>Ctrl+Virgola</kbd>). A sinistra l'elenco delle categorie: con le frecce cambi categoria, con <kbd>Tab</kbd> passi alle sue scelte. Le scelte valgono subito; la lingua cambia alla chiusura della finestra.</p>
+
+<h3>Generale</h3>
+<ul>
+<li><strong>Lingua</strong>: come Windows, italiano, inglese o spagnolo.</li>
+<li><strong>Icona sul desktop</strong>: spuntandola compare subito l'icona di Tube Player sul desktop; togliendo la spunta l'icona va via.</li>
+<li><strong>Controlla gli aggiornamenti del programma all'avvio</strong>: vedi <a href="#aiuto">il menu Aiuto e gli aggiornamenti</a>.</li>
+<li><strong>Aggiorna da solo il motore di YouTube</strong> (una volta al giorno) e il pulsante <strong>Controlla ora gli aggiornamenti del motore</strong>: vedi <a href="#motore">il motore di YouTube</a>.</li>
+</ul>
+
+<h3>Riproduzione</h3>
+<ul>
+<li><strong>Dispositivo per l'audio dei video</strong>: dove si sentono i video (per esempio le cuffie), oppure il predefinito di Windows.</li>
+<li><strong>Qualità massima delle immagini</strong>: la migliore disponibile, oppure un massimo da 2160p a 240p. Vale dal prossimo video; una qualità più bassa consuma meno internet.</li>
+<li><strong>Esc nel lettore</strong>: ferma il video e torna all'elenco, oppure chiude il lettore e il video continua.</li>
+</ul>
+
+<h3>Ricerca</h3>
+<p><strong>Risultati da chiedere ogni volta</strong>: 10, 20, 30 o 50. L'elenco poi si allunga da solo.</p>
+
+<h3>Download</h3>
+<p>Ogni quanto annunciare l'avanzamento dei download e la cartella predefinita, con il pulsante <strong>Usa la cartella Scaricati di Tube Player</strong> per tornare a quella di partenza.</p>
+
+<h3>Annunci</h3>
+<p>Un albero con i gruppi (Riproduzione, Ricerca, Download, Programma) e, dentro, ogni cosa che il programma ti può dire. Su ognuna <kbd>Spazio</kbd> cambia come avvisarti: voce, voce e suono, solo suono, spento. <kbd>Invio</kbd> (o il pulsante Ascolta i suoni) ti fa sentire il suono. Su un gruppo, <kbd>Spazio</kbd> cambia tutti i suoi annunci insieme.</p>
+<p>Ogni famiglia di avvisi ha il suo timbro, così capisci al primo istante di cosa si tratta: le corde per la riproduzione, le bolle per la ricerca e i canali, la marimba per i download, il vetro per il programma, un ronzio per gli errori.</p>
+
+<h3>Suoni</h3>
+<p>Il <strong>dispositivo</strong> dove si sentono i suoni del programma (può essere diverso da quello dei video) e il loro <strong>volume</strong>: a ogni scelta senti un suono di prova.</p>
+
+<h3>Tastiera</h3>
+<p>Un albero con tutti i comandi del programma, divisi come i menu, ognuno con la sua scorciatoia. Su un comando: <kbd>Invio</kbd> (o Cambia scorciatoia) per sceglierne un'altra premendo la combinazione, <kbd>Canc</kbd> (o Rimuovi scorciatoia) per toglierla, poi Ripristina predefinita e Ripristina tutte. Se la combinazione è già usata da un altro comando, il programma te lo dice e ti chiede se spostarla. I menu, il benvenuto e gli annunci usano sempre le scorciatoie che hai scelto.</p>
+
+<h2 id="motore">11. Il motore di YouTube</h2>
+<p>YouTube cambia spesso il modo in cui dà i suoi video. Per questo Tube Player usa tre programmi di altri autori, che chi li fa tiene aggiornati in pochi giorni a ogni cambiamento:</p>
+<ul>
+<li><strong>yt-dlp</strong>: legge YouTube (ricerche, canali, playlist, indirizzi dei video, download);</li>
+<li><strong>Deno</strong>: serve a yt-dlp per decifrare i video;</li>
+<li><strong>mpv</strong>: riproduce l'audio e le immagini;</li>
+<li>e, solo per i download, <strong>FFmpeg</strong>.</li>
+</ul>
+<p>Stanno nella cartella Motore e si scaricano dai loro siti ufficiali. Una volta al giorno Tube Player controlla da solo se ce ne sono versioni nuove e le scarica (si può spegnere nelle Impostazioni, categoria Generale, ma è meglio lasciarlo acceso). Se all'improvviso i video non partono più, prova il pulsante <strong>Controlla ora gli aggiornamenti del motore</strong>.</p>
+
+<h2 id="aiuto">12. Il menu Aiuto e gli aggiornamenti</h2>
+<ul>
+<li><strong>Guida</strong> (<kbd>F1</kbd>, da qualunque finestra): questa guida.</li>
+<li><strong>Benvenuto</strong>: la finestra delle basi, che si apre all'avvio finché tieni spuntata la sua casella "Mostra questa finestra all'avvio".</li>
+<li><strong>Controlla gli aggiornamenti</strong>: cerca una versione nuova di Tube Player.</li>
+<li><strong>Ultime modifiche</strong>: le novità delle versioni, anche senza internet. Le stesse sono nel file Novità.html, nella cartella Documenti.</li>
+<li><strong>Contattami</strong>: per scrivere all'autore. Scegli il tipo di messaggio (segnalazione di un problema, suggerimento, complimento, altro), scrivi un breve testo e premi Invia: si apre un'email già pronta nel tuo programma di posta, con la versione del programma, e la mandi tu. Senza un programma di posta, il testo pronto da copiare compare in una finestra.</li>
+<li><strong>Dona con PayPal</strong>: per sostenere l'autore, se ti va.</li>
+<li><strong>Informazioni</strong>: la versione del programma.</li>
+</ul>
+
+<h3>Gli aggiornamenti di Tube Player</h3>
+<p>Se in Impostazioni, Generale, è spuntata "Controlla gli aggiornamenti del programma all'avvio", Tube Player controlla poco dopo l'apertura se c'è una versione nuova. Se c'è, ti mostra le novità con tre pulsanti: Sostieni l'autore con PayPal, Aggiorna adesso, Più tardi.</p>
+<ul>
+<li>Con <strong>Aggiorna adesso</strong> il programma scarica l'aggiornamento, controlla che sia proprio quello firmato dall'autore e integro, poi si chiude e si riapre da solo nella versione nuova.</li>
+<li>Le tue impostazioni, le raccolte, il motore e i file scaricati non si toccano mai.</li>
+<li>Se qualcosa va storto, tutti i file vecchi tornano al loro posto: il programma resta com'era.</li>
+<li>Non ti propone mai di aggiornare mentre hai una finestra aperta o dei download in corso: aspetta che tu abbia finito.</li>
+<li>Con <strong>Più tardi</strong> te lo ripropone al prossimo avvio.</li>
+</ul>
+
+<h2 id="scorciatoie">13. Tutte le scorciatoie</h2>
+<p>Queste sono le scorciatoie di partenza: tutte (tranne i tasti di Windows) si possono cambiare in Impostazioni, Tastiera.</p>
+
+<h3>File</h3>
+<table>
+<tr><th>Tasto</th><th>Cosa fa</th></tr>
+<tr><td><kbd>Ctrl+L</kbd></td><td>Apri un link di YouTube</td></tr>
+<tr><td><kbd>Ctrl+D</kbd></td><td>Scarica il video o l'audio (su playlist e canali: scarica tutto)</td></tr>
+<tr><td><kbd>Ctrl+J</kbd></td><td>Elenco dei download</td></tr>
+<tr><td><kbd>Ctrl+C</kbd></td><td>Copia il link del risultato (nell'elenco)</td></tr>
+<tr><td><kbd>Ctrl+B</kbd></td><td>Apri il risultato nel browser (nell'elenco)</td></tr>
+<tr><td><kbd>Alt+Invio</kbd></td><td>Scheda del video (nell'elenco)</td></tr>
+<tr><td><kbd>Ctrl+Virgola</kbd></td><td>Impostazioni</td></tr>
+<tr><td><kbd>Ctrl+Q</kbd></td><td>Esci</td></tr>
+</table>
+
+<h3>Vai</h3>
+<table>
+<tr><th>Tasto</th><th>Cosa fa</th></tr>
+<tr><td><kbd>Ctrl+F</kbd></td><td>Vai alla casella di ricerca</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+C</kbd></td><td>Vai al canale del video scelto</td></tr>
+<tr><td><kbd>Backspace</kbd></td><td>Torna all'elenco di prima (nell'elenco)</td></tr>
+<tr><td><kbd>Ctrl+1</kbd>, <kbd>Ctrl+2</kbd>, <kbd>Ctrl+3</kbd></td><td>Dentro un canale: video, playlist, dirette</td></tr>
+</table>
+
+<h3>Raccolte</h3>
+<table>
+<tr><th>Tasto</th><th>Cosa fa</th></tr>
+<tr><td><kbd>Ctrl+S</kbd></td><td>Salva il risultato scelto, o il video in riproduzione, in una raccolta</td></tr>
+<tr><td><kbd>Ctrl+K</kbd></td><td>Vai alle raccolte</td></tr>
+<tr><td><kbd>Ctrl+N</kbd></td><td>Nuova raccolta</td></tr>
+<tr><td><kbd>F2</kbd></td><td>Rinomina la raccolta (nell'elenco)</td></tr>
+<tr><td><kbd>Canc</kbd></td><td>Elimina la raccolta, o togli l'elemento dalla raccolta (nell'elenco)</td></tr>
+</table>
+
+<h3>Riproduzione</h3>
+<table>
+<tr><th>Tasto</th><th>Cosa fa</th></tr>
+<tr><td><kbd>Invio</kbd></td><td>Riproduci il video; su un canale, una playlist o una raccolta: entra</td></tr>
+<tr><td><kbd>Ctrl+Invio</kbd></td><td>Riproduci tutto da qui</td></tr>
+<tr><td><kbd>Ctrl+R</kbd></td><td>Mostra il lettore</td></tr>
+<tr><td><kbd>Ctrl+Pagina giù</kbd> / <kbd>Ctrl+Pagina su</kbd></td><td>Video successivo / precedente</td></tr>
+<tr><td><kbd>Ctrl+P</kbd> (nell'elenco anche <kbd>Spazio</kbd>)</td><td>Pausa o riprendi</td></tr>
+<tr><td><kbd>Esc</kbd></td><td>Ferma il video</td></tr>
+<tr><td><kbd>Alt+Freccia destra</kbd> / <kbd>sinistra</kbd></td><td>Avanti / indietro di 5 secondi</td></tr>
+<tr><td><kbd>Alt+Maiusc+Freccia destra</kbd> / <kbd>sinistra</kbd></td><td>Avanti / indietro di un minuto</td></tr>
+<tr><td><kbd>Alt+Inizio</kbd></td><td>Torna all'inizio del video</td></tr>
+<tr><td><kbd>Alt+Freccia su</kbd> / <kbd>giù</kbd></td><td>Alza / abbassa il volume</td></tr>
+<tr><td><kbd>Alt+Pagina su</kbd> / <kbd>Alt+Pagina giù</kbd></td><td>Più veloce / più lento</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+N</kbd></td><td>Velocità normale</td></tr>
+<tr><td><kbd>Ctrl+T</kbd></td><td>Annuncia il tempo trascorso e la durata</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+V</kbd></td><td>Mostra o nascondi le immagini</td></tr>
+</table>
+
+<h3>Aiuto</h3>
+<table>
+<tr><th>Tasto</th><th>Cosa fa</th></tr>
+<tr><td><kbd>F1</kbd></td><td>Guida</td></tr>
+</table>
+
+<h2 id="problemi">14. Problemi e domande</h2>
+
+<h3>Il primo video ci mette qualche secondo a partire</h3>
+<p>È normale: per ogni video il programma deve chiedere a YouTube il suo indirizzo vero, e ci vogliono circa 3 secondi. I primi dieci risultati e quelli su cui ti fermi si preparano in anticipo, quindi aspettando un attimo dopo la ricerca di solito partono subito. Un video che hai già aperto, se lo riapri entro un'ora, parte subito.</p>
+
+<h3>"Il motore di YouTube non è pronto"</h3>
+<p>Al primo avvio i programmi del motore non si sono potuti scaricare: controlla la connessione a internet e riapri Tube Player.</p>
+
+<h3>Un video non parte, o le ricerche non funzionano più</h3>
+<p>Alcuni video non si possono riprodurre fuori da YouTube (per esempio quelli riservati agli abbonati o vietati ai minori), e il messaggio lo dice. Se invece all'improvviso non funziona più niente, probabilmente YouTube ha cambiato qualcosa: in Impostazioni, Generale, premi <strong>Controlla ora gli aggiornamenti del motore</strong>. Se non basta, di solito chi fa yt-dlp lo sistema in pochi giorni: il motore si aggiorna da solo.</p>
+
+<h3>Un download non riesce</h3>
+<p>Nella finestra Download (<kbd>Ctrl+J</kbd>) la riga dice il motivo; prova <strong>Riprova</strong>. Se il messaggio parla di FFmpeg, controlla la connessione: al primo download che ne ha bisogno, FFmpeg si deve scaricare.</p>
+
+<h3>Non sento la sintesi perché il video è troppo alto</h3>
+<p><kbd>Esc</kbd> ferma il video (con la scelta di partenza anche dal lettore), <kbd>Alt+Freccia giù</kbd> abbassa il volume, <kbd>Ctrl+P</kbd> lo mette in pausa. Nelle Impostazioni, categoria Riproduzione, puoi anche mandare l'audio dei video su un altro dispositivo.</p>
+
+<h3>Il file delle raccolte</h3>
+<p>Le raccolte stanno nel file raccolte.json, nella cartella Dati. Per tenerne una copia, copia quel file; per spostare Tube Player su un altro computer, copia tutta la cartella del programma.</p>
+
+<h3>Per scrivere all'autore</h3>
+<p>Aiuto, Contattami: per segnalare un problema, dare un suggerimento o anche solo dire che il programma ti piace.</p>
+
+</body>
+</html>

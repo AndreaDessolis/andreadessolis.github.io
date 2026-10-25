@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tube Player — Andrea Dessolis</title>
+<meta name="description" content="YouTube in modo semplice e accessibile: cerchi, ascolti, guardi e scarichi i video con lo screen reader.">
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/tube-player.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/tube-player.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Andrea Dessolis</a>
+    <nav aria-label="Menu principale">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programmi.html" aria-current="page">Programmi</a></li>
+        <li><a href="chi-sono.html">Chi sono</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li class="lang"><a href="en/tube-player.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="680" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <div class="program-head">
+      <img class="program-logo" src="immagini/tube-player.png" width="96" height="96" alt="Logo di Tube Player: un vecchio televisore bianco con le antenne, con un tasto Play corallo e tre onde sonore sullo schermo, su un quadrato blu petrolio">
+      <h1>Tube Player</h1>
+    </div>
+    <p class="lede">YouTube in modo semplice e accessibile: cerchi, ascolti, guardi e scarichi i video con lo screen reader.</p>
+
+    <p>YouTube è pieno di musica, video e trasmissioni, ma la sua pagina web è lunga e faticosa da esplorare con NVDA o JAWS. Tube Player ti fa usare YouTube come un elenco semplice, con i tasti di Windows che conosci già: cerchi, scegli con le frecce e premi Invio. Il video parte in un lettore fatto di pulsanti veri, tutti raggiungibili con il Tab.</p>
+
+    <p>Tube Player è un programma indipendente: non è un prodotto di YouTube né di Google. Per leggere YouTube usa yt-dlp e per riprodurre i video usa mpv, due programmi liberi che scarica e tiene aggiornati da solo. Non serve un account.</p>
+
+    <div class="download">
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/AndreaDessolis/Tube-Player/releases/latest/download/Tube-Player-Setup.exe">Scarica Tube Player</a>
+      </div>
+      <p class="version">Versione 1.0.0 del 25 ottobre 2026. Gratuito, per Windows 10 e 11. Il link porta sempre all&#x27;ultima versione.</p>
+    </div>
+
+    <h2>Cosa serve</h2>
+    <ul>
+      <li>Windows 10 o 11 a 64 bit.</li>
+      <li>Una connessione a internet: al primo avvio il programma scarica da solo i componenti che gli servono.</li>
+    </ul>
+
+    <h2>Cosa fa</h2>
+    <ul class="feature-list">
+      <li>Ricerca di video, canali e playlist, con risultati che dicono canale, durata e visualizzazioni, e un elenco che si allunga da solo.</li>
+      <li>Canali e playlist come cartelle: Invio per entrare, Backspace per tornare indietro; dentro un canale i suoi video, le sue playlist e le sue dirette.</li>
+      <li>Un lettore accessibile: posizione, pausa, avanti e indietro, volume, velocità, e le immagini da accendere solo quando servono.</li>
+      <li>I tasti principali valgono ovunque, e i video partono in fretta perché si preparano in anticipo.</li>
+      <li>Riproduzione continua di una playlist, di un canale o dei risultati, con video successivo e precedente.</li>
+      <li>La scheda di ogni video, con la descrizione e i capitoli da cui farlo partire.</li>
+      <li>Download di video e audio in tanti formati (MP3, M4A, Opus, FLAC, MP4, MKV e il formato originale), anche di playlist e canali interi.</li>
+      <li>Le raccolte: i tuoi elenchi di video, canali e playlist, ognuno con il nome che vuoi.</li>
+      <li>Annunci a voce o con suoni, a scelta, e scorciatoie tutte modificabili.</li>
+      <li>Aggiornamenti automatici, e in italiano, inglese e spagnolo.</li>
+    </ul>
+
+    <h2>Guida e novità</h2>
+    <ul>
+      <li><a href="guide/tube-player.html">La guida di Tube Player, da leggere online</a></li>
+      <li><a href="novita/tube-player.html">Le novità di ogni versione</a></li>
+      <li><a href="https://github.com/AndreaDessolis/Tube-Player/releases">Tutte le versioni su GitHub</a></li>
+    </ul>
+
+    <h2>Sostieni il progetto</h2>
+    <p>I miei programmi sono gratuiti e li porto avanti da solo, nel tempo libero. Se ti sono utili, puoi aiutarmi con una donazione.</p>
+    <div class="cta-row">
+      <a class="btn btn-secondary" href="https://paypal.me/AndreaDessolis">Sostieni con PayPal</a>
+    </div>
+
+    <p>Hai domande o suggerimenti? <a href="contatti.html">Scrivimi</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="contatti.html">scrivimi</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>

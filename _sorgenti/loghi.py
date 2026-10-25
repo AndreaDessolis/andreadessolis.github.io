@@ -25,4 +25,7 @@ if __name__ == '__main__':
     # PCloud Access: il suo script disegna l'icona con disegna() (non logo()).
     carica('PCloud Access').disegna().resize((256, 256), Image.LANCZOS).save(
         os.path.join(QUI, 'immagini', 'pcloud-access.png'))
+    # Tube Player: anche lui con disegna().
+    carica('Tube Player').disegna().resize((256, 256), Image.LANCZOS).save(
+        os.path.join(QUI, 'immagini', 'tube-player.png'))
     print('Fatto')
