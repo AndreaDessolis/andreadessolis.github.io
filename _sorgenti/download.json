@@ -30,7 +30,8 @@
   "tube-player": {
     "storico": 0,
     "versioni_tolte": {
-      "v1.0.0": 1
+      "v1.0.0": 1,
+      "v1.1.0": 4
     }
   }
 }
