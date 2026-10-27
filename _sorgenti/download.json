@@ -47,5 +47,9 @@
   "gestore-finestre": {
     "storico": 0,
     "versioni_tolte": {}
+  },
+  "blocco-modificatore": {
+    "storico": 0,
+    "versioni_tolte": {}
   }
 }

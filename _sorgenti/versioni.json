@@ -26,5 +26,9 @@
   "gestore-finestre": {
     "versione": "1.2.0",
     "data": "2026-10-27"
+  },
+  "blocco-modificatore": {
+    "versione": "1.2.0",
+    "data": "2026-10-27"
   }
 }
