@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Shortcut Conflict Helper - guida</title>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../addon-nvda.html#shortcut-conflict-helper">Torna a Shortcut Conflict Helper — andreadessolis.com</a></div>
+<h1>Shortcut Conflict Helper</h1>
+<p>Add-on per NVDA che trova i tasti assegnati a più comandi nella finestra Gesti e comandi (menu NVDA, Preferenze, Gesti e comandi).</p>
+
+<h2>All'apertura di Gesti e comandi</h2>
+<p>Se ci sono conflitti, sopra Gesti e comandi si apre la finestra <strong>Conflitti di tasti</strong>. Se non ce ne sono, non succede niente.</p>
+<p>L'elenco ha una riga per ogni comando coinvolto, con quattro colonne:</p>
+<ul>
+<li><strong>Scorciatoia</strong>, con la tastiera tra parentesi.</li>
+<li><strong>Comando</strong>.</li>
+<li><strong>Categoria</strong>, come in Gesti e comandi.</li>
+<li><strong>Stato</strong>: cosa succede premendo il tasto.
+<ul>
+<li>"Vince": è il comando che parte.</li>
+<li>"Coperto da: ..." : non parte, perché vince un altro comando.</li>
+<li>"Conflitto: stesso livello": più comandi dello stesso tipo (per esempio due add-on) hanno lo stesso tasto e non si può sapere quale parte.</li>
+</ul>
+</li>
+</ul>
+<p>Quale comando vince segue l'ordine di NVDA: prima le add-on, poi il programma in uso, poi la modalità navigazione, poi l'oggetto col focus, infine i comandi di NVDA.</p>
+<p>I pulsanti:</p>
+<ul>
+<li><strong>Modifica</strong> (o Invio): chiede la nuova scorciatoia. Premere la combinazione; Esc annulla. Se la nuova scorciatoia è già usata, chiede se toglierla agli altri comandi.</li>
+<li><strong>Rimuovi</strong> (o Canc): toglie il tasto dal comando scelto.</li>
+<li><strong>Ignora</strong>: per le sovrapposizioni volute (per esempio un'add-on che sostituisce apposta un tasto di NVDA). Il conflitto non compare più; ricompare se un altro comando si aggiunge allo stesso tasto.</li>
+<li><strong>Chiudi</strong> (o Esc).</li>
+</ul>
+<p>Dopo ogni modifica si resta sulla stessa riga dell'elenco. Quando non ci sono più conflitti la finestra lo dice e si chiude.</p>
+<p><strong>Importante:</strong> come in Gesti e comandi, le modifiche si salvano solo premendo <strong>OK</strong> in Gesti e comandi. Con Annulla si perdono.</p>
+
+<h2>Quando si assegna un tasto</h2>
+<p>In Gesti e comandi, aggiungendo un tasto a un comando, se il tasto è già usato l'add-on elenca i comandi che lo usano e chiede se toglierlo a loro. Rispondendo No il tasto non viene aggiunto.</p>
+
+<h2>Cerca per tasto</h2>
+<p>Il filtro di Gesti e comandi cerca solo nei nomi dei comandi. Per trovare un comando dal suo tasto c'è il pulsante <strong>Cerca per tasto</strong> (Alt+T), dopo i pulsanti Aggiungi, Rimuovi e Ripristina:</p>
+<ol>
+<li>Premere Alt+T: si apre "Nuova scorciatoia".</li>
+<li>Premere il tasto da cercare (Esc annulla).</li>
+<li>L'albero mostra solo i comandi che usano quel tasto, con le categorie aperte e il focus sul primo; NVDA dice quanti sono, per esempio "2 comandi con NVDA+Maiusc+J". Da lì si usano i soliti Aggiungi e Rimuovi.</li>
+</ol>
+<p>Per tornare a vedere tutti i comandi: scrivere nel campo Filtra per, oppure premere di nuovo Alt+T e poi Esc. Anche qui contano come stesso tasto quello per tutte le tastiere e quello solo per lo schema in uso.</p>
+<p>Per sapere al volo cosa fa un tasto, senza aprire Gesti e comandi, NVDA ha anche l'aiuto tastiera: NVDA+1 lo accende e lo spegne.</p>
+
+<h2>Cosa conta come stesso tasto</h2>
+<ul>
+<li>Un tasto valido per tutte le tastiere e lo stesso tasto valido solo per lo schema desktop (o solo portatile) sono lo stesso tasto.</li>
+<li>I tasti dello schema di tastiera che non si usa (desktop o portatile, impostato in NVDA) non contano.</li>
+</ul>
+
+<h2>Impostazioni</h2>
+<p>Impostazioni di NVDA, categoria <strong>Conflitti di tasti</strong>:</p>
+<ul>
+<li><em>Mostra i conflitti all'apertura di Gesti e comandi</em>.</li>
+<li><em>Avvisa quando si assegna un tasto già usato</em>.</li>
+<li>Pulsante <em>Ripristina i conflitti ignorati</em>, con il loro numero: fa ricomparire tutti i conflitti ignorati.</li>
+</ul>
+<p>I conflitti ignorati sono salvati in <code>shortcutConflictHelper-ignorati.json</code>, nella cartella delle impostazioni di NVDA.</p>
+
+<h2>Limiti</h2>
+<ul>
+<li>Gesti e comandi mostra solo i comandi validi nel programma da cui la si apre: per esempio, aperta dal browser non contiene i comandi di Thunderbird. Per controllare i tasti di un programma, aprire Gesti e comandi mentre si è in quel programma.</li>
+<li>Fra due add-on con lo stesso tasto non si può sapere quale parte: dipende dall'ordine in cui NVDA le carica.</li>
+</ul>
+
+<h2>Lingue</h2>
+<p>L'add-on parla nella lingua di NVDA: italiano o inglese.</p>
+
+<h2>Compatibilità</h2>
+<p>Da NVDA 2024.1 in poi (anche 32 bit). Provata con NVDA 2026.3.</p>
+
+<h2>Autore e licenza</h2>
+<p>Andrea Dessolis, <a href="https://andreadessolis.com/addon-nvda.html">andreadessolis.com</a>. Licenza GNU GPL versione 2.</p>
+</body>
+</html>
