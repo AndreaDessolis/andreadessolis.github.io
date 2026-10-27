@@ -89,6 +89,17 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 </ol>
 <p>Da qualunque punto, <kbd>Ctrl+F</kbd> riporta alla casella di ricerca, con il testo di prima già selezionato: scrivendo lo sostituisci.</p>
 
+<h3>I suggerimenti mentre scrivi</h3>
+<p>Mentre scrivi (dalla seconda lettera in poi), il programma chiede a YouTube i suggerimenti, come sul sito, senza dire niente e senza aprire altre finestre: utile quando non ricordi bene il nome di un video, di un canale o di chi lo pubblica. Restando nella casella di ricerca:</p>
+<ul>
+<li><kbd>Freccia giù</kbd> e <kbd>Freccia su</kbd> scorrono i suggerimenti: mentre scorri, nella casella c'è il suggerimento e senti per esempio "geopop", poi "1 di 10". Risalendo oltre il primo torni al tuo testo;</li>
+<li><kbd>Invio</kbd> cerca il suggerimento su cui sei; se non stavi scorrendo, cerca il tuo testo, come sempre;</li>
+<li><kbd>Esc</kbd> rimette il tuo testo;</li>
+<li>se riprendi a scrivere, cancelli o sposti il cursore, nella casella torna prima il tuo testo: le lettere vanno dopo quello e i suggerimenti ripartono da lì.</li>
+</ul>
+<p>Se i suggerimenti non sono ancora arrivati, le frecce non fanno niente.</p>
+<p>Per dare i suggerimenti, quello che scrivi va a YouTube lettera per lettera, come quando scrivi sul sito. Se preferisci di no, li spegni nelle Impostazioni, categoria Ricerca.</p>
+
 <h3>Cerca tra</h3>
 <p>Dopo la casella di ricerca, la casella <strong>Cerca tra</strong> sceglie cosa cercare: Video, Canali, Playlist oppure Tutto. Con le frecce cambi la scelta: la ricerca riparte da sola appena ti fermi, e lo stato attivo resta nella casella (le frecce non lo spostano mai); il numero dei risultati te lo dice la voce. Con <kbd>Invio</kbd> invece la ricerca parte subito e vai all'elenco. La scelta resta per le ricerche dopo.</p>
 
@@ -113,7 +124,14 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Il programma chiede a YouTube 20 risultati alla volta (il numero si sceglie nelle Impostazioni, categoria Ricerca). Quando arrivi vicino al fondo, i risultati seguenti si chiedono da soli e si aggiungono in coda, con un suono leggero: puoi continuare a scendere. In fondo davvero, senza altri risultati, senti "Fine dei risultati".</p>
 
 <h3>Video pronti prima</h3>
-<p>Per far partire un video, il programma deve prima chiedere a YouTube il suo indirizzo vero: ci vogliono circa 3 secondi. Per non farti aspettare, Tube Player li prepara in anticipo: i primi dieci risultati appena arrivano, e il video su cui ti fermi con i due che lo seguono. Così di solito, quando premi <kbd>Invio</kbd>, il video parte subito. Se premi Invio su un video non ancora pronto, senti il suono del caricamento finché non parte.</p>
+<p>Per far partire un video, il programma deve prima chiedere a YouTube il suo indirizzo vero: ci vogliono circa 3 secondi. Per non farti aspettare, Tube Player li prepara in anticipo, come scegli nelle Impostazioni, categoria Ricerca, casella <strong>Preparazione anticipata dei video</strong>:</p>
+<ul>
+<li><strong>Primi dieci</strong> (la scelta di partenza): i primi dieci risultati appena arrivano, e il video su cui ti fermi con i due che lo seguono. È la più veloce, ma per qualche secondo fa lavorare molto il processore (ogni video preparato lo impegna per circa 2 secondi);</li>
+<li><strong>Primi cinque</strong>: lo stesso, ma con i primi cinque risultati: il processore lavora circa la metà;</li>
+<li><strong>Leggera</strong>: solo il video su cui ti fermi per un secondo. Scorrendo i risultati non si prepara niente, così il processore e le ventole restano tranquilli; se però premi <kbd>Invio</kbd> appena arrivato su un video, aspetti i 3 secondi;</li>
+<li><strong>Nessuna</strong>: niente in anticipo; ogni video si prepara quando premi Invio.</li>
+</ul>
+<p>Se premi Invio su un video non ancora pronto, senti il suono del caricamento finché non parte.</p>
 
 <h2 id="canali">3. Canali e playlist</h2>
 <p>Canali e playlist funzionano come le cartelle di Esplora risorse:</p>
@@ -141,6 +159,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>Posizione</strong>: la barra del tempo, che dice per esempio "2:15 di 10:30". <kbd>Freccia destra</kbd> o <kbd>su</kbd>: 5 secondi avanti; <kbd>Freccia sinistra</kbd> o <kbd>giù</kbd>: 5 secondi indietro; <kbd>Pagina su</kbd> e <kbd>Pagina giù</kbd>: un minuto avanti e indietro; <kbd>Inizio</kbd>: dall'inizio; <kbd>Fine</kbd>: poco prima della fine.</li>
 <li><strong>Precedente</strong> e <strong>Successivo</strong>: solo nella <a href="#continua">riproduzione continua</a>.</li>
 <li><strong>Indietro 5 secondi</strong>, <strong>Pausa</strong> (o <strong>Riprendi</strong>), <strong>Avanti 5 secondi</strong>, <strong>Ferma</strong>.</li>
+<li><strong>Capitoli del video</strong>: c'è solo nei video divisi in capitoli. Con le frecce scegli un capitolo e, quando ti fermi, il video ci salta. Mentre il video va, la casella segue il capitolo in cui sei.</li>
 <li><strong>Volume</strong>: una barra da 0 a 200, a passi di 5 con le frecce. Oltre 100 il suono viene amplificato: aiuta con i video registrati bassi, ma con quelli già forti l'audio può gracchiare.</li>
 <li><strong>Velocità</strong>: una casella a elenco, da più lenta a più veloce; "normale" è la velocità di partenza.</li>
 <li><strong>Lingua dell'audio</strong>: c'è solo nei video con più lingue (l'audio originale e i doppiaggi). Con le frecce scegli la lingua: quando ti fermi, la voce cambia subito, senza far ripartire il video. L'audio originale è segnato "(originale)".</li>
@@ -155,6 +174,14 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Molti video hanno dentro una pubblicità detta dall'autore ("questo video è sponsorizzato da..."), un pezzo in cui l'autore parla dei suoi prodotti, o l'invito a iscriversi e mettere "mi piace". Tube Player le salta da solo: senti un suono breve e "Sponsor saltato", e il video continua da dopo.</p>
 <p>Queste parti le segnano gli utenti di <strong>SponsorBlock</strong>, un servizio gratuito molto usato: quindi si saltano solo nei video in cui qualcuno le ha già segnate (di solito quelli più visti). Si salta solo arrivandoci mentre il video va: se ci torni tu apposta (indietro, da un capitolo o da un commento), la parte si sente.</p>
 <p>Per la tua privacy a SponsorBlock non si manda il codice del video, ma solo un pezzetto della sua "impronta" (come consiglia il servizio): risponde per tanti video insieme, e il programma tiene quello giusto. Così il servizio non sa cosa stai guardando. Se non vuoi usarlo, togli la casella in Impostazioni, Riproduzione.</p>
+
+<h3>I capitoli</h3>
+<p>Molti video sono divisi in capitoli da chi li ha pubblicati. Oltre alla casella "Capitoli del video" nel lettore:</p>
+<ul>
+<li><kbd>Ctrl+Maiusc+Pagina giù</kbd>: il capitolo successivo; <kbd>Ctrl+Maiusc+Pagina su</kbd>: il precedente (se sei da qualche secondo dentro un capitolo, prima torna al suo inizio, come con i brani). Senti "Capitolo 3 di 8" e il titolo. Sono anche nel menu Riproduzione, solo quando il video ha capitoli.</li>
+<li><kbd>Ctrl+T</kbd> dice anche il capitolo in cui sei: "12:34 di 20:00, capitolo 3 di 8: la storia".</li>
+<li>Quando il video entra da solo in un capitolo nuovo senti un suono leggero (due note di corda). Se vuoi anche il titolo a voce, in Impostazioni, Annunci, gruppo Riproduzione, scegli "voce e suono" per "Nuovo capitolo del video".</li>
+</ul>
 
 <h3>Esc nel lettore</h3>
 <p>Nel lettore <kbd>Esc</kbd> fa quello che scegli nelle Impostazioni (categoria Riproduzione, "Esc nel lettore"):</p>
@@ -176,7 +203,8 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Alt+Freccia su</kbd> / <kbd>Alt+Freccia giù</kbd></td><td>Alza o abbassa il volume</td></tr>
 <tr><td><kbd>Alt+Pagina su</kbd> / <kbd>Alt+Pagina giù</kbd></td><td>Più veloce o più lento</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+N</kbd></td><td>Velocità normale</td></tr>
-<tr><td><kbd>Ctrl+T</kbd></td><td>Dice il tempo trascorso e la durata</td></tr>
+<tr><td><kbd>Ctrl+T</kbd></td><td>Dice il tempo trascorso e la durata (e il capitolo)</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+Pagina giù</kbd> / <kbd>Ctrl+Maiusc+Pagina su</kbd></td><td>Capitolo successivo / precedente</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+V</kbd></td><td>Mostra o nascondi le immagini</td></tr>
 <tr><td><kbd>Ctrl+R</kbd></td><td>Mostra il lettore</td></tr>
 </table>
@@ -366,6 +394,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>Audio dei video doppiati</strong>: alcuni video hanno, oltre all'audio originale, tracce doppiate in altre lingue (doppiaggi fatti da persone o automatici di YouTube). Di partenza Tube Player sceglie quella nella lingua dei contenuti, se il video ce l'ha; altrimenti l'audio originale. Si può scegliere invece "Sempre la lingua originale", oppure una lingua precisa dall'elenco (italiano, inglese, spagnolo, francese, tedesco, portoghese, polacco, russo, turco, arabo, giapponese, coreano, cinese e altre). Vale anche per i download, dal prossimo video. Quando un video parte doppiato lo dice la voce ("Audio doppiato: Italiano") e il riquadro In riproduzione del lettore.</li>
 <li><strong>Esc nel lettore</strong>: ferma il video e torna all'elenco, oppure chiude il lettore e il video continua.</li>
 <li><strong>Ricorda i video guardati (cronologia)</strong>: vedi <a href="#cronologia">la cronologia</a>. Di partenza è accesa.</li>
+<li><strong>Alla fine del video chiudi il lettore e torna all'elenco</strong>: finito un video aperto da solo (con Invio), il lettore si chiude, torni sulla riga dell'elenco e senti "Video finito". Non vale nella riproduzione continua (lì parte il video dopo) né per i link aperti con <kbd>Ctrl+L</kbd>. Di partenza è spenta.</li>
 <li><strong>Volume uniforme tra i video</strong>: porta tutti i video allo stesso volume, così non ce n'è uno troppo basso e il successivo che urla. Usa la misura del volume che YouTube fa di ogni video (la stessa che usa sul sito): i video forti si abbassano quanto serve, quelli deboli si alzano un poco (al massimo 3 dB, per non far gracchiare l'audio). È una correzione fissa per ogni video, non un filtro: non rallenta l'avvio né gli spostamenti e non cambia la musica (le parti piano restano piano). Vale subito; per i video già preparati prima di accenderla, dal successivo. Non vale per i link aperti con <kbd>Ctrl+L</kbd>, di cui YouTube non dà la misura. Di partenza è spenta.</li>
 <li><strong>Riprendi i video da dove eri rimasto</strong>: vedi <a href="#cronologia">la cronologia</a>. Di partenza è accesa; senza la cronologia non c'è niente da riprendere.</li>
 <li><strong>Salta le parti sponsorizzate (SponsorBlock)</strong>: vedi <a href="#sponsor">Le parti sponsorizzate</a>. Di partenza è accesa; vale dal prossimo video.</li>
@@ -373,6 +402,8 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 
 <h3>Ricerca</h3>
 <p><strong>Risultati da chiedere ogni volta</strong>: 10, 20, 30 o 50. L'elenco poi si allunga da solo.</p>
+<p><strong>Suggerimenti di YouTube mentre scrivi la ricerca</strong>: i suggerimenti da scorrere con le frecce nella casella di ricerca (vedi <a href="#cercare">Cercare su YouTube</a>). Accesa di partenza; vale subito. Spegnendola, quello che scrivi non va a YouTube finché non premi Invio.</p>
+<p><strong>Preparazione anticipata dei video</strong>: Nessuna, Leggera, Primi cinque o Primi dieci (la scelta di partenza) (vedi <a href="#cercare">Video pronti prima</a>). Vale subito.</p>
 
 <h3>Download</h3>
 <p>Ogni quanto annunciare l'avanzamento dei download e la cartella predefinita, con il pulsante <strong>Usa la cartella Scaricati di Tube Player</strong> per tornare a quella di partenza.</p>
@@ -472,6 +503,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Ctrl+Invio</kbd></td><td>Riproduci tutto da qui</td></tr>
 <tr><td><kbd>Ctrl+R</kbd></td><td>Mostra il lettore</td></tr>
 <tr><td><kbd>Ctrl+Pagina giù</kbd> / <kbd>Ctrl+Pagina su</kbd></td><td>Video successivo / precedente</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+Pagina giù</kbd> / <kbd>Ctrl+Maiusc+Pagina su</kbd></td><td>Capitolo successivo / precedente</td></tr>
 <tr><td><kbd>Ctrl+P</kbd> (nell'elenco anche <kbd>Spazio</kbd>)</td><td>Pausa o riprendi</td></tr>
 <tr><td><kbd>Esc</kbd></td><td>Ferma il video; senza video in riproduzione, dentro un canale, una playlist o una raccolta torna all'elenco di prima</td></tr>
 <tr><td><kbd>Alt+Freccia destra</kbd> / <kbd>sinistra</kbd></td><td>Avanti / indietro di 5 secondi</td></tr>
@@ -480,7 +512,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Alt+Freccia su</kbd> / <kbd>giù</kbd></td><td>Alza / abbassa il volume</td></tr>
 <tr><td><kbd>Alt+Pagina su</kbd> / <kbd>Alt+Pagina giù</kbd></td><td>Più veloce / più lento</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+N</kbd></td><td>Velocità normale</td></tr>
-<tr><td><kbd>Ctrl+T</kbd></td><td>Annuncia il tempo trascorso e la durata</td></tr>
+<tr><td><kbd>Ctrl+T</kbd></td><td>Annuncia il tempo trascorso e la durata (e il capitolo)</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+V</kbd></td><td>Mostra o nascondi le immagini</td></tr>
 </table>
 
@@ -493,7 +525,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <h2 id="problemi">19. Problemi e domande</h2>
 
 <h3>Il primo video ci mette qualche secondo a partire</h3>
-<p>È normale: per ogni video il programma deve chiedere a YouTube il suo indirizzo vero, e ci vogliono circa 3 secondi. I primi dieci risultati e quelli su cui ti fermi si preparano in anticipo, quindi aspettando un attimo dopo la ricerca di solito partono subito. Un video che hai già aperto, se lo riapri entro un'ora, parte subito.</p>
+<p>È normale: per ogni video il programma deve chiedere a YouTube il suo indirizzo vero, e ci vogliono circa 3 secondi. I video su cui ti fermi si preparano in anticipo (vedi <a href="#cercare">Video pronti prima</a>), quindi fermandoti un secondo prima di premere Invio di solito partono subito. Un video che hai già aperto, se lo riapri entro un'ora, parte subito.</p>
 
 <h3>Alcuni titoli arrivano in un'altra lingua</h3>
 <p>Molti canali hanno i titoli tradotti in più lingue, e YouTube dà quelli della lingua che gli chiede il programma. Tube Player chiede la lingua scelta in Impostazioni, Generale, "Lingua dei contenuti di YouTube" (di partenza quella del programma). Se un titolo arriva lo stesso in un'altra lingua, è il titolo originale scelto da chi ha pubblicato il video.</p>
