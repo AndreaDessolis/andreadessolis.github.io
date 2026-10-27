@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Window Manager - guide</title>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../addon-nvda.html#gestore-finestre">Back to Window Manager — andreadessolis.com</a></div>
+<h1>Window Manager</h1>
+<p>An NVDA add-on that lists all the windows open in Windows, to bring them to the foreground or close them. It also finds secondary windows and dialogs (for example the render window or the track manager of REAPER).</p>
+
+<h2>Usage</h2>
+<ul>
+<li><strong>NVDA+W</strong> opens the "Open Windows Manager" window. The key can be changed in Input gestures, Window Manager category.</li>
+<li>The windows are in Alt+Tab order: the first one is the window you were using. The program name is added after the title, unless the title already says it (for example "Telegram" or "Document - Microsoft Word" stay as they are).</li>
+<li><strong>Enter</strong> (or the Activate button): brings the window to the foreground, restoring it if it is minimized.</li>
+<li><strong>Delete</strong> (or the Close window button): asks the program to close the window, like clicking its X. The list is updated and stays on the same row.</li>
+<li><strong>Escape</strong> (or Cancel): closes the list.</li>
+</ul>
+
+<h2>When a window does not close or does not activate</h2>
+<ul>
+<li>If the program asks something before closing (for example "Do you want to save the changes?"), NVDA says "The program asks for confirmation" and brings that question to the front, so you can answer it.</li>
+<li>If the window does not close and asks nothing, NVDA says "The window did not close".</li>
+<li>If Windows does not allow the window to come to the foreground (this happens for example with programs run as administrator), NVDA says "Cannot bring the window to the foreground".</li>
+</ul>
+
+<h2>Languages</h2>
+<p>The add-on speaks the language of NVDA: English or Italian.</p>
+
+<h2>Compatibility</h2>
+<p>NVDA 2023.1 and later. Tested with NVDA 2026.3.</p>
+
+<h2>Author and license</h2>
+<p>Andrea Dessolis, <a href="https://andreadessolis.com/en/addon-nvda.html">andreadessolis.com</a>. GNU GPL version 2.</p>
+</body>
+</html>
