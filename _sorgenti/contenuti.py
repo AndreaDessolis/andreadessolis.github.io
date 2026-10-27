@@ -316,15 +316,152 @@ PROGRAMMI = [
     },
 ]
 
+# Le add-on per NVDA: tutte nella pagina addon-nvda.html, una sezione ciascuna
+# (l'ancora #id e' anche l'indirizzo scritto nel manifest delle add-on).
+# Ognuna ha un repository di sole release con il pacchetto dal nome fisso;
+# novita' e guide vengono dalla cartella dell'add-on.
+_ADDON = r'D:\Software Portable\Sviluppo Software\NVDA Addons'
+ADDON = [
+    {
+        'id': 'navigazione-web',
+        'nome': {'it': 'Navigazione web', 'en': 'Web Navigation'},
+        'repository': 'NVDA-Navigazione-Web',
+        'setup': 'navigazioneWeb.nvda-addon',
+        'cartella': _ADDON + r'\Navigazione web',
+        'nvda_minimo': '2024.1',
+        'frase': {
+            'it': 'Le funzioni di JAWS per il web che NVDA non ha, ognuna da accendere o spegnere nelle impostazioni.',
+            'en': 'The JAWS web features that NVDA does not have, each one to turn on or off in the settings.',
+        },
+        'funzioni': {
+            'it': [
+                'Intestazioni con un link, come i titoli dei video di YouTube: si legge la riga completa, con la durata, e il focus va sul link.',
+                'Maiusc+Invio, Ctrl+Invio e il tasto Applicazioni aprono il link dove sei, non quello che aveva il focus.',
+                'NVDA+A, con lo schema di tastiera desktop, dice l\'indirizzo della pagina; premuto due volte lo copia.',
+                'Tasti di salto per schede, articoli e regione principale, che fanno scorrere la pagina per cercare altri elementi.',
+                'La ricerca di NVDA ricorda la parola cercata per ogni pagina, anche dopo il riavvio.',
+                'Elementi della pagina con NVDA+F6: pulsanti, caselle, tabelle, link e altro, con filtro.',
+                'Segnaposti con J, per la pagina o per tutto il sito, e il segnaposto temporaneo.',
+                'Punti smart con Y, come la Smart Glance di JAWS: il testo che si nota a vista.',
+            ],
+            'en': [
+                'Headings with a link, like YouTube video titles: the full line is read, with the length, and the focus moves to the link.',
+                'Shift+Enter, Control+Enter and the Applications key open the link where you are, not the one that had the focus.',
+                'NVDA+A, with the desktop keyboard layout, reports the page address; pressed twice, it copies it.',
+                'Quick navigation keys for tabs, articles and the main landmark, which scroll the page to look for more elements.',
+                'NVDA\'s search remembers the searched word for each page, even after a restart.',
+                'Page elements with NVDA+F6: buttons, fields, tables, links and more, with a filter.',
+                'Placemarkers with J, for the page or for the whole site, and the temporary placemarker.',
+                'Smart points with Y, like the Smart Glance of JAWS: the text that stands out to the eye.',
+            ],
+        },
+    },
+    {
+        'id': 'shortcut-conflict-helper',
+        'nome': {'it': 'Shortcut Conflict Helper', 'en': 'Shortcut Conflict Helper'},
+        'repository': 'NVDA-Shortcut-Conflict-Helper',
+        'setup': 'shortcut_conflict_helper.nvda-addon',
+        'cartella': _ADDON + r'\Shortcut Conflict Helper',
+        'nvda_minimo': '2024.1',
+        'frase': {
+            'it': 'Trova i tasti assegnati a più comandi nella finestra Gesti e comandi, e ti aiuta a sistemarli.',
+            'en': 'Finds the keys assigned to more than one command in the Input gestures window, and helps you sort them out.',
+        },
+        'funzioni': {
+            'it': [
+                'All\'apertura di Gesti e comandi mostra i conflitti, solo se ci sono, e dice quale comando vince.',
+                'Ogni conflitto si modifica, si toglie o si ignora.',
+                'Avvisa prima di assegnare un tasto già usato.',
+                'Cerca per tasto: premi un tasto e vedi solo i comandi che lo usano.',
+            ],
+            'en': [
+                'When Input gestures opens it shows the conflicts, only if there are some, and tells which command wins.',
+                'Each conflict can be changed, removed or ignored.',
+                'Warns before assigning a key that is already used.',
+                'Search by key: press a key and see only the commands that use it.',
+            ],
+        },
+    },
+    {
+        'id': 'gestore-finestre',
+        'nome': {'it': 'Gestore Finestre', 'en': 'Window Manager'},
+        'repository': 'NVDA-Gestore-Finestre',
+        'setup': 'nvda_window_manager.nvda-addon',
+        'cartella': _ADDON + r'\Gestore Finestre',
+        'nvda_minimo': '2023.1',
+        'frase': {
+            'it': 'Con NVDA+W l\'elenco di tutte le finestre aperte, per portarle in primo piano o chiuderle.',
+            'en': 'With NVDA+W, the list of all open windows, to bring them to the foreground or close them.',
+        },
+        'funzioni': {
+            'it': [
+                'Le finestre nell\'ordine di Alt+Tab, con il nome del programma, comprese finestre secondarie e dialoghi.',
+                'Invio porta la finestra in primo piano, Canc la chiude.',
+                'Se il programma chiede conferma prima di chiudere, porta davanti la domanda.',
+                'Dice quando una finestra non si chiude o non si può portare in primo piano.',
+            ],
+            'en': [
+                'The windows in Alt+Tab order, with the program name, including secondary windows and dialogs.',
+                'Enter brings the window to the foreground, Delete closes it.',
+                'If the program asks for confirmation before closing, the question is brought to the front.',
+                'Tells you when a window does not close or cannot be brought to the foreground.',
+            ],
+        },
+    },
+    {
+        'id': 'blocco-modificatore',
+        'nome': {'it': 'Blocco Modificatore NVDA', 'en': 'NVDA Modifier Lock'},
+        'repository': 'NVDA-Blocco-Modificatore',
+        'setup': 'nvda_modifier_lock.nvda-addon',
+        'cartella': _ADDON + r'\Blocco Modificatore NVDA',
+        'nvda_minimo': '2023.1',
+        'frase': {
+            'it': 'Il tasto NVDA bloccato, come il tasto JAWS: lo tocchi, lo lasci e poi premi l\'altro tasto.',
+            'en': 'The locked NVDA key, like the JAWS key: tap it, let it go, then press the other key.',
+        },
+        'funzioni': {
+            'it': [
+                'Un tocco del tasto NVDA lo lascia premuto per il tasto successivo, poi si sblocca da solo.',
+                'Maiusc, Ctrl, Alt e Windows non sbloccano: funzionano anche combinazioni come NVDA+Maiusc+J.',
+                'Un altro tocco sblocca; due tocchi veloci fanno la funzione normale del tasto, per esempio Bloc Maiusc.',
+                'Avviso con suoni, voce o entrambi, e un comando per accenderlo e spegnerlo al volo.',
+            ],
+            'en': [
+                'One tap of the NVDA key keeps it pressed for the next key, then it unlocks by itself.',
+                'Shift, Control, Alt and Windows do not unlock it: combinations like NVDA+Shift+J work too.',
+                'Another tap unlocks it; two quick taps do the key\'s normal function, for example Caps Lock.',
+                'Feedback with beeps, speech or both, and a command to turn it on and off at any time.',
+            ],
+        },
+    },
+]
+for _a in ADDON:
+    _a['pagina'] = 'addon-nvda.html#' + _a['id']
+    _a['novita'] = ('hdx-json', _a['cartella'] + r'\novita.json')
+    _a['guide'] = {lingua: _a['cartella'] + rf'\addon\doc\{lingua}\readme.html' for lingua in ('it', 'en')}
+
 # I testi fissi delle pagine.
 T = {
     'it': {
         'lingua_nome': 'Italiano', 'altra_lingua': 'English', 'salta': 'Vai al contenuto principale',
         'menu': 'Menu principale', 'home': 'Home', 'programmi': 'Programmi', 'chi_sono': 'Chi sono', 'contatti': 'Contatti',
+        'addon': 'Add-on per NVDA',
+        'addon_lede': 'Piccole estensioni gratuite per lo screen reader NVDA, nate per rendere più comodo il lavoro di ogni giorno.',
+        'addon_testo': 'Ognuna parla nella lingua di NVDA, italiano o inglese, e ha la sua guida, che si apre anche dal Gestore componenti aggiuntivi di NVDA.',
+        'addon_per_nvda': 'Per NVDA {0} e successive.',
+        'addon_guida': 'La guida di {0}, da leggere online',
+        'addon_installa_titolo': 'Come si installano',
+        'addon_installa': [
+            'Scarica l\'add-on con il suo pulsante.',
+            'Apri il file scaricato: NVDA chiede se installarlo. Rispondi Sì.',
+            'Riavvia NVDA quando te lo chiede.',
+        ],
+        'addon_aggiorna': 'Per aggiornare un\'add-on si fa allo stesso modo: scarica la versione nuova e installala sopra quella vecchia. Le tue impostazioni restano.',
+        'addon_novita_lede': 'Le versioni dalla più recente. Le novità della versione installata si leggono anche nel Gestore componenti aggiuntivi di NVDA.',
         'scrivimi': 'scrivimi',
         'home_titolo': 'Ciao, sono Andrea',
         'home_lede': 'Musica, tecnologia e la voglia di rendere le cose un po\' più semplici da usare, per tutti.',
-        'home_testo': 'Questo è il mio piccolo spazio online. Qui trovi i programmi che costruisco, tutti gratuiti e pensati fin dall\'inizio per chi usa uno screen reader, e se vuoi la mia storia nella pagina "Chi sono".',
+        'home_testo': 'Questo è il mio piccolo spazio online. Qui trovi i programmi che costruisco, tutti gratuiti e pensati fin dall\'inizio per chi usa uno screen reader, alcune add-on per NVDA e, se vuoi, la mia storia nella pagina "Chi sono".',
         'i_miei_programmi': 'I miei programmi',
         'programmi_titolo': 'Programmi',
         'programmi_lede': 'Tutti gratuiti, per Windows, e pensati fin dal primo giorno per chi usa uno screen reader.',
@@ -349,7 +486,7 @@ T = {
         'chi_sono_testo': [
             'Suono la chitarra da anni, ed è una delle cose che mi rilassa e mi diverte di più. Ma la vera svolta della mia vita è arrivata quando, già adulto, ho perso la vista. Da quel momento la tecnologia non è più stata solo un hobby: è diventata uno strumento fondamentale, quasi vitale, per continuare a vivere le cose che amo e per scoprirne di nuove.',
             'Da lì è nata la mia passione per tutto ciò che riguarda l\'accessibilità: software, metodi, piccoli accorgimenti che possono fare una grande differenza per chi, come me, si affida ogni giorno a uno screen reader. Mi piace pensare che ogni programma, ogni sito, ogni strumento possa essere reso più semplice da usare per tutti: basta volerlo fare davvero.',
-            'È da questa idea che sono nati i <a href="programmi.html">miei programmi</a>: prima Gram Access per Telegram, poi HDX VM per Voicemeeter, PCloud Access per pCloud e Tube Player per YouTube, e presto HDX Recorder per registrare.',
+            'È da questa idea che sono nati i <a href="programmi.html">miei programmi</a>: prima Gram Access per Telegram, poi HDX VM per Voicemeeter, PCloud Access per pCloud e Tube Player per YouTube, e presto HDX Recorder per registrare. Uso NVDA ogni giorno, e per renderlo più comodo ho scritto anche alcune <a href="addon-nvda.html">add-on per NVDA</a>.',
         ],
         'contatti_lede': 'Che sia per uno dei miei programmi, per l\'accessibilità o solo per due chiacchiere: scrivimi pure.',
         'email_titolo': 'Email', 'email_testo': 'Il modo più semplice per raggiungermi è via email:',
@@ -360,10 +497,23 @@ T = {
     'en': {
         'lingua_nome': 'English', 'altra_lingua': 'Italiano', 'salta': 'Skip to main content',
         'menu': 'Main menu', 'home': 'Home', 'programmi': 'Programs', 'chi_sono': 'About me', 'contatti': 'Contact',
+        'addon': 'NVDA Add-ons',
+        'addon_lede': 'Small free extensions for the NVDA screen reader, made to make everyday work more comfortable.',
+        'addon_testo': 'Each one speaks the language of NVDA, English or Italian, and has its own guide, which also opens from the NVDA add-on manager.',
+        'addon_per_nvda': 'For NVDA {0} and later.',
+        'addon_guida': 'The {0} guide, to read online',
+        'addon_installa_titolo': 'How to install them',
+        'addon_installa': [
+            'Download the add-on with its button.',
+            'Open the downloaded file: NVDA asks whether to install it. Answer Yes.',
+            'Restart NVDA when it asks you to.',
+        ],
+        'addon_aggiorna': 'To update an add-on, do the same: download the new version and install it over the old one. Your settings are kept.',
+        'addon_novita_lede': 'Versions from the most recent. What\'s new in the installed version can also be read in the NVDA add-on manager.',
         'scrivimi': 'write to me',
         'home_titolo': 'Hi, I\'m Andrea',
         'home_lede': 'Music, technology and the wish to make things a little easier to use, for everyone.',
-        'home_testo': 'This is my small place online. Here you find the programs I build, all free and designed from the start for people who use a screen reader, and if you like my story on the "About me" page.',
+        'home_testo': 'This is my small place online. Here you find the programs I build, all free and designed from the start for people who use a screen reader, some NVDA add-ons and, if you like, my story on the "About me" page.',
         'i_miei_programmi': 'My programs',
         'programmi_titolo': 'Programs',
         'programmi_lede': 'All free, for Windows, and designed from day one for people who use a screen reader.',
@@ -388,7 +538,7 @@ T = {
         'chi_sono_testo': [
             'I have been playing the guitar for years, and it is one of the things that relaxes and amuses me most. But the real turning point of my life came when, already an adult, I lost my sight. From that moment technology was no longer just a hobby: it became an essential tool, almost vital, to keep enjoying the things I love and to discover new ones.',
             'That is where my passion for everything about accessibility comes from: software, methods, small touches that can make a big difference for people who, like me, rely on a screen reader every day. I like to think that every program, every website, every tool can be made easier to use for everyone: you just have to really want it.',
-            'This is the idea behind <a href="programmi.html">my programs</a>: first Gram Access for Telegram, then HDX VM for Voicemeeter, PCloud Access for pCloud and Tube Player for YouTube, and soon HDX Recorder for recording.',
+            'This is the idea behind <a href="programmi.html">my programs</a>: first Gram Access for Telegram, then HDX VM for Voicemeeter, PCloud Access for pCloud and Tube Player for YouTube, and soon HDX Recorder for recording. I use NVDA every day, and to make it more comfortable I also wrote some <a href="addon-nvda.html">NVDA add-ons</a>.',
         ],
         'contatti_lede': 'Whether it is about one of my programs, accessibility or just a chat: feel free to write to me.',
         'email_titolo': 'Email', 'email_testo': 'The easiest way to reach me is by email:',
@@ -400,5 +550,5 @@ T = {
 
 # Versione e data dell'ultima pubblicazione di ogni programma (le scrive pubblica.py).
 _VERSIONI = _json.load(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'versioni.json'), encoding='utf-8'))
-for _p in PROGRAMMI:
+for _p in PROGRAMMI + ADDON:
     _p.update(_VERSIONI.get(_p['id'], {}))

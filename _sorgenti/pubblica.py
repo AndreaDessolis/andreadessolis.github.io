@@ -3,10 +3,12 @@
     python _sorgenti\\pubblica.py <programma> <setup> [--prova]
     python _sorgenti\\pubblica.py conteggi
 
-<programma> e' l'id in contenuti.py (gram-access, hdx-vm, hdx-recorder);
-<setup> il setup compilato di quella versione. Il numero di versione si legge
-dal setup stesso. Si lancia SOLO quando l'autore dice "pubblica", e tocca
-solo quel programma:
+<programma> e' l'id in contenuti.py (gram-access, hdx-vm, hdx-recorder),
+oppure di un'add-on per NVDA (navigazione-web, shortcut-conflict-helper,
+gestore-finestre, blocco-modificatore); <setup> il setup compilato di quella
+versione, o per un'add-on il suo pacchetto .nvda-addon. Il numero di versione
+si legge dal setup (o dal manifest del pacchetto). Si lancia SOLO quando
+l'autore dice "pubblica", e tocca solo quel programma:
 
   1. legge versione e note (it, en) dalle novita' del programma: devono
      esserci gia', approvate;
@@ -22,6 +24,7 @@ solo quel programma:
 --prova fa i controlli (setup, versione, note, pacchetto tgcalls, pagine)
 senza toccare GitHub ne' il sito. "conteggi" dice i download di ogni programma.
 """
+import base64
 import datetime
 import hashlib
 import json
@@ -33,6 +36,7 @@ import sys
 import tempfile
 import time
 import urllib.request
+import zipfile
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 RADICE = os.path.dirname(QUI)
@@ -52,11 +56,33 @@ def esegui(*comando, cartella=None, uscita=True):
 
 
 def programma(id_programma):
-    for p in contenuti.PROGRAMMI:
+    for p in contenuti.PROGRAMMI + contenuti.ADDON:
         if p['id'] == id_programma:
             return p
     raise SystemExit(f'Programma sconosciuto: {id_programma} (in contenuti.py: '
-                     + ', '.join(p['id'] for p in contenuti.PROGRAMMI) + ')')
+                     + ', '.join(p['id'] for p in contenuti.PROGRAMMI + contenuti.ADDON) + ')')
+
+
+def e_addon(p):
+    return p in contenuti.ADDON
+
+
+def nome(p, lingua='it'):
+    """Il nome del programma; le add-on hanno un nome per lingua."""
+    return p['nome'][lingua] if isinstance(p['nome'], dict) else p['nome']
+
+
+def versione_del_pacchetto(pacchetto):
+    """La versione scritta nel manifest di un'add-on per NVDA."""
+    try:
+        with zipfile.ZipFile(pacchetto) as z:
+            manifest = z.read('manifest.ini').decode('utf-8')
+    except (zipfile.BadZipFile, KeyError):
+        raise SystemExit(f'Non e\' un pacchetto di add-on valido: {pacchetto}')
+    trovata = re.search(r'^version\s*=\s*"?(\d+\.\d+\.\d+)"?\s*$', manifest, flags=re.M)
+    if not trovata:
+        raise SystemExit('Nel manifest del pacchetto manca una versione a tre cifre')
+    return trovata.group(1)
 
 
 def versione_del_setup(setup):
@@ -84,12 +110,12 @@ def impronta(percorso):
 def note(p, versione):
     """Le note della release, in italiano e inglese, dalle novita' del programma."""
     tipo, percorso = p['novita']
-    parti = [f'## {p["nome"]} {versione}\n']
+    parti = [f'## {nome(p)} {versione}\n']
     for lingua, nome_lingua in (('it', 'Italiano'), ('en', 'English')):
         if tipo == 'hdx-json':
             voce = next((v for v in genera.versioni_da_json(percorso, lingua) if v[0] == versione), None)
             if not voce:
-                raise SystemExit(f'Nelle novita\' di {p["nome"]} manca la versione {versione}')
+                raise SystemExit(f'Nelle novita\' di {nome(p)} manca la versione {versione}')
             testo = []
             for titolo, voci in voce[2]:
                 testo.append(f'{titolo}:\n' + '\n'.join(f'{i}. {v}' for i, v in enumerate(voci, 1)))
@@ -100,7 +126,8 @@ def note(p, versione):
                 raise SystemExit(f'Nelle novita\' di {p["nome"]} manca la versione {versione}')
             testo = voce[2]
         pagina = p['pagina'] if lingua == 'it' else 'en/' + p['pagina']
-        parti.append(f'**{nome_lingua}**\n\n{testo}\n\n{genera.DOMINIO}{pagina}\n')
+        titolo = f'**{nome_lingua}**' + (f' — {nome(p, lingua)}' if e_addon(p) else '')
+        parti.append(f'{titolo}\n\n{testo}\n\n{genera.DOMINIO}{pagina}\n')
     if p['id'] == 'gram-access':
         parti.append('---\nGram Access usa tgcalls (licenza LGPL): il file gramaccess-tgcalls.patch contiene le sole '
                      'modifiche fatte a tgcalls. / Gram Access uses tgcalls (LGPL license): the file '
@@ -123,36 +150,64 @@ def pacchetto_tgcalls(cartella):
 
 # ---------------------------------------------------------------- i download
 
+def repository_esiste(repository):
+    esito = subprocess.run(['gh', 'repo', 'view', f'{PROPRIETARIO}/{repository}', '--json', 'name'], capture_output=True)
+    return esito.returncode == 0
+
+
+def crea_repository(p):
+    """Il repository di sole release di un'add-on, la prima volta che si pubblica:
+    pubblico, con un README che rimanda al sito (come quelli dei programmi)."""
+    pagina = genera.DOMINIO + p['pagina']
+    readme = (f'# {nome(p, "it")} / {nome(p, "en")}\n\n'
+              f'Add-on per NVDA. Download, guida e novità: {pagina}\n\n'
+              f'NVDA add-on. Download, guide and what\'s new: {genera.DOMINIO}en/{p["pagina"]}\n')
+    repo = f'{PROPRIETARIO}/{p["repository"]}'
+    esegui('gh', 'repo', 'create', repo, '--public', '--description',
+           f'{nome(p, "en")} — NVDA add-on (releases only)', '--homepage', pagina)
+    # Una release ha bisogno di un primo commit: il README.
+    esegui('gh', 'api', f'repos/{repo}/contents/README.md', '-X', 'PUT', '-f', 'message=README',
+           '-f', 'content=' + base64.b64encode(readme.encode('utf-8')).decode('ascii'))
+    print(f'Creato il repository {repo}.')
+
+
 def release(repository):
+    if not repository_esiste(repository):
+        return []
     risposta = esegui('gh', 'api', f'repos/{PROPRIETARIO}/{repository}/releases', '--paginate')
     return json.loads(risposta) if risposta.strip() else []
 
 
 def download_della_release(r):
-    return sum(a['download_count'] for a in r.get('assets', []) if a['name'].lower().endswith('.exe'))
+    return sum(a['download_count'] for a in r.get('assets', []) if a['name'].lower().endswith(('.exe', '.nvda-addon')))
 
 
 def conteggi():
     registro = json.load(open(os.path.join(QUI, 'download.json'), encoding='utf-8'))
-    for p in contenuti.PROGRAMMI:
+    for p in contenuti.PROGRAMMI + contenuti.ADDON:
         voce = registro.get(p['id'], {})
         passati = voce.get('storico', 0) + sum(voce.get('versioni_tolte', {}).values())
         adesso = sum(download_della_release(r) for r in release(p['repository'])) if p.get('repository') else 0
-        print(f'{p["nome"]}: {passati + adesso} download in tutto ({adesso} della versione di adesso)')
+        print(f'{nome(p)}: {passati + adesso} download in tutto ({adesso} della versione di adesso)')
 
 
 # ---------------------------------------------------------------- pubblica
 
 def pubblica(id_programma, setup, prova):
     p = programma(id_programma)
-    if p['stato'] != 'disponibile':
+    if not e_addon(p) and p['stato'] != 'disponibile':
         raise SystemExit(f'{p["nome"]} risulta "in arrivo" in contenuti.py: prima va messo "disponibile"')
     if not os.path.isfile(setup):
         raise SystemExit('Manca il setup: ' + setup)
-    versione = versione_del_setup(setup)
+    if e_addon(p):
+        if not setup.lower().endswith('.nvda-addon'):
+            raise SystemExit('Per un\'add-on serve il pacchetto .nvda-addon')
+        versione = versione_del_pacchetto(setup)
+    else:
+        versione = versione_del_setup(setup)
     testo_note = note(p, versione)
     oggi = datetime.date.today().isoformat()
-    print(f'{p["nome"]} {versione}, setup {os.path.getsize(setup):,} byte')
+    print(f'{nome(p)} {versione}, file {os.path.getsize(setup):,} byte')
     if any(r['tag_name'] == f'v{versione}' for r in release(p['repository'])):
         if not prova:
             raise SystemExit(f'La versione {versione} risulta gia\' pubblicata in {p["repository"]}')
@@ -169,6 +224,8 @@ def pubblica(id_programma, setup, prova):
         open(file_note, 'w', encoding='utf-8').write(testo_note)
         print('\nLe note:\n' + testo_note)
         if prova:
+            if not repository_esiste(p['repository']):
+                print(f'(Il repository {p["repository"]} non c\'e\' ancora: sul serio verrebbe creato.)')
             # Le pagine si generano in una cartella a parte: il sito non si tocca.
             vecchie = dict(contenuti._VERSIONI)
             p.update({'versione': versione, 'data': oggi})
@@ -178,9 +235,13 @@ def pubblica(id_programma, setup, prova):
             return
 
         esegui('git', 'pull', '--quiet', cartella=RADICE)
+        if not repository_esiste(p['repository']):
+            if not e_addon(p):
+                raise SystemExit(f'Manca il repository {p["repository"]}')
+            crea_repository(p)
         precedenti = release(p['repository'])
         repo = f'{PROPRIETARIO}/{p["repository"]}'
-        esegui('gh', 'release', 'create', f'v{versione}', *allegati, '--repo', repo, '--title', f'{p["nome"]} {versione}',
+        esegui('gh', 'release', 'create', f'v{versione}', *allegati, '--repo', repo, '--title', f'{nome(p)} {versione}',
                '--notes-file', file_note, '--latest')
         print('Release creata.')
 
@@ -218,14 +279,16 @@ def pubblica(id_programma, setup, prova):
         genera.genera(RADICE)
         esegui('git', 'add', '-A', cartella=RADICE)
         esegui('git', '-c', 'user.name=AndreaDessolis', '-c', f'user.email={contenuti.EMAIL}', 'commit', '-q', '-m',
-               f'{p["nome"]} {versione}', cartella=RADICE)
+               f'{nome(p)} {versione}', cartella=RADICE)
         esegui('gh', 'auth', 'setup-git')
         esegui('git', 'push', '-q', cartella=RADICE)
-        url = genera.DOMINIO + p['pagina']
+        url = genera.DOMINIO + p['pagina'].split('#')[0]
+        # La pagina delle add-on le ha tutte: si cerca il segno della sezione giusta.
+        segno = f'data-versione="{p["id"]} {versione}"' if e_addon(p) else f'Versione {versione} del'
         for tentativo in range(30):
             time.sleep(10)
             try:
-                if f'Versione {versione} del' in urllib.request.urlopen(url).read().decode('utf-8'):
+                if segno in urllib.request.urlopen(url).read().decode('utf-8'):
                     print(f'Sito aggiornato: {url} dice la versione {versione}.')
                     return
             except OSError:

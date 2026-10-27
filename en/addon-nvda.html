@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NVDA Add-ons — Andrea Dessolis</title>
+<meta name="description" content="Small free extensions for the NVDA screen reader, made to make everyday work more comfortable.">
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/addon-nvda.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/addon-nvda.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Andrea Dessolis</a>
+    <nav aria-label="Main menu">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programmi.html">Programs</a></li>
+        <li><a href="addon-nvda.html" aria-current="page">NVDA Add-ons</a></li>
+        <li><a href="chi-sono.html">About me</a></li>
+        <li><a href="contatti.html">Contact</a></li>
+        <li class="lang"><a href="../addon-nvda.html" lang="it" hreflang="it">Italiano</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="560" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <h1>NVDA Add-ons</h1>
+    <p class="lede">Small free extensions for the NVDA screen reader, made to make everyday work more comfortable.</p>
+    <p>Each one speaks the language of NVDA, English or Italian, and has its own guide, which also opens from the NVDA add-on manager.</p>
+
+    <section id="navigazione-web" class="addon" data-versione="navigazione-web 1.1.0">
+    <h2>Web Navigation</h2>
+    <p>The JAWS web features that NVDA does not have, each one to turn on or off in the settings.</p>
+    <ul class="feature-list">
+      <li>Headings with a link, like YouTube video titles: the full line is read, with the length, and the focus moves to the link.</li>
+      <li>Shift+Enter, Control+Enter and the Applications key open the link where you are, not the one that had the focus.</li>
+      <li>NVDA+A, with the desktop keyboard layout, reports the page address; pressed twice, it copies it.</li>
+      <li>Quick navigation keys for tabs, articles and the main landmark, which scroll the page to look for more elements.</li>
+      <li>NVDA&#x27;s search remembers the searched word for each page, even after a restart.</li>
+      <li>Page elements with NVDA+F6: buttons, fields, tables, links and more, with a filter.</li>
+      <li>Placemarkers with J, for the page or for the whole site, and the temporary placemarker.</li>
+      <li>Smart points with Y, like the Smart Glance of JAWS: the text that stands out to the eye.</li>
+    </ul>
+    <div class="download">
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases/latest/download/navigazioneWeb.nvda-addon">Download Web Navigation</a>
+      </div>
+      <p class="version">Version 1.1.0, October 27, 2026. For NVDA 2024.1 and later.</p>
+    </div>
+    <ul>
+      <li><a href="guide/navigazione-web.html">The Web Navigation guide, to read online</a></li>
+      <li><a href="novita/navigazione-web.html">What&#x27;s new in every version</a></li>
+      <li><a href="https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases">All versions on GitHub</a></li>
+    </ul>
+    </section>
+    <section id="shortcut-conflict-helper" class="addon" data-versione="shortcut-conflict-helper ">
+    <h2>Shortcut Conflict Helper</h2>
+    <p>Finds the keys assigned to more than one command in the Input gestures window, and helps you sort them out.</p>
+    <ul class="feature-list">
+      <li>When Input gestures opens it shows the conflicts, only if there are some, and tells which command wins.</li>
+      <li>Each conflict can be changed, removed or ignored.</li>
+      <li>Warns before assigning a key that is already used.</li>
+      <li>Search by key: press a key and see only the commands that use it.</li>
+    </ul>
+    <p class="note">Coming soon.</p>
+    </section>
+    <section id="gestore-finestre" class="addon" data-versione="gestore-finestre ">
+    <h2>Window Manager</h2>
+    <p>With NVDA+W, the list of all open windows, to bring them to the foreground or close them.</p>
+    <ul class="feature-list">
+      <li>The windows in Alt+Tab order, with the program name, including secondary windows and dialogs.</li>
+      <li>Enter brings the window to the foreground, Delete closes it.</li>
+      <li>If the program asks for confirmation before closing, the question is brought to the front.</li>
+      <li>Tells you when a window does not close or cannot be brought to the foreground.</li>
+    </ul>
+    <p class="note">Coming soon.</p>
+    </section>
+    <section id="blocco-modificatore" class="addon" data-versione="blocco-modificatore ">
+    <h2>NVDA Modifier Lock</h2>
+    <p>The locked NVDA key, like the JAWS key: tap it, let it go, then press the other key.</p>
+    <ul class="feature-list">
+      <li>One tap of the NVDA key keeps it pressed for the next key, then it unlocks by itself.</li>
+      <li>Shift, Control, Alt and Windows do not unlock it: combinations like NVDA+Shift+J work too.</li>
+      <li>Another tap unlocks it; two quick taps do the key&#x27;s normal function, for example Caps Lock.</li>
+      <li>Feedback with beeps, speech or both, and a command to turn it on and off at any time.</li>
+    </ul>
+    <p class="note">Coming soon.</p>
+    </section>
+
+    <h2>How to install them</h2>
+    <ol>
+      <li>Download the add-on with its button.</li>
+      <li>Open the downloaded file: NVDA asks whether to install it. Answer Yes.</li>
+      <li>Restart NVDA when it asks you to.</li>
+    </ol>
+    <p>To update an add-on, do the same: download the new version and install it over the old one. Your settings are kept.</p>
+
+    <h2>Support the project</h2>
+    <p>My programs are free and I develop them on my own, in my spare time. If you find them useful, you can help me with a donation.</p>
+    <div class="cta-row">
+      <a class="btn btn-secondary" href="https://paypal.me/AndreaDessolis">Support via PayPal</a>
+    </div>
+    <p>Questions or suggestions? <a href="contatti.html">Write to me</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="contatti.html">write to me</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>

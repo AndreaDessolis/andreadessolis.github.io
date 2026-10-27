@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Web Navigation - guide</title>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../addon-nvda.html#navigazione-web">Back to Web Navigation — andreadessolis.com</a></div>
+<h1>Web Navigation</h1>
+<p>An NVDA add-on that adds the JAWS web features that NVDA does not have. It works in Chrome, Edge and Firefox.</p>
+<p>The add-on acts only on web pages. In programs that are not web pages, even when NVDA is in browse mode (for example a message open in Outlook, Word, WordPad), its keys do nothing new: NVDA behaves as without the add-on.</p>
+<p>Each feature can be turned on and off in NVDA Settings, <strong>Web Navigation</strong> category. A feature that is off leaves its keys to NVDA, which behaves as without the add-on. The keys can be changed in Input gestures, <strong>Web Navigation</strong> category.</p>
+
+<h2>Keys at a glance</h2>
+<table>
+<tr><th>Key</th><th>What it does</th></tr>
+<tr><td>NVDA+A (desktop layout)</td><td>Reports the page address; pressed twice, copies it</td></tr>
+<tr><td>Shift+Enter</td><td>Opens the link where you are in a new window</td></tr>
+<tr><td>Control+Enter</td><td>Opens the link where you are in a new background tab</td></tr>
+<tr><td>Control+Shift+Enter</td><td>Opens the link where you are in a new foreground tab</td></tr>
+<tr><td>Applications or Shift+F10</td><td>Context menu of the link where you are</td></tr>
+<tr><td>à and Shift+à</td><td>Next and previous tab</td></tr>
+<tr><td>ò and Shift+ò</td><td>Next and previous article</td></tr>
+<tr><td>ù</td><td>Main landmark of the page</td></tr>
+<tr><td>NVDA+F6</td><td>Page elements</td></tr>
+<tr><td>Y and Shift+Y</td><td>Next and previous smart point</td></tr>
+<tr><td>NVDA+Control+Y</td><td>List of smart points</td></tr>
+<tr><td>J and Shift+J</td><td>Next and previous placemarker</td></tr>
+<tr><td>NVDA+J</td><td>Adds a placemarker</td></tr>
+<tr><td>Control+Windows+J</td><td>Sets the temporary placemarker</td></tr>
+<tr><td>NVDA+Shift+J</td><td>Placemarkers window</td></tr>
+<tr><td>NVDA+Control+F, NVDA+F3, NVDA+Shift+F3</td><td>NVDA's search, with the word remembered for each page (or the keys you assigned to it in Input gestures)</td></tr>
+</table>
+<p>The single letters (à, ò, ù, J, Y) work only in browse mode and with single letter navigation on (NVDA+Shift+Space). In text fields they are typed as usual.</p>
+<p>The à, ò and ù keys are on the Italian keyboard. On other keyboards, assign other keys to these commands in Input gestures, Web Navigation category.</p>
+
+<h2>Links in headings</h2>
+<p>On sites like YouTube the title of each video is a heading that contains a link. When moving with H or the numbers:</p>
+<ul>
+<li><strong>The full line is read:</strong> after the title, NVDA also reads what the link label adds (on YouTube, the video length).</li>
+<li><strong>The focus moves to the link</strong>, as with JAWS: Tab continues from there, for example to the channel link of that video.</li>
+</ul>
+<p>Check boxes in the settings: <em>Read the full label of the link in headings</em> and <em>Move the focus to the link of the heading</em>.</p>
+
+<h2>Open the link where you are</h2>
+<p>In NVDA, Shift+Enter and the other keys below go to the browser, which acts on the link that has the focus, not on the one where the NVDA cursor is. So the wrong link was opened. With the add-on the focus first moves to the link where you are, even if you got there with the arrow keys:</p>
+<ul>
+<li>Shift+Enter: new window.</li>
+<li>Control+Enter: new background tab.</li>
+<li>Control+Shift+Enter: new foreground tab.</li>
+<li>Applications or Shift+F10: context menu of the link, for example to copy its address.</li>
+</ul>
+<p>Outside a link, or outside a web page, these keys do what they would do without the add-on (for example in Thunderbird or WhatsApp). Check box: <em>Open the link where you are</em>.</p>
+
+<h2>Page address</h2>
+<p>NVDA+A reports the address of the open web page. Pressed twice, it copies it to the clipboard and says "Address copied". The focus must be inside the page: outside the page (for example in the address bar or in another program) the key does what it does in NVDA. Check box: <em>Page address with NVDA+A</em>.</p>
+<p>The key works only with the desktop keyboard layout: in the laptop layout NVDA+A is NVDA's say all and stays that way. With the laptop layout you can assign another key in Input gestures.</p>
+
+<h2>JAWS-like quick navigation keys</h2>
+<p>The same letter as JAWS when it is free in NVDA, otherwise an accented letter of the Italian keyboard. NVDA's keys all stay as they are.</p>
+<ul>
+<li><strong>à</strong> and Shift+à: tabs (the apostrophe in JAWS).</li>
+<li><strong>ò</strong> and Shift+ò: articles (O in JAWS, which in NVDA is for embedded objects).</li>
+<li><strong>ù</strong>: main landmark, the real content of the page (Q in JAWS, which in NVDA is for block quotes). If there is none after the cursor, it starts again from the top of the page.</li>
+</ul>
+<p>Check box: <em>JAWS-like quick navigation keys</em>.</p>
+<h3>Scroll and try again</h3>
+<p>Many sites (chats, social networks, pages that grow by themselves) keep only part of their content in the page and load the rest when the page scrolls to the top or the bottom. That is why quick navigation keys, NVDA's ones too like H, stop at the elements already loaded.</p>
+<p>The add-on keys (à, ò, Y) work differently: if they find nothing more, you hear a short beep, the page scrolls past the first (or last) loaded element, the add-on waits for the site to load and tries again, up to two times. If something arrives it moves there, otherwise NVDA says there are none. If you move in the meantime, the search stops.</p>
+<p>It does not work on sites that load more only with a button like "Show more". NVDA's keys (H, K...) stay as they are. Check box: <em>Scroll the page to look for more elements</em>.</p>
+
+<h2>A search that remembers the word for each page</h2>
+<p>NVDA's search remembers a single word for all pages and forgets it when NVDA restarts. With the add-on each page has its own: when you open the search, the word is already there and selected (Enter to search it, or type a new word). NVDA+F3 and NVDA+Shift+F3 use the word of the page. The case sensitive check box is remembered too. On a page never searched you find the last word searched elsewhere, as in NVDA.</p>
+<p>The page is recognized by its address, without the part after the hash sign (#). Up to 500 pages are remembered: beyond that, the oldest are forgotten.</p>
+<p>In the settings: check box <em>Remember the search for each page</em> and button <em>Delete the remembered searches</em>.</p>
+
+<h2>Page elements (NVDA+F6)</h2>
+<p>Like Insert+F3 in JAWS. The window has, in Tab order:</p>
+<ol>
+<li><strong>Type of element</strong> (Alt+T): chosen with the arrow keys; each item shows how many there are, for example "Buttons: 12". Only the types present in the page appear. Enter moves to the list.</li>
+<li><strong>Filter</strong> (Alt+F): typing part of the name narrows the list.</li>
+<li><strong>Elements</strong> (Alt+E): in page order, already on the element where you are. Enter moves to the element.</li>
+<li>Buttons <strong>Move to</strong> (Alt+M), <strong>Activate</strong> (Alt+A, presses or opens the element) and <strong>Cancel</strong> (Escape).</li>
+</ol>
+<p>The window opens again on the last type used. Types: headings, smart points, links, buttons, edit fields, check boxes, radio buttons, combo boxes, form fields, graphics, tables, lists, frames, landmarks, articles, tabs.</p>
+<p>In Input gestures there are also the commands "List of buttons", "List of tables" and so on, like Control+Insert+letter in JAWS: they open the window already on that type, with the focus on the list. They have no key: assign one if you need it.</p>
+<p>NVDA's elements list (NVDA+F7) stays as it is. Check box: <em>Page elements with NVDA+F6</em>.</p>
+
+<h2>Placemarkers</h2>
+<ul>
+<li><strong>NVDA+J</strong> opens "Add Placemarker": the <em>Name</em> already contains the text of the line, selected; <em>Valid for</em> chooses "Only this page" or "The whole site" (every page of the site where that text is). The window remembers the last choice. If the line already has a placemarker, NVDA says so and the window does not open.</li>
+<li><strong>Control+Windows+J</strong> sets the temporary placemarker, like Control+Windows+K in JAWS: no window, only one per page (pressed again it moves to the line where you are), not saved to a file: it lasts until NVDA restarts. NVDA says "Temporary placemarker set".</li>
+<li><strong>J</strong> and <strong>Shift+J</strong> move to the next and previous placemarker and read the line; at the end they start again from the other side.</li>
+<li><strong>NVDA+Shift+J</strong> opens "Placemarkers": the list of the placemarkers of the page and of the site, with Move to (or Enter), Rename, Delete (or the Delete key), Delete all (asks for confirmation) and Close. Site placemarkers have "(site)" after the name, the temporary one "(temporary)"; those whose text is not on the page are marked "not on this page".</li>
+</ul>
+<p>Pages change: for each placemarker the text of the line and its position are remembered. The text is searched, even if it moved; if it appears more than once, the one with the same lines before and after is chosen, then the one closest to the previous position. If the text is gone, a page placemarker uses the previous position.</p>
+<p>In the settings: check box <em>Placemarkers</em> and button <em>Delete all the placemarkers</em>.</p>
+
+<h2>Smart points</h2>
+<p>Like the Smart Glance of JAWS. A smart point is a piece of text that stands out to the eye because it has a style that is rare in the page: a color, a background, a font, a size, bold, italic, highlighted text. Often it is not a heading, so H does not reach it: for example a phone number in evidence or a colored notice.</p>
+<ul>
+<li><strong>Y</strong> and <strong>Shift+Y</strong>: next and previous smart point; NVDA reads its text.</li>
+<li><strong>NVDA+Control+Y</strong>: list of smart points, in the Page elements window (where they are also among the NVDA+F6 types).</li>
+<li><strong>When the page opens</strong> NVDA says how many smart points there are, for example "4 smart points". If there are none it says nothing.</li>
+</ul>
+<p>How they are chosen: the most used style is the normal text of the page; smart points are the pieces of text with a style used in a small part of the page, the rarest first. As in JAWS, links, headings and form fields are left out (of the fields, the required ones or those with errors are kept). The calculation is done when needed and done again only if the page changes.</p>
+<p>In the settings: <em>Smart points</em>, <em>Announce the smart points when the page opens</em>, <em>Smart points: include links</em>, <em>include headings</em>, <em>include form fields</em> (these three off by default) and <em>Smart points sensitivity</em>: Normal (text with a style used in up to 5% of the page, at most 20 points) or High (up to 15%, at most 50 points).</p>
+
+<h2>Where the data is saved</h2>
+<p>In the NVDA settings folder (usually <code>%APPDATA%\nvda</code>):</p>
+<ul>
+<li><code>navigazioneWeb-ricerche.json</code>: the searched words for each page.</li>
+<li><code>navigazioneWeb-segnaposti.json</code>: the placemarkers.</li>
+<li>The settings are in <code>nvda.ini</code>, <code>navigazioneWeb</code> section.</li>
+</ul>
+<p>When the add-on is removed these files stay; they can be deleted by hand.</p>
+
+<h2>Languages</h2>
+<p>The add-on speaks the language of NVDA: English or Italian.</p>
+
+<h2>Compatibility</h2>
+<ul>
+<li><strong>Tested</strong> with NVDA 2026.3 (64 bit).</li>
+<li><strong>Minimum version: NVDA 2024.1</strong>, including the 32 bit versions from 2024.1 to 2025.3. The add-on is written only in Python, with no compiled parts, so it does not depend on 32 or 64 bit. This was checked by comparing the NVDA code of those versions, not by trying them.</li>
+<li><strong>Valid for all NVDA 2026 versions.</strong> With NVDA 2027.1, NVDA will mark it as incompatible until a tested version is released.</li>
+</ul>
+
+<h2>Known limits</h2>
+<ul>
+<li><strong>Tabs (à):</strong> available in NVDA from 2024.1.</li>
+<li><strong>Focus on the link of headings:</strong> on some sites, when a link gets the focus, a menu or a tooltip opens. If it bothers you, turn off the <em>Move the focus to the link of the heading</em> check box.</li>
+<li>The add-on always takes the first link inside the heading.</li>
+<li><strong>Smart points:</strong> they depend on how the site builds the page. If it uses only one style there are none; if it uses very many there can be too many: in that case try the Normal sensitivity. On very large pages the calculation when the page opens can take a moment.</li>
+<li>Some features use internal parts of NVDA. After an NVDA update it is worth trying them again.</li>
+</ul>
+
+<h2>If something does not work</h2>
+<ul>
+<li>After installing a new version, restart NVDA: the new add-on starts working only after the restart.</li>
+<li>Check that the feature is on in the settings and that you are not in focus mode.</li>
+</ul>
+
+<h2>Author and license</h2>
+<p>Andrea Dessolis, <a href="https://andreadessolis.com/en/addon-nvda.html">andreadessolis.com</a>. GNU GPL version 2.</p>
+</body>
+</html>

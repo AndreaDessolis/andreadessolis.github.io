@@ -19,7 +19,7 @@ import sys
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, QUI)
-from contenuti import EMAIL, GITHUB, PAYPAL, PROGRAMMI, T  # noqa: E402
+from contenuti import ADDON, EMAIL, GITHUB, PAYPAL, PROGRAMMI, T  # noqa: E402
 
 DOMINIO = 'https://andreadessolis.com/'
 LINGUE = ('it', 'en')
@@ -62,7 +62,8 @@ def pagina(lingua, nome_file, titolo, voce_menu, corpo, sole=700, descrizione=''
         altra_href = su + 'en/' + nome_file
     else:
         altra_href = radice + nome_file
-    voci = [('home', 'index.html'), ('programmi', 'programmi.html'), ('chi_sono', 'chi-sono.html'), ('contatti', 'contatti.html')]
+    voci = [('home', 'index.html'), ('programmi', 'programmi.html'), ('addon', 'addon-nvda.html'),
+            ('chi_sono', 'chi-sono.html'), ('contatti', 'contatti.html')]
     menu = []
     for chiave, href in voci:
         corrente = ' aria-current="page"' if chiave == voce_menu else ''
@@ -223,6 +224,57 @@ def pagina_programma(p, lingua):
     return pagina(lingua, p['pagina'], p['nome'], 'programmi', '\n\n'.join(parti), sole=680, descrizione=p['frase'][lingua])
 
 
+def sezione_addon(a, lingua):
+    """Una add-on nella pagina delle add-on. L'attributo data-versione serve a
+    pubblica.py per controllare che la pagina online dica la versione nuova."""
+    t = T[lingua]
+    nome = a['nome'][lingua]
+    funzioni = '\n'.join(f'      <li>{e(f)}</li>' for f in a['funzioni'][lingua])
+    parti = [f'''    <section id="{a["id"]}" class="addon" data-versione="{a["id"]} {e(a.get("versione", ""))}">
+    <h2>{e(nome)}</h2>
+    <p>{e(a["frase"][lingua])}</p>
+    <ul class="feature-list">
+{funzioni}
+    </ul>''']
+    if a.get('versione'):
+        versione = t['versione_del'].format(a['versione'], data_leggibile(a['data'], lingua))
+        parti.append(f'''    <div class="download">
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{link_download(a)}">{e(t["scarica"].format(nome))}</a>
+      </div>
+      <p class="version">{e(versione)}. {e(t["addon_per_nvda"].format(a["nvda_minimo"]))}</p>
+    </div>
+    <ul>
+      <li><a href="guide/{a["id"]}.html">{e(t["addon_guida"].format(nome))}</a></li>
+      <li><a href="novita/{a["id"]}.html">{e(t["leggi_novita"])}</a></li>
+      <li><a href="{GITHUB}/{a["repository"]}/releases">{e(t["tutte_versioni"])}</a></li>
+    </ul>''')
+    else:
+        parti.append(f'    <p class="note">{e(t["in_arrivo"])}.</p>')
+    parti.append('    </section>')
+    return '\n'.join(parti)
+
+
+def pagina_addon(lingua):
+    t = T[lingua]
+    passi = '\n'.join(f'      <li>{e(p)}</li>' for p in t['addon_installa'])
+    corpo = f'''    <h1>{e(t["addon"])}</h1>
+    <p class="lede">{e(t["addon_lede"])}</p>
+    <p>{e(t["addon_testo"])}</p>
+
+{chr(10).join(sezione_addon(a, lingua) for a in ADDON)}
+
+    <h2>{e(t["addon_installa_titolo"])}</h2>
+    <ol>
+{passi}
+    </ol>
+    <p>{e(t["addon_aggiorna"])}</p>
+
+{sostieni(lingua)}
+    <p>{t["domande"]}</p>'''
+    return pagina(lingua, 'addon-nvda.html', t['addon'], 'addon', corpo, sole=560, descrizione=t['addon_lede'])
+
+
 def chi_sono(lingua):
     t = T[lingua]
     paragrafi = '\n'.join(f'    <p>{testo}</p>' for testo in t['chi_sono_testo'])
@@ -312,11 +364,20 @@ def html_da_testo(testo):
 
 def pagina_novita(p, lingua):
     t = T[lingua]
+    voce_menu = 'programmi'
+    if isinstance(p['nome'], dict):
+        # Un'add-on: nome nella lingua della pagina, e le novita' si leggono in NVDA.
+        p = dict(p, nome=p['nome'][lingua])
+        t = dict(t, novita_lede=t['addon_novita_lede'])
+        voce_menu = 'addon'
     tipo, percorso = p['novita']
     blocchi = []
     if tipo == 'hdx-json':
         for versione, data, sezioni in versioni_da_json(percorso, lingua):
-            titolo = t['versione_del'].format(versione, data_leggibile(data, lingua)) if data else versione
+            if data:
+                titolo = t['versione_del'].format(versione, data_leggibile(data, lingua))
+            else:
+                titolo = ('Versione ' if lingua == 'it' else 'Version ') + versione
             corpo = []
             for titolo_sezione, voci in sezioni:
                 corpo.append(f'<h3>{e(titolo_sezione)}</h3>\n<ol>\n' + '\n'.join(f'<li>{e(v)}</li>' for v in voci) + '\n</ol>')
@@ -329,7 +390,7 @@ def pagina_novita(p, lingua):
     <p class="lede">{e(t["novita_lede"])}</p>
     <p><a href="../{p["pagina"]}">{e(t["torna_a"].format(p["nome"]))}</a></p>
 {chr(10).join(blocchi)}'''
-    return pagina(lingua, f'novita/{p["id"]}.html', t['novita_titolo'].format(p['nome']), 'programmi', corpo, sole=680)
+    return pagina(lingua, f'novita/{p["id"]}.html', t['novita_titolo'].format(p['nome']), voce_menu, corpo, sole=680)
 
 
 # ---------------------------------------------------------------- le guide
@@ -341,6 +402,17 @@ def guida(p):
              f'font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../{p["pagina"]}">'
              f'Torna a {e(p["nome"])} su andreadessolis.com</a> · '
              f'<a style="color:#0E6B63" href="../en/{p["pagina"]}" lang="en" hreflang="en">Back to {e(p["nome"])} (English)</a></div>')
+    return re.sub(r'(<body[^>]*>)', lambda m: m.group(1) + '\n' + barra, testo, count=1)
+
+
+def guida_addon(a, lingua):
+    """La guida dell'add-on nella sua lingua, con in cima il ritorno alla pagina
+    delle add-on. Sta in guide\\ (italiano) o en\\guide\\ (inglese)."""
+    testo = open(a['guide'][lingua], encoding='utf-8').read()
+    torna = T[lingua]['torna_a'].format(a['nome'][lingua])
+    barra = (f'<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;'
+             f'font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../{a["pagina"]}">'
+             f'{e(torna)} — andreadessolis.com</a></div>')
     return re.sub(r'(<body[^>]*>)', lambda m: m.group(1) + '\n' + barra, testo, count=1)
 
 
@@ -364,6 +436,11 @@ def genera(uscita):
             scrivi(uscita, prefisso + p['pagina'], pagina_programma(p, lingua))
             if p['stato'] == 'disponibile' and p.get('novita'):
                 scrivi(uscita, prefisso + f'novita/{p["id"]}.html', pagina_novita(p, lingua))
+        scrivi(uscita, prefisso + 'addon-nvda.html', pagina_addon(lingua))
+        for a in ADDON:
+            if a.get('versione'):
+                scrivi(uscita, prefisso + f'novita/{a["id"]}.html', pagina_novita(a, lingua))
+                scrivi(uscita, prefisso + f'guide/{a["id"]}.html', guida_addon(a, lingua))
     for p in PROGRAMMI:
         if p['stato'] == 'disponibile' and p.get('guida'):
             scrivi(uscita, f'guide/{p["id"]}.html', guida(p))

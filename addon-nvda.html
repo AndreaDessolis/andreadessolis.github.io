@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Add-on per NVDA — Andrea Dessolis</title>
+<meta name="description" content="Piccole estensioni gratuite per lo screen reader NVDA, nate per rendere più comodo il lavoro di ogni giorno.">
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/addon-nvda.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/addon-nvda.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Andrea Dessolis</a>
+    <nav aria-label="Menu principale">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programmi.html">Programmi</a></li>
+        <li><a href="addon-nvda.html" aria-current="page">Add-on per NVDA</a></li>
+        <li><a href="chi-sono.html">Chi sono</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li class="lang"><a href="en/addon-nvda.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="560" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <h1>Add-on per NVDA</h1>
+    <p class="lede">Piccole estensioni gratuite per lo screen reader NVDA, nate per rendere più comodo il lavoro di ogni giorno.</p>
+    <p>Ognuna parla nella lingua di NVDA, italiano o inglese, e ha la sua guida, che si apre anche dal Gestore componenti aggiuntivi di NVDA.</p>
+
+    <section id="navigazione-web" class="addon" data-versione="navigazione-web 1.1.0">
+    <h2>Navigazione web</h2>
+    <p>Le funzioni di JAWS per il web che NVDA non ha, ognuna da accendere o spegnere nelle impostazioni.</p>
+    <ul class="feature-list">
+      <li>Intestazioni con un link, come i titoli dei video di YouTube: si legge la riga completa, con la durata, e il focus va sul link.</li>
+      <li>Maiusc+Invio, Ctrl+Invio e il tasto Applicazioni aprono il link dove sei, non quello che aveva il focus.</li>
+      <li>NVDA+A, con lo schema di tastiera desktop, dice l&#x27;indirizzo della pagina; premuto due volte lo copia.</li>
+      <li>Tasti di salto per schede, articoli e regione principale, che fanno scorrere la pagina per cercare altri elementi.</li>
+      <li>La ricerca di NVDA ricorda la parola cercata per ogni pagina, anche dopo il riavvio.</li>
+      <li>Elementi della pagina con NVDA+F6: pulsanti, caselle, tabelle, link e altro, con filtro.</li>
+      <li>Segnaposti con J, per la pagina o per tutto il sito, e il segnaposto temporaneo.</li>
+      <li>Punti smart con Y, come la Smart Glance di JAWS: il testo che si nota a vista.</li>
+    </ul>
+    <div class="download">
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases/latest/download/navigazioneWeb.nvda-addon">Scarica Navigazione web</a>
+      </div>
+      <p class="version">Versione 1.1.0 del 27 ottobre 2026. Per NVDA 2024.1 e successive.</p>
+    </div>
+    <ul>
+      <li><a href="guide/navigazione-web.html">La guida di Navigazione web, da leggere online</a></li>
+      <li><a href="novita/navigazione-web.html">Le novità di ogni versione</a></li>
+      <li><a href="https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases">Tutte le versioni su GitHub</a></li>
+    </ul>
+    </section>
+    <section id="shortcut-conflict-helper" class="addon" data-versione="shortcut-conflict-helper ">
+    <h2>Shortcut Conflict Helper</h2>
+    <p>Trova i tasti assegnati a più comandi nella finestra Gesti e comandi, e ti aiuta a sistemarli.</p>
+    <ul class="feature-list">
+      <li>All&#x27;apertura di Gesti e comandi mostra i conflitti, solo se ci sono, e dice quale comando vince.</li>
+      <li>Ogni conflitto si modifica, si toglie o si ignora.</li>
+      <li>Avvisa prima di assegnare un tasto già usato.</li>
+      <li>Cerca per tasto: premi un tasto e vedi solo i comandi che lo usano.</li>
+    </ul>
+    <p class="note">In arrivo.</p>
+    </section>
+    <section id="gestore-finestre" class="addon" data-versione="gestore-finestre ">
+    <h2>Gestore Finestre</h2>
+    <p>Con NVDA+W l&#x27;elenco di tutte le finestre aperte, per portarle in primo piano o chiuderle.</p>
+    <ul class="feature-list">
+      <li>Le finestre nell&#x27;ordine di Alt+Tab, con il nome del programma, comprese finestre secondarie e dialoghi.</li>
+      <li>Invio porta la finestra in primo piano, Canc la chiude.</li>
+      <li>Se il programma chiede conferma prima di chiudere, porta davanti la domanda.</li>
+      <li>Dice quando una finestra non si chiude o non si può portare in primo piano.</li>
+    </ul>
+    <p class="note">In arrivo.</p>
+    </section>
+    <section id="blocco-modificatore" class="addon" data-versione="blocco-modificatore ">
+    <h2>Blocco Modificatore NVDA</h2>
+    <p>Il tasto NVDA bloccato, come il tasto JAWS: lo tocchi, lo lasci e poi premi l&#x27;altro tasto.</p>
+    <ul class="feature-list">
+      <li>Un tocco del tasto NVDA lo lascia premuto per il tasto successivo, poi si sblocca da solo.</li>
+      <li>Maiusc, Ctrl, Alt e Windows non sbloccano: funzionano anche combinazioni come NVDA+Maiusc+J.</li>
+      <li>Un altro tocco sblocca; due tocchi veloci fanno la funzione normale del tasto, per esempio Bloc Maiusc.</li>
+      <li>Avviso con suoni, voce o entrambi, e un comando per accenderlo e spegnerlo al volo.</li>
+    </ul>
+    <p class="note">In arrivo.</p>
+    </section>
+
+    <h2>Come si installano</h2>
+    <ol>
+      <li>Scarica l&#x27;add-on con il suo pulsante.</li>
+      <li>Apri il file scaricato: NVDA chiede se installarlo. Rispondi Sì.</li>
+      <li>Riavvia NVDA quando te lo chiede.</li>
+    </ol>
+    <p>Per aggiornare un&#x27;add-on si fa allo stesso modo: scarica la versione nuova e installala sopra quella vecchia. Le tue impostazioni restano.</p>
+
+    <h2>Sostieni il progetto</h2>
+    <p>I miei programmi sono gratuiti e li porto avanti da solo, nel tempo libero. Se ti sono utili, puoi aiutarmi con una donazione.</p>
+    <div class="cta-row">
+      <a class="btn btn-secondary" href="https://paypal.me/AndreaDessolis">Sostieni con PayPal</a>
+    </div>
+    <p>Hai domande o suggerimenti? <a href="contatti.html">Scrivimi</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="contatti.html">scrivimi</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>
