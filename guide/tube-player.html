@@ -72,7 +72,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>La finestra principale, dall'alto in basso (con <kbd>Tab</kbd>):</p>
 <ol>
 <li><strong>Cerca su YouTube</strong>: la casella dove scrivi cosa cercare;</li>
-<li><strong>Cerca tra</strong>: una casella a elenco per scegliere se cercare video, canali, playlist o tutto; poi <strong>Ordina per</strong> e <strong>Pubblicati</strong> (vedi <a href="#cercare">Cercare su YouTube</a>);</li>
+<li><strong>Cerca tra</strong>: una casella a elenco per scegliere se cercare video, canali, playlist, tutto, corsi o podcast; poi <strong>Ordina per</strong> e <strong>Pubblicati</strong> (vedi <a href="#cercare">Cercare su YouTube</a>);</li>
 <li><strong>l'elenco</strong>: i risultati della ricerca, oppure quello che c'è nel canale, nella playlist o nella raccolta in cui sei. Il suo nome dice dove sei, per esempio "Video per: musica rilassante" o "Raccolta: Documentari";</li>
 <li><strong>i pulsanti</strong> sotto l'elenco, solo quando servono: "Torna a..." (che dice dove ti riporta) e i comandi delle raccolte.</li>
 </ol>
@@ -101,13 +101,14 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Per dare i suggerimenti, quello che scrivi va a YouTube lettera per lettera, come quando scrivi sul sito. Se preferisci di no, li spegni nelle Impostazioni, categoria Ricerca.</p>
 
 <h3>Cerca tra</h3>
-<p>Dopo la casella di ricerca, la casella <strong>Cerca tra</strong> sceglie cosa cercare: Video, Canali, Playlist oppure Tutto. Con le frecce cambi la scelta: la ricerca riparte da sola appena ti fermi, e lo stato attivo resta nella casella (le frecce non lo spostano mai); il numero dei risultati te lo dice la voce. Con <kbd>Invio</kbd> invece la ricerca parte subito e vai all'elenco. La scelta resta per le ricerche dopo.</p>
+<p>Dopo la casella di ricerca, la casella <strong>Cerca tra</strong> sceglie cosa cercare: Video, Canali, Playlist, Tutto, Corsi oppure Podcast. Con le frecce cambi la scelta: la ricerca riparte da sola appena ti fermi, e lo stato attivo resta nella casella (le frecce non lo spostano mai); il numero dei risultati te lo dice la voce. Con <kbd>Invio</kbd> invece la ricerca parte subito e vai all'elenco. La scelta resta per le ricerche dopo.</p>
+<p><strong>Corsi</strong> e <strong>Podcast</strong> sono playlist che YouTube segna in modo speciale: un corso ha delle lezioni, un podcast delle puntate, e la riga lo dice ("corso di ..., 18 lezioni"). YouTube non ha un filtro per loro, così Tube Player cerca tra le playlist aggiungendo da solo la parola "corso" o "podcast" (se non l'hai già scritta tu) e tiene solo quelli. Per questo la ricerca può durare qualche secondo in più, e su argomenti con pochi corsi o podcast i risultati possono essere pochi. Con <kbd>Invio</kbd> su una riga entri nel corso o nel podcast come in una playlist.</p>
 
 <h3>Ordina per e Pubblicati</h3>
 <p>Dopo "Cerca tra" ci sono altre due caselle a elenco, che funzionano allo stesso modo (con le frecce la ricerca riparte da sola, con Invio parte subito):</p>
 <ul>
 <li><strong>Ordina per</strong>: Pertinenza (l'ordine normale di YouTube) oppure Visualizzazioni (dal video più visto).</li>
-<li><strong>Pubblicati</strong>: in qualsiasi momento, nell'ultima ora, oggi, questa settimana, questo mese, quest'anno. Per trovare i video più recenti su un argomento. Vale per i video: cercando tra canali o playlist la casella è spenta e il Tab la salta.</li>
+<li><strong>Pubblicati</strong>: in qualsiasi momento, nell'ultima ora, oggi, questa settimana, questo mese, quest'anno. Per trovare i video più recenti su un argomento. Vale per i video: cercando tra canali, playlist, corsi o podcast la casella è spenta e il Tab la salta.</li>
 </ul>
 <p>YouTube non permette più di ordinare i risultati di una ricerca per data: per avere i video più nuovi si usa "Pubblicati". Dentro un canale, invece, i video sono già dal più recente.</p>
 
@@ -249,6 +250,17 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><kbd>Esc</kbd> chiude la finestra.</li>
 </ul>
 <p>I commenti si possono solo leggere: per scriverne o mettere "mi piace" serve l'account di YouTube. I commenti ci sono solo per i video, non per canali e playlist; se l'autore li ha disattivati, l'elenco dice "Nessun commento".</p>
+<h3 id="chat">La chat delle dirette</h3>
+<p>Durante una diretta YouTube non ha commenti, ma la chat: i messaggi che le persone scrivono mentre guardano. Per questo <kbd>Ctrl+M</kbd> su una diretta in corso apre la finestra <strong>Chat dal vivo</strong> invece dei commenti.</p>
+<ul>
+<li><strong>Messaggi</strong>: un elenco con una riga per messaggio, "chi l'ha scritto: messaggio". All'apertura ci sono gli ultimi messaggi e sei sull'ultimo arrivato: con <kbd>Freccia su</kbd> leggi i precedenti.</li>
+<li>I messaggi nuovi arrivano da soli in fondo all'elenco, ogni pochi secondi, e non ti spostano dalla riga su cui sei: con <kbd>Fine</kbd> vai all'ultimo.</li>
+<li><strong>Leggi i messaggi nuovi</strong>: se la spunti, lo screen reader legge da solo ogni messaggio appena arriva, anche mentre fai altro nella finestra. Tube Player si ricorda la scelta per le chat successive; di base è spenta, perché nelle dirette molto seguite i messaggi arrivano di continuo.</li>
+<li>Le Super Chat (messaggi pagati) iniziano con "Super Chat" e la cifra; i nuovi iscritti al canale come membri con "Nuovo membro".</li>
+<li>Le emoji si leggono come simboli; quelle proprie del canale con il loro nome.</li>
+<li><kbd>Ctrl+C</kbd> copia il messaggio scelto; <kbd>Esc</kbd> chiude la finestra, e la chat smette di arrivare.</li>
+</ul>
+<p>Si vedono i "Messaggi principali", come li mostra YouTube di solito (senza quelli ripetuti o di spam), e restano gli ultimi 500. Quando la diretta finisce l'elenco lo dice; se la chat è disattivata dice "Chat non disponibile". La chat si può solo leggere: per scrivere serve l'account di YouTube.</p>
 
 <h2 id="trascrizione">8. La trascrizione</h2>
 <p><kbd>Ctrl+E</kbd> su un video (menu File, Trascrizione; nel lettore e nella scheda il pulsante Trascrizione) apre la trascrizione: tutto quello che si dice nel video, riga per riga, ognuna con il suo momento. Nel lettore <kbd>Ctrl+E</kbd> apre quella del video che stai ascoltando. Serve per leggere un video invece di ascoltarlo, o per trovare il punto in cui si parla di qualcosa.</p>
