@@ -21,6 +21,27 @@
           "Automatic updates: every time NVDA starts, the add-on checks for a new version, shows what's new and offers to install it. They can be turned off in NVDA Settings, Web Navigation category, and checked by hand with the \"Checks for updates of this add-on\" command in Input gestures."
         ]
       }
+    },
+    "shortcut_conflict_helper": {
+      "nome": {
+        "it": "Shortcut Conflict Helper",
+        "en": "Shortcut Conflict Helper"
+      },
+      "versione": "1.3.1",
+      "url": "https://github.com/AndreaDessolis/NVDA-Shortcut-Conflict-Helper/releases/latest/download/shortcut_conflict_helper.nvda-addon",
+      "sha256": "ea88c9625c9292855457f4df4da606a81bab08b461047d70494a0b1dbd7d2b4c",
+      "pagina": {
+        "it": "https://andreadessolis.com/addon-nvda.html#shortcut-conflict-helper",
+        "en": "https://andreadessolis.com/en/addon-nvda.html#shortcut-conflict-helper"
+      },
+      "novita": {
+        "it": [
+          "Aggiornamenti automatici: a ogni avvio di NVDA l'add-on controlla se c'è una versione nuova, ne mostra le novità e propone di installarla. Si possono spegnere nelle Impostazioni di NVDA, categoria Conflitti di tasti, e cercare a mano con il comando \"Cerca gli aggiornamenti di questa add-on\" in Gesti e comandi."
+        ],
+        "en": [
+          "Automatic updates: every time NVDA starts, the add-on checks for a new version, shows what's new and offers to install it. They can be turned off in NVDA Settings, Key Conflicts category, and checked by hand with the \"Checks for updates of this add-on\" command in Input gestures."
+        ]
+      }
     }
   }
 }
