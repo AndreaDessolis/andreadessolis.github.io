@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Guida di HDX Recorder</title>
+<style>
+body { font-family: Segoe UI, Arial, sans-serif; font-size: 1.1em; line-height: 1.55; max-width: 52em; margin: 1em auto; padding: 0 1em; }
+kbd { font-family: inherit; font-weight: bold; }
+h2 { margin-top: 2em; }
+</style>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../hdx-recorder.html">Torna a HDX Recorder su andreadessolis.com</a> · <a style="color:#0E6B63" href="../en/hdx-recorder.html" lang="en" hreflang="en">Back to HDX Recorder (English)</a></div>
+
+<h1>Guida di HDX Recorder</h1>
+<p>Questa guida spiega come usare HDX Recorder, capitolo per capitolo. Con lo screen reader si passa da un titolo all'altro con il tasto <kbd>H</kbd> (NVDA e JAWS), o da un capitolo all'altro con il tasto <kbd>2</kbd>.</p>
+<p>Le scorciatoie scritte qui sono quelle di base: se le hai cambiate in Impostazioni, Tastiera, valgono le tue. L'elenco di quelle in uso adesso è nel menu Aiuto, "Guida alle scorciatoie da tastiera".</p>
+
+<h2>Indice</h2>
+<ol>
+<li><a href="#cominciare">Cos'è HDX Recorder e come si comincia</a></li>
+<li><a href="#finestra">La finestra principale e i menu</a></li>
+<li><a href="#sorgenti">Le sorgenti audio</a></li>
+<li><a href="#registrare">Registrare: file, nomi e formati</a></li>
+<li><a href="#livelli">Livelli e controlli prima di registrare</a></li>
+<li><a href="#mixer">Il mixer</a></li>
+<li><a href="#effetti">Gli effetti e il mix finale</a></li>
+<li><a href="#scene">Le scene</a></li>
+<li><a href="#programmazioni">Registrazioni programmate e automatismi del silenzio</a></li>
+<li><a href="#video">Il video</a></li>
+<li><a href="#diretta">La diretta su una radio web</a></li>
+<li><a href="#impostazioni">Le impostazioni del programma</a></li>
+<li><a href="#problemi">Diagnostica, registro e problemi</a></li>
+</ol>
+
+<h2 id="cominciare">1. Cos'è HDX Recorder e come si comincia</h2>
+
+<h3>Che cos'è</h3>
+<p>HDX Recorder è un programma per registrare audio e video, pensato per essere usato completamente con lo screen reader. Può registrare insieme, ognuno al suo volume:</p>
+<ul>
+<li>il microfono, o qualunque dispositivo di registrazione;</li>
+<li>l'audio del computer, cioè quello che esce da un dispositivo di ascolto;</li>
+<li>l'audio di un solo programma;</li>
+
+<li>una musica o una sigla di sottofondo presa da un file;</li>
+<li>una radio da Internet;</li>
+<li>e per il video lo schermo, la finestra di un programma o la webcam.</li>
+</ul>
+<p>Il risultato è un file con tutto il mix e, se vuoi, un file separato per ogni sorgente. Con il video si ottiene anche un file MP4 con l'immagine e il mix.</p>
+
+<h3>Cosa serve</h3>
+<ul>
+<li>Windows 10 o Windows 11.</li>
+<li>Uno screen reader: HDX Recorder parla con NVDA e con JAWS anche quando non è in primo piano, per esempio mentre lavori in un altro programma e la registrazione va avanti.</li>
+<li>Per il video, la cattura dello schermo di Windows. Se il tuo Windows non la offre, il programma te lo dice quando provi a registrare con il video.</li>
+</ul>
+
+<h3>Un programma portatile</h3>
+<p>HDX Recorder non si installa: si mette la sua cartella dove si vuole, anche su una chiavetta, e si avvia <strong>HDX Recorder.exe</strong>. Tutto quello che il programma scrive resta dentro la sua cartella:</p>
+<ul>
+<li><strong>Dati</strong>: le impostazioni, in un solo file (impostazioni.json), e quello che serve per recuperare una registrazione interrotta.</li>
+<li><strong>Registrazioni</strong>: i file registrati. Se preferisci un'altra cartella, per esempio in Documenti o su un altro disco, la scegli in Impostazioni, categoria Registrazioni (capitolo 12).</li>
+<li><strong>Librerie</strong> e <strong>Documenti</strong>: i file che servono al programma, le licenze e questa guida.</li>
+</ul>
+<p>Per spostare il programma su un altro computer basta copiare la cartella intera: le impostazioni vengono con lei. Per ripartire da zero si cancella la cartella Dati (a programma chiuso).</p>
+<p>Al primo avvio Windows può mostrare "Windows ha protetto il PC", perché il programma non è firmato digitalmente: si sceglie "Ulteriori informazioni" e poi "Esegui comunque".</p>
+
+<h3>Il primo avvio</h3>
+<p>La prima volta il programma prepara una configurazione chiamata <strong>Predefinita</strong>, con una sola sorgente: il <strong>microfono predefinito</strong> di Windows. Quindi puoi registrare subito: premi <kbd>Ctrl+R</kbd> per cominciare e di nuovo <kbd>Ctrl+R</kbd> per fermare. Il file finisce nella cartella Registrazioni, che si apre dal menu File, "Apri la cartella delle registrazioni".</p>
+<p>La lingua del programma segue quella di Windows (italiano, inglese o spagnolo); si cambia in Impostazioni (<kbd>Ctrl+virgola</kbd>), categoria Generale.</p>
+
+<h3>Il programma nascosto: avvio con Windows e area di notifica</h3>
+<p>In Impostazioni, categoria Generale, puoi scegliere:</p>
+<ul>
+<li><strong>Avvia insieme a Windows</strong>, e se in quel caso deve aprirsi ridotto;</li>
+<li><strong>Avvia sempre ridotto</strong>;</li>
+<li><strong>Chiudendo la finestra, riducila invece di uscire</strong>: la X e <kbd>Alt+F4</kbd> non chiudono più il programma ma lo riducono, e una registrazione in corso continua;</li>
+<li><strong>Riduci nell'area di notifica</strong> invece che nella barra delle applicazioni;</li>
+<li><strong>Icona sul desktop</strong>: crea o toglie il collegamento a HDX Recorder sul desktop.</li>
+</ul>
+
+<h3>Uscire</h3>
+<p><kbd>Ctrl+Q</kbd>, oppure il menu File, "Esci", chiude sempre il programma. <kbd>Alt+F4</kbd> lo chiude allo stesso modo, salvo che tu abbia scelto di ridurlo alla chiusura: in quel caso lo riduce. Se stai registrando, il programma chiede se vuoi fermare la registrazione e uscire; la registrazione viene salvata.</p>
+
+<h3>Gli aggiornamenti</h3>
+<p>All'avvio, dopo un paio di secondi, il programma controlla in silenzio se c'è una versione nuova (se internet non risponde, per esempio appena acceso il computer, riprova da solo dopo 2 e dopo 10 minuti). Se c'è, si apre una finestra con le novità di tutte le versioni che ti mancano e due pulsanti: <strong>Aggiorna adesso</strong> e <strong>Più tardi</strong>. Puoi controllare anche quando vuoi, con Aiuto, <strong>Controlla gli aggiornamenti</strong>; il controllo all'avvio si spegne in Impostazioni, Generale.</p>
+<ul>
+<li>Il programma <strong>non si aggiorna mai mentre è al lavoro</strong>: se stai registrando, facendo una prova o una diagnostica, se c'è una finestra aperta o se una registrazione programmata parte entro un quarto d'ora, aspetta e te lo propone appena è libero.</li>
+<li>Il pulsante <strong>Sostieni l'autore con PayPal</strong>, dopo le novità, apre nel browser la stessa pagina di Aiuto, Dona con PayPal; la finestra dell'aggiornamento resta aperta.</li>
+<li>Con <strong>Aggiorna adesso</strong> si apre una piccola finestra con la percentuale dello scaricamento (detta anche a voce, ogni quarto). Puoi continuare a usare il programma; se intanto cominci a registrare, l'aggiornamento aspetta la fine.</li>
+<li>Ogni aggiornamento è <strong>firmato</strong> e il pacchetto scaricato viene <strong>controllato</strong>: se non è proprio quello giusto, non si installa niente e il programma resta com'è.</li>
+<li>Per installare, il programma si chiude e si riapre da solo, già aggiornato, e lo dice. Se qualcosa va storto a metà, rimette i file di prima: resta la versione che avevi, funzionante.</li>
+<li>Le tue impostazioni, configurazioni e registrazioni <strong>non si toccano mai</strong>.</li>
+</ul>
+<p>Aiuto, <strong>Ultime modifiche</strong>: l'elenco di tutte le novità, versione per versione, nella lingua del programma, anche senza internet. Lo stesso elenco, in italiano, è nel file "Novità" della cartella Documenti.</p>
+
+<h3>Se il computer si spegne mentre registri</h3>
+<p>Se il programma o il computer si fermano durante una registrazione (per esempio per un blocco o un'interruzione di corrente), i file già registrati non si perdono. Al successivo avvio HDX Recorder li sistema da solo, così si possono aprire normalmente, e te lo dice in una finestra con quanti file sono e quanto durano.</p>
+<p>Lo stesso vale per il video compresso in H.264 o AV1: si apre fino a meno di un secondo prima del blocco, ed è contato tra i file sistemati. Il video in HEVC invece non è protetto: dopo un blocco non si apre, e la finestra te lo dice. L'audio è salvo in ogni caso.</p>
+
+<h2 id="finestra">2. La finestra principale e i menu</h2>
+
+<h3>Cosa c'è nella finestra</h3>
+<p>Con <kbd>Tab</kbd> si passa, in quest'ordine, da:</p>
+<ol>
+<li><strong>Configurazione</strong> (<kbd>Alt+C</kbd> ci porta da ovunque nella finestra): una casella a elenco con le tue configurazioni. Una configurazione è un insieme completo: le sorgenti, il formato dei file, gli effetti, le scene, i nomi delle registrazioni. Puoi averne quante vuoi, per esempio una per il podcast, una per le lezioni, una per registrare le chiamate. Si cambia con le frecce.</li>
+<li><strong>Scena</strong> (<kbd>Alt+E</kbd>): le scene della configurazione (capitolo 8). Scegliendone una con le frecce la richiami.</li>
+<li><strong>Sorgenti</strong> (<kbd>Alt+O</kbd>): l'elenco di quello che registri. È il cuore del programma: lo vedremo tra poco.</li>
+<li>I pulsanti <strong>Aggiungi sorgente</strong>, <strong>Registra</strong> (che durante la registrazione diventa <strong>Ferma</strong>) e <strong>Pausa</strong> (che diventa <strong>Riprendi</strong>).</li>
+</ol>
+<p>In basso ci sono anche lo stato e il cronometro, solo da vedere: lo stato e il tempo si chiedono a voce con <kbd>Ctrl+T</kbd>.</p>
+
+<h3>L'elenco delle sorgenti</h3>
+<p>Ogni riga è una sorgente, con la sua casella di spunta. La riga dice cos'è (per esempio "Microfono predefinito di Windows" con il nome del microfono), i canali e il volume; aggiunge guadagno, muta, bilanciamento, ritardo e fase solo quando non sono al loro valore di base.</p>
+<ul>
+<li><kbd>Spazio</kbd>: spunta o toglie la spunta. Solo le sorgenti spuntate vengono registrate. Durante una registrazione la sorgente si accende o si spegne subito: una sorgente spenta crea il suo file solo se la accendi durante la registrazione.</li>
+<li><kbd>Più</kbd> e <kbd>Meno</kbd>: alzano e abbassano il volume nel mix di 1 dB (da -60 a +12 dB).</li>
+<li><kbd>Invio</kbd> o doppio clic: le Proprietà della sorgente.</li>
+<li><kbd>F2</kbd>: rinomina la sorgente (vedi sotto).</li>
+<li><kbd>Alt+Freccia su</kbd> e <kbd>Alt+Freccia giù</kbd>: spostano la sorgente nell'elenco.</li>
+<li><kbd>Canc</kbd>: toglie la sorgente, dopo aver chiesto conferma (la conferma si può spegnere in Impostazioni, categoria Registrazioni).</li>
+<li>Il tasto <kbd>Applicazioni</kbd> o <kbd>Maiusc+F10</kbd>: un menu corto, con i comandi utili per la sorgente selezionata, aperto sotto la riga. Volume, guadagno e bilanciamento non ci sono (si usano con i tasti o nel Mixer); "In cuffia nel monitor" per ogni sorgente audio, il Sottofondo durante la registrazione se la sorgente è un sottofondo, la Composizione video e Descrivi la scena solo se nella configurazione c'è una sorgente video accesa.</li>
+<li>Una lettera: salta alla sorgente che comincia con quella lettera.</li>
+</ul>
+<p>Gli altri tasti dell'elenco (guadagno, bilanciamento, muta) sono spiegati nel capitolo 6, il mixer. Nel menu Sorgenti della barra ci sono tutti i comandi, con i tasti accanto: volume, guadagno, bilanciamento e muta stanno nel sottomenu <strong>Volume e bilanciamento</strong>. Anche lì Sottofondo, Composizione video e Descrivi la scena compaiono solo quando servono.</p>
+
+<h3>I menu</h3>
+<p>Con <kbd>Alt</kbd> si apre la barra dei menu. Ogni voce mostra accanto la sua scorciatoia.</p>
+<ul>
+<li><strong>File</strong>: aprire la cartella delle registrazioni; Esci (<kbd>Ctrl+Q</kbd>).</li>
+<li><strong>Registrazione</strong>: avviare e fermare (<kbd>Ctrl+R</kbd>), pausa (<kbd>Ctrl+P</kbd>), registrazione di prova (<kbd>Ctrl+Alt+R</kbd>), annuncia lo stato (<kbd>Ctrl+T</kbd>); Vai in diretta (<kbd>Ctrl+D</kbd>), Vai in diretta senza registrare, Verifica prima della diretta e Cambia il titolo in onda (<kbd>Ctrl+Maiusc+T</kbd>), capitolo 11; poi i controlli prima di registrare e i livelli (capitolo 5).</li>
+<li><strong>Programmazioni</strong>: le registrazioni che partono da sole (capitolo 9).</li>
+<li><strong>Configurazioni</strong>: le impostazioni della configurazione attiva, le scene, e nuova, duplica, rinomina, elimina, esporta e importa configurazione.</li>
+<li><strong>Sorgenti</strong>: aggiungere e regolare le sorgenti, il mixer, il sottofondo, il video.</li>
+<li><strong>Strumenti</strong>: Diagnostica, il registro degli eventi, gli ultimi annunci (<kbd>Ctrl+Maiusc+U</kbd>), Impostazioni (<kbd>Ctrl+virgola</kbd>).</li>
+<li><strong>Aiuto</strong>: questa guida (<kbd>Ctrl+F1</kbd>), la guida alle scorciatoie (<kbd>F1</kbd>), Chiedi come si fa (<kbd>Ctrl+Maiusc+F1</kbd>), informazioni sul sistema, Controlla gli aggiornamenti, Ultime modifiche, Contattami, Dona con PayPal, informazioni su HDX Recorder.</li>
+</ul>
+<p>Le voci dei menu non sono mai disattivate. I menu Registrazione e Regia mostrano solo le voci che puoi usare in quel momento, con il nome giusto: per esempio "Termina la diretta" solo mentre sei in diretta, "Pausa" solo mentre registri, i rientri solo durante la pausa in onda. Le scorciatoie invece funzionano sempre: se in quel momento un comando non si può usare, il programma ti dice perché.</p>
+
+<h3>Dare un nome a una sorgente</h3>
+<p>Di base ogni sorgente si chiama come il suo dispositivo, per esempio "Microfono predefinito di Windows". Con <kbd>F2</kbd> nell'elenco (o Sorgenti, Rinomina) puoi darle un nome tuo, per esempio "Voce di Andrea" o "Musica di sottofondo". Il nome tuo compare nell'elenco, negli annunci, nel mixer, nella composizione video e nel nome del file della sua traccia separata; il dispositivo resta scritto nelle Proprietà. Se il dispositivo di una sorgente con il nome tuo non è collegato, la riga lo dice: "Voce di Andrea (non collegata)". Per tornare al nome automatico, cancella il nome e premi OK. Durante la registrazione il nome nuovo compare subito, ma nei nomi dei file vale dalla registrazione successiva.</p>
+
+<h3>Gli stessi tasti nei tre posti</h3>
+<p>L'elenco delle sorgenti, la casella Configurazione e la casella Scena funzionano allo stesso modo:</p>
+<ul>
+<li><kbd>Invio</kbd>: le proprietà della sorgente, le impostazioni della configurazione, le impostazioni delle scene (aperte sulla scena in uso);</li>
+<li><kbd>F2</kbd>: rinomina la sorgente, la configurazione o la scena in uso;</li>
+<li><kbd>Canc</kbd>: rimuove la sorgente, elimina la configurazione o la scena in uso, sempre dopo una domanda di conferma con No già scelto;</li>
+<li>il tasto <kbd>Applicazioni</kbd> (o <kbd>Maiusc+F10</kbd>): il menu con tutti i comandi di quel punto.</li>
+</ul>
+<p>Questi tasti valgono solo dove sei: <kbd>Canc</kbd> sulla casella Scena elimina la scena, nell'elenco toglie la sorgente. Si possono cambiare in Impostazioni, Tastiera, e la guida alle scorciatoie (<kbd>F1</kbd>) mostra proprio quelli del punto in cui ti trovi.</p>
+
+<h3>Le configurazioni</h3>
+<p>Dal menu Configurazioni:</p>
+<ul>
+<li><strong>Nuova configurazione</strong>: ne crea una vuota, a cui dai un nome.</li>
+<li><strong>Duplica configurazione</strong>: ne crea una copia, comoda per farne una variante.</li>
+<li><strong>Rinomina</strong> ed <strong>Elimina</strong>: valgono per quella attiva. Eliminando una configurazione le registrazioni già fatte non vengono toccate. L'ultima rimasta non si può eliminare.</li>
+<li><strong>Impostazioni della configurazione</strong>: formato dei file, nomi e cartelle, silenzio, mix finale, scene e video (capitoli 4, 7, 8, 9 e 10).</li>
+</ul>
+<p>Durante la registrazione la configurazione non si può cambiare, creare o eliminare.</p>
+
+<h3>Esportare e importare una configurazione</h3>
+<p>Una configurazione si può salvare in un file, per passarla a un amico o tenerne una copia.</p>
+<ul>
+<li><strong>Configurazioni, Esporta la configurazione</strong>: salva la configurazione attiva in un file <strong>.hdxconf</strong>. Il nome proposto è quello della configurazione; scegli tu dove metterlo. Nel file c'è tutto quello che le appartiene: le sorgenti con volumi, guadagno, bilanciamento ed effetti, il mix finale, le scene, il formato, i nomi e le cartelle, il silenzio, il video con la composizione e le disposizioni. Le registrazioni programmate non ci sono: dipendono dagli orari e dal computer di chi le usa.</li>
+<li><strong>Configurazioni, Importa una configurazione</strong>: scegli il file .hdxconf, poi il programma ti propone il nome (se ce n'è già una con lo stesso nome, aggiunge un numero: "Podcast 2"). La configurazione si aggiunge alle tue, senza toccare le altre, e diventa quella attiva.</li>
+</ul>
+<p>Quando la configurazione arriva da un altro computer:</p>
+<ul>
+<li>il microfono e l'audio del computer <strong>predefiniti</strong> di Windows funzionano subito;</li>
+<li>un <strong>dispositivo preciso</strong> (una scheda, un microfono USB) viene cercato per nome: se ce n'è uno con lo stesso nome, il programma lo prende da solo;</li>
+<li>gli <strong>effetti</strong> suonano identici, perché il file contiene i valori veri;</li>
+<li>se qualcosa manca, cioè un dispositivo che non c'è o un file di sottofondo che non si trova, alla fine una finestra ti elenca cosa sistemare. I dispositivi si cambiano nelle Proprietà della sorgente, i brani nelle Proprietà del sottofondo.</li>
+</ul>
+<p>Esportare si può sempre; importare no, durante la registrazione.</p>
+
+<h2 id="sorgenti">3. Le sorgenti audio</h2>
+<p>Una sorgente si aggiunge con <kbd>Ctrl+N</kbd>, con il pulsante "Aggiungi sorgente" o dal menu Sorgenti, "Aggiungi sorgente". Si sceglie il tipo, poi una piccola finestra chiede i dettagli. La nuova sorgente compare nell'elenco già spuntata.</p>
+
+<h3>Microfono o ingresso</h3>
+<p>Qualunque dispositivo di registrazione di Windows: microfono, ingresso della scheda audio, cuffia. Puoi scegliere "Microfono predefinito di Windows": così, se cambi il microfono predefinito in Windows, HDX Recorder lo segue da solo (anche durante la registrazione, e te lo dice). Se scegli un dispositivo preciso, resta quello.</p>
+<p>Nelle Proprietà scegli anche i <strong>canali</strong>: stereo, mono, solo sinistro, solo destro, sinistro e destro mescolati, oppure uno o due ingressi precisi per le schede con molti ingressi.</p>
+<p>Se Windows non permette al programma di usare il microfono, HDX Recorder ti dice dove attivarlo: Impostazioni di Windows, Privacy e sicurezza, Microfono.</p>
+
+<h3>Audio del computer</h3>
+<p>Registra quello che esce da un dispositivo di ascolto: la sintesi vocale, i video, le chiamate, tutto. Anche qui puoi scegliere quello predefinito di Windows o uno preciso. Nelle Proprietà puoi <strong>escludere un'applicazione</strong>: si registra tutto il computer tranne quella, per esempio tutto tranne la sintesi vocale dello screen reader.</p>
+
+<h3>Applicazione</h3>
+<p>Registra l'audio di un solo programma. Il programma deve essere aperto e stare suonando quando aggiungi la sorgente, altrimenti non compare nell'elenco: per esempio avvia un video o fai parlare la sintesi. Serve Windows 11, o Windows 10 aggiornato.</p>
+
+<h3>File di sottofondo</h3>
+<p>Una musica o una sigla che suona durante la registrazione e finisce nel mix. Le sue Proprietà hanno più categorie:</p>
+<ul>
+<li><strong>Brani</strong>: l'elenco dei file, che suonano in quell'ordine. Aggiungi, Togli (<kbd>Canc</kbd>), Sposta su e giù (<kbd>Alt+frecce</kbd>).</li>
+<li><strong>Riproduzione</strong>: ripetere l'elenco quando finisce, l'ordine casuale, che cosa succede dopo un brano (il prossimo dell'elenco, oppure di nuovo lo stesso), <strong>che cosa succede quando lo accendi</strong> a diretta, registrazione o prova già iniziate (di base <em>resta in attesa</em>: non suona niente finché non scegli un brano dal banco Sottofondi, e senti "Sottofondo acceso, in attesa: scegli un brano dal banco"; oppure <em>parte subito dal primo brano</em>, e senti "Sottofondo acceso:" con il titolo; se il sottofondo è già acceso quando parti, comincia dall'inizio come sempre), il passaggio tra un brano e l'altro (uno dopo l'altro, o con una dissolvenza incrociata).</li>
+<li><strong>Dissolvenze</strong>: in entrata all'inizio, e in uscita alla fine dell'elenco e quando fermi la registrazione. Con la dissolvenza in uscita, premendo <kbd>Ctrl+R</kbd> la musica sfuma e poi la registrazione si ferma; premendo di nuovo <kbd>Ctrl+R</kbd> si ferma subito.</li>
+<li><strong>Ducking</strong>: abbassa la musica quando parli. Scegli quali sorgenti contano come voce, di quanto si abbassa la musica, la sensibilità e la velocità.</li>
+<li><strong>Effetti</strong> (capitolo 7).</li>
+</ul>
+<p>Durante la registrazione, dal menu Sorgenti, Sottofondo: pausa o ripresa (<kbd>Ctrl+Maiusc+P</kbd>), brano successivo, cosa sta suonando. Se accendi un sottofondo che era spento (con lo Spazio o con una scena) mentre registri, sei in diretta o nella prova dei livelli, riparte dall'inizio dell'elenco con la sua dissolvenza in entrata, non da dove era arrivato in silenzio. I primi dieci brani dell'elenco sono anche il banco <strong>Sottofondi</strong> dei pad (vedi Pad sonori): con un tasto salti subito al brano che vuoi.</p>
+
+
+
+<h3>Radio da Internet</h3>
+<p>Registra una radio in streaming. Puoi scrivere l'indirizzo del flusso (o di una playlist .m3u o .pls), sceglierla tra le tue preferite, oppure premere <strong>Cerca una radio</strong>: si cerca per nome, paese, genere e lingua in un grande archivio di radio di tutto il mondo, e con <strong>Ascolta</strong> la senti prima di sceglierla con <strong>Usa questa radio</strong>.</p>
+<p>Nelle Proprietà, categoria <strong>Titoli e copia</strong>: i titoli in onda si possono segnare nel registro o anche leggere a voce, e si può salvare una copia esatta del flusso accanto alla registrazione. Se la connessione cade, il programma riprova da solo e ti avvisa.</p>
+
+<h3>Pad sonori</h3>
+<p>Dieci tasti che fanno partire un suono mentre registri: un applauso, una sigla, una campanella, un effetto per il podcast o la diretta. I tasti sono gli stessi per tre <strong>banchi</strong>: <strong>Effetti</strong> e <strong>Jingle</strong>, dieci pad ciascuno, e <strong>Sottofondi</strong>, i brani del file di sottofondo (vedi più avanti). Il suono finisce nella registrazione come le altre sorgenti. Puoi usare i suoni che HDX Recorder ha già dentro (applausi, risate, fischi, whoosh, successo ed errore, campanello e altri) oppure i tuoi file (WAV, MP3, FLAC, M4A, AAC o WMA), lunghi al massimo 3 minuti.</p>
+<p>Aggiungi la sorgente con "Aggiungi sorgente", "Pad sonori": si apre subito la finestra dei pad. In cima la casella <strong>Banco</strong> sceglie quale banco modificare, Effetti o Jingle, e il pulsante <strong>Rinomina il banco</strong> gli dà un nome tuo (lasciandolo vuoto torna quello di base). Nell'elenco dei 10 pad del banco:</p>
+<ul>
+<li><kbd>Invio</kbd> (o il pulsante "Scegli il suono") apre un piccolo menu: "Dai suoni di HDX Recorder" oppure "Da un file sul computer". Nel banco Jingle apre subito la scelta del file: i jingle sono sempre tuoi.
+<ul>
+<li>Con i suoni di HDX Recorder si apre una finestra con la <strong>categoria</strong> e l'<strong>elenco dei suoni</strong> di quella categoria, con la durata di ognuno. Gli applausi a teatro sono quattro, numerati, uno diverso dall'altro. Si parte dall'elenco; con <kbd>Maiusc+Tab</kbd> torni alla categoria. <kbd>Spazio</kbd> ascolta il suono, <kbd>Invio</kbd> lo sceglie.</li>
+<li>Con un file, se ne scegli più di uno insieme riempiono il pad selezionato e quelli che seguono.</li>
+</ul></li>
+<li><kbd>Spazio</kbd> (o "Ascolta") te lo fa sentire, solo per te, senza registrare.</li>
+<li><kbd>F2</kbd> (o "Rinomina") gli dà un nome: è quello che leggi nell'elenco e nel menu. Se non lo rinomini, il nome è quello del file.</li>
+<li><kbd>Canc</kbd> (o "Svuota") lo svuota.</li>
+</ul>
+<p>Il pulsante <strong>Riempi con i suoni predefiniti</strong> (solo nel banco Effetti) mette in un colpo solo dieci suoni pronti nei 10 pad: applauso, ovazione, risate, buu, successo, errore, whoosh, campanello, grancassa e mani a ritmo. Se avevi già scelto qualche suono, prima te lo chiede. È il modo più veloce per provare i pad.</p>
+<p>Per ogni pad scegli il <strong>volume</strong> e <strong>come suona</strong>: una volta e poi si ferma, oppure a ciclo finché non lo fermi (utile per un tappeto musicale o un ritmo). La casella <strong>Uniforma il volume dei suoni</strong>, accesa di base, porta tutti i suoni più o meno allo stesso volume, così un applauso registrato piano e una sigla registrata forte non sono troppo diversi. Per sentirli anche tu in cuffia mentre registri c'è il monitor del conduttore (vedi più avanti).</p>
+<p>I pad suonano durante la registrazione, la prova dei livelli e la registrazione di prova. Nella finestra principale:</p>
+<ul>
+<li><kbd>F11</kbd> e <kbd>F12</kbd>: il banco precedente e il successivo (Effetti, Jingle, Sottofondi, e di nuovo Effetti). Il programma dice il nome del banco. Cambiare banco non ferma niente.</li>
+<li><kbd>Alt+1</kbd> fino a <kbd>Alt+9</kbd>, e <kbd>Alt+0</kbd> per il decimo, fanno partire il suono del banco scelto. Premendo di nuovo lo stesso tasto mentre suona, il pad si ferma con una breve sfumatura. Premendolo dopo che è finito, riparte dall'inizio.</li>
+<li><kbd>Alt+Maiusc+1</kbd> fino a <kbd>Alt+Maiusc+0</kbd>: dicono che cosa c'è sotto quel tasto, senza suonare ("3: Campanello", "2: Piano soft, suona", "5: vuoto").</li>
+<li>Nel banco <strong>Sottofondi</strong> il tasto fa entrare subito quel brano del sottofondo, incrociato con quello che suonava (con la dissolvenza incrociata del sottofondo, o 2 secondi); poi si va avanti come scelto in "Dopo un brano". Lo stesso tasto del brano che suona lo mette in pausa sfumando, e di nuovo lo riprende. Ogni volta senti "Sottofondo:" con il titolo, oppure "in pausa" e "ripreso", con il loro suono. <strong>Se la sorgente del sottofondo è spenta</strong>, decidi tu nelle sue proprietà (categoria Riproduzione, "Se scegli un brano dal banco mentre è spento"): <em>ti avvisa e non fa niente</em> (di base: così, se hai spento il sottofondo per andare in onda solo con la voce, un tasto premuto per sbaglio non manda musica in onda); <em>ti avvisa e il brano parte quando lo accendi</em> (la finestra ti dice quale brano partirà; quando accendi il sottofondo con lo Spazio parte quello, dall'inizio, e senti il titolo; se intanto ne scegli un altro vale l'ultimo; finita la diretta il brano non si ricorda più); <em>si accende da solo e parte il brano</em> (la casella diventa selezionata e senti "Sottofondo acceso:" con il titolo). La casella di ogni sorgente nell'elenco dice sempre come sta davvero.</li>
+<li><kbd>Alt+Backspace</kbd> ferma tutti i pad.</li>
+<li>Più pad possono suonare insieme.</li>
+<li>Quando un pad parte il programma non dice nulla, per non coprire il suono; se il pad è vuoto lo dice.</li>
+</ul>
+<p>Gli stessi comandi sono nel menu Sorgenti, "Pad sonori": i tre banchi (quello scelto è spuntato), banco precedente e successivo, e i dieci tasti del banco scelto con il loro nome. Nella regia bastano i numeri da soli, e Maiusc con il numero. In tutto Windows, anche con il programma nascosto, ci sono <kbd>Ctrl+Alt+Windows+F1</kbd> fino a <kbd>F10</kbd> (suonano il banco scelto) e <kbd>Ctrl+Alt+Windows+Backspace</kbd>: sono spente di base e si accendono in Impostazioni, Tastiera.</p>
+<p>Se vuoi che la musica di sottofondo si abbassi quando suona un pad, nelle Proprietà del sottofondo, categoria Ducking, spunta anche i Pad sonori tra le sorgenti che la fanno abbassare. Il Controllo prima del via ti dice se manca qualche file dei pad: quei pad restano vuoti e la registrazione parte lo stesso.</p>
+
+<h3>Il monitor del conduttore: la tua cuffia di lavoro</h3>
+<p>Il <strong>monitor</strong> è un ascolto fatto apposta per te, nella cuffia scelta in Impostazioni, Suoni: senti solo le sorgenti che ti servono, ognuna al volume che ti serve, mentre registri, sei in diretta o fai la prova dei livelli. Non è il mix degli ascoltatori: è un mix tuo.</p>
+<ul>
+<li><kbd>Ctrl+Maiusc+A</kbd>: il monitor acceso o spento (il programma lo ricorda).</li>
+<li><kbd>Ctrl+Maiusc+W</kbd>: stando su una sorgente, la metti in cuffia o la togli, subito, anche in diretta ("Zoom: non in cuffia").</li>
+<li><kbd>Ctrl+Maiusc+H</kbd>: la finestra del monitor, da qualunque punto del programma (anche dal menu Sorgenti): la casella "Monitor acceso", il volume generale e l'elenco delle sorgenti, una riga ciascuna ("Lettore della regia: in cuffia, -6 dB", "Microfono: non in cuffia"). Nell'elenco lo <kbd>Spazio</kbd> mette in cuffia o toglie, <kbd>Più</kbd> e <kbd>Meno</kbd> alzano e abbassano di un decibel il volume in cuffia di quella sorgente. Ogni cambio vale subito; <kbd>Esc</kbd> la chiude.</li>
+</ul>
+<p>All'inizio sono in cuffia il lettore della regia, i pad, il sottofondo e le radio; non lo sono i microfoni (ti sentiresti in ritardo) e le sorgenti Applicazione e l'audio del computer (come Zoom, che senti già da Zoom stesso: lo sentiresti doppio). Il volume in cuffia si somma a quello nel mix: se in onda abbassi la musica, si abbassa anche in cuffia, e con il volume in cuffia la correggi solo per te. Anche il muto vale in cuffia; la pausa in onda no: in pausa in cuffia senti la musica e, se l'hai messo in cuffia, Zoom. Se la cuffia esce da un dispositivo registrato da una sorgente "audio del computer", il monitor resta spento (finirebbe in onda) e il programma te lo dice. Mentre ascolti il mix in onda (<kbd>Ctrl+Maiusc+O</kbd>, vedi la prova dei livelli) il monitor tace, per farti sentire il mix pulito, e torna quando lo spegni. Il monitor e i ritorni lavorano sul mix: con una sola sorgente, senza diretta né video, il mix non si calcola e non ci sono; all'avvio il programma te lo dice.</p>
+
+<h3>Se un dispositivo si scollega</h3>
+<p>Se durante la registrazione un dispositivo si scollega, la registrazione continua con le altre sorgenti e il programma ti avvisa; quando lo ricolleghi riprende da solo.</p>
+
+<h2 id="registrare">4. Registrare: file, nomi e formati</h2>
+
+<h3>I comandi</h3>
+<ul>
+<li><kbd>Ctrl+R</kbd>: avvia e ferma la registrazione.</li>
+<li><kbd>Ctrl+P</kbd>: pausa e ripresa. In pausa non si registra niente.</li>
+<li><kbd>Ctrl+T</kbd>: dice lo stato, il tempo trascorso e se ci sono stati problemi.</li>
+<li><kbd>Ctrl+D</kbd>: va in diretta insieme alla registrazione, o termina la diretta (capitolo 11).</li>
+</ul>
+<p>Quando fermi, il programma dice la durata e se ci sono stati problemi. Puoi anche fargli dire il nome della registrazione, aprire la sua cartella o mostrarti una finestra di riepilogo (Impostazioni, categoria Registrazioni, capitolo 12). Durante la registrazione ti avvisa se lo spazio sul disco sta finendo.</p>
+<p>Quando parte, il programma ti avvisa se qualcosa non va: per esempio un dispositivo non collegato, un brano del sottofondo che non si trova, o un problema nella composizione del video. Per un controllo completo prima di cominciare c'è <kbd>Ctrl+K</kbd> (capitolo 5).</p>
+
+<h3>Cosa viene salvato</h3>
+<p>In Configurazioni, Impostazioni della configurazione, categoria <strong>File</strong>:</p>
+<ul>
+<li><strong>Formato dei file</strong>: FLAC 24 bit (consigliato e di base), FLAC 16 bit, WAV 24, 16 o 32 bit a virgola mobile, AIFF, ALAC, MP3, Opus e AAC. Per i formati compressi scegli anche la qualità.</li>
+<li><strong>Cosa salvare quando le sorgenti sono più di una</strong>: il mix e le tracce separate (di base), solo il mix, solo le tracce.</li>
+<li><strong>Tracce separate</strong>: grezze, come arrivano dalle sorgenti, oppure come nel mix, con volume, ducking ed effetti.</li>
+<li><strong>Copia compressa alla fine</strong>: a registrazione finita, accanto al file salva anche una copia in MP3, AAC o Opus, comoda da mandare.</li>
+</ul>
+<p>Se un file arriva a 4 GB, la registrazione continua da sola in una parte nuova, e te lo dice.</p>
+
+<h3>Nomi e cartelle</h3>
+<p>Nella categoria <strong>Nomi e cartelle</strong> decidi come si chiamano le registrazioni e dove vanno. Di base il nome è fatto da: la parola Registrazione, il nome (della programmazione, altrimenti della configurazione), la data e l'ora, e ogni registrazione ha la sua cartella.</p>
+<ul>
+<li><strong>Parti del nome</strong>: un elenco in cui <kbd>Spazio</kbd> accende o spegne una parte e <kbd>Alt+frecce</kbd> la spostano. Oltre a quelle di base ci sono il giorno della settimana, un numero progressivo, la configurazione e un testo fisso scritto da te.</li>
+<li>Il separatore tra le parti e il formato della data.</li>
+<li>Una cartella per ogni registrazione: sempre, oppure solo quando ci sono più file.</li>
+<li>Raggruppare le registrazioni in cartelle per nome, per anno e mese, o tutte e due.</li>
+<li>Nomi dei file brevi (00 - Mix, 01 - ...) oppure con il nome della registrazione.</li>
+</ul>
+<p>In fondo, il <strong>Riepilogo della prossima registrazione</strong> ti fa leggere esattamente il percorso e i nomi dei file che verranno creati.</p>
+
+<h2 id="livelli">5. Livelli e controlli prima di registrare</h2>
+
+<h3>Controllo prima del via</h3>
+<p><kbd>Ctrl+K</kbd> ascolta tutte le sorgenti per 3 secondi (parla nel microfono intanto) e poi ti dice per ognuna se il segnale è buono, troppo basso, troppo alto o assente, se mancano brani, e quanto spazio c'è sul disco, con le ore di registrazione che ci stanno.</p>
+
+<h3>La prova dei livelli</h3>
+<p><kbd>Ctrl+Maiusc+K</kbd> accende la prova dei livelli: le sorgenti sono in ascolto ma niente viene registrato. Intanto puoi regolare volumi ed effetti e sentire i livelli:</p>
+<ul>
+<li><kbd>Ctrl+L</kbd>: il livello della sorgente selezionata;</li>
+<li><kbd>Ctrl+Maiusc+L</kbd>: i livelli di tutte le sorgenti;</li>
+<li><kbd>Ctrl+Maiusc+V</kbd>: il tono dei livelli, un suono che sale e scende con il livello della sorgente selezionata;</li>
+<li><kbd>Ctrl+Alt+L</kbd>: sceglie se misurare i livelli in ingresso, prima del volume, o nel mix, dopo il volume.</li>
+</ul>
+<p>Gli stessi comandi funzionano anche durante la registrazione.</p>
+
+<h3>Ascoltare il mix durante la prova</h3>
+<p><kbd>Ctrl+Maiusc+O</kbd> accende o spegne l'<strong>ascolto del mix in onda</strong>: senti esattamente quello che arriva agli ascoltatori e nella registrazione, con volumi, effetti, mix finale e pausa in onda, e ogni regolazione si sente subito. Funziona nella prova dei livelli, in diretta e in registrazione (con una sola sorgente e senza diretta né video il mix è il file stesso, e l'ascolto non c'è). Mentre è acceso il monitor del conduttore tace. Il programma ricorda se l'avevi acceso nella prova dei livelli, e lì lo riaccende da solo; in diretta e in registrazione parte sempre spento, così non ti ritrovi senza monitor senza averlo chiesto. Il dispositivo dell'ascolto si sceglie in Impostazioni, categoria Suoni. Se una sorgente registra proprio quel dispositivo, l'ascolto resta spento, perché il mix rientrerebbe nel mix all'infinito, e il programma te lo spiega.</p>
+
+<h3>La registrazione di prova</h3>
+<p><kbd>Ctrl+Alt+R</kbd> fa una breve registrazione di prova, della durata che scegli; di nuovo <kbd>Ctrl+Alt+R</kbd> la ferma prima. Finita la prova si apre la finestra <strong>Ascolta la prova</strong>, dove la riascolti e intanto regoli il mix:</p>
+<ul>
+<li>l'elenco delle sorgenti: <kbd>Spazio</kbd> accende o spegne, <kbd>Più</kbd> e <kbd>Meno</kbd> il volume, <kbd>Invio</kbd> gli effetti;</li>
+<li>cosa ascoltare: il risultato completo, il grezzo senza effetti né volumi, oppure una sola sorgente;</li>
+<li>richiamare una scena, gli effetti del mix finale, pausa, indietro e avanti di 5 secondi, dall'inizio;</li>
+<li><strong>Controlla la qualità con l'intelligenza artificiale</strong>: le misure del programma e l'ascolto di Gemini su ogni sorgente della prova, come il controllo della qualità di una registrazione (capitolo 10), ma prima di registrare davvero. Le tracce sono quelle grezze, prima di volume ed effetti. La risposta dice se tutto è pronto e, se no, cosa sistemare (per esempio "alza il guadagno del microfono di circa 6 dB"). Serve l'intelligenza artificiale preparata in Impostazioni (capitolo 12);</li>
+<li><strong>Applica</strong>: porta le modifiche nella configurazione.</li>
+</ul>
+
+<h3>La saturazione</h3>
+<p>Se un suono è troppo forte e distorce, il programma ti avvisa con un suono e un annuncio, e lo segna nel registro dicendo dove intervenire: abbassare il livello del dispositivo, allontanarsi dal microfono, o abbassare il guadagno di ingresso. Il mix finale ha sempre un limitatore che lo protegge (capitolo 7).</p>
+
+<h2 id="mixer">6. Il mixer</h2>
+<p>Ogni sorgente ha, oltre al volume:</p>
+<ul>
+<li>il <strong>guadagno di ingresso</strong> (da -24 a +24 dB): alza o abbassa il segnale appena arriva, prima degli effetti. Serve per un microfono troppo debole o troppo forte. Il volume invece regola quanto la sorgente pesa nel mix, dopo gli effetti;</li>
+<li>il <strong>bilanciamento</strong>: dove sta la sorgente tra sinistra e destra;</li>
+<li><strong>muta</strong>: la toglie dal mix senza spegnerla;</li>
+<li>il <strong>ritardo</strong> (fino a 1000 millisecondi): la fa arrivare un po' dopo nel mix, per rimettere a tempo una sorgente che arriva prima di un'altra;</li>
+<li><strong>inverti la fase</strong>: per due microfoni che si annullano a vicenda.</li>
+</ul>
+
+<h3>Dall'elenco delle sorgenti</h3>
+<ul>
+<li><kbd>Più</kbd> e <kbd>Meno</kbd>: il volume.</li>
+<li><kbd>Ctrl+Più</kbd> e <kbd>Ctrl+Meno</kbd>: il guadagno di ingresso.</li>
+<li><kbd>Ctrl+Freccia sinistra</kbd> e <kbd>Ctrl+Freccia destra</kbd>: il bilanciamento dell'1%; con <kbd>Maiusc</kbd> del 10%.</li>
+<li><kbd>Ctrl+Maiusc+M</kbd>: muta o di nuovo nel mix.</li>
+</ul>
+
+<h3>La finestra Mixer</h3>
+<p><kbd>Ctrl+M</kbd> apre il mixer: un elenco con tutte le sorgenti e, nell'ultima riga, il volume generale del mix. Con <kbd>Tab</kbd> trovi i controlli della sorgente selezionata: Volume, Guadagno, Bilanciamento e Ritardo sono caselle a elenco da regolare con le frecce (Freccia su alza; il bilanciamento va da sinistra, in alto, a destra, in basso), poi le caselle Muta e Inverti la fase. Le modifiche si sentono subito.</p>
+<p>Nell'elenco del mixer funzionano gli stessi tasti dell'elenco delle sorgenti, più: <kbd>Alt+Più</kbd> e <kbd>Alt+Meno</kbd> il ritardo di 1 millisecondo (con <kbd>Maiusc</kbd> di 10), <kbd>Ctrl+Maiusc+F</kbd> la fase, <kbd>Ctrl+L</kbd> i livelli in ingresso e nel mix. <kbd>F1</kbd> apre la guida alle scorciatoie sui tasti del Mixer.</p>
+
+<h2 id="effetti">7. Gli effetti e il mix finale</h2>
+
+<h3>Gli effetti di una sorgente</h3>
+<p>Nelle Proprietà di ogni sorgente audio c'è la categoria <strong>Effetti</strong>: l'elenco degli effetti, nell'ordine in cui lavorano. <kbd>Spazio</kbd> accende o spegne un effetto, <kbd>Invio</kbd> lo regola. Gli effetti sono:</p>
+<ul>
+<li><strong>Filtro passa-alto</strong>: toglie i suoni più gravi, come rombi, vibrazioni e colpi sul tavolo;</li>
+<li><strong>Riduzione del rumore</strong>: riconosce la voce e abbassa tutto il resto, fruscio, ventole, condizionatore;</li>
+<li><strong>Gate</strong>: abbassa il suono nelle pause, così i rumori della stanza spariscono quando non parli;</li>
+<li><strong>Compressore</strong>: rende la voce più uniforme e presente;</li>
+<li><strong>De-esser</strong>: smorza le s troppo taglienti;</li>
+<li><strong>Equalizzatore</strong>: alza o abbassa cinque zone del suono, per una voce più calda, più chiara o meno nasale;</li>
+<li><strong>Delay</strong>: un'eco;</li>
+<li><strong>Riverbero</strong>: il suono di uno spazio, da una stanza a una cattedrale.</li>
+</ul>
+<p>Ogni effetto ha una spiegazione e dei <strong>preset</strong> pronti con nomi semplici (per esempio "Voce maschile", "Stanza rumorosa", "Voce podcast"): spesso basta scegliere quello giusto. Se vuoi, regoli i valori uno per uno con le caselle a elenco: Freccia su alza e Freccia giù abbassa, a passi piccoli e uguali in tutta la scala (1% per le percentuali, 1 dB, mezzo dB per i tetti, 1 millisecondo, un decimo di secondo, 1 Hz e 10 Hz sopra i mille). Per andare veloci: <kbd>Pagina su</kbd> e <kbd>Pagina giù</kbd> saltano di 10 passi, con <kbd>Ctrl</kbd> di 100; <kbd>Inizio</kbd> porta al massimo e <kbd>Fine</kbd> al minimo; scrivendo un numero (per esempio 150, oppure 1,5, oppure 20 per -20 dB) vai subito al valore più vicino. Puoi salvare le tue regolazioni come preset personale.</p>
+<p>Per sentire la differenza: <strong>Registra un campione</strong> registra 10 secondi dalla sorgente, poi lo senti con l'effetto mentre regoli, e con <strong>Confronta</strong> lo senti senza. Nel compressore, <strong>Quanto sta agendo?</strong> ti dice di quanto sta abbassando in quel momento.</p>
+<p>Durante la prova dei livelli le modifiche si sentono subito nell'ascolto del mix; con <strong>Annulla</strong> tutto torna com'era.</p>
+
+<h3>Le catene</h3>
+<p>Una catena è l'insieme di tutti gli effetti di una sorgente con le loro regolazioni. Con <strong>Carica una catena</strong> scegli tra quelle pronte (per esempio "Voce podcast completa", "Stanza rumorosa", "Musica di sottofondo") o le tue; con <strong>Salva la catena</strong> salvi la tua per usarla su altre sorgenti.</p>
+
+<h3>Il mix finale</h3>
+<p>In Impostazioni della configurazione, categoria <strong>Mix finale</strong>, ci sono gli effetti che lavorano su tutto il mix insieme (con una sola sorgente, sul suo file):</p>
+<ul>
+<li><strong>Livellatore</strong>: tiene il volume costante per tutta la registrazione, anche se ti allontani dal microfono;</li>
+<li><strong>Compressore del mix</strong>: rende voci e musica più unite, come in un programma radio;</li>
+<li><strong>Limitatore</strong>: sempre acceso, impedisce al suono di superare il tetto, così la registrazione non gracchia mai;</li>
+<li><strong>Normalizzazione</strong>: quando fermi la registrazione, salva accanto una copia al volume giusto per la piattaforma scelta (podcast, Spotify, YouTube, radio), con nel nome il livello, per esempio "(-14 LUFS)". Se hai registrato anche il video, fa lo stesso con il video: nella copia il mix ha il volume giusto per i social, mentre l'immagine e le tracce separate restano identiche (non si ricomprimono, quindi non si perde qualità e ci vuole poco). La scelta <strong>Tieni anche i file non normalizzati</strong> dice cosa fare degli originali: con "sì" (come all'inizio) restano tutti e due; con "no" la copia normalizzata prende il posto dell'originale e il suo nome, così hai un solo file audio e un solo video. Questa scelta non cambia quando cambi preset.</li>
+</ul>
+<p>Anche qui ci sono catene pronte, per esempio "Podcast", "Video per YouTube e social", "Audiolibro".</p>
+
+<h2 id="scene">8. Le scene</h2>
+<p>Una scena è una fotografia della situazione delle sorgenti: quali sono accese, il loro volume e i loro effetti, e se c'è il video, dove sta ogni fonte nell'immagine. Richiamando una scena, tutto torna così, anche durante la registrazione. Per esempio: scena 1 "Presentazione" con la musica alta, scena 2 "Parlato" con la musica bassa, scena 3 "Ospite" con il secondo microfono acceso.</p>
+<ul>
+<li><kbd>Ctrl+Maiusc</kbd> con un numero da 1 a 0: memorizza la situazione attuale nella scena con quel numero (lo 0 è la 10). Se la scena c'è già, il programma chiede se aggiornarla (il pulsante già scelto è No, così un Invio di troppo non la cancella).</li>
+<li><kbd>Ctrl</kbd> con il numero: richiama la scena.</li>
+<li>Configurazioni, Scene: le scene memorizzate, quella in uso spuntata, e "Memorizza in una nuova scena".</li>
+<li>La casella <strong>Scena</strong> nella finestra principale fa la stessa cosa con le frecce. Sulla casella: <kbd>Invio</kbd> apre le impostazioni delle scene sulla scena in uso, <kbd>F2</kbd> la rinomina, <kbd>Canc</kbd> la elimina (con conferma), il tasto <kbd>Applicazioni</kbd> apre il menu della scena.</li>
+<li>Nel menu Configurazioni, Scene ci sono anche: aggiorna la scena in uso con la situazione attuale, rinominala, eliminala, impostazioni delle scene.</li>
+</ul>
+<p>Il passaggio da una scena all'altra è morbido, come un tecnico che muove i cursori. La sua durata (immediato, 0,3, 0,5, 1 o 2 secondi) si sceglie in Impostazioni della configurazione, categoria <strong>Scene</strong>, dove le scene si possono anche rinominare (<kbd>F2</kbd>), eliminare (<kbd>Canc</kbd>) e riordinare (<kbd>Alt+Freccia su</kbd> e <kbd>giù</kbd>).</p>
+<p>Il guadagno di ingresso, il bilanciamento, muta, ritardo e fase non fanno parte delle scene: restano come li hai regolati.</p>
+
+<h2 id="programmazioni">9. Registrazioni programmate e automatismi del silenzio</h2>
+
+<h3>Le registrazioni programmate</h3>
+<p>Una programmazione fa partire e fermare una registrazione da sola, all'orario scelto: per esempio una trasmissione alla radio tutti i lunedì alle 21. Dal menu Programmazioni: <strong>Nuova programmazione</strong> e <strong>Gestisci programmazioni</strong>, dove puoi modificarle, duplicarle, eliminarle, attivarle o disattivarle ed eseguirle subito.</p>
+<p>La finestra di una programmazione ha queste categorie:</p>
+<ul>
+<li><strong>Generale</strong>: il nome, se è attiva, la configurazione da registrare e la scena da richiamare all'inizio.</li>
+<li><strong>Quando</strong>: una volta, ogni giorno, ogni tot giorni, in certi giorni della settimana, ogni mese (un giorno preciso o per esempio il primo lunedì), ogni anno, oppure a intervalli; e l'orario di inizio.</li>
+<li><strong>Fine</strong>: dopo una durata, oppure a un orario. Con la fine a un orario, sotto c'è la riga <strong>Durata della registrazione</strong> (per esempio "1 ora e 2 minuti"), così ti accorgi subito di un'ora sbagliata. Quando cambi l'orario di inizio, la fine si sposta insieme a lui e la durata resta uguale.</li>
+<li><strong>Durante</strong>: cambi di scena a tempo, e la divisione della registrazione in blocchi (per esempio un file ogni ora), tenendo solo gli ultimi se vuoi.</li>
+<li><strong>Silenzio e suono</strong>: gli automatismi del silenzio, spiegati più sotto.</li>
+<li><strong>Dopo la fine</strong>: un suono, copiare o spostare i file in un'altra cartella, aprire un programma, mettere nel Cestino le registrazioni vecchie, e poi chiudere il programma, sospendere, ibernare o spegnere il PC (con 60 secondi per annullare).</li>
+<li><strong>Limiti ed eccezioni</strong>: da quando vale, quando termina, le date da saltare.</li>
+<li><strong>Avvisi e imprevisti</strong>: preavvisi prima della partenza, un controllo di sorgenti e spazio, cosa fare se è già in corso un'altra registrazione o se una sorgente non si apre, il risveglio del PC dalla sospensione e l'apertura di HDX Recorder se è chiuso.</li>
+<li><strong>Riepilogo</strong>: tutto quello che hai scelto, in parole, con la prossima registrazione.</li>
+</ul>
+<p>Dal menu Programmazioni puoi anche sentire le <strong>prossime registrazioni</strong>, <strong>saltare</strong> la prossima, <strong>rimandarla di 5 minuti</strong>, <strong>annullare lo spegnimento</strong> o la sospensione dopo la fine, e leggere lo <strong>storico</strong> delle registrazioni programmate fatte, saltate o perse.</p>
+<p>Se HDX Recorder era chiuso o il PC spento all'ora giusta, al successivo avvio il programma ti dice quali registrazioni non sono partite.</p>
+
+<h3>Gli automatismi del silenzio</h3>
+<p>In Impostazioni della configurazione, categoria <strong>Silenzio e suono</strong> (e nella stessa categoria di ogni programmazione):</p>
+<ul>
+<li><strong>Parti quando arriva il suono</strong>: <kbd>Ctrl+R</kbd> mette la registrazione in attesa, e parte da sola appena arriva un suono;</li>
+<li><strong>Pausa nel silenzio</strong>: va in pausa dopo un silenzio e riprende quando torna il suono;</li>
+<li><strong>Ferma dopo un silenzio lungo</strong>.</li>
+</ul>
+<p>Scegli quali sorgenti contano come suono e la soglia del silenzio; il pulsante <strong>Misura il silenzio</strong> ascolta 3 secondi di silenzio e propone la soglia giusta. Un pre-ascolto tiene anche l'istante prima del suono, così l'inizio non viene tagliato. Un suono discreto ti avvisa quando parte, va in pausa o riprende.</p>
+
+<h2 id="video">10. Il video</h2>
+<p>Al video servono almeno una sorgente audio accesa e una sorgente video. Le sorgenti video si aggiungono come le altre, con <kbd>Ctrl+N</kbd>:</p>
+<ul>
+<li><strong>Schermo</strong>: uno degli schermi, con o senza il cursore del mouse;</li>
+<li><strong>Finestra</strong>: la finestra di un programma aperto. Se la riduci o la chiudi, nel video resta l'ultima immagine, e riprende da sola quando torna;</li>
+<li><strong>Webcam</strong>: con la qualità automatica o scelta da te. Nelle sue proprietà (anche con <kbd>P</kbd> nella Composizione) scegli la <strong>forma nel video</strong>: rettangolo, angoli arrotondati, oppure rotonda (un cerchio vero, preso dal centro dell'immagine), e il <strong>bordo</strong>: nessuno, sottile, medio o spesso, con il suo colore. Forma e bordo cambiano anche mentre registri. La casella <strong>Sfondo dietro di te</strong> cambia la stanza dietro la persona: com'è; <strong>sfocato</strong> (leggero, medio o forte); <strong>tolto</strong>, e allora si vede quello che c'è sotto nel video, per esempio lo schermo del tutorial; oppure <strong>sostituito</strong>, con il pulsante Sfondo che apre la scelta: un colore, una sfumatura, uno dei 22 disegni o un'immagine tua. Il programma riconosce la persona con un piccolo modello di intelligenza artificiale di Google che gira sul tuo computer, senza Internet e senza mandare niente a nessuno. Funziona meglio con la luce davanti a te, testa e spalle inquadrate e nessuna lampada nell'inquadratura: con poca luce i vestiti scuri possono diventare un po' trasparenti, e se la webcam resta molto scura il programma te lo dice. Anche questo cambia mentre registri;</li>
+<li><strong>Testo (titolo, cartello, striscia)</strong>: un testo scritto da te, fermo o che scorre (vedi più sotto);</li>
+<li><strong>Immagine (logo, foto, cartello)</strong>: un file PNG, JPG, BMP, GIF (la prima immagine), TIFF o WebP, sopra il video. Le parti trasparenti dei PNG restano trasparenti: un logo senza fondo si appoggia pulito su quello che c'è sotto.</li>
+</ul>
+<p>Un'immagine appena aggiunta va in alto a destra, piccola, come un logo; poi la sposti nella Composizione video come le altre fonti, anche sopra lo schermo o la webcam. Nelle sue proprietà (anche con <kbd>P</kbd> nella Composizione) scegli il file, la <strong>visibilità</strong> (dal 100%, piena, fino al 10%, quasi trasparente) e la <strong>comparsa e scomparsa</strong>: quando la mostri o la nascondi (con <kbd>Spazio</kbd> nella Composizione o con una scena), compare e sparisce subito oppure con una dissolvenza di mezzo secondo, uno o due secondi. È comodo per un cartello come "Torno subito": una scena con il cartello visibile e una senza, e passando da una all'altra il cartello sfuma. Visibilità e dissolvenza cambiano anche mentre registri; un altro file vale dalla prossima registrazione. Se all'avvio il file non c'è più, il programma te lo dice.</p>
+<h3>Il testo nel video</h3>
+<p>Una sorgente <strong>Testo</strong> mostra nel video quello che scrivi: un titolo, il tuo nome, "Torno subito", una striscia di notizie. Appena aggiunto va in basso al centro, largo l'80% del video; nella Composizione lo sposti come le altre fonti, e la sua larghezza (tasti da 1 a 5, <kbd>Ctrl+Più</kbd> e <kbd>Ctrl+Meno</kbd>) è la larghezza della sua fascia: lì il testo va a capo da solo. La finestra del testo ha due colonne di caselle:</p>
+<ul>
+<li><strong>Testo</strong>: un campo a più righe, dove <kbd>Invio</kbd> va a capo. Il pulsante <strong>Inserisci un'informazione</strong> mette dove sei l'ora di adesso, la data di oggi o la durata della registrazione: nel video si aggiornano da sole (la durata conta solo il tempo registrato, senza le pause). Sono facoltative: se non le usi, il testo resta com'è.</li>
+<li><strong>Carattere</strong> (quelli di Windows, i più comuni in cima), <strong>Stile</strong> (normale, grassetto, corsivo), <strong>Grandezza</strong> (in percentuale dell'altezza del video, così è uguale in 720 come in 4K), <strong>Colore del testo</strong> e <strong>Allineamento</strong>.</li>
+<li><strong>Movimento</strong>: fermo; scorre da destra a sinistra, su una riga, come la striscia delle notizie (ricomincia di continuo); oppure scorre dal basso in alto, come i titoli di coda. La <strong>Velocità</strong> è lenta, media o veloce.</li>
+<li><strong>Contorno</strong> (sottile o spesso, con il suo colore) e <strong>Ombra</strong>: rendono il testo leggibile sopra qualsiasi cosa.</li>
+<li><strong>Riquadro dietro il testo</strong>: nessuno, oppure un colore, con la sua visibilità e gli angoli arrotondati se vuoi. Nella striscia che scorre il riquadro è la fascia intera.</li>
+<li><strong>Visibilità del testo</strong> e <strong>Comparsa e scomparsa</strong>, come per l'immagine.</li>
+</ul>
+<p>Con <kbd>P</kbd> nella Composizione cambi tutto anche mentre registri: il testo nuovo compare subito nel video. "Descrivi la scena" dice anche cosa c'è scritto.</p>
+<p>Attenzione: se la tenda schermo di NVDA è accesa, nel video lo schermo è nero. Il programma se ne accorge e ti avvisa.</p>
+<h3>Far vedere dove sei, per i tutorial</h3>
+<p>Nelle Proprietà di una sorgente Schermo o Finestra ci sono tre aiuti per chi guarda il tuo video. Sono tutti facoltativi, di base spenti, e si vedono <strong>solo nel video</strong>: sul tuo schermo non cambia niente.</p>
+<ul>
+<li><strong>Riquadro intorno al focus della tastiera</strong> (<kbd>Alt+O</kbd>): un riquadro colorato intorno al pulsante, alla casella, alla voce di menu o al collegamento su cui sei. È pensato per chi lavora con lo screen reader e con la tastiera: chi guarda il tutorial vede sempre dove sei, anche se il mouse resta fermo. Il riquadro segue il focus vero di Windows, quello che si sposta con <kbd>Tab</kbd> e le frecce; nelle pagine web in modalità navigazione dello screen reader segue i collegamenti e i campi su cui arriva il focus, non la lettura con le frecce. Quando il focus è su una finestra intera, il riquadro non si disegna.</li>
+<li><strong>Cerchio intorno al cursore del mouse</strong> (<kbd>Alt+M</kbd>): un cerchio colorato e trasparente intorno alla freccia, per trovarla subito. Si vede solo se è spuntato anche "Mostra il cursore del mouse nel video".</li>
+<li><strong>Segnale dei clic del mouse</strong> (<kbd>Alt+I</kbd>): a ogni clic parte un'onda colorata dal punto del clic; con il tasto destro l'onda ha due anelli.</li>
+</ul>
+<p>Sotto si scelgono il <strong>colore</strong> (<kbd>Alt+L</kbd>: giallo, rosso, verde, azzurro, arancione o rosa) e la <strong>grandezza</strong> (<kbd>Alt+G</kbd>: piccola, media o grande), uguali per il riquadro, il cerchio e l'onda. Le evidenze si vedono anche nell'anteprima della Composizione video.</p>
+<h3>Lo zoom che segue</h3>
+<p>Sempre nelle Proprietà di una sorgente Schermo o Finestra, la casella <strong>"Zoom che segue"</strong> (<kbd>Alt+Z</kbd>) avvicina il video alla parte dello schermo dove stai lavorando e la segue, scivolando senza scatti: su uno schermo grande le scritte piccole diventano leggibili per chi guarda. Anche lo zoom è solo nel video e di base è spento. Sotto ci sono tre scelte:</p>
+<ul>
+<li><strong>Segue</strong> (<kbd>Alt+E</kbd>): il focus della tastiera (di base, pensato per chi usa lo screen reader), il mouse, oppure tutti e due (segue quello che si è mosso per ultimo);</li>
+<li><strong>Ingrandimento</strong> (<kbd>Alt+N</kbd>): 1,5, 2 (di base) o 3 volte;</li>
+<li><strong>Velocità</strong> (<kbd>Alt+V</kbd>): quanto in fretta lo zoom raggiunge il posto nuovo: lenta, media o veloce.</li>
+</ul>
+<p>Lo zoom parte acceso con la registrazione. Durante la registrazione, da qualsiasi programma, la scorciatoia globale <kbd>Ctrl+Alt+Windows+O</kbd> lo spegne (il video torna intero, scivolando) e lo riaccende, con una nota che sale quando si accende e una che scende quando si spegne. Come le altre scorciatoie globali va accesa in Impostazioni, Tastiera. Ai bordi dello schermo lo zoom si ferma: non mostra mai niente fuori dall'immagine.</p>
+<p>In Impostazioni della configurazione, categoria <strong>Video</strong>: la dimensione del video (di base 1920 × 1080, oppure come lo schermo), i fotogrammi al secondo (di base 30), la compressione, la qualità e la compressione con la scheda video.</p>
+<p>La <strong>compressione</strong> decide quanto spazio occupa il video:</p>
+<ul>
+<li><strong>H.264</strong>: si apre ovunque, su ogni computer, telefono e sito. È quella di base.</li>
+<li><strong>HEVC</strong>: circa un terzo di spazio in meno, con la stessa qualità. Alcuni programmi vecchi non la aprono. <strong>Attenzione:</strong> con l'HEVC il video non è protetto dai blocchi. Se il computer si blocca o va via la corrente durante la registrazione, il video si perde; l'audio invece no, perché è sempre salvato nei suoi file.</li>
+<li><strong>AV1</strong>: la più moderna, circa metà spazio. Di solito la sanno fare solo le schede video recenti. Con alcune schede AMD il video può risultare alto 2 righe in più (per esempio 1920 × 1082 invece di 1080): lo decide la scheda e non si nota guardandolo; in quel caso la voce dell'elenco lo dice.</li>
+</ul>
+<p>Con H.264 e AV1 il video è protetto dai blocchi: viene scritto a pezzi di pochi secondi, così un blocco del computer non rovina quello che è già scritto.</p>
+<p>Nell'elenco ci sono solo le compressioni che il tuo computer sa fare, e per ognuna è detto chi la fa: la scheda video (veloce) oppure il processore (più lenta, pesa di più sul computer). Se la compressione scelta non parte, il video si registra lo stesso in H.264 e il programma te lo dice: la registrazione non si perde mai. Se togli la spunta della scheda video, una compressione che solo la scheda video sa fare non parte e si torna all'H.264.</p>
+<p>La casella <strong>"Metti nel video anche le tracce separate delle sorgenti audio"</strong> (<kbd>Alt+T</kbd>) serve per il montaggio. Senza la casella il video ha una sola traccia audio, il mix. Con la casella spuntata ci sono prima una traccia per ogni sorgente audio, nell'ordine dell'elenco delle sorgenti, e per ultimo il mix: per esempio la traccia 1 è il microfono, la 2 l'audio del computer, la 3 il mix. Il mix resta quello che si sente in ogni lettore e sui siti. Le tracce sono uguali ai file delle tracce, grezze o come nel mix secondo la scelta "Tracce separate" della categoria File, e valgono anche se lì salvi solo il mix. Le tracce non hanno un nome dentro il video (Windows non lo permette): conta l'ordine. Tutte le tracce partono insieme al video e restano a tempo. Nel video il mix è segnato come traccia principale e le altre come alternative, e sta per ultimo perché Reaper suona l'ultima traccia: così lettori e programmi suonano il mix. In Reaper, caricando il video si sente il mix; per avere tutte le tracce separate serve un'estensione che divide le tracce audio di un video. Con una sola sorgente audio c'è solo il mix. Ogni traccia in più occupa circa 85 MB all'ora.</p>
+<p>La casella <strong>"Conto alla rovescia prima di registrare"</strong> (<kbd>Alt+R</kbd>): nessuno, 3, 5 o 10 secondi. Quando avvii la registrazione, prima senti un colpo e il numero a ogni secondo, e poi la registrazione parte. Serve a mettersi in posizione o a portare il focus dove vuoi cominciare, anche in un altro programma. Durante il conto non si registra niente. Premendo di nuovo <kbd>Ctrl+R</kbd>, o la scorciatoia globale, la registrazione parte subito; <kbd>Esc</kbd> nella finestra di HDX Recorder annulla il conto. Vale per ogni registrazione avviata a mano con questa configurazione, anche senza video; le registrazioni programmate partono sempre all'orario esatto, senza conto.</p>
+<p>Ogni voce della <strong>qualità</strong> dice anche quanto spazio occupa più o meno un'ora di video, per esempio "Alta (consigliata), circa 3,6 GB all'ora". Il numero cambia subito quando cambi la dimensione, i fotogrammi o la compressione.</p>
+
+<h3>Lo sfondo del video</h3>
+<p>Dove non c'è nessuna fonte, il video di base è nero. Nella stessa categoria Video, il pulsante <strong>"Sfondo del video"</strong> (<kbd>Alt+O</kbd>) dice lo sfondo di adesso, per esempio "Sfondo del video: Nero...", e apre la finestra per sceglierlo. La prima casella, <strong>Sfondo</strong>, ha sei scelte; sotto compaiono solo le caselle che servono per quella scelta:</p>
+<ul>
+<li><strong>Nero</strong>: come sempre.</li>
+<li><strong>Un colore</strong>: la casella Colore, con i colori per nome (bianco, grigio chiaro, blu notte, verde, bordeaux e altri).</li>
+<li><strong>Una sfumatura di due colori</strong>: il primo colore, il secondo colore e la direzione: dall'alto in basso, da sinistra a destra, in diagonale, oppure dal centro verso i bordi (il primo colore al centro).</li>
+<li><strong>Un disegno con due colori</strong>: il programma disegna lo sfondo da solo, alla misura esatta del video, con il primo e il secondo colore che scegli. I disegni sono 22: Luci sfocate, Onde, Aurora, Poligoni, Cerchi, Punti, Righe, Studio (luce al centro e bordi più scuri), Tela, Nuvole, Quadretti, Scacchiera, Esagoni, Raggi, Bolle, Strisce, Zig zag, Marmo, Mosaico, Stelle, Rombi e Curve di livello. La casella <strong>Variante</strong>, da 1 a 10, cambia la grandezza degli elementi e, nei disegni fatti a caso (luci, bolle, nuvole, marmo, mosaico, stelle...), anche dove stanno. Per esempio "Luci sfocate, blu notte e azzurro, variante 3".</li>
+<li><strong>Un'immagine</strong>: il pulsante <strong>Scegli un'immagine</strong> apre la scelta del file (PNG, JPG, BMP, GIF, TIFF, WebP, e HEIC se Windows lo sa aprire); la casella Immagine dice quella scelta. Se l'immagine non si apre, il programma lo dice subito. L'adattamento: <strong>riempie tutto il video</strong> (i bordi che avanzano si tagliano) oppure <strong>si vede intera</strong>, e allora intorno c'è il colore che scegli. Le foto del telefono si girano da sole per il verso giusto, e le parti trasparenti dei PNG lasciano vedere il colore.</li>
+<li><strong>La fonte principale sfocata</strong>: dietro le fonti c'è la fonte più grande del video, ingrandita fino a riempire tutto, sfocata e un po' scurita. È l'effetto dei video in cui ai lati, invece delle bande nere, c'è la stessa immagine sfocata. La sfocatura può essere leggera, media o forte. Se la fonte più grande cambia (per esempio con una scena), lo sfondo la segue.</li>
+</ul>
+<p>Lo sfondo si vede subito anche nell'anteprima della Composizione video. "Descrivi la scena" lo dice alla fine, per esempio "Sfondo: Blu notte.". Con uno sfondo diverso dal nero, l'avviso "il video è vuoto" non compare più, perché lo spazio libero si vede apposta. Se durante la registrazione l'immagine dello sfondo non si apre più (per esempio perché l'hai spostata), il video usa il colore scelto e il programma ti avvisa.</p>
+<h3>La composizione video</h3>
+<p>Con più fonti video, decidi dove sta ognuna nell'immagine. <kbd>Ctrl+Maiusc+C</kbd> apre la finestra <strong>Composizione video</strong>: un elenco delle fonti, dalla più in alto alla più in basso, con un'anteprima per chi guarda. Sulla fonte selezionata:</p>
+<ul>
+<li><kbd>Q W E</kbd>, <kbd>A S D</kbd>, <kbd>Z X C</kbd> (o il tastierino numerico): le nove zone, da in alto a sinistra a in basso a destra;</li>
+<li>da <kbd>1</kbd> a <kbd>5</kbd>: la misura, da tutto il video a un quinto;</li>
+<li><kbd>Ctrl+frecce</kbd>: sposta dell'1%, con <kbd>Maiusc</kbd> del 5%;</li>
+<li><kbd>Ctrl+Più</kbd> e <kbd>Ctrl+Meno</kbd>: più grande o più piccola dell'1%, con <kbd>Maiusc</kbd> del 5%;</li>
+<li><kbd>Alt+Freccia su</kbd> e <kbd>Alt+Freccia giù</kbd>: sopra o sotto le altre fonti;</li>
+<li><kbd>Spazio</kbd>: mostra o nasconde la fonte nel video;</li>
+<li><kbd>I</kbd>: misure e distanze dai bordi e dalle altre fonti;</li>
+<li><kbd>F2</kbd>: descrive tutta la scena;</li>
+<li><kbd>L</kbd>: le disposizioni pronte e salvate;</li>
+<li><kbd>Ctrl+Maiusc+I</kbd>: il menu dell'intelligenza artificiale sulla scena di adesso (vedi "L'intelligenza artificiale sul video", più avanti);</li>
+<li><kbd>Invio</kbd>: posizione e misure esatte della fonte (vedi sotto);</li>
+<li><kbd>P</kbd>: le proprietà della sorgente, le stesse del menu Sorgenti: per schermo e finestra il cursore, le evidenze (riquadro sul focus, cerchio sul cursore, clic) e lo zoom che segue; per la webcam la qualità;</li>
+<li><kbd>F</kbd>: lo sfondo del video (vedi "Lo sfondo del video", sopra);</li>
+<li><kbd>V</kbd>: le impostazioni del video (dimensione, fotogrammi, compressione, qualità): si apre la finestra della configurazione, già sulla categoria Video;</li>
+<li><kbd>N</kbd>: aggiungi una nuova sorgente video (schermo, finestra o webcam);</li>
+<li><kbd>Applicazioni</kbd> o <kbd>Maiusc+F10</kbd>: il menu della composizione, con tutte queste voci e accanto il loro tasto;</li>
+<li><kbd>F11</kbd>: l'anteprima a tutto schermo, per chi guarda;</li>
+<li><kbd>F1</kbd>: la guida alle scorciatoie, aperta sui tasti di questa finestra. <kbd>F2</kbd> e <kbd>I</kbd> premuti due volte mostrano il testo in una finestra da leggere.</li>
+</ul>
+<p>Così prepari tutto il video senza chiudere la Composizione: ogni cambio si vede subito nell'anteprima, e puoi controllarlo con <kbd>F2</kbd> o con l'intelligenza artificiale. Lo sfondo, le evidenze e lo zoom cambiano anche mentre registri, dentro il video che si sta registrando. Dimensione, fotogrammi e compressione invece si cambiano solo prima di registrare, perché il file del video è già aperto con quelle misure; anche una sorgente nuova entra solo nella prossima registrazione: se ci provi mentre registri, il programma te lo spiega. Gli altri cambi delle proprietà (per esempio un altro schermo o un'altra webcam) registrando valgono dalla prossima, e il programma lo dice. <strong>Annulla</strong> della Composizione rimette tutto com'era all'apertura: posizioni, sfondo, proprietà, sorgenti aggiunte e impostazioni del video. <strong>OK</strong> tiene tutto.</p>
+<p>Mentre sposti, il programma ti dice quando tocchi un bordo o un'altra fonte, quando una fonte ne copre un'altra e quando esce dal video, anche con suoni che puoi spegnere in Impostazioni, Suoni. La casella "Fermati ai bordi e alle altre fonti" fa fermare lo spostamento quando tocchi qualcosa.</p>
+
+<h3>Le proprietà di una fonte</h3>
+<p>Con <kbd>Invio</kbd> sulla fonte (o il pulsante Proprietà) si apre una finestra con i valori precisi. Sono tutte caselle a elenco da regolare con le frecce: <kbd>Freccia su</kbd> alza il numero, <kbd>Freccia giù</kbd> lo abbassa. Ogni cambio si vede subito nel video e il programma dice, come con i tasti, se la fonte tocca un bordo o un'altra fonte. <strong>OK</strong> tiene i cambi, <strong>Annulla</strong> (o <kbd>Esc</kbd>) rimette la fonte com'era quando hai aperto la finestra.</p>
+<ul>
+<li><strong>Posizione</strong>: una delle nove zone, oppure "posizione libera". Se cambi i numeri qui sotto e la fonte esce da una zona, la casella diventa da sola "posizione libera".</li>
+<li><strong>Da sinistra</strong> e <strong>Dall'alto</strong>: dove comincia la fonte, in percentuale del video, all'1%. Si può anche andare un po' fuori dal video, con i numeri sotto lo zero.</li>
+<li><strong>Larghezza</strong>: dal 5% fino al massimo che la forma dell'immagine permette. L'altezza segue da sola, così la fonte non si deforma.</li>
+<li><strong>Distanza dal bordo per le posizioni</strong>: 10, 5, 2 o 1%, oppure nessuna. È lo spazio lasciato dal bordo quando la fonte sta in una zona.</li>
+<li><strong>Taglia a sinistra, in alto, a destra, in basso</strong>: quanto togliere dai bordi dell'immagine, da 0 a 45%.</li>
+<li><strong>Adattamento</strong>: tutta l'immagine dentro il riquadro, oppure l'immagine che riempie il riquadro (quello che avanza resta fuori).</li>
+<li><strong>Mostra nel video</strong>: la casella per mostrare o nascondere la fonte.</li>
+</ul>
+
+<h3>Le disposizioni</h3>
+<p>Con <kbd>L</kbd> scegli una disposizione pronta: Tutorial (una fonte grande, le altre piccole in un angolo), Webcam grande, Fianco a fianco, Principale e laterale, Griglia, Solo una. Il programma chiede quale fonte è la grande e in quale angolo mettere le piccole. Puoi anche salvare la disposizione di adesso con un nome e riusarla. Nell'elenco delle disposizioni <kbd>Invio</kbd> applica quella scelta, <kbd>F2</kbd> rinomina e <kbd>Canc</kbd> elimina una disposizione tua (quelle pronte non si toccano).</p>
+
+<h3>Descrivere la scena</h3>
+<p><kbd>Ctrl+Maiusc+D</kbd>, dalla finestra principale, descrive a voce tutta la scena del video: la dimensione, dove sta ogni fonte, la parte vuota, e i problemi (una fonte coperta, fuori dal video, troppo piccola, nascosta). Premuto due volte la mostra in una finestra da leggere. Gli stessi problemi te li ricorda il programma quando avvii la registrazione.</p>
+<p>Le scene (capitolo 8) ricordano anche la composizione: richiamandole, le fonti si spostano con un passaggio morbido.</p>
+
+<h3>L'intelligenza artificiale sul video</h3>
+<p>La descrizione di <kbd>Ctrl+Maiusc+D</kbd> dice dove stanno le fonti, ma non cosa si vede dentro. Per saperlo puoi chiedere all'intelligenza artificiale. Prima va preparata una volta in Impostazioni, Intelligenza artificiale (capitolo 12).</p>
+<p>Le funzioni stanno in Sorgenti, <strong>Chiedi all'IA</strong>. Il modo più veloce è <kbd>Ctrl+Maiusc+I</kbd>: si apre un piccolo menu proprio dove sei, e premi la lettera della voce:</p>
+<ul>
+<li><kbd>D</kbd>: <strong>Descrivi la scena</strong>, tutto il video così come verrà registrato;</li>
+<li><kbd>W</kbd>: <strong>Controlla l'inquadratura della webcam</strong>;</li>
+<li><kbd>P</kbd>: <strong>Controlla la privacy dello schermo</strong>;</li>
+<li>dopo una riga di separazione, le registrazioni già fatte (vedi "L'intelligenza artificiale sulle registrazioni", più avanti): <kbd>Q</kbd> <strong>Controlla la qualità dell'audio</strong>, <kbd>T</kbd> <strong>Trascrivi</strong>, <kbd>R</kbd> <strong>Riassumi e fai domande</strong>, <kbd>V</kbd> <strong>Descrivi un video registrato</strong>.</li>
+</ul>
+<p>Le voci sono anche in Impostazioni, Tastiera, senza scorciatoia: se ne usi una spesso, puoi darle una scorciatoia tua.</p>
+<p>Il programma fa una foto. Se stai registrando usa il video della registrazione; altrimenti accende le sorgenti video per un attimo, aspetta che la webcam si regoli sulla luce e le spegne. Mentre fotografa e mentre aspetta la risposta senti un tic leggero e continuo. La risposta arriva in una finestra: ha già il fuoco e si legge con le frecce. Sotto c'è il campo <strong>Fai un'altra domanda</strong>: scrivi e premi <kbd>Invio</kbd> (o il pulsante Invia). <strong>Copia risposta</strong> copia l'ultima risposta; <strong>Chiudi</strong> o <kbd>Esc</kbd> chiudono. Le persone vengono descritte, mai riconosciute dal viso.</p>
+<p><strong>Descrivi la scena</strong>: insieme alla foto il programma manda anche la sua descrizione, così l'intelligenza artificiale sa quale parte dell'immagine è lo schermo, quale la finestra e quale la webcam. Risponde con una frase su tutta l'immagine, poi ogni parte e dove sta, poi quello che potrebbe non andare: una parte tagliata ai bordi, fonti che si coprono, zone nere o vuote, un testo troppo piccolo per leggerlo nel video, problemi della webcam, cose private visibili.</p>
+<p><strong>Controlla l'inquadratura della webcam</strong>: la foto è solo della webcam, intera, così come andrà nel video (se l'hai tagliata nelle proprietà, senza la parte tagliata). Ti dice se ci sei, se sei tagliato e dove, se sei al centro, troppo vicino o lontano, com'è la luce (buio, controluce, ombre), se l'immagine è nitida e cosa c'è dietro di te. Alla fine dà al massimo tre consigli pratici, il più importante per primo. Il bello è che <strong>a ogni altra domanda rifà la foto</strong>: ti sistemi, scrivi "e adesso?" e ti dice cosa è migliorato e cosa resta da sistemare, finché va bene.</p>
+<p><strong>Controlla la privacy dello schermo</strong>: la foto è di schermi e finestre, da soli e a piena misura, per leggere anche i testi piccoli. Cerca solo cose private che si vedrebbero nel video: notifiche, indirizzi email, numeri di telefono, password e codici, nomi e messaggi personali, dati di pagamento, nomi di file personali, schede e preferiti del browser. Per ognuna ti dice dove si trova; le password non le scrive mai. Se non trova niente lo dice in una frase.</p>
+<p>Se ci sono più webcam, o più schermi e finestre, prima un menu chiede quale controllare, oppure "Tutte".</p>
+<p>Anche nella finestra Composizione video <kbd>Ctrl+Maiusc+I</kbd> apre lo stesso menu, con la scena così come la vedi nell'anteprima, compresi i cambi non ancora salvati: comodo per controllare prima di premere OK.</p>
+
+<h3>L'intelligenza artificiale sulle registrazioni</h3>
+<p>Nello stesso menu (<kbd>Ctrl+Maiusc+I</kbd>), dopo la riga di separazione, ci sono le funzioni sulle registrazioni già fatte, in ordine di importanza: qualità dell'audio, trascrizione, riassunto, video. Qui sono spiegate nell'ordine in cui sono nate, come funzionano con Gemini. Con OpenAI la qualità e il video non ci sono, e trascrizione e riassunto sono un po' diversi: lo trovi nel capitolo 12, Intelligenza artificiale.</p>
+<p><kbd>T</kbd>: <strong>Trascrivi una registrazione</strong>. Prima un menu chiede quale: in cima l'ultima che hai fatto, poi le altre recenti (fino a dieci), ognuna con il nome, il giorno, l'ora e la durata; in fondo "Scegli un altro file...", per una registrazione più vecchia o un file qualsiasi (WAV, FLAC, AIFF, MP3, Opus, M4A, oppure un video MP4 o MOV). Se non ci sono registrazioni recenti si apre subito la finestra per scegliere il file.</p>
+<p>Il programma non manda il file grande: ne fa una copia piccola temporanea, in mono, a pezzi di mezz'ora, e la cancella subito dopo. Con più tracce trascrive il mix. Il lavoro va avanti in sottofondo: intanto puoi usare il programma, e senti il tic d'attesa. Con una registrazione lunga il programma dice a che parte è arrivato ("Trascrivo la parte 2 di 4"). Se premi di nuovo Trascrivi mentre lavora, ti chiede se vuoi annullare.</p>
+<p>Alla fine si apre la finestra con la trascrizione: quello che si dice, nella lingua in cui è detto, con i minuti all'inizio di ogni riga, per esempio "[12:30]". Se parlano più persone, a ogni cambio trovi "Persona 1:", "Persona 2:" (non vengono riconosciute). Musica, applausi o lunghi silenzi sono segnati tra parentesi quadre. I minuti sono quelli che stima l'intelligenza artificiale: di solito giusti, ma non precisi al secondo.</p>
+<ul>
+<li><strong>Salva il testo</strong>: salva la trascrizione accanto alla registrazione, con il nome "Nome (trascrizione).txt" (se c'è già, "trascrizione 2", e così via), da aprire con il Blocco note.</li>
+<li><strong>Salva i sottotitoli</strong>, solo se la registrazione ha anche il video: salva un file .srt accanto al video, con lo stesso nome, così i lettori come VLC lo trovano da soli. Se c'è già, il programma chiede se sostituirlo.</li>
+</ul>
+<p>Nel campo <strong>Fai un'altra domanda</strong> puoi chiedere sulla trascrizione, per esempio "a che minuto parlo del mixer?", "correggi la punteggiatura" o "traducila in inglese". I due pulsanti salvano l'ultima risposta: se chiedi una versione corretta, puoi salvare quella. Per i sottotitoli servono i minuti all'inizio delle righe.</p>
+<p>Una trascrizione molto lunga può fermarsi prima della fine: in quel caso, in fondo al testo, lo trovi scritto.</p>
+<p><kbd>R</kbd>: <strong>Riassumi una registrazione e fai domande</strong>. La scelta della registrazione è la stessa. Il riassunto dice in una o due frasi di cosa si tratta (una riunione, una lezione, un'intervista, musica...), quante persone parlano e in che lingua; poi gli argomenti o i momenti principali in ordine, ognuno con il minuto in cui comincia; infine, se ci sono, decisioni, date, numeri, compiti e richieste.</p>
+<p>La differenza con la trascrizione è nelle domande: qui l'intelligenza artificiale <strong>riascolta la registrazione</strong> per rispondere. Puoi chiedere per esempio "a che minuto parlo del mixer?", "che tono ha la seconda persona?", "c'è musica di sottofondo?". Se una cosa nella registrazione non c'è, lo dice. <strong>Salva il testo</strong> salva l'ultima risposta come "Nome (riassunto).txt" accanto alla registrazione.</p>
+<p>Il programma manda tutta la registrazione insieme, sempre come copia piccola in mono. Se la copia è grande (più o meno oltre un'ora) la carica sul servizio di Gemini, e te lo dice; la cancella appena chiudi la finestra (altrimenti Google la cancellerebbe da solo dopo 48 ore). Anche qui il lavoro è in sottofondo e si può annullare premendo di nuovo la voce.</p>
+<p><kbd>Q</kbd>: <strong>Controlla la qualità dell'audio di una registrazione</strong>. La risposta ha due parti.</p>
+<p>La prima sono <strong>le misure del programma</strong>, fatte sui file originali, senza internet e precise. Se la registrazione ha anche le tracce delle singole sorgenti, ci sono le misure del mix e poi quelle di ogni traccia. Per ognuno:</p>
+<ul>
+<li>la durata, i canali e la frequenza;</li>
+<li>il <strong>volume medio</strong> in LUFS, con i valori di riferimento: per un podcast o un video di solito da -16 a -14, per radio e televisione -23;</li>
+<li>la differenza tra le parti piano e quelle forti, solo se c'è almeno un minuto di suono (con meno, la misura non è affidabile);</li>
+<li>il <strong>picco</strong> più alto e il picco vero (meglio sotto -1);</li>
+<li>le <strong>saturazioni</strong>, cioè la distorsione al volume massimo, con i minuti in cui succedono (le prime dieci);</li>
+<li>per le voci (le tracce dei microfoni, o un audio fatto solo di voci): il <strong>rumore di fondo</strong> nelle pause, il livello delle parti forti e la distanza tra i due, dove sopra 40 dB è buona e sotto 20 il rumore si sente; se nelle pause c'è silenzio assoluto, lo dice. Per tutto il resto (mix con musica, applicazioni, audio del computer, sottofondo, radio, un file scelto a mano) solo il livello delle parti più basse e di quelle forti, perché lì le parti più piano non sono rumore;</li>
+<li>i <strong>silenzi</strong> di almeno 5 secondi, con il minuto e la durata;</li>
+<li>in stereo, se un canale è più forte dell'altro o quasi muto;</li>
+<li>se la forma d'onda è spostata dallo zero (DC offset), che si toglie con il filtro passa-alto.</li>
+</ul>
+<p>La seconda è <strong>l'ascolto di Gemini</strong>, che sente quello che le misure non dicono: che tipo di rumore c'è (ronzio, ventola, traffico, fruscio), se la voce è chiara, se c'è eco della stanza, se il microfono è troppo lontano o troppo vicino, scrocchi e buchi, musica che copre la voce. Prima un giudizio in una frase, poi i problemi con i minuti, poi al massimo cinque consigli pratici, anche con gli effetti del programma chiamati con il loro nome. Le domande dopo riascoltano la registrazione. <strong>Salva il testo</strong> salva l'ultima risposta come "Nome (qualità).txt".</p>
+
+<p><kbd>V</kbd>: <strong>Descrivi un video registrato</strong>. Il menu propone solo le registrazioni recenti che hanno il video; "Scegli un altro file..." accetta video MP4 e MOV. Il video si carica sul servizio di Gemini così com'è, con l'audio: fino a 2000 MB (il limite della chiave gratuita); oltre 200 MB il programma chiede prima, perché il caricamento richiede qualche minuto. Gemini lo guarda e risponde: che video è e quanto dura; i momenti in ordine, con i minuti, cosa si vede (finestre, menu, testi importanti), cosa fai e cosa si dice; poi quello che potrebbe disturbare chi lo guarderà (momenti in cui non succede niente, immagine nera o ferma, testo troppo piccolo, cose private visibili, suono non a tempo con l'immagine, problemi della webcam). Le domande dopo riguardano il video, sempre con i minuti. <strong>Salva il testo</strong> crea "Nome (descrizione).txt" accanto al video. Alla chiusura della finestra il video caricato si cancella. Un video molto lungo (più o meno oltre un'ora) può essere troppo per Gemini: in quel caso il programma riporta il suo messaggio di errore.</p>
+
+<h2 id="diretta">11. La diretta su una radio web</h2>
+<p>HDX Recorder può mandare in diretta quello che registri su una radio web che usa un server Icecast, anche attraverso i pannelli delle radio come AzuraCast o Centova Cast. In onda va il mix finale, lo stesso che finisce nel file: tutte le sorgenti accese, con i loro volumi, gli effetti e il mix finale.</p>
+
+<h3>La prima volta: i dati della radio</h3>
+<p>In Strumenti, Impostazioni, categoria <strong>Diretta</strong>, premi <strong>Aggiungi</strong>. Si apre una finestra con:</p>
+<ul>
+<li><strong>Indirizzo del server</strong>: quello che ti dà la radio, per esempio radio.esempio.it. Puoi anche incollare un indirizzo completo come http://radio.esempio.it:8000/live: il programma prende da solo la porta e il mount.</li>
+<li><strong>Porta</strong>: di base 8000.</li>
+<li><strong>Mount</strong>: facoltativo. Scrivilo solo se la radio te lo dà (per esempio /live). Se resta vuoto il programma usa quello scritto nell'indirizzo, oppure "/".</li>
+<li><strong>Nome utente</strong> e <strong>Password</strong>: quelli per andare in diretta. Su un server Icecast normale il nome utente di solito è "source"; sui pannelli delle radio è il tuo nome da conduttore. La password resta solo su questo computer, cifrata per il tuo utente di Windows, e non va nelle copie di sicurezza (se ripristini una copia, le password delle radio che hai ancora restano).</li>
+<li><strong>Formato</strong>: MP3, quello di quasi tutte le radio (di base); AAC, con l'encoder di Windows, che accetta solo 96, 128, 160 o 192 kbps (con un'altra qualità usa quella ammessa più vicina, in basso); oppure Opus, più leggero, ma non tutte le radio lo accettano e con Opus il titolo in onda non si può cambiare.</li>
+<li><strong>Qualità</strong>: da 32 a 320 kbps, di base 128. Chiedi alla radio quale usa.</li>
+<li><strong>Canali</strong>: stereo o mono.</li>
+<li>A destra le informazioni della radio, tutte facoltative: nome, genere, descrizione, sito, e se mostrarla nell'elenco pubblico delle radio. Molte radio le hanno già sul server e non usano queste.</li>
+</ul>
+<p>Con <strong>Prova il collegamento</strong> il programma si collega alla radio con i dati scritti e ti dice se li accetta, senza mandare audio in onda. Se qualcosa non va ti dice cosa: server non trovato, porta che non risponde, nome utente o password sbagliati, mount già occupato da un'altra diretta. Lo stesso pulsante c'è anche nella categoria Diretta, per la radio scelta nell'elenco.</p>
+
+<h3>Più radio insieme</h3>
+<p>Puoi avere fino a 8 radio. Nella categoria Diretta c'è il loro elenco: ogni riga dice il nome, se è <strong>usata</strong> o <strong>esclusa</strong>, l'indirizzo e il formato. Sull'elenco, <kbd>Spazio</kbd> usa o esclude la radio scelta, <kbd>Invio</kbd> la modifica e <kbd>Canc</kbd> la rimuove (dopo averti chiesto conferma). Ci sono anche i pulsanti Aggiungi, Modifica, Rimuovi e Prova il collegamento.</p>
+<p>Vai in diretta va in onda insieme su tutte le radio usate. Ognuna va per conto suo: se una cade o rifiuta la password, le altre restano in onda. Con più radio gli annunci dicono quale ("NvRadio: diretta interrotta..."), <kbd>Ctrl+T</kbd> dice lo stato di ognuna e il titolo in onda va a tutte quelle che lo accettano. Il silenzio in onda si dice una volta sola, perché il mix è lo stesso. Ogni radio in più usa altra rete in uscita: a 128 kbps circa 1 MB al minuto per radio.</p>
+
+<h3>La diretta di prova</h3>
+<p>Menu Registrazione (o menu Regia), <strong>Diretta di prova</strong>: funziona tutto come in una diretta vera, ma <strong>niente va alla radio</strong>. Serve ad allenarsi con la regia senza rischi: il conto e la sigla di apertura (il conto parte subito, senza aspettare la radio), la pausa in onda e i rientri, i tempi (Maiusc+F8 dice da quanto sei "in onda"), i banchi, le scene, il preascolto, il monitor in cuffia e i ritorni. Il titolo in onda, scritto a mano o automatico, non va da nessuna parte: lo trovi negli Ultimi annunci ("Diretta di prova, titolo in onda: ..."), così controlli che cambi giusto. Il registro di messa in onda si scrive, con "diretta di prova" nel nome. Con <kbd>Ctrl+Maiusc+O</kbd> senti esattamente quello che sentirebbero gli ascoltatori. Non si registra niente; se vuoi tenere la prova, avvia prima la registrazione (Ctrl+R) e poi la diretta di prova, che si aggancia a quella. Si termina con la stessa voce di menu o con <kbd>Ctrl+D</kbd>, senza domande. Il collegamento alla radio non viene provato: per quello c'è la verifica prima della diretta.</p>
+<h3>La verifica prima della diretta</h3>
+<p>Menu Registrazione, <strong>Verifica prima della diretta</strong> (senza scorciatoia di base). Fa tutto quello che fa il Controllo prima del via (<kbd>Ctrl+K</kbd>, capitolo 5): ascolta le sorgenti per 3 secondi e ti dice per ognuna se il segnale è buono, basso, alto o assente. In più, nella parte <strong>Diretta</strong> del riepilogo:</p>
+<ul>
+<li>prova il collegamento a ogni radio usata, tutte insieme, e per ognuna ti dice se è riuscito o perché no;</li>
+<li>ti avvisa se una sorgente "Audio del computer" prende anche la voce dello screen reader, che in diretta sentirebbero tutti (la soluzione: escludere lo screen reader nelle sue Proprietà, oppure usare una sorgente Applicazione);</li>
+<li>ti avvisa se una radio usa il formato AAC e in questo Windows l'AAC non c'è.</li>
+</ul>
+<p>Se l'ascolto finisce prima che le radio abbiano risposto, il programma dice "Aspetto la risposta delle radio" e il riepilogo arriva appena hanno risposto tutte. La verifica si fa a diretta ferma. Attenzione: come Prova il collegamento, su una radio che va in automatico il collegamento di prova può prendere l'onda per un istante; falla d'accordo con chi gestisce la radio.</p>
+
+<h3>Andare in diretta</h3>
+<p>Menu Registrazione, <strong>Vai in diretta</strong>, oppure <kbd>Ctrl+D</kbd>. Parte la registrazione (con il conto alla rovescia, se lo hai scelto) e insieme il collegamento alla radio. Quando sei in onda lo senti: "In onda su" e il nome della radio.</p>
+<ul>
+<li>Fermare la registrazione (<kbd>Ctrl+R</kbd>) ferma anche la diretta.</li>
+<li><strong>Termina la diretta</strong> (la stessa voce di menu, sempre <kbd>Ctrl+D</kbd>) ferma solo la diretta, dopo averti chiesto conferma: la registrazione continua.</li>
+<li>Con più sorgenti, o con il video, puoi andare in diretta anche a registrazione già avviata: Vai in diretta si aggancia alla registrazione in corso. Con una sola sorgente e senza video no: la diretta deve partire insieme alla registrazione. Se parti in diretta con una sola sorgente, il file registrato è il mix (48 kHz, stereo), come succede con il video.</li>
+<li>La pausa (<kbd>Ctrl+P</kbd>) manda in onda il silenzio, senza chiudere la diretta.</li>
+<li><kbd>Ctrl+T</kbd> dice anche da quanto sei in onda e quante volte è caduto il collegamento.</li>
+</ul>
+<p><strong>Lo screen reader in onda.</strong> Se una sorgente "Audio del computer" accesa prende anche la voce dello screen reader, prima di andare in diretta il programma te lo chiede, con il No già scelto: in onda la sentirebbero tutti. Te lo chiede prima perché, una volta in onda, anche la voce che leggerebbe l'avviso finirebbe in diretta. La soluzione è escludere lo screen reader nelle Proprietà di quella sorgente, oppure usare una sorgente Applicazione per la sintesi. Dalla scorciatoia in tutto Windows te lo dice a voce: per partire lo stesso premi di nuovo entro 3 secondi.</p>
+<p>La diretta si può comandare anche da un altro programma, con la scorciatoia in tutto Windows (Impostazioni, categoria Tastiera, ramo dei comandi in tutto Windows: è spenta di base e la accendi con lo Spazio). Da un altro programma, per terminare la diretta premi la scorciatoia due volte entro 3 secondi.</p>
+
+<h3>Andare in diretta senza registrare</h3>
+<p>Menu Registrazione, <strong>Vai in diretta senza registrare</strong> (senza scorciatoia di base: se la vuoi, te la dai in Impostazioni, Tastiera). Le sorgenti si aprono come per registrare e il mix finale va alle radio, ma non si salva nessun file. Funzionano il mixer, gli effetti, i pad, il sottofondo, le scene, i livelli e <kbd>Ctrl+T</kbd>. Si ferma con <strong>Termina la diretta</strong> (<kbd>Ctrl+D</kbd>).</p>
+<ul>
+<li>Non si può cominciare a registrare a metà: se ti serve la registrazione, usa la diretta normale. Per lo stesso motivo la pausa non c'è.</li>
+<li>Va in onda solo l'audio: se la configurazione ha il video, il programma te lo ricorda.</li>
+<li>Se una registrazione programmata deve partire mentre sei in diretta, si comporta come quando stai già registrando a mano: aspetta o salta, secondo come l'hai impostata, ma non ferma mai la diretta.</li>
+<li>Se tutte le radio si fermano (per esempio per una password sbagliata) o se un dispositivo si scollega, la diretta finisce e il programma te lo dice.</li>
+</ul>
+<p>Senza registrazione non resta una copia della trasmissione: se ti può servire, usa la diretta normale.</p>
+
+<h3>Mutare una sorgente da un altro programma</h3>
+<p>Mentre sei su Zoom, o in un altro programma, puoi zittire al volo una sorgente e poi rimetterla nel mix con un tasto tuo, per esempio la sintesi o il microfono. Si sceglie nelle Impostazioni della configurazione (<kbd>Invio</kbd> sulla casella Configurazione), categoria <strong>Tasti delle sorgenti</strong>:</p>
+<ul>
+<li>c'è l'elenco delle sorgenti audio, e ogni riga dice il suo tasto, per esempio "Sintesi NVDA: Ctrl+Alt+Windows+1", oppure "nessun tasto";</li>
+<li><kbd>Invio</kbd> su una riga: premi la combinazione che vuoi. Deve avere almeno due tasti speciali, uno dei quali Ctrl, Alt o Windows; il programma controlla che non sia già di un'altra sorgente, di un comando o di un altro programma;</li>
+<li><kbd>Canc</kbd> toglie il tasto;</li>
+<li>i tasti valgono dopo <strong>OK</strong>, finché quella è la configurazione in uso: ogni configurazione ha i suoi.</li>
+</ul>
+<p>Il tasto fa come <kbd>Ctrl+Maiusc+M</kbd> nell'elenco: la sorgente resta aperta ma esce dal mix, e lo stesso tasto la rimette. Funziona sempre, anche senza diretta. Senti sempre un suono (quello di "muta" e quello di "di nuovo nel mix", se i suoni dei comandi in tutto Windows sono accesi); la voce segue la tua scelta degli annunci, e il cambio finisce comunque negli Ultimi annunci, con il nome della sorgente.</p>
+
+<h3>La regia</h3>
+<p>La regia è il "posto di guida" mentre conduci: una diretta, ma anche una registrazione come un podcast. Si apre con <kbd>Ctrl+Maiusc+R</kbd> (o menu Registrazione, Regia) e si chiude con lo stesso tasto, con Alt+F4 o con la voce Torna alla finestra principale. È la stessa finestra del programma, che cambia contenuto e titolo ("HDX Recorder - Regia"). <strong>Entrare e uscire non ferma niente</strong>: diretta, registrazione e musica continuano. Esc non la chiude.</p>
+<p>Nella regia, con <kbd>Tab</kbd>:</p>
+<ul>
+<li><strong>le sorgenti</strong>: lo stesso elenco della finestra principale, con gli stessi tasti dal vivo (volume, guadagno, bilanciamento, muto, accendi e spegni, Invio per le proprietà e gli effetti, i livelli). Aggiungere, rinominare, spostare e rimuovere le sorgenti non si può: sono cose da preparare prima;</li>
+<li><strong>la scaletta</strong> (<kbd>Alt+C</kbd>): i brani da mandare in onda (vedi sotto);</li>
+<li><strong>il banco</strong> (<kbd>Alt+B</kbd>): i dieci tasti del banco dei pad scelto (Effetti, Jingle o Sottofondi), una riga per tasto: "1: Applausi", "2: Piano soft, suona", "5: vuoto". <kbd>Invio</kbd> fa partire la riga (come il suo numero). Con <kbd>F11</kbd> e <kbd>F12</kbd> l'elenco cambia banco e resti sulla stessa riga: se sei nell'elenco senti il nome del banco e la riga;</li>
+<li><strong>le scene</strong> (<kbd>Alt+E</kbd>): le dieci scene, "1: Intervista, in uso", "2: Musica", "3: vuota". <kbd>Invio</kbd> richiama la scena della riga (come <kbd>Ctrl+numero</kbd>); nella regia funziona anche <kbd>Ctrl+Maiusc+numero</kbd> per memorizzare una scena, con le stesse domande della finestra principale. Rinominare ed eliminare le scene si fa fuori dalla regia;</li>
+<li><strong>lo stato</strong> (<kbd>Alt+T</kbd>): un campo da leggere con le frecce, con la diretta (in onda o no, da quanto), la registrazione, la pausa in onda, cosa suona il lettore e quanto manca alla fine, quante sorgenti sono accese, mute o spente, il banco scelto e la scena in uso.</li>
+</ul>
+<p>Nella regia i <strong>numeri da soli</strong> suonano il banco dei pad scelto (come <kbd>Alt+numero</kbd>), <kbd>Maiusc+numero</kbd> dice che cosa c'è sotto, <kbd>F11</kbd> e <kbd>F12</kbd> cambiano banco; il campo dello stato dice il banco scelto. Funzionano anche <kbd>Ctrl+D</kbd> (diretta), <kbd>Ctrl+R</kbd> (registrazione), <kbd>Ctrl+P</kbd>, <kbd>Ctrl+T</kbd>, i pad, le scene, il mixer e il controllo e la prova dei livelli. I comandi che nella regia non ci sono, anche premuti per sbaglio, non partono: senti "Non disponibile nella regia". Se la sorgente Lettore della regia è spenta, i brani, le sigle e il letto della pausa non partono (la sigla di apertura si salta, il conto va avanti) e il programma te lo dice; se è spenta la sorgente dei pad, i pad non suonano e te lo dice. La barra dei menu della regia ha solo i menu Regia, Sorgenti e Aiuto, con le voci che servono mentre conduci: nel menu Regia ci sono anche il monitor in cuffia (accendere e spegnere, e la sua finestra) e l'ascolto del mix in onda. Come nel menu Registrazione, si vedono solo le voci che si possono usare in quel momento.</p>
+<h3>I tempi a un tasto</h3>
+<p><kbd>F8</kbd> dice quanto manca alla fine di ciò che suona il lettore della regia, per esempio "Mancano 1:23" (o "Lettore fermo"). <kbd>Maiusc+F8</kbd> dice da quanto sei in diretta, contando dalla partenza anche se la linea è caduta e tornata, per esempio "In onda da 12:05". Funzionano nella regia e nella finestra principale, e sono anche nel menu Regia. Si possono usare anche da un altro programma: in Impostazioni, Tastiera, ramo Scorciatoie globali, accendili con lo Spazio (di base <kbd>Ctrl+Alt+Windows+M</kbd> e <kbd>Ctrl+Alt+Windows+N</kbd>). L'ora la dice già lo screen reader con il suo comando.</p>
+<h3>Tosse e "parla sopra"</h3>
+<p>Due tasti da <strong>tenere premuti</strong>, nella regia e nella finestra principale:</p>
+<ul>
+<li><kbd>F6</kbd>, il <strong>tasto tosse</strong>: finché lo tieni premuto i tuoi microfoni (microfoni, ingressi) sono fuori onda; quando lo lasci tornano come prima. Il muto che hai scelto non cambia.</li>
+<li><kbd>F7</kbd>, <strong>parla sopra</strong>: finché lo tieni premuto la musica (il lettore della regia e il sottofondo) si abbassa di 12 dB; quando lo lasci risale dolcemente.</li>
+</ul>
+<p>Funzionano solo con HDX Recorder in primo piano (un tasto "tenuto premuto" da un altro programma Windows non lo permette); se mentre li tieni passi a un'altra finestra, si considerano lasciati. Il campo dello stato della regia dice quando sono attivi. Il blocco da F5 a F8 è dei comandi rapidi della diretta: F5 la pausa, F6 la tosse, F7 parla sopra, F8 i tempi.</p>
+<h3>Controlli automatici in diretta</h3>
+<p>In diretta, fuori dalla pausa: se tutti i tuoi microfoni restano muti o spenti per 30 secondi (la tosse non conta), senti un suono in cuffia e "Microfono muto da 30 secondi", una volta sola. Il campo dello stato della regia dice anche il <strong>titolo in onda</strong> di adesso (nella diretta di prova, quello che sarebbe in onda).</p>
+<h3>La scaletta e il lettore della regia</h3>
+<p>La prima volta che apri la regia in una configurazione, tra le sorgenti compare da sola <strong>Lettore della regia</strong>: è il lettore dei brani della scaletta, con il suo volume, gli effetti e il muto come le altre sorgenti (Invio sulla sua riga apre le sue proprietà: accesa, volume ed effetti). Se la aggiungi mentre registri, suona dalla registrazione dopo. Il lettore suona quando le sorgenti sono in ascolto: in diretta, in registrazione o nella prova dei livelli (<kbd>Ctrl+Maiusc+K</kbd>), utile per provare i brani prima.</p>
+<p>Ogni riga della scaletta dice il titolo e l'artista (se il file li ha, altrimenti il nome del file), la durata e lo stato: <strong>pronto</strong>, <strong>in onda</strong> o <strong>già suonato</strong>. Nella scaletta:</p>
+<ul>
+<li><kbd>Invio</kbd>: manda in onda il brano scelto, insieme alle voci. Parte pieno, dall'inizio; se ne stava suonando un altro, quello sfuma in 2 secondi mentre parte il nuovo;</li>
+<li><kbd>Ctrl+Invio</kbd>: manda in onda il prossimo brano pronto dopo quello in onda;</li>
+<li><kbd>Spazio</kbd>: ferma il lettore, con una sfumatura di un secondo;</li>
+<li><kbd>Ctrl+N</kbd>: aggiungi uno o più brani (dopo la riga scelta); <kbd>Ctrl+Maiusc+N</kbd>: aggiungi tutti i brani di una cartella, in ordine di nome. I formati: MP3, WAV, FLAC, M4A, AAC e WMA;</li>
+<li><kbd>Alt+Freccia su</kbd> e <kbd>Alt+Freccia giù</kbd>: sposta il brano; <kbd>Canc</kbd>: lo toglie dalla scaletta (il file non si tocca);</li>
+<li><kbd>Ctrl+S</kbd>: salva la scaletta in un file .m3u, quello delle playlist, che leggono anche gli altri programmi; <kbd>Ctrl+O</kbd>: apre una scaletta .m3u (prima chiede se sostituire quella di adesso);</li>
+<li>il tasto <kbd>Applicazioni</kbd> (o <kbd>Maiusc+F10</kbd>): il menu con tutti questi comandi.</li>
+</ul>
+<p>La scaletta si salva da sola nella configurazione: la ritrovi la volta dopo. Quando un brano finisce, il lettore si ferma (nelle puntate dopo un brano si parla). I tasti della scaletta valgono solo nel suo elenco e si possono cambiare in Impostazioni, Tastiera, ramo Registrazione, Regia. Quando parte un brano o si ferma il lettore, l'annuncio segue la scelta del gruppo Sottofondo negli Annunci; un brano che non si apre lo senti con il suono dei problemi e lo trovi negli Ultimi annunci.</p>
+<h3>Il conto e la sigla di apertura della diretta</h3>
+<p>Nelle impostazioni della configurazione, categoria Regia, puoi scegliere il <strong>conto alla rovescia prima della diretta</strong> (3, 5 o 10 secondi) e la <strong>sigla di apertura</strong>. Con almeno una delle due, andare in diretta (<kbd>Ctrl+D</kbd> o "Vai in diretta senza registrare") va così:</p>
+<ol>
+<li>il programma si collega subito alla radio, ma con le voci fuori dal mix, come nella pausa in onda (escono le sorgenti segnate "esce"): chi ascolta sente silenzio;</li>
+<li>quando la radio risponde che sei in onda, parte la sigla di apertura, se l'hai scelta (serve il Lettore della regia tra le sorgenti);</li>
+<li>quando alla fine della sigla mancano i secondi del conto (o subito, senza sigla), parte il conto: a ogni secondo un tic in cuffia e il numero;</li>
+<li>allo zero le voci entrano in onda: senti in cuffia il suono di avvio. Da quel momento sei davvero in onda.</li>
+</ol>
+<p>Durante il conto: <kbd>Ctrl+D</kbd> fa entrare le voci subito; <kbd>Esc</kbd> annulla tutto (la diretta e, se è partita insieme, la registrazione). Se la radio non risponde (password sbagliata, server spento), il conto non parte e le voci tornano nel mix. Se registri, il file comincia dal collegamento: contiene anche i secondi del conto e la sigla. Con il conto della diretta, quello della registrazione (categoria Video) non si aggiunge. Il conto non c'è quando vai in diretta durante una registrazione già in corso.</p>
+<h3>La pausa in onda</h3>
+<p>La pausa in onda serve quando vuoi staccare: per esempio con gli ospiti su Zoom, che continuano a parlarsi fuori onda mentre agli ascoltatori arriva la musica. Funziona quando le sorgenti sono in ascolto (in diretta, in registrazione o nella prova dei livelli). Nella regia, o anche nella finestra principale:</p>
+<ul>
+<li><kbd>F5</kbd>: comincia la pausa. Le sorgenti che "escono" lasciano il mix in un secondo, parte la sigla di pausa (se l'hai scelta) e poi il brano scelto nella scaletta, se è pronto, altrimenti il primo pronto. Se un brano suona già, continua quello. In pausa, quando un brano sta per finire, parte da solo il prossimo pronto, incrociato in 2 secondi (se non hai scelto che il lettore si fermi);</li>
+<li><kbd>F5</kbd> di nuovo: rientri in onda. Le voci tornano in un secondo e il brano resta sotto le voci, abbassato, fino alla fine (oppure sfuma in 3 secondi, se l'hai scelto); poi il lettore si ferma. Con una sigla di rientro, prima suona la sigla e le voci tornano quando finisce (un altro <kbd>F5</kbd> durante la sigla le fa tornare subito);</li>
+<li><kbd>Maiusc+F5</kbd>: rientri alla fine del brano in onda, senza tagliarlo. Dieci secondi prima senti "Rientro tra 10 secondi"; premuto di nuovo, annulla;</li>
+<li><kbd>Ctrl+F5</kbd>: il rientro d'emergenza. Le voci tornano subito, il lettore si ferma subito, niente sigla.</li>
+</ul>
+<p>La pausa non tocca i volumi che hai regolato: è un volume in più, che al rientro torna com'era. Se durante la pausa cambi il volume di una sorgente, richiami una scena o la muti, il cambio vale, e lo senti quando la sorgente rientra. Una sorgente fuori per la pausa non fa abbassare la musica col ducking, anche se intanto parli con gli ospiti. All'inizio della pausa senti "Pausa in onda"; al rientro solo il suono, perché la voce dello screen reader finirebbe in onda insieme alle voci: "Di nuovo in onda" lo trovi negli Ultimi annunci. Il campo dello stato dice se sei in pausa e se il rientro è prenotato.</p>
+<p>Le scelte della pausa sono nelle impostazioni della configurazione, categoria <strong>Regia</strong> (anche dal menu Regia, Impostazioni della regia):</p>
+<ul>
+<li><strong>le sorgenti</strong>: per ognuna, se durante la pausa <strong>esce</strong> dal mix o <strong>resta</strong> (lo Spazio cambia). All'inizio i pad restano e tutte le altre escono: microfoni, programmi, audio del computer, radio e sottofondo. Il lettore della regia non è nell'elenco: lo comanda la pausa;</li>
+<li><strong>la sigla di pausa</strong> e <strong>la sigla di rientro</strong>: un file audio ciascuna, facoltative (il pulsante Togli la toglie);</li>
+<li><strong>come entra il brano della pausa</strong>: pieno, oppure sfumato (sale in 2 secondi);</li>
+<li><strong>al rientro, il brano</strong>: resta sotto le voci fino alla fine, oppure sfuma e si ferma in 3 secondi;</li>
+<li><strong>in pausa, dopo ogni brano</strong>: parte il prossimo pronto, oppure il lettore si ferma;</li>
+<li><strong>l'avviso in cuffia prima della fine di un brano</strong> (in pausa e no): niente (di base), un suono 10 secondi prima, un tic a 3, 2 e 1 secondi dalla fine, o tutti e due. Lo senti nella cuffia della regia, scelta in Impostazioni, categoria Suoni. Con il rientro prenotato (Maiusc+F5) il suono dei 10 secondi arriva in cuffia anche con l'avviso spento.</li>
+<li><strong>il titolo in onda durante i brani</strong> (in diretta): di base, quando parte un brano della scaletta il titolo diventa "Artista - Titolo" (senza annunci); quando la musica finisce, o rientri dalla pausa, torna quello della puntata, cioè quello che c'era prima o che hai scritto con <kbd>Ctrl+Maiusc+T</kbd>. Oppure: non cambia, solo a mano.</li>
+<li><strong>il volume dei brani</strong>: di base <strong>uguale per tutti</strong>. Quando un brano entra in scaletta, il programma lo ascolta in sottofondo, uno alla volta, senza disturbare (pochi secondi per brano), e lo porta allo stesso volume percepito degli altri (-16 LUFS, come la normalizzazione), senza mai superare il picco di -1 dB: un brano con picchi molto alti piuttosto si alza meno. Le misure si ricordano nella cartella Dati, così ogni file si ascolta una volta sola (se il file cambia, si riascolta). Un brano mandato in onda prima che l'ascolto sia finito suona com'è. Oppure: come nel file.</li>
+</ul>
+<p>F5 si può usare anche da un altro programma, per esempio da Zoom: in Impostazioni, Tastiera, ramo Scorciatoie globali, accendi la pausa in onda con lo Spazio (di base <kbd>Ctrl+Alt+Windows+I</kbd>). I tasti F5, Maiusc+F5 e Ctrl+F5 si possono cambiare nel ramo Registrazione, Regia.</p>
+<h3>Il preascolto in cuffia</h3>
+<p>Il preascolto ti fa sentire un brano o un suono <strong>solo in cuffia</strong>, mentre in onda continua tutto come prima. Stando su una riga della scaletta o dell'elenco del banco: <kbd>F9</kbd> la ascolta dall'inizio, <kbd>F10</kbd> ne ascolta gli ultimi 20 secondi (per sapere come finisce). Lo stesso tasto di nuovo, o <kbd>Esc</kbd>, ferma il preascolto. I tasti sono lontani da quelli che mandano in onda (Invio e Ctrl+Invio), per non sbagliare in diretta. In HDX Recorder F10 non apre più la barra dei menu: si apre con Alt, come sempre. Un preascolto nuovo ferma quello di prima. Lo senti nella cuffia della regia (Impostazioni, Suoni), con il volume uguale se è un brano della scaletta già misurato, o con il volume del pad. In registrazione e in diretta, se la cuffia esce da un dispositivo registrato da una sorgente "audio del computer", il preascolto non parte e una finestra ti dice perché: finirebbe in onda.</p>
+<h3>Il registro di messa in onda</h3>
+<p>A ogni registrazione e a ogni diretta il programma scrive da solo il <strong>registro di messa in onda</strong>: un file accanto alla registrazione, con lo stesso nome e "- registro di messa in onda.csv" alla fine (con la diretta senza registrare, nella cartella delle registrazioni, con la data e l'ora nel nome). Una riga per ogni cosa: l'ora, il tipo, il nome e la durata, separati dal punto e virgola, per esempio "21:03:15;Brano;Vasco Rossi - Albachiara;4:20". Ci vanno l'inizio e la fine, l'inizio della diretta, i brani della scaletta, le sigle, i jingle, i brani del sottofondo (anche quando cambiano da soli), la pausa e il rientro in onda e le scene. Gli effetti (applausi, risate...) no, per non riempirlo. Lo leggi con il Blocco note, una riga alla volta, e lo apre anche Excel: serve per sapere cosa è andato in onda e quando, e per le dichiarazioni dei diritti della musica. Ogni riga si scrive subito, quindi il registro resta anche se il computer si spegne all'improvviso.</p>
+
+<h3>I ritorni: l'audio per Zoom e per altri programmi</h3>
+<p>Un <strong>ritorno</strong> è un mix fatto solo delle sorgenti che scegli, mandato a un'uscita a tua scelta. Serve per esempio a far sentire agli ospiti su Zoom anche la musica della pausa e gli effetti, oppure a dare a un collaboratore su Discord o a un ospite in studio un ascolto su misura. Se ne possono preparare fino a 4, attivi tutti insieme. Funzionano in registrazione, in diretta e nella prova dei livelli.</p>
+<p>Si gestiscono nelle impostazioni della configurazione, categoria <strong>Ritorni</strong>: nell'elenco lo Spazio usa o esclude un ritorno, Invio lo modifica, Canc lo rimuove; ci sono i pulsanti Aggiungi, Modifica e Rimuovi. Per ogni ritorno scegli:</p>
+<ul>
+<li><strong>il nome</strong>, per esempio "Zoom";</li>
+<li><strong>l'uscita</strong> dove mandarlo: con Voicemeeter, per esempio <em>Voicemeeter AUX Input</em> (per un ritorno nuovo il programma la propone da solo, se c'è);</li>
+<li><strong>le sorgenti</strong> dentro e fuori (lo Spazio cambia). All'inizio sono dentro microfoni, ingressi, lettore della regia, pad e sottofondo; fuori le sorgenti Applicazione, l'audio del computer e le radio. <strong>La regola per evitare l'eco</strong>: metti fuori la sorgente che porta l'audio del programma che riceve il ritorno (per Zoom, la sorgente Applicazione di Zoom);</li>
+<li><strong>durante la pausa in onda</strong>: di base il ritorno non la segue, così chi è collegato continua a sentire te e la musica della pausa mentre in diretta le voci sono fuori; oppure la segue, uguale alla diretta;</li>
+<li><strong>il volume</strong> del ritorno.</li>
+</ul>
+<p>Il muto di una sorgente vale anche nei ritorni. <strong>Con Zoom e Voicemeeter</strong>: in HDX Recorder il ritorno va a Voicemeeter AUX Input; in Voicemeeter quella striscia la mandi solo all'uscita B2; in Zoom scegli come microfono <em>Voicemeeter Out B2</em>. Perché la musica arrivi bene, nelle impostazioni audio di Zoom attiva il suono originale per musicisti: senza, Zoom tratta la musica come rumore e la rovina. Se l'uscita di un ritorno è registrata da una sorgente "audio del computer", alla partenza il programma lo dice: si creerebbe un giro. Se un'uscita non si apre, lo senti con il suono dei problemi e lo trovi negli Ultimi annunci. I ritorni partono con la registrazione, la diretta o la prova dei livelli: un cambio fatto mentre sono in corso vale dalla volta dopo.</p>
+<p><strong>Ascoltare un ritorno</strong>: quando i ritorni sono partiti (prova dei livelli, diretta, diretta di prova, registrazione, anche durante la pausa in onda) <kbd>Ctrl+Maiusc+B</kbd> ti fa sentire in cuffia esattamente quello che arriva a chi riceve il ritorno (le sue sorgenti, al suo volume), sulla stessa cuffia dell'ascolto del mix. Con più ritorni ogni pressione passa al successivo ("Ascolto del ritorno: Zoom"), dopo l'ultimo si spegne; con un ritorno solo lo accende e lo spegne. Prende il posto dell'ascolto del mix in onda (<kbd>Ctrl+Maiusc+O</kbd> torna al mix), il monitor intanto tace, e non si ricorda: ogni volta parte spento. È anche nei menu Registrazione e Regia, quando i ritorni sono partiti. Chi riceve il ritorno continua a sentirlo come sempre.</p>
+<p><strong>Il volume dei ritorni durante la diretta</strong>: <kbd>Ctrl+Maiusc+J</kbd> (o, nei menu Registrazione e Regia, Volume dei ritorni) apre l'elenco dei ritorni partiti, ognuno con il suo volume. <kbd>Più</kbd> e <kbd>Meno</kbd> alzano e abbassano di 1 dB: il cambio arriva subito, senza scatti, e resta salvato per le volte dopo. Se l'ospite ti chiede di alzare, apri la finestra e premi Più; per sentire anche tu la differenza, prima accendi l'ascolto del suo ritorno con Ctrl+Maiusc+B. Anche il volume cambiato nelle impostazioni della configurazione, categoria Ritorni, vale subito; le altre scelte del ritorno (uscita, sorgenti, pausa) valgono dalla prossima registrazione o diretta.</p>
+<p>Un ritorno va solo alla sua uscita: tu lo senti soltanto se quell'uscita arriva alla tua cuffia. Se l'uscita di un ritorno è proprio la tua cuffia (quella del monitor, dell'ascolto del mix o dei suoni del programma), all'avvio della prova, della diretta e della registrazione il programma te lo dice. Se invece il giro passa per un altro programma, per esempio Voicemeeter, il programma non lo può sapere: se nella prova senti il mix con il monitor e l'ascolto spenti, controlla dove esce il ritorno.</p>
+<h3>Gli avvisi durante la diretta</h3>
+<ul>
+<li><strong>Le risposte ai tuoi comandi</strong> che dicono che una cosa non si può fare (per esempio la verifica mentre registri, o Vai in diretta durante una prova) compaiono in una finestra di dialogo: le leggi con calma e premi OK. Dalla scorciatoia in tutto Windows te le dice a voce.</li>
+<li><strong>Quello che succede da solo in onda</strong> (diretta interrotta, di nuovo in onda, silenzio in onda, rete lenta) segue la tua scelta degli annunci, voce o solo suono, e finisce sempre negli Ultimi annunci (<kbd>Ctrl+Maiusc+U</kbd>). Ricorda che, se una sorgente Applicazione manda in onda lo screen reader, anche gli annunci a voce andrebbero in onda: per questo durante la diretta conviene il solo suono, e poi leggere gli Ultimi annunci.</li>
+<li><strong>Quando la diretta si ferma del tutto</strong> (la radio rifiuta la password, il mount non c'è, o nella diretta senza registrare non resta nessuna radio) senti il suono dei problemi e compare anche una finestra di dialogo che spiega cosa è successo.</li>
+</ul>
+
+<h3>Se la linea cade</h3>
+<p>Se il collegamento si interrompe, il programma te lo dice e riprova da solo: la prima volta dopo 2 secondi, poi sempre più di rado, fino a una volta ogni 15 secondi. Quando torna in onda te lo dice. Intanto la registrazione continua senza interruzioni. Se invece la radio rifiuta il nome utente o la password, o non conosce il mount, riprovare non serve: la diretta si ferma, il programma ti dice perché, e la registrazione continua.</p>
+<p>Se la rete è troppo lenta per la qualità scelta, il programma ti avvisa che un po' di audio della diretta si è perso: in quel caso abbassa la qualità.</p>
+
+<h3>Il silenzio in onda</h3>
+<p>Se in onda c'è solo silenzio per un po', per esempio per un microfono spento per sbaglio, il programma ti avvisa; quando l'audio torna, te lo dice. Di base l'avviso arriva dopo 10 secondi: puoi cambiarlo o spegnerlo in Impostazioni, categoria Diretta, <strong>Avviso di silenzio in onda</strong>.</p>
+
+<h3>Il titolo in onda</h3>
+<p>Menu Registrazione, <strong>Cambia il titolo in onda</strong> (<kbd>Ctrl+Maiusc+T</kbd>): scrivi il titolo che chi ascolta vede nel suo lettore, per esempio "Artista - Brano" o il nome della trasmissione. Il programma ti dice se la radio lo ha preso. Funziona con MP3 e AAC, non con Opus. Alcune radio permettono di cambiare il titolo solo all'amministratore: in quel caso il programma te lo dice. Se il collegamento cade e torna, il titolo viene rimandato da solo. Con la regia il titolo può seguire da solo i brani della scaletta (vedi La pausa in onda, le scelte della categoria Regia); se la radio rifiuta i titoli, te lo dice una volta sola.</p>
+
+<h3>Gli annunci della diretta</h3>
+<p>Sono nel gruppo <strong>Diretta</strong> di Impostazioni, categoria Annunci (capitolo 12). Di base sono a voce e con il suono, perché sono importanti: in onda, collegamento perso e ritrovato, silenzio in onda, titolo. Si sentono anche quando, durante la registrazione, hai scelto "Solo i problemi importanti".</p>
+
+<h3>Con StationPlaylist o un altro programma per la musica</h3>
+<p>HDX Recorder può prendere il posto dell'encoder dell'altro programma: aggiungi il programma che suona la musica come sorgente <strong>Applicazione</strong> (capitolo 3), insieme al tuo microfono, e vai in diretta da HDX. Così in onda vanno musica e voce insieme, con i volumi del mixer. Non usare intanto anche l'encoder dell'altro programma sulla stessa radio: il server accetta una sola diretta per volta.</p>
+
+<h3>I diritti della musica</h3>
+<p>Se trasmetti musica, i diritti (in Italia per esempio la SIAE) sono responsabilità di chi va in onda o della radio: informati con la tua radio.</p>
+
+<h2 id="impostazioni">12. Le impostazioni del programma</h2>
+<p>Strumenti, Impostazioni (<kbd>Ctrl+virgola</kbd>). Come tutte le finestre a categorie, si parte dall'elenco delle categorie; con <kbd>Tab</kbd> si va ai controlli.</p>
+
+<h3>Generale</h3>
+<p>La lingua e le opzioni di avvio e chiusura, spiegate nel capitolo 1, e la casella <strong>Controlla se ci sono aggiornamenti all'avvio</strong> (accesa di base; vedi "Gli aggiornamenti", nel capitolo 1). In fondo ci sono due pulsanti per la copia di sicurezza di tutte le impostazioni.</p>
+<ul>
+<li><strong>Salva una copia di sicurezza delle impostazioni</strong>: salva in un file <strong>.hdxbackup</strong>, dove vuoi tu, proprio tutto. Dentro ci sono le configurazioni, le registrazioni programmate, i preset e le catene personali, le radio preferite, le scorciatoie, gli annunci e le impostazioni del programma. Il nome proposto contiene la data, per esempio "HDX Recorder impostazioni 2026-10-13". È utile prima di grandi cambiamenti o per portare tutto su un altro computer.</li>
+<li><strong>Ripristina da una copia di sicurezza</strong>: scegli il file .hdxbackup e il programma chiede conferma (il pulsante già scelto è No). Tutte le impostazioni di adesso vengono sostituite da quelle della copia, poi HDX Recorder si chiude e riparte da solo per usarle. Le impostazioni di prima non si perdono: vengono salvate in una copia nella cartella Dati, con la data nel nome, e la finestra ti dice dove. Se hai ripristinato per sbaglio, ripristina quella copia.</li>
+</ul>
+<p>La chiave dell'intelligenza artificiale non va nella copia di sicurezza: resta solo su questo computer. Ripristinando una copia, la chiave di adesso resta com'è.</p>
+<p>Il ripristino si può fare solo quando non stai registrando, provando o facendo una diagnostica. Per condividere una sola configurazione, invece, c'è Esporta nel menu Configurazioni (capitolo 2).</p>
+
+<h3>Registrazioni</h3>
+<p>La <strong>Cartella delle registrazioni</strong>: il campo dice quella in uso; di base è Registrazioni, nella cartella del programma.</p>
+<ul>
+<li><strong>Scegli un'altra cartella</strong>: apre la finestra di Windows per scegliere una cartella. Il programma controlla subito che ci si possa scrivere; se no, te lo dice e la cartella non cambia.</li>
+<li><strong>Usa quella predefinita</strong>: torna alla cartella Registrazioni del programma.</li>
+</ul>
+<p>La nuova cartella vale dalla prossima registrazione: quelle già fatte restano dove sono. Se scegli una cartella dentro quella del programma, resta valida anche se sposti tutto il programma altrove. Se la cartella è su un disco esterno, una chiavetta o in rete e non è collegata, quando registri il programma te lo dice.</p>
+<p><strong>Alla fine di una registrazione avviata a mano</strong>, una casella a elenco con quattro scelte:</p>
+<ul>
+<li><strong>Solo l'annuncio</strong> (di base): la durata e gli eventuali problemi;</li>
+<li><strong>L'annuncio con il nome della registrazione</strong>: in più dice come si chiama, cioè il nome della sua cartella o del file;</li>
+<li><strong>Apri la cartella della registrazione</strong>: dopo l'annuncio si apre la cartella; se la registrazione è un file unico, si apre la cartella che lo contiene con il file già selezionato;</li>
+<li><strong>Una finestra di riepilogo da leggere</strong>: durata, formato, dove è salvata, l'elenco dei file e i problemi, da leggere con calma con le frecce.</li>
+</ul>
+<p>Le registrazioni programmate non seguono questa scelta: hanno la loro categoria "Dopo la fine" (capitolo 9).</p>
+<p><strong>Avvisa quando lo spazio sul disco scende sotto</strong>: mai, 1, 5 (di base), 10 o 20 GB. Durante la registrazione il programma controlla lo spazio ogni 30 secondi. Quando scende sotto la soglia ti avvisa una volta, con i minuti di registrazione che restano, calcolati da quanto spazio si sta consumando, video compreso. Ti avvisa di nuovo quando restano meno di 10 minuti.</p>
+<p><strong>Chiedi conferma prima di fermare la registrazione</strong> (spenta di base): <kbd>Ctrl+R</kbd> chiede "Fermare la registrazione?", e il pulsante già scelto è No, così un tasto premuto per sbaglio non ferma niente. Con la scorciatoia globale, che usi da un altro programma, invece della domanda il programma dice "Premi di nuovo per fermare la registrazione": la registrazione si ferma se premi di nuovo entro 3 secondi.</p>
+<p><strong>Chiedi conferma prima di rimuovere una sorgente</strong> (accesa di base): <kbd>Canc</kbd> nell'elenco delle sorgenti chiede prima di togliere, sempre con No già scelto.</p>
+
+<h3>Annunci</h3>
+<p>Qui scegli come il programma ti avvisa di quello che succede. Le risposte ai tuoi comandi (per esempio <kbd>Ctrl+T</kbd>, i livelli, "Nessuna sorgente selezionata") e gli errori parlano sempre: non sono in questo elenco.</p>
+<p>L'elenco è un albero, come quello della Tastiera. Ogni gruppo è aperto e dentro ci sono i suoi annunci. Ogni riga dice già com'è, per esempio "Pausa e ripresa: solo suono".</p>
+<ul>
+<li><strong>Registrazione</strong>: avvio e fermata; pausa e ripresa; automatismi del silenzio (partita, pausa, ripresa); nuova parte del file; copie pronte (normalizzata e compressa).</li>
+<li><strong>Problemi</strong>: interruzioni, audio perso, blocchi, scheda fuori tempo; mix in saturazione; poco spazio sul disco.</li>
+<li><strong>Dispositivi</strong>: scollegati e ricollegati; cambio del dispositivo predefinito di Windows; radio con connessione persa e ritrovata.</li>
+<li><strong>Sorgenti e mixer</strong>: volume; guadagno, bilanciamento, ritardo e fase; muta e di nuovo nel mix; sorgenti accese e spente; il monitor in cuffia acceso o spento e le sorgenti messe in cuffia o tolte. Valgono anche nella finestra Mixer e nella finestra del monitor.</li>
+<li><strong>Sottofondo</strong>: pausa, ripresa e brano successivo; sfumatura prima della fermata.</li>
+<li><strong>Scene e video</strong>: cambio di scena; problemi del video.</li>
+<li><strong>Programmazioni</strong>: preavvisi e controllo prima della partenza; attese, saltate, rimandate, non partite.</li>
+<li><strong>Prova</strong>: prova dei livelli e tono accesi o spenti; ascolto del mix e dei ritorni; il punto dei livelli, prima o dopo il volume.</li>
+<li><strong>Finestra</strong>: finestra chiusa e ridotta invece di uscire; apertura e chiusura del programma (di base solo il suono: due note di campana che salgono quando si apre e scendono quando si chiude); la regia aperta o chiusa e il banco dei pad scelto con F11 e F12.</li>
+<li><strong>Intelligenza artificiale</strong>: l'attesa della risposta. A voce dice "Sto chiedendo a Gemini..." (o "a OpenAI"); il suono è un tic leggero, ripetuto finché la risposta non arriva.</li>
+<li><strong>Aggiornamenti</strong>: nuova versione disponibile. Di base voce e suono: quando si apre la finestra dell'aggiornamento senti quattro note che salgono e la frase con la versione nuova.</li>
+<li><strong>Diretta</strong>: in onda, collegamento perso e ritrovato, silenzio in onda, titolo in onda (capitolo 11). Di base voce e suono.</li>
+</ul>
+<p><kbd>Spazio</kbd> su un annuncio cambia come avvisarti, in giro: <strong>voce</strong>, <strong>voce e suono</strong>, <strong>solo suono</strong>, <strong>spento</strong>, poi di nuovo voce. Il programma dice subito la scelta nuova. <kbd>Spazio</kbd> sul nome di un gruppo cambia tutto il gruppo insieme. Se dentro il gruppo le scelte sono diverse, il gruppo dice "misti" e il primo Spazio le porta tutte a voce.</p>
+<p>Per sentire il suono di un annuncio: selezionalo nell'elenco e premi il pulsante <strong>Ascolta il suono dell'annuncio scelto</strong>, subito dopo l'elenco con <kbd>Tab</kbd>, oppure premi <kbd>Invio</kbd> direttamente sull'annuncio. Se l'annuncio ha anche un contrario, come avvio e fermata, pausa e ripresa o scollegato e ricollegato, poco dopo senti anche quello. Su un gruppo Invio non suona niente: il gruppo non ha un suono suo. I suoni sono corti, con una piccola coda di stanza, e facili da riconoscere:</p>
+<ul>
+<li><strong>Ogni famiglia ha il suo timbro</strong>, così al primo istante capisci che genere di cosa è successa, e dentro la famiglia <strong>ogni suono ha il suo ritmo</strong> (uno, due o tre colpi, lungo e corto, veloce o lento). Su o giù distingue solo i contrari, come avvio e fermata;</li>
+<li><strong>la registrazione, note pulite</strong>: avvio e fermata corta-lunga, che sale e che scende; pausa e ripresa lunga-corta; gli automatismi del silenzio, più piano: partito tre note veloci uguali, pausa una nota lunga grave, ripresa una nota lunga acuta; il preavviso di una programmata tre note lente che salgono;</li>
+<li><strong>le notizie, campane</strong>: una notizia una campana; la nuova parte del file due campane acute; le copie pronte tre campane medie; una scena "din-don"; l'esito di una programmata due campane insieme; una nuova versione quattro campane che salgono; il programma che si apre e si chiude due campane lunghe;</li>
+<li><strong>i problemi, suono ruvido e ronzante</strong>: i problemi audio tre colpi uguali (quando tutto torna a posto un colpo ruvido e una nota pulita); poco spazio sul disco due ruvidi lunghi e gravi; i problemi del video lungo-corto-corto (e un ruvido con due note pulite quando si risolvono); la saturazione due bip acuti;</li>
+<li><strong>i dispositivi, note che scivolano</strong>: perso giù, ritrovato su; la radio uguale ma più lunga e con un tremolio; il predefinito cambiato due scivoli brevi;</li>
+<li><strong>le sorgenti, legnetti secchi</strong>: il volume un legnetto, le altre regolazioni due; muta e di nuovo nel mix due legnetti gravi attaccati, giù e su; accesa e spenta tre legnetti veloci, su e giù (anche con lo Spazio sulla casella della sorgente); il banco dei pad scelto tre legnetti a zig-zag;</li>
+<li><strong>la prova, marimba</strong>: prova accesa e spenta un salto d'ottava, su e giù; tono acceso e spento tre note veloci, su e giù; il punto dei livelli una nota lunga, grave in ingresso e acuta nel mix; il controllo prima del via tre note uguali e lente; la prova dei livelli interrotta da un problema il suono dei problemi audio;</li>
+<li><strong>la cuffia, note morbide</strong>: monitor acceso e spento due note, su e giù; una sorgente in cuffia una nota acuta corta, fuori dalla cuffia una grave; l'ascolto del mix acceso e spento un accordo che sale e che scende; un ritorno in ascolto tre note uguali, i ritorni spenti tre note che scendono;</li>
+<li><strong>il sottofondo, organetto</strong>: ripreso due note che salgono, in pausa due che scendono, il brano dopo tre passi veloci. La sfumatura finale è una nota lunga che scende e si spegne; la finestra ridotta un fruscio che scende;</li>
+<li><strong>la diretta e la regia, vibrafono</strong> (lo usano solo loro): la regia aperta e chiusa due accordi, su e giù; in onda tre note che salgono, l'ultima lunga; caduta due note che scendono e un ruvido grave; un problema in onda (silenzio, rete lenta, titolo rifiutato, microfoni muti) ruvidi che si alternano; il problema risolto un accordo; il titolo in onda due note acutissime; la pausa in onda e il rientro due note lunghe, giù e su; il rientro prenotato tre note uguali veloci, annullato due che scendono; la sigla di rientro quattro note veloci che salgono; "rientro tra 10 secondi" due note lente uguali; un brano della regia in onda una nota lunga, il lettore fermato una nota grave corta; "nessun brano pronto" e i microfoni muti da 30 secondi il suono dei problemi in onda. In cuffia, il brano che sta per finire tre legnetti lenti come un orologio, e il conto alla rovescia un colpo al secondo; il conto annullato tre note pulite veloci che scendono;</li>
+<li>lo zoom del video, dalla scorciatoia in tutto Windows: due legnetti lenti, su e giù;</li>
+<li>l'attesa di una risposta dell'intelligenza artificiale: un tic corto e leggero, ripetuto.</li>
+</ul>
+<p>Di base tutto è a voce, tranne gli automatismi del silenzio, che sono con il solo suono, e l'attesa dell'intelligenza artificiale, che è a voce e con il suono. Per gli automatismi del silenzio e per i preavvisi delle programmazioni resta anche la casella della configurazione o della programmazione: se lì il suono è spento, non suona.</p>
+<p>Sotto l'elenco ci sono due caselle per il tempo della registrazione, con le stesse quattro scelte:</p>
+<ul>
+<li><strong>Normali</strong>: ogni annuncio fa quello che hai scelto nell'elenco;</li>
+<li><strong>Solo i problemi importanti</strong>: restano come scelti solo i gruppi Problemi e Dispositivi e gli esiti delle programmazioni (attese, saltate, rimandate, non partite); tutti gli altri tacciono;</li>
+<li><strong>Solo suoni, niente voce</strong>: ogni annuncio non spento fa solo il suo suono, anche quelli che hai scelto a sola voce;</li>
+<li><strong>Disattivati</strong>: niente voce e niente suoni.</li>
+</ul>
+<p><strong>Durante la registrazione</strong> (di base: normali) vale quando registri. <strong>Durante la registrazione con l'audio del computer tra le sorgenti</strong> (di base: solo suoni) vale invece quando tra le sorgenti accese c'è l'audio del computer: in quel caso la voce dello screen reader finirebbe nella registrazione. Se però la sorgente audio del computer esclude proprio NVDA o JAWS, la loro voce non viene registrata e vale la prima casella. Vale la seconda casella anche quando c'è una sorgente <strong>Applicazione</strong> che prende proprio lo screen reader (NVDA, JAWS o l'Assistente vocale), per esempio per far sentire la sintesi in un tutorial o in diretta: anche lì la sua voce finirebbe nella registrazione e in onda. Se accendi o spegni l'audio del computer mentre registri, il programma cambia da solo la scelta in uso. Le due caselle valgono anche per la registrazione di prova.</p>
+<p>Anche in registrazione le risposte ai tuoi comandi parlano sempre: se premi <kbd>Ctrl+T</kbd> o <kbd>Ctrl+L</kbd>, vuol dire che lo vuoi sentire. Quando la registrazione si ferma, gli annunci tornano subito come li hai scelti nell'elenco, e l'annuncio della fermata lo senti normalmente.</p>
+<p>L'annuncio del tempo trascorso e i titoli della radio letti a voce non sono nell'elenco: mentre registri parlano solo se la scelta in uso è "Normali".</p>
+<p>In fondo: ogni quanto annunciare il tempo trascorso durante la registrazione.</p>
+
+<h3>Suoni</h3>
+<ul>
+<li>l'avviso sonoro di saturazione;</li>
+<li>i suoni per le scorciatoie globali;</li>
+<li>i suoni della composizione video e il suono di posizione;</li>
+<li>il dispositivo dei suoni del programma: se è un dispositivo che stai registrando, i suoni finirebbero nella registrazione, e il programma ti avvisa;</li>
+<li>il dispositivo per l'ascolto del mix in onda (<kbd>Ctrl+Maiusc+O</kbd>);</li>
+<li>la cuffia: dove senti il monitor del conduttore, il preascolto e gli avvisi che non devono andare in onda, come quello di fine brano. Di base sono i suoni del programma; meglio una cuffia che nessuna sorgente "audio del computer" registra (se lo fa, all'avvio te lo dice);</li>
+<li>il <strong>volume dei suoni del programma</strong>: una casella dal 100% al 10%, a passi del 10%, con Freccia su che alza. Vale per tutti i suoni del programma (annunci, saturazione, tono dei livelli, scorciatoie globali, composizione video), subito, e a ogni scelta senti un suono di prova. Ogni passo in giù abbassa di 3 dB, così i passi si sentono uguali.</li>
+</ul>
+
+<h3>Tastiera</h3>
+<p>Tutti i comandi, divisi come nei menu, con la loro scorciatoia. <kbd>Invio</kbd> la cambia (premi la nuova combinazione, oppure <kbd>Esc</kbd>), <kbd>Canc</kbd> la toglie; ci sono anche i pulsanti per ripristinare la predefinita o tutte. Se la combinazione è già usata, il programma chiede se spostarla.</p>
+<p>In fondo ci sono le <strong>scorciatoie globali</strong>, che funzionano in tutto Windows anche quando HDX Recorder non è in primo piano: <kbd>Ctrl+Alt+Windows</kbd> con R (registra), P (pausa), T (stato), L (livelli), S (sottofondo), H (mostra il programma), U (ripeti l'ultimo annuncio), O (accende e spegne lo zoom del video), e con i numeri le scene. Sono spente di base: si accendono con <kbd>Spazio</kbd>.</p>
+<p>Sotto i pulsanti c'è la casella <strong>"Nella guida alle scorciatoie, Invio esegue il comando"</strong>, spenta di base. Spiegata qui sotto.</p>
+
+<h3>Chiedi come si fa</h3>
+<p>Aiuto, <strong>Chiedi come si fa...</strong> (<kbd>Ctrl+Maiusc+F1</kbd>): scrivi una domanda sul programma, per esempio "come registro due microfoni separati?" o "come faccio a registrare solo quando parlo?", e premi <kbd>Invio</kbd>. L'intelligenza artificiale risponde leggendo questa Guida e le scorciatoie che usi adesso (anche quelle che hai cambiato), con i passi, i menu e i tasti. Se la Guida non ne parla, lo dice invece di inventare. Nella finestra della risposta puoi fare altre domande. Non manda niente delle tue registrazioni: solo la Guida, le scorciatoie e la domanda. Serve l'intelligenza artificiale preparata in Impostazioni (capitolo 12).</p>
+
+<h3>La guida alle scorciatoie da tastiera</h3>
+<p>Aiuto, Guida alle scorciatoie da tastiera (<kbd>F1</kbd>): una finestra per trovare in fretta un comando e il suo tasto. Sono sempre i tasti in uso adesso, anche quelli che hai cambiato.</p>
+<ul>
+<li>La finestra si apre sull'<strong>elenco</strong>, già aperto sul gruppo di dove ti trovi: con <kbd>F1</kbd> dall'elenco delle sorgenti su Sorgenti, dalla casella Configurazione su Configurazioni, dalla casella Scena su Scene; nella finestra Composizione video e nel Mixer, sui loro tasti. Lo stesso vale in tutte le altre finestre con tasti propri: Impostazioni, Proprietà di una sorgente, Impostazioni della configurazione, registrazioni programmate, Ascolta la prova, Disposizioni del video, ricerca delle radio. Da una finestra senza tasti propri si apre sul primo gruppo. Chiusa la guida, torni dove eri.</li>
+<li>Sopra l'elenco (<kbd>Maiusc+Tab</kbd>) c'è il campo <strong>Cerca</strong>: scrivi una parola ("volume", "scena", "pausa") o un tasto ("Ctrl+M"), e sotto restano solo le scorciatoie che la contengono. Dopo un attimo il programma dice quante ne ha trovate. <kbd>Freccia giù</kbd> o <kbd>Invio</kbd> portano ai risultati; con il campo vuoto si vede tutto.</li>
+<li>Sotto c'è l'<strong>elenco ad albero</strong>, diviso come i menu (File, Registrazione, Programmazioni, Configurazioni, Scene, Sorgenti, Sottofondo, Strumenti, Diagnostica, Aiuto, Scorciatoie globali), più i tasti delle finestre Composizione video e Mixer. Senza ricerca i gruppi sono chiusi: <kbd>Freccia destra</kbd> apre un gruppo, <kbd>Freccia sinistra</kbd> lo chiude, una lettera salta al gruppo o al comando che comincia così. Dopo una ricerca i gruppi sono già aperti sui risultati.</li>
+<li>Ogni riga dice il comando e il suo tasto, per esempio "Avvia o ferma la registrazione: Ctrl+R".</li>
+</ul>
+<p>Se in Impostazioni, Tastiera, accendi <strong>"Invio esegue il comando"</strong>, <kbd>Invio</kbd> su una scorciatoia chiude la guida ed esegue il comando: comodo per usare una funzione di cui non ricordi il tasto. Di base è spenta, così chi non conosce ancora il programma non fa partire niente per sbaglio. I tasti delle finestre Composizione e Mixer e le scorciatoie globali non si eseguono mai da qui, perché funzionano solo nel loro posto.</p>
+
+<h3>Intelligenza artificiale</h3>
+<p>Qui si prepara l'intelligenza artificiale esterna, che per ora serve per la scena del video, l'inquadratura della webcam, la privacy dello schermo, la qualità, la trascrizione e il riassunto delle registrazioni e la descrizione dei video registrati (capitolo 10). Serve una <strong>chiave</strong> del servizio, tua.</p>
+<ul>
+<li><strong>Servizio di intelligenza artificiale esterno</strong>: Nessuno (di base), Gemini (Google) oppure OpenAI (ChatGPT). Con Nessuno gli altri controlli sono spenti. Ogni servizio ha la sua chiave e il suo modello: se cambi servizio, quelli dell'altro restano salvati.</li>
+<li><strong>Chiave del servizio</strong>: incollala qui. Il campo la nasconde come una password. Viene salvata cifrata: la può leggere solo il tuo utente di Windows, su questo computer. Non va nelle copie di sicurezza delle impostazioni.</li>
+<li><strong>Verifica chiave e scarica i modelli</strong> (oppure <kbd>Invio</kbd> nel campo della chiave): il programma prova la chiave e scarica l'elenco dei modelli. Se funziona ti dice quanti modelli ci sono e quale ha scelto; se no ti dice perché (chiave sbagliata o scaduta, nessuna connessione, limite superato...).</li>
+<li><strong>Modello</strong>: il programma ne sceglie uno da solo, veloce e disponibile anche con la chiave gratuita. Puoi cambiarlo dall'elenco, per esempio se quello scelto è spesso sovraccarico. L'elenco si scarica da solo la prima volta che apri questa categoria.</li>
+</ul>
+<p>Sotto c'è una nota da leggere con <kbd>Tab</kbd>. La prima volta che usi una funzione con l'intelligenza artificiale il programma ti avvisa sulla privacy e chiede se continuare: con una chiave gratuita Google può usare quello che mandi per migliorare i suoi servizi, e possono leggerlo anche persone incaricate da Google; con un account a pagamento no. Il programma manda solo quello che chiedi, solo quando lo chiedi.</p>
+<p><strong>Con OpenAI</strong> non tutto funziona allo stesso modo, perché OpenAI non ascolta l'audio e non guarda i video:</p>
+<ul>
+<li>funzionano Descrivi la scena, Controlla l'inquadratura della webcam, Controlla la privacy dello schermo e Chiedi come si fa;</li>
+<li><strong>Trascrivi una registrazione</strong> funziona, ma con un servizio fatto apposta per le parole: scrive solo quello che si dice, con i minuti all'inizio di ogni riga (quindi anche i sottotitoli), senza "Persona 1:", "Persona 2:" e senza segnare musica e suoni;</li>
+<li><strong>Riassumi una registrazione e fai domande</strong> funziona, ma il programma prima trascrive la registrazione e poi fa il riassunto sul testo: anche le domande dopo si basano sulla trascrizione, quindi niente domande sul tono della voce o sulla musica;</li>
+<li><strong>Controlla la qualità dell'audio</strong> (anche il pulsante nella finestra di prova) e <strong>Descrivi un video registrato</strong> non ci sono: spariscono dai menu. Se gli avevi dato una scorciatoia tua, la scorciatoia te lo dice.</li>
+</ul>
+<p>OpenAI non ha chiavi gratuite: serve un account con del credito. La nota sotto, con OpenAI scelto, riassume tutto questo. L'avviso sulla privacy è diverso: OpenAI dice di non usare per l'addestramento quello che mandi con una chiave, ma può tenerlo per un tempo limitato per controllare gli abusi.</p>
+<p>Se il servizio è sovraccarico, il programma riprova da solo altre due volte prima di dirtelo. Se non risponde in tempo (un minuto e mezzo per una domanda, dieci minuti per ogni pezzo di una trascrizione), te lo dice: riprova, o scegli un altro modello.</p>
+
+<h3>Diretta</h3>
+<p>L'elenco delle radio (<kbd>Spazio</kbd> usa o esclude, <kbd>Invio</kbd> modifica, <kbd>Canc</kbd> rimuove), i pulsanti <strong>Aggiungi</strong>, <strong>Modifica</strong>, <strong>Rimuovi</strong> e <strong>Prova il collegamento</strong>, e la casella <strong>Avviso di silenzio in onda</strong>: mai, oppure dopo 5, 10, 20, 30 o 60 secondi (di base 10). Sotto c'è una nota da leggere con <kbd>Tab</kbd>. Tutto è spiegato nel capitolo 11.</p>
+
+<h2 id="problemi">13. Diagnostica, registro e problemi</h2>
+
+<h3>Il registro degli eventi</h3>
+<p>Strumenti, Mostra il registro: tutto quello che è successo, con l'orario. Le registrazioni avviate e salvate, i dispositivi scollegati, le saturazioni, i titoli della radio, le programmazioni. Se qualcosa è andato storto, è il primo posto dove guardare.</p>
+
+<h3>Gli ultimi annunci</h3>
+<p>Strumenti, Ultimi annunci (<kbd>Ctrl+Maiusc+U</kbd>): una finestra da leggere con gli ultimi 200 annunci del programma, dal più recente: prima l'annuncio, poi la sua ora tra parentesi. Serve quando un annuncio arriva mentre fai altro e te lo perdi. A differenza del registro, qui c'è proprio tutto quello che il programma ti ha detto, anche i volumi e le scene. Ci sono anche gli avvenimenti importanti che, per come hai scelto gli annunci, hanno fatto solo il suono: problemi, dispositivi, diretta ed esiti delle programmazioni. Così, se senti un suono mentre registri o sei in onda, qui trovi cosa è successo.</p>
+<p>Da un altro programma, la scorciatoia globale <kbd>Ctrl+Alt+Windows+U</kbd> ripete l'ultimo annuncio. Va accesa in Impostazioni, Tastiera, come le altre globali.</p>
+<p>Gli ultimi annunci si azzerano quando chiudi il programma.</p>
+
+<h3>La diagnostica</h3>
+<p>Strumenti, Diagnostica: una prova del computer, breve (1 minuto), consigliata (5 minuti) o lunga (30 minuti). Ascolta il microfono e misura se il computer riesce a stare al passo con l'audio: interruzioni, audio perso, blocchi, puntualità di Windows. Il risultato si apre in una finestra con la spiegazione di ogni numero, e si rilegge con "Mostra l'ultima diagnostica".</p>
+
+<h3>Informazioni sul sistema</h3>
+<p>Aiuto, Informazioni sul sistema: la versione, le cartelle del programma, delle impostazioni e delle registrazioni, il microfono predefinito e l'ultima registrazione. Utile quando chiedi aiuto a qualcuno.</p>
+
+<h3>Contattami</h3>
+<p>Aiuto, <strong>Contattami</strong>: per scrivere all'autore. Scegli il <strong>tipo di messaggio</strong> (segnalazione di un problema, suggerimento, complimento, altro), poi scrivi un messaggio breve; per un problema, cosa stavi facendo e cosa è successo. Nel campo del messaggio <kbd>Invio</kbd> va a capo; per inviare usa il pulsante <strong>Invia</strong>. Si apre un'email già pronta nel tuo programma di posta, con l'oggetto, la versione del programma, la lingua e il tipo già scritti: controlla e mandala. Il messaggio parte dalla tua casella di posta, senza passare da nessun altro servizio. Se sul computer non c'è un programma di posta, il programma mostra il testo pronto, con l'indirizzo e l'oggetto, da copiare e mandare a mano.</p>
+
+<h3>La licenza</h3>
+<p>Le condizioni d'uso di HDX Recorder sono nella cartella Documenti: <strong>Licenza.txt</strong> in italiano, <strong>License.txt</strong> in inglese, <strong>Licencia.txt</strong> in spagnolo. In breve: il programma è gratuito, per uso personale e di lavoro, si scarica solo dal sito ufficiale, non raccoglie niente su di te, e viene dato senza garanzia, quindi per le registrazioni importanti fai sempre una prova. Le licenze dei componenti di altri autori sono nel file <strong>Licenze.html</strong>.</p>
+
+<h3>I problemi più comuni</h3>
+<ul>
+<li><strong>Il microfono non registra</strong>: controlla in Impostazioni di Windows, Privacy e sicurezza, Microfono, che le app desktop possano usarlo.</li>
+<li><strong>La webcam non funziona</strong>: lo stesso, in Privacy e sicurezza, Fotocamera.</li>
+<li><strong>Il video è nero</strong>: spegni la tenda schermo di NVDA.</li>
+<li><strong>Un'applicazione non compare</strong> tra quelle da registrare: falla suonare, poi riprova.</li>
+<li><strong>La musica è due volte nel mix</strong>: stai ascoltando il sottofondo su un dispositivo che registri anche come audio del computer. Il programma ti avvisa; scegli un altro dispositivo per l'ascolto.</li>
+<li><strong>Il formato AAC non funziona</strong>: nelle edizioni "N" di Windows manca il codificatore; si aggiunge con il Media Feature Pack, oppure scegli un altro formato.</li>
+<li><strong>La cartella delle registrazioni non è raggiungibile</strong>: hai scelto una cartella su un disco esterno, una chiavetta o in rete che adesso non è collegata. Collegala, oppure scegline un'altra in Impostazioni, categoria Registrazioni.</li>
+<li><strong>Il programma non parte da una cartella</strong>: HDX Recorder scrive nella sua cartella, quindi non va messo dentro Programmi.</li>
+</ul>
+
+</body>
+</html>
