@@ -50,7 +50,9 @@
   },
   "gestore-finestre": {
     "storico": 0,
-    "versioni_tolte": {}
+    "versioni_tolte": {
+      "v1.2.0": 7
+    }
   },
   "blocco-modificatore": {
     "storico": 0,

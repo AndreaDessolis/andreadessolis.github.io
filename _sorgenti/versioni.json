@@ -26,8 +26,9 @@
     "sha256": "ea88c9625c9292855457f4df4da606a81bab08b461047d70494a0b1dbd7d2b4c"
   },
   "gestore-finestre": {
-    "versione": "1.2.0",
-    "data": "2026-10-27"
+    "versione": "1.2.1",
+    "data": "2026-10-28",
+    "sha256": "04ec762c508a2fafea1655f41ebde404b5862873f5949f31b27a26698d842ca4"
   },
   "blocco-modificatore": {
     "versione": "1.2.0",
