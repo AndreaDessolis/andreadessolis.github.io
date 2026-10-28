@@ -124,14 +124,15 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Il programma chiede a YouTube 20 risultati alla volta (il numero si sceglie nelle Impostazioni, categoria Ricerca). Quando arrivi vicino al fondo, i risultati seguenti si chiedono da soli e si aggiungono in coda, con un suono leggero: puoi continuare a scendere. In fondo davvero, senza altri risultati, senti "Fine dei risultati".</p>
 
 <h3>Video pronti prima</h3>
-<p>Per far partire un video, il programma deve prima chiedere a YouTube il suo indirizzo vero: ci vogliono circa 3 secondi. Per non farti aspettare, Tube Player li prepara in anticipo, come scegli nelle Impostazioni, categoria Ricerca, casella <strong>Preparazione anticipata dei video</strong>:</p>
+<p>Per far partire un video, il programma deve prima chiedere a YouTube il suo indirizzo vero: ci vogliono circa 2 o 3 secondi. Per non farti aspettare, Tube Player li prepara in anticipo, come scegli nelle Impostazioni, categoria Ricerca, casella <strong>Preparazione anticipata dei video</strong>:</p>
 <ul>
-<li><strong>Primi dieci</strong> (la scelta di partenza): i primi dieci risultati appena arrivano, e il video su cui ti fermi con i due che lo seguono. È la più veloce, ma per qualche secondo fa lavorare molto il processore (ogni video preparato lo impegna per circa 2 secondi);</li>
+<li><strong>Primi dieci</strong> (la scelta di partenza): i primi dieci risultati appena arrivano, e il video su cui ti fermi con i due che lo seguono. È la più veloce, ma per qualche secondo fa lavorare molto il processore (ogni video preparato lo impegna per circa un secondo);</li>
 <li><strong>Primi cinque</strong>: lo stesso, ma con i primi cinque risultati: il processore lavora circa la metà;</li>
-<li><strong>Leggera</strong>: solo il video su cui ti fermi per un secondo. Scorrendo i risultati non si prepara niente, così il processore e le ventole restano tranquilli; se però premi <kbd>Invio</kbd> appena arrivato su un video, aspetti i 3 secondi;</li>
+<li><strong>Leggera</strong>: solo il video su cui ti fermi per un secondo. Scorrendo i risultati non si prepara niente, così il processore e le ventole restano tranquilli; se però premi <kbd>Invio</kbd> appena arrivato su un video, aspetti i 2 o 3 secondi;</li>
 <li><strong>Nessuna</strong>: niente in anticipo; ogni video si prepara quando premi Invio.</li>
 </ul>
 <p>Se premi Invio su un video non ancora pronto, senti il suono del caricamento finché non parte.</p>
+<p>Quando entri in un canale, in una playlist o fai una nuova ricerca, i video dell'elenco di prima che si stavano ancora preparando si fermano, e il nuovo elenco passa davanti: così arriva prima.</p>
 
 <h2 id="canali">3. Canali e playlist</h2>
 <p>Canali e playlist funzionano come le cartelle di Esplora risorse:</p>
@@ -422,7 +423,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>YouTube cambia spesso il modo in cui dà i suoi video. Per questo Tube Player usa tre programmi di altri autori, che chi li fa tiene aggiornati in pochi giorni a ogni cambiamento:</p>
 <ul>
 <li><strong>yt-dlp</strong>: legge YouTube (ricerche, canali, playlist, indirizzi dei video, download);</li>
-<li><strong>Deno</strong>: serve a yt-dlp per decifrare i video;</li>
+<li><strong>Deno</strong>: serve a yt-dlp per decifrare i video che non si possono preparare nel modo veloce;</li>
 <li><strong>mpv</strong>: riproduce l'audio e le immagini;</li>
 <li>e, solo per i download, <strong>FFmpeg</strong>.</li>
 </ul>
@@ -525,7 +526,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <h2 id="problemi">19. Problemi e domande</h2>
 
 <h3>Il primo video ci mette qualche secondo a partire</h3>
-<p>È normale: per ogni video il programma deve chiedere a YouTube il suo indirizzo vero, e ci vogliono circa 3 secondi. I video su cui ti fermi si preparano in anticipo (vedi <a href="#cercare">Video pronti prima</a>), quindi fermandoti un secondo prima di premere Invio di solito partono subito. Un video che hai già aperto, se lo riapri entro un'ora, parte subito.</p>
+<p>È normale: per ogni video il programma deve chiedere a YouTube il suo indirizzo vero, e ci vogliono circa 2 o 3 secondi. I video su cui ti fermi si preparano in anticipo (vedi <a href="#cercare">Video pronti prima</a>), quindi fermandoti un secondo prima di premere Invio di solito partono subito. Un video che hai già aperto, se lo riapri entro un'ora, parte subito.</p>
 
 <h3>Alcuni titoli arrivano in un'altra lingua</h3>
 <p>Molti canali hanno i titoli tradotti in più lingue, e YouTube dà quelli della lingua che gli chiede il programma. Tube Player chiede la lingua scelta in Impostazioni, Generale, "Lingua dei contenuti di YouTube" (di partenza quella del programma). Se un titolo arriva lo stesso in un'altra lingua, è il titolo originale scelto da chi ha pubblicato il video.</p>

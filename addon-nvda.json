@@ -1,0 +1,26 @@
+{
+  "formato": 1,
+  "addon": {
+    "navigazioneWeb": {
+      "nome": {
+        "it": "Navigazione web",
+        "en": "Web Navigation"
+      },
+      "versione": "1.1.1",
+      "url": "https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases/latest/download/navigazioneWeb.nvda-addon",
+      "sha256": "a713930a2e2e52de498f77e430c3c9a4b0061181b58b3a2ff329ff999422ef21",
+      "pagina": {
+        "it": "https://andreadessolis.com/addon-nvda.html#navigazione-web",
+        "en": "https://andreadessolis.com/en/addon-nvda.html#navigazione-web"
+      },
+      "novita": {
+        "it": [
+          "Aggiornamenti automatici: a ogni avvio di NVDA l'add-on controlla se c'è una versione nuova, ne mostra le novità e propone di installarla. Si possono spegnere nelle Impostazioni di NVDA, categoria Navigazione web, e cercare a mano con il comando \"Cerca gli aggiornamenti di questa add-on\" in Gesti e comandi."
+        ],
+        "en": [
+          "Automatic updates: every time NVDA starts, the add-on checks for a new version, shows what's new and offers to install it. They can be turned off in NVDA Settings, Web Navigation category, and checked by hand with the \"Checks for updates of this add-on\" command in Input gestures."
+        ]
+      }
+    }
+  }
+}

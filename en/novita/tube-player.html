@@ -43,6 +43,28 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../tube-player.html">Back to Tube Player</a></p>
 <section class="release">
+<h2>Version 1.2.4, October 27, 2026</h2>
+<h3>Fixes</h3>
+<ol>
+<li>On Windows 10 the YouTube engine might not get ready at startup, with the message &quot;Reason: mpv.7z&quot;: the player file was downloaded but Windows 10 could not open it. Now Tube Player opens it by itself with 7-Zip, included in the program.</li>
+<li>When an engine or FFmpeg file is downloaded but cannot be opened, the message says so clearly instead of asking to check the connection.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 1.2.3, October 27, 2026</h2>
+<h3>Faster</h3>
+<ol>
+<li>Videos start sooner: each video is prepared in about 2 or 3 seconds instead of 4 or 5, and uses less than half the processor. If the fast way does not work for a video, the program uses the old one by itself.</li>
+<li>Channels, playlists (including those in your collections) and searches arrive much sooner: the first page is read directly from YouTube, in about half a second instead of 2. The following pages arrive as before while you scroll.</li>
+<li>While the program prepares videos in advance, lists come first; and when you enter a channel or a playlist or start a new search, the preparations of the previous list stop, so the new list arrives right away.</li>
+</ol>
+<h3>Fixes</h3>
+<ol>
+<li>Scrolling through search results a video could appear twice (YouTube changes the order of results at every request): now it is not repeated.</li>
+<li>Views and subscribers in the millions are now correct (&quot;2.7M&quot; could be read as 27).</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 1.2.2, October 27, 2026</h2>
 <h3>New</h3>
 <ol>

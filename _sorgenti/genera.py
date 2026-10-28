@@ -416,6 +416,32 @@ def guida_addon(a, lingua):
     return re.sub(r'(<body[^>]*>)', lambda m: m.group(1) + '\n' + barra, testo, count=1)
 
 
+# ---------------------------------------------------------------- gli aggiornamenti
+
+def aggiornamenti_addon():
+    """Il file che le add-on leggono a ogni avvio di NVDA per sapere se c'e' una
+    versione nuova: per ogni add-on (col suo nome interno, quello del manifest)
+    versione, link fisso, impronta del pacchetto e novita' di quella versione.
+    Un'add-on senza impronta non viene proposta: la scrive pubblica.py."""
+    voci = {}
+    for a in ADDON:
+        if not (a.get('versione') and a.get('sha256')):
+            continue
+        novita = {}
+        for lingua in LINGUE:
+            versione = next((v for v in versioni_da_json(a['novita'][1], lingua) if v[0] == a['versione']), None)
+            novita[lingua] = [voce for _titolo, elenco in (versione[2] if versione else []) for voce in elenco]
+        voci[a['setup'].rsplit('.', 1)[0]] = {
+            'nome': a['nome'],
+            'versione': a['versione'],
+            'url': link_download(a),
+            'sha256': a['sha256'],
+            'pagina': {'it': DOMINIO + a['pagina'], 'en': DOMINIO + 'en/' + a['pagina']},
+            'novita': novita,
+        }
+    return json.dumps({'formato': 1, 'addon': voci}, ensure_ascii=False, indent=2) + '\n'
+
+
 # ---------------------------------------------------------------- tutto
 
 def scrivi(cartella, relativo, contenuto):
@@ -444,6 +470,7 @@ def genera(uscita):
     for p in PROGRAMMI:
         if p['stato'] == 'disponibile' and p.get('guida'):
             scrivi(uscita, f'guide/{p["id"]}.html', guida(p))
+    scrivi(uscita, 'addon-nvda.json', aggiornamenti_addon())
     shutil.copyfile(os.path.join(QUI, 'style.css'), os.path.join(uscita, 'style.css'))
     os.makedirs(os.path.join(uscita, 'immagini'), exist_ok=True)
     for p in PROGRAMMI:

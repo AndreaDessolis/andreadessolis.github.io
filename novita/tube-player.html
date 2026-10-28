@@ -43,6 +43,29 @@
     <p class="lede">Le versioni dalla più recente. Le stesse novità si leggono nel programma, in Aiuto.</p>
     <p><a href="../tube-player.html">Torna a Tube Player</a></p>
 <section class="release">
+<h2>Versione 1.2.4 del 27 ottobre 2026</h2>
+<h3>Correzioni</h3>
+<ol>
+<li>Su Windows 10 il motore di YouTube poteva non prepararsi all&#x27;avvio, con il messaggio &quot;Motivo: mpv.7z&quot;: il file del lettore veniva scaricato ma Windows 10 non riusciva ad aprirlo. Ora Tube Player lo apre da solo con 7-Zip, incluso nel programma.</li>
+<li>Quando un file del motore o di FFmpeg viene scaricato ma non si riesce ad aprirlo, il messaggio lo dice chiaramente invece di chiedere di controllare la connessione.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 1.2.3 del 27 ottobre 2026</h2>
+<h3>Più veloce</h3>
+<ol>
+<li>I video partono prima: ogni video si prepara in circa 2 o 3 secondi invece di 4 o 5, e fa lavorare il processore meno della metà. Se per un video il modo veloce non va, il programma usa da solo quello di prima.</li>
+<li>Canali, playlist (anche quelle delle raccolte) e ricerche arrivano molto prima: la prima pagina si legge direttamente da YouTube, in mezzo secondo circa invece di 2. Le pagine seguenti arrivano come prima mentre scorri.</li>
+<li>Mentre il programma prepara i video in anticipo, gli elenchi passano davanti; e quando entri in un canale, in una playlist o fai una nuova ricerca, le preparazioni dell&#x27;elenco di prima si fermano, così il nuovo elenco arriva subito.</li>
+</ol>
+<h3>Correzioni</h3>
+<ol>
+<li>Scorrendo i risultati di una ricerca un video poteva comparire due volte (YouTube cambia l&#x27;ordine dei risultati a ogni richiesta): ora non si ripete.</li>
+<li>Le date dei risultati si leggono per intero: &quot;13 ore fa&quot;, &quot;1 giorno fa&quot;, &quot;3 settimane fa&quot; invece di &quot;13 h fa&quot;, &quot;1 g fa&quot;, &quot;3 sett. fa&quot;.</li>
+<li>Visualizzazioni e iscritti in milioni ora sono giusti (&quot;2,7 Mln&quot; era letto come 27).</li>
+</ol>
+</section>
+<section class="release">
 <h2>Versione 1.2.2 del 27 ottobre 2026</h2>
 <h3>Novità</h3>
 <ol>

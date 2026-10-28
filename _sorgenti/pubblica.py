@@ -229,6 +229,8 @@ def pubblica(id_programma, setup, prova):
             # Le pagine si generano in una cartella a parte: il sito non si tocca.
             vecchie = dict(contenuti._VERSIONI)
             p.update({'versione': versione, 'data': oggi})
+            if e_addon(p):
+                p['sha256'] = impronta(setup)
             genera.genera(os.path.join(lavoro, 'sito'))
             print('PROVA riuscita: allegati', [os.path.basename(a) for a in allegati], '- niente pubblicato.')
             p.update(vecchie.get(p['id'], {}))
@@ -274,6 +276,9 @@ def pubblica(id_programma, setup, prova):
         versioni_file = os.path.join(QUI, 'versioni.json')
         versioni = json.load(open(versioni_file, encoding='utf-8'))
         versioni[p['id']] = {'versione': versione, 'data': oggi}
+        if e_addon(p):
+            # Le add-on controllano il pacchetto scaricato con questa impronta.
+            versioni[p['id']]['sha256'] = impronta(setup)
         json.dump(versioni, open(versioni_file, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
         p.update(versioni[p['id']])
         genera.genera(RADICE)

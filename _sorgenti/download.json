@@ -38,7 +38,9 @@
   },
   "navigazione-web": {
     "storico": 0,
-    "versioni_tolte": {}
+    "versioni_tolte": {
+      "v1.1.0": 8
+    }
   },
   "shortcut-conflict-helper": {
     "storico": 0,
