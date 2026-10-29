@@ -43,6 +43,23 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.1.8</h2>
+<p>Version 2.1.8 makes the first login easier and removes the double sound from notifications, following a user&#x27;s report.</p>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Country choice at login. The phone number screen now has a &quot;Country&quot; box before the number field, with the country name and its prefix, for example &quot;Italy +39&quot;. It is already set to your country, which Telegram works out from your connection, and you change it with the arrows or by typing the first letter. Now you can type your number the way you usually do, without the prefix: Gram Access adds the one of the chosen country by itself. If you type the number with + or 00 in front, what you typed is used. Before, without the prefix, the login stopped with an invalid format error.</li>
+<li>Countdown and call at the code step. When the code is sent, Gram Access also tells you how long to wait if it doesn&#x27;t arrive, for example &quot;If it doesn&#x27;t arrive, Telegram will call you in 2 minutes&quot;. After the &quot;Confirm Code&quot; button you find a line showing the time left; while the focus is on it, it doesn&#x27;t change or repeat, and when you Tab back to it you find it updated. As in official Telegram, when it reaches zero Telegram&#x27;s call starts by itself and Gram Access announces it. If another method is planned instead, the &quot;Resend Code&quot; button appears at zero. If the code arrives in the Telegram app on another device, the &quot;Send code via SMS&quot; button is there right away.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>A single sound for notifications. Each notification played both the Gram Access sound and the default Windows sound, one over the other. Now, as in official Telegram, only the Gram Access sound plays.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
 <h2>Version 2.1.7</h2>
 <p>Version 2.1.7 fixes a sudden closing of the program and updates the Telegram engine to the latest official version.</p>
 <h3>FIXES</h3>
