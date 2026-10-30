@@ -20,6 +20,7 @@ import sys
 QUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, QUI)
 from contenuti import ADDON, EMAIL, GITHUB, PAYPAL, PROGRAMMI, T  # noqa: E402
+from privacy import PRIVACY  # noqa: E402
 
 DOMINIO = 'https://andreadessolis.com/'
 LINGUE = ('it', 'en')
@@ -212,6 +213,8 @@ def pagina_programma(p, lingua):
         if p.get('novita'):
             collegamenti.append(f'<li><a href="novita/{p["id"]}.html">{e(t["leggi_novita"])}</a></li>')
         collegamenti.append(f'<li><a href="{GITHUB}/{p["repository"]}/releases">{e(t["tutte_versioni"])}</a></li>')
+        if p['id'] in PRIVACY:
+            collegamenti.append(f'<li><a href="privacy-{p["id"]}.html">{e(t["leggi_privacy"].format(p["nome"]))}</a></li>')
         parti.append(f'    <h2>{e(t["guida_novita"])}</h2>\n    <ul>\n      ' + '\n      '.join(collegamenti) + '\n    </ul>')
     if p.get('community'):
         parti.append(f'''    <h2>Community</h2>
@@ -222,6 +225,27 @@ def pagina_programma(p, lingua):
     parti.append(sostieni(lingua))
     parti.append(f'    <p>{t["domande"].replace("contatti.html", "contatti.html")}</p>')
     return pagina(lingua, p['pagina'], p['nome'], 'programmi', '\n\n'.join(parti), sole=680, descrizione=p['frase'][lingua])
+
+
+def pagina_privacy(p, lingua):
+    """La privacy di un programma (privacy.py): i testi possono contenere
+    collegamenti HTML, quindi non si trasformano."""
+    t = T[lingua]
+    dati = PRIVACY[p['id']]
+    testi = dati[lingua]
+    parti = [f'    <h1>{e(testi["titolo"])}</h1>',
+             f'    <p class="lede">{testi["lede"]}</p>',
+             f'    <p class="note">{e(t["aggiornata_il"].format(data_leggibile(dati["aggiornata"], lingua)))}</p>']
+    for titolo, elementi in testi['sezioni']:
+        parti.append(f'    <h2>{e(titolo)}</h2>')
+        for elemento in elementi:
+            if isinstance(elemento, list):
+                parti.append('    <ul>\n' + '\n'.join(f'      <li>{voce}</li>' for voce in elemento) + '\n    </ul>')
+            else:
+                parti.append(f'    <p>{elemento}</p>')
+    parti.append(f'    <p><a href="{p["pagina"]}">{e(p["nome"])}</a></p>')
+    return pagina(lingua, f'privacy-{p["id"]}.html', testi['titolo'], 'programmi', '\n'.join(parti), sole=560,
+                  descrizione=testi['titolo'])
 
 
 def sezione_addon(a, lingua):
@@ -462,6 +486,8 @@ def genera(uscita):
             scrivi(uscita, prefisso + p['pagina'], pagina_programma(p, lingua))
             if p['stato'] == 'disponibile' and p.get('novita'):
                 scrivi(uscita, prefisso + f'novita/{p["id"]}.html', pagina_novita(p, lingua))
+            if p['id'] in PRIVACY:
+                scrivi(uscita, prefisso + f'privacy-{p["id"]}.html', pagina_privacy(p, lingua))
         scrivi(uscita, prefisso + 'addon-nvda.html', pagina_addon(lingua))
         for a in ADDON:
             if a.get('versione'):

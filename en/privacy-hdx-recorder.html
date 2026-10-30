@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HDX Recorder privacy — Andrea Dessolis</title>
+<meta name="description" content="HDX Recorder privacy">
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/privacy-hdx-recorder.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/privacy-hdx-recorder.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Andrea Dessolis</a>
+    <nav aria-label="Main menu">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programmi.html" aria-current="page">Programs</a></li>
+        <li><a href="addon-nvda.html">NVDA Add-ons</a></li>
+        <li><a href="chi-sono.html">About me</a></li>
+        <li><a href="contatti.html">Contact</a></li>
+        <li class="lang"><a href="../privacy-hdx-recorder.html" lang="it" hreflang="it">Italiano</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="560" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <h1>HDX Recorder privacy</h1>
+    <p class="lede">HDX Recorder is a program that runs on your computer. I, the author, do not collect any data about you: there is no HDX Recorder server, and there are no statistics, ads or cookies.</p>
+    <p class="note">Last updated: October 30, 2026.</p>
+    <h2>Where your data stays</h2>
+    <p>Recordings, settings, radio passwords and permissions stay on your computer, in the HDX Recorder folder. Passwords and permissions are encrypted with Windows protection, for your user, and are not included in settings backups.</p>
+    <h2>When the program connects to the Internet</h2>
+    <p>Only when you use a feature that needs it, and only with the service that feature needs:</p>
+    <ul>
+      <li>the update check downloads the list of versions, without sending personal data;</li>
+      <li>the search for radio stations to listen to sends the text you search for to the public service <a href="https://www.radio-browser.info">radio-browser.info</a>;</li>
+      <li>live broadcasts on a web radio go to the server of the radio you choose, with the data you type;</li>
+      <li>artificial intelligence works only with your own Google Gemini or OpenAI key: the audio, text or images you choose to have analysed go to that service, under its own rules;</li>
+      <li>YouTube live broadcasts use the YouTube API Services, as explained below.</li>
+    </ul>
+    <h2>YouTube and the YouTube API Services</h2>
+    <p>For YouTube live broadcasts with the account connected, HDX Recorder uses the YouTube API Services. By using these features you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. The data handled by Google is covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    <p>When you connect the account, Google asks you for permission to manage your YouTube account. HDX Recorder uses it only for the live broadcast features, and only when you use them:</p>
+    <ul>
+      <li>it reads your channel name, to show it in the program;</li>
+      <li>it creates live broadcasts on your channel, with the title, description and visibility you choose, binds them to the signal you send and ends them when you stop;</li>
+      <li>it changes the title of the live broadcast when you ask;</li>
+      <li>it uploads the thumbnail you choose;</li>
+      <li>it reads the live chat messages, so you can hear them, and posts in the chat the messages you write;</li>
+      <li>it creates, lists and deletes scheduled live broadcasts, when you ask.</li>
+    </ul>
+    <p>HDX Recorder does not read your videos, your subscribers, your statistics or any other data of your account.</p>
+    <h2>What stays on your computer, and for how long</h2>
+    <ul>
+      <li>The Google permission (the "refresh token"): encrypted, until you disconnect the account. At every start the program checks that it is still valid; if you removed it from Google, the program deletes it.</li>
+      <li>The channel name: next to the permission, updated at every start of the program.</li>
+      <li>The title, description, visibility and thumbnail of the last live broadcast: the ones you type, which the program suggests the next time.</li>
+      <li>Chat messages and the live broadcast link: only in the program's memory, while it is open and at most until the next live broadcast. They are not saved to disk.</li>
+    </ul>
+    <h2>Who it is shared with</h2>
+    <p>No one. Your YouTube account data only travels between your computer and Google. I do not receive it, sell it or use it for advertising or to train artificial intelligence.</p>
+    <h2>How to remove the permission and delete the data</h2>
+    <ul>
+      <li>In the program: Tools, Settings, Live broadcast category, YouTube, Edit, then Disconnect the YouTube account. HDX Recorder asks Google to revoke the permission and immediately deletes the permission and the channel name from your computer.</li>
+      <li>From your Google account, on the <a href="https://security.google.com/settings/security/permissions">page of apps with access to your account</a>. The next time it opens, HDX Recorder notices and deletes the data from your computer.</li>
+      <li>Deleting the HDX Recorder folder deletes everything the program has saved.</li>
+    </ul>
+    <p>Removing the permission does not delete anything on YouTube: live broadcasts and chat messages stay on your channel, and you manage them from YouTube Studio.</p>
+    <h2>Questions</h2>
+    <p>For any question or request about privacy you can write to me at <a href="mailto:dessolisandrea@gmail.com">dessolisandrea@gmail.com</a>.</p>
+    <p>If this page changes, the date of the last update above says so.</p>
+    <p><a href="hdx-recorder.html">HDX Recorder</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="contatti.html">write to me</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>
