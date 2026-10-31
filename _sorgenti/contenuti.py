@@ -12,6 +12,9 @@ import os as _os
 PAYPAL = 'https://paypal.me/AndreaDessolis'
 EMAIL = 'dessolisandrea@gmail.com'
 GITHUB = 'https://github.com/AndreaDessolis'
+# Il gruppo Telegram di tutti i programmi (31 ott 2026: era la community di
+# Gram Access, rinominata "L'angolo di HDX"; il link d'invito e' lo stesso).
+GRUPPO_TELEGRAM = 'https://t.me/+t7KuNQH-xQczMDVk'
 
 PROGRAMMI = [
     {
@@ -28,7 +31,6 @@ PROGRAMMI = [
         'setup': 'GramAccess-Setup.exe',
         'guida': r'D:\Software Portable\Sviluppo Software\Gram Access\Release\GramAccess\Guida.html',
         'novita': ('gram-access-txt', r'D:\Software Portable\Sviluppo Software\Gram Access\Release\changelog.txt'),
-        'community': 'https://t.me/+t7KuNQH-xQczMDVk',
         'frase': {
             'it': 'Un client non ufficiale per Telegram, per Windows, pensato e costruito fin dal primo giorno per chi usa uno screen reader.',
             'en': 'An unofficial Telegram client for Windows, designed and built from day one for people who use a screen reader.',
@@ -509,8 +511,10 @@ T = {
         'sostieni_titolo': 'Sostieni il progetto',
         'sostieni_testo': 'I miei programmi sono gratuiti e li porto avanti da solo, nel tempo libero. Se ti sono utili, puoi aiutarmi con una donazione.',
         'sostieni': 'Sostieni con PayPal',
-        'community': 'Unisciti alla community su Telegram',
-        'community_testo': 'Nella community di Gram Access su Telegram puoi fare domande, confrontarti con altri utenti e dare suggerimenti.',
+        'gruppo_menu': 'L\'angolo di HDX',
+        'gruppo_titolo': 'L\'angolo di HDX',
+        'gruppo_testo': 'Il gruppo Telegram di tutti i miei programmi e delle mie add-on: novità, domande, segnalazioni e suggerimenti, insieme agli altri utenti.',
+        'gruppo_pulsante': 'Unisciti a L\'angolo di HDX su Telegram',
         'domande': 'Hai domande o suggerimenti? <a href="contatti.html">Scrivimi</a>.',
         'novita_titolo': 'Novità di {0}', 'novita_lede': 'Le versioni dalla più recente. Le stesse novità si leggono nel programma, in Aiuto.',
         'torna_a': 'Torna a {0}',
@@ -563,8 +567,10 @@ T = {
         'sostieni_titolo': 'Support the project',
         'sostieni_testo': 'My programs are free and I develop them on my own, in my spare time. If you find them useful, you can help me with a donation.',
         'sostieni': 'Support via PayPal',
-        'community': 'Join the community on Telegram',
-        'community_testo': 'In the Gram Access community on Telegram you can ask questions, talk with other users and make suggestions.',
+        'gruppo_menu': 'L\'angolo di HDX (Telegram group)',
+        'gruppo_titolo': 'L\'angolo di HDX',
+        'gruppo_testo': 'The Telegram group for all my programs and add-ons: news, questions, bug reports and suggestions, together with other users. The group is mostly in Italian, but you can write in your own language: translators make it easy to understand each other.',
+        'gruppo_pulsante': 'Join L\'angolo di HDX on Telegram',
         'domande': 'Questions or suggestions? <a href="contatti.html">Write to me</a>.',
         'novita_titolo': 'What\'s new in {0}', 'novita_lede': 'Versions from the most recent. The same notes are in the program, in Help.',
         'torna_a': 'Back to {0}',

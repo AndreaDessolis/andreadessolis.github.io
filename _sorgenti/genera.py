@@ -19,7 +19,7 @@ import sys
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, QUI)
-from contenuti import ADDON, EMAIL, GITHUB, PAYPAL, PROGRAMMI, T  # noqa: E402
+from contenuti import ADDON, EMAIL, GITHUB, GRUPPO_TELEGRAM, PAYPAL, PROGRAMMI, T  # noqa: E402
 from privacy import PRIVACY  # noqa: E402
 
 DOMINIO = 'https://andreadessolis.com/'
@@ -69,6 +69,8 @@ def pagina(lingua, nome_file, titolo, voce_menu, corpo, sole=700, descrizione=''
     for chiave, href in voci:
         corrente = ' aria-current="page"' if chiave == voce_menu else ''
         menu.append(f'        <li><a href="{su}{href}"{corrente}>{e(t[chiave])}</a></li>')
+    # Il gruppo Telegram in ogni pagina, subito trovabile (31 ott 2026).
+    menu.append(f'        <li><a href="{GRUPPO_TELEGRAM}">{e(t["gruppo_menu"])}</a></li>')
     menu.append(f'        <li class="lang"><a href="{altra_href}" lang="{altra}" hreflang="{altra}">{e(t["altra_lingua"])}</a></li>')
     titolo_completo = titolo if titolo == 'Andrea Dessolis' else f'{titolo} — Andrea Dessolis'
     url_it = DOMINIO + nome_file
@@ -149,6 +151,17 @@ def griglia(lingua, livello):
     return '    <ul class="program-grid">\n' + '\n'.join(scheda(p, lingua, livello) for p in PROGRAMMI) + '\n    </ul>'
 
 
+def gruppo(lingua):
+    """L'angolo di HDX, il gruppo Telegram di tutti i programmi: in alto nella
+    Home, nelle pagine dei programmi e in quella delle add-on."""
+    t = T[lingua]
+    return f'''    <h2>{e(t["gruppo_titolo"])}</h2>
+    <p>{e(t["gruppo_testo"])}</p>
+    <div class="cta-row">
+      <a class="btn btn-secondary" href="{GRUPPO_TELEGRAM}">{e(t["gruppo_pulsante"])}</a>
+    </div>'''
+
+
 def sostieni(lingua):
     t = T[lingua]
     return f'''    <h2>{e(t["sostieni_titolo"])}</h2>
@@ -165,6 +178,8 @@ def home(lingua):
     corpo = f'''    <h1>{e(t["home_titolo"])}</h1>
     <p class="lede">{e(t["home_lede"])}</p>
     <p>{e(t["home_testo"])}</p>
+
+{gruppo(lingua)}
 
     <h2>{e(t["i_miei_programmi"])}</h2>
 {griglia(lingua, "h3")}
@@ -201,6 +216,7 @@ def pagina_programma(p, lingua):
     </div>''')
     else:
         parti.append(f'    <p class="note">{e(t["in_arrivo"])}.</p>')
+    parti.append(gruppo(lingua))
     if p.get('requisiti'):
         voci = '\n'.join(f'      <li>{e(r)}</li>' for r in p['requisiti'][lingua])
         parti.append(f'    <h2>{e(t["cosa_serve"])}</h2>\n    <ul>\n{voci}\n    </ul>')
@@ -216,12 +232,6 @@ def pagina_programma(p, lingua):
         if p['id'] in PRIVACY:
             collegamenti.append(f'<li><a href="privacy-{p["id"]}.html">{e(t["leggi_privacy"].format(p["nome"]))}</a></li>')
         parti.append(f'    <h2>{e(t["guida_novita"])}</h2>\n    <ul>\n      ' + '\n      '.join(collegamenti) + '\n    </ul>')
-    if p.get('community'):
-        parti.append(f'''    <h2>Community</h2>
-    <p>{e(t["community_testo"])}</p>
-    <div class="cta-row">
-      <a class="btn btn-secondary" href="{p["community"]}">{e(t["community"])}</a>
-    </div>''')
     parti.append(sostieni(lingua))
     parti.append(f'    <p>{t["domande"].replace("contatti.html", "contatti.html")}</p>')
     return pagina(lingua, p['pagina'], p['nome'], 'programmi', '\n\n'.join(parti), sole=680, descrizione=p['frase'][lingua])
@@ -285,6 +295,8 @@ def pagina_addon(lingua):
     corpo = f'''    <h1>{e(t["addon"])}</h1>
     <p class="lede">{e(t["addon_lede"])}</p>
     <p>{e(t["addon_testo"])}</p>
+
+{gruppo(lingua)}
 
 {chr(10).join(sezione_addon(a, lingua) for a in ADDON)}
 
