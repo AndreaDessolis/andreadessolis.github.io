@@ -66,7 +66,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Per togliere il programma basta cancellare la sua cartella. Per spostarlo, sposta la cartella.</p>
 
 <h3>Il primo avvio</h3>
-<p>La prima volta Tube Player scarica da solo dai loro siti ufficiali i programmi del motore: yt-dlp, Deno e mpv. Ci vuole qualche decina di secondi, a seconda della connessione; il programma dice a voce cosa sta scaricando e quando è pronto. Intanto la finestra si può già usare. Si apre anche la finestra di benvenuto, con le basi in breve; la ritrovi in Aiuto, Benvenuto.</p>
+<p>La prima volta Tube Player scarica da solo dai loro siti ufficiali i programmi del motore: yt-dlp e Deno (il lettore, mpv, è già incluso nel programma). Ci vuole qualche decina di secondi, a seconda della connessione; il programma dice a voce cosa sta scaricando e quando è pronto. Intanto la finestra si può già usare. Si apre anche la finestra di benvenuto, con le basi in breve; la ritrovi in Aiuto, Benvenuto.</p>
 
 <h3>La finestra principale</h3>
 <p>La finestra principale, dall'alto in basso (con <kbd>Tab</kbd>):</p>
@@ -411,9 +411,19 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Tutto quello che Tube Player ricorda sta nella cartella Dati: le impostazioni (anche le scorciatoie e gli annunci), le raccolte, i canali seguiti e la cronologia con i punti in cui ti eri fermato. Per portarlo su un altro computer, o tenerne una copia:</p>
 <ul>
 <li><strong>File, Esporta i dati</strong>: si apre la finestra di Windows per salvare, con il nome già proposto ("Tube Player - dati" e la data). Tutto finisce in un solo file, da copiare su una chiavetta o mandarti per mail. Alla fine senti "Dati esportati".</li>
-<li><strong>File, Importa i dati</strong> (sull'altro computer): scegli il file esportato. Tube Player controlla che sia davvero un suo file, chiede conferma e si riavvia da solo; poi una finestra dice che i dati sono stati importati.</li>
+<li><strong>File, Importa i dati</strong> (sull'altro computer): scegli il file esportato. Tube Player controlla che sia davvero un suo file e lo confronta con i dati di questo computer; poi si apre la finestra <strong>Importa i dati</strong>, dove scegli che cosa prendere.</li>
 </ul>
-<p>L'importazione <strong>sostituisce</strong> i dati che c'erano, non li unisce. Per sicurezza quelli di prima non si perdono: finiscono nella cartella Dati, in una sottocartella "Prima dell'importazione" con la data e l'ora. Se hai sbagliato file, puoi riprenderli da lì.</p>
+<h3 id="importa">La finestra Importa i dati</h3>
+<p>Il primo campo dice quando è stato esportato il file e quali parti sono già uguali a quelle di qui. Poi, una per ogni parte diversa, c'è una casella a elenco che si cambia con le frecce; il suo nome dice quante cose sono diverse, per esempio "Canali seguiti (nuovi nel file: 3, solo qui: 2)". Le parti uguali non si chiedono.</p>
+<ul>
+<li><strong>Canali seguiti</strong>, <strong>Raccolte</strong> e <strong>Cronologia</strong>: "Aggiungi quello che manca" (di partenza) tiene tutto quello che hai qui e aggiunge quello che c'è solo nel file; "Rendi uguale al file" fa diventare quella parte come nel file, togliendo anche quello che c'è solo qui; "Lascia com'è" non la tocca.</li>
+<li>Le raccolte si riconoscono dal nome: in una raccolta che c'è su tutti e due i computer si aggiungono gli elementi che mancano; una raccolta che qui non c'è arriva intera.</li>
+<li>Nella cronologia, se un video c'è su tutti e due i computer, "Aggiungi" tiene la visione più recente con il suo punto: riprendi da dove eri arrivato sull'altro computer. Restano al massimo 500 video, i più recenti.</li>
+<li><strong>Impostazioni</strong>: "Tieni quelle di questo computer" (di partenza) o "Usa quelle del file". Di partenza si tengono perché alcune scelte dipendono dal computer (i dispositivi audio, le cartelle).</li>
+</ul>
+<p><strong>Il controllo completo: i Dettagli.</strong> Dopo le caselle, per ogni parte diversa c'è un pulsante: <strong>Dettagli dei canali...</strong>, <strong>Dettagli delle raccolte...</strong>, <strong>Dettagli della cronologia...</strong>. Apre l'elenco delle differenze di quella parte, una per riga, ognuna con la sua casella: spuntata vuol dire che si fa. Ogni riga dice prima che cosa succede, per esempio "Aggiungi: Barbascura X", "Togli: Elisa True Crime (solo qui)", "Musica, aggiungi: titolo del video", "Punto del file: titolo del video (qui 3:20, nel file 12:40)". Con la <kbd>barra spaziatrice</kbd> spunti o togli la spunta; i pulsanti <strong>Spunta tutte</strong> e <strong>Togli tutte le spunte</strong> servono con gli elenchi lunghi. All'apertura le righe sono spuntate come dice la casella della parte (con "Aggiungi quello che manca" sono spuntate le aggiunte, non le cose da togliere). Con <strong>OK</strong> la casella della parte diventa "Scelta a mano" e dice quante cose farai; scegliendo poi un'altra voce della casella, le scelte a mano non valgono più. Chi non apre i Dettagli non vede mai l'elenco.</p>
+<p><strong>Importa</strong> (anche con <kbd>Invio</kbd>) fa le scelte e Tube Player si riavvia da solo; <strong>Annulla</strong> non cambia niente. Se tutto è già uguale, Tube Player lo dice e non apre la finestra. Per sicurezza i dati di prima non si perdono: finiscono nella cartella Dati, in una sottocartella "Prima dell'importazione" con la data e l'ora. Se hai sbagliato, puoi riprenderli da lì.</p>
+<p><strong>Due computer sempre uguali.</strong> Dopo un'importazione con "Aggiungi", Tube Player chiede se vuoi esportare subito i dati uniti: porti quel file sull'altro computer, lo importi, e i due computer hanno le stesse cose. Attenzione: con "Aggiungi" quello che hai tolto su un computer (un canale che non segui più, un elemento di una raccolta) non sparisce dall'altro, e anzi torna alla prossima unione, perché il file non sa che l'hai tolto. Per togliere davvero una cosa da tutti e due usa "Rendi uguale al file".</p>
 <p>Con dei download in corso non si può importare (il programma si deve riavviare): aspetta che finiscano. Alcune scelte dipendono dal computer: se sull'altro PC non c'è il dispositivo audio scelto per i video o per i suoni, si usa quello predefinito di Windows; se non c'è la cartella dei download scelta, si torna a "Scaricati".</p>
 
 <h2 id="impostazioni">15. Le impostazioni</h2>
@@ -469,7 +479,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>mpv</strong>: riproduce l'audio e le immagini;</li>
 <li>e, solo per i download, <strong>FFmpeg</strong>.</li>
 </ul>
-<p>Stanno nella cartella Motore e si scaricano dai loro siti ufficiali. Una volta al giorno Tube Player controlla da solo se ce ne sono versioni nuove e le scarica (si può spegnere nelle Impostazioni, categoria Generale, ma è meglio lasciarlo acceso). Se all'improvviso i video non partono più, prova il pulsante <strong>Controlla ora gli aggiornamenti del motore</strong>.</p>
+<p>yt-dlp, Deno e FFmpeg stanno nella cartella Motore e si scaricano dai loro siti ufficiali. Una volta al giorno Tube Player controlla da solo se ci sono versioni nuove di yt-dlp e Deno e le scarica; FFmpeg una volta alla settimana, mai durante un download: la versione nuova si prova prima di usarla, e quella di prima resta da parte finché la nuova non ha funzionato per una settimana (si può spegnere tutto nelle Impostazioni, categoria Generale, ma è meglio lasciarlo acceso; il pulsante "Controlla ora" controlla subito anche FFmpeg). <strong>mpv</strong> invece è incluso nel programma, nella cartella Librerie\mpv: è una versione provata con Tube Player, e arriva nuova solo con gli aggiornamenti di Tube Player, quando ne esce una versione nuova che funziona bene. Così il lettore non cambia mai da solo. Se all'improvviso i video non partono più, prova il pulsante <strong>Controlla ora gli aggiornamenti del motore</strong>.</p>
 
 <h2 id="aiuto">17. Il menu Aiuto e gli aggiornamenti</h2>
 <ul>
@@ -478,6 +488,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>Controlla gli aggiornamenti</strong>: cerca una versione nuova di Tube Player.</li>
 <li><strong>Ultime modifiche</strong>: le novità delle versioni, anche senza internet. Le stesse sono nel file Novità.html, nella cartella Documenti.</li>
 <li><strong>Contattami</strong>: per scrivere all'autore. Scegli il tipo di messaggio (segnalazione di un problema, suggerimento, complimento, altro), scrivi un breve testo e premi Invia: si apre un'email già pronta nel tuo programma di posta, con la versione del programma, e la mandi tu. Senza un programma di posta, il testo pronto da copiare compare in una finestra.</li>
+<li><strong>Unisciti a L'angolo di HDX su Telegram</strong>: apre il gruppo Telegram di tutti i programmi dell'autore (in Telegram, o nel browser se Telegram non c'è). Lì si fanno domande, si danno suggerimenti e si leggono le novità; si può scrivere anche nella propria lingua.</li>
 <li><strong>Dona con PayPal</strong>: per sostenere l'autore, se ti va.</li>
 <li><strong>Informazioni</strong>: la versione del programma.</li>
 </ul>
@@ -581,7 +592,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Al primo avvio i programmi del motore non si sono potuti scaricare: controlla la connessione a internet e riapri Tube Player.</p>
 
 <h3>Un video non parte, o le ricerche non funzionano più</h3>
-<p>Alcuni video non si possono riprodurre fuori da YouTube (per esempio quelli riservati agli abbonati o vietati ai minori), e il messaggio lo dice. Se invece all'improvviso non funziona più niente, probabilmente YouTube ha cambiato qualcosa: in Impostazioni, Generale, premi <strong>Controlla ora gli aggiornamenti del motore</strong>. Se non basta, di solito chi fa yt-dlp lo sistema in pochi giorni: il motore si aggiorna da solo.</p>
+<p>Alcuni video non si possono riprodurre fuori da YouTube (per esempio quelli riservati agli abbonati), e il messaggio lo dice. I video con <strong>limite di età</strong> YouTube li fa vedere solo a chi ha fatto l'accesso con un account maggiorenne, e Tube Player non usa account: in quel caso un messaggio lo spiega e chiede se vuoi aprire il video nel browser (con <strong>Sì</strong> si apre; se lì hai fatto l'accesso a YouTube, lo puoi vedere). Nella riproduzione continua questi video si saltano, dicendo il perché; nei download la riga lo dice. Se invece all'improvviso non funziona più niente, probabilmente YouTube ha cambiato qualcosa: in Impostazioni, Generale, premi <strong>Controlla ora gli aggiornamenti del motore</strong>. Se non basta, di solito chi fa yt-dlp lo sistema in pochi giorni: il motore si aggiorna da solo.</p>
 
 <h3>Un download non riesce</h3>
 <p>Nella finestra Download (<kbd>Ctrl+J</kbd>) la riga dice il motivo; prova <strong>Riprova</strong>. Se il messaggio parla di FFmpeg, controlla la connessione: al primo download che ne ha bisogno, FFmpeg si deve scaricare.</p>
@@ -593,7 +604,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Le raccolte stanno nel file raccolte.json, nella cartella Dati. Per tenerne una copia, o per portarle su un altro computer insieme a tutto il resto, usa File, Esporta i dati (vedi <a href="#dati">Portare i dati su un altro computer</a>).</p>
 
 <h3>Per scrivere all'autore</h3>
-<p>Aiuto, Contattami: per segnalare un problema, dare un suggerimento o anche solo dire che il programma ti piace.</p>
+<p>Aiuto, Contattami: per segnalare un problema, dare un suggerimento o anche solo dire che il programma ti piace. Oppure Aiuto, Unisciti a L'angolo di HDX su Telegram: il gruppo di tutti i programmi.</p>
 
 </body>
 </html>
