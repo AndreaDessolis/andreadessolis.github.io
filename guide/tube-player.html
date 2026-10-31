@@ -381,14 +381,30 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <p>Senti "Ora segui" con il nome del canale. Sullo stesso canale, lo stesso tasto smette di seguirlo ("Non segui più"); la voce del menu diventa "Smetti di seguire il canale".</p>
 
 <h3>Le novità</h3>
-<p><kbd>Ctrl+U</kbd> (menu Seguiti, Novità dai canali seguiti) apre l'elenco dei video più recenti di tutti i canali che segui, dal più nuovo al più vecchio, mescolati insieme. Arriva in un paio di secondi e dice quanti sono e quanti sono nuovi, per esempio "45 video, 3 nuovi".</p>
+<p><kbd>Ctrl+U</kbd> (menu Seguiti, Novità dai canali seguiti) guarda gli ultimi video di tutti i canali che segui e mostra solo quelli <strong>nuovi</strong>: usciti da quando segui il canale e non ancora visti. Arriva in un paio di secondi e dice quanti sono, per esempio "5 video nuovi in 2 canali".</p>
+<p>I video nuovi sono divisi in <strong>cartelle</strong>, una per canale: ogni riga dice il nome del canale e quanti video nuovi ha, per esempio "Barba Scura: 2 nuovi". Se i canali sono più di uno, in cima c'è anche "Tutti i canali", con tutti i video nuovi insieme.</p>
 <ul>
-<li>I video usciti dopo l'ultima volta che hai aperto le novità cominciano con <strong>"Nuovo:"</strong>.</li>
-<li>Ogni riga dice quando è uscito il video: "oggi alle 08:05", "ieri alle 18:30", oppure la data.</li>
-<li>Gli Shorts sono segnati "Short".</li>
-<li>Per ogni canale ci sono i suoi ultimi 15 video. La durata non c'è nella riga (YouTube non la dà in questo elenco): la trovi nella scheda del video.</li>
-<li>Funziona come gli altri elenchi: <kbd>Invio</kbd> riproduce, <kbd>Ctrl+Invio</kbd> riproduce tutto da lì, <kbd>Backspace</kbd> torna indietro.</li>
+<li><kbd>Invio</kbd> su una cartella entra e mostra i suoi video nuovi; <kbd>Backspace</kbd> torna alle cartelle.</li>
+<li>Dentro una cartella funziona come gli altri elenchi: <kbd>Invio</kbd> riproduce, <kbd>Ctrl+Invio</kbd> riproduce tutto da lì.</li>
+<li>Ogni riga dice quando è uscito il video: "oggi alle 08:05", "ieri alle 18:30", oppure la data. Gli Shorts sono segnati "Short".</li>
+<li>La durata non c'è nella riga (YouTube non la dà in questo elenco): la trovi nella scheda del video.</li>
 </ul>
+<h4>Video visti</h4>
+<p>Un video diventa <strong>visto</strong> in due modi:</p>
+<ul>
+<li>quando lo apri e parte (anche se lo apri da un'altra parte, per esempio dalla ricerca);</li>
+<li>quando lo segni tu, con <kbd>Ctrl+Maiusc+U</kbd> o dal menu contestuale: "Segna come visto" su un video, "Segna tutti come visti" su una cartella.</li>
+</ul>
+<p>Scaricarlo non lo segna come visto. Lo stesso comando, su un video già visto, lo rimette come non visto ("Segna come non visto"); su una cartella con tutti i video già visti, li rimette tutti come non visti.</p>
+<p>Il video segnato non sparisce subito: resta al suo posto e la riga comincia con <strong>"Visto:"</strong>, così non perdi il punto in cui eri; le cartelle dicono quanti ne restano ("Barba Scura: 1 nuovo", oppure "tutti visti"). La prossima volta che apri le novità, i video visti non ci sono più.</p>
+<h4>Ordina</h4>
+<p>Con <kbd>Tab</kbd>, subito dopo l'elenco, c'è la casella <strong>Ordina</strong>; si cambia con le frecce e l'elenco si riordina subito:</p>
+<ul>
+<li>per le cartelle: dal video più recente (di base), per nome del canale, oppure prima chi ha più video nuovi;</li>
+<li>per i video di una cartella: dal più recente (di base) oppure dal più vecchio, comodo per guardarli nell'ordine in cui sono usciti.</li>
+</ul>
+<p>Tube Player si ricorda la scelta.</p>
+<p>Per ogni canale YouTube dà solo gli ultimi 15 video: se un canale ne pubblica di più tra un'apertura e l'altra, i più vecchi non compaiono.</p>
 <p>All'avvio Tube Player guarda da solo se ci sono video nuovi e te lo dice ("3 video nuovi dai canali seguiti"); si può spegnere in Impostazioni, Generale.</p>
 
 <h3>L'elenco dei canali seguiti</h3>
@@ -547,6 +563,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <table>
 <tr><th>Tasto</th><th>Cosa fa</th></tr>
 <tr><td><kbd>Ctrl+U</kbd></td><td>Novità dai canali seguiti</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+U</kbd></td><td>Nelle novità: segna come visto il video scelto, o tutti i video della cartella scelta (di nuovo: come non visti)</td></tr>
 <tr><td><kbd>Ctrl+G</kbd></td><td>Elenco dei canali seguiti</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+S</kbd></td><td>Segui il canale scelto (o del video che suona), o smetti di seguirlo</td></tr>
 </table>
