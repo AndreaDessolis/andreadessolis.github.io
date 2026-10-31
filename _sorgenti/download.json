@@ -21,7 +21,8 @@
   "hdx-recorder": {
     "storico": 0,
     "versioni_tolte": {
-      "v1.0.0": 34
+      "v1.0.0": 34,
+      "v1.0.1": 52
     }
   },
   "pcloud-access": {
