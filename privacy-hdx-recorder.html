@@ -43,7 +43,7 @@
   <div class="wrap">
     <h1>Privacy di HDX Recorder</h1>
     <p class="lede">HDX Recorder è un programma che funziona sul tuo computer. Io, che lo scrivo, non raccolgo nessun dato su di te: non c'è un server di HDX Recorder, non ci sono statistiche, pubblicità o cookie.</p>
-    <p class="note">Ultimo aggiornamento: 30 ottobre 2026.</p>
+    <p class="note">Ultimo aggiornamento: 31 ottobre 2026.</p>
     <h2>Dove restano i tuoi dati</h2>
     <p>Le registrazioni, le impostazioni, le password delle radio e i permessi restano sul tuo computer, nella cartella di HDX Recorder. Le password e i permessi sono cifrati con la protezione di Windows, per il tuo utente, e non vanno nelle copie di sicurezza delle impostazioni.</p>
     <h2>Quando il programma si collega a Internet</h2>
@@ -52,40 +52,68 @@
       <li>il controllo degli aggiornamenti scarica l'elenco delle versioni, senza mandare dati personali;</li>
       <li>la ricerca delle radio da ascoltare manda il testo che cerchi al servizio pubblico <a href="https://www.radio-browser.info">radio-browser.info</a>;</li>
       <li>le dirette su una radio web vanno al server della radio che scegli tu, con i dati che scrivi tu;</li>
-      <li>l'intelligenza artificiale funziona solo con una tua chiave di Google Gemini o di OpenAI: l'audio, il testo o le immagini che scegli di far analizzare vanno a quel servizio, secondo le sue regole;</li>
-      <li>le dirette su YouTube usano i servizi API di YouTube, come spiegato qui sotto.</li>
+      <li>l'intelligenza artificiale funziona solo con una tua chiave di Google Gemini o di OpenAI: l'audio, il testo o le immagini che scegli di far analizzare vanno a quel servizio, secondo le sue regole. I dati del tuo account YouTube non vengono mai mandati a questi servizi;</li>
+      <li>le funzioni di YouTube (dirette, video, playlist e canale) usano i servizi API di YouTube, come spiegato qui sotto.</li>
     </ul>
     <h2>YouTube e i servizi API di YouTube</h2>
-    <p>Per le dirette su YouTube con l'account collegato, HDX Recorder usa i servizi API di YouTube. Usando queste funzioni accetti i <a href="https://www.youtube.com/t/terms">Termini di servizio di YouTube</a>. Per i dati che tratta Google valgono le <a href="https://policies.google.com/privacy">Norme sulla privacy di Google</a>.</p>
-    <p>Quando colleghi l'account, Google ti chiede il permesso di gestire il tuo account YouTube. HDX Recorder lo usa solo per le funzioni delle dirette, e solo quando le usi tu:</p>
+    <p>Per le funzioni di YouTube con l'account collegato, HDX Recorder usa i servizi API di YouTube. Usando queste funzioni accetti i <a href="https://www.youtube.com/t/terms">Termini di servizio di YouTube</a>. Per i dati che tratta Google valgono le <a href="https://policies.google.com/privacy">Norme sulla privacy di Google</a>.</p>
+    <p>Quando colleghi l'account, Google ti chiede il permesso di gestire il tuo account YouTube. È l'unico permesso che HDX Recorder chiede: non chiede accesso alla tua posta, ai tuoi file, ai tuoi contatti o ad altri servizi di Google.</p>
+    <h2>Quali dati dell&#x27;account Google usa HDX Recorder</h2>
+    <p>HDX Recorder legge e modifica solo i dati del tuo canale YouTube che servono alle funzioni che usi:</p>
     <ul>
-      <li>legge il nome del tuo canale, per mostrarlo nel programma;</li>
-      <li>crea sul tuo canale le dirette, con il titolo, la descrizione e la visibilità che scegli, le collega al segnale che mandi e le chiude quando termini;</li>
-      <li>cambia il titolo della diretta quando lo chiedi tu;</li>
-      <li>carica la miniatura che scegli tu;</li>
-      <li>legge i messaggi della chat della diretta, per farteli ascoltare, e manda nella chat i messaggi che scrivi tu;</li>
-      <li>crea, elenca ed elimina le dirette programmate, quando lo chiedi tu.</li>
+      <li>il nome e l'identificativo del tuo canale;</li>
+      <li>la descrizione del canale, le parole chiave, l'immagine di copertina e la filigrana dei video;</li>
+      <li>l'elenco dei video che hai caricato, con titolo, descrizione, visibilità, data, durata, numero di visualizzazioni, stato dell'elaborazione e gli eventuali problemi segnalati da YouTube (per esempio i paesi in cui un video è bloccato);</li>
+      <li>le tue playlist e i video che contengono;</li>
+      <li>le tue dirette e le dirette programmate;</li>
+      <li>i messaggi della chat delle tue dirette, con il nome e l'identificativo del canale di chi li scrive.</li>
     </ul>
-    <p>HDX Recorder non legge i tuoi video, i tuoi iscritti, le statistiche o altri dati del tuo account.</p>
+    <p>HDX Recorder non legge i tuoi iscritti, i tuoi commenti, i dati delle tue entrate o le statistiche di YouTube Analytics.</p>
+    <h2>Come HDX Recorder usa i dati dell&#x27;account Google</h2>
+    <p>I dati del tuo account vengono usati solo per farti usare le funzioni del programma, e solo quando le usi tu:</p>
+    <ul>
+      <li>mostrare nel programma il nome del tuo canale;</li>
+      <li>creare sul tuo canale le dirette, con il titolo, la descrizione e la visibilità che scegli, collegarle al segnale che mandi e chiuderle quando termini; cambiarne il titolo e caricarne la miniatura quando lo chiedi tu;</li>
+      <li>creare, elencare ed eliminare le dirette programmate, quando lo chiedi tu;</li>
+      <li>leggerti i messaggi della chat della diretta e mandare nella chat i messaggi che scrivi tu;</li>
+      <li>moderare la chat quando lo chiedi tu: eliminare un messaggio, mettere in pausa o bloccare chi scrive, togliere un blocco, nominare un moderatore;</li>
+      <li>mostrarti l'elenco dei tuoi video e il loro stato; modificarne il titolo, la descrizione e la visibilità, programmarne la pubblicazione o eliminarli, quando lo chiedi tu;</li>
+      <li>caricare sul tuo canale il file video che scegli tu, con il titolo, la descrizione e la visibilità che scrivi tu, e dirti quando YouTube ha finito di elaborarlo;</li>
+      <li>creare, modificare ed eliminare le tue playlist, e aggiungere, togliere o spostare i video al loro interno, quando lo chiedi tu;</li>
+      <li>cambiare la descrizione, le parole chiave, la copertina e la filigrana del tuo canale, quando lo chiedi tu.</li>
+    </ul>
+    <p>Ogni modifica al tuo canale parte solo da un tuo comando: il programma non cambia, non pubblica e non elimina niente da solo. Prima di eliminare qualcosa ti chiede sempre conferma.</p>
+    <p>L'uso e il trasferimento ad altre app delle informazioni ricevute dalle API di Google da parte di HDX Recorder rispettano le <a href="https://developers.google.com/terms/api-services-user-data-policy">Norme sui dati utente dei servizi API di Google</a>, compresi i requisiti di uso limitato (Limited Use).</p>
+    <p>I dati del tuo account Google non vengono venduti, non vengono usati per pubblicità, non vengono usati per addestrare modelli di intelligenza artificiale e non vengono letti da nessuna persona: io non li ricevo mai.</p>
+    <h2>Come sono protetti i tuoi dati</h2>
+    <ul>
+      <li>Connessione cifrata: HDX Recorder parla con Google solo attraverso connessioni cifrate (HTTPS), direttamente dal tuo computer ai server di Google. Non ci sono server intermedi, né miei né di altri.</li>
+      <li>La tua password resta a Google: l'accesso si fa nel tuo browser, sulla pagina di Google, con il metodo standard OAuth 2.0 protetto da PKCE. HDX Recorder non vede e non salva mai la password del tuo account Google; riceve solo un permesso che puoi togliere quando vuoi.</li>
+      <li>Permesso cifrato: l'unico dato dell'account salvato sul disco è il permesso di Google (il "token di rinnovo"), cifrato con la protezione dati di Windows (DPAPI) e legato al tuo utente di Windows. Copiato su un altro computer o in un altro utente non si può usare. Non va nelle copie di sicurezza delle impostazioni.</li>
+      <li>Permesso di breve durata: il permesso usato per ogni richiesta a YouTube dura circa un'ora e resta solo nella memoria del programma, mai sul disco.</li>
+      <li>Il minimo indispensabile: HDX Recorder chiede un solo permesso, quello per gestire il tuo account YouTube, e conserva solo i dati elencati nella sezione qui sotto.</li>
+      <li>Niente copie altrove: non avendo un server, HDX Recorder non manda i tuoi dati a nessun altro posto; restano tra il tuo computer e Google.</li>
+    </ul>
     <h2>Che cosa resta sul tuo computer, e per quanto</h2>
     <ul>
       <li>Il permesso di Google (il "token di rinnovo"): cifrato, finché non scolleghi l'account. A ogni avvio il programma controlla che valga ancora; se l'hai tolto da Google, lo cancella.</li>
       <li>Il nome del canale: accanto al permesso, aggiornato a ogni avvio del programma.</li>
       <li>Il titolo, la descrizione, la visibilità e la miniatura dell'ultima diretta: sono quelli che scrivi tu, e il programma li propone la volta dopo.</li>
-      <li>I messaggi della chat e il link della diretta: solo nella memoria del programma, finché è aperto e al massimo fino alla diretta seguente. Non vengono salvati su disco.</li>
+      <li>L'elenco dei video e delle playlist, i dati del canale, i messaggi della chat e i link: solo nella memoria del programma, mentre li stai usando. Non vengono salvati su disco e spariscono quando chiudi il programma.</li>
+      <li>I video che carichi: il programma legge il file dal tuo computer e lo manda a YouTube, senza farne copie.</li>
     </ul>
     <h2>Con chi sono condivisi</h2>
-    <p>Con nessuno. I dati del tuo account YouTube passano solo tra il tuo computer e Google. Io non li ricevo, non li vendo e non li uso per pubblicità o per addestrare intelligenze artificiali.</p>
+    <p>Con nessuno. I dati del tuo account YouTube passano solo tra il tuo computer e Google, e solo per le funzioni che usi. Io non li ricevo, non li vendo e non li cedo a nessuno.</p>
     <h2>Come togliere il permesso e cancellare i dati</h2>
     <ul>
-      <li>Nel programma: Strumenti, Impostazioni, categoria Diretta, YouTube, Modifica, poi Scollega l'account YouTube. HDX Recorder chiede a Google di annullare il permesso e cancella subito il permesso e il nome del canale dal tuo computer.</li>
+      <li>Nel programma: menu YouTube, Account YouTube, poi Scollega l'account YouTube (lo trovi anche in Strumenti, Impostazioni, categoria Diretta, YouTube, Modifica). HDX Recorder chiede a Google di annullare il permesso e cancella subito il permesso e il nome del canale dal tuo computer.</li>
       <li>Dal tuo account Google, nella <a href="https://security.google.com/settings/security/permissions">pagina delle app con accesso al tuo account</a>. Alla prossima apertura HDX Recorder se ne accorge e cancella i dati dal tuo computer.</li>
       <li>Eliminando la cartella di HDX Recorder si cancella tutto quello che il programma ha salvato.</li>
     </ul>
-    <p>Togliere il permesso non cancella niente su YouTube: le dirette e i messaggi della chat restano sul tuo canale, e li gestisci da YouTube Studio.</p>
+    <p>Togliere il permesso non cancella niente su YouTube: i video, le playlist, le dirette e i messaggi della chat restano sul tuo canale, e li gestisci da YouTube Studio.</p>
     <h2>Domande</h2>
     <p>Per qualunque domanda o richiesta sulla privacy puoi scrivermi a <a href="mailto:dessolisandrea@gmail.com">dessolisandrea@gmail.com</a>.</p>
-    <p>Se questa pagina cambia, la data dell'ultimo aggiornamento qui sopra lo dice.</p>
+    <p>Se questa pagina cambia, la data dell'ultimo aggiornamento qui sopra lo dice. Se cambia il modo in cui HDX Recorder usa i dati del tuo account Google, lo scrivo anche nelle novità della versione.</p>
     <p><a href="hdx-recorder.html">HDX Recorder</a></p>
   </div>
 </main>

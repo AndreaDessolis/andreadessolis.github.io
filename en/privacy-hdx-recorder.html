@@ -43,7 +43,7 @@
   <div class="wrap">
     <h1>HDX Recorder privacy</h1>
     <p class="lede">HDX Recorder is a program that runs on your computer. I, the author, do not collect any data about you: there is no HDX Recorder server, and there are no statistics, ads or cookies.</p>
-    <p class="note">Last updated: October 30, 2026.</p>
+    <p class="note">Last updated: October 31, 2026.</p>
     <h2>Where your data stays</h2>
     <p>Recordings, settings, radio passwords and permissions stay on your computer, in the HDX Recorder folder. Passwords and permissions are encrypted with Windows protection, for your user, and are not included in settings backups.</p>
     <h2>When the program connects to the Internet</h2>
@@ -52,40 +52,68 @@
       <li>the update check downloads the list of versions, without sending personal data;</li>
       <li>the search for radio stations to listen to sends the text you search for to the public service <a href="https://www.radio-browser.info">radio-browser.info</a>;</li>
       <li>live broadcasts on a web radio go to the server of the radio you choose, with the data you type;</li>
-      <li>artificial intelligence works only with your own Google Gemini or OpenAI key: the audio, text or images you choose to have analysed go to that service, under its own rules;</li>
-      <li>YouTube live broadcasts use the YouTube API Services, as explained below.</li>
+      <li>artificial intelligence works only with your own Google Gemini or OpenAI key: the audio, text or images you choose to have analysed go to that service, under its own rules. Your YouTube account data is never sent to these services;</li>
+      <li>the YouTube features (live broadcasts, videos, playlists and channel) use the YouTube API Services, as explained below.</li>
     </ul>
     <h2>YouTube and the YouTube API Services</h2>
-    <p>For YouTube live broadcasts with the account connected, HDX Recorder uses the YouTube API Services. By using these features you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. The data handled by Google is covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
-    <p>When you connect the account, Google asks you for permission to manage your YouTube account. HDX Recorder uses it only for the live broadcast features, and only when you use them:</p>
+    <p>For the YouTube features with the account connected, HDX Recorder uses the YouTube API Services. By using these features you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. The data handled by Google is covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    <p>When you connect the account, Google asks you for permission to manage your YouTube account. This is the only permission HDX Recorder requests: it does not request access to your email, your files, your contacts or any other Google service.</p>
+    <h2>What Google user data HDX Recorder accesses</h2>
+    <p>HDX Recorder only reads and changes the data of your YouTube channel that the features you use need:</p>
     <ul>
-      <li>it reads your channel name, to show it in the program;</li>
-      <li>it creates live broadcasts on your channel, with the title, description and visibility you choose, binds them to the signal you send and ends them when you stop;</li>
-      <li>it changes the title of the live broadcast when you ask;</li>
-      <li>it uploads the thumbnail you choose;</li>
-      <li>it reads the live chat messages, so you can hear them, and posts in the chat the messages you write;</li>
-      <li>it creates, lists and deletes scheduled live broadcasts, when you ask.</li>
+      <li>your channel name and ID;</li>
+      <li>the channel description, keywords, banner image and video watermark;</li>
+      <li>the list of videos you uploaded, with title, description, visibility, date, duration, view count, processing status and any problems reported by YouTube (for example the countries where a video is blocked);</li>
+      <li>your playlists and the videos they contain;</li>
+      <li>your live broadcasts and scheduled live broadcasts;</li>
+      <li>the live chat messages of your broadcasts, with the name and channel ID of who writes them.</li>
     </ul>
-    <p>HDX Recorder does not read your videos, your subscribers, your statistics or any other data of your account.</p>
+    <p>HDX Recorder does not read your subscribers, your comments, your revenue data or YouTube Analytics statistics.</p>
+    <h2>How HDX Recorder uses Google user data</h2>
+    <p>Your account data is used only to let you use the program's features, and only when you use them:</p>
+    <ul>
+      <li>showing your channel name in the program;</li>
+      <li>creating live broadcasts on your channel, with the title, description and visibility you choose, binding them to the signal you send and ending them when you stop; changing their title and uploading their thumbnail when you ask;</li>
+      <li>creating, listing and deleting scheduled live broadcasts, when you ask;</li>
+      <li>reading the live chat messages to you and posting in the chat the messages you write;</li>
+      <li>moderating the chat when you ask: deleting a message, putting a user in timeout or banning them, removing a ban, adding a moderator;</li>
+      <li>showing you the list of your videos and their status; changing their title, description and visibility, scheduling their publication or deleting them, when you ask;</li>
+      <li>uploading to your channel the video file you choose, with the title, description and visibility you type, and telling you when YouTube has finished processing it;</li>
+      <li>creating, editing and deleting your playlists, and adding, removing or moving videos in them, when you ask;</li>
+      <li>changing your channel description, keywords, banner and watermark, when you ask.</li>
+    </ul>
+    <p>Every change to your channel starts only from a command of yours: the program never changes, publishes or deletes anything on its own. Before deleting anything it always asks for confirmation.</p>
+    <p>HDX Recorder's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    <p>Your Google user data is not sold, not used for advertising, not used to train artificial intelligence or machine learning models, and not read by any person: I never receive it.</p>
+    <h2>How your data is protected</h2>
+    <ul>
+      <li>Encrypted connection: HDX Recorder talks to Google only over encrypted connections (HTTPS), directly from your computer to Google's servers. There are no intermediate servers, mine or anyone else's.</li>
+      <li>Your password stays with Google: you sign in in your browser, on Google's page, with the standard OAuth 2.0 method protected by PKCE. HDX Recorder never sees or stores your Google account password; it only receives a permission that you can revoke at any time.</li>
+      <li>Encrypted permission: the only account data saved to disk is the Google permission (the "refresh token"), encrypted with Windows data protection (DPAPI) and tied to your Windows user. If copied to another computer or another user, it cannot be used. It is not included in settings backups.</li>
+      <li>Short-lived permission: the permission used for each request to YouTube lasts about one hour and is kept only in the program's memory, never on disk.</li>
+      <li>Only what is needed: HDX Recorder requests a single permission, the one to manage your YouTube account, and keeps only the data listed in the section below.</li>
+      <li>No copies elsewhere: since there is no server, HDX Recorder does not send your data anywhere else; it stays between your computer and Google.</li>
+    </ul>
     <h2>What stays on your computer, and for how long</h2>
     <ul>
       <li>The Google permission (the "refresh token"): encrypted, until you disconnect the account. At every start the program checks that it is still valid; if you removed it from Google, the program deletes it.</li>
       <li>The channel name: next to the permission, updated at every start of the program.</li>
       <li>The title, description, visibility and thumbnail of the last live broadcast: the ones you type, which the program suggests the next time.</li>
-      <li>Chat messages and the live broadcast link: only in the program's memory, while it is open and at most until the next live broadcast. They are not saved to disk.</li>
+      <li>The list of videos and playlists, the channel data, chat messages and links: only in the program's memory, while you are using them. They are not saved to disk and disappear when you close the program.</li>
+      <li>The videos you upload: the program reads the file from your computer and sends it to YouTube, without making copies.</li>
     </ul>
     <h2>Who it is shared with</h2>
-    <p>No one. Your YouTube account data only travels between your computer and Google. I do not receive it, sell it or use it for advertising or to train artificial intelligence.</p>
+    <p>No one. Your YouTube account data only travels between your computer and Google, and only for the features you use. I do not receive it, sell it or give it to anyone.</p>
     <h2>How to remove the permission and delete the data</h2>
     <ul>
-      <li>In the program: Tools, Settings, Live broadcast category, YouTube, Edit, then Disconnect the YouTube account. HDX Recorder asks Google to revoke the permission and immediately deletes the permission and the channel name from your computer.</li>
+      <li>In the program: YouTube menu, YouTube account, then Disconnect the YouTube account (also found in Tools, Settings, Live broadcast category, YouTube, Edit). HDX Recorder asks Google to revoke the permission and immediately deletes the permission and the channel name from your computer.</li>
       <li>From your Google account, on the <a href="https://security.google.com/settings/security/permissions">page of apps with access to your account</a>. The next time it opens, HDX Recorder notices and deletes the data from your computer.</li>
       <li>Deleting the HDX Recorder folder deletes everything the program has saved.</li>
     </ul>
-    <p>Removing the permission does not delete anything on YouTube: live broadcasts and chat messages stay on your channel, and you manage them from YouTube Studio.</p>
+    <p>Removing the permission does not delete anything on YouTube: videos, playlists, live broadcasts and chat messages stay on your channel, and you manage them from YouTube Studio.</p>
     <h2>Questions</h2>
     <p>For any question or request about privacy you can write to me at <a href="mailto:dessolisandrea@gmail.com">dessolisandrea@gmail.com</a>.</p>
-    <p>If this page changes, the date of the last update above says so.</p>
+    <p>If this page changes, the date of the last update above says so. If the way HDX Recorder uses your Google account data changes, I also write it in the release notes.</p>
     <p><a href="hdx-recorder.html">HDX Recorder</a></p>
   </div>
 </main>
