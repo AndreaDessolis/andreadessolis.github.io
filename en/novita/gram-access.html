@@ -44,6 +44,32 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.2.0</h2>
+<p>Version 2.2.0 brings a much more complete Event Log for people who manage groups and channels, a new option for voice messages and the new name of the Telegram group of my programs. They are all requests from users.</p>
+<h3>NEW</h3>
+<ol>
+<li>The Event Log updates by itself. The Event Log (Administration menu, &quot;Event Log&quot;) lists the actions taken in the group or channel: who joined or left, who was banned, who changed a permission or deleted a message, and so on, newest first. Before, it only showed the events present when you opened it, and to see new ones you had to close it and open it again. Now, while it stays open, every 30 seconds Gram Access asks Telegram whether there are new events. If there are, they appear at the top of the list and you hear for example &quot;2 new events in the log&quot;, while the line you are on stays the same, so you don&#x27;t lose your place. With F5 you refresh it right away, without waiting; if there is nothing new it says &quot;Log refreshed: no new events&quot;. When you leave the log, the updates stop by themselves.</li>
+<li>Older events, beyond the first 100. When opened, the log shows the last 100 events. Now at the bottom of the list there is the item &quot;Load older events...&quot;: pressing Enter brings the previous 100, and so on, as long as there are any. Good to know: Telegram keeps the event log only for the last 48 hours, for everyone, in the official app too. When there are no older events on Telegram, a window explains it.</li>
+<li>Focus on the Pause button when a voice message starts. Usually, when you start a voice message, the focus stays on the message line: you can keep moving in the chat, and Esc leaves the chat while the voice message keeps playing. This does not change. If you prefer, you can turn on in Settings, &quot;Chat and Messages&quot; category, the new box &quot;When a voice message starts, move the focus to the Pause button (Esc stops it)&quot;: as soon as the voice message starts playing, the focus goes to the player&#x27;s Pause button, and from there Esc stops the voice message and takes you back to its line. With automatic playback in sequence, if you stay on Pause you remain there for the following voice messages too; if instead you move away, for example to write a reply, the next voice message does not take the focus away from you. When the next voice message starts nothing is read, so speech does not talk over the voice: to know which voice message you are listening to, press Esc, which stops it and takes you to its line. At first the box is off.</li>
+<li>Event log history, beyond 48 hours. To keep events after those 48 hours, the Administration menu has the new submenu &quot;Event log history&quot;, in the supergroups and channels where you are an administrator. You choose group by group.</li>
+</ol>
+<ul>
+<li>&quot;Keep the event log history&quot;: Gram Access saves the events of that group on your computer, in the Dati folder. While Gram Access is open it checks the log every hour, even if you are not looking at it, so none get lost. When you open the Event Log you find the saved ones and Telegram&#x27;s together, without duplicates. Before turning it on, a window explains everything calmly.</li>
+<li>&quot;Delete events older than&quot;: choose how long to keep them, 7, 30, 90 or 365 days, or &quot;Never, keep them forever&quot;. At first it is set to 30 days. Older ones are deleted by themselves.</li>
+<li>&quot;Empty the saved history...&quot;: deletes the saved events of that group, with a confirmation.</li>
+<li>To turn it off just remove the check: Gram Access asks whether to also delete the events already saved or keep them.</li>
+</ul>
+<p>Good to know: events are saved from when you turn it on, plus those of the last 48 hours, because older ones have already been deleted by Telegram; if Gram Access stays closed for more than 48 hours in a row, the events of that period cannot be recovered; the history is only on this computer, it is not visible from other devices and it is not protected by the local passcode. The official Telegram app does not have this feature.</p>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>The Telegram group has a new name. The Gram Access community group is now called &quot;L&#x27;angolo di HDX&quot; and it is the group for all my programs and my NVDA add-ons: news, questions, bug reports and suggestions. In the Help menu the item is now called &quot;Join L&#x27;angolo di HDX on Telegram&quot;. The link is the same as before: if you are already in the group, you don&#x27;t need to do anything.</li>
+</ol>
+<h3>GOOD TO KNOW</h3>
+<ul>
+<li>All call features (1-to-1, group video calls, conference calls) remain EXPERIMENTAL: for any strange behavior, don&#x27;t hesitate to contact me.</li>
+</ul>
+</section>
+<section class="release">
 <h2>Version 2.1.9</h2>
 <p>Version 2.1.9 fixes an annoyance in menus.</p>
 <h3>FIXES</h3>
