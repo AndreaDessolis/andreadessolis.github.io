@@ -127,12 +127,13 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <h3>Video pronti prima</h3>
 <p>Per far partire un video, il programma deve prima chiedere a YouTube il suo indirizzo vero: ci vogliono circa 2 o 3 secondi. Per non farti aspettare, Tube Player li prepara in anticipo, come scegli nelle Impostazioni, categoria Ricerca, casella <strong>Preparazione anticipata dei video</strong>:</p>
 <ul>
-<li><strong>Primi dieci</strong> (la scelta di partenza): i primi dieci risultati appena arrivano, e il video su cui ti fermi con i due che lo seguono. È la più veloce, ma per qualche secondo fa lavorare molto il processore (ogni video preparato lo impegna per circa un secondo);</li>
-<li><strong>Primi cinque</strong>: lo stesso, ma con i primi cinque risultati: il processore lavora circa la metà;</li>
+<li><strong>Primi dieci</strong>: i primi dieci risultati appena arrivano, e il video su cui ti fermi con i due che lo seguono. Fa lavorare di più il processore e fa più richieste a YouTube;</li>
+<li><strong>Primi cinque</strong> (la scelta di partenza): lo stesso, ma con i primi cinque risultati: il processore lavora circa la metà;</li>
 <li><strong>Leggera</strong>: solo il video su cui ti fermi per un secondo. Scorrendo i risultati non si prepara niente, così il processore e le ventole restano tranquilli; se però premi <kbd>Invio</kbd> appena arrivato su un video, aspetti i 2 o 3 secondi;</li>
 <li><strong>Nessuna</strong>: niente in anticipo; ogni video si prepara quando premi Invio.</li>
 </ul>
 <p>Se premi Invio su un video non ancora pronto, senti il suono del caricamento finché non parte.</p>
+<p>I video si preparano al massimo tre alla volta, e il video su cui ti fermi passa sempre davanti: tante richieste tutte insieme dalla stessa connessione fanno pensare a YouTube a un programma automatico (vedi <a href="#bot">"Conferma che non sei un bot"</a>).</p>
 <p>Quando entri in un canale, in una playlist o fai una nuova ricerca, i video dell'elenco di prima che si stavano ancora preparando si fermano, e il nuovo elenco passa davanti: così arriva prima.</p>
 
 <h2 id="canali">3. Canali e playlist</h2>
@@ -337,6 +338,9 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><kbd>Invio</kbd> su un download finito apre il file; <kbd>Canc</kbd> annulla il download scelto; <kbd>Esc</kbd> chiude la finestra.</li>
 <li>I pulsanti: <strong>Annulla download</strong>, <strong>Riprova</strong> (per quelli non riusciti o annullati), <strong>Apri file</strong>, <strong>Apri cartella</strong>, <strong>Togli i conclusi</strong>, <strong>Chiudi</strong>.</li>
 </ul>
+<h3 id="pause">Le pause tra un video e l'altro</h3>
+<p>Quando scarichi una playlist o un canale intero, o più download uno dopo l'altro, prima di ogni video c'è una pausa di 10–20 secondi, come consigliano gli autori di yt-dlp: la riga dice "pausa prima del prossimo video". Dopo 100 video scaricati nello stesso giorno le pause diventano di 30–60 secondi. Così YouTube non scambia Tube Player per un programma automatico; un download singolo invece parte subito.</p>
+<p>Se YouTube chiede comunque di confermare che non sei un programma automatico, il download non riuscito lo dice e gli altri in coda aspettano mezz'ora; con <strong>Riprova</strong> si riparte subito.</p>
 <p>Nelle Impostazioni, categoria Download, scegli se e ogni quanto sentire a voce l'avanzamento (mai, ogni 50%, ogni 25%, ogni 10%) e la cartella proposta per i download.</p>
 
 <h3>Cosa si può scaricare</h3>
@@ -472,7 +476,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <h3>Ricerca</h3>
 <p><strong>Risultati da chiedere ogni volta</strong>: 10, 20, 30 o 50. L'elenco poi si allunga da solo.</p>
 <p><strong>Suggerimenti di YouTube mentre scrivi la ricerca</strong>: i suggerimenti da scorrere con le frecce nella casella di ricerca (vedi <a href="#cercare">Cercare su YouTube</a>). Accesa di partenza; vale subito. Spegnendola, quello che scrivi non va a YouTube finché non premi Invio.</p>
-<p><strong>Preparazione anticipata dei video</strong>: Nessuna, Leggera, Primi cinque o Primi dieci (la scelta di partenza) (vedi <a href="#cercare">Video pronti prima</a>). Vale subito.</p>
+<p><strong>Preparazione anticipata dei video</strong>: Nessuna, Leggera, Primi cinque (la scelta di partenza) o Primi dieci (vedi <a href="#cercare">Video pronti prima</a>). Vale subito.</p>
 
 <h3>Download</h3>
 <p>Ogni quanto annunciare l'avanzamento dei download e la cartella predefinita, con il pulsante <strong>Usa la cartella Scaricati di Tube Player</strong> per tornare a quella di partenza.</p>
@@ -610,6 +614,9 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 
 <h3>Un video non parte, o le ricerche non funzionano più</h3>
 <p>Alcuni video non si possono riprodurre fuori da YouTube (per esempio quelli riservati agli abbonati), e il messaggio lo dice. I video con <strong>limite di età</strong> YouTube li fa vedere solo a chi ha fatto l'accesso con un account maggiorenne, e Tube Player non usa account: in quel caso un messaggio lo spiega e chiede se vuoi aprire il video nel browser (con <strong>Sì</strong> si apre; se lì hai fatto l'accesso a YouTube, lo puoi vedere). Nella riproduzione continua questi video si saltano, dicendo il perché; nei download la riga lo dice. Se invece all'improvviso non funziona più niente, probabilmente YouTube ha cambiato qualcosa: in Impostazioni, Generale, premi <strong>Controlla ora gli aggiornamenti del motore</strong>. Se non basta, di solito chi fa yt-dlp lo sistema in pochi giorni: il motore si aggiorna da solo.</p>
+
+<h3 id="bot">"Conferma che non sei un bot"</h3>
+<p>Se da una connessione arrivano troppe richieste in poco tempo, YouTube chiede di confermare che non sei un programma automatico, e per un po' non fa vedere né scaricare i video. Non è un problema di Tube Player e di solito passa da solo. Un messaggio lo spiega; intanto Tube Player non prepara più i video in anticipo per mezz'ora e i download in coda aspettano, per non allungare il blocco. Aspetta almeno mezz'ora prima di riprovare; se usi una VPN, prova a spegnerla.</p>
 
 <h3>Un download non riesce</h3>
 <p>Nella finestra Download (<kbd>Ctrl+J</kbd>) la riga dice il motivo; prova <strong>Riprova</strong>. Se il messaggio parla di FFmpeg, controlla la connessione: al primo download che ne ha bisogno, FFmpeg si deve scaricare.</p>
