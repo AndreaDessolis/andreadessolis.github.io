@@ -28,7 +28,7 @@ h2 { margin-top: 2em; }
 <li><a href="#scene">Le scene</a></li>
 <li><a href="#programmazioni">Registrazioni programmate e automatismi del silenzio</a></li>
 <li><a href="#video">Il video</a></li>
-<li><a href="#diretta"><!--YOUTUBE-->La diretta: radio web e YouTube<!--/YOUTUBE--><!--SENZAYOUTUBELa diretta su una radio webSENZAYOUTUBE--></a></li>
+<li><a href="#diretta"><!--YOUTUBE-->La diretta: radio web e YouTube<!--/YOUTUBE--></a></li>
 <li><a href="#impostazioni">Le impostazioni del programma</a></li>
 <li><a href="#problemi">Diagnostica, registro e problemi</a></li>
 </ol>
@@ -41,7 +41,7 @@ h2 { margin-top: 2em; }
 <li>il microfono, o qualunque dispositivo di registrazione;</li>
 <li>l'audio del computer, cioè quello che esce da un dispositivo di ascolto;</li>
 <li>l'audio di un solo programma;</li>
-<!--ASIO--><li>una scheda audio con il suo driver ASIO;</li><!--/ASIO-->
+
 <li>una musica o una sigla di sottofondo presa da un file;</li>
 <li>una radio da Internet;</li>
 <li>e per il video lo schermo, la finestra di un programma o la webcam.</li>
@@ -107,7 +107,7 @@ h2 { margin-top: 2em; }
 <li><strong>Configurazione</strong> (<kbd>Alt+C</kbd> ci porta da ovunque nella finestra): una casella a elenco con le tue configurazioni. Una configurazione è un insieme completo: le sorgenti, il formato dei file, gli effetti, le scene, i nomi delle registrazioni. Puoi averne quante vuoi, per esempio una per il podcast, una per le lezioni, una per registrare le chiamate. Si cambia con le frecce.</li>
 <li><strong>Scena</strong> (<kbd>Alt+E</kbd>): le scene della configurazione (capitolo 8). Scegliendone una con le frecce la richiami.</li>
 <li><strong>Sorgenti</strong> (<kbd>Alt+O</kbd>): l'elenco di quello che registri. È il cuore del programma: lo vedremo tra poco.</li>
-<li>I pulsanti <strong>Aggiungi sorgente</strong>, <strong>Registra</strong> (che durante la registrazione diventa <strong>Ferma</strong>) e <strong>Pausa</strong> (che diventa <strong>Riprendi</strong>).</li>
+<li>I pulsanti <strong>Aggiungi sorgente</strong>, <strong>Registra</strong> (che durante la registrazione diventa <strong>Ferma</strong>) e, solo mentre registri, <strong>Pausa</strong> (che diventa <strong>Riprendi</strong>). A programma fermo il pulsante Pausa non c'è, come la voce Pausa nei menu; <kbd>Ctrl+P</kbd> ti dice che non c'è una registrazione in corso.</li>
 </ol>
 <p>In basso ci sono anche lo stato e il cronometro, solo da vedere: lo stato e il tempo si chiedono a voce con <kbd>Ctrl+T</kbd>.</p>
 
@@ -129,7 +129,7 @@ h2 { margin-top: 2em; }
 <p>Con <kbd>Alt</kbd> si apre la barra dei menu. Ogni voce mostra accanto la sua scorciatoia.</p>
 <ul>
 <li><strong>File</strong>: aprire la cartella delle registrazioni; Esci (<kbd>Ctrl+Q</kbd>).</li>
-<li><strong>Registrazione</strong>: avviare e fermare (<kbd>Ctrl+R</kbd>), pausa (<kbd>Ctrl+P</kbd>), registrazione di prova (<kbd>Ctrl+Alt+R</kbd>), annuncia lo stato (<kbd>Ctrl+T</kbd>); Vai in diretta (<kbd>Ctrl+D</kbd>), Vai in diretta senza registrare, Verifica prima della diretta, <!--YOUTUBE-->Dove va in diretta: radio e YouTube, <!--/YOUTUBE--><!--SENZAYOUTUBESu quali radio va in diretta, SENZAYOUTUBE-->Cambia il titolo in onda (<kbd>Ctrl+Maiusc+T</kbd>), Come va la diretta (<kbd>Ctrl+F8</kbd>), capitolo 11; poi i controlli prima di registrare e i livelli (capitolo 5).</li>
+<li><strong>Registrazione</strong>: avviare e fermare (<kbd>Ctrl+R</kbd>), pausa (<kbd>Ctrl+P</kbd>), registrazione di prova (<kbd>Ctrl+Alt+R</kbd>), annuncia lo stato (<kbd>Ctrl+T</kbd>); Vai in diretta (<kbd>Ctrl+D</kbd>), Vai in diretta senza registrare, Verifica prima della diretta, <!--YOUTUBE-->Dove va in diretta: radio e YouTube, <!--/YOUTUBE-->Cambia il titolo in onda (<kbd>Ctrl+Maiusc+T</kbd>), Come va la diretta (<kbd>Ctrl+F8</kbd>), capitolo 11; poi i controlli prima di registrare e i livelli (capitolo 5).</li>
 <!--YOUTUBE--><li><strong>YouTube</strong> (<kbd>Alt+Y</kbd>): durante la diretta la chat (<kbd>Ctrl+F10</kbd>, <kbd>Ctrl+F9</kbd> e <kbd>Ctrl+Maiusc+F9</kbd>), il sondaggio, i moderatori della chat e Copia il link della diretta; fuori dalla diretta I miei video, Le mie playlist, Carica un video, Il mio canale, Super Chat ricevute (solo per i canali monetizzati), Programma una diretta, Dirette programmate e Account YouTube; durante un caricamento Stato del caricamento e Annulla il caricamento; capitolo 11.</li><!--/YOUTUBE-->
 <li><strong>Programmazioni</strong>: le registrazioni che partono da sole (capitolo 9).</li>
 <li><strong>Configurazioni</strong>: le impostazioni della configurazione attiva, le scene, e nuova, duplica, rinomina, elimina, esporta e importa configurazione.</li>
@@ -202,8 +202,7 @@ h2 { margin-top: 2em; }
 </ul>
 <p>Durante la registrazione, dal menu Sorgenti, Sottofondo: pausa o ripresa (<kbd>Ctrl+Maiusc+P</kbd>), brano successivo, cosa sta suonando. Se accendi un sottofondo che era spento (con lo Spazio o con una scena) mentre registri, sei in diretta o nella prova dei livelli, riparte dall'inizio dell'elenco con la sua dissolvenza in entrata, non da dove era arrivato in silenzio. I primi dieci brani dell'elenco sono anche il banco <strong>Sottofondi</strong> dei pad (vedi Pad sonori): con un tasto salti subito al brano che vuoi.</p>
 
-<!--ASIO--><h3>Scheda audio ASIO</h3>
-<p>Per le schede audio professionali che hanno un driver ASIO (il driver si installa con il programma della scheda, dal sito del produttore). Scegli la scheda e gli ingressi: mono con un ingresso, mono con il mix di due ingressi, oppure stereo con un ingresso a sinistra e uno a destra. Il pulsante "Pannello della scheda" apre il pannello di controllo del driver, se ce l'ha.</p><!--/ASIO-->
+
 
 <h3>Radio da Internet</h3>
 <p>Registra una radio in streaming. Puoi scrivere l'indirizzo del flusso (o di una playlist .m3u o .pls), sceglierla tra le tue preferite, oppure premere <strong>Cerca una radio</strong>: si cerca per nome, paese, genere e lingua in un grande archivio di radio di tutto il mondo, e con <strong>Ascolta</strong> la senti prima di sceglierla con <strong>Usa questa radio</strong>.</p>
@@ -554,7 +553,7 @@ h2 { margin-top: 2em; }
 <li>la differenza tra le parti piano e quelle forti, solo se c'è almeno un minuto di suono (con meno, la misura non è affidabile);</li>
 <li>il <strong>picco</strong> più alto e il picco vero (meglio sotto -1);</li>
 <li>le <strong>saturazioni</strong>, cioè la distorsione al volume massimo, con i minuti in cui succedono (le prime dieci);</li>
-<li>per le voci (le tracce dei microfoni<!--ASIO--> e delle schede ASIO<!--/ASIO-->, o un audio fatto solo di voci): il <strong>rumore di fondo</strong> nelle pause, il livello delle parti forti e la distanza tra i due, dove sopra 40 dB è buona e sotto 20 il rumore si sente; se nelle pause c'è silenzio assoluto, lo dice. Per tutto il resto (mix con musica, applicazioni, audio del computer, sottofondo, radio, un file scelto a mano) solo il livello delle parti più basse e di quelle forti, perché lì le parti più piano non sono rumore;</li>
+<li>per le voci (le tracce dei microfoni, o un audio fatto solo di voci): il <strong>rumore di fondo</strong> nelle pause, il livello delle parti forti e la distanza tra i due, dove sopra 40 dB è buona e sotto 20 il rumore si sente; se nelle pause c'è silenzio assoluto, lo dice. Per tutto il resto (mix con musica, applicazioni, audio del computer, sottofondo, radio, un file scelto a mano) solo il livello delle parti più basse e di quelle forti, perché lì le parti più piano non sono rumore;</li>
 <li>i <strong>silenzi</strong> di almeno 5 secondi, con il minuto e la durata;</li>
 <li>in stereo, se un canale è più forte dell'altro o quasi muto;</li>
 <li>se la forma d'onda è spostata dallo zero (DC offset), che si toglie con il filtro passa-alto.</li>
@@ -563,12 +562,12 @@ h2 { margin-top: 2em; }
 
 <p><kbd>V</kbd>: <strong>Descrivi un video registrato</strong>. Il menu propone solo le registrazioni recenti che hanno il video; "Scegli un altro file..." accetta video MP4 e MOV. Il video si carica sul servizio di Gemini così com'è, con l'audio: fino a 2000 MB (il limite della chiave gratuita); oltre 200 MB il programma chiede prima, perché il caricamento richiede qualche minuto. Gemini lo guarda e risponde: che video è e quanto dura; i momenti in ordine, con i minuti, cosa si vede (finestre, menu, testi importanti), cosa fai e cosa si dice; poi quello che potrebbe disturbare chi lo guarderà (momenti in cui non succede niente, immagine nera o ferma, testo troppo piccolo, cose private visibili, suono non a tempo con l'immagine, problemi della webcam). Le domande dopo riguardano il video, sempre con i minuti. <strong>Salva il testo</strong> crea "Nome (descrizione).txt" accanto al video. Alla chiusura della finestra il video caricato si cancella. Un video molto lungo (più o meno oltre un'ora) può essere troppo per Gemini: in quel caso il programma riporta il suo messaggio di errore.</p>
 
-<h2 id="diretta">11. <!--YOUTUBE-->La diretta: radio web e YouTube<!--/YOUTUBE--><!--SENZAYOUTUBELa diretta su una radio webSENZAYOUTUBE--></h2>
-<p>HDX Recorder può mandare in diretta quello che registri su una radio web che usa un server Icecast, anche attraverso i pannelli delle radio come AzuraCast o Centova Cast<!--YOUTUBE-->, e su <strong>YouTube</strong>, con audio e video<!--/YOUTUBE--><!--SENZAYOUTUBESENZAYOUTUBE-->. In onda va il mix finale, lo stesso che finisce nel file: tutte le sorgenti accese, con i loro volumi, gli effetti e il mix finale.<!--YOUTUBE--> Su YouTube va in più il video della composizione.<!--/YOUTUBE--></p>
-<p><!--YOUTUBE-->Le radio e YouTube si aggiungono una volta sola, in Impostazioni, categoria Diretta. Poi ogni configurazione sceglie <strong>dove va in diretta</strong>: solo la radio, solo YouTube, o tutte e due insieme<!--/YOUTUBE--><!--SENZAYOUTUBELe radio si aggiungono una volta sola, in Impostazioni, categoria Diretta. Poi ogni configurazione sceglie <strong>su quali radio va in diretta</strong>SENZAYOUTUBE--> (vedi "Dove va in diretta", più avanti).</p>
+<h2 id="diretta">11. <!--YOUTUBE-->La diretta: radio web e YouTube<!--/YOUTUBE--></h2>
+<p>HDX Recorder può mandare in diretta quello che registri su una radio web che usa un server Icecast, anche attraverso i pannelli delle radio come AzuraCast o Centova Cast<!--YOUTUBE-->, e su <strong>YouTube</strong>, con audio e video<!--/YOUTUBE-->. In onda va il mix finale, lo stesso che finisce nel file: tutte le sorgenti accese, con i loro volumi, gli effetti e il mix finale.<!--YOUTUBE--> Su YouTube va in più il video della composizione.<!--/YOUTUBE--></p>
+<p><!--YOUTUBE-->Le radio e YouTube si aggiungono una volta sola, in Impostazioni, categoria Diretta. Poi ogni configurazione sceglie <strong>dove va in diretta</strong>: solo la radio, solo YouTube, o tutte e due insieme<!--/YOUTUBE--> (vedi "Dove va in diretta", più avanti).</p>
 
 <h3>La prima volta: i dati della radio</h3>
-<p>In Strumenti, Impostazioni, categoria <strong>Diretta</strong>, premi <strong>Aggiungi</strong><!--YOUTUBE--> e scegli <strong>Radio web</strong>. <!--/YOUTUBE--><!--SENZAYOUTUBE. SENZAYOUTUBE-->Si apre una finestra con:</p>
+<p>In Strumenti, Impostazioni, categoria <strong>Diretta</strong>, premi <strong>Aggiungi</strong><!--YOUTUBE--> e scegli <strong>Radio web</strong>. <!--/YOUTUBE-->Si apre una finestra con:</p>
 <ul>
 <li><strong>Indirizzo del server</strong>: quello che ti dà la radio, per esempio radio.esempio.it. Puoi anche incollare un indirizzo completo come http://radio.esempio.it:8000/live: il programma prende da solo la porta e il mount.</li>
 <li><strong>Porta</strong>: di base 8000.</li>
@@ -583,14 +582,26 @@ h2 { margin-top: 2em; }
 <p>Con <strong>Prova il collegamento</strong> il programma si collega alla radio con i dati scritti e ti dice se li accetta, senza mandare audio in onda. Se qualcosa non va ti dice cosa: server non trovato, porta che non risponde, nome utente o password sbagliati, mount già occupato da un'altra diretta. Lo stesso pulsante c'è anche nella categoria Diretta, per la radio scelta nell'elenco.</p>
 
 <h3>Più radio insieme</h3>
-<p><!--YOUTUBE-->Puoi avere fino a 8 destinazioni, tra radio e YouTube.<!--/YOUTUBE--><!--SENZAYOUTUBEPuoi avere fino a 8 radio.SENZAYOUTUBE--> Nella categoria Diretta c'è il loro elenco: ogni riga dice il nome, l'indirizzo e il formato<!--YOUTUBE--> (per YouTube la qualità e se la chiave c'è)<!--/YOUTUBE-->. Sull'elenco <kbd>Invio</kbd> modifica la voce scelta e <kbd>Canc</kbd> la rimuove (dopo averti chiesto conferma); la rimuove anche dalle configurazioni che la usavano. Ci sono anche i pulsanti Aggiungi, Modifica, Rimuovi e Prova il collegamento.</p>
+<p><!--YOUTUBE-->Puoi avere fino a 8 destinazioni, tra radio e YouTube.<!--/YOUTUBE--> Nella categoria Diretta c'è il loro elenco: ogni riga dice il nome, l'indirizzo e il formato<!--YOUTUBE--> (per YouTube la qualità e se la chiave c'è)<!--/YOUTUBE-->. Sull'elenco <kbd>Invio</kbd> modifica la voce scelta e <kbd>Canc</kbd> la rimuove (dopo averti chiesto conferma); la rimuove anche dalle configurazioni che la usavano. Ci sono anche i pulsanti Aggiungi, Modifica, Rimuovi e Prova il collegamento.</p>
 <p>Vai in diretta va in onda insieme su tutte le destinazioni della configurazione. Ognuna va per conto suo: se una cade o rifiuta la password, le altre restano in onda. Con più radio gli annunci dicono quale ("NvRadio: diretta interrotta...")<!--YOUTUBE-->; YouTube lo dice sempre<!--/YOUTUBE-->. <kbd>Ctrl+T</kbd> dice lo stato di ognuna e il titolo in onda va a tutte le radio che lo accettano. Il silenzio in onda si dice una volta sola, perché il mix è lo stesso. Ogni radio in più usa altra rete in uscita: a 128 kbps circa 1 MB al minuto per radio.</p>
 
 <h3>Dove va in diretta</h3>
-<p>Ogni configurazione ha le sue destinazioni: così <!--YOUTUBE-->la configurazione della trasmissione radio va alla radio, quella con la webcam va su YouTube<!--/YOUTUBE--><!--SENZAYOUTUBEogni trasmissione va sulla sua radioSENZAYOUTUBE-->, e non si sbaglia all'ultimo momento. Si scelgono nelle impostazioni della configurazione, categoria <strong>Dove va in diretta</strong>, oppure direttamente dal menu Registrazione (o Regia), <strong><!--YOUTUBE-->Dove va in diretta: radio e YouTube<!--/YOUTUBE--><!--SENZAYOUTUBESu quali radio va in direttaSENZAYOUTUBE--></strong>. C'è l'elenco delle radio<!--YOUTUBE--> e di YouTube<!--/YOUTUBE-->, a caselle: lo <kbd>Spazio</kbd> spunta o toglie. Quando aggiungi una radio<!--YOUTUBE--> o YouTube<!--/YOUTUBE--> nelle Impostazioni, il programma ti chiede se la configurazione in uso deve andarci in diretta.</p>
+<p>Ogni configurazione ha le sue destinazioni: così <!--YOUTUBE-->la configurazione della trasmissione radio va alla radio, quella con la webcam va su YouTube<!--/YOUTUBE-->, e non si sbaglia all'ultimo momento. Si scelgono nelle impostazioni della configurazione, categoria <strong>Dove va in diretta</strong>, oppure direttamente dal menu Registrazione (o Regia), <strong><!--YOUTUBE-->Dove va in diretta: radio e YouTube<!--/YOUTUBE--></strong>. C'è l'elenco delle radio<!--YOUTUBE--> e di YouTube<!--/YOUTUBE-->, a caselle: lo <kbd>Spazio</kbd> spunta o toglie. Quando aggiungi una radio<!--YOUTUBE--> o YouTube<!--/YOUTUBE--> nelle Impostazioni, il programma ti chiede se la configurazione in uso deve andarci in diretta.</p>
 <p>Le configurazioni che c'erano prima di questa versione vanno, come prima, sulle radio che erano "usate". Se Vai in diretta non trova nessuna destinazione, il programma ti dice dove sceglierla e non parte.</p>
 
-<!--YOUTUBE--><h3>La diretta su YouTube</h3>
+<!--YOUTUBE--><h3 id="youtube-primi-passi">Primi passi con YouTube</h3>
+<p>Se non hai mai usato YouTube con HDX Recorder, segui questi passi nell'ordine. Ognuno è spiegato per intero più avanti, in questo capitolo.</p>
+<ol>
+<li><strong>Abilita le dirette sul canale</strong> (una volta sola, solo se non l'hai mai fatto): in YouTube Studio, con il browser, scegli Vai in diretta. La prima volta YouTube può chiedere di verificare il canale con il telefono e poi di aspettare fino a 24 ore.</li>
+<li><strong>Collega il tuo account</strong>: menu YouTube, <strong>Account YouTube</strong>, poi <strong>Collega l'account YouTube</strong>. Si apre il browser: scegli l'account Google del canale e premi Continua, poi torna al programma e premi <strong>OK</strong>. Se il programma chiede se la configurazione in uso deve andare in diretta su YouTube, rispondi Sì. (Paragrafo "L'account YouTube collegato".)</li>
+<li><strong>Prepara cosa va in onda</strong>: nella configurazione metti le sorgenti audio, come il microfono e la musica, e se vuoi il video lo schermo o la webcam. Senza sorgenti video, su YouTube va lo sfondo della composizione con il tuo audio.</li>
+<li><strong>Fai una prima diretta di prova</strong>: premi <kbd>Ctrl+D</kbd>. Nella finestra Diretta su YouTube scrivi un titolo e lascia la visibilità <strong>Non in elenco</strong>, così la vede solo chi ha il link, poi premi <strong>Vai in diretta</strong>. Quando senti "In onda su YouTube, non in elenco", dal menu YouTube scegli <strong>Copia il link della diretta</strong> e aprilo nel browser per controllare. Per finire premi di nuovo <kbd>Ctrl+D</kbd> e conferma: il programma chiude la diretta anche su YouTube.</li>
+<li><strong>La chat</strong>: durante la diretta i messaggi si sentono appena arrivano. <kbd>Ctrl+Maiusc+F9</kbd> accende o spegne la lettura, <kbd>Ctrl+F9</kbd> ripete l'ultimo messaggio, <kbd>Ctrl+F10</kbd> apre la finestra per leggere e rispondere. (Paragrafo "La chat della diretta su YouTube".)</li>
+<li><strong>Quando sei pronto per il resto</strong>: per una diretta annunciata in anticipo usa <strong>Programma una diretta</strong>; per un video già registrato <strong>Carica un video</strong>; per sistemare quelli che hai <strong>I miei video</strong>, <strong>Le mie playlist</strong> e <strong>Il mio canale</strong>. Sono tutti nel menu YouTube.</li>
+</ol>
+<p>Se preferisci non collegare l'account, va bene anche la sola chiave della diretta presa da YouTube Studio, come spiegato qui sotto. Con la sola chiave però non ci sono la chat, le dirette programmate e la gestione del canale e dei video.</p>
+
+<h3>La diretta su YouTube</h3>
 <p>HDX Recorder va in diretta su YouTube come i programmi per le dirette più diffusi: con la <strong>chiave della diretta</strong> del tuo canale. In onda vanno il mix finale e il video della composizione (capitolo 10): le sorgenti video accese, al loro posto. Se la configurazione non ha sorgenti video, su YouTube va lo <strong>sfondo</strong> della composizione, per esempio un colore, un disegno o l'immagine con il logo della trasmissione, con il tuo audio.</p>
 <p><strong>La prima volta, in YouTube Studio</strong> (con il browser, una volta sola):</p>
 <ol>
@@ -757,7 +768,7 @@ Sui tuoi messaggi c'è solo Elimina il messaggio. Ogni azione dice com'è andata
 <p>Menu Registrazione, <strong>Vai in diretta senza registrare</strong> (senza scorciatoia di base: se la vuoi, te la dai in Impostazioni, Tastiera). Le sorgenti si aprono come per registrare e il mix finale va alle radio, ma non si salva nessun file. Funzionano il mixer, gli effetti, i pad, il sottofondo, le scene, i livelli e <kbd>Ctrl+T</kbd>. Si ferma con <strong>Termina la diretta</strong> (<kbd>Ctrl+D</kbd>).</p>
 <ul>
 <li>Non si può cominciare a registrare a metà: se ti serve la registrazione, usa la diretta normale. Per lo stesso motivo la pausa non c'è.</li>
-<li><!--YOUTUBE-->Alle radio va solo l'audio; se la configurazione va anche su YouTube, lì va anche il video. Se la configurazione ha il video e non va su YouTube, il programma te lo ricorda.<!--/YOUTUBE--><!--SENZAYOUTUBEVa in onda solo l'audio: se la configurazione ha il video, il programma te lo ricorda.SENZAYOUTUBE--></li>
+<li><!--YOUTUBE-->Alle radio va solo l'audio; se la configurazione va anche su YouTube, lì va anche il video. Se la configurazione ha il video e non va su YouTube, il programma te lo ricorda.<!--/YOUTUBE--></li>
 <li>Se una registrazione programmata deve partire mentre sei in diretta, si comporta come quando stai già registrando a mano: aspetta o salta, secondo come l'hai impostata, ma non ferma mai la diretta.</li>
 <li>Se tutte le radio si fermano (per esempio per una password sbagliata) o se un dispositivo si scollega, la diretta finisce e il programma te lo dice.</li>
 </ul>
@@ -789,7 +800,7 @@ Sui tuoi messaggi c'è solo Elimina il messaggio. Ogni azione dice com'è andata
 <h3>Tosse e "parla sopra"</h3>
 <p>Due tasti da <strong>tenere premuti</strong>, nella regia e nella finestra principale:</p>
 <ul>
-<li><kbd>F6</kbd>, il <strong>tasto tosse</strong>: finché lo tieni premuto i tuoi microfoni (microfoni, ingressi<!--ASIO--> e schede ASIO<!--/ASIO-->) sono fuori onda; quando lo lasci tornano come prima. Il muto che hai scelto non cambia.</li>
+<li><kbd>F6</kbd>, il <strong>tasto tosse</strong>: finché lo tieni premuto i tuoi microfoni (microfoni, ingressi) sono fuori onda; quando lo lasci tornano come prima. Il muto che hai scelto non cambia.</li>
 <li><kbd>F7</kbd>, <strong>parla sopra</strong>: finché lo tieni premuto la musica (il lettore della regia e il sottofondo) si abbassa di 12 dB; quando lo lasci risale dolcemente.</li>
 </ul>
 <p>Funzionano solo con HDX Recorder in primo piano (un tasto "tenuto premuto" da un altro programma Windows non lo permette); se mentre li tieni passi a un'altra finestra, si considerano lasciati. Il campo dello stato della regia dice quando sono attivi. Il blocco da F5 a F8 è dei comandi rapidi della diretta: F5 la pausa, F6 la tosse, F7 parla sopra, F8 i tempi.</p>
@@ -850,7 +861,7 @@ Sui tuoi messaggi c'è solo Elimina il messaggio. Ogni azione dice com'è andata
 <ul>
 <li><strong>il nome</strong>, per esempio "Zoom";</li>
 <li><strong>l'uscita</strong> dove mandarlo: con Voicemeeter, per esempio <em>Voicemeeter AUX Input</em> (per un ritorno nuovo il programma la propone da solo, se c'è);</li>
-<li><strong>le sorgenti</strong> dentro e fuori (lo Spazio cambia). All'inizio sono dentro microfoni, ingressi, <!--ASIO-->schede ASIO, <!--/ASIO-->lettore della regia, pad e sottofondo; fuori le sorgenti Applicazione, l'audio del computer e le radio. <strong>La regola per evitare l'eco</strong>: metti fuori la sorgente che porta l'audio del programma che riceve il ritorno (per Zoom, la sorgente Applicazione di Zoom);</li>
+<li><strong>le sorgenti</strong> dentro e fuori (lo Spazio cambia). All'inizio sono dentro microfoni, ingressi, lettore della regia, pad e sottofondo; fuori le sorgenti Applicazione, l'audio del computer e le radio. <strong>La regola per evitare l'eco</strong>: metti fuori la sorgente che porta l'audio del programma che riceve il ritorno (per Zoom, la sorgente Applicazione di Zoom);</li>
 <li><strong>durante la pausa in onda</strong>: di base il ritorno non la segue, così chi è collegato continua a sentire te e la musica della pausa mentre in diretta le voci sono fuori; oppure la segue, uguale alla diretta;</li>
 <li><strong>il volume</strong> del ritorno.</li>
 </ul>
@@ -923,7 +934,7 @@ Sui tuoi messaggi c'è solo Elimina il messaggio. Ogni azione dice com'è andata
 <ul>
 <li><strong>Registrazione</strong>: avvio e fermata; pausa e ripresa; automatismi del silenzio (partita, pausa, ripresa); nuova parte del file; copie pronte (normalizzata e compressa); attesa di normalizzazioni e copie (il tic mentre lavora e ogni minuto a che punto è).</li>
 <li><strong>Problemi</strong>: interruzioni, audio perso, blocchi, scheda fuori tempo; mix in saturazione; poco spazio sul disco.</li>
-<li><strong>Dispositivi</strong>: scollegati e ricollegati<!--ASIO--> (anche una scheda ASIO ripartita a un'altra frequenza)<!--/ASIO-->; cambio del dispositivo predefinito di Windows; radio con connessione persa e ritrovata.</li>
+<li><strong>Dispositivi</strong>: scollegati e ricollegati; cambio del dispositivo predefinito di Windows; radio con connessione persa e ritrovata.</li>
 <li><strong>Sorgenti e mixer</strong>: volume; guadagno, bilanciamento, ritardo e fase; muta e di nuovo nel mix; sorgenti accese e spente; il monitor in cuffia acceso o spento e le sorgenti messe in cuffia o tolte. Valgono anche nella finestra Mixer e nella finestra del monitor.</li>
 <li><strong>Sottofondo</strong>: pausa, ripresa e brano successivo; sfumatura prima della fermata.</li>
 <li><strong>Scene e video</strong>: cambio di scena; problemi del video.</li>
