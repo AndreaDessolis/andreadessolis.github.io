@@ -346,6 +346,77 @@ PROGRAMMI = [
             ],
         },
     },
+    {
+        'id': 'studio-player',
+        'pagina': 'studio-player.html',
+        'nome': 'Studio Player',
+        'logo': 'studio-player.png',
+        'alt': {
+            'it': 'Logo di Studio Player: un plettro da chitarra color crema con un tasto Play ambra, su un quadrato viola scuro',
+            'en': 'Studio Player logo: a cream-coloured guitar pick with an amber Play button, on a dark purple square',
+        },
+        'stato': 'disponibile',
+        'repository': 'Studio-Player',
+        'setup': 'Studio-Player-Setup.exe',
+        'guida': r'D:\Software Portable\Sviluppo Software\Studio Player\documenti\Guida.html',
+        'novita': ('hdx-json', r'D:\Software Portable\Sviluppo Software\Studio Player\rilascio\changelog.json'),
+        'frase': {
+            'it': 'Ascoltare e studiare la musica con lo screen reader: rallentare un brano senza cambiarne il tono, ripetere un passaggio, separare gli strumenti e trovare gli accordi.',
+            'en': 'Listening to and studying music with your screen reader: slowing a song down without changing its pitch, repeating a passage, separating the instruments and finding the chords.',
+        },
+        'breve': {
+            'it': 'Il lettore per studiare la musica: velocità e tono, loop, metronomo, stem, accordi, MIDI e video.',
+            'en': 'The player for studying music: speed and pitch, loops, metronome, stems, chords, MIDI and video.',
+        },
+        'introduzione': {
+            'it': [
+                'Studio Player è un lettore pensato per chi suona e studia la musica. Apri un brano e puoi rallentarlo senza che cambi il tono, cambiare il tono senza che cambi la velocità, ripetere quanto vuoi un passaggio difficile con il loop A-B e segnare le parti con i marcatori. Si comanda tutto con la tastiera, e lo screen reader ti dice sempre dove sei e cosa sta succedendo.',
+                'Quando vuoi andare più a fondo, Studio Player separa un brano nelle sue parti (voce, chitarra, basso, batteria e il resto): puoi ascoltare solo la chitarra per capire cosa suona, oppure toglierla e suonarci sopra tu. Riconosce gli accordi e la tonalità, ti propone le scale per improvvisare, trova le note degli stem e suona i file MIDI con i banchi di suoni che preferisci.',
+            ],
+            'en': [
+                'Studio Player is a player designed for people who play and study music. Open a song and you can slow it down without changing its pitch, change the pitch without changing the speed, repeat a difficult passage as many times as you like with the A-B loop and mark the sections with markers. Everything is controlled with the keyboard, and your screen reader always tells you where you are and what is happening.',
+                'When you want to go deeper, Studio Player separates a song into its parts (vocals, guitar, bass, drums and the rest): you can listen to the guitar alone to understand what it plays, or remove it and play along yourself. It recognizes the chords and the key, suggests scales for improvising, finds the notes of the stems and plays MIDI files with the sound banks you prefer.',
+            ],
+        },
+        'requisiti': {
+            'it': ['Windows 10 o 11 a 64 bit.',
+                   'Uno screen reader: Studio Player parla con NVDA e con JAWS anche quando non è in primo piano.',
+                   'Per gli stem, gli accordi e le note: il motore stem, che si scarica a parte dalle Impostazioni perché è grande. Con una scheda video NVIDIA è molto più veloce.'],
+            'en': ['Windows 10 or 11, 64-bit.',
+                   'A screen reader: Studio Player talks with NVDA and JAWS even when it is not in the foreground.',
+                   'For stems, chords and notes: the stem engine, downloaded separately from the Settings because it is large. With an NVIDIA graphics card it is much faster.'],
+        },
+        'funzioni': {
+            'it': [
+                'Velocità e tono indipendenti: rallenti senza che cambi il tono, cambi il tono senza che cambi la velocità.',
+                'Il loop A-B, i loop salvati per ogni brano, il loop che accelera un poco a ogni giro e la sequenza dei loop, con la pausa e il conteggio tra un giro e l\'altro.',
+                'I marcatori con il nome, per saltare subito alla strofa o al ritornello.',
+                'Il metronomo, da solo o sui battiti del brano, con il conteggio prima di partire.',
+                'Gli stem: voce, chitarra, basso, batteria (anche nei suoi pezzi), piano e il resto, con il mixer di ogni parte.',
+                'Gli accordi e la tonalità del brano, detti anche mentre suona, e le scale per improvvisare.',
+                'Le note degli stem, per capire una melodia o un giro di basso.',
+                'I file MIDI con i banchi di suoni SoundFont, il mixer dei canali, gli strumenti da cambiare e il karaoke.',
+                'Volume uguale per tutti i brani, equalizzatore parametrico, stereo e canali, ascolto notturno.',
+                'I video nella finestra del lettore, con la scelta della traccia audio, i sottotitoli letti e i capitoli come marcatori.',
+                'Il convertitore di formati e l\'esportazione del brano come lo senti: con gli stem scelti, la velocità, il tono e gli effetti, tutto o solo un tratto.',
+                'Annunci a voce o con suoni riconoscibili, scorciatoie tutte modificabili, anche valide in tutto Windows, e aggiornamenti automatici, in italiano, inglese e spagnolo.',
+            ],
+            'en': [
+                'Independent speed and pitch: slow down without changing the pitch, change the pitch without changing the speed.',
+                'The A-B loop, saved loops for each song, the loop that speeds up a little at every pass and the loop sequence, with a pause and a count-in between passes.',
+                'Named markers, to jump straight to the verse or the chorus.',
+                'The metronome, on its own or on the song\'s beats, with a count-in before starting.',
+                'Stems: vocals, guitar, bass, drums (also split into its pieces), piano and the rest, with a mixer for every part.',
+                'The chords and key of the song, also spoken while it plays, and scales for improvising.',
+                'The notes of the stems, to understand a melody or a bass line.',
+                'MIDI files with SoundFont sound banks, the channel mixer, instruments to change and karaoke.',
+                'The same volume for all songs, parametric equalizer, stereo and channels, night listening.',
+                'Videos in the player window, with the choice of audio track, subtitles read aloud and chapters as markers.',
+                'The format converter and the export of the song as you hear it: with the chosen stems, speed, pitch and effects, the whole song or just a section.',
+                'Announcements by voice or with recognizable sounds, fully customizable shortcuts, also working everywhere in Windows, and automatic updates, in Italian, English and Spanish.',
+            ],
+        },
+    },
 ]
 
 # Le add-on per NVDA: tutte nella pagina addon-nvda.html, una sezione ciascuna
@@ -522,7 +593,7 @@ T = {
         'chi_sono_testo': [
             'Suono la chitarra da anni, ed è una delle cose che mi rilassa e mi diverte di più. Ma la vera svolta della mia vita è arrivata quando, già adulto, ho perso la vista. Da quel momento la tecnologia non è più stata solo un hobby: è diventata uno strumento fondamentale, quasi vitale, per continuare a vivere le cose che amo e per scoprirne di nuove.',
             'Da lì è nata la mia passione per tutto ciò che riguarda l\'accessibilità: software, metodi, piccoli accorgimenti che possono fare una grande differenza per chi, come me, si affida ogni giorno a uno screen reader. Mi piace pensare che ogni programma, ogni sito, ogni strumento possa essere reso più semplice da usare per tutti: basta volerlo fare davvero.',
-            'È da questa idea che sono nati i <a href="programmi.html">miei programmi</a>: prima Gram Access per Telegram, poi HDX VM per Voicemeeter, PCloud Access per pCloud, Tube Player per YouTube e HDX Recorder per registrare e andare in diretta. Uso NVDA ogni giorno, e per renderlo più comodo ho scritto anche alcune <a href="addon-nvda.html">add-on per NVDA</a>.',
+            'È da questa idea che sono nati i <a href="programmi.html">miei programmi</a>: prima Gram Access per Telegram, poi HDX VM per Voicemeeter, PCloud Access per pCloud, Tube Player per YouTube, HDX Recorder per registrare e andare in diretta, e Studio Player per ascoltare e studiare la musica. Uso NVDA ogni giorno, e per renderlo più comodo ho scritto anche alcune <a href="addon-nvda.html">add-on per NVDA</a>.',
         ],
         'contatti_lede': 'Che sia per uno dei miei programmi, per l\'accessibilità o solo per due chiacchiere: scrivimi pure.',
         'email_titolo': 'Email', 'email_testo': 'Il modo più semplice per raggiungermi è via email:',
@@ -578,7 +649,7 @@ T = {
         'chi_sono_testo': [
             'I have been playing the guitar for years, and it is one of the things that relaxes and amuses me most. But the real turning point of my life came when, already an adult, I lost my sight. From that moment technology was no longer just a hobby: it became an essential tool, almost vital, to keep enjoying the things I love and to discover new ones.',
             'That is where my passion for everything about accessibility comes from: software, methods, small touches that can make a big difference for people who, like me, rely on a screen reader every day. I like to think that every program, every website, every tool can be made easier to use for everyone: you just have to really want it.',
-            'This is the idea behind <a href="programmi.html">my programs</a>: first Gram Access for Telegram, then HDX VM for Voicemeeter, PCloud Access for pCloud, Tube Player for YouTube and HDX Recorder for recording and going live. I use NVDA every day, and to make it more comfortable I also wrote some <a href="addon-nvda.html">NVDA add-ons</a>.',
+            'This is the idea behind <a href="programmi.html">my programs</a>: first Gram Access for Telegram, then HDX VM for Voicemeeter, PCloud Access for pCloud, Tube Player for YouTube, HDX Recorder for recording and going live, and Studio Player for listening to and studying music. I use NVDA every day, and to make it more comfortable I also wrote some <a href="addon-nvda.html">NVDA add-ons</a>.',
         ],
         'contatti_lede': 'Whether it is about one of my programs, accessibility or just a chat: feel free to write to me.',
         'email_titolo': 'Email', 'email_testo': 'The easiest way to reach me is by email:',

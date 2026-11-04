@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Studio Player — Andrea Dessolis</title>
+<meta name="description" content="Ascoltare e studiare la musica con lo screen reader: rallentare un brano senza cambiarne il tono, ripetere un passaggio, separare gli strumenti e trovare gli accordi.">
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/studio-player.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/studio-player.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Andrea Dessolis</a>
+    <nav aria-label="Menu principale">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programmi.html" aria-current="page">Programmi</a></li>
+        <li><a href="addon-nvda.html">Add-on per NVDA</a></li>
+        <li><a href="chi-sono.html">Chi sono</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="https://t.me/+t7KuNQH-xQczMDVk">L&#x27;angolo di HDX</a></li>
+        <li class="lang"><a href="en/studio-player.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="680" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <div class="program-head">
+      <img class="program-logo" src="immagini/studio-player.png" width="96" height="96" alt="Logo di Studio Player: un plettro da chitarra color crema con un tasto Play ambra, su un quadrato viola scuro">
+      <h1>Studio Player</h1>
+    </div>
+    <p class="lede">Ascoltare e studiare la musica con lo screen reader: rallentare un brano senza cambiarne il tono, ripetere un passaggio, separare gli strumenti e trovare gli accordi.</p>
+
+    <p>Studio Player è un lettore pensato per chi suona e studia la musica. Apri un brano e puoi rallentarlo senza che cambi il tono, cambiare il tono senza che cambi la velocità, ripetere quanto vuoi un passaggio difficile con il loop A-B e segnare le parti con i marcatori. Si comanda tutto con la tastiera, e lo screen reader ti dice sempre dove sei e cosa sta succedendo.</p>
+
+    <p>Quando vuoi andare più a fondo, Studio Player separa un brano nelle sue parti (voce, chitarra, basso, batteria e il resto): puoi ascoltare solo la chitarra per capire cosa suona, oppure toglierla e suonarci sopra tu. Riconosce gli accordi e la tonalità, ti propone le scale per improvvisare, trova le note degli stem e suona i file MIDI con i banchi di suoni che preferisci.</p>
+
+    <div class="download">
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/AndreaDessolis/Studio-Player/releases/latest/download/Studio-Player-Setup.exe">Scarica Studio Player</a>
+      </div>
+      <p class="version">Versione 1.0.0 del 4 novembre 2026. Gratuito, per Windows 10 e 11. Il link porta sempre all&#x27;ultima versione.</p>
+    </div>
+
+    <h2>L&#x27;angolo di HDX</h2>
+    <p>Il gruppo Telegram di tutti i miei programmi e delle mie add-on: novità, domande, segnalazioni e suggerimenti, insieme agli altri utenti.</p>
+    <div class="cta-row">
+      <a class="btn btn-secondary" href="https://t.me/+t7KuNQH-xQczMDVk">Unisciti a L&#x27;angolo di HDX su Telegram</a>
+    </div>
+
+    <h2>Cosa serve</h2>
+    <ul>
+      <li>Windows 10 o 11 a 64 bit.</li>
+      <li>Uno screen reader: Studio Player parla con NVDA e con JAWS anche quando non è in primo piano.</li>
+      <li>Per gli stem, gli accordi e le note: il motore stem, che si scarica a parte dalle Impostazioni perché è grande. Con una scheda video NVIDIA è molto più veloce.</li>
+    </ul>
+
+    <h2>Cosa fa</h2>
+    <ul class="feature-list">
+      <li>Velocità e tono indipendenti: rallenti senza che cambi il tono, cambi il tono senza che cambi la velocità.</li>
+      <li>Il loop A-B, i loop salvati per ogni brano, il loop che accelera un poco a ogni giro e la sequenza dei loop, con la pausa e il conteggio tra un giro e l&#x27;altro.</li>
+      <li>I marcatori con il nome, per saltare subito alla strofa o al ritornello.</li>
+      <li>Il metronomo, da solo o sui battiti del brano, con il conteggio prima di partire.</li>
+      <li>Gli stem: voce, chitarra, basso, batteria (anche nei suoi pezzi), piano e il resto, con il mixer di ogni parte.</li>
+      <li>Gli accordi e la tonalità del brano, detti anche mentre suona, e le scale per improvvisare.</li>
+      <li>Le note degli stem, per capire una melodia o un giro di basso.</li>
+      <li>I file MIDI con i banchi di suoni SoundFont, il mixer dei canali, gli strumenti da cambiare e il karaoke.</li>
+      <li>Volume uguale per tutti i brani, equalizzatore parametrico, stereo e canali, ascolto notturno.</li>
+      <li>I video nella finestra del lettore, con la scelta della traccia audio, i sottotitoli letti e i capitoli come marcatori.</li>
+      <li>Il convertitore di formati e l&#x27;esportazione del brano come lo senti: con gli stem scelti, la velocità, il tono e gli effetti, tutto o solo un tratto.</li>
+      <li>Annunci a voce o con suoni riconoscibili, scorciatoie tutte modificabili, anche valide in tutto Windows, e aggiornamenti automatici, in italiano, inglese e spagnolo.</li>
+    </ul>
+
+    <h2>Guida e novità</h2>
+    <ul>
+      <li><a href="guide/studio-player.html">La guida di Studio Player, da leggere online</a></li>
+      <li><a href="novita/studio-player.html">Le novità di ogni versione</a></li>
+      <li><a href="https://github.com/AndreaDessolis/Studio-Player/releases">Tutte le versioni su GitHub</a></li>
+    </ul>
+
+    <h2>Sostieni il progetto</h2>
+    <p>I miei programmi sono gratuiti e li porto avanti da solo, nel tempo libero. Se ti sono utili, puoi aiutarmi con una donazione.</p>
+    <div class="cta-row">
+      <a class="btn btn-secondary" href="https://paypal.me/AndreaDessolis">Sostieni con PayPal</a>
+    </div>
+
+    <p>Hai domande o suggerimenti? <a href="contatti.html">Scrivimi</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="contatti.html">scrivimi</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>

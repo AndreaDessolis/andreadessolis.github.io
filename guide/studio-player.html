@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Guida di Studio Player</title>
+<style>
+body { font-family: Segoe UI, Arial, sans-serif; font-size: 1.1em; line-height: 1.55; max-width: 52em; margin: 1em auto; padding: 0 1em; }
+kbd { font-family: inherit; font-weight: bold; }
+h2 { margin-top: 2em; }
+</style>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../studio-player.html">Torna a Studio Player su andreadessolis.com</a> · <a style="color:#0E6B63" href="../en/studio-player.html" lang="en" hreflang="en">Back to Studio Player (English)</a></div>
+
+<h1>Guida di Studio Player</h1>
+<p>Questa guida spiega come usare Studio Player, capitolo per capitolo. Con lo screen reader si passa da un titolo all'altro con il tasto <kbd>H</kbd> (NVDA e JAWS), o da un capitolo all'altro con il tasto <kbd>2</kbd>.</p>
+<p>Le scorciatoie scritte qui sono quelle di base: se le hai cambiate in Impostazioni, Tastiera, valgono le tue. L'elenco di quelle in uso adesso è nel menu Aiuto, "Guida alle scorciatoie da tastiera" (<kbd>F1</kbd>).</p>
+
+<h2>Indice</h2>
+<ol>
+<li><a href="#cominciare">Cos'è Studio Player e come si comincia</a></li>
+<li><a href="#finestra">La finestra principale e i menu</a></li>
+<li><a href="#scaletta">Aprire i brani e la scaletta</a></li>
+<li><a href="#ascoltare">Ascoltare: spostarsi, volume, velocità e tono</a></li>
+<li><a href="#loop">Marcatori e loop</a></li>
+<li><a href="#metronomo">Il metronomo</a></li>
+<li><a href="#accordi">Accordi, tonalità e scale</a></li>
+<li><a href="#stem">Gli stem: separare le parti di un brano</a></li>
+<li><a href="#midi">I file MIDI</a></li>
+<li><a href="#audio">L'audio: volume uguale, equalizzatore ed effetti</a></li>
+<li><a href="#video">Il video</a></li>
+<li><a href="#impostazioni">Le impostazioni del programma</a></li>
+<li><a href="#problemi">Problemi e domande frequenti</a></li>
+</ol>
+
+<h2 id="cominciare">1. Cos'è Studio Player e come si comincia</h2>
+
+<h3>Che cos'è</h3>
+<p>Studio Player è un lettore per ascoltare e soprattutto per studiare la musica, pensato per essere usato completamente con lo screen reader (NVDA e JAWS). Oltre a suonare i brani come un lettore normale, ti aiuta a impararli:</p>
+<ul>
+<li>rallenta o accelera un brano senza cambiarne il tono, oppure cambia il tono senza cambiarne la velocità;</li>
+<li>ripete un pezzo del brano (il loop), anche accelerando un po' a ogni giro;</li>
+<li>mette i marcatori nei punti importanti;</li>
+<li>ha un metronomo completo, da usare da solo o che segue i battiti del brano;</li>
+<li>riconosce gli accordi, la tonalità e le scale per improvvisare;</li>
+<li>separa un brano nelle sue parti (voce, chitarra, basso, batteria...), così puoi ascoltarle da sole o toglierne una e suonarci sopra;</li>
+<li>suona i file MIDI con i banchi di suoni che preferisci;</li>
+<li>apre anche i video, con la scelta della traccia audio e i sottotitoli letti dallo screen reader.</li>
+</ul>
+<p>Il suono non viene mai toccato se non lo chiedi tu: a velocità e tono normali, senza effetti e al volume pieno, il brano esce esattamente com'è nel file.</p>
+
+<h3>Un programma portatile</h3>
+<p>Studio Player non si installa e non scrive niente fuori dalla sua cartella. Tutto quello che ricorda sta nella cartella <strong>Dati</strong>, accanto al programma:</p>
+<ul>
+<li><strong>impostazioni.json</strong>: le tue impostazioni;</li>
+<li><strong>scaletta.json</strong>: la lista dei brani dell'ultima volta;</li>
+<li><strong>scalette.json</strong>: le scalette recenti e il brano a cui eri arrivato in ognuna;</li>
+<li><strong>brani.json</strong>: quello che il programma ricorda di ogni brano (marcatori, loop, velocità, mixer...);</li>
+<li><strong>Stem</strong>: le parti separate dei brani;</li>
+<li><strong>Accordi</strong>, <strong>Note</strong> e <strong>Tempi</strong>: i risultati delle analisi, per non rifarle ogni volta;</li>
+<li><strong>SoundFont</strong>: i banchi di suoni per i file MIDI.</li>
+</ul>
+<p>Se copi tutta la cartella di Studio Player su un altro computer o su una chiavetta, porti con te tutto: impostazioni, loop, marcatori e stem.</p>
+
+<h3>La prima volta</h3>
+<ol>
+<li>Avvia <strong>Studio Player.exe</strong>. Lo screen reader dice "Studio Player aperto" e ti trovi sull'elenco dei brani, vuoto. Un attimo dopo si apre la finestra di benvenuto, con le basi del programma: la leggi con le frecce. Se non vuoi più vederla all'avvio, togli la spunta a "Mostra questa finestra all'avvio"; la ritrovi sempre in Aiuto, Benvenuto.</li>
+<li>Premi <kbd>Ctrl+O</kbd>, scegli uno o più file audio o video e premi Invio: il primo parte subito.</li>
+<li>Mentre suona, il fuoco va sul pulsante Pausa: con le frecce destra e sinistra ti sposti di 5 secondi, con su e giù cambi il volume.</li>
+<li>Premi <kbd>Ctrl+P</kbd> per la pausa e per riprendere, <kbd>Ctrl+S</kbd> per fermare.</li>
+</ol>
+<p>Se vuoi che i file audio si aprano con Studio Player dalla cartella o dal desktop, guarda il capitolo sulle impostazioni, categoria "Integrazione con Windows".</p>
+
+<h3>Gli aggiornamenti</h3>
+<p>Studio Player si aggiorna da solo. All'avvio controlla se c'è una versione nuova e, se c'è, ti mostra le novità e ti chiede se aggiornare: con "Aggiorna adesso" scarica la versione nuova, si chiude e si riapre già aggiornato. Puoi controllare anche quando vuoi, da Aiuto, "Controlla gli aggiornamenti...", e leggere le novità della versione che hai da Aiuto, "Ultime modifiche..." (anche senza internet).</p>
+<p>Gli aggiornamenti sono protetti: il file è firmato dall'autore e il pacchetto scaricato viene controllato prima di installarlo; se qualcosa non torna non si installa niente. Se durante l'installazione un file non si può sostituire, il programma rimette tutto com'era. La cartella Dati non si tocca mai: impostazioni, loop, marcatori, stem e banchi di suoni restano. Mentre separa gli stem, installa il motore stem, esporta un MIDI o ha una finestra aperta, il programma non propone l'aggiornamento: aspetta di essere libero.</p>
+<p>Il controllo all'avvio si spegne in Impostazioni, Generale, "Controlla se ci sono aggiornamenti all'avvio".</p>
+
+<h3>La licenza</h3>
+<p>Studio Player è gratuito, per uso personale e per lavoro, e si scarica solo dal sito ufficiale. La licenza completa è nella cartella Documenti (Licenza.txt, in inglese License.txt, in spagnolo Licencia.txt), con la parte sulla privacy: il programma non manda niente all'autore e si collega a internet solo per gli aggiornamenti, per scaricare il motore stem, i suoi modelli e i banchi di suoni, e quando usi Contattami. I componenti di altri autori e le loro licenze sono nel file Licenze.html, nella stessa cartella.</p>
+
+<h3>I formati</h3>
+<p>Audio: MP3, FLAC, WAV, AIFF, M4A e AAC, OGG, Opus, WMA, ALAC, APE, WavPack, MKA, AC3, DTS e MPC. MIDI: MID, MIDI, KAR (karaoke) e RMI. Video: MP4, M4V, MKV, WebM, AVI, MOV, WMV, FLV, MPG e MPEG, TS e 3GP.</p>
+
+<h2 id="finestra">2. La finestra principale e i menu</h2>
+
+<h3>I controlli, nell'ordine del Tab</h3>
+<ol>
+<li><strong>Brani</strong>: l'elenco della scaletta. Invio fa partire il brano scelto, Spazio mette in pausa o riprende.</li>
+<li><strong>Il pulsante del lettore</strong>: dice Riproduci, Pausa o Riprendi, secondo lo stato del brano.</li>
+<li><strong>Posizione</strong>: la barra del punto in cui sei, per esempio "1:23 di 4:05".</li>
+<li><strong>Volume</strong>: la barra del volume, in percentuale. Tutte e quattro le frecce lo cambiano.</li>
+<li><strong>Velocità</strong>: da 25% a 150%, a passi di 5.</li>
+<li><strong>Tono</strong>: da 12 semitoni sotto a 12 sopra.</li>
+<li><strong>Loop A-B</strong>: una casella che dice i punti del loop e si accende o spegne con lo Spazio.</li>
+<li><strong>Marcatori</strong>: l'elenco dei marcatori del brano.</li>
+</ol>
+<p>Velocità e tono cambiano quando ti fermi un attimo sulla scelta: puoi scorrere i valori con le frecce senza sentire ogni passaggio.</p>
+
+<h3>I tasti del lettore</h3>
+<p>Sul pulsante del lettore e sulla barra della posizione valgono gli stessi tasti:</p>
+<ul>
+<li><kbd>Freccia destra</kbd> e <kbd>Freccia sinistra</kbd>: avanti o indietro di 5 secondi; con <kbd>Maiusc</kbd>, di un minuto;</li>
+<li><kbd>Freccia su</kbd> e <kbd>Freccia giù</kbd>: alzano o abbassano il volume;</li>
+<li><kbd>Inizio</kbd>: torna all'inizio del brano;</li>
+<li><kbd>Pagina giù</kbd> e <kbd>Pagina su</kbd>: il brano dopo e il brano prima;</li>
+<li><kbd>M</kbd>: aggiunge un marcatore nel punto in cui sei.</li>
+</ul>
+<p>La barra della posizione non si aggiorna mentre ci sei sopra, così lo screen reader non parla in continuazione: quando ci arrivi dice il punto di quel momento.</p>
+<p><kbd>Ctrl+L</kbd>, da qualsiasi punto, ti riporta all'elenco dei brani.</p>
+
+<h3>I menu</h3>
+<ul>
+<li><strong>File</strong>: aprire e aggiungere file e cartelle, il sottomenu Scaletta, Vai alla lista dei brani, Impostazioni (<kbd>Ctrl+virgola</kbd>) ed Esci (<kbd>Ctrl+Q</kbd>).</li>
+<li><strong>Riproduzione</strong>: riprodurre, pausa, fermare, brano dopo e prima, Ripeti, Ordine casuale, gli spostamenti, il volume, il sottomenu Velocità e tono, il tempo trascorso e la qualità dell'audio. Mostra solo le voci che si possono usare in quel momento: senza un brano aperto, per esempio, non ci sono Pausa e gli spostamenti.</li>
+<li><strong>Studio</strong>: i sottomenu Loop, Marcatori, Metronomo, Accordi, Note, Stem e MIDI.</li>
+<li><strong>Audio</strong>: la finestra Audio e il confronto prima e dopo.</li>
+<li><strong>Video</strong>: schermo intero, sottotitoli letti e traccia audio.</li>
+<li><strong>Aiuto</strong>: questa guida (<kbd>Ctrl+F1</kbd>), la guida alle scorciatoie (<kbd>F1</kbd>), la finestra di benvenuto, Controlla gli aggiornamenti, Ultime modifiche, Contattami, il gruppo L'angolo di HDX su Telegram, Dona con PayPal e Informazioni.</li>
+</ul>
+<p>Ogni voce dei menu mostra la sua scorciatoia, se ne ha una.</p>
+
+<h3>Le altre finestre</h3>
+<p>Le finestre Metronomo, Mixer, Loop, Accordi, Note e Audio non bloccano il lettore: mentre sono aperte il brano continua e le scorciatoie del programma funzionano anche lì. Esc le chiude. Con <kbd>Alt+Tab</kbd> torni sul controllo dove eri.</p>
+<p><kbd>F1</kbd> dentro una di queste finestre apre la guida alle scorciatoie proprio sui tasti di quella finestra.</p>
+
+<h3>Le scorciatoie globali</h3>
+<p>Alcuni comandi funzionano anche quando stai usando un altro programma, con <kbd>Ctrl+Alt+Maiusc</kbd> e un tasto:</p>
+<ul>
+<li><kbd>Ctrl+Alt+Maiusc+R</kbd>: riproduci, pausa o riprendi;</li>
+<li><kbd>Ctrl+Alt+Maiusc+F</kbd>: ferma;</li>
+<li><kbd>Ctrl+Alt+Maiusc+Pagina giù</kbd> e <kbd>Ctrl+Alt+Maiusc+Pagina su</kbd>: il brano dopo e il brano prima;</li>
+<li><kbd>Ctrl+Alt+Maiusc+I</kbd>: il titolo e il punto in cui sei;</li>
+<li><kbd>Ctrl+Alt+Maiusc+M</kbd>: porta in primo piano Studio Player, anche se è ridotto o nell'area di notifica.</li>
+</ul>
+<p>Sono accese di base. In Impostazioni, Tastiera, ramo "Scorciatoie globali", lo Spazio le spegne e le riaccende, e puoi cambiarle come le altre. Se una combinazione è già usata da un altro programma aperto, Studio Player te lo dice.</p>
+
+<h3>La guida alle scorciatoie</h3>
+<p>Aiuto, "Guida alle scorciatoie da tastiera" (<kbd>F1</kbd>) apre l'elenco di tutte le scorciatoie in uso, divise per menu, più i tasti delle finestre. In alto c'è un campo per cercare un comando o un tasto: con <kbd>Tab</kbd> vai ai risultati. Nell'elenco, Freccia destra apre un gruppo e Freccia sinistra lo chiude. Se l'hai aperta dalla finestra principale, Invio su un comando lo esegue.</p>
+
+<h2 id="scaletta">3. Aprire i brani e la scaletta</h2>
+
+<h3>Aprire e aggiungere</h3>
+<ul>
+<li><kbd>Ctrl+O</kbd>, Apri file: i file scelti prendono il posto della lista e il primo parte.</li>
+<li><kbd>Alt+Maiusc+O</kbd>, Aggiungi file: i file si aggiungono in fondo alla lista.</li>
+<li><kbd>Ctrl+Maiusc+C</kbd>, Apri cartella: tutti i brani della cartella, anche nelle sottocartelle, prendono il posto della lista.</li>
+<li><kbd>Alt+Maiusc+C</kbd>, Aggiungi cartella: i brani della cartella si aggiungono in fondo.</li>
+</ul>
+<p>Lo stesso file non entra mai due volte nella lista. La lista si ricorda da sola: alla prossima apertura del programma la ritrovi com'era (si può cambiare in Impostazioni, Scaletta).</p>
+
+<h3>Le scalette salvate</h3>
+<p>Una scaletta è un file M3U o M3U8 con l'elenco dei brani: la usano quasi tutti i lettori. Nel menu File, sottomenu Scaletta:</p>
+<ul>
+<li><kbd>Ctrl+Maiusc+O</kbd>, Apri scaletta: se nella lista ci sono già dei brani ti chiede se la scaletta deve prendere il loro posto (Sì) o aggiungersi in fondo (No).</li>
+<li><strong>Scalette recenti</strong>: le ultime scalette aperte o salvate.</li>
+<li><kbd>Ctrl+Maiusc+S</kbd>, Salva: salva la lista nel file della scaletta da cui viene; se è nuova chiede il nome.</li>
+<li><strong>Salva con nome</strong>: salva la lista in un file nuovo.</li>
+</ul>
+<p>Studio Player apre anche le scalette fatte con altri lettori, compresi gli indirizzi "file:///" che scrivono alcuni programmi. Gli indirizzi internet (radio e flussi) vengono saltati.</p>
+<p>Una scaletta riaperta riprende dal brano a cui eri arrivato, anche se nel frattempo l'hai riordinata.</p>
+
+<h3>Mettere in ordine</h3>
+<ul>
+<li><strong>Ordina</strong>: per nome del file, per titolo, per artista, per durata, oppure al contrario.</li>
+<li><strong>Mescola una volta</strong>: cambia l'ordine della lista a caso, una volta sola (diverso dall'ordine casuale, che lascia la lista com'è).</li>
+<li><strong>Togli i brani che non ci sono più</strong>: toglie i file spostati o cancellati.</li>
+<li><strong>Svuota la lista</strong>: prima chiede conferma.</li>
+</ul>
+<p>Nell'elenco dei brani:</p>
+<ul>
+<li><kbd>Canc</kbd> toglie il brano scelto, dopo averti chiesto conferma (se è quello che suona, si ferma);</li>
+<li><kbd>Ctrl+Freccia su</kbd> e <kbd>Ctrl+Freccia giù</kbd> spostano il brano e dicono la sua nuova posizione;</li>
+<li><kbd>Maiusc</kbd> con le frecce sceglie più brani insieme, <kbd>Ctrl+A</kbd> li sceglie tutti: Canc e gli spostamenti valgono per tutti quelli scelti.</li>
+</ul>
+
+<h3>Cercare e sapere</h3>
+<ul>
+<li><kbd>Ctrl+F</kbd>, Cerca: scrivi una parola del titolo, dell'artista o del nome del file. La ricerca parte dal brano su cui sei.</li>
+<li><kbd>F3</kbd> e <kbd>Maiusc+F3</kbd>: il risultato dopo e quello prima.</li>
+<li><kbd>Ctrl+I</kbd>, Informazioni sulla scaletta: quanti brani ci sono e quanto durano in tutto.</li>
+<li><strong>Apri la cartella del brano</strong>: apre in Esplora risorse la cartella del brano scelto.</li>
+</ul>
+<p>Titolo, artista e durata dei brani si leggono in sottofondo: in un elenco lungo possono arrivare dopo qualche secondo.</p>
+
+<h3>Suona dopo</h3>
+<p><kbd>Ctrl+Invio</kbd> nell'elenco mette il brano scelto in coda: suonerà subito dopo quello di adesso, senza cambiare l'ordine della lista. Puoi metterne in coda più di uno.</p>
+
+<h3>Ripeti e ordine casuale</h3>
+<ul>
+<li><kbd>Ctrl+R</kbd>, Ripeti: a ogni pressione passa da niente, a questo brano, a tutta la scaletta.</li>
+<li><kbd>Ctrl+Maiusc+R</kbd>, Ordine casuale: acceso o spento. I brani suonano a caso, ognuno una volta, senza ripetizioni finché non sono passati tutti. Brano precedente torna davvero a quello di prima.</li>
+<li><kbd>Ctrl+Pagina giù</kbd> e <kbd>Ctrl+Pagina su</kbd>: il brano dopo e il brano prima, da qualsiasi punto.</li>
+</ul>
+<p>Cosa succede quando finisce un brano (si ferma, torna alla lista, passa al dopo...) lo scegli in Impostazioni, Scaletta: è spiegato nel capitolo sulle impostazioni.</p>
+
+<h2 id="ascoltare">4. Ascoltare: spostarsi, volume, velocità e tono</h2>
+
+<h3>Riprodurre e fermare</h3>
+<ul>
+<li><kbd>Invio</kbd> nell'elenco: fa partire il brano scelto.</li>
+<li><kbd>Ctrl+P</kbd>: pausa e ripresa, da tutte le finestre del programma. Se nessun brano è aperto, fa partire quello scelto nella lista.</li>
+<li><kbd>Spazio</kbd> nell'elenco: pausa e ripresa.</li>
+<li><kbd>Ctrl+S</kbd>: ferma il brano. Ferma anche la pausa tra un brano e l'altro, se l'hai impostata.</li>
+</ul>
+<p>Funzionano anche i tasti multimediali della tastiera e i controlli multimediali di Windows.</p>
+
+<h3>Spostarsi nel brano</h3>
+<ul>
+<li><kbd>Alt+Freccia destra</kbd> e <kbd>Alt+Freccia sinistra</kbd>: avanti e indietro di 5 secondi;</li>
+<li><kbd>Alt+Maiusc+Freccia destra</kbd> e <kbd>Alt+Maiusc+Freccia sinistra</kbd>: avanti e indietro di un minuto;</li>
+<li><kbd>Alt+Inizio</kbd>: all'inizio del brano;</li>
+<li><kbd>Ctrl+T</kbd>: dice il titolo e il punto in cui sei, per esempio "1:23 di 4:05", e se lo conosce il tempo del brano in BPM in quel punto.</li>
+</ul>
+
+<h3>Volume</h3>
+<p><kbd>Alt+Freccia su</kbd> e <kbd>Alt+Freccia giù</kbd> cambiano il volume da tutto il programma. Il volume resta quello per tutti i brani.</p>
+
+<h3>Velocità e tono</h3>
+<ul>
+<li><kbd>Alt+Pagina su</kbd> e <kbd>Alt+Pagina giù</kbd>: più veloce e più lento;</li>
+<li><kbd>Ctrl+Maiusc+V</kbd>: velocità normale;</li>
+<li><kbd>Alt+Maiusc+Pagina su</kbd> e <kbd>Alt+Maiusc+Pagina giù</kbd>: tono su e giù di un semitono;</li>
+<li><kbd>Ctrl+Maiusc+T</kbd>: tono originale.</li>
+</ul>
+<p>Velocità e tono si cambiano in modo indipendente: puoi rallentare un assolo senza che diventi più grave, o portare un brano nella tonalità della tua voce senza cambiarne il tempo. A velocità normale e tono originale il brano esce esattamente com'è nel file.</p>
+<p>Di base ogni brano nuovo riparte a velocità e tono normali. Se vuoi che ogni brano ricordi i suoi, accendi in Impostazioni, Riproduzione, "Ricorda velocità e tono di ogni brano".</p>
+
+<h3>La qualità dell'audio</h3>
+<p><kbd>Ctrl+Maiusc+I</kbd> dice com'è fatto il file (formato, frequenza, bit, canali) e come esce dalla scheda audio: se esce identico al file (bit-perfect) oppure convertito, e perché.</p>
+
+<h3>Cosa ricorda il programma di ogni brano</h3>
+<p>Senza che tu faccia niente, ogni brano ricorda i suoi marcatori, i loop, la versione degli stem e il mixer, l'equalizzatore (se ne ha uno suo), la traccia audio scelta nei video. Altre cose le ricorda se lo chiedi in Impostazioni, Riproduzione: velocità e tono, se il loop era acceso, il punto in cui l'avevi lasciato.</p>
+<p>I brani si riconoscono dal percorso del file.</p>
+
+<h2 id="loop">5. Marcatori e loop</h2>
+
+<h3>I marcatori</h3>
+<p>Un marcatore è un segno in un punto del brano, con un nome: l'inizio del ritornello, l'assolo, il passaggio difficile.</p>
+<ul>
+<li><kbd>Ctrl+M</kbd> (o <kbd>M</kbd> sul pulsante del lettore): aggiunge un marcatore nel punto in cui sei, con il nome "Marcatore" e un numero.</li>
+<li><kbd>Ctrl+Freccia destra</kbd> e <kbd>Ctrl+Freccia sinistra</kbd>: vanno al marcatore dopo e a quello prima.</li>
+<li><kbd>Ctrl+1</kbd> fino a <kbd>Ctrl+9</kbd>: vanno al marcatore con quel numero.</li>
+<li><kbd>Ctrl+Maiusc+K</kbd>: porta all'elenco dei marcatori.</li>
+</ul>
+<p>Nell'elenco dei marcatori: <kbd>Invio</kbd> va al marcatore, <kbd>F2</kbd> cambia il nome, <kbd>Canc</kbd> lo toglie dopo averti chiesto conferma.</p>
+<p>Nei file MIDI i marcatori scritti nel file e nei video i capitoli diventano marcatori la prima volta che apri il file (per i video si può spegnere in Impostazioni, Video).</p>
+
+<h3>Il loop A-B</h3>
+<p>Il loop ripete sempre lo stesso pezzo del brano, dal punto A al punto B, senza buchi.</p>
+<ul>
+<li><kbd>F9</kbd>: il punto A, dove sei adesso.</li>
+<li><kbd>F10</kbd>: il punto B, dove sei adesso. Il loop si accende e il brano torna ad A.</li>
+<li><kbd>F11</kbd>: loop acceso o spento.</li>
+<li><kbd>F12</kbd>: toglie il loop (i loop salvati restano).</li>
+<li><kbd>Maiusc+F11</kbd>: un loop dal marcatore in cui sei al marcatore dopo.</li>
+</ul>
+<p>Per correggere i punti senza ricominciare, a piccoli passi:</p>
+<ul>
+<li><kbd>Ctrl+F9</kbd> e <kbd>Alt+F9</kbd>: A un po' prima e un po' dopo;</li>
+<li><kbd>Ctrl+F10</kbd> e <kbd>Alt+F10</kbd>: B un po' prima e un po' dopo.</li>
+</ul>
+<p>Dopo ogni spostamento lo senti subito: da A, o da poco prima di B. Il passo si sceglie nella finestra Loop (di base un decimo di secondo).</p>
+
+<h3>I loop salvati e la finestra Loop</h3>
+<p><kbd>Ctrl+F11</kbd> salva il loop A-B tra i loop del brano. Se stai correggendo un loop già salvato, lo aggiorna.</p>
+<p><kbd>Ctrl+Maiusc+L</kbd> apre la finestra Loop, con tutti i loop del brano:</p>
+<ul>
+<li><kbd>Invio</kbd>: suona il loop scelto (diventa quello in uso);</li>
+<li><kbd>F2</kbd>: cambia il nome;</li>
+<li><kbd>Canc</kbd>: lo toglie, dopo averti chiesto conferma;</li>
+<li><kbd>Ctrl+Freccia su</kbd> e <kbd>Ctrl+Freccia giù</kbd>: cambiano l'ordine.</li>
+</ul>
+<p>Sotto l'elenco ci sono: il passo per spostare A e B, cosa fare alla fine della sequenza, e i pulsanti "Salva il loop A-B", "Nuovo loop da un marcatore..." e "Impostazioni del loop scelto...".</p>
+
+<h3>Le impostazioni di un loop</h3>
+<p>Ogni loop salvato ha le sue impostazioni; il loop non ancora salvato usa quelle che hai scelto l'ultima volta. Le apri dalla finestra Loop o, per il loop in uso, con <kbd>Alt+Maiusc+L</kbd>:</p>
+<ul>
+<li><strong>Quante volte nella sequenza</strong>: da 1 a 20, o senza fine;</li>
+<li><strong>Pausa tra un giro e l'altro</strong>: nessuna, o da mezzo secondo a 10 secondi, per prendere fiato o rimettere le mani a posto;</li>
+<li><strong>Conteggio del metronomo prima di ogni giro</strong>;</li>
+<li><strong>Loop che accelera</strong>: velocità di partenza, velocità finale, di quanto sale, ogni quanti giri, e cosa fare arrivato alla fine (resta lì o ricomincia).</li>
+</ul>
+
+<h3>Il loop che accelera</h3>
+<p><kbd>Ctrl+F12</kbd> accende o spegne il loop che accelera. Il pezzo parte lento e a ogni giro (o ogni tot giri) diventa un po' più veloce, fino alla velocità finale: il modo classico per imparare un passaggio difficile. A ogni aumento senti la velocità nuova. La velocità finale può anche essere più bassa della partenza: allora il loop rallenta.</p>
+<p>Quando lo spegni torna la velocità che avevi prima.</p>
+
+<h3>La sequenza dei loop</h3>
+<p><kbd>Alt+F12</kbd> accende o spegne la sequenza: i loop salvati suonano uno dopo l'altro, ognuno per le volte scelte nelle sue impostazioni, partendo da quello in uso o dal primo. A ogni cambio senti il nome del loop. Alla fine della sequenza il brano si ferma, ricomincia dal primo loop o continua: lo scegli nella finestra Loop.</p>
+
+<h2 id="metronomo">6. Il metronomo</h2>
+
+<h3>Da solo o con il brano</h3>
+<p>Il metronomo si usa da solo, per studiare a tempo, oppure insieme a un brano. Con un brano suona solo mentre il brano suona e tace in pausa.</p>
+<ul>
+<li><kbd>F8</kbd>: metronomo acceso o spento;</li>
+<li><kbd>+</kbd> e <kbd>-</kbd>: un BPM in più o in meno;</li>
+<li><kbd>F6</kbd> e <kbd>F5</kbd>: alzano e abbassano il volume del metronomo (che non dipende dal volume del brano);</li>
+<li><kbd>Ctrl+Maiusc+M</kbd>: la finestra Metronomo.</li>
+</ul>
+
+<h3>La finestra Metronomo</h3>
+<p>È divisa in categorie, come le Impostazioni: a sinistra l'elenco, a destra i controlli della categoria scelta.</p>
+<ul>
+<li><strong>Metronomo</strong>: acceso, BPM, "Batti il tempo" (premi Spazio a ritmo sul pulsante: il metronomo prende il tuo tempo), battiti per misura, accento sul primo battito, suddivisione (nessuna, crome, terzine, semicrome), suono (click, legnetto, campanaccio, rimshot) e volume.</li>
+<li><strong>Conteggio</strong>: il conteggio prima di ogni brano, come contare (solo click, solo voce, click e voce) e quante misure.</li>
+<li><strong>Sul brano</strong>: "Segui il brano", il tempo del brano, il primo battito della misura e la correzione dei colpi.</li>
+<li><strong>Allenamento della velocità</strong>: il metronomo sale da solo fino a un BPM finale, di tanti BPM ogni tante misure.</li>
+<li><strong>Misure mute</strong>: il metronomo suona tante misure e poi tace per altre, per allenarti a tenere il tempo da solo.</li>
+</ul>
+
+<h3>Il conteggio</h3>
+<p><kbd>F7</kbd> accende o spegne il conteggio: prima di ogni brano che parte dall'inizio e a ogni ripresa dalla pausa il metronomo conta una o più misure, e poi parte il brano. Il conteggio si può fare con i click, con una voce in inglese ("one, two, three, four") o con tutti e due. La voce si adatta al tempo: anche ai BPM alti le parole non si accavallano.</p>
+
+<h3>Segui il brano</h3>
+<p><kbd>Ctrl+F8</kbd> accende o spegne "Segui il brano": il metronomo non batte più a un tempo fisso, ma sui battiti veri del brano aperto, anche quando il brano rallenta o accelera, e segue velocità e loop. Studio Player trova i battiti da solo quando apri un brano (ci mette meno di un secondo) e se li ricorda.</p>
+<p>Se i colpi ti sembrano un po' in anticipo o in ritardo, correggili con <kbd>Ctrl+-</kbd> (colpi un po' prima) e <kbd>Ctrl++</kbd> (colpi un po' dopo). Se il programma ha preso il tempo doppio, la metà, o un tempo di 3 su 2, nella finestra Metronomo, categoria Sul brano, puoi scegliere il tempo giusto e su quale battito cade il primo della misura. Queste scelte si ricordano per ogni brano.</p>
+<p>Nei file MIDI i battiti sono quelli esatti del file.</p>
+
+<h2 id="accordi">7. Accordi, tonalità e scale</h2>
+
+<h3>Gli accordi</h3>
+<ul>
+<li><kbd>Ctrl+Maiusc+A</kbd>: l'accordo che suona adesso;</li>
+<li><kbd>Alt+Maiusc+A</kbd>: la finestra Accordi, con tutti gli accordi del brano.</li>
+</ul>
+<p>La prima volta il programma deve analizzare il brano: ti dice più o meno quanto ci vorrà, e quando ha finito "Accordi pronti". Puoi continuare a usare il programma intanto. Se chiedi gli accordi di un altro brano mentre ne sta analizzando uno, li mette in coda. L'analisi si fa una volta sola: poi gli accordi del brano si ricordano.</p>
+<p>Per i file audio serve il motore stem (vedi il capitolo sugli stem); per i file MIDI gli accordi si ricavano dalle note del file, subito e senza motore.</p>
+<p>Gli accordi seguono il tono: se alzi il brano di due semitoni, anche gli accordi detti sono due semitoni sopra.</p>
+
+<h3>La finestra Accordi</h3>
+<ul>
+<li>In alto, <strong>Tonalità e scale per improvvisare</strong>: la tonalità del brano (anche i cambi di tonalità, con il punto in cui avvengono), la relativa, e le scale che ci stanno sopra (per una tonalità minore la pentatonica minore, il blues e la minore naturale; per una maggiore la pentatonica maggiore, il blues maggiore e la maggiore), con le note. Invio su una tonalità porta il brano dove comincia.</li>
+<li>Sotto, <strong>Accordi del brano</strong>: ogni accordo con il suo tempo. Invio porta il brano a quell'accordo.</li>
+<li><strong>Dimmi gli accordi mentre suona</strong>: lo screen reader dice ogni accordo nuovo mentre il brano va avanti.</li>
+</ul>
+<p><kbd>Alt+Maiusc+T</kbd> dice la tonalità del punto in cui sei, senza aprire la finestra.</p>
+
+<h3>I nomi</h3>
+<p>Gli accordi e le note si scrivono come preferisci: italiani (Do, Re, Mi: "La minore") o inglesi (C, D, E: "Am"). Di base seguono la lingua del programma; si cambia in Impostazioni, Generale, "Nomi degli accordi".</p>
+
+<h3>Le note degli stem</h3>
+<p>Dagli stem separati (vedi il prossimo capitolo) il programma può riconoscere le singole note suonate, per esempio quelle del basso o di una chitarra solista.</p>
+<ul>
+<li><kbd>Ctrl+Maiusc+N</kbd>: la nota che suona adesso nello stem scelto (o le note insieme, in un accordo);</li>
+<li><kbd>Alt+Maiusc+N</kbd>: la finestra Note.</li>
+</ul>
+<p>Nella finestra Note scegli lo stem nella casella in alto (per i file MIDI, il canale). Nell'elenco trovi ogni nota con il suo tempo e la sua ottava ("1:23,4 La 2"; Do 4 è il Do centrale): Invio porta il brano a quella nota. Il pulsante "Salva le note come MIDI..." salva le note in un file MIDI, nel tono che hai scelto.</p>
+
+<h2 id="stem">8. Gli stem: separare le parti di un brano</h2>
+
+<h3>Che cosa sono</h3>
+<p>Gli stem sono le parti di un brano separate: la voce, la batteria, il basso, la chitarra, il piano e il resto. Con gli stem puoi ascoltare solo la chitarra per capire cosa suona, oppure togliere la chitarra e suonarci sopra tu, con tutto il resto del gruppo.</p>
+
+<h3>Il motore stem</h3>
+<p>La separazione la fa il motore stem, che non è incluso in Studio Player perché è grande: si scarica solo se lo vuoi, da Impostazioni, Stem, "Installa il motore stem...". Scarica dalle fonti ufficiali Python, PyTorch e la libreria che separa, e resta nella cartella Stem del programma. Con una scheda video NVIDIA il motore la usa ed è molto più veloce; altrimenti lavora con il processore. I modelli di separazione si scaricano la prima volta che servono.</p>
+<p>Dalla stessa pagina puoi reinstallarlo o toglierlo.</p>
+
+<h3>Separare un brano</h3>
+<p><kbd>Ctrl+E</kbd> separa il brano che suona o, se nessuno suona, quello scelto nella lista. Si apre una finestra dove scegli:</p>
+<ul>
+<li><strong>Cosa ti serve</strong>:
+<ul>
+<li>tutte le parti: voce, batteria, basso, chitarra, piano e il resto;</li>
+<li>voce e base;</li>
+<li>voce solista, cori e base;</li>
+<li>chitarra, e la base senza chitarra per suonarci sopra;</li>
+<li>basso, e la base senza basso;</li>
+<li>batteria nei suoi pezzi (cassa, rullante, tom, charleston, ride, crash), e la base senza batteria.</li>
+</ul></li>
+<li><strong>Qualità</strong>: Veloce, Alta o Massima (più modelli uno dopo l'altro). Accanto a ogni qualità c'è quanto ci vorrà su questo computer: il programma lo impara dalle separazioni che fa. Se una qualità deve ancora scaricare i suoi modelli, te lo dice.</li>
+<li><strong>Togli il riverbero dalla voce</strong>, quando c'è una voce.</li>
+<li><strong>Otterrai</strong>: l'elenco degli stem che avrai.</li>
+</ul>
+<p>Premi Separa. La separazione va in sottofondo: puoi continuare ad ascoltare e studiare. <kbd>Ctrl+Maiusc+E</kbd> dice a che punto è; dal menu Studio, Stem, la puoi annullare. Se chiedi altre separazioni mentre una lavora, vanno in coda.</p>
+<p>Gli stem si salvano nella cartella Dati\Stem, in una cartella con il nome del brano e della separazione. Il programma riconosce il brano dal suo contenuto, non dal nome: se copi Dati\Stem in un altro Studio Player, gli stem funzionano anche lì.</p>
+
+<h3>Ascoltare gli stem: le versioni</h3>
+<p>Ogni separazione è una <strong>versione</strong> del brano. <kbd>Alt+Maiusc+E</kbd> passa da una versione all'altra: l'originale e le versioni separate. Il brano riparte dal punto in cui eri, con velocità, tono e loop di prima.</p>
+<p>Con una versione separata:</p>
+<ul>
+<li><kbd>Alt+1</kbd> fino a <kbd>Alt+8</kbd>: lo stem con quel numero muto o attivo;</li>
+<li><kbd>Alt+Maiusc+1</kbd> fino a <kbd>Alt+Maiusc+8</kbd>: lo stem in solo, o tolto dal solo;</li>
+<li><kbd>Alt+0</kbd>: tutti gli stem attivi, niente muti né solo.</li>
+</ul>
+
+<h3>Il mixer</h3>
+<p><kbd>Ctrl+Maiusc+X</kbd> apre il mixer: una riga per ogni stem, e in fondo il volume generale.</p>
+<ul>
+<li><kbd>Freccia destra</kbd> e <kbd>Freccia sinistra</kbd>: lo stem dopo e quello prima;</li>
+<li><kbd>Freccia su</kbd> e <kbd>Freccia giù</kbd>: il volume dello stem (sull'ultima riga, il volume generale);</li>
+<li><kbd>Ctrl+Freccia destra</kbd> e <kbd>Ctrl+Freccia sinistra</kbd>: sposta lo stem a destra o a sinistra;</li>
+<li><kbd>M</kbd>: muto; <kbd>S</kbd>: solo;</li>
+<li><kbd>Inizio</kbd> e <kbd>Fine</kbd>: il primo stem e il volume generale.</li>
+</ul>
+<p>Ogni versione ricorda il suo mixer. Le parti separate, rimesse insieme, suonano allo stesso volume del brano originale.</p>
+
+<h2 id="midi">9. I file MIDI</h2>
+
+<h3>I banchi di suoni</h3>
+<p>Un file MIDI non contiene suoni, ma le note: per sentirlo serve un banco di suoni (SoundFont, file SF2 o SF3). In Impostazioni, MIDI:</p>
+<ul>
+<li><strong>Banchi consigliati</strong>: banchi gratuiti di buona qualità, da scaricare con un pulsante, o con la pagina ufficiale da aprire;</li>
+<li><strong>Aggiungi un banco...</strong>: un banco tuo, anche uno comprato;</li>
+<li><strong>Banco SoundFont in uso</strong>: quello con cui suonano i MIDI;</li>
+<li><strong>Qualità del suono</strong>: massima, alta o normale (più leggera per i computer meno potenti);</li>
+<li>riverbero e chorus del sintetizzatore.</li>
+</ul>
+<p>I banchi scaricati stanno in Dati\SoundFont. Il banco si prepara in sottofondo all'avvio del programma, così il primo MIDI parte subito.</p>
+
+<h3>Ascoltare e studiare un MIDI</h3>
+<p>Un MIDI si usa come un brano qualsiasi: velocità, tono, loop, marcatori e metronomo funzionano allo stesso modo. Velocità e tono sono perfetti, perché cambiano le note e non il suono; la batteria non cambia tono.</p>
+<p>Ogni canale del file è come uno stem: nel mixer (<kbd>Ctrl+Maiusc+X</kbd>) trovi i canali con il nome della famiglia di strumenti, e li regoli come gli stem. Nel mixer, <kbd>I</kbd> cambia lo strumento del canale: scegli un banco qualsiasi tra quelli che hai e uno strumento, oppure "Strumento del file" per tornare a quello originale. Le scelte si ricordano per ogni brano.</p>
+
+<h3>Karaoke</h3>
+<p>Nei file KAR, e nei MIDI con il testo, <kbd>Ctrl+K</kbd> accende o spegne la lettura del testo: lo screen reader dice ogni riga quando comincia.</p>
+
+<h3>Esportare in audio</h3>
+<p>Anche un MIDI si esporta con <kbd>Ctrl+Maiusc+W</kbd>, come lo stai ascoltando: con il banco, gli strumenti e il mixer dei canali. Vedi "Esportare il brano come lo senti", nella sezione dell'audio.</p>
+
+<h2 id="audio">10. L'audio: volume uguale, equalizzatore ed effetti</h2>
+
+<p><kbd>Alt+Maiusc+Q</kbd> apre la finestra Audio. A sinistra c'è l'elenco delle sezioni, a destra i controlli della sezione scelta. Tutto quello che cambi si sente subito.</p>
+<p><kbd>Ctrl+Maiusc+Q</kbd>, Confronto prima e dopo, spegne e riaccende tutti gli effetti insieme: per sentire subito la differenza.</p>
+
+<h3>Volume uguale</h3>
+<p>"Porta tutti i brani allo stesso volume": ogni brano viene misurato (come fanno i servizi musicali, in LUFS) e portato al livello scelto: -14 LUFS come i servizi musicali, -16 un po' più piano, -18 con più respiro, -23 come la televisione. I brani più piani si alzano al massimo di 12 dB e un limitatore impedisce che il suono distorca. La misura si fa una volta, in sottofondo, e si ricorda. Il campo sotto dice quanto è forte il brano aperto e di quanto è stato alzato o abbassato. I MIDI non si misurano.</p>
+
+<h3>Equalizzatore</h3>
+<p>Un equalizzatore parametrico a 8 bande, come quelli degli studi, in quest'ordine:</p>
+<ul>
+<li><strong>Equalizzatore acceso</strong>;</li>
+<li><strong>Preset</strong>: neutro, chitarra in evidenza, basso in evidenza, voce in evidenza, meno basso (per suonarci sopra il basso), meno chitarra, più caldo, più brillante, altoparlanti piccoli, vecchia registrazione, e i preset che hai salvato tu;</li>
+<li><strong>Bande</strong>: le 8 bande, ognuna con la sua descrizione;</li>
+<li>per la banda scelta: <strong>Tipo</strong> (spenta, Low cut, Low shelf, Bell, High shelf, High cut), <strong>Frequenza</strong>, <strong>Guadagno</strong> (da -18 a +18 dB) e <strong>Larghezza</strong> (da strettissima a molto larga);</li>
+<li><strong>Ascolto</strong>: normale; "Esalta la banda", che alza molto la banda scelta per trovare a orecchio la frequenza che ti interessa; "Solo la banda", che fa sentire solo quella. Vale solo mentre la finestra è aperta;</li>
+<li><strong>Salva come preset...</strong> ed <strong>Elimina il preset</strong> (solo per i tuoi);</li>
+<li><strong>Solo per questo brano</strong>: il brano aperto ha un equalizzatore suo, che si ricorda; gli altri brani usano quello di tutti.</li>
+</ul>
+<p>Scegliere un preset o cambiare una banda accende l'equalizzatore da solo.</p>
+
+<h3>Stereo e canali</h3>
+<ul>
+<li><strong>Canali</strong>: stereo, mono, solo il sinistro, solo il destro, sinistro e destro scambiati. Utile con le registrazioni dove uno strumento è tutto da una parte.</li>
+<li><strong>Centro</strong> e <strong>Lati</strong>: alzano, abbassano o spengono quello che sta al centro (di solito voce, basso e cassa) e quello che sta ai lati (spesso chitarre e tastiere).</li>
+</ul>
+<p>Queste scelte non si ricordano: alla prossima apertura il suono torna normale.</p>
+
+<h3>Ascolto notturno</h3>
+<p>Un compressore che avvicina le parti piane e quelle forti: per ascoltare a volume basso senza perdere i passaggi delicati e senza sobbalzare nei pezzi forti. Leggero, medio o forte.</p>
+<p>L'ordine degli effetti è: equalizzatore, stereo e canali, volume uguale, ascolto notturno e, per ultimo, il limitatore.</p>
+
+<h3>Convertire i file</h3>
+<p><kbd>Alt+Maiusc+W</kbd> (Studio, Converti ed esporta, Converti file) apre il convertitore. La finestra parte vuota: i file li scegli tu, con "Aggiungi file..." e "Aggiungi cartella..." (tutti i brani della cartella, anche nelle sottocartelle). Dai video si prende l'audio. Nell'elenco, <kbd>Canc</kbd> toglie il file scelto dall'elenco: il file sul disco non si tocca.</p>
+<ul>
+<li><strong>Formato</strong>: MP3, AAC (M4A), Opus, Ogg Vorbis, FLAC, ALAC (Apple Lossless), WAV, AIFF, WavPack e WMA.</li>
+<li><strong>Qualità</strong>: per i formati compressi i kbps (per l'MP3 anche la qualità variabile); per quelli senza perdita 16 o 24 bit, oppure "come l'originale".</li>
+<li><strong>Frequenza</strong> e <strong>Canali</strong>: come l'originale, oppure 44,1, 48 o 96 kHz, stereo o mono.</li>
+<li><strong>Porta tutti i file allo stesso volume</strong>: come il volume uguale, al livello scelto nella finestra Audio, con il limitatore che impedisce al suono di distorcere.</li>
+<li><strong>Dove salvare</strong>: di base nella cartella <strong>Esportazioni</strong>, dentro quella di Studio Player (il programma resta tutto portatile); oppure nella cartella di ogni file, oppure in un'altra cartella che scegli tu.</li>
+<li><strong>Se il file c'è già</strong>: aggiungi un numero al nome, sostituiscilo o saltalo. Un file non viene mai scritto sopra quello da cui si legge.</li>
+</ul>
+<p>Titolo, artista, album e gli altri dati passano nel file nuovo, e anche la copertina in MP3, M4A e FLAC. Premi "Converti": la conversione va in sottofondo, un file alla volta, e a ogni file senti quale sta convertendo. Puoi chiudere la finestra e continuare a usare il programma; il pulsante diventa "Annulla la conversione". Alla fine ti dice quanti file ha fatto e ti propone di aprire la cartella. Le scelte si ricordano per la volta dopo.</p>
+
+<h3>Esportare il brano come lo senti</h3>
+<p><kbd>Ctrl+Maiusc+W</kbd> (Studio, Converti ed esporta, Esporta il brano come lo senti) salva in un file il brano aperto, così come lo stai ascoltando: la versione con gli stem e il mixer (volume, muto, solo e posizione di ogni stem), la velocità e il tono, gli effetti della finestra Audio e il volume uguale. Vale anche per i MIDI e per l'audio dei video (la traccia audio scelta). Nella finestra trovi, in quest'ordine:</p>
+<ul>
+<li><strong>Cosa esportare</strong>: tutto il brano; il loop, se hai messo i punti A e B; oppure il marcatore dove ti trovi, fino al marcatore successivo (o alla fine).</li>
+<li><strong>Come</strong> (solo con gli stem o con un MIDI): un file solo con il mix, oppure ogni stem che si sente in un file suo, con il suo volume e la sua posizione. Gli stem muti, o esclusi da un solo, non si esportano.</li>
+<li><strong>Con la velocità e il tono di adesso</strong> (solo se li hai cambiati): togli la spunta per esportare a velocità e tono normali.</li>
+<li><strong>Con gli effetti della finestra Audio e il volume uguale</strong> (solo se gli effetti sono accesi): togli la spunta per esportare senza.</li>
+<li><strong>Formato</strong> e <strong>Qualità</strong>: gli stessi del convertitore; di base FLAC.</li>
+<li><strong>Dove salvare</strong>: di base nella cartella <strong>Esportazioni</strong>, dentro quella di Studio Player; oppure nella cartella del brano, oppure in un'altra cartella che scegli tu.</li>
+</ul>
+<p>Il nome del file è quello del brano, con "loop", il nome del marcatore o il nome dello stem quando servono. Un file che c'è già non si sostituisce mai: il nuovo prende un numero. L'esportazione va in sottofondo e ti dice a che punto è ogni 25 per cento; alla fine ti propone di aprire la cartella. Per fermarla, premi di nuovo <kbd>Ctrl+Maiusc+W</kbd>. Formato, qualità, dove e le caselle si ricordano per la volta dopo.</p>
+
+<h2 id="video">11. Il video</h2>
+
+<h3>L'immagine nel lettore</h3>
+<p>Quando apri un video, l'immagine compare dentro la finestra del lettore, accanto ai controlli, senza finestre separate. <kbd>Alt+Invio</kbd> mette il video a schermo intero e lo toglie; anche <kbd>Esc</kbd> esce dallo schermo intero. Tutti i tasti continuano a funzionare.</p>
+<p>Velocità, tono, loop e spostamenti funzionano come per l'audio, e l'immagine li segue.</p>
+
+<h3>Traccia audio</h3>
+<p>Se il video ha più tracce audio (lingue diverse, audiodescrizione, commento), il menu Video, sottomenu Traccia audio, le elenca con la lingua: scegline una e il video riparte dal punto in cui eri. La scelta si ricorda per quel video. In Impostazioni, Video, puoi scegliere la lingua preferita dell'audio e se preferire la traccia con l'audiodescrizione.</p>
+
+<h3>Sottotitoli letti</h3>
+<p><kbd>Alt+Maiusc+S</kbd>: lo screen reader legge i sottotitoli mentre il video va avanti. Valgono i sottotitoli dentro il file (quelli di testo) e i file .srt o .vtt con lo stesso nome del video, nella stessa cartella (anche con la lingua nel nome, per esempio "Film.it.srt"). In Impostazioni, Video, scegli la lingua preferita dei sottotitoli.</p>
+
+<h3>Capitoli</h3>
+<p>Se il video ha i capitoli, la prima volta diventano marcatori: ti sposti tra i capitoli con <kbd>Ctrl+Freccia destra</kbd> e <kbd>Ctrl+Freccia sinistra</kbd>.</p>
+
+<h2 id="impostazioni">12. Le impostazioni del programma</h2>
+
+<p><kbd>Ctrl+virgola</kbd> apre le Impostazioni. A sinistra c'è l'elenco delle categorie: con le frecce scegli la categoria, con Tab entri nei suoi controlli. Le scelte valgono subito.</p>
+
+<h3>Generale</h3>
+<ul>
+<li><strong>Lingua</strong>: italiano, inglese, spagnolo, o come Windows. Vale alla chiusura della finestra.</li>
+<li><strong>Aspetto</strong>: moderno, con i colori di Studio Player, o classico di Windows. Con il contrasto elevato di Windows si usa sempre il classico.</li>
+<li><strong>Nomi degli accordi</strong>: come la lingua, italiani o inglesi.</li>
+<li><strong>Avvia insieme a Windows</strong>: Studio Player si apre da solo quando accendi il computer. Scrive solo una voce nel registro del tuo utente, che si toglie spegnendo la casella.</li>
+<li><strong>Se lo avvia Windows, aprilo ridotto</strong>: vale solo con la casella di prima accesa.</li>
+<li><strong>Avvia sempre ridotto</strong>.</li>
+<li><strong>Chiudendo la finestra, riducila invece di uscire</strong>: la X e Alt+F4 riducono la finestra e la musica continua; per uscire davvero usa File, Esci (<kbd>Ctrl+Q</kbd>).</li>
+<li><strong>Riduci nell'area di notifica invece che nella barra delle applicazioni</strong>: ridotto, Studio Player non ha più il pulsante sulla barra ma un'icona vicino all'orologio.</li>
+</ul>
+<p><strong>Controlla se ci sono aggiornamenti all'avvio</strong>: accesa di base (vedi "Gli aggiornamenti", nel primo capitolo).</p>
+<p>Sotto ci sono due pulsanti per la <strong>copia di sicurezza</strong>:</p>
+<ul>
+<li><strong>Salva una copia di sicurezza...</strong>: salva in un file solo, dove vuoi tu, le impostazioni, la memoria dei brani (marcatori, loop, mixer, velocità e tutto il resto), la lista e le scalette recenti. Gli stem e i banchi MIDI non ci sono, perché sono troppo grandi: per quelli copia la cartella Dati.</li>
+<li><strong>Ripristina da una copia di sicurezza...</strong>: rimette tutto come nella copia e riavvia Studio Player. Quello che avevi prima non si perde: resta in una copia "Prima del ripristino" nella cartella Dati, che puoi ripristinare a sua volta. Non si può fare mentre una separazione degli stem è in corso.</li>
+</ul>
+<p>L'icona nell'area di notifica dice il brano che suona. Invio, o il doppio clic, riporta su la finestra. Il suo menu (Applicazioni, o il clic destro) ha: Mostra Studio Player, Pausa e Ferma (o Riproduci, se nessun brano suona), Brano successivo e precedente, ed Esci. In Windows, l'area di notifica si raggiunge con <kbd>Windows+B</kbd>.</p>
+
+<h3>Riproduzione</h3>
+<ul>
+<li><strong>Dispositivo d'uscita della musica</strong>.</li>
+<li><strong>Modo d'uscita</strong>: Condiviso (consigliato), dove la scheda resta anche agli altri programmi e allo screen reader; oppure Esclusivo (bit-perfect), dove la scheda è tutta per Studio Player e riceve il brano identico al file. In esclusivo lo screen reader su quella scheda non parla mentre un brano suona: usalo con una scheda diversa da quella della sintesi vocale.</li>
+<li><strong>Pausa morbida</strong>: il suono sfuma quando metti in pausa e quando riprendi, invece di interrompersi di colpo. Le due sfumature si regolano a parte.</li>
+<li><strong>Ricorda velocità e tono di ogni brano</strong>, <strong>Ricorda se il loop era acceso</strong>, <strong>Riprendi ogni brano dal punto in cui l'avevi lasciato</strong>.</li>
+</ul>
+
+<h3>Scaletta</h3>
+<ul>
+<li><strong>Brani aperti da Windows</strong>: sostituiscono la lista o si aggiungono.</li>
+<li><strong>All'avvio del programma</strong>: riprende l'ultima lista o parte con la lista vuota.</li>
+<li><strong>Quando finisce un brano</strong>: si ferma e resta nel lettore; si ferma e torna alla lista; passa al brano dopo; ricomincia lo stesso brano.</li>
+<li><strong>Tornando alla lista, vai</strong>: sullo stesso brano o sul brano dopo.</li>
+<li><strong>Quando finisce la scaletta</strong>: si ferma e resta nel lettore; si ferma e torna alla lista sul primo brano; ricomincia dal primo.</li>
+<li><strong>Pausa tra un brano e l'altro</strong>: nessuna, o qualche secondo.</li>
+<li><strong>Salta il silenzio all'inizio e alla fine dei brani</strong>.</li>
+<li><strong>A 10 secondi dalla fine, dimmi il brano dopo</strong>.</li>
+<li><strong>Mostra la durata nella riga del brano</strong>.</li>
+<li><strong>Una scaletta riaperta riprende dal brano a cui eri arrivato</strong>.</li>
+</ul>
+<p>Ripeti (<kbd>Ctrl+R</kbd>) e queste scelte vanno d'accordo: ripetere il brano o la scaletta vale sopra a quello che è scelto qui.</p>
+
+<h3>Stem</h3>
+<p>Lo stato del motore stem, i pulsanti per installarlo, reinstallarlo o toglierlo, e una nota su come funziona.</p>
+
+<h3>MIDI</h3>
+<p>Il banco in uso, la qualità del suono, riverbero e chorus, aggiungere e togliere banchi, e i banchi consigliati da scaricare.</p>
+
+<h3>Video</h3>
+<ul>
+<li><strong>Mostra l'immagine dei video</strong>.</li>
+<li><strong>I video partono a schermo intero</strong>.</li>
+<li><strong>Mentre suona un video lo schermo resta acceso</strong>.</li>
+<li><strong>Preferisci la traccia con l'audiodescrizione</strong> e <strong>Lingua preferita dell'audio</strong>.</li>
+<li><strong>Leggi i sottotitoli con lo screen reader</strong> e <strong>Lingua preferita dei sottotitoli</strong>.</li>
+<li><strong>I capitoli del file diventano marcatori</strong>.</li>
+</ul>
+
+<h3>Integrazione con Windows</h3>
+<p>Ogni casella dice se quella parte è attiva in Windows, e la attiva o la toglie subito:</p>
+<ul>
+<li><strong>Icona sul desktop</strong>;</li>
+<li><strong>Studio Player in "Apri con" e tra i programmi predefiniti</strong>;</li>
+<li><strong>Voci nel menu dei file audio e video</strong> (Maiusc+F10): Riproduci con Studio Player, Aggiungi alla lista di Studio Player;</li>
+<li><strong>Voce nel menu delle cartelle</strong> (Maiusc+F10): Riproduci la cartella con Studio Player.</li>
+</ul>
+<p>Il pulsante "Scegli Studio Player come programma predefinito..." apre la pagina di Windows dove sceglierlo: Windows non permette a nessun programma di diventare predefinito da solo. "Togli tutte le integrazioni..." toglie tutto, anche l'icona. Studio Player scrive solo nel registro del tuo utente, senza permessi da amministratore. Se sposti la cartella del programma, le integrazioni attive si aggiornano da sole al primo avvio.</p>
+<p>Nel menu nuovo di Windows 11 le voci di Studio Player sono in "Mostra altre opzioni"; "Apri con" c'è anche nel menu nuovo.</p>
+
+<h3>Annunci</h3>
+<p>Per ogni cosa che il programma ti dice (brano avviato, pausa, spostamenti, volume, loop, marcatori, stem...) scegli come avvisarti: con la voce, con la voce e un suono, solo con un suono, o per niente. Nell'elenco, Spazio cambia il modo della voce scelta e Invio fa sentire il suono. Il pulsante "Ascolta i suoni" li fa sentire tutti.</p>
+
+<h3>Suoni</h3>
+<p>Il dispositivo e il volume dei suoni del programma: a ogni scelta senti un suono di prova.</p>
+
+<h3>Tastiera</h3>
+<p>Tutti i comandi con le loro scorciatoie, divisi per menu. Invio (o il pulsante "Cambia scorciatoia...") cambia la scorciatoia del comando scelto: premi la combinazione nuova. Canc la toglie. Sulle scorciatoie globali lo Spazio le spegne e le riaccende. Puoi tornare a quella di base di un comando o di tutti. Se una combinazione non si può usare (perché la usa Windows, o perché serve per muoversi), il programma ti dice perché.</p>
+
+<h2 id="problemi">13. Problemi e domande frequenti</h2>
+
+<h3>Lo screen reader non parla mentre suona un brano</h3>
+<p>Probabilmente il modo d'uscita è Esclusivo e la musica esce dalla stessa scheda della sintesi vocale. Torna al modo Condiviso in Impostazioni, Riproduzione, oppure scegli per la musica una scheda diversa.</p>
+
+<h3>Il modo esclusivo non funziona</h3>
+<p>Alcune schede hanno il modo esclusivo spento in Windows: il programma te lo dice e ti spiega dove accenderlo (nelle proprietà avanzate del dispositivo, in Impostazioni audio di Windows). Se la scheda è occupata da un altro programma, Studio Player usa il condiviso.</p>
+
+<h3>Ho scollegato le cuffie o la scheda audio</h3>
+<p>Il brano si ferma e il programma riprova da solo per un minuto: appena la scheda torna, riprende dal punto in cui eri.</p>
+
+<h3>Gli accordi o le note non partono</h3>
+<p>Per i file audio servono il motore stem e, per le note, uno stem separato. Installa il motore da Impostazioni, Stem. Per i MIDI non serve niente.</p>
+
+<h3>La separazione degli stem è lenta</h3>
+<p>Dipende dal computer: con il processore una separazione di qualità Massima può durare più del brano stesso, con una scheda NVIDIA è molto più veloce. La finestra di Ctrl+E ti dice prima quanto ci vorrà. Puoi continuare a usare il programma mentre separa.</p>
+
+<h3>Un MIDI non suona</h3>
+<p>Serve un banco di suoni: scaricane uno da Impostazioni, MIDI, Banchi consigliati, oppure aggiungi il tuo.</p>
+
+<h3>Il metronomo con "Segui il brano" va fuori tempo</h3>
+<p>Correggi i colpi con <kbd>Ctrl+-</kbd> e <kbd>Ctrl++</kbd>. Se il tempo trovato è il doppio, la metà o un tempo di 3 su 2, sceglilo giusto nella finestra Metronomo, categoria Sul brano. Le scelte si ricordano per quel brano.</p>
+
+<h3>Ho perso marcatori, loop o stem</h3>
+<p>Sono tutti nella cartella Dati del programma: se hai usato un'altra copia di Studio Player, sono nella sua cartella Dati. Puoi copiarli da una copia all'altra.</p>
+
+<h3>Per contattarmi</h3>
+<p>Dal menu Aiuto, "Contattami...": scegli il tipo di messaggio (segnalazione di un problema, suggerimento, complimento, altro), scrivi un breve testo e si apre un'email già pronta nel tuo programma di posta, con la versione del programma. Se non hai un programma di posta, ti mostra il testo da copiare e l'indirizzo. Nel menu Aiuto trovi anche il gruppo Telegram "L'angolo di HDX", dove si parla di tutti i programmi, e la pagina per una donazione.</p>
+
+</body>
+</html>

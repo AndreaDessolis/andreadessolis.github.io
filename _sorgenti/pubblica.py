@@ -156,15 +156,16 @@ def repository_esiste(repository):
 
 
 def crea_repository(p):
-    """Il repository di sole release di un'add-on, la prima volta che si pubblica:
-    pubblico, con un README che rimanda al sito (come quelli dei programmi)."""
+    """Il repository di sole release di un programma o di un'add-on, la prima volta che si
+    pubblica: pubblico, con un README che rimanda al sito (come quelli che ci sono gia')."""
     pagina = genera.DOMINIO + p['pagina']
+    cosa_it, cosa_en = ('Add-on per NVDA', 'NVDA add-on') if e_addon(p) else ('Programma per Windows', 'Windows program')
     readme = (f'# {nome(p, "it")} / {nome(p, "en")}\n\n'
-              f'Add-on per NVDA. Download, guida e novità: {pagina}\n\n'
-              f'NVDA add-on. Download, guide and what\'s new: {genera.DOMINIO}en/{p["pagina"]}\n')
+              f'{cosa_it}. Download, guida e novità: {pagina}\n\n'
+              f'{cosa_en}. Download, guide and what\'s new: {genera.DOMINIO}en/{p["pagina"]}\n')
     repo = f'{PROPRIETARIO}/{p["repository"]}'
     esegui('gh', 'repo', 'create', repo, '--public', '--description',
-           f'{nome(p, "en")} — NVDA add-on (releases only)', '--homepage', pagina)
+           f'{nome(p, "en")} — {cosa_en} (releases only)', '--homepage', pagina)
     # Una release ha bisogno di un primo commit: il README.
     esegui('gh', 'api', f'repos/{repo}/contents/README.md', '-X', 'PUT', '-f', 'message=README',
            '-f', 'content=' + base64.b64encode(readme.encode('utf-8')).decode('ascii'))
@@ -238,8 +239,6 @@ def pubblica(id_programma, setup, prova):
 
         esegui('git', 'pull', '--quiet', cartella=RADICE)
         if not repository_esiste(p['repository']):
-            if not e_addon(p):
-                raise SystemExit(f'Manca il repository {p["repository"]}')
             crea_repository(p)
         precedenti = release(p['repository'])
         repo = f'{PROPRIETARIO}/{p["repository"]}'

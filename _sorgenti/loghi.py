@@ -28,4 +28,7 @@ if __name__ == '__main__':
     # Tube Player: anche lui con disegna().
     carica('Tube Player').disegna().resize((256, 256), Image.LANCZOS).save(
         os.path.join(QUI, 'immagini', 'tube-player.png'))
+    # Studio Player: anche lui con disegna().
+    carica('Studio Player').disegna().resize((256, 256), Image.LANCZOS).save(
+        os.path.join(QUI, 'immagini', 'studio-player.png'))
     print('Fatto')

@@ -73,5 +73,9 @@
     "versioni_tolte": {
       "v1.2.0": 5
     }
+  },
+  "studio-player": {
+    "storico": 0,
+    "versioni_tolte": {}
   }
 }
