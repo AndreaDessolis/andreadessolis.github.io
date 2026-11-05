@@ -336,9 +336,34 @@ h2 { margin-top: 2em; }
 <li><strong>Dimmi gli accordi mentre suona</strong>: lo screen reader dice ogni accordo nuovo mentre il brano va avanti.</li>
 </ul>
 <p><kbd>Alt+Maiusc+T</kbd> dice la tonalità del punto in cui sei, senza aprire la finestra.</p>
+<p>In fondo alle tonalità trovi anche il <strong>capotasto consigliato</strong>, per chi suona la chitarra: il capotasto con cui gli accordi del brano diventano le forme più comode, per esempio "Capotasto consigliato al tasto 3: suoni con le forme di Sol maggiore, Do maggiore, Re maggiore, Mi minore". Se senza capotasto le forme sono già le più comode, te lo dice. Segue il tono che hai scelto.</p>
+
+<h3>Le diteggiature per la chitarra</h3>
+<p>Per ogni accordo il programma ti dice come si suona sulla chitarra, in accordatura standard, corda per corda dalla sesta (il Mi basso) alla prima: se la corda non si suona, se è a vuoto, oppure il tasto e il dito; quando c'è un barrè, prima il tasto, il dito e da quale corda a quale. Per esempio: "La minore. Posizione 1: sesta: non suonata; quinta: a vuoto; quarta: tasto 2, medio; terza: tasto 2, anulare; seconda: tasto 1, indice; prima: a vuoto".</p>
+<ul>
+<li><kbd>Ctrl+Maiusc+D</kbd>: la diteggiatura dell'accordo che suona adesso, nella posizione più facile. Se lo ripremi entro qualche secondo sullo stesso accordo, senti la posizione dopo, più in alto sul manico.</li>
+<li>Nella finestra Accordi, <kbd>D</kbd> su un accordo dell'elenco: la sua diteggiatura (ripremendo, la posizione dopo).</li>
+</ul>
+<p>Le dita si possono dire con i nomi (indice, medio, anulare, mignolo) o con i numeri (1, 2, 3, 4): si sceglie in Impostazioni, Accordi e scale.</p>
+<p>Le diteggiature vengono da una raccolta libera di accordi per chitarra (chords-db); il programma le ha controllate una per una e ha tolto quelle con le note sbagliate. Se un accordo nella raccolta c'è solo senza il basso indicato nel nome, il programma te lo dice.</p>
+
+<h3>Il dizionario degli accordi e delle scale</h3>
+<p><kbd>Alt+Maiusc+D</kbd> (Studio, Accordi, Dizionario degli accordi e delle scale) apre il dizionario. Se il brano suona, parte dall'accordo che senti. Nella finestra trovi, in quest'ordine:</p>
+<ul>
+<li><strong>Cosa cercare</strong>: accordi o scale;</li>
+<li><strong>Nota</strong>: la nota su cui è costruito l'accordo o la scala;</li>
+<li><strong>Tipo</strong>: per gli accordi maggiore, minore, settima, settima maggiore, minore settima, sus, nona, con il basso in un'altra nota e tutti gli altri che la raccolta ha per quella nota; per le scale maggiore, minore naturale, armonica e melodica, pentatonica maggiore e minore, blues, blues maggiore e i modi (dorico, frigio, lidio, misolidio, locrio);</li>
+<li><strong>Le note</strong> dell'accordo o della scala;</li>
+<li><strong>Posizioni sul manico</strong>: un albero. Ogni posizione è chiusa: Freccia destra la apre e dentro trovi una voce per il barrè (se c'è) e una per ogni corda, dalla sesta alla prima, che leggi una alla volta con Freccia su e giù; Freccia sinistra la richiude. Per un accordo ogni corda dice se è non suonata, a vuoto, nel barrè, oppure il tasto e il dito. Per una scala le posizioni sono quelle che si studiano (due note per corda nelle pentatoniche, i "box", e tre note per corda nelle scale di sette note), con il tasto, la nota e il dito, e "tonica" sulla nota che dà il nome alla scala; una corda con tre note si apre a sua volta, con una nota per voce;</li>
+<li><strong>Ascolta</strong> e <strong>Una nota alla volta</strong> (per le scale: <strong>Salendo e scendendo</strong>).</li>
+</ul>
+<p>Nell'albero, <kbd>Invio</kbd> ti fa sentire la voce su cui sei: su una posizione l'accordo pennato come su una chitarra (o la scala che sale), su una corda la sua nota (o le sue note), su una nota solo quella; lo <kbd>Spazio</kbd> fa sentire una nota alla volta (o la scala che sale e scende). Così puoi controllare corda per corda mentre cerchi l'accordo sulla chitarra. Per ascoltare serve un banco di suoni (Impostazioni, MIDI); il suono esce dal dispositivo dei suoni del programma (Impostazioni, Suoni). Le scelte restano finché il programma è aperto.</p>
+
+<h3>Il prossimo accordo in anticipo</h3>
+<p>In Impostazioni, Accordi e scale, "Il prossimo accordo in anticipo" fa dire il prossimo accordo poco prima che arrivi: da uno a quattro battiti prima, così hai il tempo di preparare la mano. Il programma usa i battiti del brano, se li conosce; altrimenti il suo tempo. Funziona con i brani di cui gli accordi sono già stati trovati. Come gli altri annunci, in Impostazioni, Annunci, "Accordi: il prossimo accordo in anticipo" si sceglie a voce, con un suono (tre note morbide, come una pennata), con tutti e due o spento. Se hai acceso anche "Dimmi gli accordi mentre suona", un accordo già detto in anticipo non si ripete quando arriva.</p>
 
 <h3>I nomi</h3>
-<p>Gli accordi e le note si scrivono come preferisci: italiani (Do, Re, Mi: "La minore") o inglesi (C, D, E: "Am"). Di base seguono la lingua del programma; si cambia in Impostazioni, Generale, "Nomi degli accordi".</p>
+<p>Gli accordi e le note si scrivono come preferisci: italiani (Do, Re, Mi: "La minore") o inglesi (C, D, E: "Am"). Di base seguono la lingua del programma; si cambia in Impostazioni, Accordi e scale, "Nomi degli accordi e delle note".</p>
 
 <h3>Le note degli stem</h3>
 <p>Dagli stem separati (vedi il prossimo capitolo) il programma può riconoscere le singole note suonate, per esempio quelle del basso o di una chitarra solista.</p>
@@ -498,7 +523,6 @@ h2 { margin-top: 2em; }
 <ul>
 <li><strong>Lingua</strong>: italiano, inglese, spagnolo, o come Windows. Vale alla chiusura della finestra.</li>
 <li><strong>Aspetto</strong>: moderno, con i colori di Studio Player, o classico di Windows. Con il contrasto elevato di Windows si usa sempre il classico.</li>
-<li><strong>Nomi degli accordi</strong>: come la lingua, italiani o inglesi.</li>
 <li><strong>Avvia insieme a Windows</strong>: Studio Player si apre da solo quando accendi il computer. Scrive solo una voce nel registro del tuo utente, che si toglie spegnendo la casella.</li>
 <li><strong>Se lo avvia Windows, aprilo ridotto</strong>: vale solo con la casella di prima accesa.</li>
 <li><strong>Avvia sempre ridotto</strong>.</li>
@@ -535,6 +559,13 @@ h2 { margin-top: 2em; }
 <li><strong>Una scaletta riaperta riprende dal brano a cui eri arrivato</strong>.</li>
 </ul>
 <p>Ripeti (<kbd>Ctrl+R</kbd>) e queste scelte vanno d'accordo: ripetere il brano o la scaletta vale sopra a quello che è scelto qui.</p>
+
+<h3>Accordi e scale</h3>
+<ul>
+<li><strong>Nomi degli accordi e delle note</strong>: come la lingua del programma, italiani (Do, Re, Mi) o inglesi (C, D, E).</li>
+<li><strong>Le dita nelle diteggiature</strong>: con i nomi (indice, medio, anulare, mignolo) o con i numeri (1, 2, 3, 4).</li>
+<li><strong>Il prossimo accordo in anticipo</strong>: spento, oppure da uno a quattro battiti prima (vedi il capitolo sugli accordi).</li>
+</ul>
 
 <h3>Stem</h3>
 <p>Lo stato del motore stem, i pulsanti per installarlo, reinstallarlo o toglierlo, e una nota su come funziona.</p>
