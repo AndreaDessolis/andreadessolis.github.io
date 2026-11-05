@@ -234,6 +234,9 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Alt+Pagina su</kbd> / <kbd>Alt+Pagina giù</kbd></td><td>Più veloce o più lento</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+N</kbd></td><td>Velocità normale</td></tr>
 <tr><td><kbd>Ctrl+T</kbd></td><td>Dice il tempo trascorso e la durata (e il capitolo)</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+T</kbd></td><td>Timer di spegnimento: la durata dopo (vedi <a href="#timer">il timer di spegnimento</a>)</td></tr>
+<tr><td><kbd>Alt+Maiusc+T</kbd></td><td>Quanto manca al timer; due volte di fila, 15 minuti in più</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+Z</kbd></td><td>Modalità notte accesa o spenta (vedi <a href="#notte">la modalità notte</a>)</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+Pagina giù</kbd> / <kbd>Ctrl+Maiusc+Pagina su</kbd></td><td>Capitolo successivo / precedente</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+V</kbd></td><td>Mostra o nascondi le immagini</td></tr>
 <tr><td><kbd>F11</kbd></td><td>Schermo intero sì o no (accende le immagini se sono spente)</td></tr>
@@ -241,6 +244,28 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Ctrl+R</kbd></td><td>Mostra il lettore</td></tr>
 </table>
 <p>Volume e velocità restano quelli scelti anche per i video dopo.</p>
+
+<h3 id="timer">Il timer di spegnimento</h3>
+<p>Per addormentarsi ascoltando: il video si ferma da solo dopo il tempo che scegli. <kbd>Ctrl+Maiusc+T</kbd> (menu Riproduzione, Timer di spegnimento) a ogni pressione passa alla durata dopo, e la dice: 15, 30, 45, 60, 90 minuti, "alla fine del video", "dopo 3 video" (il numero si sceglie nelle Impostazioni), poi "Timer: spento". Il timer parte da quando lo scegli; vale anche senza un video aperto e anche con il video in pausa.</p>
+<ul>
+<li><kbd>Alt+Maiusc+T</kbd> (menu Riproduzione, Quanto manca al timer) dice quanto manca: "Timer: 12 minuti". Premuto due volte di fila aggiunge 15 minuti (con il timer a video, un video in più; con il timer spento, lo accende a 15 minuti).</li>
+<li>Con il timer a video contano i video che arrivano in fondo, anche nella riproduzione continua: all'ultimo la riproduzione si ferma.</li>
+<li>Nell'ultimo minuto il volume scende piano fino al silenzio; il volume scelto non cambia e il video dopo riparte con quello.</li>
+<li>Qualche minuto prima della fine (5, di partenza) senti "Il timer finisce tra 5 minuti": se sei ancora sveglio, <kbd>Alt+Maiusc+T</kbd> due volte e hai 15 minuti in più.</li>
+</ul>
+<p>Alla fine il video si ferma; se lo scegli nelle Impostazioni, categoria Timer di spegnimento, Tube Player si chiude o il computer va in sospensione. Con dei download in corso il video si ferma soltanto, per non interromperli.</p>
+
+<h3 id="notte">La modalità notte</h3>
+<p><kbd>Ctrl+Maiusc+Z</kbd> (menu Riproduzione, Modalità notte) la accende e la spegne: "Modalità notte: accesa". Fa soltanto le cose che scegli nelle Impostazioni, categoria Notte; di partenza:</p>
+<ul>
+<li>il volume dei video non va oltre 40 (se era più alto, si abbassa);</li>
+<li>il volume uniforme tra un video e l'altro;</li>
+<li>la compressione della voce: le parti forti (musica alta, esplosioni) si abbassano e le voci basse si alzano;</li>
+<li>i suoni del programma più bassi (30%);</li>
+<li>niente avviso dei video nuovi all'avvio.</li>
+</ul>
+<p>Si possono scegliere anche: solo l'audio, senza le immagini, e un timer di spegnimento che parte da solo. Spegnendo la modalità notte torna tutto com'era: il volume e le immagini di prima, i suoni, il volume uniforme se di giorno è spento. Se chiudi Tube Player con la modalità notte accesa, alla riapertura è ancora accesa.</p>
+<p>Può anche accendersi da sola nelle ore che scegli, per esempio dalle 23:00 alle 7:00: entrando in quelle ore si accende, uscendone si spegne. Se la spegni o la accendi a mano nel frattempo, resta così fino al prossimo passaggio.</p>
 
 <h2 id="continua">5. La riproduzione continua</h2>
 <p><kbd>Ctrl+Invio</kbd> su un video (menu Riproduzione, Riproduci tutto da qui) fa partire quel video e poi, uno dopo l'altro, tutti i video che lo seguono nell'elenco: i risultati di una ricerca, i video di un canale, una playlist intera o una raccolta. Quando servono, i risultati seguenti si chiedono da soli.</p>
@@ -453,6 +478,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <ul>
 <li><strong>Lingua</strong>: come Windows, italiano, inglese o spagnolo.</li>
 <li><strong>Lingua dei contenuti di YouTube</strong>: in che lingua chiedere a YouTube titoli e descrizioni dei video, e i risultati delle ricerche. Di partenza è "Come il programma"; si può scegliere anche italiano, inglese, spagnolo, francese, tedesco o portoghese. Molti canali hanno i titoli tradotti in altre lingue: con questa scelta li ricevi nella lingua che vuoi (anche nei nomi dei file scaricati). Cambia anche l'ordine dei risultati, che diventa quello che YouTube dà a chi parla quella lingua. Vale alla chiusura delle Impostazioni.</li>
+<li><strong>Aspetto</strong>: <strong>Moderno, con i colori di Tube Player</strong> (la scelta di partenza: il blu notte e il bianco del logo, i pulsanti petrolio e il corallo del tasto play per la riga scelta, le barre, le caselle spuntate e il pulsante Pausa del lettore) oppure <strong>Classico di Windows</strong>. Vale subito su tutte le finestre aperte. Cambia solo come si vede: per lo screen reader i controlli restano gli stessi, con gli stessi nomi e lo stesso ordine del Tab. Con il contrasto elevato di Windows l'aspetto resta sempre quello classico.</li>
 <li><strong>Icona sul desktop</strong>: spuntandola compare subito l'icona di Tube Player sul desktop; togliendo la spunta l'icona va via.</li>
 <li><strong>Controlla gli aggiornamenti del programma all'avvio</strong>: vedi <a href="#aiuto">il menu Aiuto e gli aggiornamenti</a>.</li>
 <li><strong>All'avvio avvisa dei video nuovi dei canali seguiti</strong>: vedi <a href="#seguiti">i canali seguiti</a>.</li>
@@ -480,6 +506,19 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 
 <h3>Download</h3>
 <p>Ogni quanto annunciare l'avanzamento dei download e la cartella predefinita, con il pulsante <strong>Usa la cartella Scaricati di Tube Player</strong> per tornare a quella di partenza.</p>
+
+<h3>Notte</h3>
+<p>Le scelte della <a href="#notte">modalità notte</a>: se accenderla da sola e da che ora a che ora; quando è accesa, il volume massimo dei video (nessun limite, oppure da 80 a 10), il volume uniforme, la compressione della voce, solo l'audio, il volume dei suoni del programma (come di giorno, oppure da 50% a 10%), niente avviso dei video nuovi all'avvio, e il timer di spegnimento che parte da solo (nessuno, i minuti, alla fine del video o dopo alcuni video).</p>
+
+<h3>Timer di spegnimento</h3>
+<p>Le scelte del <a href="#timer">timer di spegnimento</a>:</p>
+<ul>
+<li><strong>Alla fine del timer di spegnimento</strong>: ferma il video (di partenza), ferma il video e chiudi Tube Player, oppure ferma il video e metti il computer in sospensione.</li>
+<li><strong>Avviso prima della fine</strong>: nessuno, oppure da 1 a 15 minuti prima (di partenza 5).</li>
+<li><strong>Quanti video per "dopo alcuni video"</strong>: da 2 a 10 (di partenza 3).</li>
+<li><strong>Abbassa piano il volume nell'ultimo minuto</strong>: accesa di partenza.</li>
+<li><strong>Il computer non va in sospensione finché il timer va</strong>: accesa di partenza; così il computer non si addormenta prima del timer.</li>
+</ul>
 
 <h3>Annunci</h3>
 <p>Un albero con i gruppi (Riproduzione, Ricerca, Download, Programma) e, dentro, ogni cosa che il programma ti può dire. Su ognuna <kbd>Spazio</kbd> cambia come avvisarti: voce, voce e suono, solo suono, spento. <kbd>Invio</kbd> (o il pulsante Ascolta i suoni) ti fa sentire il suono. Su un gruppo, <kbd>Spazio</kbd> cambia tutti i suoi annunci insieme.</p>
@@ -590,6 +629,9 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Alt+Pagina su</kbd> / <kbd>Alt+Pagina giù</kbd></td><td>Più veloce / più lento</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+N</kbd></td><td>Velocità normale</td></tr>
 <tr><td><kbd>Ctrl+T</kbd></td><td>Annuncia il tempo trascorso e la durata (e il capitolo)</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+T</kbd></td><td>Timer di spegnimento: la durata dopo</td></tr>
+<tr><td><kbd>Alt+Maiusc+T</kbd></td><td>Quanto manca al timer (due volte di fila: 15 minuti in più)</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+Z</kbd></td><td>Modalità notte accesa o spenta</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+V</kbd></td><td>Mostra o nascondi le immagini</td></tr>
 <tr><td><kbd>F11</kbd></td><td>Schermo intero sì o no (accende le immagini se sono spente)</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+L</kbd></td><td>Leggi i sottotitoli mentre il video va, sì o no</td></tr>
