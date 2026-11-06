@@ -38,6 +38,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><a href="#aiuto">Il menu Aiuto e gli aggiornamenti</a></li>
 <li><a href="#scorciatoie">Tutte le scorciatoie</a></li>
 <li><a href="#problemi">Problemi e domande</a></li>
+<li><a href="#ia">L'intelligenza artificiale</a></li>
 </ol>
 
 <h2 id="cominciare">1. Cos'è Tube Player e come si comincia</h2>
@@ -170,7 +171,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>In riproduzione</strong>: un testo da leggere riga per riga, con titolo, canale e stato (in riproduzione, in pausa, caricamento...); se l'audio è doppiato, in che lingua ("Audio doppiato: Italiano"); nella riproduzione continua dice anche "Video 3 di 20".</li>
 <li><strong>Posizione</strong>: la barra del tempo, che dice per esempio "2:15 di 10:30". <kbd>Freccia destra</kbd>: 5 secondi avanti; <kbd>Freccia sinistra</kbd>: 5 secondi indietro; <kbd>Freccia su</kbd> e <kbd>giù</kbd>: alzano e abbassano il volume, come nel resto del lettore; <kbd>Pagina su</kbd> e <kbd>Pagina giù</kbd>: un minuto avanti e indietro; <kbd>Inizio</kbd>: dall'inizio; <kbd>Fine</kbd>: poco prima della fine.</li>
 <li><strong>Precedente</strong> e <strong>Successivo</strong>: solo nella <a href="#continua">riproduzione continua</a>.</li>
-<li><strong>Indietro 5 secondi</strong>, <strong>Pausa</strong> (o <strong>Riprendi</strong>), <strong>Avanti 5 secondi</strong>, <strong>Ferma</strong>.</li>
+<li><strong>Indietro 5 secondi</strong>, <strong>Pausa</strong> (o <strong>Riprendi</strong>), <strong>Avanti 5 secondi</strong>, <strong>Ferma</strong> (ferma il video, chiude il lettore e torna all'elenco).</li>
 <li><strong>Capitoli del video</strong>: c'è solo nei video divisi in capitoli. Con le frecce scegli un capitolo e, quando ti fermi, il video ci salta. Mentre il video va, la casella segue il capitolo in cui sei.</li>
 <li><strong>Volume</strong>: una barra da 0 a 200, a passi di 5 con le frecce. Oltre 100 il suono viene amplificato: aiuta con i video registrati bassi, ma con quelli già forti l'audio può gracchiare.</li>
 <li><strong>Velocità</strong>: una casella a elenco, da più lenta a più veloce; "normale" è la velocità di partenza.</li>
@@ -520,6 +521,16 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>Il computer non va in sospensione finché il timer va</strong>: accesa di partenza; così il computer non si addormenta prima del timer.</li>
 </ul>
 
+<h3 id="ia-impostazioni">Intelligenza artificiale</h3>
+<p>Tube Player può usare Gemini, l'intelligenza artificiale di Google, con la tua chiave personale. È facoltativa: di partenza il servizio è <strong>Nessuno</strong> e Tube Player non manda niente a nessuno.</p>
+<ul>
+<li><strong>Servizio di intelligenza artificiale esterno</strong>: Nessuno o Gemini.</li>
+<li><strong>Chiave del servizio</strong>: incolla qui la tua chiave. Viene salvata cifrata: si può leggere solo con questo utente di Windows, su questo computer, e non va nei dati esportati.</li>
+<li><strong>Verifica chiave e scarica i modelli</strong>: controlla che la chiave funzioni (anche premendo <kbd>Invio</kbd> nel campo della chiave) e sceglie il modello di partenza.</li>
+<li><strong>Modello</strong>: quale modello usare.</li>
+</ul>
+<p>Mentre si aspetta una risposta si sente un tic leggero: si può cambiare in Annunci, gruppo Intelligenza artificiale.</p>
+
 <h3>Annunci</h3>
 <p>Un albero con i gruppi (Riproduzione, Ricerca, Download, Programma) e, dentro, ogni cosa che il programma ti può dire. Su ognuna <kbd>Spazio</kbd> cambia come avvisarti: voce, voce e suono, solo suono, spento. <kbd>Invio</kbd> (o il pulsante Ascolta i suoni) ti fa sentire il suono. Su un gruppo, <kbd>Spazio</kbd> cambia tutti i suoi annunci insieme.</p>
 <p>Ogni famiglia di avvisi ha il suo timbro, così capisci al primo istante di cosa si tratta: le corde per la riproduzione, le bolle per la ricerca e i canali, la marimba per i download, il vetro per il programma, un ronzio per gli errori.</p>
@@ -577,6 +588,8 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><td><kbd>Alt+Invio</kbd></td><td>Scheda del video (nell'elenco)</td></tr>
 <tr><td><kbd>Ctrl+M</kbd></td><td>Commenti del video (nel lettore: del video che stai ascoltando)</td></tr>
 <tr><td><kbd>Ctrl+E</kbd></td><td>Trascrizione del video (nel lettore: del video che stai ascoltando)</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+I</kbd></td><td>Menu dell'<a href="#ia">intelligenza artificiale</a> (nel lettore: per il video che stai ascoltando)</td></tr>
+<tr><td><kbd>Alt+Maiusc+I</kbd></td><td>Intelligenza artificiale: cosa si vede adesso nel video</td></tr>
 <tr><td><kbd>Ctrl+Virgola</kbd></td><td>Impostazioni</td></tr>
 <tr><td><kbd>Ctrl+Q</kbd></td><td>Esci</td></tr>
 </table>
@@ -671,6 +684,34 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 
 <h3>Per scrivere all'autore</h3>
 <p>Aiuto, Contattami: per segnalare un problema, dare un suggerimento o anche solo dire che il programma ti piace. Oppure Aiuto, Unisciti a L'angolo di HDX su Telegram: il gruppo di tutti i programmi.</p>
+
+<h3 id="traduci">Tradurre il programma</h3>
+<p>Aiuto, <strong>Traduci il programma</strong>: se vuoi aiutare a tradurre Tube Player in un'altra lingua. Scegli la lingua e traduci le frasi una alla volta: scrivi e premi <kbd>Invio</kbd>, il lavoro si salva da solo e puoi riprenderlo quando vuoi. Il pulsante <strong>Come si fa</strong> spiega tutto. Le frasi brevi che compaiono in più punti del programma, come Video o Tutte, dicono anche a cosa si riferiscono: lo si sente nell'annuncio e si trova nel campo Tipo. <strong>Prova nel programma</strong> fa usare a tutto il programma le frasi tradotte, per sentirle al loro posto: quelle che mancano sono in inglese, e la prova finisce riaprendo Traduci il programma o chiudendo Tube Player. Alla fine, <strong>Prepara il file da inviare</strong> crea il file da mandare all'autore come allegato.</p>
+
+<h2 id="ia">20. L'intelligenza artificiale</h2>
+<p>Con Gemini, l'intelligenza artificiale di Google, puoi farti dire cosa succede in un video: cosa si vede, cosa c'è scritto sullo schermo, di cosa parla. Serve una chiave personale, da inserire nelle <a href="#ia-impostazioni">Impostazioni</a>; senza, Tube Player funziona come sempre.</p>
+<p><kbd>Ctrl+Maiusc+I</kbd> su un video apre il menu dell'intelligenza artificiale (lo stesso si trova nel menu File, Chiedi all'IA, e nel menu contestuale). Nel lettore vale per il video che stai ascoltando.</p>
+<ul>
+<li><strong>Descrivi il video</strong>: racconta cosa si vede, scena per scena, con i minuti.</li>
+<li><strong>Fai una domanda sul video</strong>: scrivi quello che vuoi sapere e premi <kbd>Invio</kbd>.</li>
+<li><strong>Riassunto del video</strong>: di cosa parla e i punti principali, in un testo semplice.</li>
+<li><strong>Cosa si vede adesso</strong> (<kbd>Alt+Maiusc+I</kbd>): con un video in riproduzione o in pausa, descrive l'immagine di quel momento e legge i testi sullo schermo. Funziona anche con le immagini spente. Sotto puoi fare altre domande su quell'immagine.</li>
+</ul>
+<h3 id="ia-testi">Traduzione, commenti e capitoli</h3>
+<ul>
+<li><strong>Traduci quello che si dice</strong>: la traduzione del parlato nella lingua del programma, in un testo da leggere. Se è molto lungo la risposta può fermarsi: scrivi "continua" nel campo della domanda.</li>
+<li><strong>Riassunto dei commenti</strong>: cosa pensa la gente del video, in base ai 100 commenti più apprezzati.</li>
+<li><strong>Crea i capitoli</strong>: divide il video in capitoli, anche quando il creator non li ha messi. Si apre un elenco: con <kbd>Invio</kbd> il video va a quel punto.</li>
+</ul>
+<p>Per la traduzione e i capitoli Tube Player manda a Gemini la trascrizione, che è più veloce; se il video non ce l'ha, Gemini ascolta il video dal suo link.</p>
+
+<h3 id="trova-link">Trova i link del video</h3>
+<p>Quando un creator dice "trovate il link qui", questa voce del menu cerca i link del video e li mette in un elenco, dicendo dove li ha trovati: nella descrizione, nel commento fissato, nelle schede o nello schermo finale (i riquadri che YouTube mette sopra il video). Per questi non serve la chiave.</p>
+<p>Con <kbd>Invio</kbd> o il pulsante <strong>Apri</strong> il link si apre: i video di YouTube in Tube Player, il resto nel browser. <strong>Copia link</strong> o <kbd>Ctrl+C</kbd> lo copiano.</p>
+<p>Il pulsante <strong>Cerca nelle immagini con Gemini</strong> chiede a Gemini di cercare i link scritti sullo schermo; se il video è in riproduzione o in pausa guarda anche l'immagine di quel momento, quindi conviene fermarsi quando il creator ne parla. Questi link compaiono come "Letto dal video, da controllare": una lettera può essere sbagliata. Nessun link si apre da solo.</p>
+
+<p>La risposta arriva in una finestra: la leggi riga per riga, sotto puoi fare altre domande sullo stesso video, <strong>Copia risposta</strong> la mette negli appunti, <kbd>Esc</kbd> chiude. Mentre aspetti si sente un tic leggero: per un video lungo può volerci qualche minuto.</p>
+<p>Tube Player manda a Gemini solo il link del video, le tue domande e, per Cosa si vede adesso, l'immagine di quel momento: il video lo guarda Google, da qui non si scarica niente. Funziona solo con i video pubblici. Con una chiave gratuita c'è un limite di ore di video al giorno. L'intelligenza artificiale può sbagliare: prendi le risposte come un aiuto, non come una certezza.</p>
 
 </body>
 </html>
