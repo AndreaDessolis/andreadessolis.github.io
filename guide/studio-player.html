@@ -116,7 +116,7 @@ h2 { margin-top: 2em; }
 <li><strong>Studio</strong>: i sottomenu Loop, Marcatori, Metronomo, Accordi, Note, Stem e MIDI.</li>
 <li><strong>Audio</strong>: la finestra Audio e il confronto prima e dopo.</li>
 <li><strong>Video</strong>: schermo intero, sottotitoli letti e traccia audio.</li>
-<li><strong>Aiuto</strong>: questa guida (<kbd>Ctrl+F1</kbd>), la guida alle scorciatoie (<kbd>F1</kbd>), la finestra di benvenuto, Controlla gli aggiornamenti, Ultime modifiche, Contattami, il gruppo L'angolo di HDX su Telegram, Dona con PayPal e Informazioni.</li>
+<li><strong>Aiuto</strong>: questa guida (<kbd>Ctrl+F1</kbd>), la guida alle scorciatoie (<kbd>F1</kbd>), la finestra di benvenuto, Controlla gli aggiornamenti, Ultime modifiche, Traduci il programma, Contattami, il gruppo L'angolo di HDX su Telegram, Dona con PayPal e Informazioni.</li>
 </ul>
 <p>Ogni voce dei menu mostra la sua scorciatoia, se ne ha una.</p>
 
@@ -455,15 +455,41 @@ h2 { margin-top: 2em; }
 <li><kbd>Ctrl+L</kbd>: vai sulla Coda;</li>
 <li><kbd>Ctrl+Pagina giù</kbd>: passa alla canzone dopo della coda;</li>
 <li><kbd>Spazio</kbd>, negli elenchi: pausa e ripresa;</li>
+<li><kbd>F2</kbd>: ridice la riga da cantare;</li>
+<li><kbd>Ctrl+F2</kbd>: ricomincia dalla riga che si sta cantando, un poco prima, così la risenti arrivare;</li>
+<li><kbd>Ctrl+Maiusc+F</kbd>: cerca a mano il testo di un brano audio;</li>
+<li><kbd>Ctrl+N</kbd>: il nome di chi canta;</li>
 <li><kbd>F4</kbd>: lettura del testo accesa o spenta;</li>
 <li><kbd>Maiusc+F4</kbd>: voce guida accesa o spenta;</li>
 <li><kbd>Alt+Maiusc+K</kbd>: il pannello delle opzioni.</li>
 </ul>
 <p>Volume, tono, velocità e spostamenti nel brano si comandano con i tasti di sempre. Il mixer resta su <kbd>Ctrl+Maiusc+X</kbd>.</p>
 <p>La <strong>voce guida</strong> è il canto suonato dentro il MIDI. Il programma trova il suo canale confrontando le sillabe del testo con le note, e quando una canzone parte la tiene spenta, così hai la base. La tua scelta si ricorda per ogni canzone. Se il canale non si riconosce con sicurezza senti "Voce guida non trovata": in quel caso puoi spegnere il canale a mano nel mixer. La voce guida cambia solo quello che senti nel karaoke: fuori dal karaoke il brano suona come sempre.</p>
+<p>Nel momento esatto in cui si deve attaccare a cantare una riga, il programma fa un piccolo suono, breve e chiaro: la lettura ti dice la riga prima, il suono ti dice "adesso". Lo regoli come gli altri annunci in Impostazioni, categoria Annunci, gruppo Studio: "Karaoke: il momento di attaccare la riga" (di partenza solo il suono; puoi spegnerlo).</p>
+<p>All'inizio di una canzone con un'introduzione lunga, e dopo una pausa lunga come un assolo, il programma ti dice quanto manca: "Si canta tra 20 secondi". Lo dice solo per le pause di almeno 15 secondi, poco dopo che è finita la riga di prima. Lo regoli in Impostazioni, categoria Annunci, gruppo Studio: "Karaoke: quanto manca a cantare, all'inizio e dopo una pausa lunga".</p>
 <p>Il pannello delle opzioni ha Voce guida, Tono, Velocità, Anticipo, Leggi il testo, partenza automatica, riverbero e chorus. Ogni scelta vale subito, anche mentre la canzone suona. <kbd>Esc</kbd> lo chiude. L'<strong>anticipo</strong> è quanti secondi prima arriva la riga da cantare.</p>
 <p>Finita una canzone, esce dalla coda. Se in coda c'è un'altra canzone il fuoco va sulla Coda e senti quale viene dopo; se la coda è vuota torni su Cerca. Con la partenza automatica accesa la canzone dopo parte da sola.</p>
 <p>Una canzone interrotta per farne partire un'altra esce dalla coda. Un file aperto da Esplora risorse mentre sei nel karaoke va in coda. La coda non si ricorda quando chiudi il programma.</p>
+<h4>Le serate: chi canta</h4>
+<p>Con <kbd>Ctrl+N</kbd> dai un nome a chi canta. Nei brani trovati la canzone va in coda già con il nome; nella coda dai o cambi il nome della canzone su cui sei; altrove vale per quella che suona. Il nome si scrive, oppure si sceglie con le frecce tra quelli già usati nella serata; un nome vuoto lo toglie. Nella coda la riga diventa "Marco: Rosanna - Toto", a fine canzone senti "Prossimo: Marco, Rosanna" e quando la canzone parte "Tocca a Marco" (Impostazioni, categoria Annunci, gruppo Studio: "Karaoke: di chi è il turno"). I nomi valgono finché il programma è aperto, come la coda.</p>
+<p>Con <strong>Coda a turno tra i cantanti</strong> (Impostazioni, categoria Karaoke) la coda alterna i cantanti da sola: se Marco mette in coda tre canzoni di fila, gli altri non aspettano che le canti tutte, ma si va a giro, una canzone a testa. Vale per le canzoni messe in coda con un nome.</p>
+<p>Tra una canzone e l'altra può suonare un po' di musica, così la stanza non resta in silenzio mentre il prossimo cantante si prepara. La cartella si sceglie in Impostazioni, categoria Karaoke, con il pulsante <strong>Musica tra le canzoni</strong>; il volume (spenta, piano, media, forte) nel pannello delle opzioni, <kbd>Alt+Maiusc+K</kbd>. La musica parte quando nel karaoke non suona niente, in ordine casuale, ed entra ed esce sfumando: appena parte una canzone se ne va. Suona con un lettore tutto suo, quindi non cambia niente del brano che si canta.</p>
+
+<h4>I brani audio</h4>
+
+<p>Nel karaoke puoi cantare anche i tuoi file audio (MP3, FLAC e gli altri): nelle cartelle del karaoke il programma trova anche loro. Per ognuno servono due cose, e il programma le prepara da solo quando metti il brano in coda:</p>
+
+<ul>
+
+<li><strong>il testo</strong>: un file LRC con lo stesso nome del brano, accanto al brano, se ce l'hai; altrimenti lo cerca su LRCLIB (lrclib.net), un archivio libero di testi sincronizzati, mandando solo titolo, artista e durata. Il testo trovato si ricorda in Dati\Testi, così la volta dopo non serve internet. Se non vuoi che cerchi su internet, spegni <strong>Cerca i testi su internet</strong> in Impostazioni, categoria Karaoke;</li>
+
+<li><strong>la base senza voce</strong>: la fa il motore stem, separando la voce, mentre canti le altre canzoni. Con il processore una canzone di 4 o 5 minuti richiede di solito un paio di minuti. La base resta salvata con gli altri stem. La <strong>Qualità della base senza voce</strong> si sceglie in Impostazioni, categoria Karaoke: Alta va bene solo con una scheda NVIDIA.</li>
+
+</ul>
+
+<p>Nella coda ogni brano audio dice a che punto è: pronta, in preparazione, senza testo, oppure con la voce se il motore stem non è installato. Se una canzone tocca a te prima che la sua base sia pronta, parte con la voce originale e il programma te lo dice; quando la base è pronta la voce sparisce da sola, dal punto in cui sei. La voce guida (<kbd>Maiusc+F4</kbd>) è lo stem della voce.</p>
+<p>I tempi dei testi LRC sbagliano spesso di un secondo, avanti o indietro. Con <strong>Metti a tempo le righe sulla voce del cantante</strong>, accesa in Impostazioni, categoria Karaoke, quando la base è pronta il programma ascolta lo stem della voce e aggancia ogni riga al punto in cui il cantante attacca davvero, se è entro un secondo e mezzo: così l'anticipo che hai scelto è quello vero. Le righe senza un attacco chiaro vicino restano dove sono. Se il testo è di un'altra registrazione del brano, con le parti in punti diversi, questo non basta a rimetterlo a tempo: quando il testo e la voce non vanno d'accordo in nessun modo, il programma te lo dice.</p>
+<p>Per un testo che non si trova, o che è di un'altra versione, c'è <kbd>Ctrl+Maiusc+F</kbd>: vale per il brano della coda su cui sei, o per quello che suona. Titolo e artista sono già scritti, li correggi se servono e premi <kbd>Invio</kbd>. Nei risultati ci sono solo le versioni con i tempi, con album e durata: la prima è quella con la durata più vicina al tuo brano. <kbd>Invio</kbd> su un risultato lo usa subito, anche se la canzone sta suonando, e lo ricorda per la volta dopo.</p>
 <p>Molti file karaoke hanno il testo scritto male. In Impostazioni, categoria Karaoke, <strong>Pulisci il testo del karaoke</strong> toglie le copie doppie, i segni e i trattini di chi ha fatto il file e divide le righe troppo lunghe. <strong>Togli crediti e accordi dal testo</strong> toglie anche le scritte come siti e copyright, e gli accordi. <strong>Nella ricerca solo i brani con il testo</strong> nasconde i brani senza testo. I tuoi file non vengono mai modificati.</p>
 
 <h3>Esportare in audio</h3>
@@ -656,6 +682,7 @@ h2 { margin-top: 2em; }
 
 <h3>Per contattarmi</h3>
 <p>Dal menu Aiuto, "Contattami...": scegli il tipo di messaggio (segnalazione di un problema, suggerimento, complimento, altro), scrivi un breve testo e si apre un'email già pronta nel tuo programma di posta, con la versione del programma. Se non hai un programma di posta, ti mostra il testo da copiare e l'indirizzo. Nel menu Aiuto trovi anche il gruppo Telegram "L'angolo di HDX", dove si parla di tutti i programmi, e la pagina per una donazione.</p>
+<p>Aiuto, <strong>Traduci il programma</strong>: se vuoi aiutare a tradurre Studio Player in un'altra lingua. Scegli la lingua e traduci le frasi una alla volta: scrivi e premi <kbd>Invio</kbd>, il lavoro si salva da solo e puoi riprenderlo quando vuoi. Il pulsante <strong>Come si fa</strong> spiega tutto. Le frasi brevi che compaiono in più punti del programma, come Spento o Nessuna, dicono anche a cosa si riferiscono: lo si sente nell'annuncio e si trova nel campo Tipo. <strong>Prova nel programma</strong> fa usare a tutto il programma le frasi tradotte, per sentirle al loro posto: quelle che mancano sono in inglese, e la prova finisce riaprendo Traduci il programma o chiudendo Studio Player. Alla fine, <strong>Prepara il file da inviare</strong> crea il file da mandare all'autore come allegato.</p>
 
 </body>
 </html>
