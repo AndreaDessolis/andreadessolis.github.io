@@ -439,7 +439,32 @@ h2 { margin-top: 2em; }
 <p>Ogni canale del file è come uno stem: nel mixer (<kbd>Ctrl+Maiusc+X</kbd>) trovi i canali con il nome della famiglia di strumenti, e li regoli come gli stem. Nel mixer, <kbd>I</kbd> cambia lo strumento del canale: scegli un banco qualsiasi tra quelli che hai e uno strumento, oppure "Strumento del file" per tornare a quello originale. Le scelte si ricordano per ogni brano.</p>
 
 <h3>Karaoke</h3>
-<p>Nei file KAR, e nei MIDI con il testo, <kbd>Ctrl+K</kbd> accende o spegne la lettura del testo: lo screen reader dice ogni riga quando comincia.</p>
+<p>Il karaoke sta nella finestra principale: <kbd>Ctrl+K</kbd> entra ed esce. Entrando, il titolo diventa "Studio Player - Karaoke", i menu si riducono a quello che serve per cantare e la tua lista dei brani viene messa da parte. Uscendo la ritrovi com'era. Se una canzone del karaoke sta suonando, uscendo si ferma.</p>
+<p>La prima volta scegli dove sono le canzoni: Impostazioni, categoria Karaoke, <strong>Aggiungi una cartella...</strong>. Il programma legge i nomi dei file in sottofondo, una volta sola, e dopo la ricerca è immediata. Poi guarda, sempre in sottofondo e a bassa priorità, quali brani hanno davvero il testo. Se aggiungi file nuovi usa <strong>Aggiorna l'elenco dei brani</strong>. Con cartelle molto grandi la preparazione può durare a lungo.</p>
+<p>Per cantare: <kbd>Ctrl+K</kbd>, scrivi una parola del titolo o dell'artista, <kbd>Invio</kbd>, e <kbd>Invio</kbd> sulla canzone.</p>
+<p>Il giro di <kbd>Tab</kbd> ha quattro fermate:</p>
+<ul>
+<li><strong>Cerca</strong>: <kbd>Invio</kbd> cerca e porta ai risultati;</li>
+<li><strong>Brani trovati</strong>: <kbd>Invio</kbd> canta subito, <kbd>Ctrl+Invio</kbd> mette in coda. L'etichetta dice quanti sono; ne mostra al massimo 200;</li>
+<li><strong>Coda</strong>: <kbd>Invio</kbd> canta, <kbd>Canc</kbd> toglie, <kbd>Ctrl+Freccia su</kbd> e <kbd>Ctrl+Freccia giù</kbd> spostano;</li>
+<li><strong>Testo</strong>: il cursore segue il testo e arriva sulla riga in anticipo; <kbd>Invio</kbd> riparte da quella riga. Se sei qui lo screen reader legge le righe anche con la lettura spenta.</li>
+</ul>
+<p>I tasti del karaoke:</p>
+<ul>
+<li><kbd>Esc</kbd> o <kbd>Ctrl+F</kbd>: torni su Cerca, da qualsiasi punto;</li>
+<li><kbd>Ctrl+L</kbd>: vai sulla Coda;</li>
+<li><kbd>Ctrl+Pagina giù</kbd>: passa alla canzone dopo della coda;</li>
+<li><kbd>Spazio</kbd>, negli elenchi: pausa e ripresa;</li>
+<li><kbd>F4</kbd>: lettura del testo accesa o spenta;</li>
+<li><kbd>Maiusc+F4</kbd>: voce guida accesa o spenta;</li>
+<li><kbd>Alt+Maiusc+K</kbd>: il pannello delle opzioni.</li>
+</ul>
+<p>Volume, tono, velocità e spostamenti nel brano si comandano con i tasti di sempre. Il mixer resta su <kbd>Ctrl+Maiusc+X</kbd>.</p>
+<p>La <strong>voce guida</strong> è il canto suonato dentro il MIDI. Il programma trova il suo canale confrontando le sillabe del testo con le note, e quando una canzone parte la tiene spenta, così hai la base. La tua scelta si ricorda per ogni canzone. Se il canale non si riconosce con sicurezza senti "Voce guida non trovata": in quel caso puoi spegnere il canale a mano nel mixer. La voce guida cambia solo quello che senti nel karaoke: fuori dal karaoke il brano suona come sempre.</p>
+<p>Il pannello delle opzioni ha Voce guida, Tono, Velocità, Anticipo, Leggi il testo, partenza automatica, riverbero e chorus. Ogni scelta vale subito, anche mentre la canzone suona. <kbd>Esc</kbd> lo chiude. L'<strong>anticipo</strong> è quanti secondi prima arriva la riga da cantare.</p>
+<p>Finita una canzone, esce dalla coda. Se in coda c'è un'altra canzone il fuoco va sulla Coda e senti quale viene dopo; se la coda è vuota torni su Cerca. Con la partenza automatica accesa la canzone dopo parte da sola.</p>
+<p>Una canzone interrotta per farne partire un'altra esce dalla coda. Un file aperto da Esplora risorse mentre sei nel karaoke va in coda. La coda non si ricorda quando chiudi il programma.</p>
+<p>Molti file karaoke hanno il testo scritto male. In Impostazioni, categoria Karaoke, <strong>Pulisci il testo del karaoke</strong> toglie le copie doppie, i segni e i trattini di chi ha fatto il file e divide le righe troppo lunghe. <strong>Togli crediti e accordi dal testo</strong> toglie anche le scritte come siti e copyright, e gli accordi. <strong>Nella ricerca solo i brani con il testo</strong> nasconde i brani senza testo. I tuoi file non vengono mai modificati.</p>
 
 <h3>Esportare in audio</h3>
 <p>Anche un MIDI si esporta con <kbd>Ctrl+Maiusc+W</kbd>, come lo stai ascoltando: con il banco, gli strumenti e il mixer dei canali. Vedi "Esportare il brano come lo senti", nella sezione dell'audio.</p>
