@@ -66,7 +66,7 @@ h2 { margin-top: 2em; }
 <ol>
 <li>Avvia <strong>Studio Player.exe</strong>. Lo screen reader dice "Studio Player aperto" e ti trovi sull'elenco dei brani, vuoto. Un attimo dopo si apre la finestra di benvenuto, con le basi del programma: la leggi con le frecce. Se non vuoi più vederla all'avvio, togli la spunta a "Mostra questa finestra all'avvio"; la ritrovi sempre in Aiuto, Benvenuto.</li>
 <li>Premi <kbd>Ctrl+O</kbd>, scegli uno o più file audio o video e premi Invio: il primo parte subito.</li>
-<li>Mentre suona, il fuoco va sul pulsante Pausa: con le frecce destra e sinistra ti sposti di 5 secondi, con su e giù cambi il volume.</li>
+<li>Mentre suona, il fuoco va sul pulsante Pausa (se non preferisci che resti sulla lista: Impostazioni, Scaletta): con le frecce destra e sinistra ti sposti di 5 secondi, con su e giù cambi il volume.</li>
 <li>Premi <kbd>Ctrl+P</kbd> per la pausa e per riprendere, <kbd>Ctrl+S</kbd> per fermare.</li>
 </ol>
 <p>Se vuoi che i file audio si aprano con Studio Player dalla cartella o dal desktop, guarda il capitolo sulle impostazioni, categoria "Integrazione con Windows".</p>
@@ -360,7 +360,7 @@ h2 { margin-top: 2em; }
 <p>Nell'albero, <kbd>Invio</kbd> ti fa sentire la voce su cui sei: su una posizione l'accordo pennato come su una chitarra (o la scala che sale), su una corda la sua nota (o le sue note), su una nota solo quella; lo <kbd>Spazio</kbd> fa sentire una nota alla volta (o la scala che sale e scende). Così puoi controllare corda per corda mentre cerchi l'accordo sulla chitarra. Per ascoltare serve un banco di suoni (Impostazioni, MIDI); il suono esce dal dispositivo dei suoni del programma (Impostazioni, Suoni). Le scelte restano finché il programma è aperto.</p>
 
 <h3>Il prossimo accordo in anticipo</h3>
-<p>In Impostazioni, Accordi e scale, "Il prossimo accordo in anticipo" fa dire il prossimo accordo poco prima che arrivi: da uno a quattro battiti prima, così hai il tempo di preparare la mano. Il programma usa i battiti del brano, se li conosce; altrimenti il suo tempo. Funziona con i brani di cui gli accordi sono già stati trovati. Come gli altri annunci, in Impostazioni, Annunci, "Accordi: il prossimo accordo in anticipo" si sceglie a voce, con un suono (tre note morbide, come una pennata), con tutti e due o spento. Se hai acceso anche "Dimmi gli accordi mentre suona", un accordo già detto in anticipo non si ripete quando arriva.</p>
+<p>In Impostazioni, Accordi e scale, "Il prossimo accordo in anticipo" fa dire il prossimo accordo poco prima che arrivi: da uno a quattro battiti prima, così hai il tempo di preparare la mano. Il programma usa i battiti del brano, se li conosce; altrimenti il suo tempo. Funziona con i brani di cui gli accordi sono già stati trovati. Come gli altri annunci, in Impostazioni, Annunci, "Accordi: il prossimo accordo in anticipo" si sceglie a voce, con un suono (tre note morbide, come una pennata), con tutti e due o spento. L'anticipo funziona solo con "Dimmi gli accordi mentre suona" acceso: se la spegni, il programma non dice nessun accordo. Un accordo già detto in anticipo non si ripete quando arriva.</p>
 
 <h3>I nomi</h3>
 <p>Gli accordi e le note si scrivono come preferisci: italiani (Do, Re, Mi: "La minore") o inglesi (C, D, E: "Am"). Di base seguono la lingua del programma; si cambia in Impostazioni, Accordi e scale, "Nomi degli accordi e delle note".</p>
@@ -470,7 +470,7 @@ h2 { margin-top: 2em; }
 <p>La <strong>voce guida</strong> è il canto suonato dentro il MIDI. Il programma trova il suo canale confrontando le sillabe del testo con le note, e quando una canzone parte la tiene spenta, così hai la base. La tua scelta si ricorda per ogni canzone. Se il canale non si riconosce con sicurezza senti "Voce guida non trovata": in quel caso puoi spegnere il canale a mano nel mixer. La voce guida cambia solo quello che senti nel karaoke: fuori dal karaoke il brano suona come sempre.</p>
 <p>Nel momento esatto in cui si deve attaccare a cantare una riga, il programma fa un piccolo suono, breve e chiaro: la lettura ti dice la riga prima, il suono ti dice "adesso". Lo regoli come gli altri annunci in Impostazioni, categoria Annunci, gruppo Studio: "Karaoke: il momento di attaccare la riga" (di partenza solo il suono; puoi spegnerlo).</p>
 <p>All'inizio di una canzone con un'introduzione lunga, e dopo una pausa lunga come un assolo, il programma ti dice quanto manca: "Si canta tra 20 secondi". Lo dice solo per le pause di almeno 15 secondi, poco dopo che è finita la riga di prima. Lo regoli in Impostazioni, categoria Annunci, gruppo Studio: "Karaoke: quanto manca a cantare, all'inizio e dopo una pausa lunga".</p>
-<p>Il pannello delle opzioni ha Voce guida, Tono, Velocità, Anticipo, Musica tra le canzoni, Schermo per il testo, Leggi il testo, partenza automatica, riverbero e chorus. Ogni scelta vale subito, anche mentre la canzone suona. <kbd>Esc</kbd> lo chiude. L'<strong>anticipo</strong> è quanti secondi prima arriva la riga da cantare.</p>
+<p>Il pannello delle opzioni ha Voce guida, Tono, Velocità, Anticipo, Musica tra le canzoni, Schermo per il testo, Leggi il testo, partenza automatica, riverbero e chorus. Ogni scelta vale subito, anche mentre la canzone suona. <kbd>Esc</kbd> lo chiude. L'<strong>anticipo</strong> è quanto prima arriva la riga da cantare; si regola anche in Impostazioni, Testo delle canzoni, dove trovi tutti i valori spiegati.</p>
 <p>Finita una canzone, esce dalla coda. Se in coda c'è un'altra canzone il fuoco va sulla Coda e senti quale viene dopo; se la coda è vuota torni su Cerca. Con la partenza automatica accesa la canzone dopo parte da sola.</p>
 <p>Una canzone interrotta per farne partire un'altra esce dalla coda. Un file aperto da Esplora risorse mentre sei nel karaoke va in coda. La coda non si ricorda quando chiudi il programma.</p>
 <h4>Le serate: chi canta</h4>
@@ -611,6 +611,7 @@ h2 { margin-top: 2em; }
 <li><strong>A 10 secondi dalla fine, dimmi il brano dopo</strong>.</li>
 <li><strong>Mostra la durata nella riga del brano</strong>.</li>
 <li><strong>Una scaletta riaperta riprende dal brano a cui eri arrivato</strong>.</li>
+<li><strong>Quando parte un brano, resta sulla lista</strong>: il cursore non va sul pulsante Pausa, comodo quando hai tanti brani e vuoi continuare a scorrerli. Di partenza è spenta.</li>
 </ul>
 <p>Ripeti (<kbd>Ctrl+R</kbd>) e queste scelte vanno d'accordo: ripetere il brano o la scaletta vale sopra a quello che è scelto qui.</p>
 
@@ -626,6 +627,13 @@ h2 { margin-top: 2em; }
 
 <h3>MIDI</h3>
 <p>Il banco in uso, la qualità del suono, riverbero e chorus, aggiungere e togliere banchi, e i banchi consigliati da scaricare.</p>
+
+<h3>Testo delle canzoni</h3>
+<ul>
+<li><strong>Anticipo del testo nel karaoke</strong>: quanto prima arriva la riga da cantare. È la stessa regolazione del pannello <kbd>Alt+Maiusc+K</kbd>.</li>
+<li><strong>Anticipo del testo fuori dal karaoke</strong>: la stessa cosa per quando il programma legge il testo durante l'ascolto normale. Di partenza è su Nessuno.</li>
+</ul>
+<p>I valori possono seguire il tempo del brano: un quarto di battito, mezzo battito, uno, due o quattro battiti prima. In un brano in 4/4 mezzo battito è un ottavo e un quarto di battito è un sedicesimo. Se il brano rallenta o accelera, l'anticipo si adatta da solo. Nei MIDI il tempo è scritto nel file; in un brano audio il programma lo ricava con la sua analisi, e finché non lo conosce usa 120 battiti al minuto. Se vuoi un anticipo sempre uguale ci sono i millisecondi e i secondi. In fondo all'elenco ci sono anche i valori "dopo", se preferisci che la riga arrivi con un piccolo ritardo.</p>
 
 <h3>Video</h3>
 <ul>
