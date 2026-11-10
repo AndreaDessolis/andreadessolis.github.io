@@ -357,7 +357,7 @@ h2 { margin-top: 2em; }
 <li><strong>Posizioni sul manico</strong>: un albero. Ogni posizione è chiusa: Freccia destra la apre e dentro trovi una voce per il barrè (se c'è) e una per ogni corda, dalla sesta alla prima, che leggi una alla volta con Freccia su e giù; Freccia sinistra la richiude. Per un accordo ogni corda dice se è non suonata, a vuoto, nel barrè, oppure il tasto e il dito. Per una scala le posizioni sono quelle che si studiano (due note per corda nelle pentatoniche, i "box", e tre note per corda nelle scale di sette note), con il tasto, la nota e il dito, e "tonica" sulla nota che dà il nome alla scala; una corda con tre note si apre a sua volta, con una nota per voce;</li>
 <li><strong>Ascolta</strong> e <strong>Una nota alla volta</strong> (per le scale: <strong>Salendo e scendendo</strong>).</li>
 </ul>
-<p>Nell'albero, <kbd>Invio</kbd> ti fa sentire la voce su cui sei: su una posizione l'accordo pennato come su una chitarra (o la scala che sale), su una corda la sua nota (o le sue note), su una nota solo quella; lo <kbd>Spazio</kbd> fa sentire una nota alla volta (o la scala che sale e scende). Così puoi controllare corda per corda mentre cerchi l'accordo sulla chitarra. Per ascoltare serve un banco di suoni (Impostazioni, MIDI); il suono esce dal dispositivo dei suoni del programma (Impostazioni, Suoni). Le scelte restano finché il programma è aperto.</p>
+<p>Nell'albero, <kbd>Invio</kbd> ti fa sentire la voce su cui sei: su una posizione l'accordo pennato come su una chitarra (o la scala che sale), su una corda la sua nota (o le sue note), su una nota solo quella; lo <kbd>Spazio</kbd> fa sentire una nota alla volta (o la scala che sale e scende). Così puoi controllare corda per corda mentre cerchi l'accordo sulla chitarra. Per ascoltare serve un banco di suoni (Impostazioni, MIDI); il suono esce dal dispositivo dei suoni del programma (Impostazioni, Dispositivi audio, Uscita dei suoni del programma). Le scelte restano finché il programma è aperto.</p>
 
 <h3>Il prossimo accordo in anticipo</h3>
 <p>In Impostazioni, Accordi e scale, "Il prossimo accordo in anticipo" fa dire il prossimo accordo poco prima che arrivi: da uno a quattro battiti prima, così hai il tempo di preparare la mano. Il programma usa i battiti del brano, se li conosce; altrimenti il suo tempo. Funziona con i brani di cui gli accordi sono già stati trovati. Come gli altri annunci, in Impostazioni, Annunci, "Accordi: il prossimo accordo in anticipo" si sceglie a voce, con un suono (tre note morbide, come una pennata), con tutti e due o spento. L'anticipo funziona solo con "Dimmi gli accordi mentre suona" acceso: se la spegni, il programma non dice nessun accordo. Un accordo già detto in anticipo non si ripete quando arriva.</p>
@@ -471,6 +471,26 @@ h2 { margin-top: 2em; }
 <p>Entrando con <kbd>Ctrl+G</kbd> il programma riprende l'ultima tablatura dal punto in cui eri. <kbd>Ctrl+W</kbd> chiude la tablatura e il programma la dimentica; in Impostazioni, categoria Tablature, puoi spegnere del tutto la riapertura. Sulle tracce di batteria senti il nome dei pezzi. Se su un accordo una nota ha un bend, uno slide o un vibrato, o se una traccia con effetti ha due voci, nel mixer compare una riga in più con il nome della traccia e la scritta bend.</p>
 <p>Se ti sposti di battuta o di sezione mentre il brano suona, la musica salta lì e continua; da fermo senti il primo evento su cui arrivi.</p>
 <p>In Impostazioni, categoria Tablature, scegli se sentire ottavi e sedicesimi oppure crome e semicrome, se invertire l'ordine delle corde con le frecce, se dire le tecniche insieme alla nota, se far sentire la nota mentre ti sposti e cosa dire mentre suona.</p>
+
+<h3>Accordatore</h3>
+<p><kbd>Ctrl+U</kbd> entra ed esce dall'accordatore (anche dal menu Studio). Entrando la musica si ferma e il programma ascolta l'ingresso scelto in Impostazioni, categoria Dispositivi audio: il microfono o la scheda audio, con il suo canale.</p>
+<p>Suona una corda e senti un piccolo tic: a sinistra se è calante, a destra se è crescente, tanto più di lato quanto più sei lontano; al centro quando sei vicino. Quando resta intonata per mezzo secondo, entro la precisione scelta (di partenza 2 cent), senti il suono di conferma e il tic si ferma; riparte se la nota si sposta o se pizzichi di nuovo. Quello che dice e il suono di conferma si scelgono in Impostazioni, categoria Annunci, gruppo Studio: "Accordatore: la corda o la nota riconosciuta" (di partenza la voce) e "Accordatore: corda intonata" (di partenza il suono). Precisione, La di riferimento e volumi sono nella categoria Accordatore delle Impostazioni.</p>
+<p>Il giro di <kbd>Tab</kbd> ha tre fermate: l'Accordatore, dove valgono i tasti qui sotto; l'Accordatura; la Corda.</p>
+<ul>
+<li><strong>Accordatura</strong>: chitarra standard, Drop D, mezzo tono e un tono sotto, Drop C, DADGAD, Open G, D ed E, chitarra a 7 corde, basso a 4 e a 5 corde, ukulele. Se nella sessione hai aperto una tablatura, c'è anche l'accordatura della sua traccia. La prima voce è il <strong>cromatico</strong>: qualsiasi nota, per qualsiasi strumento o per la voce. Il programma ricorda l'ultima scelta.</li>
+<li><strong>Corda</strong>: Automatica, il programma riconosce da solo la corda che suoni e te la dice ("Corda 5, La 2"); oppure una corda precisa, utile quando è così scordata che sembrerebbe un'altra.</li>
+</ul>
+<p>I tasti dell'accordatore:</p>
+<ul>
+<li><kbd>F2</kbd>: la nota, o la corda, e lo scarto, per esempio "Corda 5, La 2, calante, 4,3 cent";</li>
+<li><kbd>Freccia giù</kbd> e <kbd>Freccia su</kbd>: la corda dopo e prima; <kbd>Inizio</kbd>: di nuovo automatica;</li>
+<li><kbd>A</kbd> e <kbd>Maiusc+A</kbd>: l'accordatura dopo e prima;</li>
+<li><kbd>C</kbd>: il cromatico acceso o spento;</li>
+<li><kbd>Spazio</kbd>: la nota giusta della corda, per accordare a orecchio (nel cromatico, la nota più vicina a quella che suoni);</li>
+<li><kbd>L</kbd>: il livello dell'ingresso, come il pulsante delle Impostazioni.</li>
+</ul>
+<p>L'accordatore è nuovo: se noti qualcosa che non va, o ti manca un'accordatura, scrivimi senza problemi da Aiuto, "Contattami...", oppure nel gruppo L'angolo di HDX. Ogni segnalazione mi aiuta a renderlo più preciso.</p>
+<p>Il tic si capisce meglio in cuffia. Con il microfono usa le cuffie: dagli altoparlanti il microfono sentirebbe anche il tic e la voce dello screen reader. Con la chitarra collegata alla scheda audio il problema non c'è.</p>
 
 <h3>Karaoke</h3>
 <p>Il karaoke sta nella finestra principale: <kbd>Ctrl+K</kbd> entra ed esce. Entrando, il titolo diventa "Studio Player - Karaoke", i menu si riducono a quello che serve per cantare e la tua lista dei brani viene messa da parte. Uscendo la ritrovi com'era. Se una canzone del karaoke sta suonando, uscendo si ferma.</p>
@@ -623,10 +643,19 @@ h2 { margin-top: 2em; }
 </ul>
 <p>L'icona nell'area di notifica dice il brano che suona. Invio, o il doppio clic, riporta su la finestra. Il suo menu (Applicazioni, o il clic destro) ha: Mostra Studio Player, Pausa e Ferma (o Riproduci, se nessun brano suona), Brano successivo e precedente, ed Esci. In Windows, l'area di notifica si raggiunge con <kbd>Windows+B</kbd>.</p>
 
+<h3>Dispositivi audio</h3>
+<p>Tutte le schede audio in un posto solo.</p>
+<ul>
+<li><strong>Uscita della musica</strong>: la scheda su cui senti i brani.</li>
+<li><strong>Driver d'uscita della musica</strong>: WASAPI, il sistema audio di Windows. WASAPI condiviso (consigliato): la scheda resta anche agli altri programmi e allo screen reader. WASAPI esclusivo (bit-perfect): la scheda è tutta per Studio Player e riceve il brano identico al file. In esclusivo lo screen reader su quella scheda non parla mentre un brano suona: usalo con una scheda diversa da quella della sintesi vocale.</li>
+<li><strong>Uscita dei suoni del programma</strong>: dove senti i suoni degli annunci; il loro volume è nella categoria Suoni.</li>
+<li><strong>Ingresso</strong>: il microfono o la scheda audio da cui Studio Player ascolta il tuo strumento o la tua voce.</li>
+<li><strong>Canale d'ingresso</strong>: se la scheda ha più ingressi, quello dove è collegato lo strumento, per esempio Ingresso 1; oppure tutti gli ingressi insieme.</li>
+<li><strong>Prova il livello dell'ingresso</strong>: ascolta per 3 secondi, mentre suoni o parli, e ti dice se il suono arriva bene, è troppo basso o troppo alto, con il picco in dB. Se Windows non permette di usare il microfono, il programma ti dice dove accenderlo.</li>
+</ul>
+
 <h3>Riproduzione</h3>
 <ul>
-<li><strong>Dispositivo d'uscita della musica</strong>.</li>
-<li><strong>Modo d'uscita</strong>: Condiviso (consigliato), dove la scheda resta anche agli altri programmi e allo screen reader; oppure Esclusivo (bit-perfect), dove la scheda è tutta per Studio Player e riceve il brano identico al file. In esclusivo lo screen reader su quella scheda non parla mentre un brano suona: usalo con una scheda diversa da quella della sintesi vocale.</li>
 <li><strong>Pausa morbida</strong>: il suono sfuma quando metti in pausa e quando riprendi, invece di interrompersi di colpo. Le due sfumature si regolano a parte.</li>
 <li><strong>Ricorda velocità e tono di ogni brano</strong>, <strong>Ricorda se il loop era acceso</strong>, <strong>Riprendi ogni brano dal punto in cui l'avevi lasciato</strong>.</li>
 </ul>
@@ -667,6 +696,15 @@ h2 { margin-top: 2em; }
 </ul>
 <p>I valori possono seguire il tempo del brano: un quarto di battito, mezzo battito, uno, due o quattro battiti prima. In un brano in 4/4 mezzo battito è un ottavo e un quarto di battito è un sedicesimo. Se il brano rallenta o accelera, l'anticipo si adatta da solo. Nei MIDI il tempo è scritto nel file; in un brano audio il programma lo ricava con la sua analisi, e finché non lo conosce usa 120 battiti al minuto. Se vuoi un anticipo sempre uguale ci sono i millisecondi e i secondi. In fondo all'elenco ci sono anche i valori "dopo", se preferisci che la riga arrivi con un piccolo ritardo.</p>
 
+<h3>Accordatore</h3>
+<ul>
+<li><strong>Precisione per il suono di conferma</strong>: molto preciso (1 cent), preciso (2 cent, di partenza) o normale (3 cent). Molto preciso va bene con la scheda audio in un posto silenzioso; con il microfono del computer è meglio normale.</li>
+<li><strong>La di riferimento</strong>: da 430 a 450 Hz; lo standard è 440.</li>
+<li><strong>Suono della nota di riferimento</strong> (Spazio): con armoniche, che si sente bene anche sulle corde del basso, oppure puro.</li>
+<li><strong>Volume del tic e della nota di riferimento</strong>.</li>
+<li><strong>Entrando, se c'è una tablatura aperta, usa la sua accordatura</strong>: accesa di partenza.</li>
+</ul>
+
 <h3>Video</h3>
 <ul>
 <li><strong>Mostra l'immagine dei video</strong>.</li>
@@ -692,7 +730,7 @@ h2 { margin-top: 2em; }
 <p>Per ogni cosa che il programma ti dice (brano avviato, pausa, spostamenti, volume, loop, marcatori, stem...) scegli come avvisarti: con la voce, con la voce e un suono, solo con un suono, o per niente. Nell'elenco, Spazio cambia il modo della voce scelta e Invio fa sentire il suono. Il pulsante "Ascolta i suoni" li fa sentire tutti.</p>
 
 <h3>Suoni</h3>
-<p>Il dispositivo e il volume dei suoni del programma: a ogni scelta senti un suono di prova.</p>
+<p>Il volume dei suoni del programma: a ogni scelta senti un suono di prova. Il dispositivo dei suoni è nella categoria Dispositivi audio.</p>
 
 <h3>Tastiera</h3>
 <p>Tutti i comandi con le loro scorciatoie, divisi per menu. Invio (o il pulsante "Cambia scorciatoia...") cambia la scorciatoia del comando scelto: premi la combinazione nuova. Canc la toglie. Sulle scorciatoie globali lo Spazio le spegne e le riaccende. Puoi tornare a quella di base di un comando o di tutti. Se una combinazione non si può usare (perché la usa Windows, o perché serve per muoversi), il programma ti dice perché.</p>
@@ -700,10 +738,10 @@ h2 { margin-top: 2em; }
 <h2 id="problemi">13. Problemi e domande frequenti</h2>
 
 <h3>Lo screen reader non parla mentre suona un brano</h3>
-<p>Probabilmente il modo d'uscita è Esclusivo e la musica esce dalla stessa scheda della sintesi vocale. Torna al modo Condiviso in Impostazioni, Riproduzione, oppure scegli per la musica una scheda diversa.</p>
+<p>Probabilmente il driver d'uscita della musica è WASAPI esclusivo e la musica esce dalla stessa scheda della sintesi vocale. Scegli WASAPI condiviso in Impostazioni, Dispositivi audio, oppure scegli per la musica una scheda diversa.</p>
 
 <h3>Il modo esclusivo non funziona</h3>
-<p>Alcune schede hanno il modo esclusivo spento in Windows: il programma te lo dice e ti spiega dove accenderlo (nelle proprietà avanzate del dispositivo, in Impostazioni audio di Windows). Se la scheda è occupata da un altro programma, Studio Player usa il condiviso.</p>
+<p>Alcune schede hanno il modo esclusivo spento in Windows: il programma te lo dice e ti spiega dove accenderlo (Pannello di controllo, Audio, proprietà della scheda, scheda Avanzate). Se la scheda è occupata da un altro programma, Studio Player usa il condiviso.</p>
 
 <h3>Ho scollegato le cuffie o la scheda audio</h3>
 <p>Il brano si ferma e il programma riprova da solo per un minuto: appena la scheda torna, riprende dal punto in cui eri.</p>
