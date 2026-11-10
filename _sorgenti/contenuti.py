@@ -287,9 +287,12 @@ PROGRAMMI = [
         'stato': 'disponibile',
         'repository': 'HDX-Recorder',
         'setup': 'HDX-Recorder-Setup.exe',
-        # La guida come la distribuisce il programma (senza le parti ASIO,
-        # che restano fuori finche' non c'e' l'accordo di Steinberg).
+        # La guida come la distribuisce il programma (con ASIO dalla 1.1.4:
+        # l'accordo di Steinberg e' controfirmato dal 7 nov 2026).
         'guida': r'D:\Software Portable\Sviluppo Software\HDX Recorder\Programma\Documenti\Guida.html',
+        # Usa il kit ASIO di Steinberg: il logo "ASIO Compatible" e la nota sul
+        # marchio vanno in ogni pagina che parla del programma (regole d'uso).
+        'asio': True,
         'novita': ('hdx-json', r'D:\Software Portable\Sviluppo Software\HDX Recorder\rilascio\changelog.json'),
         'frase': {
             'it': 'Registrare audio e video e andare in diretta su una radio web, tutto con lo screen reader: per podcast, trasmissioni radio, lezioni e tutorial.',
@@ -318,6 +321,7 @@ PROGRAMMI = [
         'funzioni': {
             'it': [
                 'Più sorgenti insieme: microfoni e ingressi, audio del computer, un solo programma, file di sottofondo, radio da Internet e pad sonori, ognuna con il suo volume.',
+                'Le schede audio con driver ASIO®: le schede professionali e i programmi che usano ASIO, come REAPER con ReaRoute e Voicemeeter, in mono o in stereo, anche più schede insieme.',
                 'Molti formati: WAV, AIFF, FLAC, ALAC, MP3, Opus e AAC, con il mix e, se vuoi, una traccia separata per ogni sorgente.',
                 'Il controllo prima del via, la prova dei livelli e l\'avviso di saturazione: sai sempre se si sente bene, prima e durante la registrazione.',
                 'Il mixer, gli effetti per ogni sorgente (riduzione del rumore, compressore, equalizzatore, de-esser, riverbero e altri), il mix finale e le scene da richiamare con un tasto.',
@@ -332,6 +336,7 @@ PROGRAMMI = [
             ],
             'en': [
                 'Many sources together: microphones and inputs, computer audio, a single program, background files, Internet radio and sound pads, each at its own volume.',
+                'Audio interfaces with ASIO® drivers: professional interfaces and programs that use ASIO, such as REAPER with ReaRoute and Voicemeeter, in mono or stereo, several interfaces at once too.',
                 'Many formats: WAV, AIFF, FLAC, ALAC, MP3, Opus and AAC, with the mix and, if you want, a separate track for each source.',
                 'The pre-start check, the level test and the clipping warning: you always know if it sounds right, before and during the recording.',
                 'The mixer, effects for each source (noise reduction, compressor, equalizer, de-esser, reverb and more), the final mix and scenes to recall with a key.',
@@ -587,6 +592,7 @@ T = {
         'gruppo_testo': 'Il gruppo Telegram di tutti i miei programmi e delle mie add-on: novità, domande, segnalazioni e suggerimenti, insieme agli altri utenti.',
         'gruppo_pulsante': 'Unisciti a L\'angolo di HDX su Telegram',
         'domande': 'Hai domande o suggerimenti? <a href="contatti.html">Scrivimi</a>.',
+        'asio_alt': 'Logo ASIO Compatible',
         'novita_titolo': 'Novità di {0}', 'novita_lede': 'Le versioni dalla più recente. Le stesse novità si leggono nel programma, in Aiuto.',
         'torna_a': 'Torna a {0}',
         'chi_sono_lede': 'Mi chiamo Andrea Dessolis, e se dovessi riassumermi in poche parole direi: musica, tecnologia, e la voglia di capire come le due cose possano aiutarsi a vicenda.',
@@ -643,6 +649,7 @@ T = {
         'gruppo_testo': 'The Telegram group for all my programs and add-ons: news, questions, bug reports and suggestions, together with other users. The group is mostly in Italian, but you can write in your own language: translators make it easy to understand each other.',
         'gruppo_pulsante': 'Join L\'angolo di HDX on Telegram',
         'domande': 'Questions or suggestions? <a href="contatti.html">Write to me</a>.',
+        'asio_alt': 'ASIO Compatible logo',
         'novita_titolo': 'What\'s new in {0}', 'novita_lede': 'Versions from the most recent. The same notes are in the program, in Help.',
         'torna_a': 'Back to {0}',
         'chi_sono_lede': 'My name is Andrea Dessolis, and if I had to sum myself up in a few words I would say: music, technology, and the wish to understand how the two can help each other.',

@@ -25,6 +25,12 @@ from privacy import PRIVACY  # noqa: E402
 DOMINIO = 'https://andreadessolis.com/'
 LINGUE = ('it', 'en')
 
+# Le note sul marchio ASIO: quella delle regole d'uso di Steinberg e quella
+# dell'accordo di licenza (in inglese, come le scrivono loro).
+MARCHIO_ASIO = ('ASIO is a registered trademark of Steinberg Media Technologies GmbH. '
+                'ASIO is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries.')
+LOGO_ASIO = 'asio-compatible.png'
+
 
 def e(testo):
     return html.escape(testo, quote=True)
@@ -126,6 +132,19 @@ def pagina(lingua, nome_file, titolo, voce_menu, corpo, sole=700, descrizione=''
 
 # ---------------------------------------------------------------- i pezzi
 
+def logo_asio(lingua, radice, piccolo=False):
+    """Il logo "ASIO Compatible" con la nota sul marchio: le regole d'uso di
+    Steinberg lo vogliono in ogni pagina che parla di un programma con ASIO.
+    radice: il percorso fino alla radice del sito."""
+    larghezza, altezza = (64, 60) if piccolo else (120, 112)
+    return (f'<p class="asio-logo"><img src="{radice}immagini/{LOGO_ASIO}" width="{larghezza}" height="{altezza}" '
+            f'alt="{e(T[lingua]["asio_alt"])}"><small>{e(MARCHIO_ASIO)}</small></p>')
+
+
+def con_asio():
+    return any(p.get('asio') for p in PROGRAMMI)
+
+
 def scheda(p, lingua, livello):
     """La scheda di un programma (Home e Programmi). livello: h2 o h3."""
     t = T[lingua]
@@ -141,6 +160,7 @@ def scheda(p, lingua, livello):
         <{livello}><a href="{p["pagina"]}">{e(p["nome"])}</a></{livello}>
         <span class="status">{e(stato)}</span>
         <p>{e(p["breve"][lingua])}</p>
+        {logo_asio(lingua, radice, True) if p.get("asio") else ""}
         <div class="card-actions">
           {"".join(azioni)}
         </div>
@@ -222,6 +242,8 @@ def pagina_programma(p, lingua):
         parti.append(f'    <h2>{e(t["cosa_serve"])}</h2>\n    <ul>\n{voci}\n    </ul>')
     voci = '\n'.join(f'      <li>{e(f)}</li>' for f in p['funzioni'][lingua])
     parti.append(f'    <h2>{e(t["cosa_fa"])}</h2>\n    <ul class="feature-list">\n{voci}\n    </ul>')
+    if p.get('asio'):
+        parti.append('    ' + logo_asio(lingua, radice))
     if p['stato'] == 'disponibile':
         collegamenti = []
         if p.get('guida'):
@@ -253,6 +275,8 @@ def pagina_privacy(p, lingua):
                 parti.append('    <ul>\n' + '\n'.join(f'      <li>{voce}</li>' for voce in elemento) + '\n    </ul>')
             else:
                 parti.append(f'    <p>{elemento}</p>')
+    if p.get('asio'):
+        parti.append('    ' + logo_asio(lingua, '../' if lingua == 'en' else ''))
     parti.append(f'    <p><a href="{p["pagina"]}">{e(p["nome"])}</a></p>')
     return pagina(lingua, f'privacy-{p["id"]}.html', testi['titolo'], 'programmi', '\n'.join(parti), sole=560,
                   descrizione=testi['titolo'])
@@ -314,10 +338,12 @@ def pagina_addon(lingua):
 def chi_sono(lingua):
     t = T[lingua]
     paragrafi = '\n'.join(f'    <p>{testo}</p>' for testo in t['chi_sono_testo'])
+    # (La pagina nomina HDX Recorder, che usa ASIO: anche qui il logo.)
+    asio = ('    ' + logo_asio(lingua, '../' if lingua == 'en' else '') + '\n') if con_asio() else ''
     corpo = f'''    <h1>{e(t["chi_sono"])}</h1>
     <p class="lede">{e(t["chi_sono_lede"])}</p>
 {paragrafi}
-    <div class="cta-row">
+{asio}    <div class="cta-row">
       <a class="btn btn-primary" href="programmi.html">{e(t["programmi"])}</a>
       <a class="btn btn-secondary" href="contatti.html">{e(t["contatti"])}</a>
     </div>'''
@@ -422,6 +448,8 @@ def pagina_novita(p, lingua):
         for versione, _, testo in versioni_da_testo(percorso, lingua):
             titolo = ('Versione ' if lingua == 'it' else 'Version ') + versione
             blocchi.append(f'<section class="release">\n<h2>{e(titolo)}</h2>\n{html_da_testo(testo)}\n</section>')
+    if p.get('asio'):
+        blocchi.append('    ' + logo_asio(lingua, '../../' if lingua == 'en' else '../'))
     corpo = f'''    <h1>{e(t["novita_titolo"].format(p["nome"]))}</h1>
     <p class="lede">{e(t["novita_lede"])}</p>
     <p><a href="../{p["pagina"]}">{e(t["torna_a"].format(p["nome"]))}</a></p>
@@ -434,6 +462,9 @@ def pagina_novita(p, lingua):
 def guida(p):
     """La guida del programma, cosi' com'e', con in cima il ritorno al sito."""
     testo = open(p['guida'], encoding='utf-8').read()
+    # Il logo ASIO della guida sta accanto alla guida nel programma; qui tra le immagini del sito.
+    if p.get('asio'):
+        testo = testo.replace(f'src="{LOGO_ASIO}"', f'src="../immagini/{LOGO_ASIO}"')
     barra = (f'<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;'
              f'font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../{p["pagina"]}">'
              f'Torna a {e(p["nome"])} su andreadessolis.com</a> · '
@@ -513,6 +544,8 @@ def genera(uscita):
     os.makedirs(os.path.join(uscita, 'immagini'), exist_ok=True)
     for p in PROGRAMMI:
         shutil.copyfile(os.path.join(QUI, 'immagini', p['logo']), os.path.join(uscita, 'immagini', p['logo']))
+    if con_asio():
+        shutil.copyfile(os.path.join(QUI, 'immagini', LOGO_ASIO), os.path.join(uscita, 'immagini', LOGO_ASIO))
 
 
 if __name__ == '__main__':

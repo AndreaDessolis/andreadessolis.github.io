@@ -318,3 +318,10 @@ main { padding-block: 40px 64px; }
   padding-block: 10px;
   font-family: "Karla", "Segoe UI", system-ui, sans-serif;
 }
+
+/* Il logo "ASIO Compatible" con la nota sul marchio (programmi con ASIO). */
+.asio-logo { display: flex; align-items: center; gap: 12px; margin: 1.2em 0; }
+.asio-logo img { flex: none; display: block; }
+.asio-logo small { font-size: 0.85rem; line-height: 1.4; }
+.program-card .asio-logo { margin: 4px 0; flex-direction: column; align-items: flex-start; gap: 6px; }
+.program-card .asio-logo small { font-size: 0.75rem; }

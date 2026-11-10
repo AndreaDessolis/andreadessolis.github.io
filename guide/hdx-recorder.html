@@ -41,7 +41,7 @@ h2 { margin-top: 2em; }
 <li>il microfono, o qualunque dispositivo di registrazione;</li>
 <li>l'audio del computer, cioè quello che esce da un dispositivo di ascolto;</li>
 <li>l'audio di un solo programma;</li>
-
+<!--ASIO--><li>una scheda audio con il suo driver ASIO&reg;;</li><!--/ASIO-->
 <li>una musica o una sigla di sottofondo presa da un file;</li>
 <li>una radio da Internet;</li>
 <li>e per il video lo schermo, la finestra di un programma o la webcam.</li>
@@ -203,7 +203,10 @@ h2 { margin-top: 2em; }
 </ul>
 <p>Durante la registrazione, dal menu Sorgenti, Sottofondo: pausa o ripresa (<kbd>Ctrl+Maiusc+P</kbd>), brano successivo, cosa sta suonando. Se accendi un sottofondo che era spento (con lo Spazio o con una scena) mentre registri, sei in diretta o nella prova dei livelli, riparte dall'inizio dell'elenco con la sua dissolvenza in entrata, non da dove era arrivato in silenzio. I primi dieci brani dell'elenco sono anche il banco <strong>Sottofondi</strong> dei pad (vedi Pad sonori): con un tasto salti subito al brano che vuoi.</p>
 
-
+<!--ASIO--><h3>Scheda audio ASIO</h3>
+<p><img src="../immagini/asio-compatible.png" alt="Logo ASIO Compatible" width="120" height="112"></p>
+<p>ASIO is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries.</p>
+<p>Per le schede audio professionali che hanno un driver ASIO (il driver si installa con il programma della scheda, dal sito del produttore). Scegli la scheda e gli ingressi: mono con un ingresso, mono con il mix di due ingressi, oppure stereo con un ingresso a sinistra e uno a destra. Il pulsante "Pannello della scheda" apre il pannello di controllo del driver, se ce l'ha.</p><!--/ASIO-->
 
 <h3>Radio da Internet</h3>
 <p>Registra una radio in streaming. Puoi scrivere l'indirizzo del flusso (o di una playlist .m3u o .pls), sceglierla tra le tue preferite, oppure premere <strong>Cerca una radio</strong>: si cerca per nome, paese, genere e lingua in un grande archivio di radio di tutto il mondo, e con <strong>Ascolta</strong> la senti prima di sceglierla con <strong>Usa questa radio</strong>.</p>
@@ -554,7 +557,7 @@ h2 { margin-top: 2em; }
 <li>la differenza tra le parti piano e quelle forti, solo se c'è almeno un minuto di suono (con meno, la misura non è affidabile);</li>
 <li>il <strong>picco</strong> più alto e il picco vero (meglio sotto -1);</li>
 <li>le <strong>saturazioni</strong>, cioè la distorsione al volume massimo, con i minuti in cui succedono (le prime dieci);</li>
-<li>per le voci (le tracce dei microfoni, o un audio fatto solo di voci): il <strong>rumore di fondo</strong> nelle pause, il livello delle parti forti e la distanza tra i due, dove sopra 40 dB è buona e sotto 20 il rumore si sente; se nelle pause c'è silenzio assoluto, lo dice. Per tutto il resto (mix con musica, applicazioni, audio del computer, sottofondo, radio, un file scelto a mano) solo il livello delle parti più basse e di quelle forti, perché lì le parti più piano non sono rumore;</li>
+<li>per le voci (le tracce dei microfoni<!--ASIO--> e delle schede ASIO<!--/ASIO-->, o un audio fatto solo di voci): il <strong>rumore di fondo</strong> nelle pause, il livello delle parti forti e la distanza tra i due, dove sopra 40 dB è buona e sotto 20 il rumore si sente; se nelle pause c'è silenzio assoluto, lo dice. Per tutto il resto (mix con musica, applicazioni, audio del computer, sottofondo, radio, un file scelto a mano) solo il livello delle parti più basse e di quelle forti, perché lì le parti più piano non sono rumore;</li>
 <li>i <strong>silenzi</strong> di almeno 5 secondi, con il minuto e la durata;</li>
 <li>in stereo, se un canale è più forte dell'altro o quasi muto;</li>
 <li>se la forma d'onda è spostata dallo zero (DC offset), che si toglie con il filtro passa-alto.</li>
@@ -801,7 +804,7 @@ Sui tuoi messaggi c'è solo Elimina il messaggio. Ogni azione dice com'è andata
 <h3>Tosse e "parla sopra"</h3>
 <p>Due tasti da <strong>tenere premuti</strong>, nella regia e nella finestra principale:</p>
 <ul>
-<li><kbd>F6</kbd>, il <strong>tasto tosse</strong>: finché lo tieni premuto i tuoi microfoni (microfoni, ingressi) sono fuori onda; quando lo lasci tornano come prima. Il muto che hai scelto non cambia.</li>
+<li><kbd>F6</kbd>, il <strong>tasto tosse</strong>: finché lo tieni premuto i tuoi microfoni (microfoni, ingressi<!--ASIO--> e schede ASIO<!--/ASIO-->) sono fuori onda; quando lo lasci tornano come prima. Il muto che hai scelto non cambia.</li>
 <li><kbd>F7</kbd>, <strong>parla sopra</strong>: finché lo tieni premuto la musica (il lettore della regia e il sottofondo) si abbassa di 12 dB; quando lo lasci risale dolcemente.</li>
 </ul>
 <p>Funzionano solo con HDX Recorder in primo piano (un tasto "tenuto premuto" da un altro programma Windows non lo permette); se mentre li tieni passi a un'altra finestra, si considerano lasciati. Il campo dello stato della regia dice quando sono attivi. Il blocco da F5 a F8 è dei comandi rapidi della diretta: F5 la pausa, F6 la tosse, F7 parla sopra, F8 i tempi.</p>
@@ -862,7 +865,7 @@ Sui tuoi messaggi c'è solo Elimina il messaggio. Ogni azione dice com'è andata
 <ul>
 <li><strong>il nome</strong>, per esempio "Zoom";</li>
 <li><strong>l'uscita</strong> dove mandarlo: con Voicemeeter, per esempio <em>Voicemeeter AUX Input</em> (per un ritorno nuovo il programma la propone da solo, se c'è);</li>
-<li><strong>le sorgenti</strong> dentro e fuori (lo Spazio cambia). All'inizio sono dentro microfoni, ingressi, lettore della regia, pad e sottofondo; fuori le sorgenti Applicazione, l'audio del computer e le radio. <strong>La regola per evitare l'eco</strong>: metti fuori la sorgente che porta l'audio del programma che riceve il ritorno (per Zoom, la sorgente Applicazione di Zoom);</li>
+<li><strong>le sorgenti</strong> dentro e fuori (lo Spazio cambia). All'inizio sono dentro microfoni, ingressi, <!--ASIO-->schede ASIO, <!--/ASIO-->lettore della regia, pad e sottofondo; fuori le sorgenti Applicazione, l'audio del computer e le radio. <strong>La regola per evitare l'eco</strong>: metti fuori la sorgente che porta l'audio del programma che riceve il ritorno (per Zoom, la sorgente Applicazione di Zoom);</li>
 <li><strong>durante la pausa in onda</strong>: di base il ritorno non la segue, così chi è collegato continua a sentire te e la musica della pausa mentre in diretta le voci sono fuori; oppure la segue, uguale alla diretta;</li>
 <li><strong>il volume</strong> del ritorno.</li>
 </ul>
@@ -935,7 +938,7 @@ Sui tuoi messaggi c'è solo Elimina il messaggio. Ogni azione dice com'è andata
 <ul>
 <li><strong>Registrazione</strong>: avvio e fermata; pausa e ripresa; automatismi del silenzio (partita, pausa, ripresa); nuova parte del file; copie pronte (normalizzata e compressa); attesa di normalizzazioni e copie (il tic mentre lavora e ogni minuto a che punto è).</li>
 <li><strong>Problemi</strong>: interruzioni, audio perso, blocchi, scheda fuori tempo; mix in saturazione; poco spazio sul disco.</li>
-<li><strong>Dispositivi</strong>: scollegati e ricollegati; cambio del dispositivo predefinito di Windows; radio con connessione persa e ritrovata.</li>
+<li><strong>Dispositivi</strong>: scollegati e ricollegati<!--ASIO--> (anche una scheda ASIO ripartita a un'altra frequenza)<!--/ASIO-->; cambio del dispositivo predefinito di Windows; radio con connessione persa e ritrovata.</li>
 <li><strong>Sorgenti e mixer</strong>: volume; guadagno, bilanciamento, ritardo e fase; muta e di nuovo nel mix; sorgenti accese e spente; il monitor in cuffia acceso o spento e le sorgenti messe in cuffia o tolte. Valgono anche nella finestra Mixer e nella finestra del monitor.</li>
 <li><strong>Sottofondo</strong>: pausa, ripresa e brano successivo; sfumatura prima della fermata.</li>
 <li><strong>Scene e video</strong>: cambio di scena; problemi del video.</li>

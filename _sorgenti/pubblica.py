@@ -128,6 +128,9 @@ def note(p, versione):
         pagina = p['pagina'] if lingua == 'it' else 'en/' + p['pagina']
         titolo = f'**{nome_lingua}**' + (f' — {nome(p, lingua)}' if e_addon(p) else '')
         parti.append(f'{titolo}\n\n{testo}\n\n{genera.DOMINIO}{pagina}\n')
+    if p.get('asio'):
+        # Anche la pagina della release parla del programma: il logo e la nota.
+        parti.append(f'---\n![{genera.T["en"]["asio_alt"]}]({genera.DOMINIO}immagini/{genera.LOGO_ASIO})\n\n{genera.MARCHIO_ASIO}\n')
     if p['id'] == 'gram-access':
         parti.append('---\nGram Access usa tgcalls (licenza LGPL): il file gramaccess-tgcalls.patch contiene le sole '
                      'modifiche fatte a tgcalls. / Gram Access uses tgcalls (LGPL license): the file '
