@@ -44,6 +44,22 @@
     <p class="lede">Le versioni dalla più recente. Le stesse novità si leggono nel programma, in Aiuto.</p>
     <p><a href="../studio-player.html">Torna a Studio Player</a></p>
 <section class="release">
+<h2>Versione 1.5.0 del 11 novembre 2026</h2>
+<h3>Novità</h3>
+<ol>
+<li>Studio Player ora funziona con i driver ASIO, quelli delle schede audio professionali: Steinberg ha approvato e firmato l&#x27;accordo che mi permette di usare la tecnologia ASIO nei miei programmi. In Impostazioni, Dispositivi audio, scegli prima il driver (WASAPI condiviso, WASAPI esclusivo o ASIO); con ASIO poi la scheda, le uscite della musica e l&#x27;ingresso dello strumento. Il pulsante Pannello della scheda ASIO apre le regolazioni del driver. Con ASIO il ritardo è solo quello del buffer della tua scheda, e la musica, il metronomo e tutto quello che senti passano dalla stessa scheda, sempre a tempo.</li>
+<li>L&#x27;ingresso dello strumento si sceglie mono (un ingresso) o stereo (una coppia, come sulla scheda: 1 e 2, 3 e 4...), sia con ASIO sia con WASAPI.</li>
+<li>Ascolto dello strumento (con ASIO): Ctrl+Maiusc+U accende e spegne l&#x27;ascolto in cuffia del tuo strumento o della tua voce, insieme al brano, direttamente dentro il driver della scheda. Alt+Maiusc+Freccia su e giù ne regolano il volume.</li>
+<li>Registrazioni (con ASIO): Alt+Maiusc+R, o menu Studio, Registrazioni, apre l&#x27;elenco delle registrazioni del brano, la più nuova in cima. Dentro bastano tasti singoli: R registra e ferma, Spazio fa suonare il brano con la registrazione, le frecce passano da una registrazione all&#x27;altra e la senti subito nello stesso punto del brano, Invio la riascolta dall&#x27;inizio, B fa sentire solo il brano. Ogni registrazione resta legata al punto del brano dove l&#x27;hai suonata, e il programma toglie da solo il ritardo della scheda.</li>
+<li>Nelle registrazioni: Ctrl+Freccia su e giù regolano il volume della registrazione, Alt+Freccia su e giù quello del brano sotto di lei; M la segna come migliore, F2 le dà un nome, Canc la manda nel Cestino, E la esporta, da sola o già mescolata con il brano come lo senti. Con il loop acceso, L sceglie tra un giro solo (registra un giro e si ferma) e tutti i giri (ogni giro diventa una registrazione); C accende il conteggio prima di registrare. Esc non fa uscire, così non succede per sbaglio: si esce con Alt+Maiusc+R.</li>
+<li>Nuova categoria Registrazioni nelle Impostazioni: il loop, cosa succede quando la registrazione finisce (si ferma pronta da sentire, o la riascolti subito), se R a brano fermo fa partire il brano, il conteggio, i volumi di partenza e la correzione del ritardo, se il driver della tua scheda lo dichiara non del tutto giusto. Il suono di inizio e di fine si sceglie negli Annunci.</li>
+<li>Uscite separate (con ASIO): il metronomo con il conteggio, e l&#x27;ascolto dello strumento, possono andare su altre uscite della scheda, per esempio solo in cuffia e non nell&#x27;impianto. In Impostazioni, Dispositivi audio, scegli prima il tipo (come la musica, una coppia stereo o un&#x27;uscita mono) e poi l&#x27;uscita.</li>
+<li>Anche ogni stem e ogni canale di un MIDI può andare sulla sua uscita: nel mixer, sulla riga dello stem, il tasto Applicazioni (o Maiusc+F10) apre il nuovo menu dello stem, con muto, solo, strumento e Uscita: principale, una coppia o un&#x27;uscita mono. La scelta vale per quello stem in tutti i brani, oppure solo per il brano aperto. Per esempio, dal vivo: le basi all&#x27;impianto, la batteria al fonico, il metronomo in cuffia.</li>
+<li>MIDI su un modulo esterno: in Impostazioni, MIDI, Suona i MIDI con sceglie il banco SoundFont, come prima, oppure una porta MIDI di Windows, cioè un modulo sonoro esterno o il driver di un programma. Con la porta Studio Player manda le note al modulo nel momento giusto: pausa, spostamenti, loop, velocità e tono funzionano, e il mixer comanda il modulo (volume, muto, solo, posizione). Lo strumento di un canale si sceglie dall&#x27;elenco General MIDI del modulo, e il Ritardo del modulo lo tiene a tempo con il metronomo.</li>
+<li>Sono novità grandi e nuove: se noti qualcosa che non va, scrivimi senza problemi da Aiuto, Contattami, oppure nel gruppo L&#x27;angolo di HDX. Ogni segnalazione mi aiuta.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Versione 1.4.0 del 10 novembre 2026</h2>
 <h3>Novità</h3>
 <ol>
@@ -199,6 +215,7 @@
 <li>Gli aggiornamenti automatici, la copia di sicurezza delle impostazioni e la guida completa nel menu Aiuto.</li>
 </ol>
 </section>
+    <p class="asio-logo"><img src="../immagini/asio-compatible.png" width="120" height="112" alt="Logo ASIO Compatible"><small>ASIO is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries.</small></p>
   </div>
 </main>
 

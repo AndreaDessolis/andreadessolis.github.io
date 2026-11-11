@@ -44,6 +44,22 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../studio-player.html">Back to Studio Player</a></p>
 <section class="release">
+<h2>Version 1.5.0, November 11, 2026</h2>
+<h3>New</h3>
+<ol>
+<li>Studio Player now works with ASIO drivers, the ones of professional audio interfaces: Steinberg has approved and signed the agreement that allows me to use ASIO technology in my programs. In Settings, Audio devices, first choose the driver (WASAPI shared, WASAPI exclusive or ASIO); with ASIO then the interface, the music outputs and the instrument input. The ASIO card control panel button opens the driver settings. With ASIO the latency is only the buffer of your interface, and the music, the metronome and everything you hear go through the same interface, always in time.</li>
+<li>The instrument input can be mono (one input) or stereo (a pair, as on the interface: 1 and 2, 3 and 4...), both with ASIO and with WASAPI.</li>
+<li>Instrument monitoring (with ASIO): Ctrl+Shift+U turns on and off hearing your instrument or voice in the headphones, together with the song, directly inside the interface driver. Alt+Shift+Up and Down arrow adjust its volume.</li>
+<li>Recordings (with ASIO): Alt+Shift+R, or Study menu, Recordings, opens the list of the song&#x27;s recordings, the newest at the top. Inside, single keys are enough: R records and stops, Space plays the song with the recording, the arrows move from one recording to another and you hear it right away at the same point of the song, Enter plays it back from the beginning, B lets you hear the song only. Every recording stays tied to the point of the song where you played it, and the program removes the interface latency by itself.</li>
+<li>In recordings: Ctrl+Up and Down arrow adjust the recording volume, Alt+Up and Down arrow the volume of the song below it; M marks it as best, F2 gives it a name, Delete sends it to the Recycle Bin, E exports it, alone or already mixed with the song as you hear it. With the loop on, L chooses between one pass only (it records one pass and stops) and all passes (each pass becomes a recording); C turns on the count-in before recording. Esc does not leave, so it cannot happen by mistake: you leave with Alt+Shift+R.</li>
+<li>New Recordings category in Settings: the loop, what happens when the recording ends (it stops ready to be heard, or you hear it right away), whether R with the song stopped starts the song, the count-in, the starting volumes and the latency correction, in case your interface driver declares it not quite right. The start and end sound is chosen in Announcements.</li>
+<li>Separate outputs (with ASIO): the metronome with the count-in, and instrument monitoring, can go to other outputs of the interface, for example only to the headphones and not to the PA. In Settings, Audio devices, first choose the type (same as the music, a stereo pair or a mono output) and then the output.</li>
+<li>Each stem and each channel of a MIDI file can also go to its own output: in the mixer, on the stem row, the Applications key (or Shift+F10) opens the new stem menu, with mute, solo, instrument and Output: main, a pair or a mono output. The choice applies to that stem in all songs, or only to the open song. For example, live: the backing tracks to the PA, the drums to the sound engineer, the metronome in the headphones.</li>
+<li>MIDI on an external module: in Settings, MIDI, Play MIDI with chooses the SoundFont bank, as before, or a Windows MIDI port, that is an external sound module or the driver of a program. With the port Studio Player sends the notes to the module at the right time: pause, seeking, loops, speed and pitch work, and the mixer controls the module (volume, mute, solo, position). A channel&#x27;s instrument is chosen from the module&#x27;s General MIDI list, and the Module latency keeps it in time with the metronome.</li>
+<li>These are big new features: if you notice anything wrong, feel free to write to me from Help, Contact me, or in the L&#x27;angolo di HDX group. Every report helps me.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 1.4.0, November 10, 2026</h2>
 <h3>New</h3>
 <ol>
@@ -199,6 +215,7 @@
 <li>Automatic updates, the backup of the settings and the complete guide in the Help menu.</li>
 </ol>
 </section>
+    <p class="asio-logo"><img src="../../immagini/asio-compatible.png" width="120" height="112" alt="ASIO Compatible logo"><small>ASIO is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries.</small></p>
   </div>
 </main>
 

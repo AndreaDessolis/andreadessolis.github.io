@@ -417,9 +417,12 @@ h2 { margin-top: 2em; }
 <li><kbd>Freccia su</kbd> e <kbd>Freccia giù</kbd>: il volume dello stem (sull'ultima riga, il volume generale);</li>
 <li><kbd>Ctrl+Freccia destra</kbd> e <kbd>Ctrl+Freccia sinistra</kbd>: sposta lo stem a destra o a sinistra;</li>
 <li><kbd>M</kbd>: muto; <kbd>S</kbd>: solo;</li>
-<li><kbd>Inizio</kbd> e <kbd>Fine</kbd>: il primo stem e il volume generale.</li>
+<li><kbd>Inizio</kbd> e <kbd>Fine</kbd>: il primo stem e il volume generale;</li>
+<li>il tasto <kbd>Applicazioni</kbd> (o <kbd>Maiusc+F10</kbd>): il menu dello stem, con muto, solo, lo strumento (per i MIDI) e le uscite.</li>
 </ul>
 <p>Ogni versione ricorda il suo mixer. Le parti separate, rimesse insieme, suonano allo stesso volume del brano originale.</p>
+<p><strong>Le uscite degli stem</strong> (con il driver ASIO). Nel menu dello stem, <strong>Uscita</strong> manda lo stem su altre uscite della stessa scheda: <strong>Principale (con la musica)</strong>, che è quella di partenza, una coppia in <strong>Uscite stereo</strong> o un'uscita sola in <strong>Uscita mono</strong>. La scelta in uso ha la spunta e la riga lo dice, per esempio "Batteria: 80%, uscite 3 e 4". Vale subito, anche mentre suona, e resta a tempo con il resto perché passa dalla stessa scheda. Per esempio, dal vivo: le basi all'impianto, la batteria al fonico su un'altra coppia, il basso su un'uscita sola.</p>
+<p>L'uscita scelta vale per quello stem in tutti i brani (per nome: Batteria, Basso...; per i MIDI il numero del canale). Con <strong>Uscita solo per questo brano</strong> (spuntata) vale solo per il brano aperto; togliendo la spunta il brano torna a seguire la scelta di tutti i brani. Gli stem mandati altrove seguono il volume generale, la pausa e le sfumature, ma non gli effetti della finestra Audio, che restano sull'uscita principale. L'esportazione mette sempre tutto insieme, in un file solo.</p>
 
 <h2 id="midi">9. I file MIDI</h2>
 
@@ -435,6 +438,13 @@ h2 { margin-top: 2em; }
 </ul>
 <p>Con i banchi grandi (per esempio Musyng Kite) e la qualità massima, nei momenti più pieni di un brano il computer può non stare al passo, e il suono salterebbe. Il programma se ne accorge da solo e, solo per quel brano, abbassa la qualità di un gradino (o di due, se non basta): il suono non salta, e la differenza quasi non si sente. Dal brano dopo si riparte dalla qualità che hai scelto. Se vuoi saperlo quando succede, accendi Annuncia quando la qualità si abbassa da sola.</p>
 <p>I banchi scaricati stanno in Dati\SoundFont. Il banco si prepara in sottofondo all'avvio del programma, così il primo MIDI parte subito.</p>
+
+<h3>Un modulo esterno o il driver di un programma</h3>
+<p>Se hai un modulo sonoro esterno (collegato con un'interfaccia MIDI o con il cavo USB), o un programma che si presenta in Windows come porta MIDI d'uscita, i MIDI possono suonare lì invece che con il banco SoundFont. In Impostazioni, MIDI, la prima casella è <strong>Suona i MIDI con</strong>: "Banco SoundFont (dentro il programma)", che è quella di partenza, oppure una delle porte MIDI che vede Windows. Vale per tutti i MIDI. Non si mescolano: con una porta tutto il brano suona sul modulo, e le scelte del banco si nascondono.</p>
+<p>Con una porta Studio Player non fa il suono: manda le note al modulo nel momento giusto, e il suono esce dalle uscite del modulo. Funzionano pausa, spostamenti, loop, velocità e tono (le note trasportate; la batteria no): a ogni spostamento e a ogni giro del loop il programma spegne le note e rimanda al modulo strumenti e controlli com'erano in quel punto, così il brano riparte giusto anche dal mezzo. Non valgono invece gli effetti della finestra Audio e il volume uguale, perché il suono non passa dal programma; l'esportazione in audio usa sempre il banco SoundFont.</p>
+<p>Il mixer (<kbd>Ctrl+Maiusc+X</kbd>) funziona anche sul modulo: volume, muto, solo e posizione di ogni canale arrivano al modulo come comandi MIDI (volume e pan del canale), sopra quelli scritti nel file; anche il volume generale. Nel menu del canale, o con <kbd>I</kbd>, <strong>Strumento</strong> sceglie uno strumento del modulo per numero, dall'elenco General MIDI (sulla batteria i kit: Standard, Room, Power, Electronic, TR-808, Jazz, Brush, Orchestra, SFX); "Strumento del file" torna a quello originale. Le scelte per il modulo si ricordano per ogni brano, a parte da quelle fatte con i banchi SoundFont.</p>
+<p><strong>Ritardo del modulo</strong> (in Impostazioni, MIDI, sotto la porta): ogni modulo ci mette un attimo a suonare una nota. Se con il metronomo acceso le note arrivano dopo il click, alza il ritardo (da 0 a 500 millesimi, a passi di 5) finché non sono insieme: il programma manda le note al modulo prima di tanto, anche dopo il conteggio, gli spostamenti e i giri del loop. Così restano a tempo anche le registrazioni. Il sintetizzatore di Windows di solito vuole un valore alto; un modulo esterno pochi millesimi. Vale subito, anche mentre suona.</p>
+<p>Se la porta scelta non si apre (il modulo è spento o scollegato, o la usa un altro programma), il programma lo dice quando apri il MIDI; nelle Impostazioni la porta resta scelta, con scritto "non collegata".</p>
 
 <h3>Ascoltare e studiare un MIDI</h3>
 <p>Un MIDI si usa come un brano qualsiasi: velocità, tono, loop, marcatori e metronomo funzionano allo stesso modo. Velocità e tono sono perfetti, perché cambiano le note e non il suono; la batteria non cambia tono.</p>
@@ -582,6 +592,49 @@ h2 { margin-top: 2em; }
 <p>Un compressore che avvicina le parti piane e quelle forti: per ascoltare a volume basso senza perdere i passaggi delicati e senza sobbalzare nei pezzi forti. Leggero, medio o forte.</p>
 <p>L'ordine degli effetti è: equalizzatore, stereo e canali, volume uguale, ascolto notturno e, per ultimo, il limitatore.</p>
 
+<h3>Ascolto dello strumento</h3>
+<p><kbd>Ctrl+Maiusc+U</kbd> (menu Audio, Ascolto dello strumento) accende e spegne l'ascolto in cuffia del tuo strumento o della tua voce, insieme al brano. Funziona con il driver audio ASIO: l'ingresso scelto in Impostazioni, Dispositivi audio (mono al centro, oppure stereo) passa direttamente alle uscite della musica, dentro il driver della scheda. Il ritardo è solo quello del buffer scelto nel pannello della scheda: con un buffer piccolo non lo senti.</p>
+<p><kbd>Alt+Maiusc+Freccia su</kbd> e <kbd>Alt+Maiusc+Freccia giù</kbd> alzano e abbassano il volume dello strumento, come <kbd>Alt+Freccia su</kbd> e <kbd>Alt+Freccia giù</kbd> fanno per il brano. Il volume si ricorda e si sceglie anche in Impostazioni, Dispositivi audio; l'ascolto invece parte sempre spento.</p>
+<p>Se la tua scheda ha già l'ascolto diretto acceso, ti senti due volte (una delle due un poco in ritardo): spegni uno dei due.</p>
+
+<h3>Registrare sopra il brano</h3>
+<p>Puoi registrare quello che suoni (o canti) sopra il brano, riascoltarti insieme al brano e confrontare le registrazioni. Funziona con il driver audio ASIO, con l'ingresso scelto in Impostazioni, Dispositivi audio (mono o stereo).</p>
+<p>Tutto si fa nelle <strong>Registrazioni</strong>, come l'accordatore e le tablature: scegli il brano nella lista e premi <kbd>Alt+Maiusc+R</kbd> (menu Studio, Registrazioni). Se il brano non è ancora aperto si apre, fermo. La lista dei brani si nasconde e al suo posto c'è l'elenco delle registrazioni di quel brano, la più nuova in cima. Per uscire premi di nuovo <kbd>Alt+Maiusc+R</kbd>, o scegli Esci dalle registrazioni nel menu Registrazioni. <kbd>Esc</kbd> non fa uscire, così non succede per sbaglio.</p>
+<p>Nell'elenco i tasti sono singoli, a portata di mano:</p>
+<ul>
+<li><kbd>R</kbd>: registra. Se il brano è fermo parte, con il conteggio se l'hai acceso con <kbd>C</kbd>. Premi di nuovo <kbd>R</kbd> per finire: il brano si ferma e torna dove è cominciata la registrazione, con il cursore già sulla registrazione nuova; premi <kbd>Spazio</kbd> e la senti subito insieme al brano. Se preferisci, in Impostazioni, Registrazioni, puoi farla ripartire da sola.</li>
+<li><kbd>Spazio</kbd>: il brano suona o va in pausa, insieme alla registrazione su cui sei.</li>
+<li><kbd>Freccia su</kbd> e <kbd>Freccia giù</kbd>: passi da una registrazione all'altra e la senti subito, nello stesso punto del brano, se quel punto è dentro la registrazione; altrimenti dal suo inizio. Così confronti lo stesso passaggio.</li>
+<li><kbd>Invio</kbd>: riascolti la registrazione su cui sei, dal suo inizio.</li>
+<li><kbd>B</kbd>: senti solo il brano; premi di nuovo <kbd>B</kbd> e torna la registrazione.</li>
+<li><kbd>Ctrl+Freccia su</kbd> e <kbd>Ctrl+Freccia giù</kbd>: il volume della registrazione.</li>
+<li><kbd>Alt+Freccia su</kbd> e <kbd>Alt+Freccia giù</kbd>: il volume del brano sotto la registrazione. Senza registrazioni è il volume di sempre.</li>
+<li><kbd>Alt+Maiusc+Freccia su</kbd> e <kbd>Alt+Maiusc+Freccia giù</kbd>: il volume dello strumento in cuffia, come fuori.</li>
+<li><kbd>M</kbd>: segni la registrazione come migliore, o togli il segno.</li>
+<li><kbd>F2</kbd>: le dai un nome (vuoto per toglierlo).</li>
+<li><kbd>Canc</kbd>: la elimini; dopo la conferma il file va nel Cestino di Windows, da dove puoi recuperarlo.</li>
+<li><kbd>E</kbd>: la esporti (vedi qui sotto).</li>
+<li><kbd>L</kbd>: con il loop acceso, scegli tra "Un giro solo" e "Tutti i giri" (vedi qui sotto).</li>
+<li><kbd>C</kbd>: accendi o spegni il conteggio prima di registrare. È separato dal conteggio prima dei brani (<kbd>F7</kbd>): puoi averlo quando registri e non quando ascolti.</li>
+</ul>
+<p>I due volumi si ricordano per ogni registrazione, e l'esportazione li usa. Tutti gli altri tasti del programma funzionano come sempre: per esempio <kbd>F9</kbd>, <kbd>F10</kbd>, <kbd>F11</kbd> e <kbd>F12</kbd> per il loop, <kbd>Ctrl+U</kbd> e <kbd>Ctrl+Maiusc+U</kbd>.</p>
+<p>Quando la registrazione comincia senti un suono breve, senza parole, per non disturbarti mentre suoni; quando finisce un altro suono e il suo numero, per esempio "Registrazione 4". Puoi cambiarli in Impostazioni, Annunci, alla voce "Registrazioni: comincia e finisce" (per esempio solo il suono).</p>
+<p>La registrazione finisce da sola anche quando il brano finisce (e non si passa al brano dopo) e quando ti sposti nel brano o cambi velocità. Se metti in pausa mentre registri, mentre il brano è fermo non si registra niente; quando riprendi, la registrazione continua da dove era.</p>
+<p><strong>Con il loop acceso</strong> scegli con <kbd>L</kbd> come registrare; le due scelte si ricordano anche chiudendo il programma.</p>
+<p>Con "Un giro solo" <kbd>R</kbd> parte sempre dal punto A (anche se il brano suonava già a metà del loop), registra un giro intero e alla fine si ferma da solo: il brano torna ad A con il cursore sulla registrazione nuova, pronta da sentire con <kbd>Spazio</kbd>. Premi di nuovo <kbd>R</kbd> per un altro tentativo.</p>
+<p>Con "Tutti i giri" ogni giro diventa una registrazione sua, finché non premi di nuovo <kbd>R</kbd>: all'inizio di ogni giro senti il suono e il numero della registrazione nuova; alla fine "Registrazioni da 4 a 9". La pausa tra i giri e il conteggio non entrano nelle registrazioni: ogni giro comincia esattamente da A. Se fermi a metà di un giro, anche quel pezzo resta. Così suoni più volte di fila lo stesso passaggio e poi, con le frecce, scegli il giro migliore.</p>
+<p>Ogni registrazione resta legata al punto del brano in cui l'hai suonata: Studio Player sa quale punto del brano usciva mentre entrava il tuo suono, e toglie da solo il ritardo della scheda che dichiara il driver. Le registrazioni si salvano in FLAC nella cartella <strong>Registrazioni</strong>, dentro quella di Studio Player, una sottocartella per brano.</p>
+<p>Una registrazione si sente solo alla velocità e al tono a cui l'hai registrata: se il brano andava più piano, il programma rimette da solo quella velocità e te lo dice. Uscendo dalle registrazioni si torna a sentire solo il brano, alla velocità e al tono di prima. Nelle registrazioni, quando il brano finisce ci si ferma: non si passa al brano dopo. Mentre registri, <kbd>Invio</kbd> e <kbd>B</kbd> non fanno niente, per non interrompere la registrazione.</p>
+<p><strong>Esportare una registrazione</strong> (<kbd>E</kbd>). La finestra è quella di "Esporta il brano come lo senti", con queste differenze:</p>
+<ul>
+<li><strong>Cosa esportare</strong>: "La registrazione con il brano", cioè il mix finale: il brano come lo senti (la versione con gli stem e il mixer) dal punto in cui comincia la registrazione a quello in cui finisce, con la registrazione sopra e i due volumi che hai scelto; oppure "Solo la registrazione", com'è.</li>
+<li>La velocità e il tono sono sempre quelli a cui hai registrato: se hai suonato al 70%, il mix esce al 70%.</li>
+<li><strong>Con gli effetti della finestra Audio e il volume uguale</strong> (solo se accesi): valgono per il brano, non per la registrazione.</li>
+<li><strong>Formato</strong>, <strong>Qualità</strong> e <strong>Dove salvare</strong>: gli stessi di sempre.</li>
+</ul>
+<p>Il file si chiama come il brano, con il numero della registrazione e il suo nome se gliel'hai dato, per esempio "Nome del brano - Registrazione 5 - prova con il plettro.flac".</p>
+<p>Se riascoltando ti senti sempre un po' in ritardo o in anticipo rispetto al brano, il driver della tua scheda dichiara un ritardo non del tutto giusto: correggilo in Impostazioni, Registrazioni, Correzione della registrazione. Se ti senti in ritardo alza il valore, se ti senti in anticipo abbassalo. Vale per le registrazioni che fai dopo.</p>
+
 <h3>Convertire i file</h3>
 <p><kbd>Alt+Maiusc+W</kbd> (Studio, Converti ed esporta, Converti file) apre il convertitore. La finestra parte vuota: i file li scegli tu, con "Aggiungi file..." e "Aggiungi cartella..." (tutti i brani della cartella, anche nelle sottocartelle). Dai video si prende l'audio. Nell'elenco, <kbd>Canc</kbd> toglie il file scelto dall'elenco: il file sul disco non si tocca.</p>
 <ul>
@@ -644,14 +697,40 @@ h2 { margin-top: 2em; }
 <p>L'icona nell'area di notifica dice il brano che suona. Invio, o il doppio clic, riporta su la finestra. Il suo menu (Applicazioni, o il clic destro) ha: Mostra Studio Player, Pausa e Ferma (o Riproduci, se nessun brano suona), Brano successivo e precedente, ed Esci. In Windows, l'area di notifica si raggiunge con <kbd>Windows+B</kbd>.</p>
 
 <h3>Dispositivi audio</h3>
-<p>Tutte le schede audio in un posto solo.</p>
+<p>Tutte le schede audio in un posto solo. Per prima cosa scegli il driver audio: sotto compaiono solo le scelte di quel driver.</p>
+<ul>
+<li><strong>Driver audio (per la musica e l'ingresso)</strong>: il modo in cui Studio Player parla con la scheda.
+<ul>
+<li>WASAPI condiviso (consigliato): il sistema audio di Windows. La scheda resta anche agli altri programmi e allo screen reader.</li>
+<li>WASAPI esclusivo (bit-perfect): la scheda è tutta per Studio Player e riceve il brano identico al file. Mentre un brano suona, lo screen reader su quella scheda non parla: usalo con una scheda diversa da quella della sintesi vocale. Vale solo per la musica: l'ingresso resta condiviso.</li>
+<li>ASIO®: il driver delle schede audio professionali, che si installa con la scheda. I campioni vanno diretti alla scheda, con pochissimo ritardo. Con ASIO si usa una scheda sola, per la musica e per l'ingresso.</li>
+</ul></li>
+</ul>
+<p>Con WASAPI (condiviso o esclusivo):</p>
 <ul>
 <li><strong>Uscita della musica</strong>: la scheda su cui senti i brani.</li>
-<li><strong>Driver d'uscita della musica</strong>: WASAPI, il sistema audio di Windows. WASAPI condiviso (consigliato): la scheda resta anche agli altri programmi e allo screen reader. WASAPI esclusivo (bit-perfect): la scheda è tutta per Studio Player e riceve il brano identico al file. In esclusivo lo screen reader su quella scheda non parla mentre un brano suona: usalo con una scheda diversa da quella della sintesi vocale.</li>
-<li><strong>Uscita dei suoni del programma</strong>: dove senti i suoni degli annunci; il loro volume è nella categoria Suoni.</li>
 <li><strong>Ingresso</strong>: il microfono o la scheda audio da cui Studio Player ascolta il tuo strumento o la tua voce.</li>
-<li><strong>Canale d'ingresso</strong>: se la scheda ha più ingressi, quello dove è collegato lo strumento, per esempio Ingresso 1; oppure tutti gli ingressi insieme.</li>
-<li><strong>Prova il livello dell'ingresso</strong>: ascolta per 3 secondi, mentre suoni o parli, e ti dice se il suono arriva bene, è troppo basso o troppo alto, con il picco in dB. Se Windows non permette di usare il microfono, il programma ti dice dove accenderlo.</li>
+<li><strong>Tipo d'ingresso</strong>: Mono, per uno strumento o un microfono su un ingresso solo; Stereo, per una coppia di ingressi, sinistro e destro (per esempio una tastiera).</li>
+<li><strong>Canale d'ingresso</strong>: l'ingresso dove è collegato lo strumento, per esempio Ingresso 1; con lo stereo la coppia, per esempio Ingressi 1 e 2.</li>
+</ul>
+<p><img src="../immagini/asio-compatible.png" alt="Logo ASIO Compatible" width="120" height="112"></p>
+<p>ASIO is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries.</p>
+<p>Con ASIO:</p>
+<ul>
+<li><strong>Scheda ASIO</strong>: le schede con un driver ASIO installato.</li>
+<li><strong>Uscite della musica</strong>: le due uscite della scheda dove senti i brani, sinistra e destra, con i nomi che dà il driver (per esempio Uscite 1 e 2).</li>
+<li><strong>Metronomo e conteggio</strong>: "Come la musica" (di partenza), "Uscite stereo (una coppia)" oppure "Uscita mono (una sola)". Con stereo o mono compare sotto <strong>Uscite del metronomo</strong>, con solo le uscite di quel tipo della stessa scheda (per esempio Uscite 3 e 4, oppure Uscita 3). Così senti il metronomo e il conteggio solo in cuffia e non nell'impianto, sempre a tempo con la musica, perché passano dalla stessa scheda. Vale subito, anche mentre suona.</li>
+<li><strong>Ascolto dello strumento</strong> e <strong>Uscite dello strumento</strong>: lo stesso per l'ascolto dello strumento (<kbd>Ctrl+Maiusc+U</kbd>), per esempio dove hai la cuffia.</li>
+<li><strong>Tipo d'ingresso</strong>: Mono o Stereo, come con WASAPI.</li>
+<li><strong>Ingresso dello strumento</strong>: l'ingresso della scheda dove è collegato lo strumento, con il nome che dà il driver (per esempio Ingresso 1, Mic/Line 1); con lo stereo la coppia, come sono sulla scheda (per esempio Ingressi 1 e 2).</li>
+<li><strong>Volume dell'ascolto dello strumento</strong>: quanto forte senti lo strumento quando accendi l'ascolto con <kbd>Ctrl+Maiusc+U</kbd> (vedi Ascolto dello strumento, nel capitolo sull'audio).</li>
+<li><strong>Pannello della scheda ASIO</strong>: apre il pannello del produttore della scheda, dove si scelgono la frequenza e la grandezza del buffer. La musica suona alla frequenza scelta lì: se il brano ne ha un'altra, Studio Player la converte alla qualità più alta.</li>
+</ul>
+<p>Se un altro programma, per esempio Reaper, può usare la stessa scheda ASIO nello stesso momento dipende dal driver della scheda.</p>
+<p>Con tutti i driver:</p>
+<ul>
+<li><strong>Prova il livello dell'ingresso</strong>: ascolta per 3 secondi, mentre suoni o parli, e ti dice se il suono arriva bene, è troppo basso o troppo alto, con il picco in dB; con lo stereo conta il lato più forte, così ti accorgi se uno dei due è troppo alto. Se Windows non permette di usare il microfono, il programma ti dice dove accenderlo.</li>
+<li><strong>Uscita dei suoni del programma</strong>: dove senti i suoni degli annunci; usa sempre WASAPI, anche se la musica va su ASIO. Il loro volume è nella categoria Suoni.</li>
 </ul>
 
 <h3>Riproduzione</h3>
@@ -687,7 +766,7 @@ h2 { margin-top: 2em; }
 <p>Lo stato del motore stem, i pulsanti per installarlo, reinstallarlo o toglierlo, e una nota su come funziona.</p>
 
 <h3>MIDI</h3>
-<p>Il banco in uso, la qualità del suono, riverbero e chorus, aggiungere e togliere banchi, e i banchi consigliati da scaricare.</p>
+<p>Suona i MIDI con (il banco SoundFont o una porta MIDI d'uscita, vedi Un modulo esterno, nel capitolo sui MIDI); con il banco: il banco in uso, la qualità del suono, riverbero e chorus, aggiungere e togliere banchi, e i banchi consigliati da scaricare.</p>
 
 <h3>Testo delle canzoni</h3>
 <ul>
@@ -704,6 +783,18 @@ h2 { margin-top: 2em; }
 <li><strong>Volume del tic e della nota di riferimento</strong>.</li>
 <li><strong>Entrando, se c'è una tablatura aperta, usa la sua accordatura</strong>: accesa di partenza.</li>
 </ul>
+
+<h3>Registrazioni</h3>
+<p>Le scelte delle registrazioni sopra il brano (vedi Registrare sopra il brano, nel capitolo sull'audio). Due si cambiano anche dentro le Registrazioni, con <kbd>L</kbd> e <kbd>C</kbd>.</p>
+<ul>
+<li><strong>Con il loop</strong>: tutti i giri, cioè ogni giro è una registrazione (di partenza), oppure un giro solo, poi si ferma.</li>
+<li><strong>Quando la registrazione finisce</strong>: il brano si ferma dove è cominciata e la senti con <kbd>Spazio</kbd> (di partenza), oppure la riascolti subito, con il brano.</li>
+<li><strong>R con il brano fermo</strong>: fa partire il brano e registra (di partenza), oppure non fa niente, così <kbd>R</kbd> registra solo mentre il brano suona.</li>
+<li><strong>Conteggio prima di registrare</strong>: spento di partenza. È separato dal conteggio prima dei brani.</li>
+<li><strong>Volume di partenza di una registrazione nuova</strong> e <strong>del brano sotto</strong>: da 0 a 100, di partenza 100. Valgono per le registrazioni che fai dopo; ognuna poi ha i suoi volumi.</li>
+<li><strong>Correzione della registrazione</strong>: da -100 a +100 millesimi, di base 0. Sposta le registrazioni che fai: alzala se riascoltando ti senti in ritardo sul brano, abbassala se ti senti in anticipo.</li>
+</ul>
+<p>Il suono e le parole all'inizio e alla fine si scelgono in Annunci, alla voce "Registrazioni: comincia e finisce".</p>
 
 <h3>Video</h3>
 <ul>
@@ -738,7 +829,7 @@ h2 { margin-top: 2em; }
 <h2 id="problemi">13. Problemi e domande frequenti</h2>
 
 <h3>Lo screen reader non parla mentre suona un brano</h3>
-<p>Probabilmente il driver d'uscita della musica è WASAPI esclusivo e la musica esce dalla stessa scheda della sintesi vocale. Scegli WASAPI condiviso in Impostazioni, Dispositivi audio, oppure scegli per la musica una scheda diversa.</p>
+<p>Probabilmente il driver audio è WASAPI esclusivo e la musica esce dalla stessa scheda della sintesi vocale. Scegli WASAPI condiviso in Impostazioni, Dispositivi audio, oppure scegli per la musica una scheda diversa.</p>
 
 <h3>Il modo esclusivo non funziona</h3>
 <p>Alcune schede hanno il modo esclusivo spento in Windows: il programma te lo dice e ti spiega dove accenderlo (Pannello di controllo, Audio, proprietà della scheda, scheda Avanzate). Se la scheda è occupata da un altro programma, Studio Player usa il condiviso.</p>
