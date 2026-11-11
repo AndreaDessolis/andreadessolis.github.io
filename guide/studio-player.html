@@ -451,7 +451,7 @@ h2 { margin-top: 2em; }
 <p>Ogni canale del file è come uno stem: nel mixer (<kbd>Ctrl+Maiusc+X</kbd>) trovi i canali con il nome della famiglia di strumenti, e li regoli come gli stem. Nel mixer, <kbd>I</kbd> cambia lo strumento del canale: scegli un banco qualsiasi tra quelli che hai e uno strumento, oppure "Strumento del file" per tornare a quello originale. Le scelte si ricordano per ogni brano.</p>
 
 <h3>Tablature</h3>
-<p>Le tablature stanno nella finestra principale: <kbd>Ctrl+G</kbd> entra ed esce. Si aprono con <kbd>Ctrl+O</kbd> i file di Guitar Pro, dalla versione 3 alla 8. Con <kbd>Tab</kbd> passi tra Tablatura, Tracce e Sezioni; nelle ultime due, <kbd>Invio</kbd> sceglie.</p>
+<p>Le tablature stanno nella finestra principale: <kbd>Ctrl+G</kbd> entra ed esce. Si aprono con <kbd>Ctrl+O</kbd> i file di Guitar Pro, dalla versione 3 alla 8, e gli spartiti MusicXML (.musicxml e .mxl), il formato standard che usano i programmi di notazione come MuseScore. In un MusicXML ogni strumento è una traccia, il pianoforte due (mano destra e sinistra); le note si leggono con il loro nome e l'ottava, e corda e tasto dove lo spartito ha anche la tablatura. Ci sono anche gli accordi e le parole, se lo spartito li scrive. Con <kbd>Tab</kbd> passi tra Tablatura, Tracce e Sezioni; nelle ultime due, <kbd>Invio</kbd> sceglie.</p>
 <p>Una tablatura si può anche mettere nella lista dei brani, con Apri file o Aggiungi file o con una cartella: <kbd>Invio</kbd> entra nelle tablature e la apre, e con <kbd>Ctrl+G</kbd> torni alla lista. Se la lista va avanti da sola, le tablature vengono saltate.</p>
 <p>La Tablatura si percorre come il manico:</p>
 <ul>
@@ -463,14 +463,16 @@ h2 { margin-top: 2em; }
 <li><kbd>Ctrl+Freccia destra</kbd> e <kbd>Ctrl+Freccia sinistra</kbd>: la sezione dopo e quella prima;</li>
 <li><kbd>F2</kbd> ridice l'evento, <kbd>D</kbd> lo dice con tutti i dettagli, <kbd>V</kbd> cambia voce se la traccia ne ha più di una.</li>
 </ul>
-<p><kbd>Invio</kbd> fa partire tutte le tracce dal punto in cui sei, <kbd>Ctrl+P</kbd> mette in pausa e, se la musica è ferma, la fa partire dal punto in cui sei. Quando ti fermi, il cursore è dove è arrivata la musica. Mentre tutto il brano suona, anche <kbd>Spazio</kbd> mette in pausa; da fermo, <kbd>Spazio</kbd> fa sentire solo l'evento sotto il cursore e <kbd>Maiusc+Spazio</kbd> la sua battuta, con la sola traccia scelta. Spostandoti con le frecce senti la nota o l'accordo della sola traccia scelta, e la corda su cui sei va sulla nota; su un accordo, sulla sua prima nota. Puoi spegnere questo suono in Impostazioni, categoria Tablature.</p>
+<p><kbd>Invio</kbd> fa partire tutte le tracce dal punto in cui sei, <kbd>Ctrl+P</kbd> mette in pausa e, se la musica è ferma, la fa partire dal punto in cui sei. Quando ti fermi, il cursore è dove è arrivata la musica. Mentre tutto il brano suona, anche <kbd>Spazio</kbd> mette in pausa; da fermo, <kbd>Spazio</kbd> fa sentire solo l'evento sotto il cursore e <kbd>Maiusc+Spazio</kbd> la sua battuta, con la sola traccia scelta. Spostandoti con le frecce senti la nota o l'accordo della sola traccia scelta, e la corda su cui sei va sulla nota; su un accordo, sulla sua prima nota. Se il brano suonava, si ferma: anche quando arrivi su una pausa, dove non c'è niente da sentire. Puoi spegnere questo suono in Impostazioni, categoria Tablature.</p>
 <p>Sulla griglia hai anche questi tasti, senza passare dal mixer né dalle Tracce:</p>
 <ul>
 <li><kbd>T</kbd> e <kbd>Maiusc+T</kbd>: la traccia dopo e quella prima, restando alla stessa battuta. Se il brano suona, il cursore continua a seguirlo;</li>
 <li><kbd>M</kbd>: muto della traccia scelta, o di nuovo attiva;</li>
 <li><kbd>S</kbd>: solo della traccia scelta, o solo tolto;</li>
 <li><kbd>R</kbd>: toglie tutti i muti e i solo;</li>
-<li><kbd>N</kbd>: il nome delle note dell'evento, con accordatura e capotasto;</li>
+<li><kbd>N</kbd>: il nome delle note dell'evento, con accordatura e capotasto (se la traccia si legge come note, dice invece corda e tasto);</li>
+<li><kbd>Maiusc+N</kbd>: la traccia si legge come <strong>note</strong> ("Re 4, croma": il nome con l'ottava, in un accordo dalla più grave alla più acuta) oppure come <strong>tablatura</strong> (corda e tasto). Di partenza chitarra e basso si leggono come tablatura, tutti gli altri strumenti (pianoforte, archi, fiati, organo, synth, voce) come note: nei file Guitar Pro ogni strumento è scritto come corde e tasti, e il programma ne ricava le note. La scelta si ricorda per ogni traccia di quel file. La batteria dice sempre il nome dei colpi (cassa, rullante...);</li>
+<li><kbd>Punto</kbd> e <kbd>Virgola</kbd>: ti muovi dentro la riga, un pezzo alla volta, invece di sentirla tutta insieme. Il punto va al pezzo dopo, la virgola a quello prima, nell'ordine: la battuta (se comincia lì), l'accordo, le note ("Corda 3", "Tasto 5"; oppure "Re 4" se la traccia si legge come note; sulla batteria il nome di ogni colpo), la durata, ogni tecnica da sola, e poi pennata, testo, sillaba e sezione. Dopo l'ultimo pezzo senti "Fine della riga", prima del primo "Inizio della riga". Passando a un altro evento si riparte dal primo pezzo;</li>
 <li><kbd>E</kbd>: accende o spegne le tecniche dette insieme alla nota;</li>
 <li><kbd>A</kbd>: accende o spegne il suono mentre ti sposti.</li>
 </ul>
