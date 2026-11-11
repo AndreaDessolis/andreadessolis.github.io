@@ -156,7 +156,13 @@ h2 { margin-top: 2em; }
 <li><strong>Scalette recenti</strong>: le ultime scalette aperte o salvate.</li>
 <li><kbd>Ctrl+Maiusc+S</kbd>, Salva: salva la lista nel file della scaletta da cui viene; se è nuova chiede il nome.</li>
 <li><strong>Salva con nome</strong>: salva la lista in un file nuovo.</li>
+<li><strong>Esporta come testo</strong>: crea un file di testo con il nome della scaletta, i brani numerati con titolo, artista e durata, e in fondo il totale. Comodo da stampare o da mandare agli altri musicisti.</li>
+<li><strong>Copia i brani in una cartella</strong>: copia tutti i brani in una cartella che scegli, per esempio una chiavetta, nell'ordine della lista e con il numero davanti al nome ("01 - Brano.mp3"). La copia è quella di Windows, con l'avanzamento e le sue domande se un file c'è già. Nella stessa cartella mette anche la scaletta con i nomi nuovi, così la apri da lì anche su un altro computer. I brani che non trova li salta e te lo dice.</li>
 </ul>
+<p>Con la lista vuota, nel sottomenu Scaletta restano solo Apri scaletta e Scalette recenti: le altre voci compaiono quando ci sono dei brani.</p>
+<p>Le scalette si aprono e si salvano di partenza nella cartella <strong>Scalette</strong>, dentro la cartella Dati del programma; il programma la crea la prima volta. Puoi sceglierne un'altra in Impostazioni, categoria Scaletta.</p>
+<p>Quando apri o salvi una scaletta, il suo nome va nel titolo della finestra, per esempio "Andrea - Studio Player"; svuotando la lista torna "Studio Player". In Impostazioni, categoria Scaletta, scegli se il nome va prima o dopo, o se non va.</p>
+<p>Se cambi la scaletta aperta (aggiungi, togli, sposti o riordini dei brani) e poi apri un'altra scaletta al posto della lista, apri dei file al posto della lista, svuoti la lista o esci dal programma, Studio Player ti chiede se salvare le modifiche: Sì le salva, No va avanti senza salvarle, Annulla non fa niente. Se rimetti i brani com'erano, non chiede.</p>
 <p>Studio Player apre anche le scalette fatte con altri lettori, compresi gli indirizzi "file:///" che scrivono alcuni programmi. Gli indirizzi internet (radio e flussi) vengono saltati.</p>
 <p>Una scaletta riaperta riprende dal brano a cui eri arrivato, anche se nel frattempo l'hai riordinata.</p>
 
@@ -185,6 +191,27 @@ h2 { margin-top: 2em; }
 
 <h3>Suona dopo</h3>
 <p><kbd>Ctrl+Invio</kbd> nell'elenco mette il brano scelto in coda: suonerà subito dopo quello di adesso, senza cambiare l'ordine della lista. Puoi metterne in coda più di uno.</p>
+
+<h3>Il menu contestuale della lista</h3>
+<p>Nell'elenco dei brani, il tasto <kbd>Applicazioni</kbd> o <kbd>Maiusc+F10</kbd> apre il menu contestuale. Vale per il brano su cui sei o, se ne hai scelti di più con <kbd>Maiusc</kbd> e le frecce o con <kbd>Ctrl+A</kbd>, per tutti quelli scelti:</p>
+<ul>
+<li><strong>Aggiungi alla scaletta</strong>: l'elenco delle tue scalette salvate (quelle nella cartella delle scalette e le recenti). Scegline una e i brani vanno in fondo, senza aprirla; quelli che c'erano già non si aggiungono due volte, e il programma ti dice com'è andata. La scaletta aperta in quel momento non c'è, perché i suoi brani sono già nella lista. In fondo, <strong>Nuova scaletta</strong> crea una scaletta con i soli brani scelti, lasciando la lista com'è. Il file della scaletta non si riscrive: si aggiungono solo le righe nuove, e tutto quello che c'era resta com'era.</li>
+<li><strong>Riproduci</strong>, <strong>Suona dopo</strong> e <strong>Apri la cartella del brano</strong>.</li>
+<li><strong>Separa gli stem</strong>: mette in coda la separazione dei brani scelti (vedi il capitolo sugli stem).</li>
+<li><strong>Togli dalla lista</strong>: come <kbd>Canc</kbd>, con la domanda.</li>
+<li><strong>Proprietà</strong>: apre la finestra con tutti i dati del brano.</li>
+</ul>
+
+<h3>Le Proprietà di un brano</h3>
+<p>La finestra Proprietà ha un campo in sola lettura: lo scorri con le frecce, una riga per ogni dato nella forma "Etichetta: valore", divisa in gruppi. Ci sono solo i dati che il brano ha:</p>
+<ul>
+<li><strong>File</strong>: nome, cartella, formato, dimensione e data di modifica, oppure che il file non c'è più;</li>
+<li><strong>Brano</strong>: titolo, artista, album, anno, genere, compositore, numero della traccia e commento, se sono scritti nel file; per i brani audio anche il <strong>Testo</strong>: se c'è, se è a tempo, quante righe ha e da dove viene (il file LRC accanto, dentro il file, trovato su internet, scelto da te), oppure se nel file ci sono le parole ma senza tempi;</li>
+<li><strong>Audio</strong>: durata, codifica, frequenza, bit, canali, velocità dei dati e se c'è il video;</li>
+<li><strong>MIDI</strong>, per i file MIDI: durata, tempo, misura (e se cambiano durante il brano), i canali con i loro strumenti, se c'è il testo del karaoke e i marcatori del file;</li>
+<li><strong>Studio</strong>: quello che il programma ricorda del brano, cioè velocità e tono, loop salvati, marcatori, versioni degli stem e registrazioni.</li>
+</ul>
+<p>Sotto ci sono i pulsanti <strong>Copia tutto</strong>, che copia tutti i dati negli appunti, <strong>Apri la cartella del brano</strong> e <strong>Chiudi</strong> (anche <kbd>Esc</kbd>). Con più brani scelti la finestra fa il riepilogo: quanti sono, la durata totale, lo spazio che occupano e i formati.</p>
 
 <h3>Ripeti e ordine casuale</h3>
 <ul>
@@ -399,6 +426,8 @@ h2 { margin-top: 2em; }
 <li><strong>Otterrai</strong>: l'elenco degli stem che avrai.</li>
 </ul>
 <p>Premi Separa. La separazione va in sottofondo: puoi continuare ad ascoltare e studiare. <kbd>Ctrl+Maiusc+E</kbd> dice a che punto è; dal menu Studio, Stem, la puoi annullare. Se chiedi altre separazioni mentre una lavora, vanno in coda.</p>
+<p>Per separare molti brani in una volta: dal menu Studio, Stem, <strong>Separa gli stem di tutti i brani</strong> prende tutta la lista; dal menu contestuale della lista, <strong>Separa gli stem</strong> prende i brani scelti (con <kbd>Ctrl+A</kbd> tutti). La finestra si apre una volta sola, con il tempo previsto per tutti insieme, e i brani vanno in coda nell'ordine della lista, uno dopo l'altro. Il programma salta i MIDI, i brani già separati con la stessa scelta, quelli già in coda e i file che non trova, e alla fine ti dice quanti ne ha messi in coda e quanti ne ha saltati. Con il processore ogni brano richiede di solito un paio di minuti: una scaletta lunga può richiedere più di un'ora.</p>
+<p>Se esci dal programma con delle separazioni ancora da fare, Studio Player ti chiede se uscire lo stesso, perché uscendo si annullano.</p>
 <p>Gli stem si salvano nella cartella Dati\Stem, in una cartella con il nome del brano e della separazione. Il programma riconosce il brano dal suo contenuto, non dal nome: se copi Dati\Stem in un altro Studio Player, gli stem funzionano anche lì.</p>
 
 <h3>Ascoltare gli stem: le versioni</h3>
@@ -557,6 +586,7 @@ h2 { margin-top: 2em; }
 <p>I tempi dei testi LRC sbagliano spesso di un secondo, avanti o indietro. Con <strong>Metti a tempo le righe sulla voce del cantante</strong>, accesa in Impostazioni, categoria Karaoke, quando la base è pronta il programma ascolta lo stem della voce e aggancia ogni riga al punto in cui il cantante attacca davvero, se è entro un secondo e mezzo: così l'anticipo che hai scelto è quello vero. Le righe senza un attacco chiaro vicino restano dove sono. Se il testo è di un'altra registrazione del brano, con le parti in punti diversi, questo non basta a rimetterlo a tempo: quando il testo e la voce non vanno d'accordo in nessun modo, il programma te lo dice. Il testo scritto dentro il file, invece, è fatto apposta per quel file: i suoi tempi sono già giusti e il programma non li tocca.</p>
 <p>Per un testo che non si trova, o che è di un'altra versione, c'è <kbd>Ctrl+Maiusc+F</kbd>: vale per il brano della coda su cui sei, o per quello che suona. Titolo e artista sono già scritti, li correggi se servono e premi <kbd>Invio</kbd>. Nei risultati ci sono solo le versioni con i tempi, con album e durata: la prima è quella con la durata più vicina al tuo brano. <kbd>Invio</kbd> su un risultato lo usa subito, anche se la canzone sta suonando, e lo ricorda per la volta dopo: il testo che scegli tu vale sopra tutti gli altri. Se accanto al brano c'è già un file LRC, il programma ti chiede se aggiornare anche quello.</p>
 <p>Nel menu Karaoke, <strong>Salva il testo come LRC</strong> salva il testo del brano in un file LRC accanto al brano, con lo stesso nome: per esempio "Rosanna.lrc" accanto a "Rosanna.mp3". Così il testo resta con il brano se sposti la cartella, e lo leggono anche gli altri lettori, per esempio quello del telefono. Vale per il brano della coda su cui sei, o per quello che suona; del brano che suona salva le righe come le stai cantando, già messe a tempo sulla voce. Funziona anche con i KAR e i MIDI, con il testo pulito come l'hai scelto. Se il file LRC c'è già, il programma ti chiede prima se sostituirlo.</p>
+<p>Anche fuori dal karaoke, mentre ascolti, il programma legge il testo: dei MIDI e dei KAR sempre, dei brani audio solo quando i tempi sono già giusti per quel file, cioè il testo a tempo scritto dentro il file o il file LRC salvato da Studio Player con Salva il testo come LRC. Gli altri testi (un LRC preso altrove, quelli trovati su internet) si usano solo nel karaoke, dove le righe si agganciano alla voce del cantante; fuori dal karaoke non si cerca niente su internet. Per avere a tempo anche fuori un testo che non lo è, canta il brano nel karaoke e salvalo con Salva il testo come LRC.</p>
 <p>Molti file karaoke hanno il testo scritto male. In Impostazioni, categoria Karaoke, <strong>Pulisci il testo del karaoke</strong> toglie le copie doppie, i segni e i trattini di chi ha fatto il file e divide le righe troppo lunghe. <strong>Togli crediti e accordi dal testo</strong> toglie anche le scritte come siti e copyright, e gli accordi: quelli tra parentesi quadre e quelli che chi ha fatto il file ha scritto a parte, in mezzo alle sillabe (così non senti "che sogno sudaticA cio", ma "che sogno sudaticcio"). <strong>Nella ricerca solo i brani con il testo</strong> nasconde i brani senza testo. I tuoi file non vengono mai modificati.</p>
 
 <h3>Esportare in audio</h3>
@@ -752,6 +782,9 @@ h2 { margin-top: 2em; }
 <li><strong>Salta il silenzio all'inizio e alla fine dei brani</strong>.</li>
 <li><strong>A 10 secondi dalla fine, dimmi il brano dopo</strong>.</li>
 <li><strong>Mostra la durata nella riga del brano</strong>.</li>
+<li><strong>Mostra il formato nella riga del brano</strong>: MP3, WAV, FLAC, MIDI e così via. Di partenza è spenta.</li>
+<li><strong>Nome della scaletta nel titolo</strong>: prima di Studio Player, dopo, oppure no.</li>
+<li><strong>Cartella delle scalette</strong>: il pulsante dice qual è e ne fa scegliere un'altra. Se lo premi e annulli, ti chiede se tornare a quella di partenza, Scalette dentro la cartella Dati.</li>
 <li><strong>Una scaletta riaperta riprende dal brano a cui eri arrivato</strong>.</li>
 <li><strong>Quando parte un brano, resta sulla lista</strong>: il cursore non va sul pulsante Pausa, comodo quando hai tanti brani e vuoi continuare a scorrerli. Di partenza è spenta.</li>
 </ul>
