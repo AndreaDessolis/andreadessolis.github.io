@@ -44,6 +44,21 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../studio-player.html">Back to Studio Player</a></p>
 <section class="release">
+<h2>Version 1.7.0, November 12, 2026</h2>
+<h3>New</h3>
+<ol>
+<li>The precise lyrics aligner. Lyrics found on the internet are often timed on another recording of the song, with a longer or shorter intro, and can arrive seconds early or late. The aligner listens to the vocal stem, recognizes the sounds of the words the singer sings and puts every line back in its place, even when the lyrics were off by many seconds. The words always stay those of the lyrics: the aligner only finds where they fall. Turn it on in Settings, Karaoke category, with With the precise aligner. It works on your computer, with the stem engine, and the first time it meets lyrics in a language (Italian, English or Spanish, recognized from the words) it downloads its model, about 1.2 GB.</li>
+<li>The aligner only uses the timing it is sure of: a line takes the new time when the aligner recognizes it well, or when the place it finds agrees with the internet lyrics. The other lines are placed between the sure ones nearby and on the voice attacks. If there are too few sure lines, for example in rap, the lyrics stay as they were: never worse than before.</li>
+<li>In karaoke the aligner works in the background on the queue, one song at a time, when the song has its lyrics and backing track ready and no stems are being separated. If it finishes while the song plays, the lyrics are fixed right away. The result is remembered: next time it is ready.</li>
+<li>Lyrics timed by the aligner are read outside karaoke too, while you listen, with the same rules as karaoke. Outside karaoke the aligner never works by itself: only what it has already done, or what you ask it, is used.</li>
+<li>Find the lyrics and time them: a new item in the list&#x27;s context menu. For the selected tracks (all of them with Ctrl+A) that already have separated vocals, the program finds the lyrics, first on the computer and then on the internet if you allow it, and times them with the aligner. On the internet, lyrics of a recording a bit longer or shorter than yours are fine too, up to 30 seconds, because they are then timed on the voice. At the end you hear a summary: how many timed, already ready, without lyrics found, without separated vocals. Ctrl+Shift+E also says how many lyrics are left.</li>
+<li>The Separate the stems window has a new checkbox, Also find the lyrics and time them, when the choice separates the vocals. When the separations are done, the program prepares the lyrics too. So you can prepare a whole folder for studying, with stems and timed lyrics, without going through karaoke. It works with Ctrl+E, with Separate the stems in the context menu and with Separate the stems of all the tracks; the choice is remembered.</li>
+<li>Separation for karaoke: in Settings, Karaoke category, choose whether karaoke separates only vocals and backing track, as before, or all the parts. With all the parts karaoke removes only the vocals and every song you sing also has all the instruments ready for studying; it takes about three times the space and more time.</li>
+<li>In the track&#x27;s row, if you choose it in Settings, Playlist category, with Show in the row whether the track has stems and lyrics: &quot;stems&quot; when the track has at least one separation ready and &quot;lyrics&quot; when it has lyrics that are read in time. So you see right away which tracks you can already study with. The program remembers it for each file and updates it by itself when you separate a track or time its lyrics.</li>
+<li>When you exit with separations or lyrics still to do, Studio Player asks whether to exit anyway, because exiting cancels them.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 1.6.0, November 11, 2026</h2>
 <h3>New</h3>
 <ol>
