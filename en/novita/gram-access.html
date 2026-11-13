@@ -44,6 +44,14 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.2.4</h2>
+<p>Version 2.2.4 fixes the contact list sorted by status, reported by a user.</p>
+<h3>FIXES</h3>
+<ol>
+<li>The contact list sorted by status is now always up to date. Before, the rows were reordered only when the cursor was not on the list, but when you arrive on the Contacts tab the cursor lands on it right away: so the old order often stayed. Now it behaves like Telegram Desktop. Every time you arrive on the tab, from another tab or coming back from a chat, the list is already reordered and updated, with the cursor on the first contact. While you are on the list, it reorders itself within 3 seconds of someone coming online or going offline. The cursor always stays on the same person: if they change place, the screen reader reads them again in the new position, otherwise you hear nothing.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 2.2.3</h2>
 <p>Version 2.2.3 fixes the online status, reported by a user.</p>
 <h3>FIXES</h3>
