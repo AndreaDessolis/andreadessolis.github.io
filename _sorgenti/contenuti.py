@@ -447,6 +447,79 @@ PROGRAMMI = [
             ],
         },
     },
+    {
+        'id': 'hdx-video-edit',
+        'pagina': 'hdx-video-edit.html',
+        'nome': 'HDX Video Edit',
+        'logo': 'hdx-video-edit.png',
+        'alt': {
+            'it': 'Logo di HDX Video Edit: un ciak bianco con le strisce arancioni e gialle e un tasto Play arancione, su un quadrato azzurro',
+            'en': 'HDX Video Edit logo: a white clapperboard with orange and yellow stripes and an orange Play button, on a light blue square',
+        },
+        'stato': 'disponibile',
+        'repository': 'HDX-Video-Edit',
+        'setup': 'HDX-Video-Edit-Setup.exe',
+        'guida': r'D:\Software Portable\Sviluppo Software\HDX Video Edit\documenti\Guida.html',
+        'novita': ('hdx-json', r'D:\Software Portable\Sviluppo Software\HDX Video Edit\rilascio\changelog.json'),
+        'frase': {
+            'it': 'Montare i video con lo screen reader: tagliare, unire, aggiungere musica, transizioni, effetti e scritte, ed esportare il video finito, tutto con la tastiera.',
+            'en': 'Editing videos with your screen reader: cutting, joining, adding music, transitions, effects and titles, and exporting the finished video, all with the keyboard.',
+        },
+        'breve': {
+            'it': 'L\'editor video accessibile: montaggio, velocità, transizioni, effetti audio e video, scritte, musica di sottofondo, capitoli per YouTube e intelligenza artificiale.',
+            'en': 'The accessible video editor: editing, speed, transitions, audio and video effects, titles, background music, YouTube chapters and artificial intelligence.',
+        },
+        'introduzione': {
+            'it': [
+                'HDX Video Edit è un editor video pensato per chi usa lo screen reader. Le clip, video e foto, stanno in un elenco: le ascolti, ti fermi nel punto giusto e tagli, dividi, unisci, sposti, con Annulla sempre a disposizione. Si comanda tutto con la tastiera, e lo screen reader ti dice sempre dove sei, in quale clip e a che tempo, e cosa hai appena cambiato. In alto il video si vede grande, per chi ti assiste o guarda il lavoro.',
+                'Poi lo rifinisci: transizioni tra le clip, effetti audio per pulire e migliorare il suono, effetti video per la luce, i colori e l\'inquadratura, scritte e titoli, il tuo logo, volti e targhe da sfocare, e la musica di sottofondo solo sotto le clip che vuoi, con il volume di ogni clip sotto controllo. Puoi segnare un tratto e ascoltarlo in loop, cambiare la velocità di una clip tenendo il tono della voce, e preparare i capitoli per YouTube.',
+                'Quando hai finito, esporti il video in MP4 o solo l\'audio, anche di una clip sola o di un tratto. E se vuoi sapere cosa c\'è nell\'immagine, l\'intelligenza artificiale, con la tua chiave Gemini o OpenAI, te la descrive, trova volti e targhe da nascondere e risponde alle tue domande su come si usa il programma.',
+            ],
+            'en': [
+                'HDX Video Edit is a video editor designed for people who use a screen reader. The clips, videos and photos, are in a list: you listen to them, stop at the right point and cut, split, join and move, with Undo always available. Everything is controlled with the keyboard, and your screen reader always tells you where you are, in which clip and at what time, and what you have just changed. At the top the video is shown large, for whoever assists you or watches the work.',
+                'Then you polish it: transitions between clips, audio effects to clean up and improve the sound, video effects for light, colours and framing, text and titles, your logo, faces and number plates to blur, and background music only under the clips you want, with the volume of each clip under control. You can mark a section and listen to it in a loop, change the speed of a clip while keeping the pitch of the voice, and prepare chapters for YouTube.',
+                'When you are done, you export the video to MP4 or just the audio, also of a single clip or of a section. And if you want to know what is in the picture, artificial intelligence, with your own Gemini or OpenAI key, describes it, finds faces and number plates to hide and answers your questions about how to use the program.',
+            ],
+        },
+        'requisiti': {
+            'it': ['Windows 10 o 11 a 64 bit.',
+                   'Uno screen reader: HDX Video Edit parla con NVDA e con JAWS anche quando non è in primo piano.',
+                   'Per l\'intelligenza artificiale: una chiave di Gemini (anche gratuita) o di OpenAI.'],
+            'en': ['Windows 10 or 11, 64-bit.',
+                   'A screen reader: HDX Video Edit talks with NVDA and JAWS even when it is not in the foreground.',
+                   'For artificial intelligence: a Gemini key (free ones exist too) or an OpenAI key.'],
+        },
+        'funzioni': {
+            'it': [
+                'Il montaggio in un elenco: video e foto da tagliare nel punto in cui ascolti, dividere, unire, spostare, rinominare e sostituire, con Annulla e Ripeti.',
+                'Spazio ascolta e torna al punto di partenza, Ctrl+Spazio riproduce e mette in pausa, le frecce si spostano nel tempo; ogni movimento e ogni modifica vengono annunciati.',
+                'La velocità delle clip, da 0,25 a 2 volte, tenendo il tono della voce oppure cambiandolo come un nastro.',
+                'Il tratto con i segni di inizio e fine, il loop per riascoltarlo, e Esporta, Togli o Tieni solo il tratto.',
+                '69 transizioni tra le clip, più aperture e chiusure dal nero, dal bianco o da un colore.',
+                'Gli effetti audio: equalizzatori, compressore, limitatore, riduzione del rumore, livellatore della voce, riverbero, delay e molti altri, con le catene pronte per concerti, voce e YouTube.',
+                'Gli effetti video: luce e colore, nitidezza, zoom, ritaglio e rotazione, scritte e titoli che si muovono, il logo, e volti e targhe da sfocare, trovati anche con l\'intelligenza artificiale.',
+                'La musica di sottofondo sotto le clip che scegli, con le dissolvenze, e per ogni clip il volume del suo audio e dei sottofondi.',
+                'L\'esportazione in MP4 (H.264, H.265, AV1) o solo audio (MP3, WAV, FLAC), anche di una clip sola o del tratto.',
+                'I capitoli per YouTube, pronti da incollare nella descrizione, con il controllo delle regole di YouTube.',
+                'L\'intelligenza artificiale che descrive l\'immagine e risponde alle domande sul programma leggendo la guida.',
+                'Annunci a voce o con suoni riconoscibili, scorciatoie tutte modificabili, avvio con Windows e area di notifica, salvataggio automatico, e aggiornamenti automatici, in italiano, inglese e spagnolo.',
+            ],
+            'en': [
+                'Editing in a list: videos and photos to cut at the point you are listening to, split, join, move, rename and replace, with Undo and Redo.',
+                'Space listens and returns to the starting point, Ctrl+Space plays and pauses, the arrows move in time; every movement and every change is announced.',
+                'Clip speed, from 0.25 to 2 times, keeping the pitch of the voice or changing it like a tape.',
+                'The section with start and end marks, the loop to listen to it again, and Export, Cut out or Keep only the section.',
+                '69 transitions between clips, plus openings and closings from black, white or a colour.',
+                'Audio effects: equalizers, compressor, limiter, noise reduction, voice leveller, reverb, delay and many more, with ready-made chains for concerts, voice and YouTube.',
+                'Video effects: light and colour, sharpness, zoom, crop and rotation, moving text and titles, your logo, and faces and number plates to blur, also found with artificial intelligence.',
+                'Background music under the clips you choose, with fades, and for each clip the volume of its own audio and of the backgrounds.',
+                'Export to MP4 (H.264, H.265, AV1) or audio only (MP3, WAV, FLAC), also of a single clip or of the section.',
+                'YouTube chapters, ready to paste into the description, with YouTube\'s rules checked.',
+                'Artificial intelligence that describes the image and answers questions about the program by reading the guide.',
+                'Announcements by voice or with recognizable sounds, fully customizable shortcuts, start with Windows and notification area, automatic saving, and automatic updates, in Italian, English and Spanish.',
+            ],
+        },
+    },
 ]
 
 # Le add-on per NVDA: tutte nella pagina addon-nvda.html, una sezione ciascuna
@@ -624,7 +697,7 @@ T = {
         'chi_sono_testo': [
             'Suono la chitarra da anni, ed è una delle cose che mi rilassa e mi diverte di più. Ma la vera svolta della mia vita è arrivata quando, già adulto, ho perso la vista. Da quel momento la tecnologia non è più stata solo un hobby: è diventata uno strumento fondamentale, quasi vitale, per continuare a vivere le cose che amo e per scoprirne di nuove.',
             'Da lì è nata la mia passione per tutto ciò che riguarda l\'accessibilità: software, metodi, piccoli accorgimenti che possono fare una grande differenza per chi, come me, si affida ogni giorno a uno screen reader. Mi piace pensare che ogni programma, ogni sito, ogni strumento possa essere reso più semplice da usare per tutti: basta volerlo fare davvero.',
-            'È da questa idea che sono nati i <a href="programmi.html">miei programmi</a>: prima Gram Access per Telegram, poi HDX VM per Voicemeeter, PCloud Access per pCloud, Tube Player per YouTube, HDX Recorder per registrare e andare in diretta, e Studio Player per ascoltare e studiare la musica. Uso NVDA ogni giorno, e per renderlo più comodo ho scritto anche alcune <a href="addon-nvda.html">add-on per NVDA</a>.',
+            'È da questa idea che sono nati i <a href="programmi.html">miei programmi</a>: prima Gram Access per Telegram, poi HDX VM per Voicemeeter, PCloud Access per pCloud, Tube Player per YouTube, HDX Recorder per registrare e andare in diretta, Studio Player per ascoltare e studiare la musica, e HDX Video Edit per montare i video. Uso NVDA ogni giorno, e per renderlo più comodo ho scritto anche alcune <a href="addon-nvda.html">add-on per NVDA</a>.',
         ],
         'contatti_lede': 'Che sia per uno dei miei programmi, per l\'accessibilità o solo per due chiacchiere: scrivimi pure.',
         'email_titolo': 'Email', 'email_testo': 'Il modo più semplice per raggiungermi è via email:',
@@ -681,7 +754,7 @@ T = {
         'chi_sono_testo': [
             'I have been playing the guitar for years, and it is one of the things that relaxes and amuses me most. But the real turning point of my life came when, already an adult, I lost my sight. From that moment technology was no longer just a hobby: it became an essential tool, almost vital, to keep enjoying the things I love and to discover new ones.',
             'That is where my passion for everything about accessibility comes from: software, methods, small touches that can make a big difference for people who, like me, rely on a screen reader every day. I like to think that every program, every website, every tool can be made easier to use for everyone: you just have to really want it.',
-            'This is the idea behind <a href="programmi.html">my programs</a>: first Gram Access for Telegram, then HDX VM for Voicemeeter, PCloud Access for pCloud, Tube Player for YouTube, HDX Recorder for recording and going live, and Studio Player for listening to and studying music. I use NVDA every day, and to make it more comfortable I also wrote some <a href="addon-nvda.html">NVDA add-ons</a>.',
+            'This is the idea behind <a href="programmi.html">my programs</a>: first Gram Access for Telegram, then HDX VM for Voicemeeter, PCloud Access for pCloud, Tube Player for YouTube, HDX Recorder for recording and going live, Studio Player for listening to and studying music, and HDX Video Edit for editing videos. I use NVDA every day, and to make it more comfortable I also wrote some <a href="addon-nvda.html">NVDA add-ons</a>.',
         ],
         'contatti_lede': 'Whether it is about one of my programs, accessibility or just a chat: feel free to write to me.',
         'email_titolo': 'Email', 'email_testo': 'The easiest way to reach me is by email:',

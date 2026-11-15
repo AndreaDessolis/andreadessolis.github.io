@@ -31,4 +31,7 @@ if __name__ == '__main__':
     # Studio Player: anche lui con disegna().
     carica('Studio Player').disegna().resize((256, 256), Image.LANCZOS).save(
         os.path.join(QUI, 'immagini', 'studio-player.png'))
+    # HDX Video Edit: anche lui con disegna() (il ciak).
+    carica('HDX Video Edit').disegna().resize((256, 256), Image.LANCZOS).save(
+        os.path.join(QUI, 'immagini', 'hdx-video-edit.png'))
     print('Fatto')
