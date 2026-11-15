@@ -44,6 +44,23 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.2.5</h2>
+<p>Version 2.2.5 aligns the pinned messages bar with Telegram Desktop.</p>
+<h3>NEW</h3>
+<ol>
+<li>The pinned bar follows the point of the chat you are in. It shows the most recent pinned message among those above the message you are on: at the bottom of the chat it is the last pinned message, and as you move up with the arrows the bar switches to older pinned messages by itself, silently, without interrupting you. As in Telegram Desktop, Enter on the bar takes you to the pinned message and the bar moves to the previous one; after the oldest it starts again from the most recent, and if you move down in the chat the cycle starts again from where you are. The arrows on the bar, to listen to the pinned messages without moving in the chat, stay as before.</li>
+<li>The context menu of the pinned bar, with the Applications key. With more than one pinned message there are &quot;Go to next pinned message&quot;, which takes you to the pinned message newer than the one you are on, and &quot;Pinned messages list&quot;. If you can manage pinned messages there is &quot;Unpin&quot;, or &quot;Unpin all messages&quot; if there is more than one. If you can&#x27;t, there is &quot;Don&#x27;t show pinned messages&quot;, which hides the bar until a new message is pinned in the chat.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>Pinned messages are numbered as in Telegram Desktop, counting from the oldest, which is number 1. With more than two pinned messages you hear for example &quot;Pinned message 5 of 5&quot; for the most recent; with two, &quot;Pinned message&quot; and &quot;Previous pinned message&quot;.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>Pressing Enter on a pinned message, the screen reader already read the next pinned message, for example &quot;2 of 5&quot; when pressing the first one, even though the cursor then landed on the right message. Now the bar changes only when you are already on the message, and you hear only the message you land on.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 2.2.4</h2>
 <p>Version 2.2.4 fixes the contact list sorted by status, reported by a user.</p>
 <h3>FIXES</h3>
