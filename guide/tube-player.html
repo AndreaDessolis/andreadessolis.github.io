@@ -339,6 +339,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 
 <h2 id="scaricare">10. Scaricare video e audio</h2>
 <p><kbd>Ctrl+D</kbd> (menu File, Scarica) su un video apre la finestra <strong>Scarica</strong>. Dal lettore, scarica il video che stai ascoltando. Su una playlist o un canale, la voce del menu diventa "Scarica tutto": si scaricano tutti i video (di un canale, quelli della sezione Video).</p>
+<p>Per scaricarne solo alcuni: <kbd>Ctrl+Maiusc+D</kbd> (menu File o menu contestuale, "Scegli i video da scaricare"). Si apre subito l'elenco dei video da spuntare; con OK si passa alla finestra Scarica, per il formato e la cartella.</p>
 
 <h3>La finestra Scarica</h3>
 <ul>
@@ -347,6 +348,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <li><strong>Formato</strong> del video: Originale (com'è su YouTube, in MKV), MP4 (si apre ovunque), MKV, WebM; la <strong>Qualità</strong>: la migliore, oppure un massimo da 2160p a 360p.</li>
 <li>Le caselle <strong>Copertina dentro il file</strong>, <strong>Titolo e autore dentro il file</strong>, <strong>Capitoli dentro il file</strong>, <strong>Sottotitoli</strong> (spuntandola compare la lingua dei sottotitoli: si scaricano quelli in quella lingua, scritti o automatici; "Tutte quelle scritte" prende tutti i sottotitoli scritti da chi ha pubblicato il video, senza quelli automatici. Le traduzioni automatiche di YouTube non si possono scaricare: se un sottotitolo non c'è, il video si scarica lo stesso, senza), e per playlist e canali <strong>Numera i file</strong> (001, 002...).</li>
 <li><strong>Cartella</strong>: dove salvare, con <strong>Sfoglia</strong> per sceglierne un'altra.</li>
+<li>Per playlist e canali, subito dopo Cosa scaricare, il pulsante <strong>Scegli i video</strong>: legge tutti i video (con tanti video ci vuole qualche secondo) e li mostra in un elenco, ognuno con la sua casella, all'inizio tutte spuntate. Con la <kbd>barra spaziatrice</kbd> togli o rimetti la spunta; <strong>Spunta tutte</strong> e <strong>Togli tutte le spunte</strong> fanno tutto in una volta. Con <strong>OK</strong> il pulsante diventa, per esempio, "Scegli i video (5 di 20)" e si scaricano solo quelli spuntati. Se non scegli niente si scaricano tutti, come prima. Numerando i file, ogni video tiene il suo numero nella playlist (per esempio 003 e 007).</li>
 <li><strong>Scarica</strong> mette il download in coda.</li>
 </ul>
 <p>Le scelte restano per la volta dopo. I download vanno uno alla volta: se ce n'è già uno in corso, il nuovo aspetta il suo turno. La voce dice quando un download parte, quando è finito e se non è riuscito.</p>
@@ -359,7 +361,14 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 
 <h3>La finestra Download</h3>
 <p><kbd>Ctrl+J</kbd> (menu File, Elenco dei download) apre la finestra con tutti i download: per ognuno lo stato, la percentuale, la velocità e quanto manca. È una finestra a parte: puoi tornare alla finestra principale e continuare a cercare e ascoltare.</p>
-<p>Le righe si aggiornano da sole. Quella su cui ti trovi, per non essere riletta a ogni punto percentuale, si aggiorna quando cambia lo stato (avviato, finito, errore) e, in una playlist, a ogni video ("video 8 di 20"); la percentuale del momento la senti spostandoti con le frecce (la riga si rilegge aggiornata) o con <kbd>Ctrl+Maiusc+J</kbd>.</p>
+<p>Le righe si aggiornano da sole. Quella su cui ti trovi, per non essere riletta a ogni punto percentuale, si aggiorna quando cambia lo stato (avviato, finito, errore) e, in una playlist, a ogni video ("video 8 di 20"); la percentuale del momento la senti premendo <kbd>F5</kbd> (la riga si aggiorna e si rilegge), spostandoti con le frecce o con <kbd>Ctrl+Maiusc+J</kbd>.</p>
+<h3>Le barre di avanzamento, per chi vede</h3>
+<p>Chi guarda lo schermo può seguire i download in tre posti. Lo screen reader non le annuncia: sono solo da vedere.</p>
+<ul>
+<li>Nella finestra Download, sotto l'elenco: una barra che si riempie, per il download su cui ti trovi (per una playlist o un canale, tutto insieme).</li>
+<li>In fondo alla finestra principale, nella barra di stato: lo stesso testo di <kbd>Ctrl+Maiusc+J</kbd> (per esempio "Download: 45%, mancano 01:20: titolo del video") e accanto la barra. Quando non c'è niente in corso o in coda resta vuota. Il comando dello screen reader per leggere la barra di stato la legge.</li>
+<li>Sul pulsante di Tube Player nella barra delle applicazioni di Windows: si colora di verde mentre il download va avanti (giallo durante la pausa tra un video e l'altro di una playlist). Se un download non riesce diventa rosso, finché non apri la finestra Download.</li>
+</ul>
 <ul>
 <li><kbd>Invio</kbd> su un download finito apre il file; <kbd>Canc</kbd> annulla il download scelto; <kbd>Esc</kbd> chiude la finestra.</li>
 <li>I pulsanti: <strong>Annulla download</strong>, <strong>Riprova</strong> (per quelli non riusciti o annullati), <strong>Apri file</strong>, <strong>Apri cartella</strong>, <strong>Togli i conclusi</strong>, <strong>Chiudi</strong>.</li>
@@ -581,6 +590,7 @@ th, td { border: 1px solid #888; padding: 0.3em 0.6em; text-align: left; vertica
 <tr><th>Tasto</th><th>Cosa fa</th></tr>
 <tr><td><kbd>Ctrl+L</kbd></td><td>Apri un link di YouTube</td></tr>
 <tr><td><kbd>Ctrl+D</kbd></td><td>Scarica il video o l'audio (su playlist e canali: scarica tutto)</td></tr>
+<tr><td><kbd>Ctrl+Maiusc+D</kbd></td><td>Su una playlist o un canale: scegli i video da scaricare</td></tr>
 <tr><td><kbd>Ctrl+J</kbd></td><td>Elenco dei download</td></tr>
 <tr><td><kbd>Ctrl+Maiusc+J</kbd></td><td>Stato dei download, a voce (anche dal lettore)</td></tr>
 <tr><td><kbd>Ctrl+C</kbd></td><td>Copia il link del risultato (nell'elenco)</td></tr>
