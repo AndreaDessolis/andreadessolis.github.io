@@ -119,7 +119,8 @@
   "hdx-video-edit": {
     "storico": 0,
     "versioni_tolte": {
-      "v1.0.0": 21
+      "v1.0.0": 21,
+      "v1.0.1": 9
     }
   }
 }
