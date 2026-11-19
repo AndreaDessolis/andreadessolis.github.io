@@ -30,6 +30,7 @@
 <tr><td>Control+Windows+J</td><td>Sets the temporary placemarker</td></tr>
 <tr><td>NVDA+Shift+J</td><td>Placemarkers window</td></tr>
 <tr><td>NVDA+Shift+7</td><td>Turns skipping blank lines on and off</td></tr>
+<tr><td>NVDA+Shift+Left and Right arrow (desktop layout)</td><td>Goes back to where you were before the last jump, and does the jump again</td></tr>
 <tr><td>NVDA+Control+F, NVDA+F3, NVDA+Shift+F3</td><td>NVDA's search, with the word remembered for each page (or the keys you assigned to it in Input gestures)</td></tr>
 </table>
 <p>The single letters (à, ò, ù, J, Y) work only in browse mode and with single letter navigation on (NVDA+Shift+Space). In text fields they are typed as usual.</p>
@@ -82,7 +83,7 @@
 <p>Check box: <em>Skip blank lines when moving with the arrows</em> (on by default). <strong>NVDA+Shift+7</strong> turns it on and off at any time, for sites that put something useful on lines that look empty: NVDA says "Blank lines skipped" or "Blank lines read". On the Italian keyboard Shift+7 is the slash, which is not a single key there; on other keyboards you can assign NVDA+slash, or any other key, in Input gestures.</p>
 
 <h2>In Thunderbird messages</h2>
-<p>Messages open in Thunderbird are read in browse mode like a web page. There, skipping blank lines, <em>Open the link where you are</em> (Shift+Enter, Control+Enter, Applications), <em>Page elements</em> (NVDA+F6 and the List commands) and <em>smart points</em> (Y, Shift+Y, NVDA+Control+Y) work. The other features (placemarkers, remembered search, address, quick navigation keys) stay web-only: in Thunderbird their keys do what they do in NVDA.</p>
+<p>Messages open in Thunderbird are read in browse mode like a web page. There, skipping blank lines, <em>Go back to where you were</em> (NVDA+Shift+Left and Right arrow),<em>Open the link where you are</em> (Shift+Enter, Control+Enter, Applications), <em>Page elements</em> (NVDA+F6 and the List commands) and <em>smart points</em> (Y, Shift+Y, NVDA+Control+Y) work. The other features (placemarkers, remembered search, address, quick navigation keys) stay web-only: in Thunderbird their keys do what they do in NVDA.</p>
 
 <h2>A search that remembers the word for each page and site</h2>
 <p>NVDA's search remembers a single word for all pages and forgets it when NVDA restarts. With the add-on each page and each site have their own: when you open the search, the word is already there and selected (Enter to search it, or type a new word). NVDA+F3 and NVDA+Shift+F3 use the same word. The case sensitive check box is remembered too.</p>
@@ -126,6 +127,17 @@
 <li><strong>Import</strong>: reads an exported file and asks whether to add the placemarkers to the current ones (those already there are not duplicated) or to replace them all.</li>
 </ul>
 <p>The temporary placemarker is not there: it lasts only until NVDA restarts.</p>
+
+<h2>Go back to where you were</h2>
+<p>After a jump with H, N, U and the other keys it is often slow to get back to where you were. <strong>NVDA+Shift+Left arrow</strong> takes the cursor back to where it was before the last jump and reads the line, like the browser's Back key but inside the page. Pressed again, it goes further back. <strong>NVDA+Shift+Right arrow</strong> does the jump again, like Forward.</p>
+<ul>
+<li>These count as jumps: NVDA's letters (H, K, N, U and the others) and the add-on's (à, ò, ù, Y), J and Shift+J, Move to in Page elements, the search (NVDA+Control+F, NVDA+F3), Control+Home and Control+End. The arrows and Tab do not count.</li>
+<li>Up to 20 positions are remembered for each page. A new page starts from scratch. A new jump after going back clears the way forward, as in the browser.</li>
+<li>If there is nowhere to go, NVDA says "No previous position" or "No next position".</li>
+<li>It also works in Thunderbird messages.</li>
+<li>Positions are points in the text of the page: if the page changes a lot while you read it (chats, comments loaded while scrolling), going back may land a few lines away.</li>
+</ul>
+<p>The keys work only with the desktop keyboard layout: in the laptop layout NVDA+Shift+Left and Right arrow belong to NVDA (previous and next object) and stay that way. With the laptop layout you can assign other keys in Input gestures. Check box: <em>Go back to where you were with NVDA+Shift+Left arrow</em>.</p>
 
 <h2>Smart points</h2>
 <p>Like the Smart Glance of JAWS. A smart point is a piece of text that stands out to the eye because it has a style that is rare in the page: a color, a background, a font, a size, bold, italic, highlighted text. Often it is not a heading, so H does not reach it: for example a phone number in evidence or a colored notice.</p>

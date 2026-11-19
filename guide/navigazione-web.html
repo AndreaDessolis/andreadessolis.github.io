@@ -30,6 +30,7 @@
 <tr><td>Ctrl+Win+J</td><td>Mette il segnaposto temporaneo</td></tr>
 <tr><td>NVDA+Maiusc+J</td><td>Finestra dei segnaposti</td></tr>
 <tr><td>NVDA+Maiusc+7</td><td>Accende e spegne il salto delle righe vuote</td></tr>
+<tr><td>NVDA+Maiusc+freccia sinistra e destra (schema desktop)</td><td>Torna dov'eri prima dell'ultimo salto, e rifà il salto</td></tr>
 <tr><td>NVDA+Ctrl+F, NVDA+F3, NVDA+Maiusc+F3</td><td>La ricerca di NVDA, con la parola ricordata per ogni pagina (o i tasti che le hai assegnato in Gesti e comandi)</td></tr>
 </table>
 <p>Le lettere semplici (à, ò, ù, J, Y) funzionano solo in modalità navigazione e con la navigazione a lettera singola accesa (NVDA+Maiusc+Spazio). Nei campi di testo si scrivono normalmente.</p>
@@ -81,7 +82,7 @@
 <p>Casella: <em>Salta le righe vuote spostandosi con le frecce</em> (accesa di serie). <strong>NVDA+Maiusc+7</strong> la accende e la spegne al volo, per i siti che mettono qualcosa di utile su righe che sembrano vuote: NVDA dice "Righe vuote saltate" o "Righe vuote lette". Sulla tastiera italiana Maiusc+7 è la barra; il tasto si può cambiare da Gesti e comandi.</p>
 
 <h2>Nei messaggi di Thunderbird</h2>
-<p>I messaggi aperti in Thunderbird si leggono in modalità navigazione come una pagina web. Lì funzionano il salto delle righe vuote, <em>Apri il link dove sei</em> (Maiusc+Invio, Ctrl+Invio, Applicazioni), <em>Elementi della pagina</em> (NVDA+F6 e i comandi Elenco) e i <em>punti smart</em> (Y, Maiusc+Y, NVDA+Ctrl+Y). Le altre funzioni (segnaposti, ricerca ricordata, indirizzo, tasti di salto) restano solo per il web: in Thunderbird i loro tasti fanno quello che fanno in NVDA.</p>
+<p>I messaggi aperti in Thunderbird si leggono in modalità navigazione come una pagina web. Lì funzionano il salto delle righe vuote, <em>Torna dov'eri</em> (NVDA+Maiusc+frecce sinistra e destra),<em>Apri il link dove sei</em> (Maiusc+Invio, Ctrl+Invio, Applicazioni), <em>Elementi della pagina</em> (NVDA+F6 e i comandi Elenco) e i <em>punti smart</em> (Y, Maiusc+Y, NVDA+Ctrl+Y). Le altre funzioni (segnaposti, ricerca ricordata, indirizzo, tasti di salto) restano solo per il web: in Thunderbird i loro tasti fanno quello che fanno in NVDA.</p>
 
 <h2>Ricerca che ricorda la parola per ogni pagina e sito</h2>
 <p>La ricerca di NVDA ricorda una sola parola per tutte le pagine e la perde al riavvio. Con l'add-on ogni pagina e ogni sito hanno la loro: aprendo la ricerca la si trova già scritta e selezionata (Invio per cercarla, oppure si scrive una parola nuova). NVDA+F3 e NVDA+Maiusc+F3 usano la stessa parola. Si ricorda anche la casella delle maiuscole.</p>
@@ -125,6 +126,17 @@
 <li><strong>Importa</strong>: legge un file esportato e chiede se aggiungere i segnaposti a quelli attuali (quelli già presenti non si doppiano) o sostituirli tutti.</li>
 </ul>
 <p>Il segnaposto temporaneo non c'è: dura solo fino al riavvio di NVDA.</p>
+
+<h2>Torna dov'eri</h2>
+<p>Dopo un salto con H, N, U e gli altri tasti è spesso lungo ritornare dove si era. <strong>NVDA+Maiusc+freccia sinistra</strong> riporta il cursore dov'era prima dell'ultimo salto e legge la riga, come il tasto Indietro del browser ma dentro la pagina. Premuto ancora torna più indietro. <strong>NVDA+Maiusc+freccia destra</strong> rifà il salto, come Avanti.</p>
+<ul>
+<li>Contano come salti: le lettere di NVDA (H, K, N, U e le altre) e dell'add-on (à, ò, ù, Y), J e Maiusc+J, Vai in Elementi della pagina, la ricerca (NVDA+Ctrl+F, NVDA+F3), Ctrl+Home e Ctrl+End. Le frecce e Tab non contano.</li>
+<li>Si ricordano fino a 20 posizioni per pagina. Con una pagina nuova si ricomincia da capo. Un salto nuovo dopo essere tornati indietro cancella la strada in avanti, come nel browser.</li>
+<li>Se non c'è dove andare, NVDA dice "Nessuna posizione precedente" o "Nessuna posizione successiva".</li>
+<li>Funziona anche nei messaggi di Thunderbird.</li>
+<li>Le posizioni sono punti nel testo della pagina: se la pagina cambia molto mentre la leggi (chat, commenti che si caricano scorrendo), il ritorno può finire qualche riga più in là.</li>
+</ul>
+<p>I tasti valgono solo nello schema di tastiera desktop: nello schema portatile NVDA+Maiusc+freccia sinistra e destra sono di NVDA (oggetto precedente e successivo) e restano così. Con lo schema portatile si possono assegnare altri tasti da Gesti e comandi. Casella: <em>Torna dov'eri con NVDA+Maiusc+freccia sinistra</em>.</p>
 
 <h2>Punti smart</h2>
 <p>Come la Smart Glance di JAWS. Un punto smart è un pezzo di testo che a vista si nota perché ha uno stile raro nella pagina: un colore, uno sfondo, un carattere, una dimensione, il grassetto, il corsivo, il testo evidenziato. Spesso non è un'intestazione, quindi con H non ci si arriva: per esempio un numero di telefono in evidenza o un avviso colorato.</p>
