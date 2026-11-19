@@ -73,6 +73,7 @@
 <p>Molte pagine hanno righe vuote che rallentano la lettura con le frecce. Nelle pagine web, in modalità navigazione, <strong>freccia su e giù</strong> (righe) e <strong>Ctrl+freccia su e giù</strong> (paragrafi) non si fermano sulle righe vuote: vanno direttamente alla prossima riga che contiene qualcosa, come fa JAWS.</p>
 <ul>
 <li>Una riga con un'immagine, un campo, un pulsante, un separatore o un altro elemento che NVDA annuncia non è vuota: si legge sempre.</li>
+<li>Si salta ogni riga su cui NVDA direbbe solo "vuoto", anche quelle fatte di elementi nascosti e senza testo (per esempio in cima alle pagine di GitHub).</li>
 <li>Nelle tabelle, una casella vuota è una riga vuota e le frecce la saltano. I comandi delle tabelle di NVDA (Ctrl+Alt+frecce) si fermano anche sulle caselle vuote.</li>
 <li>In cima e in fondo alla pagina, se dopo ci sono solo righe vuote, si resta dove si è, come in NVDA.</li>
 <li>La lettura continua, la selezione del testo e le altre pagine (Word, Outlook...) restano come in NVDA. Se nelle Impostazioni di NVDA i paragrafi sono "a righe vuote multiple", Ctrl+freccia su e giù seguono quell'impostazione.</li>
@@ -107,9 +108,9 @@
 
 <h2>Segnaposti</h2>
 <ul>
-<li><strong>NVDA+J</strong> apre "Aggiungi segnaposto": il <em>Nome</em> contiene già il testo della riga, selezionato; <em>Vale per</em> sceglie "Solo questa pagina" o "Tutto il sito" (ogni pagina del sito in cui c'è quel testo). La finestra ricorda l'ultima scelta. Se sulla riga c'è già un segnaposto, NVDA lo dice e la finestra non si apre.</li>
+<li><strong>NVDA+J</strong> apre "Aggiungi segnaposto": il <em>Nome</em> contiene già il testo della riga, selezionato; <em>Vale per</em> sceglie "Solo questa pagina" o "Tutto il sito" (ogni pagina del sito in cui c'è quel testo). La finestra ricorda l'ultima scelta. Se sulla riga c'è un link, un pulsante, un'intestazione, un campo, una casella di controllo, un pulsante di opzione, un grafico o una scheda, compare anche la casella <em>Solo se è</em> seguita dal tipo, come lo dice NVDA (accesa di serie): così J va solo a un elemento di quel tipo con lo stesso testo, e salta i paragrafi con le stesse parole. Spenta, il segnaposto vale per qualunque riga con quel testo. Se sulla riga c'è già un segnaposto, NVDA lo dice e la finestra non si apre.</li>
 <li><strong>Ctrl+Win+J</strong> mette il segnaposto temporaneo, come Ctrl+Win+K di JAWS: senza finestra, uno solo per pagina (premuto di nuovo lo sposta sulla riga dove sei), non salvato su file: dura fino al riavvio di NVDA. NVDA dice "Segnaposto temporaneo impostato".</li>
-<li><strong>J</strong> e <strong>Maiusc+J</strong> vanno al segnaposto successivo e precedente e leggono la riga; arrivati in fondo si ricomincia.</li>
+<li><strong>J</strong> e <strong>Maiusc+J</strong> vanno al segnaposto successivo e precedente e leggono la riga. Dopo l'ultimo il cursore resta dov'è e NVDA dice "Nessun segnaposto successivo" (con Maiusc+J, prima del primo: "Nessun segnaposto precedente"), come con le intestazioni.</li>
 <li><strong>NVDA+Maiusc+J</strong> apre "Segnaposti": l'elenco dei segnaposti della pagina e del sito, con Vai (o Invio), Rinomina, Elimina (o Canc), Elimina tutti (chiede conferma) e Chiudi. Quelli del sito hanno "(sito)" accanto al nome, quello temporaneo "(temporaneo)"; quelli il cui testo non c'è nella pagina sono indicati con "non in questa pagina".</li>
 </ul>
 <p>Le pagine cambiano: di ogni segnaposto si ricordano il testo della riga e la posizione. Si cerca il testo, anche se si è spostato; se compare più volte si sceglie la volta con le stesse righe prima e dopo, poi la più vicina alla posizione di prima. Se il testo non c'è più, un segnaposto di pagina usa la posizione di prima.</p>

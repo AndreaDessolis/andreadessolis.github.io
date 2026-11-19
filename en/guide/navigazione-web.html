@@ -74,6 +74,7 @@
 <p>Many pages have blank lines that slow down reading with the arrow keys. In web pages, in browse mode, <strong>Up and Down arrow</strong> (lines) and <strong>Control+Up and Down arrow</strong> (paragraphs) do not stop on blank lines: they go straight to the next line that contains something, as JAWS does.</p>
 <ul>
 <li>A line with a graphic, a field, a button, a separator or another element that NVDA announces is not blank: it is always read.</li>
+<li>Every line on which NVDA would only say "blank" is skipped, including lines made of hidden elements with no text (for example at the top of GitHub pages).</li>
 <li>In tables, an empty cell is a blank line and the arrows skip it. NVDA's table commands (Control+Alt+arrows) also stop on empty cells.</li>
 <li>At the top and bottom of the page, if only blank lines follow, you stay where you are, as in NVDA.</li>
 <li>Say all, text selection and other documents (Word, Outlook...) stay as in NVDA. If NVDA's paragraph style is "multi-line break", Control+Up and Down arrow follow that setting.</li>
@@ -108,9 +109,9 @@
 
 <h2>Placemarkers</h2>
 <ul>
-<li><strong>NVDA+J</strong> opens "Add Placemarker": the <em>Name</em> already contains the text of the line, selected; <em>Valid for</em> chooses "Only this page" or "The whole site" (every page of the site where that text is). The window remembers the last choice. If the line already has a placemarker, NVDA says so and the window does not open.</li>
+<li><strong>NVDA+J</strong> opens "Add Placemarker": the <em>Name</em> already contains the text of the line, selected; <em>Valid for</em> chooses "Only this page" or "The whole site" (every page of the site where that text is). The window remembers the last choice. If the line has a link, a button, a heading, a field, a check box, a radio button, a graphic or a tab, the <em>Only if it is</em> check box also appears, followed by the kind of element as NVDA says it (checked by default): this way J moves only to an element of that kind with the same text, and skips paragraphs with the same words. Unchecked, the placemarker is valid for any line with that text. If the line already has a placemarker, NVDA says so and the window does not open.</li>
 <li><strong>Control+Windows+J</strong> sets the temporary placemarker, like Control+Windows+K in JAWS: no window, only one per page (pressed again it moves to the line where you are), not saved to a file: it lasts until NVDA restarts. NVDA says "Temporary placemarker set".</li>
-<li><strong>J</strong> and <strong>Shift+J</strong> move to the next and previous placemarker and read the line; at the end they start again from the other side.</li>
+<li><strong>J</strong> and <strong>Shift+J</strong> move to the next and previous placemarker and read the line. After the last one the cursor stays where it is and NVDA says "No next placemarker" (with Shift+J, before the first one: "No previous placemarker"), as with headings.</li>
 <li><strong>NVDA+Shift+J</strong> opens "Placemarkers": the list of the placemarkers of the page and of the site, with Move to (or Enter), Rename, Delete (or the Delete key), Delete all (asks for confirmation) and Close. Site placemarkers have "(site)" after the name, the temporary one "(temporary)"; those whose text is not on the page are marked "not on this page".</li>
 </ul>
 <p>Pages change: for each placemarker the text of the line and its position are remembered. The text is searched, even if it moved; if it appears more than once, the one with the same lines before and after is chosen, then the one closest to the previous position. If the text is gone, a page placemarker uses the previous position.</p>

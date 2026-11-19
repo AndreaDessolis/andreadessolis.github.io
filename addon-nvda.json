@@ -6,19 +6,23 @@
         "it": "Navigazione web",
         "en": "Web Navigation"
       },
-      "versione": "1.3.1",
+      "versione": "1.3.2",
       "url": "https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases/latest/download/navigazioneWeb.nvda-addon",
-      "sha256": "cb519bc4038cf1a9a8b24ef46d174f2faafdb948fd94914128a1b11830d56a59",
+      "sha256": "e086fd1cf3fc79489dbd94db7c406afba109c337e7e17a45d5da90ffd00f3cd3",
       "pagina": {
         "it": "https://andreadessolis.com/addon-nvda.html#navigazione-web",
         "en": "https://andreadessolis.com/en/addon-nvda.html#navigazione-web"
       },
       "novita": {
         "it": [
-          "Le righe vuote si saltano anche nelle tabelle: una casella vuota non ferma più le frecce su e giù (per esempio nell'elenco dei libri di Bookshare). I comandi delle tabelle di NVDA (Ctrl+Alt+frecce) si fermano ancora anche sulle caselle vuote. Grazie ad Amir per la segnalazione."
+          "Nella finestra Aggiungi segnaposto (NVDA+J), se sulla riga c'è un link, un pulsante, un'intestazione, un campo, una casella di controllo, un grafico o una scheda, la casella \"Solo se è\" (accesa di serie) fa valere il segnaposto solo per quel tipo di elemento: J non si ferma più sui paragrafi con le stesse parole. Grazie ad Amir per il suggerimento.",
+          "Ora si salta ogni riga su cui NVDA direbbe solo \"vuoto\", su qualsiasi sito, anche quando la riga è fatta di elementi nascosti e senza testo: per esempio le circa 30 righe vuote in cima alle pagine di GitHub. Grazie ad Amir per la segnalazione.",
+          "J e Maiusc+J non ricominciano più dall'altra parte senza avvisare: dopo l'ultimo segnaposto il cursore resta dov'è e NVDA dice \"Nessun segnaposto successivo\" (con Maiusc+J \"Nessun segnaposto precedente\"), come con le intestazioni."
         ],
         "en": [
-          "Blank lines are also skipped in tables: an empty cell no longer stops the Up and Down arrows (for example in the Bookshare book list). NVDA's table commands (Control+Alt+arrows) still stop on empty cells too. Thanks to Amir for the report."
+          "In the Add Placemarker window (NVDA+J), if the line has a link, a button, a heading, a field, a check box, a graphic or a tab, the \"Only if it is\" check box (checked by default) makes the placemarker valid only for that kind of element: J no longer stops on paragraphs with the same words. Thanks to Amir for the suggestion.",
+          "Every line on which NVDA would only say \"blank\" is now skipped, on any site, also when the line is made of hidden elements with no text: for example the about 30 blank lines at the top of GitHub pages. Thanks to Amir for the report.",
+          "J and Shift+J no longer start again from the other side without warning: after the last placemarker the cursor stays where it is and NVDA says \"No next placemarker\" (with Shift+J \"No previous placemarker\"), as with headings."
         ]
       }
     },
