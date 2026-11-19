@@ -78,7 +78,8 @@
   "navigazione-web": {
     "storico": 0,
     "versioni_tolte": {
-      "v1.1.0": 8
+      "v1.1.0": 8,
+      "v1.1.1": 33
     }
   },
   "shortcut-conflict-helper": {

@@ -6,19 +6,19 @@
         "it": "Navigazione web",
         "en": "Web Navigation"
       },
-      "versione": "1.1.1",
+      "versione": "1.2.0",
       "url": "https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases/latest/download/navigazioneWeb.nvda-addon",
-      "sha256": "a713930a2e2e52de498f77e430c3c9a4b0061181b58b3a2ff329ff999422ef21",
+      "sha256": "9af58d909d16a56d1b219671160364a8a97945139c956693df1c03c5f27470b1",
       "pagina": {
         "it": "https://andreadessolis.com/addon-nvda.html#navigazione-web",
         "en": "https://andreadessolis.com/en/addon-nvda.html#navigazione-web"
       },
       "novita": {
         "it": [
-          "Aggiornamenti automatici: a ogni avvio di NVDA l'add-on controlla se c'è una versione nuova, ne mostra le novità e propone di installarla. Si possono spegnere nelle Impostazioni di NVDA, categoria Navigazione web, e cercare a mano con il comando \"Cerca gli aggiornamenti di questa add-on\" in Gesti e comandi."
+          "Le righe vuote si saltano: nelle pagine web freccia su e giù (righe) e Ctrl+freccia su e giù (paragrafi) non si fermano più sulle righe vuote, come in JAWS. Le righe con un'immagine, un campo o un altro elemento si leggono sempre. Si può spegnere nelle impostazioni, casella \"Salta le righe vuote spostandosi con le frecce\". Grazie ad Amir per il suggerimento."
         ],
         "en": [
-          "Automatic updates: every time NVDA starts, the add-on checks for a new version, shows what's new and offers to install it. They can be turned off in NVDA Settings, Web Navigation category, and checked by hand with the \"Checks for updates of this add-on\" command in Input gestures."
+          "Blank lines are skipped: in web pages, Up and Down arrow (lines) and Control+Up and Down arrow (paragraphs) no longer stop on empty lines, as in JAWS. Lines with a graphic, a field or another element are always read. It can be turned off in the settings, \"Skip blank lines when moving with the arrows\" check box. Thanks to Amir for the suggestion."
         ]
       }
     },

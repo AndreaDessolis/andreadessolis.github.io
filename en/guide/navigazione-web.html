@@ -69,6 +69,15 @@
 <p>The add-on keys (à, ò, Y) work differently: if they find nothing more, you hear a short beep, the page scrolls past the first (or last) loaded element, the add-on waits for the site to load and tries again, up to two times. If something arrives it moves there, otherwise NVDA says there are none. If you move in the meantime, the search stops.</p>
 <p>It does not work on sites that load more only with a button like "Show more". NVDA's keys (H, K...) stay as they are. Check box: <em>Scroll the page to look for more elements</em>.</p>
 
+<h2>Blank lines skipped</h2>
+<p>Many pages have blank lines that slow down reading with the arrow keys. In web pages, in browse mode, <strong>Up and Down arrow</strong> (lines) and <strong>Control+Up and Down arrow</strong> (paragraphs) do not stop on blank lines: they go straight to the next line that contains something, as JAWS does.</p>
+<ul>
+<li>A line with a graphic, a field, a button, a separator or another element that NVDA announces is not blank: it is always read.</li>
+<li>At the top and bottom of the page, if only blank lines follow, you stay where you are, as in NVDA.</li>
+<li>Say all, text selection and other documents (Word, Outlook...) stay as in NVDA. If NVDA's paragraph style is "multi-line break", Control+Up and Down arrow follow that setting.</li>
+</ul>
+<p>Check box: <em>Skip blank lines when moving with the arrows</em> (on by default).</p>
+
 <h2>A search that remembers the word for each page</h2>
 <p>NVDA's search remembers a single word for all pages and forgets it when NVDA restarts. With the add-on each page has its own: when you open the search, the word is already there and selected (Enter to search it, or type a new word). NVDA+F3 and NVDA+Shift+F3 use the word of the page. The case sensitive check box is remembered too. On a page never searched you find the last word searched elsewhere, as in NVDA.</p>
 <p>The page is recognized by its address, without the part after the hash sign (#). Up to 500 pages are remembered: beyond that, the oldest are forgotten.</p>
