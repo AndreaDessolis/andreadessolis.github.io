@@ -6,27 +6,19 @@
         "it": "Navigazione web",
         "en": "Web Navigation"
       },
-      "versione": "1.3.0",
+      "versione": "1.3.1",
       "url": "https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases/latest/download/navigazioneWeb.nvda-addon",
-      "sha256": "39a41fb91f0df1aa13d9c4399b8ff107f15a94e156633a9bed3e3fd61f4c37ad",
+      "sha256": "cb519bc4038cf1a9a8b24ef46d174f2faafdb948fd94914128a1b11830d56a59",
       "pagina": {
         "it": "https://andreadessolis.com/addon-nvda.html#navigazione-web",
         "en": "https://andreadessolis.com/en/addon-nvda.html#navigazione-web"
       },
       "novita": {
         "it": [
-          "NVDA+Maiusc+7 accende e spegne al volo il salto delle righe vuote (sulla tastiera italiana Maiusc+7 è la barra). Si può cambiare da Gesti e comandi.",
-          "Nei messaggi di Thunderbird funzionano anche il salto delle righe vuote, Apri il link dove sei, Elementi della pagina (NVDA+F6) e i punti smart (Y).",
-          "Nelle impostazioni, il pulsante Gestisci i segnaposti apre l'elenco dei siti e delle pagine che hanno segnaposti: si possono vedere, rinominare ed eliminare, anche tutti quelli di un sito, ed esportare in un file e importare da un file. Grazie ad Amir per i suggerimenti.",
-          "La parola cercata si ricorda anche per tutto il sito: su una pagina dove non hai mai cercato, Ctrl+F propone l'ultima parola cercata su quel sito. Nelle impostazioni, l'elenco \"Ricorda la parola cercata per\" sceglie tra Pagina, poi sito (di serie), Solo la pagina e Solo il sito.",
-          "Nei messaggi di Thunderbird le lettere dei comandi solo web (per esempio J dei segnaposti) non arrivano più a Thunderbird: restano a NVDA, come senza add-on."
+          "Le righe vuote si saltano anche nelle tabelle: una casella vuota non ferma più le frecce su e giù (per esempio nell'elenco dei libri di Bookshare). I comandi delle tabelle di NVDA (Ctrl+Alt+frecce) si fermano ancora anche sulle caselle vuote. Grazie ad Amir per la segnalazione."
         ],
         "en": [
-          "NVDA+Shift+7 quickly turns skipping blank lines on and off (on the Italian keyboard Shift+7 is the slash). It can be changed in Input gestures.",
-          "In Thunderbird messages, skipping blank lines, Open the link where you are, Page elements (NVDA+F6) and smart points (Y) also work.",
-          "In the settings, the Manage placemarkers button opens the list of sites and pages that have placemarkers: they can be viewed, renamed and deleted, also all the ones of a site, and exported to a file and imported from a file. Thanks to Amir for the suggestions.",
-          "The searched word is also remembered for the whole site: on a page where you never searched, Control+F proposes the last word searched on that site. In the settings, the \"Remember the searched word for\" list chooses between Page, then site (default), Page only and Site only.",
-          "In Thunderbird messages, the letters of web-only commands (for example J for placemarkers) no longer reach Thunderbird: they stay with NVDA, as without the add-on."
+          "Blank lines are also skipped in tables: an empty cell no longer stops the Up and Down arrows (for example in the Bookshare book list). NVDA's table commands (Control+Alt+arrows) still stop on empty cells too. Thanks to Amir for the report."
         ]
       }
     },
