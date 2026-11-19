@@ -48,21 +48,21 @@
         "it": "Gestore Finestre",
         "en": "Window Manager"
       },
-      "versione": "1.2.1",
+      "versione": "1.2.2",
       "url": "https://github.com/AndreaDessolis/NVDA-Gestore-Finestre/releases/latest/download/nvda_window_manager.nvda-addon",
-      "sha256": "04ec762c508a2fafea1655f41ebde404b5862873f5949f31b27a26698d842ca4",
+      "sha256": "53b353808efacc7534b949fc587d164e4cdb4a04fca26ad60fa8babea945d661",
       "pagina": {
         "it": "https://andreadessolis.com/addon-nvda.html#gestore-finestre",
         "en": "https://andreadessolis.com/en/addon-nvda.html#gestore-finestre"
       },
       "novita": {
         "it": [
-          "Aggiornamenti automatici: a ogni avvio di NVDA l'add-on controlla se c'è una versione nuova, ne mostra le novità e propone di installarla. Si possono spegnere nelle Impostazioni di NVDA, categoria Gestore Finestre, e cercare a mano con il comando \"Cerca gli aggiornamenti di questa add-on\" in Gesti e comandi.",
-          "Invio porta di nuovo in primo piano la finestra scelta: dalla versione 1.1 NVDA diceva spesso \"Impossibile portare in primo piano la finestra\"."
+          "NVDA+W elenca solo le finestre visibili, come Alt+Tab e JAWS: non compaiono più le finestre nascoste che alcuni programmi tengono pronte (per esempio una quindicina di finestre di whatSnap, anche col programma ridotto a icona) e la finestra nascosta di NVDA.",
+          "Scegliendo un programma ridotto a icona che aveva una finestra secondaria aperta (per esempio una domanda \"Vuoi salvare?\"), il programma torna davanti e il focus va su quella finestra."
         ],
         "en": [
-          "Automatic updates: every time NVDA starts, the add-on checks for a new version, shows what's new and offers to install it. They can be turned off in NVDA Settings, Window Manager category, and checked by hand with the \"Checks for updates of this add-on\" command in Input gestures.",
-          "Enter brings the chosen window to the foreground again: since version 1.1 NVDA often said \"Cannot bring the window to the foreground\"."
+          "NVDA+W lists only the visible windows, as Alt+Tab and JAWS do: the hidden windows that some programs keep ready (for example about fifteen whatSnap windows, even with the program minimized) and the hidden NVDA window no longer appear.",
+          "Choosing a minimized program that had a secondary window open (for example a \"Do you want to save?\" question) brings the program back and moves the focus to that window."
         ]
       }
     },
