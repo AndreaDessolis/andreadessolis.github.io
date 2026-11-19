@@ -44,6 +44,13 @@
     <p class="lede">Versions from the most recent. What&#x27;s new in the installed version can also be read in the NVDA add-on manager.</p>
     <p><a href="../addon-nvda.html#blocco-modificatore">Back to NVDA Modifier Lock</a></p>
 <section class="release">
+<h2>Version 1.2.2</h2>
+<h3>Fixes</h3>
+<ol>
+<li>After NVDA+F2 (pass the next key to the program), pressing Insert alone or in a combination like Control+Insert made the add-on lock the NVDA key and swallow the release of Insert: NVDA stayed forever passing keys to the program (the NVDA key no longer worked) and the program thought Insert was still pressed, so Control and the other modifiers seemed not to work. Now after NVDA+F2 the Insert key goes whole to the program, as without the add-on. It happened in every program, for example in Reaper with Control+Insert.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 1.2.1</h2>
 <h3>New</h3>
 <ol>
