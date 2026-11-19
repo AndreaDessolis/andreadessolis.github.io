@@ -6,19 +6,19 @@
         "it": "Navigazione web",
         "en": "Web Navigation"
       },
-      "versione": "1.4.0",
+      "versione": "1.4.1",
       "url": "https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases/latest/download/navigazioneWeb.nvda-addon",
-      "sha256": "7753e9d42935a65621a3a29d02dba7aee7245e9e4df8762c397d788741d07ffb",
+      "sha256": "1f8011fd6c64cdac1d187fda090154bc6f7c81d8aca095be3ce6088752fa342a",
       "pagina": {
         "it": "https://andreadessolis.com/addon-nvda.html#navigazione-web",
         "en": "https://andreadessolis.com/en/addon-nvda.html#navigazione-web"
       },
       "novita": {
         "it": [
-          "Torna dov'eri: NVDA+Maiusc+freccia sinistra riporta il cursore dov'era prima dell'ultimo salto (H, N, U e le altre lettere, J, Elementi della pagina, la ricerca, Ctrl+Home e Ctrl+End) e legge la riga; premuto ancora torna più indietro, fino a 20 posizioni per pagina. NVDA+Maiusc+freccia destra rifà il salto. Solo nello schema di tastiera desktop (nello schema portatile quei tasti sono di NVDA). Funziona anche nei messaggi di Thunderbird; si spegne nelle impostazioni. Grazie ad Amir per il suggerimento."
+          "Invio attiva la modalità focus anche quando il cursore è sul testo che un sito disegna dentro un campo vuoto, per esempio l'invito a scrivere nel campo dei messaggi di ChatGPT: prima NVDA lo cliccava e basta, perché quel testo non è il campo. Su link, pulsanti e gli altri elementi Invio fa quello che fa in NVDA. Si spegne nelle impostazioni, casella \"Invio sul testo disegnato dentro un campo attiva la modalità focus\"."
         ],
         "en": [
-          "Go back to where you were: NVDA+Shift+Left arrow takes the cursor back to where it was before the last jump (H, N, U and the other letters, J, Page elements, the search, Control+Home and Control+End) and reads the line; pressed again it goes further back, up to 20 positions for each page. NVDA+Shift+Right arrow does the jump again. Desktop keyboard layout only (in the laptop layout those keys belong to NVDA). It also works in Thunderbird messages; it can be turned off in the settings. Thanks to Amir for the suggestion."
+          "Enter switches to focus mode also when the cursor is on the text that a site draws inside an empty field, for example the invitation to type in the ChatGPT message field: before, NVDA only clicked it, because that text is not the field. On links, buttons and the other elements Enter does what it does in NVDA. It can be turned off in the settings, \"Enter on the text drawn inside a field switches to focus mode\" check box."
         ]
       }
     },
