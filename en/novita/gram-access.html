@@ -44,6 +44,30 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.3.3</h2>
+<p>Version 2.3.3 brings quick chats, saving attachments on the fly and the choice of the translation language.</p>
+<h3>NEW</h3>
+<ol>
+<li>Recent chats. Alt+Shift+1 opens the most recent chat, Alt+Shift+2 the second one, and so on up to Alt+Shift+0 for the tenth. The order is the one of the chat list, without counting pinned chats, and it works from the whole main window, even from inside another chat.</li>
+<li>Assigned chats. Open a chat, or select it in the list, and press Control+Alt+Shift with a number from 1 to 9 to put it on that number; then Control+Shift with the same number opens it. Pressing Control+Alt+Shift and the number again on the same chat removes it. Assigned chats are kept after a restart.</li>
+<li>When you open a recent or assigned chat, the cursor goes to the message field and you hear the name of the chat; if you are already in that chat, you hear the name again. In the Go to menu there are the &quot;Recent chats&quot; and &quot;Assigned chats&quot; submenus, with names and keys. All these keys can be changed in Settings, Keyboard category, in the new &quot;Quick chats&quot; branch.</li>
+<li>Saving attachments on the fly. With Control+S on the message, the attachment is saved to the attachments folder without any window, downloading it first if needed, and at the end you hear &quot;Saved:&quot; with the file name. If a file with the same name is already there, the old one is not touched and the new one gets a number, for example &quot;document (2).pdf&quot;. The folder, Downloads by default, is chosen in Settings, Chat and Messages category, with the &quot;Attachments folder&quot; button. &quot;Save as...&quot; stays, now also with Control+Alt+Shift+S; both items are in the message menu, Attachment submenu.</li>
+<li>Translation language. In Settings, General category, right after the program language, there is &quot;Translate messages to&quot;: you can have messages translated into any language, even different from the program language. The default is the program language. It applies to Translate, to the automatic translation of chats and to &quot;Transcribe and translate&quot;.</li>
+<li>Previous unlistened voice message. With Alt+Shift+W you go to the nearest unlistened voice message above the message you are on, paired with Control+Shift+W which takes you to the oldest one. Both items are also in the Information menu.</li>
+</ol>
+<h3>IMPROVEMENTS</h3>
+<ol>
+<li>In the message field, AltGr with a letter or a number always types its character, even if the combination is a program shortcut: for Windows AltGr is like Control+Alt, and with some keyboards, for example the Polish one, letters such as ą, ć or ś could not be typed.</li>
+<li>In text fields the left and right arrows, Home, End, Delete and Backspace, also with Control or Shift, are always used to move and select in the text, even if you assigned them to a shortcut.</li>
+<li>When you open a chat, its name is always heard, and first. Before, in groups and in chats with pinned messages, it was covered by the number of online users or by &quot;Pinned message available&quot;, which now come right after.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>&quot;Save as...&quot; saved voice messages without an extension, so Windows did not know what to open them with: now they have &quot;.ogg&quot;, as in Telegram Desktop.</li>
+<li>&quot;Save as...&quot; also allowed saving protected content, which Telegram does not allow to save: now, as in the official apps, it cannot be done.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 2.3.2</h2>
 <p>Version 2.3.2 lets you send stereo voice messages, designed for those who play music.</p>
 <h3>NEW</h3>
