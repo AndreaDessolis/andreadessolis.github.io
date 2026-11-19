@@ -29,6 +29,7 @@
 <tr><td>NVDA+J</td><td>Aggiunge un segnaposto</td></tr>
 <tr><td>Ctrl+Win+J</td><td>Mette il segnaposto temporaneo</td></tr>
 <tr><td>NVDA+Maiusc+J</td><td>Finestra dei segnaposti</td></tr>
+<tr><td>NVDA+Maiusc+7</td><td>Accende e spegne il salto delle righe vuote</td></tr>
 <tr><td>NVDA+Ctrl+F, NVDA+F3, NVDA+Maiusc+F3</td><td>La ricerca di NVDA, con la parola ricordata per ogni pagina (o i tasti che le hai assegnato in Gesti e comandi)</td></tr>
 </table>
 <p>Le lettere semplici (à, ò, ù, J, Y) funzionano solo in modalità navigazione e con la navigazione a lettera singola accesa (NVDA+Maiusc+Spazio). Nei campi di testo si scrivono normalmente.</p>
@@ -75,12 +76,21 @@
 <li>In cima e in fondo alla pagina, se dopo ci sono solo righe vuote, si resta dove si è, come in NVDA.</li>
 <li>La lettura continua, la selezione del testo e le altre pagine (Word, Outlook...) restano come in NVDA. Se nelle Impostazioni di NVDA i paragrafi sono "a righe vuote multiple", Ctrl+freccia su e giù seguono quell'impostazione.</li>
 </ul>
-<p>Casella: <em>Salta le righe vuote spostandosi con le frecce</em> (accesa di serie).</p>
+<p>Casella: <em>Salta le righe vuote spostandosi con le frecce</em> (accesa di serie). <strong>NVDA+Maiusc+7</strong> la accende e la spegne al volo, per i siti che mettono qualcosa di utile su righe che sembrano vuote: NVDA dice "Righe vuote saltate" o "Righe vuote lette". Sulla tastiera italiana Maiusc+7 è la barra; il tasto si può cambiare da Gesti e comandi.</p>
 
-<h2>Ricerca che ricorda la parola per ogni pagina</h2>
-<p>La ricerca di NVDA ricorda una sola parola per tutte le pagine e la perde al riavvio. Con l'add-on ogni pagina ha la sua: aprendo la ricerca la si trova già scritta e selezionata (Invio per cercarla, oppure si scrive una parola nuova). NVDA+F3 e NVDA+Maiusc+F3 usano la parola della pagina. Si ricorda anche la casella delle maiuscole. Su una pagina mai cercata si trova l'ultima parola cercata altrove, come in NVDA.</p>
-<p>La pagina è riconosciuta dal suo indirizzo, senza la parte dopo il cancelletto (#). Si ricordano al massimo 500 pagine: oltre, si dimenticano le più vecchie.</p>
-<p>Nelle impostazioni: casella <em>Ricorda la ricerca per ogni pagina</em> e pulsante <em>Cancella le ricerche ricordate</em>.</p>
+<h2>Nei messaggi di Thunderbird</h2>
+<p>I messaggi aperti in Thunderbird si leggono in modalità navigazione come una pagina web. Lì funzionano il salto delle righe vuote, <em>Apri il link dove sei</em> (Maiusc+Invio, Ctrl+Invio, Applicazioni), <em>Elementi della pagina</em> (NVDA+F6 e i comandi Elenco) e i <em>punti smart</em> (Y, Maiusc+Y, NVDA+Ctrl+Y). Le altre funzioni (segnaposti, ricerca ricordata, indirizzo, tasti di salto) restano solo per il web: in Thunderbird i loro tasti fanno quello che fanno in NVDA.</p>
+
+<h2>Ricerca che ricorda la parola per ogni pagina e sito</h2>
+<p>La ricerca di NVDA ricorda una sola parola per tutte le pagine e la perde al riavvio. Con l'add-on ogni pagina e ogni sito hanno la loro: aprendo la ricerca la si trova già scritta e selezionata (Invio per cercarla, oppure si scrive una parola nuova). NVDA+F3 e NVDA+Maiusc+F3 usano la stessa parola. Si ricorda anche la casella delle maiuscole.</p>
+<p>Ogni parola cercata si ricorda sia per la pagina sia per il sito (il sito senza "www", come per i segnaposti). L'elenco <em>Ricorda la parola cercata per</em>, nelle impostazioni, sceglie quale proporre:</p>
+<ul>
+<li><strong>Pagina, poi sito</strong> (di serie): la parola di quella pagina; se la pagina non ne ha una, l'ultima cercata su quel sito. Utile su siti come YouTube, dove ogni video ha un indirizzo diverso.</li>
+<li><strong>Solo la pagina</strong>: solo la parola cercata su quella stessa pagina.</li>
+<li><strong>Solo il sito</strong>: l'ultima parola cercata su qualunque pagina del sito.</li>
+</ul>
+<p>Senza una parola ricordata si trova l'ultima cercata altrove, come in NVDA. La pagina è riconosciuta dal suo indirizzo, senza la parte dopo il cancelletto (#). Si ricordano al massimo 500 pagine e siti: oltre, si dimenticano i più vecchi.</p>
+<p>Nelle impostazioni: casella <em>Ricorda la parola cercata</em>, elenco <em>Ricorda la parola cercata per</em> e pulsante <em>Cancella le ricerche ricordate</em> (pagine e siti).</p>
 
 <h2>Elementi della pagina (NVDA+F6)</h2>
 <p>Come Ins+F3 di JAWS. La finestra ha, nell'ordine del Tab:</p>
@@ -102,7 +112,17 @@
 <li><strong>NVDA+Maiusc+J</strong> apre "Segnaposti": l'elenco dei segnaposti della pagina e del sito, con Vai (o Invio), Rinomina, Elimina (o Canc), Elimina tutti (chiede conferma) e Chiudi. Quelli del sito hanno "(sito)" accanto al nome, quello temporaneo "(temporaneo)"; quelli il cui testo non c'è nella pagina sono indicati con "non in questa pagina".</li>
 </ul>
 <p>Le pagine cambiano: di ogni segnaposto si ricordano il testo della riga e la posizione. Si cerca il testo, anche se si è spostato; se compare più volte si sceglie la volta con le stesse righe prima e dopo, poi la più vicina alla posizione di prima. Se il testo non c'è più, un segnaposto di pagina usa la posizione di prima.</p>
-<p>Nelle impostazioni: casella <em>Segnaposti</em> e pulsante <em>Cancella tutti i segnaposti</em>.</p>
+<p>Nelle impostazioni: casella <em>Segnaposti</em> e pulsanti <em>Gestisci i segnaposti</em> e <em>Cancella tutti i segnaposti</em>.</p>
+<h3>Gestisci i segnaposti</h3>
+<p>Il pulsante <em>Gestisci i segnaposti</em>, nelle impostazioni di Navigazione web, apre una finestra con tutti i segnaposti salvati:</p>
+<ul>
+<li><strong>Siti e pagine</strong> (Alt+S): ogni sito o pagina che ha segnaposti, con quanti sono, per esempio "youtube.com, sito: 3".</li>
+<li><strong>Segnaposti</strong> (Alt+G): quelli del sito o della pagina scelti.</li>
+<li>Pulsanti <strong>Rinomina</strong>, <strong>Elimina</strong> (anche col tasto Canc) e <strong>Elimina tutti quelli del sito o della pagina</strong> (chiede conferma).</li>
+<li><strong>Esporta</strong>: salva tutti i segnaposti in un file, per esempio per tenerne una copia o portarli su un altro computer.</li>
+<li><strong>Importa</strong>: legge un file esportato e chiede se aggiungere i segnaposti a quelli attuali (quelli già presenti non si doppiano) o sostituirli tutti.</li>
+</ul>
+<p>Il segnaposto temporaneo non c'è: dura solo fino al riavvio di NVDA.</p>
 
 <h2>Punti smart</h2>
 <p>Come la Smart Glance di JAWS. Un punto smart è un pezzo di testo che a vista si nota perché ha uno stile raro nella pagina: un colore, uno sfondo, un carattere, una dimensione, il grassetto, il corsivo, il testo evidenziato. Spesso non è un'intestazione, quindi con H non ci si arriva: per esempio un numero di telefono in evidenza o un avviso colorato.</p>

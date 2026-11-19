@@ -29,6 +29,7 @@
 <tr><td>NVDA+J</td><td>Adds a placemarker</td></tr>
 <tr><td>Control+Windows+J</td><td>Sets the temporary placemarker</td></tr>
 <tr><td>NVDA+Shift+J</td><td>Placemarkers window</td></tr>
+<tr><td>NVDA+Shift+7</td><td>Turns skipping blank lines on and off</td></tr>
 <tr><td>NVDA+Control+F, NVDA+F3, NVDA+Shift+F3</td><td>NVDA's search, with the word remembered for each page (or the keys you assigned to it in Input gestures)</td></tr>
 </table>
 <p>The single letters (à, ò, ù, J, Y) work only in browse mode and with single letter navigation on (NVDA+Shift+Space). In text fields they are typed as usual.</p>
@@ -76,12 +77,21 @@
 <li>At the top and bottom of the page, if only blank lines follow, you stay where you are, as in NVDA.</li>
 <li>Say all, text selection and other documents (Word, Outlook...) stay as in NVDA. If NVDA's paragraph style is "multi-line break", Control+Up and Down arrow follow that setting.</li>
 </ul>
-<p>Check box: <em>Skip blank lines when moving with the arrows</em> (on by default).</p>
+<p>Check box: <em>Skip blank lines when moving with the arrows</em> (on by default). <strong>NVDA+Shift+7</strong> turns it on and off at any time, for sites that put something useful on lines that look empty: NVDA says "Blank lines skipped" or "Blank lines read". On the Italian keyboard Shift+7 is the slash, which is not a single key there; on other keyboards you can assign NVDA+slash, or any other key, in Input gestures.</p>
 
-<h2>A search that remembers the word for each page</h2>
-<p>NVDA's search remembers a single word for all pages and forgets it when NVDA restarts. With the add-on each page has its own: when you open the search, the word is already there and selected (Enter to search it, or type a new word). NVDA+F3 and NVDA+Shift+F3 use the word of the page. The case sensitive check box is remembered too. On a page never searched you find the last word searched elsewhere, as in NVDA.</p>
-<p>The page is recognized by its address, without the part after the hash sign (#). Up to 500 pages are remembered: beyond that, the oldest are forgotten.</p>
-<p>In the settings: check box <em>Remember the search for each page</em> and button <em>Delete the remembered searches</em>.</p>
+<h2>In Thunderbird messages</h2>
+<p>Messages open in Thunderbird are read in browse mode like a web page. There, skipping blank lines, <em>Open the link where you are</em> (Shift+Enter, Control+Enter, Applications), <em>Page elements</em> (NVDA+F6 and the List commands) and <em>smart points</em> (Y, Shift+Y, NVDA+Control+Y) work. The other features (placemarkers, remembered search, address, quick navigation keys) stay web-only: in Thunderbird their keys do what they do in NVDA.</p>
+
+<h2>A search that remembers the word for each page and site</h2>
+<p>NVDA's search remembers a single word for all pages and forgets it when NVDA restarts. With the add-on each page and each site have their own: when you open the search, the word is already there and selected (Enter to search it, or type a new word). NVDA+F3 and NVDA+Shift+F3 use the same word. The case sensitive check box is remembered too.</p>
+<p>Every searched word is remembered both for the page and for the site (the site without "www", as for placemarkers). The <em>Remember the searched word for</em> list, in the settings, chooses which one to propose:</p>
+<ul>
+<li><strong>Page, then site</strong> (default): the word of that page; if the page has none, the last one searched on that site. Useful on sites like YouTube, where every video has a different address.</li>
+<li><strong>Page only</strong>: only the word searched on that same page.</li>
+<li><strong>Site only</strong>: the last word searched on any page of the site.</li>
+</ul>
+<p>Without a remembered word you find the last one searched elsewhere, as in NVDA. The page is recognized by its address, without the part after the hash sign (#). Up to 500 pages and sites are remembered: beyond that, the oldest are forgotten.</p>
+<p>In the settings: check box <em>Remember the searched word</em>, list <em>Remember the searched word for</em> and button <em>Delete the remembered searches</em> (pages and sites).</p>
 
 <h2>Page elements (NVDA+F6)</h2>
 <p>Like Insert+F3 in JAWS. The window has, in Tab order:</p>
@@ -103,7 +113,17 @@
 <li><strong>NVDA+Shift+J</strong> opens "Placemarkers": the list of the placemarkers of the page and of the site, with Move to (or Enter), Rename, Delete (or the Delete key), Delete all (asks for confirmation) and Close. Site placemarkers have "(site)" after the name, the temporary one "(temporary)"; those whose text is not on the page are marked "not on this page".</li>
 </ul>
 <p>Pages change: for each placemarker the text of the line and its position are remembered. The text is searched, even if it moved; if it appears more than once, the one with the same lines before and after is chosen, then the one closest to the previous position. If the text is gone, a page placemarker uses the previous position.</p>
-<p>In the settings: check box <em>Placemarkers</em> and button <em>Delete all the placemarkers</em>.</p>
+<p>In the settings: check box <em>Placemarkers</em> and buttons <em>Manage placemarkers</em> and <em>Delete all the placemarkers</em>.</p>
+<h3>Manage placemarkers</h3>
+<p>The <em>Manage placemarkers</em> button, in the Web Navigation settings, opens a window with all the saved placemarkers:</p>
+<ul>
+<li><strong>Sites and pages</strong> (Alt+S): each site or page that has placemarkers, with how many, for example "youtube.com, site: 3".</li>
+<li><strong>Placemarkers</strong> (Alt+P): the ones of the chosen site or page.</li>
+<li><strong>Rename</strong>, <strong>Delete</strong> (also with the Delete key) and <strong>Delete all of this site or page</strong> (asks for confirmation) buttons.</li>
+<li><strong>Export</strong>: saves all the placemarkers to a file, for example to keep a copy or move them to another computer.</li>
+<li><strong>Import</strong>: reads an exported file and asks whether to add the placemarkers to the current ones (those already there are not duplicated) or to replace them all.</li>
+</ul>
+<p>The temporary placemarker is not there: it lasts only until NVDA restarts.</p>
 
 <h2>Smart points</h2>
 <p>Like the Smart Glance of JAWS. A smart point is a piece of text that stands out to the eye because it has a style that is rare in the page: a color, a background, a font, a size, bold, italic, highlighted text. Often it is not a heading, so H does not reach it: for example a phone number in evidence or a colored notice.</p>
