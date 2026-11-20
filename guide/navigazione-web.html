@@ -29,6 +29,11 @@
 <tr><td>NVDA+J</td><td>Aggiunge un segnaposto</td></tr>
 <tr><td>Ctrl+Win+J</td><td>Mette il segnaposto temporaneo</td></tr>
 <tr><td>NVDA+Maiusc+J</td><td>Finestra dei segnaposti</td></tr>
+<tr><td>NVDA+Ctrl+J</td><td>Legge i segnaposti da leggere, senza spostare il cursore</td></tr>
+<tr><td>NVDA+Ctrl+Maiusc+J</td><td>Clicca i segnaposti da cliccare, senza spostare il cursore</td></tr>
+<tr><td>è e Maiusc+è</td><td>Paragrafo successivo e precedente allo stesso livello (NVDA 2024.2 e successive)</td></tr>
+<tr><td>NVDA+è</td><td>Paragrafo del livello sopra</td></tr>
+<tr><td>NVDA+Ctrl+Maiusc+S</td><td>Impostazioni del sito: annunci automatici e modalità focus</td></tr>
 <tr><td>NVDA+Maiusc+7</td><td>Accende e spegne il salto delle righe vuote</td></tr>
 <tr><td>NVDA+Maiusc+freccia sinistra e destra (schema desktop)</td><td>Torna dov'eri prima dell'ultimo salto, e rifà il salto</td></tr>
 <tr><td>NVDA+Ctrl+F, NVDA+F3, NVDA+Maiusc+F3</td><td>La ricerca di NVDA, con la parola ricordata per ogni pagina (o i tasti che le hai assegnato in Gesti e comandi)</td></tr>
@@ -114,9 +119,14 @@
 <h2>Segnaposti</h2>
 <ul>
 <li><strong>NVDA+J</strong> apre "Aggiungi segnaposto": il <em>Nome</em> contiene già il testo della riga, selezionato; <em>Vale per</em> sceglie "Solo questa pagina" o "Tutto il sito" (ogni pagina del sito in cui c'è quel testo). La finestra ricorda l'ultima scelta. Se sulla riga c'è un link, un pulsante, un'intestazione, un campo, una casella di controllo, un pulsante di opzione, un grafico o una scheda, compare anche la casella <em>Solo se è</em> seguita dal tipo, come lo dice NVDA (accesa di serie): così J va solo a un elemento di quel tipo con lo stesso testo, e salta i paragrafi con le stesse parole. Spenta, il segnaposto vale per qualunque riga con quel testo. Se sulla riga c'è già un segnaposto, NVDA lo dice e la finestra non si apre.</li>
+<li><strong>Testo selezionato</strong>: se prima di premere NVDA+J selezioni una parola o una frase (per esempio con Maiusc+frecce), il segnaposto ricorda solo quella e non tutta la riga. Serve quando la riga contiene anche cose che cambiano, come "LISTEN· 3:49", dove la durata è diversa per ogni articolo: selezioni solo "LISTEN".</li>
+<li><strong>Usalo per</strong>: "Andarci con J" (di serie) è il segnaposto di sempre. "Leggerlo con NVDA+Ctrl+J" fa un segnaposto da leggere: <strong>NVDA+Ctrl+J</strong> legge le righe di tutti i segnaposti da leggere della pagina senza spostare il cursore, utile per controllare cose che cambiano, come un contatore o un messaggio di stato. Per questi segnaposti c'è anche la casella <strong>Annuncia quando cambia</strong> (Alt+A): accesa, l'add-on ricontrolla la riga ogni 2 secondi mentre sei nella pagina e, quando il testo cambia, NVDA lo legge da solo, senza premere niente. "Cliccarlo con NVDA+Ctrl+Maiusc+J" fa un segnaposto da cliccare: <strong>NVDA+Ctrl+Maiusc+J</strong> clicca tutti i segnaposti da cliccare della pagina, come Invio su ognuno, senza spostare il cursore, per esempio il pulsante Play di un sito; NVDA dice "Cliccato" col nome, o quanti sono stati cliccati. "Saltarlo con le frecce" fa un segnaposto da saltare: freccia su e giù e Ctrl+freccia su e giù passano oltre la sua riga come se fosse vuota, senza toglierla dalla pagina; serve per le cose ripetute che disturbano la lettura, come date, orari o etichette. Usa la stessa casella e lo stesso interruttore delle righe vuote: NVDA+Maiusc+7 spegne e riaccende al volo sia le righe vuote sia quelle da saltare. J e Maiusc+J vanno solo ai segnaposti "Andarci con J". Se nella pagina non ce ne sono, NVDA dice "Nessun segnaposto da leggere" o "Nessun segnaposto da cliccare".</li>
+<li><strong>Testo cercato</strong>: il testo che il segnaposto cerca nella pagina, già compilato con la riga o con il testo selezionato. Si può correggere, per esempio togliere la parte che cambia.</li>
+<li><strong>Dove</strong>: "Solo qui" fa del segnaposto un punto della pagina, come in JAWS. "Ogni volta che il testo compare" lo fa valere per tutte le righe che contengono il testo: per esempio, con "Listen" su tutto il sito, J va a ogni pulsante Listen di ogni pagina. Il testo si cerca a parole intere ("Listen" non vale dentro "Listening") e senza badare a maiuscole e minuscole. Con del testo selezionato la scelta proposta è "Ogni volta che il testo compare", altrimenti "Solo qui".</li>
+<li><strong>Poi spostati di paragrafi</strong> (0 di serie, da -20 a 20, si regola con le frecce): dopo aver trovato il testo, J porta il cursore quel numero di paragrafi più avanti, o più indietro se il numero è negativo; i paragrafi vuoti non contano. Serve quando il punto che vuoi raggiungere non ha un testo fisso, ma il paragrafo vicino sì: per esempio in un forum, sopra ogni messaggio c'è "Upvote"; con un segnaposto su "Upvote" e spostamento 1, J va all'inizio del messaggio.</li>
 <li><strong>Ctrl+Win+J</strong> mette il segnaposto temporaneo, come Ctrl+Win+K di JAWS: senza finestra, uno solo per pagina (premuto di nuovo lo sposta sulla riga dove sei), non salvato su file: dura fino al riavvio di NVDA. NVDA dice "Segnaposto temporaneo impostato".</li>
 <li><strong>J</strong> e <strong>Maiusc+J</strong> vanno al segnaposto successivo e precedente e leggono la riga. Dopo l'ultimo il cursore resta dov'è e NVDA dice "Nessun segnaposto successivo" (con Maiusc+J, prima del primo: "Nessun segnaposto precedente"), come con le intestazioni.</li>
-<li><strong>NVDA+Maiusc+J</strong> apre "Segnaposti": l'elenco dei segnaposti della pagina e del sito, con Vai (o Invio), Rinomina, Elimina (o Canc), Elimina tutti (chiede conferma) e Chiudi. Quelli del sito hanno "(sito)" accanto al nome, quello temporaneo "(temporaneo)"; quelli il cui testo non c'è nella pagina sono indicati con "non in questa pagina".</li>
+<li><strong>NVDA+Maiusc+J</strong> apre "Segnaposti": l'elenco dei segnaposti della pagina e del sito, con Vai (o Invio), Modifica, Elimina (o Canc), Elimina tutti (chiede conferma) e Chiudi. Quelli del sito hanno "(sito)" accanto al nome, quello temporaneo "(temporaneo)"; quelli il cui testo non c'è nella pagina sono indicati con "non in questa pagina". Un segnaposto "ogni volta" compare una volta per ogni riga, con il numero, per esempio "Listen (sito), 2 di 5"; eliminandone uno si elimina il segnaposto, quindi tutte le righe. <strong>Modifica</strong> apre la finestra "Modifica segnaposto", uguale ad Aggiungi segnaposto e già compilata: si cambiano nome, testo cercato, Usalo per, Dove, spostamento e Solo se è. "Vale per" non si cambia: per passare da una pagina a tutto il sito, o il contrario, si elimina il segnaposto e lo si rifà.</li>
 </ul>
 <p>Le pagine cambiano: di ogni segnaposto si ricordano il testo della riga e la posizione. Si cerca il testo, anche se si è spostato; se compare più volte si sceglie la volta con le stesse righe prima e dopo, poi la più vicina alla posizione di prima. Se il testo non c'è più, un segnaposto di pagina usa la posizione di prima.</p>
 <p>Nelle impostazioni: casella <em>Segnaposti</em> e pulsanti <em>Gestisci i segnaposti</em> e <em>Cancella tutti i segnaposti</em>.</p>
@@ -124,12 +134,23 @@
 <p>Il pulsante <em>Gestisci i segnaposti</em>, nelle impostazioni di Navigazione web, apre una finestra con tutti i segnaposti salvati:</p>
 <ul>
 <li><strong>Siti e pagine</strong> (Alt+S): ogni sito o pagina che ha segnaposti, con quanti sono, per esempio "youtube.com, sito: 3".</li>
-<li><strong>Segnaposti</strong> (Alt+G): quelli del sito o della pagina scelti.</li>
-<li>Pulsanti <strong>Rinomina</strong>, <strong>Elimina</strong> (anche col tasto Canc) e <strong>Elimina tutti quelli del sito o della pagina</strong> (chiede conferma).</li>
+<li><strong>Segnaposti</strong> (Alt+G): quelli del sito o della pagina scelti; quelli che valgono ogni volta che il testo compare hanno "(ogni volta)" accanto al nome.</li>
+<li>Pulsanti <strong>Modifica</strong> (come nella finestra Segnaposti), <strong>Elimina</strong> (anche col tasto Canc) e <strong>Elimina tutti quelli del sito o della pagina</strong> (chiede conferma).</li>
 <li><strong>Esporta</strong>: salva tutti i segnaposti in un file, per esempio per tenerne una copia o portarli su un altro computer.</li>
 <li><strong>Importa</strong>: legge un file esportato e chiede se aggiungere i segnaposti a quelli attuali (quelli già presenti non si doppiano) o sostituirli tutti.</li>
 </ul>
 <p>Il segnaposto temporaneo non c'è: dura solo fino al riavvio di NVDA.</p>
+
+<h2>Paragrafi allo stesso livello</h2>
+<p>Nelle discussioni a più livelli, come i commenti di Reddit o di un forum, le risposte sono rientrate rispetto al messaggio a cui rispondono. <strong>è</strong> va al paragrafo successivo che inizia alla stessa distanza dal bordo sinistro, cioè allo stesso livello, saltando le risposte; <strong>Maiusc+è</strong> va a quello precedente. Sono i comandi "paragrafo allineato" di NVDA, che non hanno un tasto: ci sono da NVDA 2024.2, prima il tasto resta a NVDA. <strong>NVDA+è</strong> torna al livello sopra: il paragrafo precedente che inizia più a sinistra, per esempio il commento a cui si sta rispondendo; se non c'è, NVDA dice "Nessun livello sopra". Funzionano in modalità navigazione e si spengono con la casella dei tasti di salto. La è c'è solo sulla tastiera italiana: con altre tastiere si assegnano altri tasti da Gesti e comandi.</p>
+
+<h2>Impostazioni del sito</h2>
+<p><strong>NVDA+Ctrl+Maiusc+S</strong> apre le impostazioni del sito della pagina, per esempio "Impostazioni di reddit.com", con due caselle che valgono per tutte le pagine di quel sito:</p>
+<ul>
+<li><strong>Zittisci gli annunci automatici di questo sito</strong> (Alt+Z): NVDA non legge le notifiche e gli aggiornamenti che il sito annuncia da solo (le "regioni live"), per i siti che parlano di continuo. Si leggono ancora spostandosi con le frecce.</li>
+<li><strong>Non attivare da solo la modalità focus</strong> (Alt+F): NVDA resta in modalità navigazione anche quando il focus va su un campo o su un altro controllo, per i siti che spostano il focus a sproposito. Per scrivere in un campo si entra in modalità focus con Invio o NVDA+Spazio; Esc torna alla navigazione come sempre.</li>
+</ul>
+<p>Le impostazioni dei siti sono salvate nel file navigazioneWeb-siti.json, nella cartella delle impostazioni di NVDA.</p>
 
 <h2>Torna dov'eri</h2>
 <p>Dopo un salto con H, N, U e gli altri tasti è spesso lungo ritornare dove si era. <strong>NVDA+Maiusc+freccia sinistra</strong> riporta il cursore dov'era prima dell'ultimo salto e legge la riga, come il tasto Indietro del browser ma dentro la pagina. Premuto ancora torna più indietro. <strong>NVDA+Maiusc+freccia destra</strong> rifà il salto, come Avanti.</p>

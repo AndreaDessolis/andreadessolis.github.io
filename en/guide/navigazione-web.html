@@ -29,6 +29,11 @@
 <tr><td>NVDA+J</td><td>Adds a placemarker</td></tr>
 <tr><td>Control+Windows+J</td><td>Sets the temporary placemarker</td></tr>
 <tr><td>NVDA+Shift+J</td><td>Placemarkers window</td></tr>
+<tr><td>NVDA+Control+J</td><td>Reads the placemarkers to read, without moving the cursor</td></tr>
+<tr><td>NVDA+Control+Shift+J</td><td>Clicks the placemarkers to click, without moving the cursor</td></tr>
+<tr><td>è and Shift+è</td><td>Next and previous paragraph at the same level (NVDA 2024.2 and later)</td></tr>
+<tr><td>NVDA+è</td><td>Paragraph one level up</td></tr>
+<tr><td>NVDA+Control+Shift+S</td><td>Site settings: automatic announcements and focus mode</td></tr>
 <tr><td>NVDA+Shift+7</td><td>Turns skipping blank lines on and off</td></tr>
 <tr><td>NVDA+Shift+Left and Right arrow (desktop layout)</td><td>Goes back to where you were before the last jump, and does the jump again</td></tr>
 <tr><td>NVDA+Control+F, NVDA+F3, NVDA+Shift+F3</td><td>NVDA's search, with the word remembered for each page (or the keys you assigned to it in Input gestures)</td></tr>
@@ -115,9 +120,14 @@
 <h2>Placemarkers</h2>
 <ul>
 <li><strong>NVDA+J</strong> opens "Add Placemarker": the <em>Name</em> already contains the text of the line, selected; <em>Valid for</em> chooses "Only this page" or "The whole site" (every page of the site where that text is). The window remembers the last choice. If the line has a link, a button, a heading, a field, a check box, a radio button, a graphic or a tab, the <em>Only if it is</em> check box also appears, followed by the kind of element as NVDA says it (checked by default): this way J moves only to an element of that kind with the same text, and skips paragraphs with the same words. Unchecked, the placemarker is valid for any line with that text. If the line already has a placemarker, NVDA says so and the window does not open.</li>
+<li><strong>Selected text</strong>: if you select a word or a phrase before pressing NVDA+J (for example with Shift+arrows), the placemarker remembers only that and not the whole line. It is useful when the line also has things that change, like "LISTEN· 3:49", where the length is different for every article: you select only "LISTEN".</li>
+<li><strong>Use for</strong>: "Moving there with J" (the default) is the usual placemarker. "Reading it with NVDA+Control+J" makes a placemarker to read: <strong>NVDA+Control+J</strong> reads the lines of all the placemarkers to read of the page without moving the cursor, useful to check things that change, like a counter or a status message. These placemarkers also have the <strong>Announce when it changes</strong> check box (Alt+A): when checked, the add-on checks the line again every 2 seconds while you are on the page and, when the text changes, NVDA reads it by itself, without pressing anything. "Clicking it with NVDA+Control+Shift+J" makes a placemarker to click: <strong>NVDA+Control+Shift+J</strong> clicks all the placemarkers to click of the page, like Enter on each of them, without moving the cursor, for example the Play button of a site; NVDA says "Clicked" with the name, or how many were clicked. "Skipping it with the arrows" makes a placemarker to skip: Up and Down arrow and Control+Up and Down arrow pass over its line as if it were blank, without removing it from the page; it is useful for repeated things that disturb reading, like dates, times or labels. It uses the same check box and the same switch as blank lines: NVDA+Shift+7 turns both blank lines and lines to skip off and on at any time. J and Shift+J only go to "Moving there with J" placemarkers. If the page has none, NVDA says "No placemarkers to read" or "No placemarkers to click".</li>
+<li><strong>Text to find</strong>: the text the placemarker looks for in the page, already filled with the line or the selected text. It can be corrected, for example to remove the part that changes.</li>
+<li><strong>Where</strong>: "Only here" makes the placemarker one point of the page, as in JAWS. "Every time the text appears" makes it valid on every line that contains the text: for example, with "Listen" on the whole site, J goes to every Listen button of every page. The text is searched as whole words ("Listen" does not match inside "Listening") and regardless of upper and lower case. With selected text the proposed choice is "Every time the text appears", otherwise "Only here".</li>
+<li><strong>Then move by paragraphs</strong> (0 by default, from -20 to 20, set with the arrows): after finding the text, J moves the cursor that number of paragraphs forward, or backward if the number is negative; empty paragraphs do not count. It is useful when the point you want to reach has no fixed text but a nearby paragraph does: for example in a forum, above every post there is "Upvote"; with a placemarker on "Upvote" and a move of 1, J goes to the start of the post.</li>
 <li><strong>Control+Windows+J</strong> sets the temporary placemarker, like Control+Windows+K in JAWS: no window, only one per page (pressed again it moves to the line where you are), not saved to a file: it lasts until NVDA restarts. NVDA says "Temporary placemarker set".</li>
 <li><strong>J</strong> and <strong>Shift+J</strong> move to the next and previous placemarker and read the line. After the last one the cursor stays where it is and NVDA says "No next placemarker" (with Shift+J, before the first one: "No previous placemarker"), as with headings.</li>
-<li><strong>NVDA+Shift+J</strong> opens "Placemarkers": the list of the placemarkers of the page and of the site, with Move to (or Enter), Rename, Delete (or the Delete key), Delete all (asks for confirmation) and Close. Site placemarkers have "(site)" after the name, the temporary one "(temporary)"; those whose text is not on the page are marked "not on this page".</li>
+<li><strong>NVDA+Shift+J</strong> opens "Placemarkers": the list of the placemarkers of the page and of the site, with Move to (or Enter), Edit, Delete (or the Delete key), Delete all (asks for confirmation) and Close. Site placemarkers have "(site)" after the name, the temporary one "(temporary)"; those whose text is not on the page are marked "not on this page". A placemarker valid every time appears once for every line, with its number, for example "Listen (site), 2 of 5"; deleting one deletes the placemarker, so all its lines. <strong>Edit</strong> opens the "Edit Placemarker" window, the same as Add Placemarker and already filled in: you can change name, text to find, Use for, Where, move by paragraphs and Only if it is. "Valid for" cannot be changed: to move a placemarker from one page to the whole site, or the other way round, delete it and make it again.</li>
 </ul>
 <p>Pages change: for each placemarker the text of the line and its position are remembered. The text is searched, even if it moved; if it appears more than once, the one with the same lines before and after is chosen, then the one closest to the previous position. If the text is gone, a page placemarker uses the previous position.</p>
 <p>In the settings: check box <em>Placemarkers</em> and buttons <em>Manage placemarkers</em> and <em>Delete all the placemarkers</em>.</p>
@@ -125,12 +135,23 @@
 <p>The <em>Manage placemarkers</em> button, in the Web Navigation settings, opens a window with all the saved placemarkers:</p>
 <ul>
 <li><strong>Sites and pages</strong> (Alt+S): each site or page that has placemarkers, with how many, for example "youtube.com, site: 3".</li>
-<li><strong>Placemarkers</strong> (Alt+P): the ones of the chosen site or page.</li>
-<li><strong>Rename</strong>, <strong>Delete</strong> (also with the Delete key) and <strong>Delete all of this site or page</strong> (asks for confirmation) buttons.</li>
+<li><strong>Placemarkers</strong> (Alt+P): the ones of the chosen site or page; those valid every time the text appears have "(every time)" after the name.</li>
+<li><strong>Edit</strong> (as in the Placemarkers window), <strong>Delete</strong> (also with the Delete key) and <strong>Delete all of this site or page</strong> (asks for confirmation) buttons.</li>
 <li><strong>Export</strong>: saves all the placemarkers to a file, for example to keep a copy or move them to another computer.</li>
 <li><strong>Import</strong>: reads an exported file and asks whether to add the placemarkers to the current ones (those already there are not duplicated) or to replace them all.</li>
 </ul>
 <p>The temporary placemarker is not there: it lasts only until NVDA restarts.</p>
+
+<h2>Paragraphs at the same level</h2>
+<p>In discussions with several levels, like the comments of Reddit or of a forum, the replies are indented compared to the message they answer. <strong>è</strong> goes to the next paragraph that starts at the same distance from the left edge, that is at the same level, skipping the replies; <strong>Shift+è</strong> goes to the previous one. They are NVDA's "vertically aligned paragraph" commands, which have no key: they exist from NVDA 2024.2, before that the key stays with NVDA. <strong>NVDA+è</strong> goes one level up: the previous paragraph that starts more to the left, for example the comment being answered; if there is none, NVDA says "No level up". They work in browse mode and are turned off with the quick navigation keys check box. The è key exists only on the Italian keyboard: with other keyboards, assign other keys in Input gestures.</p>
+
+<h2>Site settings</h2>
+<p><strong>NVDA+Control+Shift+S</strong> opens the settings of the site of the page, for example "Settings of reddit.com", with two check boxes valid for every page of that site:</p>
+<ul>
+<li><strong>Silence the automatic announcements of this site</strong> (Alt+S): NVDA does not read the notifications and updates that the site announces by itself (the "live regions"), for sites that talk all the time. They can still be read moving with the arrows.</li>
+<li><strong>Do not switch to focus mode automatically</strong> (Alt+F): NVDA stays in browse mode also when the focus goes to a field or another control, for sites that move the focus at the wrong time. To type in a field, switch to focus mode with Enter or NVDA+Space; Escape goes back to browse mode as always.</li>
+</ul>
+<p>The site settings are saved in the navigazioneWeb-siti.json file, in the NVDA settings folder.</p>
 
 <h2>Go back to where you were</h2>
 <p>After a jump with H, N, U and the other keys it is often slow to get back to where you were. <strong>NVDA+Shift+Left arrow</strong> takes the cursor back to where it was before the last jump and reads the line, like the browser's Back key but inside the page. Pressed again, it goes further back. <strong>NVDA+Shift+Right arrow</strong> does the jump again, like Forward.</p>

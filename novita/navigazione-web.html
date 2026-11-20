@@ -44,6 +44,19 @@
     <p class="lede">Le versioni dalla più recente. Le novità della versione installata si leggono anche nel Gestore componenti aggiuntivi di NVDA.</p>
     <p><a href="../addon-nvda.html#navigazione-web">Torna a Navigazione web</a></p>
 <section class="release">
+<h2>Versione 1.5.0</h2>
+<h3>Novità</h3>
+<ol>
+<li>Segnaposti dal testo selezionato: se prima di NVDA+J selezioni una parola o una frase, il segnaposto ricorda solo quella e non tutta la riga. Utile quando la riga contiene anche cose che cambiano, come &quot;LISTEN· 3:49&quot; dove la durata cambia per ogni articolo. Grazie ad Amir per il suggerimento.</li>
+<li>Segnaposti che valgono ogni volta che il testo compare: nella finestra Aggiungi segnaposto, l&#x27;elenco &quot;Dove&quot; sceglie fra &quot;Solo qui&quot; (un punto della pagina, come prima) e &quot;Ogni volta che il testo compare&quot;: J va su tutte le righe con quel testo, per esempio su ogni pulsante Listen di un sito. Il testo si cerca a parole intere e senza badare a maiuscole e minuscole. Nella finestra Segnaposti (NVDA+Maiusc+J) ogni riga compare col suo numero, per esempio &quot;Listen (sito), 2 di 5&quot;. Grazie ad Amir per il suggerimento.</li>
+<li>Spostamento dopo il testo trovato: nella finestra Aggiungi segnaposto, &quot;Poi spostati di paragrafi&quot; (0 di serie, da -20 a 20) porta il cursore qualche paragrafo più avanti o più indietro del testo trovato, senza contare i paragrafi vuoti. Per esempio, con un segnaposto su &quot;Upvote&quot; e spostamento 1, J va all&#x27;inizio del messaggio che segue. Grazie ad Amir per il suggerimento.</li>
+<li>Segnaposti da leggere, da cliccare e da saltare: nella finestra Aggiungi segnaposto, l&#x27;elenco &quot;Usalo per&quot; sceglie fra &quot;Andarci con J&quot; (come prima), &quot;Leggerlo con NVDA+Ctrl+J&quot;, &quot;Cliccarlo con NVDA+Ctrl+Maiusc+J&quot; e &quot;Saltarlo con le frecce&quot;. Le righe dei segnaposti da saltare sono saltate da freccia su e giù come le righe vuote (per date, orari, etichette ripetute), e NVDA+Maiusc+7 spegne e riaccende al volo anche loro. NVDA+Ctrl+J legge tutti i segnaposti da leggere della pagina senza spostare il cursore (per esempio un contatore o un messaggio di stato); NVDA+Ctrl+Maiusc+J clicca tutti quelli da cliccare (per esempio il pulsante Play), anche lui senza spostare il cursore. Per i segnaposti da leggere, la casella &quot;Annuncia quando cambia&quot; fa leggere a NVDA la riga da sola appena il suo testo cambia (l&#x27;add-on la ricontrolla ogni 2 secondi). Grazie ad Amir per il suggerimento.</li>
+<li>I segnaposti salvati si modificano: nella finestra Segnaposti (NVDA+Maiusc+J) e in Gestisci i segnaposti il pulsante Modifica (al posto di Rinomina) apre la finestra del segnaposto già compilata, per cambiare nome, testo cercato, Usalo per, Dove, spostamento e Solo se è. Nella finestra Aggiungi segnaposto c&#x27;è anche il campo Testo cercato, per correggere il testo prima di salvarlo.</li>
+<li>Paragrafi allo stesso livello, per le discussioni a più livelli come i commenti di Reddit: è e Maiusc+è vanno al paragrafo successivo e precedente che inizia alla stessa distanza dal bordo sinistro, saltando le risposte (sono i comandi di NVDA &quot;paragrafo allineato&quot;, che non hanno un tasto: da NVDA 2024.2); NVDA+è torna al livello sopra, per esempio al commento a cui si sta rispondendo.</li>
+<li>Impostazioni del sito: NVDA+Ctrl+Maiusc+S apre una finestra con due caselle che valgono per tutte le pagine del sito: &quot;Zittisci gli annunci automatici di questo sito&quot;, per i siti che parlano di continuo, e &quot;Non attivare da solo la modalità focus&quot;, per i siti che spostano il focus a sproposito.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Versione 1.4.1</h2>
 <h3>Correzioni</h3>
 <ol>
