@@ -376,13 +376,13 @@ def versioni_da_json(percorso, lingua):
 
 
 def versioni_da_testo(percorso, lingua):
-    """Il changelog.txt di Gram Access: blocchi "Versione X", con [IT] [EN] [ES]."""
+    """Il changelog.txt di Gram Access: blocchi "Versione X", con [IT] [EN] [ES] (e [PL] dalla 2.3.4)."""
     testo = open(percorso, encoding='utf-8-sig').read()
     blocchi = re.split(r'^Versione (\d+\.\d+\.\d+)\s*$', testo, flags=re.M)
     risultato = []
     for i in range(1, len(blocchi), 2):
         versione, corpo = blocchi[i], blocchi[i + 1]
-        parti = re.split(r'^\[(IT|EN|ES)\]\s*$', corpo, flags=re.M)
+        parti = re.split(r'^\[(IT|EN|ES|PL)\]\s*$', corpo, flags=re.M)
         per_lingua = {parti[j].lower(): parti[j + 1].strip() for j in range(1, len(parti), 2)}
         risultato.append((versione, None, per_lingua.get(lingua) or per_lingua.get('it', '')))
     return risultato
