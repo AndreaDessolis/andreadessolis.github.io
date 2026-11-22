@@ -44,6 +44,14 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.3.6</h2>
+<p>Version 2.3.6 fixes the contacts&#x27; last seen time in the chat list when Gram Access stays open past midnight.</p>
+<h3>FIXES</h3>
+<ol>
+<li>Correct last seen time the next day too. With the &quot;Online status&quot; field enabled in the chat list, if Gram Access stayed open past midnight, a contact last seen the day before at 17:03 still showed &quot;last seen today at 17:03&quot; instead of &quot;yesterday at 17:03&quot;. Now the phrase is calculated each time from the real last seen time, and at midnight the contacts&#x27; rows update by themselves, in Chats and in Archived, without moving the selection. As in the official Telegram, the status line at the top of the open chat also updates by itself (&quot;5 minutes ago&quot;, &quot;2 hours ago&quot;, &quot;yesterday at...&quot;).</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 2.3.5</h2>
 <p>Version 2.3.5 shows in plain text the names of files that arrive &quot;encoded&quot;, copies attachments to the clipboard with their real name, and opens Gram Access maximized.</p>
 <h3>IMPROVEMENTS</h3>
