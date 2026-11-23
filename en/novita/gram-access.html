@@ -44,6 +44,21 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.3.7</h2>
+<p>Version 2.3.7 brings Gram Access into the Windows list of programs, from where it can be uninstalled removing everything, tells you when it cannot connect to Telegram and creates the desktop shortcut from the Settings.</p>
+<h3>NEW</h3>
+<ol>
+<li>Gram Access in the Windows installed apps. Gram Access appears in Windows Settings, Apps, Installed apps (and in the old Control Panel, Programs and Features), with its name, version and size. It appears both when installed with the setup and when updated from the program: it registers itself at every start, so the version shown is always the right one, and if you move the folder the path is corrected by itself. Copies started from a USB stick do not register, so they leave no trace on someone else&#x27;s computer.</li>
+<li>Uninstalling Gram Access. You do it from that list, with &quot;Uninstall&quot;, or from the Help menu, with &quot;Uninstall Gram Access...&quot;. First you are asked to confirm, with &quot;No&quot; already selected, then whether to delete your data too (Telegram login, settings and files kept in memory): with No the Dati folder stays, and if you reinstall Gram Access in the same folder you find everything again without logging in again. Uninstalling also removes everything Gram Access had added to Windows: starting with Windows, opening Telegram links, reliable notification opening, shortcuts in the Start menu and on the desktop. If Gram Access is open it closes by itself, and at the end a window tells you it has been uninstalled. Files saved outside Gram Access, for example in the Downloads folder, are not touched.</li>
+<li>Warning when Telegram does not respond. If the internet is working but for 20 seconds Gram Access cannot connect to the Telegram servers, a window tells you, once per session: this happens when Telegram is blocked in your country or on the network you use, and you need a VPN or a proxy. With &quot;Yes&quot; the Settings open directly on the Proxy category. As soon as the connection arrives, for example when you turn on the VPN, you hear &quot;Connection restored&quot;. Before, in this case, Gram Access only said &quot;Signed in successfully&quot; and then stayed silent, without showing the chats.</li>
+<li>Desktop shortcut from the Settings. In Settings, General category, the &quot;Create the desktop shortcut&quot; button puts on the desktop the shortcut to Gram Access, with its logo, which opens exactly the copy you press it from. If it was already there, it creates it again.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>With several copies of Gram Access on the same computer, for example a portable one, each one removes only its own things. Before, &quot;Remove Windows integrations&quot; also removed the desktop shortcut of another copy, and opening a copy with &quot;Reliable notification opening&quot; turned off also turned it off for the other one until it restarted.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 2.3.6</h2>
 <p>Version 2.3.6 fixes the contacts&#x27; last seen time in the chat list when Gram Access stays open past midnight.</p>
 <h3>FIXES</h3>
