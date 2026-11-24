@@ -23,7 +23,7 @@ h2 { margin-top: 2em; }
 <li><a href="#scaletta">Aprire i brani e la scaletta</a></li>
 <li><a href="#ascoltare">Ascoltare: spostarsi, volume, velocità e tono</a></li>
 <li><a href="#loop">Marcatori e loop</a></li>
-<li><a href="#metronomo">Il metronomo</a></li>
+<li><a href="#metronomo">Il metronomo e la batteria</a></li>
 <li><a href="#accordi">Accordi, tonalità e scale</a></li>
 <li><a href="#stem">Gli stem: separare le parti di un brano</a></li>
 <li><a href="#midi">I file MIDI</a></li>
@@ -317,7 +317,7 @@ h2 { margin-top: 2em; }
 <h3>La sequenza dei loop</h3>
 <p><kbd>Alt+F12</kbd> accende o spegne la sequenza: i loop salvati suonano uno dopo l'altro, ognuno per le volte scelte nelle sue impostazioni, partendo da quello in uso o dal primo. A ogni cambio senti il nome del loop. Alla fine della sequenza il brano si ferma, ricomincia dal primo loop o continua: lo scegli nella finestra Loop.</p>
 
-<h2 id="metronomo">6. Il metronomo</h2>
+<h2 id="metronomo">6. Il metronomo e la batteria</h2>
 
 <h3>Da solo o con il brano</h3>
 <p>Il metronomo si usa da solo, per studiare a tempo, oppure insieme a un brano. Con un brano suona solo mentre il brano suona e tace in pausa.</p>
@@ -345,6 +345,59 @@ h2 { margin-top: 2em; }
 <p><kbd>Ctrl+F8</kbd> accende o spegne "Segui il brano": il metronomo non batte più a un tempo fisso, ma sui battiti veri del brano aperto, anche quando il brano rallenta o accelera, e segue velocità e loop. Studio Player trova i battiti da solo quando apri un brano (ci mette meno di un secondo) e se li ricorda.</p>
 <p>Se i colpi ti sembrano un po' in anticipo o in ritardo, correggili con <kbd>Ctrl+-</kbd> (colpi un po' prima) e <kbd>Ctrl++</kbd> (colpi un po' dopo). Se il programma ha preso il tempo doppio, la metà, o un tempo di 3 su 2, nella finestra Metronomo, categoria Sul brano, puoi scegliere il tempo giusto e su quale battito cade il primo della misura. Queste scelte si ricordano per ogni brano.</p>
 <p>Nei file MIDI i battiti sono quelli esatti del file.</p>
+
+<h3>La batteria</h3>
+<p>Studio Player ha una batteria vera: i suoni sono registrati da una batteria acustica, con più colpi diversi per ogni forza, così lo stesso colpo ripetuto non suona mai identico. Suona al tempo del metronomo e sulle sue stesse uscite (per esempio solo in cuffia), da sola o sopra un brano, e non si ferma quando metti il brano in pausa.</p>
+<ul>
+<li><kbd>Alt+Maiusc+G</kbd> (menu Studio, Batteria): entra nella batteria e ne esce, come gli editor. Al posto della lista dei brani c'è la griglia del pattern.</li>
+<li><kbd>Ctrl+Maiusc+G</kbd> (menu Studio): da qualsiasi punto del programma, la batteria parte dalla prima battuta o si ferma. Suona l'ultimo pattern che hai aperto o salvato.</li>
+</ul>
+<p>Nella griglia le righe sono i pezzi della batteria (cassa, rullante, cerchio del rullante, charleston chiuso, semiaperto e aperto, pedale del charleston, tom, due timpani, crash sinistro e destro, ride e campana del ride) e le colonne sono i passi della battuta. I passi si chiamano come si contano: "1", "1 e", "2", "2 e" con gli ottavi; "1", "1 i", "1 e", "1 a" con i sedicesimi; "1", "1 tri", "1 let" con le terzine.</p>
+<ul>
+<li><kbd>Freccia su</kbd> e <kbd>Freccia giù</kbd>: cambi pezzo (lo screen reader dice il nome).</li>
+<li><kbd>Freccia destra</kbd> e <kbd>Freccia sinistra</kbd>: cambi passo e senti cosa c'è, per esempio "2 e: accento". Passando a un'altra battuta te lo dice.</li>
+<li><kbd>Pagina su</kbd> e <kbd>Pagina giù</kbd>: battuta precedente e successiva; <kbd>Inizio</kbd> e <kbd>Fine</kbd>: primo e ultimo passo della battuta.</li>
+<li><kbd>Barra spaziatrice</kbd>: mette o toglie il colpo (a forza normale); <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>: il colpo diventa ghost (piano), normale o con accento; <kbd>Canc</kbd>: toglie il colpo. Quando metti un colpo lo senti (se la batteria non sta suonando).</li>
+<li><kbd>R</kbd>: ti legge la riga della battuta a parole, per esempio "Rullante: 2 accento, 4 accento, 4 e ghost"; <kbd>C</kbd>: ti dice tutto quello che c'è sul passo; <kbd>F2</kbd>: dove sei ("Battuta 1 di 2, 2 e, Rullante").</li>
+<li><kbd>Invio</kbd>: la batteria parte in giro continuo o si ferma; <kbd>A</kbd>: senti solo il pezzo su cui sei.</li>
+<li><kbd>Ctrl+Z</kbd>: annulla; <kbd>Ctrl+C</kbd> e <kbd>Ctrl+V</kbd>: copiano e incollano una battuta intera.</li>
+<li><kbd>I</kbd>: le impostazioni del pattern: quante battute (da 1 a 8), la divisione (4/4, 3/4, 2/4, 5/4, 6/8, 12/8, 9/8, 7/8), la risoluzione della griglia (sedicesimi, terzine o ottavi), lo swing, il tempo (è lo stesso del metronomo) e il volume della batteria. Se cambi la risoluzione, i colpi passano sul passo più vicino. Ogni cambio si sente subito, anche mentre la batteria suona: OK lo tiene, Annulla (o <kbd>Esc</kbd>) rimette tutto com'era.</li>
+</ul>
+<p><kbd>G</kbd>: il generatore di ritmi, sulla riga e sulla battuta su cui sei. Scegli quanti colpi e su quanti passi: il programma li distribuisce nel modo più regolare possibile (i "ritmi euclidei"), la rotazione dice da quale passo comincia, la forza com'è ogni colpo. Se i passi sono meno di quelli della battuta, il ritmo si ripete. Molti ritmi del mondo sono fatti così, e quelli famosi te li dice per nome: 3 su 8 è il tresillo, 5 su 8 il cinquillo, 5 su 16 la bossa nova, 7 su 12 la campana dell'Africa occidentale. Ogni cambio si sente subito; OK lo tiene, Annulla torna a com'era.</p>
+<p><kbd>P</kbd>: suona sui tasti (i pad). La tastiera del computer diventa la batteria, ordinata come sta seduto un batterista: in basso <kbd>Z</kbd> cassa, <kbd>X</kbd> rullante, <kbd>C</kbd> cerchio; in mezzo <kbd>A</kbd> charleston chiuso, <kbd>S</kbd> semiaperto, <kbd>D</kbd> aperto, <kbd>F</kbd> pedale; in alto <kbd>Q</kbd> tom, <kbd>W</kbd> timpano 1, <kbd>E</kbd> timpano 2, <kbd>R</kbd> crash sinistro, <kbd>T</kbd> crash destro, <kbd>Y</kbd> ride, <kbd>U</kbd> campana del ride. Il tasto da solo fa un colpo normale, con <kbd>Maiusc</kbd> un accento. Se la batteria suona, ogni colpo che fai va sul passo più vicino della griglia e si aggiunge al giro (con la risoluzione a sedicesimi la precisione è buona; per le terzine scegli la griglia a terzine); se è ferma, i pad suonano e basta. Mentre i pad sono accesi lo screen reader resta zitto e le lettere non fanno comandi: <kbd>Invio</kbd> fa partire o fermare, <kbd>P</kbd> o <kbd>Esc</kbd> spengono i pad. <kbd>Ctrl+Z</kbd> toglie in una volta sola tutti i colpi suonati sui pad.</p>
+<p>Nel menu Batteria, <strong>Stili e fill</strong> ha centinaia di ritmi pronti, divisi per genere (rock, pop, ballata, metal, punk, funk, soul, hip hop, dance, reggae, blues, shuffle, jazz, gospel, country, latino, afrocubano, afrobeat, highlife, New Orleans, mediorientale, valzer, 6/8 e 12/8). Dentro ogni genere ci sono i <strong>Ritmi</strong> (i giri da tenere) e i <strong>Fill</strong> (la battuta che chiude una frase: il ritmo all'inizio e il fill alla fine, sull'ultimo battito, sugli ultimi due o su tutta la battuta). Ogni voce dice com'è fatta e a che tempo è stata suonata, per esempio "charleston in ottavi, swing, 132 BPM". Scelta una voce, va nella griglia come pattern nuovo senza nome: se la batteria sta suonando la senti subito, così puoi passare da una voce all'altra per ascoltarle. Il tempo resta quello di adesso (cambialo con <kbd>I</kbd> se vuoi quello scritto nel nome). Puoi modificarlo e salvarlo con un nome tuo; se ci sono modifiche non salvate, prima ti chiede se salvarle. Molti ritmi vengono da registrazioni di batteristi veri (il Groove MIDI Dataset di Google Magenta, licenza CC BY 4.0), gli altri sono scritti per Studio Player.</p>
+<p>Lo swing sposta in avanti i passi in levare: 50% è dritto, 66% è la terzina esatta (lo shuffle), i valori in mezzo sono più morbidi. Vale con gli ottavi e con i sedicesimi.</p>
+<p>Il pattern si salva con un nome: il pulsante Salva si raggiunge con il <kbd>Tab</kbd> (così non salvi per sbaglio), e nel menu Batteria ci sono Pattern nuovo, Apri un pattern (l'elenco di quelli salvati), Salva il pattern, Salva con nome ed Elimina il pattern (va nel Cestino). Se esci o apri un altro pattern con delle modifiche, ti chiede se salvarle. <kbd>Esc</kbd> non fa uscire: si esce con <kbd>Alt+Maiusc+G</kbd> o dal menu.</p>
+<p>I suoni della batteria vengono dal DRSKit di DrumGizmo.org (licenza CC-BY 4.0) e dalla cassa del kit AVL Black Pearl di Glen MacArthur (licenza CC-BY-SA 3.0). Se pubblichi musica fatta con questa batteria, nei crediti scrivi "Drum samples provided by DrumGizmo.org": lo chiede la loro licenza.</p>
+
+<h4>Il brano: intro, strofa, ritornello...</h4>
+<p>Un pattern da solo gira sempre uguale. Per suonare un brano intero, con le sue parti una dopo l'altra, premi <kbd>B</kbd>: al posto della griglia c'è l'elenco del brano (premi di nuovo <kbd>B</kbd> per tornare alla griglia). Ogni riga è una parte del brano e dice com'è fatta, per esempio "Strofa: Rock, ritmo 3, 4 volte, 8 battute, fill: Rock, fill 2".</p>
+<p>Ogni parte ha:</p>
+<ul>
+<li>il <strong>nome</strong>: intro, strofa, pre-ritornello, ritornello, bridge, assolo, stacco o finale;</li>
+<li>il <strong>pattern</strong>: quello che hai nella griglia, uno dei tuoi pattern salvati, o uno stile pronto di qualsiasi genere;</li>
+<li>quante <strong>volte</strong> si ripete (da 1 a 16);</li>
+<li>il <strong>fill</strong>, se vuoi: prende il posto dell'ultima battuta della parte (delle ultime due, se il fill è di due battute), così annuncia la parte che viene dopo;</li>
+<li>il <strong>crash all'inizio</strong>, se vuoi: un colpo di piatto sul primo battito della parte, una volta sola anche se la parte si ripete (come fa il batterista quando entra il ritornello).</li>
+</ul>
+<p>Il pattern e il fill dentro il brano sono copie: se dopo cambi il pattern salvato, il brano resta com'era.</p>
+<p>I tasti nell'elenco del brano:</p>
+<ul>
+<li><kbd>Freccia su</kbd> e <kbd>Freccia giù</kbd>: ti muovi tra le parti;</li>
+<li><kbd>N</kbd>: una parte nuova, dopo quella su cui sei;</li>
+<li><kbd>Spazio</kbd>: modifica la parte su cui sei;</li>
+<li><kbd>D</kbd>: duplica la parte (utile per "la strofa come prima");</li>
+<li><kbd>Canc</kbd>: toglie la parte; <kbd>Ctrl+Z</kbd> annulla;</li>
+<li><kbd>Ctrl+Freccia su</kbd> e <kbd>Ctrl+Freccia giù</kbd>: spostano la parte prima o dopo;</li>
+<li><kbd>Invio</kbd>: suona il brano dalla parte su cui sei, fino alla fine, e lì si ferma da solo; premuto mentre suona, lo ferma;</li>
+<li><kbd>F2</kbd>: dove sei; mentre suona, per esempio "Ritornello, battuta 3 di 8";</li>
+<li><kbd>G</kbd>: crea il brano in automatico (vedi sotto).</li>
+</ul>
+<p><kbd>G</kbd> nell'elenco del brano: <strong>crea il brano in automatico</strong>. Scegli il genere, la forma del brano (classica, corta, con il pre-ritornello, con l'assolo, blues a 12 battute, dance: ogni forma dice le sue parti nell'ordine), la lunghezza delle parti (4, 8 o 16 battute) e il tempo (quello di adesso o quello tipico del genere). Il programma suona come un batterista solo, dall'inizio alla fine: sceglie <strong>un</strong> groove del genere (regolare, senza tom, con il rullante sul 2 e sul 4 quando il genere li ha, suonato vicino al tempo scelto) e fa tutte le parti da quello, cambiando solo dove porta il tempo e quanta energia ci mette: l'intro con il cerchio al posto del rullante, la strofa sul charleston chiuso, il pre-ritornello sul charleston semiaperto, il ritornello sul ride o sul charleston aperto, il bridge in half time (il rullante solo sul 3), il finale con l'ultimo colpo di crash. Alla fine di ogni parte c'è un fill costruito sul groove stesso (il ritmo va avanti e il fill arriva sull'ultimo battito, sugli ultimi due o su tutta la battuta), e il crash quando entrano strofa, ritornello, bridge e assolo. Nell'elenco ogni parte dice da quale ritmo viene e com'è suonata, per esempio "Ritornello: Rock, ritmo 17, ride". Il pulsante <strong>Ascolta o ferma</strong> fa sentire la proposta senza chiudere la finestra; <strong>Rigenera</strong> ne fa un'altra con le stesse scelte, e ogni cambio di casella ne fa una nuova. OK la mette nell'elenco del brano, dove puoi cambiare qualunque parte a mano; <kbd>Ctrl+Z</kbd> rimette il brano di prima. Non è intelligenza artificiale: sono regole da batterista applicate agli stili pronti; Rigenera sceglie un altro groove e altri fill.</p>
+<p>La parte nuova e la modifica si fanno in una piccola finestra con le caselle a elenco: Parte, Pattern da (la griglia, i pattern salvati o un genere), Pattern, Volte, Fill da, Fill e Crash all'inizio. Se la batteria sta suonando, il pattern e il fill che scegli si sentono subito; chiusa la finestra, il brano riprende dall'inizio di quella parte.</p>
+<p>Mentre il brano suona, lo screen reader dice il nome di ogni parte quando comincia ("Ritornello") e "Fine del brano" alla fine. Se preferisci il silenzio, nel menu Batteria togli il segno da "Annuncia le parti mentre suona".</p>
+<p>Se il conteggio è acceso (<kbd>F7</kbd>), la batteria parte dopo il conteggio del metronomo, sia il brano sia il pattern. Il tempo del brano è quello del metronomo (lo cambi con <kbd>I</kbd> nella griglia o dalla finestra del metronomo).</p>
+<p>Il brano si salva con un nome: nel menu Batteria ci sono Brano nuovo, Apri un brano, Salva il brano, Salva il brano con nome ed Elimina il brano (va nel Cestino). Il pulsante Salva, con il <kbd>Tab</kbd>, salva quello che stai guardando: il pattern nella griglia, il brano nell'elenco del brano.</p>
 
 <h2 id="accordi">7. Accordi, tonalità e scale</h2>
 
