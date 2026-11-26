@@ -44,6 +44,22 @@
     <p class="lede">Versions from the most recent. The same notes are in the program, in Help.</p>
     <p><a href="../gramaccess.html">Back to Gram Access</a></p>
 <section class="release">
+<h2>Version 2.4.0</h2>
+<p>Version 2.4.0 brings multiple accounts: as in the official Telegram you can use several phone numbers in the same Gram Access, with a single window. This is the first version with this feature: if something doesn&#x27;t work as you expect, please report it from the Help menu, with &quot;Contact Me...&quot; or in the &quot;L&#x27;angolo di HDX&quot; group.</p>
+<h3>NEW</h3>
+<ol>
+<li>Multiple accounts. In the Telegram menu there is the new &quot;Switch account&quot; submenu, with the list of accounts (the one in use is checked), &quot;Next account&quot;, &quot;Add account...&quot; and &quot;Remove this account...&quot;. With &quot;Add account...&quot; the window switches to the new account, on the login screen; if you change your mind before finishing, the &quot;Cancel adding the account&quot; button takes you back to the previous one. As in the official Telegram there are at most 3 accounts, one more for each Premium account, up to 6, and the same account cannot be added twice.</li>
+<li>A single window. In Alt+Tab and on the taskbar there is always only one Gram Access window, the one of the account in use; the others stay connected in the background and receive messages. With Alt+Shift+A you switch to the next account, and the window returns exactly where you left it. With several accounts the window title starts with the account name, so the screen reader always tells you where you are.</li>
+<li>Notifications from all accounts. Notifications say which account the message arrived on; clicking them switches to that account with the chat open, and an incoming call on another account brings it to the front. In Settings, Sounds category, the &quot;Sounds and notifications from all accounts&quot; checkbox, on by default as in the official Telegram, when turned off makes only the account in use play sounds and notify.</li>
+<li>Settings for each account. A new account starts with a copy of the main account&#x27;s settings; then each one has its own, for example sounds turned off with Alt+Shift+M in just one. The settings that concern Windows (starting with Windows, Telegram links, reliable notification opening, desktop shortcut, update check) and the global shortcuts stay in the main account. &quot;Exit&quot; closes all accounts together, and when you reopen Gram Access the main account reopens the others by itself, without signing in again. Automatic updates and uninstalling also handle all accounts. &quot;Remove this account...&quot; logs out of Telegram on that account and deletes its data from this computer; the Telegram account remains.</li>
+<li>&quot;Change number&quot; while signing in. On the code and password screens there is the &quot;Change number&quot; button, which goes back to the number field, as in the official Telegram: before, after a wrong code, the only way to start over was to close the program. A wrong code is now explained with a clear sentence, and when you close the message the code stays selected, ready to be typed again.</li>
+</ol>
+<h3>FIXES</h3>
+<ol>
+<li>No more &quot;Unknown&quot; in channels. In the chat list, &quot;Unknown:&quot; could appear before the preview of a channel&#x27;s last post, until you entered the channel. Now, as in the official Telegram, channels show no name before the preview (only if the channel shows who signs the posts, that person&#x27;s name). In groups, a post signed by the group itself shows the group&#x27;s name. Channel notifications also no longer repeat the channel name in the text.</li>
+</ol>
+</section>
+<section class="release">
 <h2>Version 2.3.9</h2>
 <p>Version 2.3.9 lets you turn off all Gram Access sounds at once, follows Windows Do not disturb and completes the Polish translation.</p>
 <h3>NEW</h3>
