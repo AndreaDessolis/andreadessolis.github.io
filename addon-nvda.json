@@ -6,23 +6,21 @@
         "it": "Navigazione web",
         "en": "Web Navigation"
       },
-      "versione": "1.6.0",
+      "versione": "1.6.1",
       "url": "https://github.com/AndreaDessolis/NVDA-Navigazione-Web/releases/latest/download/navigazioneWeb.nvda-addon",
-      "sha256": "9a8ae336dad36d65cec1b50d10c7524e9ee6d289d5656a20a786506e972c9181",
+      "sha256": "72a9d3e85925f40e548691b8d69696771c8bc87321f32b983f679c98d5542a1d",
       "pagina": {
         "it": "https://andreadessolis.com/addon-nvda.html#navigazione-web",
         "en": "https://andreadessolis.com/en/addon-nvda.html#navigazione-web"
       },
       "novita": {
         "it": [
-          "NVDA+Ctrl+Alt+lettera apre Elementi della pagina già su un tipo, come Ctrl+Ins+lettera di JAWS, con le lettere della navigazione veloce di NVDA: H intestazioni, K link, B pulsanti, E campi di modifica, X caselle di controllo, R pulsanti di opzione, C caselle combinate, F campi dei moduli, G immagini, L elenchi, M frame, D punti di riferimento.",
-          "NVDA+Alt+Maiusc+L rilegge l'ultimo annuncio automatico delle pagine web (regione live); premuto due volte apre l'elenco degli ultimi 50, con l'ora, da copiare.",
-          "Impostazioni del sito (NVDA+Ctrl+Maiusc+S): al posto della casella per zittire, la scelta di come leggere gli annunci automatici del sito: come li manda il sito, mai, senza interrompere, interrompendo. I siti già zittiti restano su \"Mai\"."
+          "L'ultimo annuncio automatico ora si legge con NVDA+Ctrl+L, tre tasti invece dei quattro di NVDA+Alt+Maiusc+L.",
+          "Premuto due volte, apre davvero la finestra degli ultimi annunci automatici: NVDA contava la seconda pressione solo entro mezzo secondo; ora basta entro un secondo e mezzo."
         ],
         "en": [
-          "NVDA+Control+Alt+letter opens Page elements already on one type, like Control+Insert+letter in JAWS, with the letters of NVDA's quick navigation: H headings, K links, B buttons, E edit fields, X check boxes, R radio buttons, C combo boxes, F form fields, G graphics, L lists, M frames, D landmarks.",
-          "NVDA+Alt+Shift+L reads again the last automatic announcement of web pages (live region); pressed twice it opens the list of the last 50, with their time, to copy them.",
-          "Site settings (NVDA+Control+Shift+S): instead of the check box to silence, the choice of how to read the automatic announcements of the site: as the site sends them, never, without interrupting, interrupting. Sites already silenced stay on \"Never\"."
+          "The last automatic announcement is now read with NVDA+Control+L, three keys instead of the four of NVDA+Alt+Shift+L.",
+          "Pressed twice, it really opens the window of the last automatic announcements: NVDA counted the second press only within half a second; now within one second and a half is enough."
         ]
       }
     },
