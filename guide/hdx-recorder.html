@@ -260,11 +260,24 @@ h2 { margin-top: 2em; }
 <ul>
 <li><kbd>Ctrl+R</kbd>: avvia e ferma la registrazione.</li>
 <li><kbd>Ctrl+P</kbd>: pausa e ripresa. In pausa non si registra niente.</li>
+<li><kbd>F4</kbd>: mette un segno in questo punto della registrazione, per ritrovarlo dopo (vedi "I segni e i capitoli", qui sotto).</li>
 <li><kbd>Ctrl+T</kbd>: dice lo stato, il tempo trascorso e se ci sono stati problemi.</li>
 <li><kbd>Ctrl+D</kbd>: va in diretta insieme alla registrazione, o termina la diretta (capitolo 11).</li>
 </ul>
 <p>Quando fermi, il programma dice la durata e se ci sono stati problemi. Puoi anche fargli dire il nome della registrazione, aprire la sua cartella o mostrarti una finestra di riepilogo (Impostazioni, categoria Registrazioni, capitolo 12). Durante la registrazione ti avvisa se lo spazio sul disco sta finendo.</p>
 <p>Quando parte, il programma ti avvisa se qualcosa non va: per esempio un dispositivo non collegato, un brano del sottofondo che non si trova, o un problema nella composizione del video. Per un controllo completo prima di cominciare c'è <kbd>Ctrl+K</kbd> (capitolo 5).</p>
+
+<h3 id="segni">I segni e i capitoli</h3>
+<p>Mentre registri, premi <kbd>F4</kbd> quando succede qualcosa che vuoi ritrovare: comincia un argomento nuovo, arriva un ospite, parte la parte pratica di un tutorial. Non devi scrivere niente: il programma segna il punto e ti dice il nome del capitolo e il tempo, per esempio "Capitolo 2, 3:15". Lo trovi anche nel menu Registrazione, "Segna questo momento", e nella regia.</p>
+<ul>
+<li><strong>Non finisce nella registrazione.</strong> Il suono del segno si sente solo in cuffia, e solo se nessuna sorgente "audio del computer" registra la cuffia; altrimenti c'è solo la voce. Voce e suono si scelgono in Impostazioni, Annunci, alla voce "Segni durante la registrazione", e seguono le scelte degli annunci durante la registrazione.</li>
+<li><strong>Il file dei capitoli.</strong> Accanto alla registrazione, con lo stesso nome e "- capitoli.txt" in fondo, c'è un file di testo con una riga per segno, già come lo vuole YouTube: "0:00 Inizio", "3:15 Capitolo 2", "8:40 Capitolo 3". Il primo capitolo comincia sempre da 0:00. I tempi non contano le pause, come il file registrato. Il file si scrive a ogni segno, quindi c'è anche se il computer si spegne a metà; se non hai messo segni, il file non c'è.</li>
+<li><strong>Su YouTube.</strong> Quando carichi il video con <strong>Carica un video</strong> (menu YouTube), se accanto al video c'è il suo file dei capitoli, la descrizione è già scritta con i capitoli: puoi aggiungere altro prima o dopo. Altrimenti, nella finestra dei segni (qui sotto) usa <strong>Copia per YouTube</strong> e incolla nella descrizione. YouTube divide il video in capitoli da solo, ma solo se i capitoli sono almeno tre e ognuno dura almeno 10 secondi: la copia ti avvisa se non è così.</li>
+<li><strong>Rivedere i segni.</strong> Nel menu Registrazione, <strong>Segni e capitoli</strong> apre i segni della registrazione (quella in corso o l'ultima fatta); se in questa sessione non ce ne sono, ti fa scegliere il file dei capitoli di una registrazione. Nell'elenco ogni riga dice il nome e il tempo, per esempio "Ospite, 3:15". <kbd>Invio</kbd> ascolta in cuffia 8 secondi da quel punto (di nuovo <kbd>Invio</kbd> ferma), <kbd>F2</kbd> rinomina, <kbd>Canc</kbd> elimina (chiede prima; l'inizio non si elimina), <kbd>Ctrl+Freccia sinistra</kbd> e <kbd>Ctrl+Freccia destra</kbd> spostano il segno di un secondo, per quando hai premuto <kbd>F4</kbd> un attimo in ritardo, e <kbd>Ctrl+C</kbd> copia i capitoli per YouTube. Ci sono anche i pulsanti, tra cui <strong>Apri un altro file</strong>. Ogni cambio riscrive subito il file dei capitoli. L'ascolto non c'è durante la registrazione e mentre il programma normalizza o fa la copia compressa: aspetta che abbia finito.</li>
+<li><strong>I nomi preparati.</strong> Se sai già come andrà la registrazione, nel menu Registrazione apri <strong>Capitoli preparati</strong> e scrivi i nomi in ordine: il primo è l'inizio, poi ogni <kbd>F4</kbd> prende il nome successivo. Per esempio "Presentazione", "L'ospite", "Le domande": il file sarà "0:00 Presentazione", "4:10 L'ospite" e così via. Finiti i nomi preparati, i segni tornano a chiamarsi "Capitolo" con il numero. Nella finestra: <kbd>Ctrl+N</kbd> aggiunge un nome dopo la riga scelta, <kbd>F2</kbd> lo rinomina, <kbd>Canc</kbd> lo elimina e <kbd>Ctrl+Freccia su</kbd> e <kbd>Ctrl+Freccia giù</kbd> lo spostano. I nomi restano nella configurazione e valgono per ogni registrazione fatta con lei; si possono cambiare anche mentre registri, e valgono dal segno successivo.</li>
+<li><strong>Da un altro programma.</strong> La scorciatoia globale <kbd>Ctrl+Alt+Windows+G</kbd> mette il segno anche quando HDX Recorder non è in primo piano. Come le altre globali, va accesa in Impostazioni, Tastiera, ramo Scorciatoie globali.</li>
+<li>Ogni segno è scritto anche nel registro del programma e, se è acceso, nel registro di messa in onda. Due <kbd>F4</kbd> di fila nello stesso secondo fanno un solo segno.</li>
+</ul>
 
 <h3>Cosa viene salvato</h3>
 <p>In Configurazioni, Impostazioni della configurazione, categoria <strong>File</strong>:</p>
@@ -1011,7 +1024,7 @@ Sui tuoi messaggi c'è solo Elimina il messaggio. Ogni azione dice com'è andata
 
 <h3>Tastiera</h3>
 <p>Tutti i comandi, divisi come nei menu, con la loro scorciatoia. <kbd>Invio</kbd> la cambia (premi la nuova combinazione, oppure <kbd>Esc</kbd>), <kbd>Canc</kbd> la toglie; ci sono anche i pulsanti per ripristinare la predefinita o tutte. Se la combinazione è già usata, il programma chiede se spostarla.</p>
-<p>In fondo ci sono le <strong>scorciatoie globali</strong>, che funzionano in tutto Windows anche quando HDX Recorder non è in primo piano: <kbd>Ctrl+Alt+Windows</kbd> con R (registra), P (pausa), T (stato), L (livelli), S (sottofondo), H (mostra il programma), U (ripeti l'ultimo annuncio), O (accende e spegne lo zoom del video), e con i numeri le scene. Sono spente di base: si accendono con <kbd>Spazio</kbd>.</p>
+<p>In fondo ci sono le <strong>scorciatoie globali</strong>, che funzionano in tutto Windows anche quando HDX Recorder non è in primo piano: <kbd>Ctrl+Alt+Windows</kbd> con R (registra), P (pausa), T (stato), L (livelli), S (sottofondo), H (mostra il programma), U (ripeti l'ultimo annuncio), O (accende e spegne lo zoom del video), G (mette un segno nella registrazione), e con i numeri le scene. Sono spente di base: si accendono con <kbd>Spazio</kbd>.</p>
 <p>Sotto i pulsanti c'è la casella <strong>"Nella guida alle scorciatoie, Invio esegue il comando"</strong>, spenta di base. Spiegata qui sotto.</p>
 
 <h3>Chiedi come si fa</h3>
