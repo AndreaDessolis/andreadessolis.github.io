@@ -23,6 +23,8 @@
 <tr><td>ò and Shift+ò</td><td>Next and previous article</td></tr>
 <tr><td>ù</td><td>Main landmark of the page</td></tr>
 <tr><td>NVDA+F6</td><td>Page elements</td></tr>
+<tr><td>NVDA+Control+Alt+letter</td><td>Page elements already on one type: H headings, K links, B buttons, X check boxes...</td></tr>
+<tr><td>NVDA+Alt+Shift+L</td><td>Reads the last automatic announcement; twice, the list of the last ones</td></tr>
 <tr><td>Y and Shift+Y</td><td>Next and previous smart point</td></tr>
 <tr><td>NVDA+Control+Y</td><td>List of smart points</td></tr>
 <tr><td>J and Shift+J</td><td>Next and previous placemarker</td></tr>
@@ -114,7 +116,23 @@
 <li>Buttons <strong>Move to</strong> (Alt+M), <strong>Activate</strong> (Alt+A, presses or opens the element) and <strong>Cancel</strong> (Escape).</li>
 </ol>
 <p>The window opens again on the last type used. Types: headings, smart points, links, buttons, edit fields, check boxes, radio buttons, combo boxes, form fields, graphics, tables, lists, frames, landmarks, articles, tabs.</p>
-<p>In Input gestures there are also the commands "List of buttons", "List of tables" and so on, like Control+Insert+letter in JAWS: they open the window already on that type, with the focus on the list. They have no key: assign one if you need it.</p>
+<p>Like Control+Insert+letter in JAWS, <strong>NVDA+Control+Alt+letter</strong> opens the window already on one type, with the focus on the list. The letters are those of NVDA's quick navigation:</p>
+<table>
+<tr><th>Key</th><th>Type</th></tr>
+<tr><td>NVDA+Control+Alt+H</td><td>Headings</td></tr>
+<tr><td>NVDA+Control+Alt+K</td><td>Links</td></tr>
+<tr><td>NVDA+Control+Alt+B</td><td>Buttons</td></tr>
+<tr><td>NVDA+Control+Alt+E</td><td>Edit fields</td></tr>
+<tr><td>NVDA+Control+Alt+X</td><td>Check boxes</td></tr>
+<tr><td>NVDA+Control+Alt+R</td><td>Radio buttons</td></tr>
+<tr><td>NVDA+Control+Alt+C</td><td>Combo boxes</td></tr>
+<tr><td>NVDA+Control+Alt+F</td><td>Form fields</td></tr>
+<tr><td>NVDA+Control+Alt+G</td><td>Graphics</td></tr>
+<tr><td>NVDA+Control+Alt+L</td><td>Lists</td></tr>
+<tr><td>NVDA+Control+Alt+M</td><td>Frames</td></tr>
+<tr><td>NVDA+Control+Alt+D</td><td>Landmarks</td></tr>
+</table>
+<p>Tables have no key, because NVDA+Control+Alt+T is already used by NVDA: they are in NVDA+F6. All these commands ("List of buttons", "List of tables"...) are in Input gestures: there you can change the keys or give one to tables, articles and tabs. If the page has no elements of that type, NVDA says so.</p>
 <p>NVDA's elements list (NVDA+F7) stays as it is. Check box: <em>Page elements with NVDA+F6</em>.</p>
 
 <h2>Placemarkers</h2>
@@ -146,12 +164,16 @@
 <p>In discussions with several levels, like the comments of Reddit or of a forum, the replies are indented compared to the message they answer. <strong>è</strong> goes to the next paragraph that starts at the same distance from the left edge, that is at the same level, skipping the replies; <strong>Shift+è</strong> goes to the previous one. They are NVDA's "vertically aligned paragraph" commands, which have no key: they exist from NVDA 2024.2, before that the key stays with NVDA. <strong>NVDA+è</strong> goes one level up: the previous paragraph that starts more to the left, for example the comment being answered; if there is none, NVDA says "No level up". They work in browse mode and are turned off with the quick navigation keys check box. The è key exists only on the Italian keyboard: with other keyboards, assign other keys in Input gestures.</p>
 
 <h2>Site settings</h2>
-<p><strong>NVDA+Control+Shift+S</strong> opens the settings of the site of the page, for example "Settings of reddit.com", with two check boxes valid for every page of that site:</p>
+<p><strong>NVDA+Control+Shift+S</strong> opens the settings of the site of the page, for example "Settings of reddit.com", with two choices valid for every page of that site:</p>
 <ul>
-<li><strong>Silence the automatic announcements of this site</strong> (Alt+S): NVDA does not read the notifications and updates that the site announces by itself (the "live regions"), for sites that talk all the time. They can still be read moving with the arrows.</li>
+<li><strong>Automatic announcements of this site</strong> (Alt+A), a list: how NVDA reads the notifications and updates that the site announces by itself (the "live regions"). <em>As the site sends them</em> (the default); <em>Never</em>, for sites that talk all the time (they can still be read moving with the arrows, and they stay among the last announcements of NVDA+Alt+Shift+L); <em>Without interrupting</em>: after what NVDA is saying; <em>Interrupting</em>: NVDA stops and reads the announcement at once.</li>
 <li><strong>Do not switch to focus mode automatically</strong> (Alt+F): NVDA stays in browse mode also when the focus goes to a field or another control, for sites that move the focus at the wrong time. To type in a field, switch to focus mode with Enter or NVDA+Space; Escape goes back to browse mode as always.</li>
 </ul>
 <p>The site settings are saved in the navigazioneWeb-siti.json file, in the NVDA settings folder.</p>
+
+<h2>The last automatic announcements</h2>
+<p><strong>NVDA+Alt+Shift+L</strong> reads again the last automatic announcement of web pages (a live region: a message arrived, a "saved", an error...). Pressed twice it opens the "Automatic announcements" window with the last 50, the most recent first, each with its time: move with the arrows, and Control+C or the Copy button copies one. The announcements of sites set to "Never" are there too.</p>
+<p>To turn off all automatic announcements, on every site, NVDA already has its own command: <strong>NVDA+5</strong>, which turns dynamic content changes on and off.</p>
 
 <h2>Go back to where you were</h2>
 <p>After a jump with H, N, U and the other keys it is often slow to get back to where you were. <strong>NVDA+Shift+Left arrow</strong> takes the cursor back to where it was before the last jump and reads the line, like the browser's Back key but inside the page. Pressed again, it goes further back. <strong>NVDA+Shift+Right arrow</strong> does the jump again, like Forward.</p>

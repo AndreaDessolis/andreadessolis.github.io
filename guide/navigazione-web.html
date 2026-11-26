@@ -23,6 +23,8 @@
 <tr><td>ò e Maiusc+ò</td><td>Articolo successivo e precedente</td></tr>
 <tr><td>ù</td><td>Regione principale della pagina</td></tr>
 <tr><td>NVDA+F6</td><td>Elementi della pagina</td></tr>
+<tr><td>NVDA+Ctrl+Alt+lettera</td><td>Elementi della pagina già su un tipo: H intestazioni, K link, B pulsanti, X caselle di controllo...</td></tr>
+<tr><td>NVDA+Alt+Maiusc+L</td><td>Legge l'ultimo annuncio automatico; due volte, l'elenco degli ultimi</td></tr>
 <tr><td>Y e Maiusc+Y</td><td>Punto smart successivo e precedente</td></tr>
 <tr><td>NVDA+Ctrl+Y</td><td>Elenco dei punti smart</td></tr>
 <tr><td>J e Maiusc+J</td><td>Segnaposto successivo e precedente</td></tr>
@@ -113,7 +115,23 @@
 <li>Pulsanti <strong>Vai</strong> (Alt+V), <strong>Attiva</strong> (Alt+A, preme o apre l'elemento) e <strong>Annulla</strong> (Esc).</li>
 </ol>
 <p>La finestra si riapre sull'ultimo tipo usato. Tipi: intestazioni, punti smart, link, pulsanti, caselle di modifica, caselle di controllo, pulsanti di opzione, caselle combinate, campi modulo, immagini, tabelle, elenchi, riquadri, regioni, articoli, schede.</p>
-<p>In Gesti e comandi ci sono anche i comandi "Elenco pulsanti", "Elenco tabelle" e così via, come Ctrl+Ins+lettera di JAWS: aprono la finestra già sul tipo, con il focus sull'elenco. Non hanno un tasto: lo si assegna se serve.</p>
+<p>Come Ctrl+Ins+lettera di JAWS, <strong>NVDA+Ctrl+Alt+lettera</strong> apre la finestra già su un tipo, con il focus sull'elenco. Le lettere sono quelle della navigazione veloce di NVDA:</p>
+<table>
+<tr><th>Tasto</th><th>Tipo</th></tr>
+<tr><td>NVDA+Ctrl+Alt+H</td><td>Intestazioni</td></tr>
+<tr><td>NVDA+Ctrl+Alt+K</td><td>Link</td></tr>
+<tr><td>NVDA+Ctrl+Alt+B</td><td>Pulsanti</td></tr>
+<tr><td>NVDA+Ctrl+Alt+E</td><td>Campi di modifica</td></tr>
+<tr><td>NVDA+Ctrl+Alt+X</td><td>Caselle di controllo</td></tr>
+<tr><td>NVDA+Ctrl+Alt+R</td><td>Pulsanti di opzione</td></tr>
+<tr><td>NVDA+Ctrl+Alt+C</td><td>Caselle combinate</td></tr>
+<tr><td>NVDA+Ctrl+Alt+F</td><td>Campi dei moduli</td></tr>
+<tr><td>NVDA+Ctrl+Alt+G</td><td>Immagini</td></tr>
+<tr><td>NVDA+Ctrl+Alt+L</td><td>Elenchi</td></tr>
+<tr><td>NVDA+Ctrl+Alt+M</td><td>Frame</td></tr>
+<tr><td>NVDA+Ctrl+Alt+D</td><td>Punti di riferimento</td></tr>
+</table>
+<p>Le tabelle non hanno il tasto, perché NVDA+Ctrl+Alt+T è già di NVDA: si trovano in NVDA+F6. In Gesti e comandi ci sono tutti questi comandi ("Elenco pulsanti", "Elenco tabelle"...): da lì si possono cambiare i tasti o darne uno alle tabelle, agli articoli e alle schede. Se la pagina non ha elementi di quel tipo, NVDA lo dice.</p>
 <p>L'elenco elementi di NVDA (NVDA+F7) resta com'è. Casella: <em>Elementi della pagina con NVDA+F6</em>.</p>
 
 <h2>Segnaposti</h2>
@@ -145,12 +163,16 @@
 <p>Nelle discussioni a più livelli, come i commenti di Reddit o di un forum, le risposte sono rientrate rispetto al messaggio a cui rispondono. <strong>è</strong> va al paragrafo successivo che inizia alla stessa distanza dal bordo sinistro, cioè allo stesso livello, saltando le risposte; <strong>Maiusc+è</strong> va a quello precedente. Sono i comandi "paragrafo allineato" di NVDA, che non hanno un tasto: ci sono da NVDA 2024.2, prima il tasto resta a NVDA. <strong>NVDA+è</strong> torna al livello sopra: il paragrafo precedente che inizia più a sinistra, per esempio il commento a cui si sta rispondendo; se non c'è, NVDA dice "Nessun livello sopra". Funzionano in modalità navigazione e si spengono con la casella dei tasti di salto. La è c'è solo sulla tastiera italiana: con altre tastiere si assegnano altri tasti da Gesti e comandi.</p>
 
 <h2>Impostazioni del sito</h2>
-<p><strong>NVDA+Ctrl+Maiusc+S</strong> apre le impostazioni del sito della pagina, per esempio "Impostazioni di reddit.com", con due caselle che valgono per tutte le pagine di quel sito:</p>
+<p><strong>NVDA+Ctrl+Maiusc+S</strong> apre le impostazioni del sito della pagina, per esempio "Impostazioni di reddit.com", con due scelte che valgono per tutte le pagine di quel sito:</p>
 <ul>
-<li><strong>Zittisci gli annunci automatici di questo sito</strong> (Alt+Z): NVDA non legge le notifiche e gli aggiornamenti che il sito annuncia da solo (le "regioni live"), per i siti che parlano di continuo. Si leggono ancora spostandosi con le frecce.</li>
+<li><strong>Annunci automatici di questo sito</strong> (Alt+U), una casella a elenco: come NVDA legge le notifiche e gli aggiornamenti che il sito annuncia da solo (le "regioni live"). <em>Come li manda il sito</em> (la scelta di base); <em>Mai</em>, per i siti che parlano di continuo (si leggono ancora spostandosi con le frecce, e restano tra gli ultimi annunci di NVDA+Alt+Maiusc+L); <em>Senza interrompere</em>: dopo quello che NVDA sta dicendo; <em>Interrompendo</em>: NVDA si ferma e legge subito l'annuncio.</li>
 <li><strong>Non attivare da solo la modalità focus</strong> (Alt+F): NVDA resta in modalità navigazione anche quando il focus va su un campo o su un altro controllo, per i siti che spostano il focus a sproposito. Per scrivere in un campo si entra in modalità focus con Invio o NVDA+Spazio; Esc torna alla navigazione come sempre.</li>
 </ul>
 <p>Le impostazioni dei siti sono salvate nel file navigazioneWeb-siti.json, nella cartella delle impostazioni di NVDA.</p>
+
+<h2>Gli ultimi annunci automatici</h2>
+<p><strong>NVDA+Alt+Maiusc+L</strong> rilegge l'ultimo annuncio automatico delle pagine web (una regione live: un messaggio arrivato, un "salvato", un errore...). Premuto due volte apre la finestra "Annunci automatici" con gli ultimi 50, dal più recente, ognuno con l'ora: si scorrono con le frecce e Ctrl+C o il pulsante Copia ne copia uno. Ci sono anche gli annunci dei siti messi su "Mai".</p>
+<p>Per spegnere tutti gli annunci automatici, su tutti i siti, NVDA ha già il suo comando: <strong>NVDA+5</strong>, che accende e spegne i cambiamenti di contenuto dinamico.</p>
 
 <h2>Torna dov'eri</h2>
 <p>Dopo un salto con H, N, U e gli altri tasti è spesso lungo ritornare dove si era. <strong>NVDA+Maiusc+freccia sinistra</strong> riporta il cursore dov'era prima dell'ultimo salto e legge la riga, come il tasto Indietro del browser ma dentro la pagina. Premuto ancora torna più indietro. <strong>NVDA+Maiusc+freccia destra</strong> rifà il salto, come Avanti.</p>
