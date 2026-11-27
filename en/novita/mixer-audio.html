@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What&#x27;s new in Audio Mixer — Andrea Dessolis</title>
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/novita/mixer-audio.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/novita/mixer-audio.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">Andrea Dessolis</a>
+    <nav aria-label="Main menu">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../programmi.html">Programs</a></li>
+        <li><a href="../addon-nvda.html" aria-current="page">NVDA Add-ons</a></li>
+        <li><a href="../chi-sono.html">About me</a></li>
+        <li><a href="../contatti.html">Contact</a></li>
+        <li><a href="https://t.me/+t7KuNQH-xQczMDVk">L&#x27;angolo di HDX (Telegram group)</a></li>
+        <li class="lang"><a href="../../novita/mixer-audio.html" lang="it" hreflang="it">Italiano</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="680" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <h1>What&#x27;s new in Audio Mixer</h1>
+    <p class="lede">Versions from the most recent. What&#x27;s new in the installed version can also be read in the NVDA add-on manager.</p>
+    <p><a href="../addon-nvda.html#mixer-audio">Back to Audio Mixer</a></p>
+<section class="release">
+<h2>Version 1.0.0</h2>
+<h3>New</h3>
+<ol>
+<li>First complete version, published on the site: from now on the add-on updates itself when NVDA starts.</li>
+<li>NVDA+Alt+A opens the mixer: volumes of main volume, microphone, NVDA and every program, with plus and minus, digits and Space; Speakers and Microphones lists to choose the defaults; device for each program; &quot;playing&quot; next to who is making sound.</li>
+<li>Lock of the default speaker and protection of the NVDA volume, with the mixer closed too.</li>
+<li>Windows sounds (Alt+W in the mixer): sound scheme, tree of events with listening and choice of files, save and delete scheme, what Windows does during calls and startup sound.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 0.5.0</h2>
+<h3>New</h3>
+<ol>
+<li>Windows sounds: in the mixer window the Windows sounds button (Alt+W) opens a window like the Sounds tab of the Control Panel, with the sound scheme (also the ones you created), what Windows does to the other sounds during calls and the Windows startup sound. For the startup sound Windows asks for administrator permission.</li>
+<li>In the same window, the tree of events as in the Control Panel (the programs, and under them their events, all open: the first letter goes to the event) with their sound: Space plays it, Delete removes it, Enter opens the menu to choose a .wav file, remove the sound or go back to the one of the scheme. The Save scheme as and Delete scheme buttons.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 0.4.0</h2>
+<h3>New</h3>
+<ol>
+<li>The lists work like normal lists: up and down arrow choose the channel, plus and minus (also on the numeric keypad) raise and lower the volume by 5, asterisk and underscore by 1, Page up and down by 10, the digits 1 to 9 set the volume to 10-90% and 0 to 100%.</li>
+<li>Who is playing: a program that is making sound has &quot;playing&quot; next to its volume, for example &quot;Chrome: 80%, playing&quot;.</li>
+<li>Lock of the default speaker (Enter on Main volume): if Windows makes another speaker the default, for example when connecting headphones or a Bluetooth device, the add-on puts yours back. It works with the mixer closed too.</li>
+<li>Protection of the NVDA volume (Enter on NVDA): the volume Windows gives to NVDA stays at 100%, and the add-on asks Windows not to lower NVDA during calls. It works with the mixer closed too.</li>
+</ol>
+<h3>Fixes</h3>
+<ol>
+<li>With the mixer open the computer no longer works so hard (fast fans): before, every second all the devices and program names were read again, opening the program files. Now the names are read only once, every second only the volumes are read again and the list you are in is read again completely every 3 seconds.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 0.3.1</h2>
+<h3>New</h3>
+<ol>
+<li>Enter on the NVDA channel opens the list of speakers to choose NVDA&#x27;s one, as in NVDA Settings, Audio category. The NVDA row says which speaker it speaks on, if it is not the default.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 0.3.0</h2>
+<h3>New</h3>
+<ol>
+<li>Enter on a program, in the Volumes list, opens a menu to choose its speaker and its microphone, or to go back to the Windows defaults. The row says which speaker the program plays on, if it is not the default.</li>
+<li>Enter on Main volume or Microphone opens the list of devices to choose the Windows default.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 0.2.1</h2>
+<h3>New</h3>
+<ol>
+<li>Speakers and microphones are in two separate lists.</li>
+</ol>
+<h3>Fixes</h3>
+<ol>
+<li>Enter really makes the device the default: before, the window intercepted it.</li>
+<li>Closing the mixer no longer makes NVDA restart: the automatic list update stops before closing.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 0.2.0</h2>
+<h3>New</h3>
+<ol>
+<li>Devices list: all the active speakers and microphones, with volume and mute as in the Volumes list; Enter makes the device the Windows default, for every use.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 0.1.2</h2>
+<h3>New</h3>
+<ol>
+<li>The NVDA channel adjusts the voice volume, the same as NVDA&#x27;s commands and settings. The volume Windows gives to NVDA stays at 100% and is not shown, so it cannot be lowered by mistake.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 0.1.1</h2>
+<h3>Fixes</h3>
+<ol>
+<li>The arrow keys no longer read everything twice: the channel change is read only by NVDA, and adjusting the volume says only the new value.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Version 0.1.0</h2>
+<h3>New</h3>
+<ol>
+<li>First test version: NVDA+Alt+A opens the mixer with the Volumes list (main volume, microphone and every program), adjusted with the arrow keys like the faders of a mixer.</li>
+</ol>
+</section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="../contatti.html">write to me</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>

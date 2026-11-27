@@ -88,6 +88,33 @@
           "After NVDA+F2 (pass the next key to the program), pressing Insert alone or in a combination like Control+Insert made the add-on lock the NVDA key and swallow the release of Insert: NVDA stayed forever passing keys to the program (the NVDA key no longer worked) and the program thought Insert was still pressed, so Control and the other modifiers seemed not to work. Now after NVDA+F2 the Insert key goes whole to the program, as without the add-on. It happened in every program, for example in Reaper with Control+Insert."
         ]
       }
+    },
+    "mixerAudio": {
+      "nome": {
+        "it": "Mixer Audio",
+        "en": "Audio Mixer"
+      },
+      "versione": "1.0.0",
+      "url": "https://github.com/AndreaDessolis/NVDA-Mixer-Audio/releases/latest/download/mixerAudio.nvda-addon",
+      "sha256": "f39949749fe231102ae54f5c870b9e0de0178eda5dcc882e923be7c8d42bffcd",
+      "pagina": {
+        "it": "https://andreadessolis.com/addon-nvda.html#mixer-audio",
+        "en": "https://andreadessolis.com/en/addon-nvda.html#mixer-audio"
+      },
+      "novita": {
+        "it": [
+          "Prima versione completa, pubblicata sul sito: da qui in avanti l'add-on si aggiorna da sola all'avvio di NVDA.",
+          "NVDA+Alt+A apre il mixer: volumi di audio generale, microfono, NVDA e di ogni programma, con più e meno, cifre e Spazio; elenchi Altoparlanti e Microfoni per scegliere i predefiniti; dispositivo per ogni programma; \"in riproduzione\" accanto a chi suona.",
+          "Blocco dell'altoparlante predefinito e protezione del volume di NVDA, anche a mixer chiuso.",
+          "Suoni di Windows (Alt+S nel mixer): tema sonoro, albero degli eventi con ascolto e scelta dei file, salva ed elimina tema, cosa fa Windows durante le chiamate e suono di avvio."
+        ],
+        "en": [
+          "First complete version, published on the site: from now on the add-on updates itself when NVDA starts.",
+          "NVDA+Alt+A opens the mixer: volumes of main volume, microphone, NVDA and every program, with plus and minus, digits and Space; Speakers and Microphones lists to choose the defaults; device for each program; \"playing\" next to who is making sound.",
+          "Lock of the default speaker and protection of the NVDA volume, with the mixer closed too.",
+          "Windows sounds (Alt+W in the mixer): sound scheme, tree of events with listening and choice of files, save and delete scheme, what Windows does during calls and startup sound."
+        ]
+      }
     }
   }
 }

@@ -654,6 +654,34 @@ ADDON = [
             ],
         },
     },
+    {
+        'id': 'mixer-audio',
+        'nome': {'it': 'Mixer Audio', 'en': 'Audio Mixer'},
+        'repository': 'NVDA-Mixer-Audio',
+        'setup': 'mixerAudio.nvda-addon',
+        'cartella': _ADDON + r'\Mixer Audio',
+        'nvda_minimo': '2024.2',
+        'frase': {
+            'it': 'Il mixer audio di Windows in una finestra semplice, con NVDA+Alt+A: volumi, dispositivi e suoni di Windows.',
+            'en': 'The Windows audio mixer in one simple window, with NVDA+Alt+A: volumes, devices and Windows sounds.',
+        },
+        'funzioni': {
+            'it': [
+                'Il volume di audio generale, microfono, NVDA e di ogni programma, con più e meno, le cifre e Spazio per togliere l\'audio; "in riproduzione" accanto a chi sta suonando.',
+                'Gli elenchi di altoparlanti e microfoni, per scegliere il predefinito di Windows con Invio.',
+                'Per ogni programma, l\'altoparlante e il microfono da usare; per NVDA, l\'altoparlante su cui parla.',
+                'Il blocco dell\'altoparlante predefinito, se Windows lo cambia da solo, e la protezione del volume di NVDA, anche a mixer chiuso.',
+                'I suoni di Windows: tema sonoro, l\'albero degli eventi con ascolto e scelta dei file, cosa fa Windows durante le chiamate e il suono di avvio.',
+            ],
+            'en': [
+                'The volume of main volume, microphone, NVDA and every program, with plus and minus, the digits and Space to mute; "playing" next to who is making sound.',
+                'The lists of speakers and microphones, to choose the Windows default with Enter.',
+                'For each program, the speaker and microphone to use; for NVDA, the speaker it speaks on.',
+                'The lock of the default speaker, if Windows changes it by itself, and the protection of the NVDA volume, with the mixer closed too.',
+                'The Windows sounds: sound scheme, the tree of events with listening and choice of files, what Windows does during calls and the startup sound.',
+            ],
+        },
+    },
 ]
 for _a in ADDON:
     _a['pagina'] = 'addon-nvda.html#' + _a['id']

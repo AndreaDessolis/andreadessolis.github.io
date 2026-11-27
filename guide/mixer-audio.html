@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Mixer Audio - guida</title>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../addon-nvda.html#mixer-audio">Torna a Mixer Audio — andreadessolis.com</a></div>
+<h1>Mixer Audio</h1>
+<p>Add-on per NVDA che mette il mixer audio di Windows in una finestra semplice: audio generale, microfono e ogni programma che ha l'audio aperto, da regolare con più e meno.</p>
+
+<h2>Aprire il mixer</h2>
+<p><strong>NVDA+Alt+A</strong> apre la finestra "Mixer Audio" (il tasto si può cambiare da Gesti e comandi, categoria Mixer Audio). Esc o il pulsante Chiudi la chiudono e il focus torna dove eri.</p>
+
+<h2>L'elenco Volumi</h2>
+<p>Ogni riga è un canale: <em>Audio generale</em> (il dispositivo di uscita predefinito di Windows), <em>Microfono</em> (quello di ingresso predefinito), poi ogni programma che ha l'audio aperto, in ordine alfabetico, e per ultimi i <em>Suoni di sistema</em>. Per esempio "Chrome: 80%" oppure "WhatsApp: muto".</p>
+<p>Si usa come un elenco normale, con in più i tasti del volume:</p>
+<table>
+<tr><th>Tasto</th><th>Cosa fa</th></tr>
+<tr><td>Freccia su e giù</td><td>Canale precedente e successivo</td></tr>
+<tr><td>Inizio e Fine</td><td>Primo e ultimo canale</td></tr>
+<tr><td>Più e meno (anche del tastierino numerico)</td><td>Alza e abbassa il volume di 5; NVDA dice il nuovo valore</td></tr>
+<tr><td>Maiusc+più e Maiusc+meno</td><td>Alza e abbassa il volume di 1 (sulla tastiera italiana sono l'asterisco e il trattino basso)</td></tr>
+<tr><td>Pagina su e Pagina giù</td><td>Alza e abbassa il volume di 10</td></tr>
+<tr><td>Le cifre da 1 a 9</td><td>Mettono il volume al 10, 20 ... 90%; lo 0 al 100%</td></tr>
+<tr><td>Spazio</td><td>Toglie o rimette l'audio del canale</td></tr>
+<tr><td>Una lettera</td><td>Va al canale che comincia con quella lettera</td></tr>
+</table>
+<p>Il più e il meno del tastierino funzionano con il Bloc Num acceso: spento, quei tasti sono comandi di NVDA.</p>
+<p>Alzare il volume di un canale muto gli rimette anche l'audio, come nel mixer di Windows.</p>
+<p>Un programma che in questo momento fa uscire suono ha "in riproduzione" accanto al volume, per esempio "Chrome: 80%, in riproduzione": così si trova subito la scheda o il programma che suona. La scritta resta per 3 secondi dopo l'ultimo suono, per non sparire a ogni pausa.</p>
+<p>Il canale <strong>NVDA</strong> è il volume della voce: lo stesso che si cambia con i comandi di NVDA o nelle Impostazioni di NVDA, categoria Voce, e cambiandolo dal mixer lo si ritrova uguale lì. La voce di NVDA non si può silenziare dal mixer (lo Spazio dice "Non disponibile"). Il volume che Windows dà a NVDA come programma non compare: resta al 100%, così non lo si abbassa per errore.</p>
+<p>L'elenco si aggiorna da solo, restando sul canale scelto: i volumi ogni secondo, i programmi che aprono o chiudono l'audio entro 3 secondi (subito, quando si entra nell'elenco). Così il mixer aperto non fa lavorare il computer. Un programma con più processi o più dispositivi (per esempio Chrome) è un canale solo: il volume vale per tutto il programma.</p>
+
+<h2>Il menu dei canali (Invio)</h2>
+<p>Nell'elenco Volumi, <strong>Invio</strong> apre un menu per il canale scelto:</p>
+<ul>
+<li><strong>Su un programma</strong>: i sottomenu <em>Altoparlante</em> e <em>Microfono</em>, con "Predefinito di Windows" e tutti i dispositivi (quello in uso è segnato); la voce <em>Ripristina i predefiniti di Windows</em> riporta il programma ai dispositivi predefiniti. Se un programma suona su un altoparlante diverso dal predefinito, la sua riga lo dice, per esempio "Chrome: 80%, su Altoparlanti (Senary Audio)". Windows ricorda la scelta anche dopo il riavvio. Alcuni programmi la usano dalla prossima volta che fanno partire l'audio (per esempio dal video successivo).</li>
+<li><strong>Su Audio generale o su Microfono</strong>: l'elenco degli altoparlanti o dei microfoni, per scegliere il predefinito di Windows. Su Audio generale c'è anche la voce <em>Blocca l'altoparlante predefinito</em>: accesa, se Windows fa diventare predefinito un altro altoparlante (per esempio quando colleghi delle cuffie, una scheda USB o un dispositivo Bluetooth) l'add-on rimette il tuo entro 2 secondi e NVDA dice "Altoparlante predefinito rimesso". Funziona anche a mixer chiuso. Se il tuo altoparlante è scollegato, non fa niente finché non torna. Se sei tu a scegliere un altro predefinito dal mixer, il blocco passa a quello. Le righe di Audio generale e dell'altoparlante bloccato dicono "bloccato".</li>
+<li><strong>Su NVDA</strong>: l'elenco degli altoparlanti, per scegliere quello su cui parla NVDA (come nelle Impostazioni di NVDA, categoria Audio). La voce si riavvia un attimo e poi dice il nome dell'altoparlante. Se NVDA non usa il predefinito, la sua riga lo dice. C'è anche la voce <em>Proteggi il volume di NVDA</em>: accesa, il volume che Windows dà a NVDA come programma resta al 100% e con l'audio acceso (se un programma o Windows lo abbassa, l'add-on lo rimette entro 2 secondi, anche a mixer chiuso), e l'add-on chiede a Windows di non abbassare NVDA durante le chiamate. La riga di NVDA dice "protetto".</li>
+<li>Sui Suoni di sistema il menu non c'è: NVDA dice "Non disponibile".</li>
+</ul>
+<p>La scelta del dispositivo per programma usa la stessa funzione di Windows del "Mixer volume" delle Impostazioni di Windows: c'è da Windows 10 versione 1803.</p>
+
+<h2>Gli elenchi Altoparlanti e Microfoni</h2>
+<p>Con Tab, dopo l'elenco Volumi, ci sono l'elenco <strong>Altoparlanti</strong> (tutti i dispositivi di uscita attivi: altoparlanti, cuffie...) e l'elenco <strong>Microfoni</strong> (tutti i dispositivi di ingresso attivi). In ognuno il predefinito è il primo, con "predefinito" accanto; gli altri seguono in ordine alfabetico. Per esempio "Cuffie (USB Audio): 70%, predefinito".</p>
+<p>I tasti sono gli stessi dell'elenco Volumi (frecce, più e meno, cifre, Spazio, Inizio, Fine, lettere), più:</p>
+<ul>
+<li><strong>Invio</strong>: rende il dispositivo il predefinito di Windows, per ogni uso (anche per le chiamate). NVDA dice "Predefinito". Audio generale e Microfono, nell'elenco Volumi, seguono subito il nuovo predefinito.</li>
+</ul>
+<p>L'elenco si aggiorna da solo anche quando si collega o si scollega un dispositivo.</p>
+
+<h2>Suoni di Windows</h2>
+<p>Nella finestra del mixer, <strong>Alt+S</strong> (il pulsante <em>Suoni di Windows</em>) apre una finestra come la scheda Suoni del Pannello di controllo:</p>
+<ul>
+<li><em>Tema sonoro</em> (Alt+T): tutti i temi, "Predefiniti di Windows", "Nessun suono" e i tuoi (per esempio quelli fatti con HDX Sound Effects). Si sceglie con le frecce; l'elenco degli eventi mostra subito i suoi suoni.</li>
+<li><em>Eventi</em> (Alt+E): un albero come quello del Pannello di controllo, già tutto aperto. I rami sono i programmi ("Windows", "Esplora risorse", "Riconoscimento vocale di Windows"...), sotto ci sono i loro eventi con il suono, per esempio "Arresto critico: Arresto critico" o "Fine esplorazione: nessun suono". Con l'iniziale si va direttamente all'evento; freccia sinistra e destra chiudono e aprono un ramo, Invio su un ramo lo apre o lo chiude. <strong>Spazio</strong> fa sentire il suono; <strong>Canc</strong> lo toglie (nessun suono); <strong>Invio</strong> apre un menu con <em>Ascolta</em>, <em>Scegli un file…</em> (un file .wav), <em>Nessun suono</em> e <em>Rimetti quello del tema</em>.</li>
+<li><em>Salva il tema come…</em> (Alt+V): salva subito i suoni dell'elenco come un tema nuovo, col nome che scrivi; diventa il tema scelto. <em>Elimina il tema</em> (Alt+L): elimina il tema scelto, dopo una domanda; i temi di Windows non si possono eliminare.</li>
+<li><em>Durante le chiamate</em> (Alt+C), come la scheda Comunicazioni: cosa fa Windows agli altri suoni quando sei in una chiamata. Disattiva tutti gli altri suoni, li riduce dell'80% o del 50%, oppure non fa nulla.</li>
+<li><em>Riproduci il suono di avvio di Windows</em> (Alt+A). Questa impostazione si cambia solo da amministratore: premendo OK compare la richiesta di Controllo account utente di Windows; dopo la conferma NVDA dice "Suono di avvio acceso" o "spento", se la rifiuti dice "Suono di avvio non cambiato".</li>
+</ul>
+<p>OK applica il tema, i suoni cambiati e le altre scelte; Annulla (o Esc) lascia tutto com'era, tranne i temi già salvati o eliminati, come nel Pannello di controllo. Il focus torna nel mixer dov'eri.</p>
+
+<h2>Aggiornamenti</h2>
+<p>A ogni avvio di NVDA l'add-on controlla sul sito andreadessolis.com se c'è una versione nuova e propone di installarla. Impostazioni di NVDA, categoria <strong>Mixer Audio</strong>: casella <em>Controlla gli aggiornamenti all'avvio di NVDA</em>. Il comando "Cerca gli aggiornamenti di questa add-on" (senza tasto, in Gesti e comandi) cerca subito.</p>
+
+<h2>Lingue</h2>
+<p>L'add-on parla nella lingua di NVDA: italiano o inglese.</p>
+
+<h2>Compatibilità</h2>
+<p>Da NVDA 2024.2 in poi, Windows 10 e 11. Provata con NVDA 2026.3.</p>
+
+<h2>Autore e licenza</h2>
+<p>Andrea Dessolis, <a href="https://andreadessolis.com/addon-nvda.html">andreadessolis.com</a>. Licenza GNU GPL versione 2.</p>
+</body>
+</html>

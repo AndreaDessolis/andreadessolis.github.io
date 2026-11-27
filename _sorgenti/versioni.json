@@ -46,5 +46,10 @@
   "hdx-video-edit": {
     "versione": "1.0.2",
     "data": "2026-11-18"
+  },
+  "mixer-audio": {
+    "versione": "1.0.0",
+    "data": "2026-11-27",
+    "sha256": "f39949749fe231102ae54f5c870b9e0de0178eda5dcc882e923be7c8d42bffcd"
   }
 }

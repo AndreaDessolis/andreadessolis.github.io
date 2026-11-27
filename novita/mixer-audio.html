@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Novità di Mixer Audio — Andrea Dessolis</title>
+<link rel="alternate" hreflang="it" href="https://andreadessolis.com/novita/mixer-audio.html">
+<link rel="alternate" hreflang="en" href="https://andreadessolis.com/en/novita/mixer-audio.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">Andrea Dessolis</a>
+    <nav aria-label="Menu principale">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../programmi.html">Programmi</a></li>
+        <li><a href="../addon-nvda.html" aria-current="page">Add-on per NVDA</a></li>
+        <li><a href="../chi-sono.html">Chi sono</a></li>
+        <li><a href="../contatti.html">Contatti</a></li>
+        <li><a href="https://t.me/+t7KuNQH-xQczMDVk">L&#x27;angolo di HDX</a></li>
+        <li class="lang"><a href="../en/novita/mixer-audio.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<svg class="horizon" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="l1" d="M0,70 Q200,20 400,55 T800,40" fill="none" stroke-width="3" opacity="0.55"/>
+  <path class="l2" d="M0,80 Q200,45 400,70 T800,55" fill="none" stroke-width="3" opacity="0.45"/>
+  <path class="l3" d="M0,88 Q200,65 400,82 T800,70" fill="none" stroke-width="3" opacity="0.4"/>
+  <circle class="sun" cx="680" cy="30" r="20" opacity="0.85"/>
+</svg>
+
+<main id="contenuto">
+  <div class="wrap">
+    <h1>Novità di Mixer Audio</h1>
+    <p class="lede">Le versioni dalla più recente. Le novità della versione installata si leggono anche nel Gestore componenti aggiuntivi di NVDA.</p>
+    <p><a href="../addon-nvda.html#mixer-audio">Torna a Mixer Audio</a></p>
+<section class="release">
+<h2>Versione 1.0.0</h2>
+<h3>Novità</h3>
+<ol>
+<li>Prima versione completa, pubblicata sul sito: da qui in avanti l&#x27;add-on si aggiorna da sola all&#x27;avvio di NVDA.</li>
+<li>NVDA+Alt+A apre il mixer: volumi di audio generale, microfono, NVDA e di ogni programma, con più e meno, cifre e Spazio; elenchi Altoparlanti e Microfoni per scegliere i predefiniti; dispositivo per ogni programma; &quot;in riproduzione&quot; accanto a chi suona.</li>
+<li>Blocco dell&#x27;altoparlante predefinito e protezione del volume di NVDA, anche a mixer chiuso.</li>
+<li>Suoni di Windows (Alt+S nel mixer): tema sonoro, albero degli eventi con ascolto e scelta dei file, salva ed elimina tema, cosa fa Windows durante le chiamate e suono di avvio.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 0.5.0</h2>
+<h3>Novità</h3>
+<ol>
+<li>Suoni di Windows: nella finestra del mixer il pulsante Suoni di Windows (Alt+S) apre una finestra come la scheda Suoni del Pannello di controllo, con il tema sonoro (anche quelli creati da te), cosa fa Windows agli altri suoni durante le chiamate e il suono di avvio di Windows. Per il suono di avvio Windows chiede il permesso di amministratore.</li>
+<li>Nella stessa finestra, l&#x27;albero degli eventi come nel Pannello di controllo (i programmi, e sotto i loro eventi, tutto aperto: con l&#x27;iniziale si arriva all&#x27;evento) con il loro suono: Spazio lo fa sentire, Canc lo toglie, Invio apre il menu per scegliere un file .wav, togliere il suono o rimettere quello del tema. I pulsanti Salva il tema come ed Elimina il tema.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 0.4.0</h2>
+<h3>Novità</h3>
+<ol>
+<li>Gli elenchi si usano come elenchi normali: freccia su e giù scelgono il canale, più e meno (anche del tastierino) alzano e abbassano il volume di 5, Maiusc+più e Maiusc+meno di 1, Pagina su e giù di 10, le cifre da 1 a 9 mettono il volume al 10-90% e lo 0 al 100%.</li>
+<li>Chi sta suonando: un programma che fa uscire suono ha &quot;in riproduzione&quot; accanto al volume, per esempio &quot;Chrome: 80%, in riproduzione&quot;.</li>
+<li>Blocco dell&#x27;altoparlante predefinito (Invio su Audio generale): se Windows fa diventare predefinito un altro altoparlante, per esempio collegando delle cuffie o un dispositivo Bluetooth, l&#x27;add-on rimette il tuo. Funziona anche a mixer chiuso.</li>
+<li>Protezione del volume di NVDA (Invio su NVDA): il volume che Windows dà a NVDA resta al 100%, e l&#x27;add-on chiede a Windows di non abbassare NVDA durante le chiamate. Funziona anche a mixer chiuso.</li>
+</ol>
+<h3>Correzioni</h3>
+<ol>
+<li>Con il mixer aperto il computer non lavora più tanto (ventole veloci): prima ogni secondo si rileggevano da capo tutti i dispositivi e i nomi dei programmi, aprendo i loro file. Ora i nomi si leggono una volta sola, ogni secondo si rileggono solo i volumi e l&#x27;elenco in cui sei si rilegge tutto ogni 3 secondi.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 0.3.1</h2>
+<h3>Novità</h3>
+<ol>
+<li>Invio sul canale NVDA apre l&#x27;elenco degli altoparlanti per scegliere quello di NVDA, come nelle Impostazioni di NVDA, categoria Audio. La riga di NVDA dice su quale altoparlante parla, se non è il predefinito.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 0.3.0</h2>
+<h3>Novità</h3>
+<ol>
+<li>Invio su un programma, nell&#x27;elenco Volumi, apre un menu per scegliere il suo altoparlante e il suo microfono, o per tornare ai predefiniti di Windows. La riga dice su quale altoparlante suona il programma, se non è il predefinito.</li>
+<li>Invio su Audio generale o su Microfono apre l&#x27;elenco dei dispositivi per scegliere il predefinito di Windows.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 0.2.1</h2>
+<h3>Novità</h3>
+<ol>
+<li>Altoparlanti e microfoni sono in due elenchi separati.</li>
+</ol>
+<h3>Correzioni</h3>
+<ol>
+<li>Invio rende davvero il dispositivo il predefinito: prima la finestra lo intercettava.</li>
+<li>Chiudendo il mixer NVDA non si riavvia più: l&#x27;aggiornamento automatico dell&#x27;elenco si ferma prima della chiusura.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 0.2.0</h2>
+<h3>Novità</h3>
+<ol>
+<li>Elenco Dispositivi: tutti gli altoparlanti e i microfoni attivi, con volume e silenzio come nell&#x27;elenco Volumi; Invio rende il dispositivo il predefinito di Windows, per ogni uso.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 0.1.2</h2>
+<h3>Novità</h3>
+<ol>
+<li>Il canale NVDA regola il volume della voce, lo stesso dei comandi e delle Impostazioni di NVDA. Il volume che Windows dà a NVDA resta al 100% e non compare, così non lo si abbassa per errore.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 0.1.1</h2>
+<h3>Correzioni</h3>
+<ol>
+<li>Le frecce non fanno più leggere tutto due volte: il cambio di canale lo legge solo NVDA, e regolando il volume si sente solo il nuovo valore.</li>
+</ol>
+</section>
+<section class="release">
+<h2>Versione 0.1.0</h2>
+<h3>Novità</h3>
+<ol>
+<li>Prima versione di prova: con NVDA+Alt+A si apre il mixer con l&#x27;elenco Volumi (audio generale, microfono e ogni programma), da regolare con le frecce come i cursori di un mixer.</li>
+</ol>
+</section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="anno">2026</span> Andrea Dessolis — <a href="../contatti.html">scrivimi</a></p>
+  </div>
+</footer>
+<script>
+  try { document.getElementById('anno').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>
