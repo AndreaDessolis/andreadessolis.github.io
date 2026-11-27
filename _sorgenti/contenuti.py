@@ -373,8 +373,8 @@ PROGRAMMI = [
             'en': 'Listening to and studying music with your screen reader: slowing a song down without changing its pitch, repeating a passage, separating the instruments and finding the chords.',
         },
         'breve': {
-            'it': 'Il lettore per studiare e suonare la musica: velocità e tono, loop, stem, accordi, tablature, accordatore, registrazioni e schede ASIO.',
-            'en': 'The player for studying and playing music: speed and pitch, loops, stems, chords, tablature, tuner, recordings and ASIO interfaces.',
+            'it': 'Il lettore per studiare e suonare la musica: velocità e tono, loop, stem, accordi, batteria, tablature, accordatore, registrazioni e schede ASIO.',
+            'en': 'The player for studying and playing music: speed and pitch, loops, stems, chords, drums, tablature, tuner, recordings and ASIO interfaces.',
         },
         'introduzione': {
             'it': [
@@ -404,6 +404,7 @@ PROGRAMMI = [
                 'Il loop A-B, i loop salvati per ogni brano, il loop che accelera un poco a ogni giro e la sequenza dei loop, con la pausa e il conteggio tra un giro e l\'altro.',
                 'I marcatori con il nome, per saltare subito alla strofa o al ritornello.',
                 'Il metronomo, da solo o sui battiti del brano, con il conteggio prima di partire.',
+                'La batteria: un kit acustico vero, più di 900 ritmi e fill in 24 generi suonati da batteristi veri, un editor per scrivere i tuoi colpo per colpo, il brano con intro, strofe, ritornelli e finale, anche composto in automatico, e l\'esportazione in audio o in MIDI.',
                 'Gli stem: voce, chitarra, basso, batteria (anche nei suoi pezzi), piano e il resto, con il mixer di ogni parte; anche di tutta una scaletta in una volta, un brano dopo l\'altro.',
                 'L\'allineatore dei testi: rimette a tempo sulla voce del cantante i testi trovati su internet, anche quando vengono da un\'altra registrazione del brano, e prepara stem e testi a tempo di una cartella intera per lo studio, senza passare dal karaoke.',
                 'L\'editor del testo: scrivi, correggi e metti a tempo a mano il testo di un brano, battendo il tempo a orecchio o con l\'aiuto dell\'allineatore, e senti subito il risultato.',
@@ -428,6 +429,7 @@ PROGRAMMI = [
                 'The A-B loop, saved loops for each song, the loop that speeds up a little at every pass and the loop sequence, with a pause and a count-in between passes.',
                 'Named markers, to jump straight to the verse or the chorus.',
                 'The metronome, on its own or on the song\'s beats, with a count-in before starting.',
+                'The drums: a real acoustic kit, more than 900 grooves and fills in 24 genres played by real drummers, an editor to write your own hit by hit, the song with intro, verses, choruses and ending, also built automatically, and export to audio or MIDI.',
                 'Stems: vocals, guitar, bass, drums (also split into its pieces), piano and the rest, with a mixer for every part; also for a whole playlist at once, one song after another.',
                 'The lyrics aligner: it re-times on the singer\'s voice the lyrics found on the internet, even when they come from another recording of the song, and prepares stems and timed lyrics for a whole folder for studying, without going through karaoke.',
                 'The lyrics editor: write, fix and time the lyrics of a track by hand, tapping the time by ear or with the help of the aligner, and hear the result at once.',
