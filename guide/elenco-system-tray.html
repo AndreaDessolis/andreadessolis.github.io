@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Elenco System Tray - guida</title>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../addon-nvda.html#elenco-system-tray">Torna a Elenco System Tray — andreadessolis.com</a></div>
+<h1>Elenco System Tray</h1>
+<p>Add-on per NVDA che elenca le icone dell'area di notifica di Windows (la system tray, accanto all'orologio), comprese quelle nascoste, per fare clic, doppio clic o aprire il loro menu senza cercarle col mouse.</p>
+
+<h2>Aprire l'elenco</h2>
+<p><strong>NVDA+F11</strong> apre la finestra "Elenco System Tray" con l'elenco delle icone (il tasto si può cambiare da Gesti e comandi, categoria Elenco System Tray). Esc o il pulsante Chiudi la chiudono e il focus torna dove eri.</p>
+<p>L'elenco ha prima il pulsante "Mostra icone nascoste", poi le icone dei programmi sulla barra, poi quelle di Windows: rete, volume, batteria, lingua, orologio, Mostra desktop. I nomi sono su una riga sola, per esempio "Rete Casa, Accesso a Internet".</p>
+<p>Alcuni programmi, per esempio pCloud Drive, mettono la loro icona senza nessun nome. In quel caso l'add-on cerca il programma nell'elenco delle icone che Windows tiene nel registro: se trova un solo programma in esecuzione con un'icona senza testo, che non abbia già un'icona col suo nome, l'icona prende il nome del programma, per esempio "pCloud". Se i programmi possibili sono più d'uno li dice tutti, per esempio "Icona senza nome: pCloud, Altro programma"; se non ne trova nessuno dice "Icona senza nome". Lo stato del programma (per esempio se sta sincronizzando) non si può sapere: il programma non lo dice.</p>
+<h3>Le icone nascoste</h3><p>Di base l'add-on non apre niente da sola: Invio su "Mostra icone nascoste" fa clic su quel pulsante, si apre il pannello di Windows con le icone nascoste e il focus va lì. Nel pannello ci si muove con le frecce; Invio, il tasto Applicazioni ed Esc li gestisce Windows, come col mouse.</p>
+<p>Se preferisci avere anche le icone nascoste nell'elenco, accendi la casella <em>Includi le icone nascoste</em> nelle Impostazioni di NVDA, categoria Elenco System Tray. Allora il pulsante "Mostra icone nascoste" non compare: per leggere le icone nascoste l'add-on apre per un attimo il pannello e lo richiude (NVDA intanto resta zitto), e le mette nell'elenco dopo le icone dei programmi sulla barra; facendo clic su una di loro, l'add-on riapre il pannello e fa clic lì. Se Windows non mostra il pulsante "Mostra icone nascoste" (per esempio quando non ci sono icone nascoste), l'add-on se ne accorge da solo: prova il pulsante, e se non apre il pannello lo richiude subito.</p>
+<p>La volta dopo, l'elenco si apre sull'ultima icona che hai usato.</p>
+
+<h2>I comandi</h2>
+<table>
+<tr><th>Tasto</th><th>Cosa fa</th></tr>
+<tr><td>Freccia su e giù, o l'iniziale</td><td>Icona precedente, successiva o che comincia con quella lettera</td></tr>
+<tr><td>Invio, o il pulsante Clic sinistro (Alt+C)</td><td>Il clic normale, come col tasto sinistro del mouse</td></tr>
+<tr><td>Il tasto Applicazioni o Maiusc+F10, o il pulsante Clic destro (Alt+S)</td><td>Il clic destro: apre il menu dell'icona</td></tr>
+<tr><td>Il pulsante Doppio clic (Alt+D)</td><td>Il doppio clic, che in molti programmi apre la finestra principale</td></tr>
+</table>
+<p>La finestra si chiude prima del clic, così l'icona lo riceve come se l'avessi cliccata tu. Il clic destro e il doppio clic usano il mouse, che si sposta sull'icona.</p>
+<p>Cosa succede dopo il clic lo decide il programma dell'icona, come col mouse vero: alcuni programmi, per aprire il loro menu, portano anche la loro finestra in primo piano.</p>
+<p>Prima del clic l'add-on rilegge le icone e ritrova quella scelta: se nel frattempo è sparita, NVDA dice "L'icona non c'è più".</p>
+
+<h2>Impostazioni</h2>
+<p>Impostazioni di NVDA, categoria <strong>Elenco System Tray</strong>:</p>
+<ul>
+<li><em>Includi le icone nascoste</em>: spenta di base (vedi "Le icone nascoste").</li>
+<li><em>Controlla gli aggiornamenti all'avvio di NVDA</em>.</li>
+</ul>
+
+<h2>Perché un'add-on nuova</h2>
+<p>Windows cambia spesso la barra delle applicazioni: nelle versioni recenti di Windows 11 le icone dell'area di notifica stanno insieme a Start e ai programmi aperti. Questa add-on non le cerca in un posto fisso ma in tutta la barra, così un cambiamento di Windows la rompe meno facilmente.</p>
+
+<h2>Aggiornamenti</h2>
+<p>A ogni avvio di NVDA l'add-on controlla sul sito andreadessolis.com se c'è una versione nuova e propone di installarla. Il comando "Cerca gli aggiornamenti di questa add-on" (senza tasto, in Gesti e comandi) cerca subito.</p>
+
+<h2>Lingue</h2>
+<p>L'add-on parla nella lingua di NVDA: italiano o inglese.</p>
+
+<h2>Compatibilità</h2>
+<p>Da NVDA 2024.2 in poi. Windows 11 (provata con la build 26300); su Windows 10 dovrebbe elencare le icone, ma non è stata provata. Se nell'elenco mancano icone, in particolare quelle nascoste, segnalalo nel gruppo Telegram: serve a sistemarla per tutti.</p>
+
+<h2>Autore e licenza</h2>
+<p>Andrea Dessolis, <a href="https://andreadessolis.com/addon-nvda.html">andreadessolis.com</a>. Licenza GNU GPL versione 2.</p>
+</body>
+</html>

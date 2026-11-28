@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>System Tray Icons - guide</title>
+</head>
+<body>
+<div style="padding:10px 16px;border-bottom:2px solid #F0DDB0;background:#FFEFD1;color:#2B241B;font-family:Segoe UI,Arial,sans-serif"><a style="color:#0E6B63" href="../addon-nvda.html#elenco-system-tray">Back to System Tray Icons — andreadessolis.com</a></div>
+<h1>System Tray Icons</h1>
+<p>An NVDA add-on that lists the icons of the Windows notification area (the system tray, next to the clock), hidden ones too, to click them, double click them or open their menu without looking for them with the mouse.</p>
+
+<h2>Opening the list</h2>
+<p><strong>NVDA+F11</strong> opens the "System Tray Icons" window with the list of the icons (the key can be changed in Input gestures, System Tray Icons category). Escape or the Close button close it and the focus goes back where you were.</p>
+<p>The list has first the "Show hidden icons" button, then the icons of the programs on the taskbar, then the Windows ones: network, volume, battery, language, clock, Show desktop. The names are on one line, for example "Network Home, Internet access".</p>
+<p>Some programs, for example pCloud Drive, put their icon without any name. In that case the add-on looks for the program in the list of icons Windows keeps in the registry: if it finds only one running program with an icon without text, which does not already have an icon with its name, the icon gets the name of the program, for example "pCloud". If there are several possible programs it says all of them, for example "Icon without name: pCloud, Other program"; if it finds none it says "Icon without name". The state of the program (for example whether it is syncing) cannot be known: the program does not say it.</p>
+<h3>The hidden icons</h3><p>By default the add-on opens nothing by itself: Enter on "Show hidden icons" clicks that button, the Windows panel with the hidden icons opens and the focus goes there. In the panel you move with the arrows; Enter, the Applications key and Escape are handled by Windows, as with the mouse.</p>
+<p>If you prefer to have the hidden icons in the list too, turn on the <em>Include the hidden icons</em> check box in NVDA Settings, System Tray Icons category. Then the "Show hidden icons" button does not appear: to read the hidden icons the add-on opens the panel for a moment and closes it (NVDA stays silent meanwhile), and puts them in the list after the icons of the programs on the taskbar; clicking one of them, the add-on opens the panel again and clicks there. If Windows does not show the "Show hidden icons" button (for example when there are no hidden icons), the add-on notices by itself: it tries the button, and if it does not open the panel it closes it again at once.</p>
+<p>The next time, the list opens on the last icon you used.</p>
+
+<h2>The commands</h2>
+<table>
+<tr><th>Key</th><th>What it does</th></tr>
+<tr><td>Up and Down arrow, or the first letter</td><td>Previous icon, next icon or the one starting with that letter</td></tr>
+<tr><td>Enter, or the Left click button (Alt+L)</td><td>The normal click, as with the left mouse button</td></tr>
+<tr><td>The Applications key or Shift+F10, or the Right click button (Alt+R)</td><td>The right click: it opens the menu of the icon</td></tr>
+<tr><td>The Double click button (Alt+D)</td><td>The double click, which in many programs opens the main window</td></tr>
+</table>
+<p>The window closes before the click, so the icon gets it as if you clicked it yourself. Right click and double click use the mouse, which moves onto the icon.</p>
+<p>What happens after the click is decided by the program of the icon, as with the real mouse: some programs, to open their menu, also bring their window to the front.</p>
+<p>Before the click the add-on reads the icons again and finds the chosen one: if it has disappeared meanwhile, NVDA says "The icon is no longer there".</p>
+
+<h2>Settings</h2>
+<p>NVDA Settings, <strong>System Tray Icons</strong> category:</p>
+<ul>
+<li><em>Include the hidden icons</em>: off by default (see "The hidden icons").</li>
+<li><em>Check for updates when NVDA starts</em>.</li>
+</ul>
+
+<h2>Why a new add-on</h2>
+<p>Windows often changes the taskbar: in recent versions of Windows 11 the icons of the notification area are together with Start and the open programs. This add-on does not look for them in a fixed place but in the whole taskbar, so a Windows change breaks it less easily.</p>
+
+<h2>Updates</h2>
+<p>Every time NVDA starts, the add-on checks on andreadessolis.com whether there is a new version and offers to install it. The "Checks for updates of this add-on" command (no key, in Input gestures) checks right away.</p>
+
+<h2>Languages</h2>
+<p>The add-on speaks the language of NVDA: English or Italian.</p>
+
+<h2>Compatibility</h2>
+<p>NVDA 2024.2 and later. Windows 11 (tested with build 26300); on Windows 10 it should list the icons, but it has not been tested. If icons are missing from the list, especially the hidden ones, please report it in the Telegram group: it helps fix it for everyone.</p>
+
+<h2>Author and license</h2>
+<p>Andrea Dessolis, <a href="https://andreadessolis.com/en/addon-nvda.html">andreadessolis.com</a>. GNU GPL version 2.</p>
+</body>
+</html>

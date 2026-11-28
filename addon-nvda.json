@@ -115,6 +115,33 @@
           "Windows sounds (Alt+W in the mixer): sound scheme, tree of events with listening and choice of files, save and delete scheme, what Windows does during calls and startup sound."
         ]
       }
+    },
+    "elencoSystemTray": {
+      "nome": {
+        "it": "Elenco System Tray",
+        "en": "System Tray Icons"
+      },
+      "versione": "1.0.0",
+      "url": "https://github.com/AndreaDessolis/NVDA-Elenco-System-Tray/releases/latest/download/elencoSystemTray.nvda-addon",
+      "sha256": "7c1b9673d6b30aa9673efe7b8c96b78b03e5bbd788ee19e3d7cab237c1e08bf8",
+      "pagina": {
+        "it": "https://andreadessolis.com/addon-nvda.html#elenco-system-tray",
+        "en": "https://andreadessolis.com/en/addon-nvda.html#elenco-system-tray"
+      },
+      "novita": {
+        "it": [
+          "Prima versione: NVDA+F11 elenca le icone dell'area di notifica, con i nomi su una riga sola. In cima c'è il pulsante \"Mostra icone nascoste\", che apre il pannello di Windows con le icone nascoste; nelle Impostazioni di NVDA si possono avere anche le icone nascoste direttamente nell'elenco (casella Includi le icone nascoste, spenta di base).",
+          "Le icone senza nome, come quella di pCloud Drive, prendono il nome del loro programma quando si può sapere con certezza, cercandolo nell'elenco delle icone che Windows tiene nel registro.",
+          "Invio fa il clic sinistro, il tasto Applicazioni o Maiusc+F10 il clic destro (il menu dell'icona), il pulsante Doppio clic il doppio clic.",
+          "Le icone si cercano in tutta la barra delle applicazioni, non in un posto fisso: funziona anche con le versioni recenti di Windows 11, dove le icone stanno insieme a Start e ai programmi aperti."
+        ],
+        "en": [
+          "First version: NVDA+F11 lists the icons of the notification area, with the names on one line. At the top there is the \"Show hidden icons\" button, which opens the Windows panel with the hidden icons; in NVDA Settings you can also have the hidden icons straight in the list (Include the hidden icons check box, off by default).",
+          "Icons without a name, like the pCloud Drive one, get the name of their program when it can be known for sure, looking for it in the list of icons Windows keeps in the registry.",
+          "Enter left clicks, the Applications key or Shift+F10 right clicks (the menu of the icon), the Double click button double clicks.",
+          "The icons are looked for in the whole taskbar, not in a fixed place: it also works with recent versions of Windows 11, where the icons are together with Start and the open programs."
+        ]
+      }
     }
   }
 }

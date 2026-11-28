@@ -51,5 +51,10 @@
     "versione": "1.0.0",
     "data": "2026-11-27",
     "sha256": "f39949749fe231102ae54f5c870b9e0de0178eda5dcc882e923be7c8d42bffcd"
+  },
+  "elenco-system-tray": {
+    "versione": "1.0.0",
+    "data": "2026-11-28",
+    "sha256": "7c1b9673d6b30aa9673efe7b8c96b78b03e5bbd788ee19e3d7cab237c1e08bf8"
   }
 }

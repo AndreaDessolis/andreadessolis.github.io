@@ -682,6 +682,32 @@ ADDON = [
             ],
         },
     },
+    {
+        'id': 'elenco-system-tray',
+        'nome': {'it': 'Elenco System Tray', 'en': 'System Tray Icons'},
+        'repository': 'NVDA-Elenco-System-Tray',
+        'setup': 'elencoSystemTray.nvda-addon',
+        'cartella': _ADDON + r'\Elenco System Tray',
+        'nvda_minimo': '2024.2',
+        'frase': {
+            'it': 'Con NVDA+F11 l\'elenco delle icone vicino all\'orologio, per fare clic, doppio clic o aprire il loro menu.',
+            'en': 'With NVDA+F11, the list of the icons next to the clock, to click them, double click them or open their menu.',
+        },
+        'funzioni': {
+            'it': [
+                'Le icone dell\'area di notifica di Windows 11, anche nelle versioni recenti in cui stanno insieme a Start e ai programmi aperti.',
+                'Invio per il clic sinistro, il tasto Applicazioni per il clic destro, un pulsante per il doppio clic.',
+                'Il pulsante "Mostra icone nascoste" nell\'elenco, oppure, a scelta, le icone nascoste direttamente nell\'elenco.',
+                'I nomi su una riga sola; le icone senza nome, come quella di pCloud Drive, prendono il nome del loro programma quando si può sapere.',
+            ],
+            'en': [
+                'The icons of the Windows 11 notification area, also in recent versions where they are together with Start and the open programs.',
+                'Enter for the left click, the Applications key for the right click, a button for the double click.',
+                'The "Show hidden icons" button in the list or, if you prefer, the hidden icons straight in the list.',
+                'Names on one line; icons without a name, like the pCloud Drive one, get the name of their program when it can be known.',
+            ],
+        },
+    },
 ]
 for _a in ADDON:
     _a['pagina'] = 'addon-nvda.html#' + _a['id']
